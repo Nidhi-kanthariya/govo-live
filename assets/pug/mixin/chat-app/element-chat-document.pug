@@ -1,0 +1,20 @@
+
+//- ================
+//-  Chat Documents  
+//- ================
+
+mixin chat-doc-data(data)
+    ul.flex.flex-col.gap-1 
+        each dataItem in data 
+            li(class="pt-[13px] first:pt-0 first:mt-0 first:border-none flex justify-between")
+                div.flex.items-center.gap-3(class="w-[calc(100%_-_59px)] xl:gap-2")
+                    div.bg-primary.rounded-xl.p-1.flex.justify-center.items-center
+                        i(data-feather=`${dataItem.name}` class="w-8 h-8 p-1 stroke-white")
+                    div(class="w-[calc(100%_-_70px)]") 
+                        h4.text-xs.font-medium.truncate.text-title(class="cursor-pointer lg:text-2xs lg:leading-none")=dataItem.itemtitle
+                        span.text-content.truncate.block(class="mt-1")=dataItem.itemsize
+                div.flex.flex-col.items-end.gap-1      
+                    span.text-content(class="text-3xs")=dataItem.time
+                    if(dataItem.downloaditem)
+                        a(href=`../../assets/chat-doc/${dataItem.downloaditem}`, download)
+                            +SVG_ICON("Download","w-[15px] h-[15px] stroke-title cursor-pointer")

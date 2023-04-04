@@ -1,0 +1,61 @@
+//- sidebar
+-var sidebar = true;
+
+//- feather
+-var feather= true;
+
+//- custom select
+-var customSelect= true;
+
+//- customizer  
+-var customizer=true;
+
+//- maps-js
+-var mapsJs=true;
+
+//- Breadcrumbs
+-var pageTitle="Maps Js";
+-var breadcrumb=['Map', 'Maps Js'];
+
+//- all JSON  
+include ../../data/all-data
+
+//- all mixin   
+include ../../mixin/mixin
+
+doctype html
+html(lang='en')
+   include ../../layout/header-files
+   body(dir="ltr" class="unique-skin")
+      main.page-wrapper
+         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+            include ../../layout/header/header     
+            // Sidebar Start 
+            div.page-sidebar.sidebar-dark.unique-sidebar
+               include ../../layout/unique
+            // Sidebar End 
+
+            // Page Body Start
+            div.page-body
+               div.grid.grid-cols-12.gap-card-gap
+                  div(class="col-span-6 lg:col-span-12") 
+                     div.card
+                        div.card-header.pb-4.header-bottom-border
+                           +card-header("At A Specified Location") 
+                        div.card-body
+                           div.map-js-height#weathermap  
+                  div(class="col-span-6 lg:col-span-12") 
+                     div.card
+                        div.card-header.pb-4.header-bottom-border
+                           +card-header("Using View Bounds") 
+                        div.card-body
+                           div.map-js-height#map2 
+
+
+
+
+            // Page Body End 
+            +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+         include ../../components/customizer
+
+   include ../../layout/footer-files

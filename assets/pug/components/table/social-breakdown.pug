@@ -1,0 +1,24 @@
+//- ========================
+//-  Social Breakdown
+//- =======================
+table.table.equal-space.table-sm 
+   thead 
+      tr 
+         each head in SOCIAL_BREAKDOWN.header
+            th=  head
+   tbody
+      each bodyData in SOCIAL_BREAKDOWN.body
+         tr
+            td(class="min-w-[160px]")
+               a.flex.items-center(href="javascript:void(0)" class="gap-[9px]")
+                  div(class="bg-gray-light rounded-full")
+                     img(class="3xl:w-[38px] 3xl:h-[38px] w-[43px] h-[43px] rounded-full" src=`../../assets/icons/social/${bodyData.image}`, alt=`${bodyData.name}`) 
+                  div
+                     h4(class="text-xs font-semibold text-title")=bodyData.name
+
+            td(class="min-w-[80px]")= bodyData.sessions  
+            td(class="min-w-[87px]")= bodyData.AVGSession  
+            td(class="min-w-[125px]")= `${bodyData.newSessions}%`  
+            td(class="min-w-[100px]")= `${bodyData.bounceRate}%`  
+            td(class="min-w-[41px]")= bodyData.Pages  
+

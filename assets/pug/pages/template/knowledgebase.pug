@@ -1,0 +1,326 @@
+//- sidebar
+-var sidebar = true;
+
+//- feather
+-var feather= true;
+
+//- custom select
+-var customSelect= true;
+
+//- customizer  
+-var customizer=true;
+
+//- Breadcrumbs
+-var pageTitle="Knowledgebase";
+-var breadcrumb=['Knowledgebase'];
+
+//- all JSON  
+include ../../data/all-data
+
+//- all mixin   
+include ../../mixin/mixin
+
+doctype html
+html(lang='en')
+   include ../../layout/header-files
+   body(dir="ltr" class="unique-skin")
+      main.page-wrapper
+         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+            include ../../layout/header/header     
+            // Sidebar Start 
+            div.page-sidebar.sidebar-dark.unique-sidebar
+               include ../../layout/unique
+            // Sidebar End 
+
+            // Page Body Start
+            div.page-body
+               div.grid.grid-cols-12.gap-card-gap
+                  div.col-span-12
+                     div.relative
+                        img(src="../../assets/images/svg/liness.svg" alt="lines" class="w-full rounded-5 min-h-[100px] max-h-[300px] object-cover drop-shadow-md")
+                        div.absolute(class="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[40%] lg:max-w-[75%] xl:max-w-[50%]")
+                           h3(class="mb-4 text-[33px] font-extrabold text-title lg:text-lg") How Can I help you?
+                           div.search-box.relative
+                              input(class="border-border-light border rounded-5 w-full py-[11px] pl-[25px] pr-[55px] md:py-[5px] text-xs font-semibold text-title" placeholder="Type to Search..." type="search")       
+                              +SVG_ICON("Search","xl:hidden w-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] stroke-title top-1/2 -translate-y-1/2 right-[25px] absolute")
+                           div.relative
+                              img(src="../../assets/images/svg/fiend.svg" alt="search-image" class="absolute bottom-[-63px] left-[94%] 6xl:w-[25%] lg:bottom-[-48px] 6xl:bottom-[-55px] xl:bottom-[-55px] w-[20%] xl:hidden")
+               div.grid.grid-cols-12.gap-card-gap.mt-6
+                  div.col-span-3(class="4xl:col-span-4 lg:col-span-6 sm:col-span-12")
+                     div.card.p-0
+                        div.card-image
+                           div.flex.justify-center.items-center
+                              img(src="../../assets/images/knowledgebase/3dwomen.png" class="w-full min-h-full h-[250px] object-contain" alt="3D women")
+                        div.card-body.flex.flex-col.gap-3.p-4.pt-0
+                           div.flex.justify-between
+                              div.flex.gap-2.items-center
+                                 i(data-feather="heart" class="h-5 stroke-content")
+                                 i(data-feather="message-square" class="h-5 stroke-content")
+                                 i(data-feather="send" class="h-5 stroke-content")  
+                              div
+                                 i(data-feather="bookmark" class="h-5 stroke-content")
+                           div.divider.w-full
+                           div.flex.justify-between
+                              a(href="blog-grid.html" class="flex items-center gap-1")
+                                 p.text-content(class="text-xs") Liked by  
+                                 span.text-primary(class="text-xs") Yen and 242 Others  
+                              div.avatar-group.-space-x-4(class="2md:hidden sm:flex 2sm:hidden")
+                                 div.avatar.border-white(class='border-2')
+                                    div.w-6
+                                       img(src='../../assets/images/avatar/15.jpg' alt='avatar')
+                                 div.avatar.border-white(class='border-2')
+                                    div.w-6
+                                       img(src='../../assets/images/avatar/18.jpg' alt='avatar')
+                                 div.avatar.border-white(class='border-2')
+                                    div.w-6
+                                       img(src='../../assets/images/avatar/24.jpg' alt='avatar')
+                           div
+                              h5(class="font-bold") Missing Cash back
+                              p(class="mt-2 text-content line-clamp-2") Get help with your account 
+                                 | earning Cash Back, features on ,
+                                 | Why is my Cashback not updated in my ShopBack account?
+
+                  div.col-span-3(class="4xl:col-span-4 lg:col-span-6 sm:col-span-12")
+                     div.card.p-0
+                        div.card-image
+                           div.flex.justify-center.items-center
+                              img(src="../../assets/images/knowledgebase/appdev.jpg" class="w-full min-h-full h-[250px] object-contain" alt="appdev")
+                        div.card-body.flex.flex-col.gap-3.p-4.pt-0
+                           div.flex.justify-between
+                              div.flex.gap-2.items-center
+                                 i(data-feather="heart" class="h-5 stroke-content")
+                                 i(data-feather="message-square" class="h-5 stroke-content")
+                                 i(data-feather="send" class="h-5 stroke-content")  
+                              div
+                                 i(data-feather="bookmark" class="h-5 stroke-content")
+                           div.divider.w-full
+                           div.flex.justify-between
+                              a(href="blog-grid.html" class="flex items-center gap-1")
+                                 p.text-content(class="text-xs") Liked by  
+                                 span.text-primary(class="text-xs") Wilt and 126 Others  
+                              div.avatar-group.-space-x-4(class="2md:hidden sm:flex 2sm:hidden")
+                                 div.avatar.border-white(class='border-2')
+                                    div.w-6
+                                       img(src='../../assets/images/avatar/15.jpg' alt='avatar')
+                                 div.avatar.border-white(class='border-2')
+                                    div.w-6
+                                       img(src='../../assets/images/avatar/18.jpg' alt='avatar')
+                                 div.avatar.border-white(class='border-2')
+                                    div.w-6
+                                       img(src='../../assets/images/avatar/24.jpg' alt='avatar')
+                           div
+                              h5(class="font-bold") Money Transfers
+                              p(class="mt-2 text-content line-clamp-2") Send money Instantly with HDFC Bank's
+                                 | Online”Simple & secure way to transfer money 
+                                 | to bank account & easily 
+
+                  div.col-span-3(class="4xl:col-span-4 lg:col-span-6 sm:col-span-12")
+                     div.card.p-0
+                        div.card-image
+                           div.flex.justify-center.items-center
+                              img(src="../../assets/images/knowledgebase/news.jpg" class="w-full min-h-full h-[250px] object-contain" alt="news")
+                        div.card-body.flex.flex-col.gap-3.p-4.pt-0
+                           div.flex.justify-between
+                              div.flex.gap-2.items-center
+                                 i(data-feather="heart" class="h-5 stroke-content")
+                                 i(data-feather="message-square" class="h-5 stroke-content")
+                                 i(data-feather="send" class="h-5 stroke-content")  
+                              div
+                                 i(data-feather="bookmark" class="h-5 stroke-content")
+                           div.divider.w-full
+                           div.flex.justify-between
+                              a(href="blog-grid.html" class="flex items-center gap-1")
+                                 p.text-content(class="text-xs") Liked by  
+                                 span.text-primary(class="text-xs") Bran and 186 Others  
+                              div.avatar-group.-space-x-4(class="2md:hidden sm:flex 2sm:hidden")
+                                 div.avatar.border-white(class='border-2')
+                                    div.w-6
+                                       img(src='../../assets/images/avatar/15.jpg' alt='avatar')
+                                 div.avatar.border-white(class='border-2')
+                                    div.w-6
+                                       img(src='../../assets/images/avatar/18.jpg' alt='avatar')
+                                 div.avatar.border-white(class='border-2')
+                                    div.w-6
+                                       img(src='../../assets/images/avatar/24.jpg' alt='avatar')
+                           div
+                              h5(class="font-bold") News & Update
+                              p(class="mt-2 text-content line-clamp-2") Computer Network Security Intelligence, Internet,                     
+                                 | Approaches, Deep Learning Methods  
+                                 | of cashback/rewards, reporting 
+
+                  div.col-span-3(class="4xl:col-span-4 lg:col-span-6 sm:col-span-12")
+                     div.card.p-0
+                        div.card-image
+                           div.flex.justify-center.items-center
+                              img(src="../../assets/images/knowledgebase/3dlaptops.png" class="w-full min-h-full h-[250px] object-contain" alt="3D laptops")
+                        div.card-body.flex.flex-col.gap-3.p-4.pt-0
+                           div.flex.justify-between
+                              div.flex.gap-2.items-center
+                                 i(data-feather="heart" class="h-5 stroke-content")
+                                 i(data-feather="message-square" class="h-5 stroke-content")
+                                 i(data-feather="send" class="h-5 stroke-content")  
+                              div
+                                 i(data-feather="bookmark" class="h-5 stroke-content")
+                           div.divider.w-full
+                           div.flex.justify-between
+                              a(href="blog-grid.html" class="flex items-center gap-1")
+                                 p.text-content(class="text-xs") Liked by  
+                                 span.text-primary(class="text-xs") Dou and 96 Others  
+                              div.avatar-group.-space-x-4(class="2md:hidden sm:flex 2sm:hidden")
+                                 div.avatar.border-white(class='border-2')
+                                    div.w-6
+                                       img(src='../../assets/images/avatar/15.jpg' alt='avatar')
+                                 div.avatar.border-white(class='border-2')
+                                    div.w-6
+                                       img(src='../../assets/images/avatar/18.jpg' alt='avatar')
+                                 div.avatar.border-white(class='border-2')
+                                    div.w-6
+                                       img(src='../../assets/images/avatar/24.jpg' alt='avatar')
+                           div
+                              h5(class="font-bold") Validating a website
+                              p(class="mt-2 text-content line-clamp-2") Use Western Union to send money online or in 
+                                 | person to friends and family around the world
+                                 | to more than 200 countries and territories from India  
+
+                  div.col-span-3(class="4xl:col-span-4 lg:col-span-6 sm:col-span-12")
+                     div.card.p-0
+                        div.card-image
+                           div.flex.justify-center.items-center
+                              img(src="../../assets/images/knowledgebase/money-hand.png" class="w-full min-h-full h-[250px] object-contain" alt="money")
+                        div.card-body.flex.flex-col.gap-3.p-4.pt-0
+                           div.flex.justify-between
+                              div.flex.gap-2.items-center
+                                 i(data-feather="heart" class="h-5 stroke-content")
+                                 i(data-feather="message-square" class="h-5 stroke-content")
+                                 i(data-feather="send" class="h-5 stroke-content")  
+                              div
+                                 i(data-feather="bookmark" class="h-5 stroke-content")
+                           div.divider.w-full
+                           div.flex.justify-between
+                              a(href="blog-grid.html" class="flex items-center gap-1")
+                                 p.text-content(class="text-xs") Liked by  
+                                 span.text-primary(class="text-xs") Bets and 154 Others 
+                              div.avatar-group.-space-x-4(class="2md:hidden sm:flex 2sm:hidden")
+                                 div.avatar.border-white(class='border-2')
+                                    div.w-6
+                                       img(src='../../assets/images/avatar/15.jpg' alt='avatar')
+                                 div.avatar.border-white(class='border-2')
+                                    div.w-6
+                                       img(src='../../assets/images/avatar/18.jpg' alt='avatar')
+                                 div.avatar.border-white(class='border-2')
+                                    div.w-6
+                                       img(src='../../assets/images/avatar/24.jpg' alt='avatar')
+                           div
+                              h5(class="font-bold") Money Cash Back
+                              p(class="mt-2 text-content line-clamp-2") The super-bookmark card which
+                                 | CashBacks on every single spend. With the HDFC Bank 
+                                 |  MoneyBack Credit Card, Rewarding You.  
+
+                  div.col-span-3(class="4xl:col-span-4 lg:col-span-6 sm:col-span-12")
+                     div.card.p-0
+                        div.card-image
+                           div.flex.justify-center.items-center
+                              img(src="../../assets/images/knowledgebase/3dboy.jpg" class="w-full min-h-full h-[250px] object-contain" alt="3D boy")
+                        div.card-body.flex.flex-col.gap-3.p-4.pt-0
+                           div.flex.justify-between
+                              div.flex.gap-2.items-center
+                                 i(data-feather="heart" class="h-5 stroke-content")
+                                 i(data-feather="message-square" class="h-5 stroke-content")
+                                 i(data-feather="send" class="h-5 stroke-content")  
+                              div
+                                 i(data-feather="bookmark" class="h-5 stroke-content")
+                           div.divider.w-full
+                           div.flex.justify-between
+                              a(href="blog-grid.html" class="flex items-center gap-1")
+                                 p.text-content(class="text-xs") Liked by  
+                                 span.text-primary(class="text-xs") Robed and 198 Others 
+                              div.avatar-group.-space-x-4(class="2md:hidden sm:flex 2sm:hidden")
+                                 div.avatar.border-white(class='border-2')
+                                    div.w-6
+                                       img(src='../../assets/images/avatar/15.jpg' alt='avatar')
+                                 div.avatar.border-white(class='border-2')
+                                    div.w-6
+                                       img(src='../../assets/images/avatar/18.jpg' alt='avatar')
+                                 div.avatar.border-white(class='border-2')
+                                    div.w-6
+                                       img(src='../../assets/images/avatar/24.jpg' alt='avatar')
+                           div
+                              h5(class="font-bold") Money Cash Back
+                              p(class="mt-2 text-content line-clamp-2") Install your bank’s mobile app on your phone, 
+                                 | back of your check to do so in their App.
+                                 | You will need to detach the top part of the check. 
+
+                  div.col-span-3(class="4xl:col-span-4 lg:col-span-6 sm:col-span-12")
+                     div.card.p-0
+                        div.card-image
+                           div.flex.justify-center.items-center
+                              img(src="../../assets/images/knowledgebase/time-management.png" class="w-full min-h-full h-[250px] object-contain" alt="time management")
+                        div.card-body.flex.flex-col.gap-3.p-4.pt-0
+                           div.flex.justify-between
+                              div.flex.gap-2.items-center
+                                 i(data-feather="heart" class="h-5 stroke-content")
+                                 i(data-feather="message-square" class="h-5 stroke-content")
+                                 i(data-feather="send" class="h-5 stroke-content")  
+                              div
+                                 i(data-feather="bookmark" class="h-5 stroke-content")
+                           div.divider.w-full
+                           div.flex.justify-between
+                              a(href="blog-grid.html" class="flex items-center gap-1")
+                                 p.text-content(class="text-xs") Liked by  
+                                 span.text-primary(class="text-xs") Virga and 126 Others 
+                              div.avatar-group.-space-x-4(class="2md:hidden sm:flex 2sm:hidden")
+                                 div.avatar.border-white(class='border-2')
+                                    div.w-6
+                                       img(src='../../assets/images/avatar/15.jpg' alt='avatar')
+                                 div.avatar.border-white(class='border-2')
+                                    div.w-6
+                                       img(src='../../assets/images/avatar/18.jpg' alt='avatar')
+                                 div.avatar.border-white(class='border-2')
+                                    div.w-6
+                                       img(src='../../assets/images/avatar/24.jpg' alt='avatar')
+                           div
+                              h5(class="font-bold") Time Management  
+                              p(class="mt-2 text-content line-clamp-2") Time management is the process of planning  
+                                 | and controlling how much time to specific activities
+                                 | Good time management enables an
+
+                  div.col-span-3(class="4xl:col-span-4 lg:col-span-6 sm:col-span-12")
+                     div.card.p-0
+                        div.card-image
+                           div.flex.justify-center.items-center
+                              img(src="../../assets/images/knowledgebase/pound-boy.jpg" class="w-full min-h-full h-[250px] object-contain" alt="pound boy")
+                        div.card-body.flex.flex-col.gap-3.p-4.pt-0
+                           div.flex.justify-between
+                              div.flex.gap-2.items-center
+                                 i(data-feather="heart" class="h-5 stroke-content")
+                                 i(data-feather="message-square" class="h-5 stroke-content")
+                                 i(data-feather="send" class="h-5 stroke-content")  
+                              div
+                                 i(data-feather="bookmark" class="h-5 stroke-content")
+                           div.divider.w-full
+                           div.flex.justify-between
+                              a(href="blog-grid.html" class="flex items-center gap-1")
+                                 p.text-content(class="text-xs") Liked by  
+                                 span.text-primary(class="text-xs") Brent and 126 Others
+                              div.avatar-group.-space-x-4(class="2md:hidden sm:flex 2sm:hidden")
+                                 div.avatar.border-white(class='border-2')
+                                    div.w-6
+                                       img(src='../../assets/images/avatar/15.jpg' alt='avatar')
+                                 div.avatar.border-white(class='border-2')
+                                    div.w-6
+                                       img(src='../../assets/images/avatar/18.jpg' alt='avatar')
+                                 div.avatar.border-white(class='border-2')
+                                    div.w-6
+                                       img(src='../../assets/images/avatar/24.jpg' alt='avatar')
+                           div
+                              h5(class="font-bold") Make Money 
+                              p(class="mt-2 text-content line-clamp-2") Make a backup of your WordPress website
+                                 | Clean up your WordPress database You can then squeeze out the free be
+                                 | t, which can be as much as £100 Multiply.
+
+
+            // Page Body End 
+            +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+         include ../../components/customizer
+
+   include ../../layout/footer-files

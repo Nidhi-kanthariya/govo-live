@@ -1,0 +1,10 @@
+//- ========================
+//- Product Detail Table
+//- =======================
+
+table.table.equal-space
+    tbody
+        each bodyData in PRODUCT_DETAIL.body
+            tr  
+                th(class="font-bold text-title text-xs min-w-[137px] w-[200px] rtl:text-right")=bodyData.mainTitle
+                td(class="text-xs !text-start")=bodyData.subTitle

@@ -1,0 +1,30 @@
+
+//- Sidebar
+aside(class="sidebar")  
+  div.logo-wrapper
+    a(href="index.html") 
+      img(class="w-full" src="../../assets/images/logo/logo.png" alt="logo")
+    button.sidebar-btn
+      +SVG_ICON("Category", "w-6 h-6") 
+  div.search-wrapper
+    div.search-box
+      input(class="search" placeholder="Search" type="search")
+      +SVG_ICON("Search", "w-5 h-5")   
+  nav.sidebar-main 
+    ul.sidebar-links.custom-scroll
+      each mainMenu in SIDEBAR_MENU
+        if mainMenu.title
+          li.title=mainMenu.title
+        each menuItem in mainMenu.menu   
+          li.sidebar-list
+            a(href=`${menuItem.url}`).sidebar-link.sidebar-title
+              span 
+                +SVG_ICON(`${menuItem.icon}`) 
+                span.sidebar-name= menuItem.title
+              if(menuItem.subMenu)
+                +SVG_ICON("Arrow-Right-2")  
+            if menuItem.subMenu 
+              ul.sidebar-submenu
+                each subLink in menuItem.subMenu
+                  li 
+                    a(href=`${subLink.url}`)=subLink.title 

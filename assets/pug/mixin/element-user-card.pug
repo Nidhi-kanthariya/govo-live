@@ -1,0 +1,27 @@
+//- =====================
+//-  User Card   
+//- =====================
+mixin user-card(data)
+    div.card.p-0.gap-0
+        div.card-body.flex.flex-col.gap-4.items-center.justify-center.p-5
+            div.avatar.rounded-xl(class="w-[128px] h-[123px] relative")
+                img(src=`../../assets/images/user-app/${data.image}`, alt=`${data.name}`)
+            div.text-center
+                p.text-xs.text-title(class="font-semibold")=data.name 
+                span.text-2xs.text-content3(class="font-semibold")=data.email  
+            div.social-media
+                +user-social-media(SOCIAL_MEDIA_DATA)
+            div.flex.items-center.gap-2 
+                button.btn.bg-secondary-extralight.text-secondary.border.border-secondary-extralight Follow
+                button.btn.bg-primary-light.text-title.border.border-primary-light Message
+        div.card-footer 
+            div.social-detail.flex.flex-wrap.justify-center.items-center.bg-gray-light.p-4(class="2md:p-2 sm:p-4")
+                div.following-data.flex.flex-col.justify-center.items-center.gap-0.font-semibold.pr-padding.border-r-2.border-border-light(class="rtl:border-l-2 rtl:border-r-0 rtl:pr-0 rtl:pl-padding")
+                    span(class="text-xs leading-5") Following
+                    span(class="text-[13px] leading-[18px] text-content")=data.following
+                div.follower-data.flex.flex-col.justify-center.items-center.gap-0.font-semibold.px-padding.border-r-2.border-border-light(class="rtl:border-l-2 rtl:border-r-0")
+                    span(class="text-xs leading-5") Follower
+                    span(class="text-[13px] leading-[18px] text-content")=data.follower
+                div.follower-data.flex.flex-col.justify-center.items-center.gap-0.font-semibold.pl-padding 
+                    span(class="text-xs leading-5") Likes
+                    span(class="text-[13px] leading-[18px] text-content")=data.likes

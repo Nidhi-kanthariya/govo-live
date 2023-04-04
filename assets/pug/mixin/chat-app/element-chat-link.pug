@@ -1,0 +1,17 @@
+
+//- ================
+//-  Chat Link  
+//- ================
+
+mixin chat-link-data(data)
+    ul.flex.flex-col.gap-1 
+        each dataItem in data 
+            li(class="pt-[13px] first:pt-0 first:mt-0 first:border-none") 
+                div.flex.items-center.gap-3(class="w-[calc(100%_-_59px)] xl:gap-2")
+                    div.avatar.rounded-xl.cursor-pointer(class="w-[50px] h-[50px]")
+                        a(href=`${dataItem.datalink}` , class="no-underline" , target="_blank")
+                            img(src=`../../assets/images/chat-app/${dataItem.image}`, alt=`${dataItem.title}`)
+                    div(class="w-[calc(100%_-_70px)]")
+                        a(href=`${dataItem.datalink}` , class="no-underline" , target="_blank")
+                            h4.text-xs.font-medium.truncate.text-title(class="leading-none cursor-pointer lg:text-2xs lg:leading-none")=dataItem.title
+                        span.text-content.truncate.block(class="mt-1")=dataItem.datalink

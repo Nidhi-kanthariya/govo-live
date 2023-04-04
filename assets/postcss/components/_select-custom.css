@@ -1,0 +1,79 @@
+/*=====================
+  Select Custom  CSS
+==========================*/
+@layer components {
+  .select-style-1 {
+    .select-selected {
+      @apply pl-[0.875rem] capitalize pr-[1.75rem] py-[0.625rem] bg-gray-light text-3xs font-bold rtl:pr-[0.875rem] rtl:pl-[1.75rem] ;
+      &:after{
+        @apply rtl:left-[.625rem] rtl:right-unset;
+      }
+    }
+    &.select-bg-transition {
+      .select-items,
+      .select-selected {
+        @apply bg-white-light text-white;
+      }
+      .select-selected {
+        @apply after:border-t-white;
+        &.select-arrow-active {
+          @apply after:border-b-white after:border-transparent;
+        }
+      }
+      .select-items {
+        > div {
+          @apply hover:text-white text-white;
+        }
+      }
+    }
+    &.select-bg-white {
+      .select-selected,
+      .select-items {
+        @apply bg-white;
+      }
+    }
+    .select-items {
+      @apply p-[0.75rem] bg-gray-light;
+      > div {
+        @apply hover:text-primary transition-all  px-0 first:pt-0 last:pb-0 py-[0.25rem] text-xs text-title;
+      }
+    }
+
+    .select-xl{
+      ~.select-selected{
+          @apply  pl-[0.875rem] pr-[1.75rem] py-4 text-[0.875rem] rtl:pl-[1.75rem] rtl:pr-[0.875rem];
+      }
+    }
+    .select-lg{
+      ~.select-selected{
+          @apply  pl-[0.875rem] pr-[1.75rem] py-3 text-[0.875rem] rtl:pl-[1.75rem] rtl:pr-[0.875rem];
+      }
+    }
+    .select-md{
+      ~.select-selected{
+          @apply  pl-[0.875rem] pr-[1.75rem] py-[0.625rem] text-[0.875rem] rtl:pl-[1.75rem] rtl:pr-[0.875rem];
+      }
+    }
+    .select-sm{
+      ~.select-selected{
+          @apply  pl-[0.875rem] pr-[1.75rem] py-2 text-[0.875rem] rtl:pl-[1.75rem] rtl:pr-[0.875rem];
+      }
+    }
+    
+  }
+  .select-section{
+    .select-selected {
+      @apply min-w-[13.125rem];
+      .select-items{
+        @apply min-w-[13.125rem];
+      }
+    }
+  }
+  .card-header{
+    &.transaction-history{
+      .select-style-1 {
+        @apply  min-w-[6.25rem] max-w-[6.25rem];
+      }
+    }
+  }
+}

@@ -1,0 +1,188 @@
+/*=====================
+  Email CSS
+  ==========================*/
+@layer components {
+  .email-main {
+    .email-read {
+      li {
+        @apply  border-r  rtl:border-r-0 rtl:border-l border-border-light px-[.375rem];
+
+        &:first-child,
+        &:last-child {
+          @apply border-none;
+        }
+      }
+    }
+
+    .emailRead {
+      @apply hidden;
+
+      &.show {
+        @apply block;
+      }
+    }
+
+    .emailList {
+      @apply block;
+
+      &.hide {
+        @apply hidden;
+      }
+    }
+  }
+
+  .email-dropzone {
+    &.filepond--root {
+      @apply h-[4.8125rem];
+
+      .filepond--credits {
+        @apply hidden;
+      }
+
+      .filepond--drop-label {
+        @apply border border-border-light rounded-5 bg-white;
+
+        label {
+          @apply bg-white;
+
+          .filepond--label-action {
+            @apply text-primary decoration-primary;
+          }
+        }
+      }
+
+      .filepond--file {
+        @apply bg-gray-light;
+      }
+
+      *:not(text) {
+        @apply bg-white;
+      }
+
+      .filepond--list {
+        .filepond--item {
+          .filepond--file {
+            @apply text-title p-[.4375rem];
+
+            .filepond--file-action-button {
+              &.filepond--action-remove-item {
+
+                &:hover,
+                &:focus {
+                  @apply shadow-none;
+                }
+
+                svg {
+                  @apply bg-gray-light text-title;
+                }
+              }
+
+              &.filepond--action-retry-item-load {
+                svg {
+                  @apply text-title;
+                }
+              }
+            }
+
+            .filepond--file-info {
+              @apply bg-gray-light;
+
+              .filepond--file-info-main,
+              .filepond--file-info-sub {
+                @apply bg-transparent;
+              }
+            }
+          }
+        }
+      }
+
+      .filepond--panel {
+        &.filepond--panel-root {
+          @apply border border-border-light;
+        }
+      }
+    }
+  }
+
+  .show-preview {
+    &.filepond--root {
+      .filepond--credits {
+        @apply hidden;
+      }
+
+      .filepond--drop-label {
+        @apply border border-border-light rounded-5 bg-white;
+
+        label {
+          @apply bg-white;
+
+          .filepond--label-action {
+            @apply text-primary decoration-primary;
+          }
+        }
+      }
+
+      .filepond--file {
+        @apply bg-gray-light;
+
+        .filepond--image-preview-wrapper {
+          .filepond--image-preview {
+            @apply bg-border-light;
+          }
+        }
+      }
+
+      *:not(text) {
+        @apply bg-white;
+      }
+
+      .filepond--list {
+        .filepond--item {
+          .filepond--file {
+            @apply text-title p-[.4375rem];
+
+            .filepond--file-action-button {
+              &.filepond--action-remove-item {
+                @apply bg-transparent;
+
+                &:hover,
+                &:focus {
+                  @apply shadow-none;
+                }
+
+                svg {
+                  @apply bg-transparent text-white;
+                }
+              }
+
+              &.filepond--action-retry-item-load {
+                svg {
+                  @apply text-title;
+                }
+              }
+            }
+
+            .filepond--file-info {
+              @apply bg-transparent;
+
+              .filepond--file-info-main,
+              .filepond--file-info-sub {
+                @apply bg-transparent;
+              }
+            }
+          }
+        }
+      }
+
+      .filepond--panel {
+        &.filepond--panel-root {
+          @apply border border-border-light;
+        }
+      }
+
+      .filepond--drip {
+        @apply border border-content3;
+      }
+    }
+  }
+}

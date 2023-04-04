@@ -1,0 +1,105 @@
+//- sidebar
+-var sidebar = true;
+
+//- feather
+-var feather= true;
+
+//- fontawesome
+-var fontAwesome=true;
+
+//- custom select
+-var customSelect = true;
+
+//- ecommerce
+-var ecommerce = true;
+
+//- swiper-slider
+-var swiper=true;
+
+//- customizer 
+-var customizer = true;
+
+//- todoApp 
+-var todoApp = true;
+
+//- Breadcrumbs
+-var pageTitle="Todo";
+-var breadcrumb=['Todo'];
+
+//- all JSON  
+include ../../data/all-data
+
+//- all mixin   
+include ../../mixin/mixin
+
+doctype html
+html(lang='en')
+   include ../../layout/header-files
+   body(dir="ltr" class="unique-skin")
+      main.page-wrapper
+         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+            include ../../layout/header/header     
+            // Sidebar Start 
+            div.page-sidebar.sidebar-dark.unique-sidebar
+               include ../../layout/unique 
+            // Sidebar End
+
+            // Page Body Start
+            div.page-body
+               div.grid.grid-cols-12(class="lg:gap-0 gap-card-gap")
+                  div.col-span-3(class="xl:col-span-4") 
+                     div(class="card gap-0 lg:z-10 2xl:p-card-spacing lg:p-3 left-sidebar-aside z-[3] lg:w-[280px] sticky min-lg:top-0 sm:w-[269px] lg:fixed lg:h-[100vh]")
+                        +todo-left-sidebar(TODO_SIDEBAR_DATA)
+
+                  div.col-span-9(class="xl:col-span-8 lg:col-span-12")
+                     div.flex.flex-col.gap-2.card(class="h-[548px] custom-scroll overflow-auto") 
+                        div.flex.justify-between.items-center
+                           h5.text-title.font-bold.mb-2 Todo List
+                           i(data-feather="align-left" class="hidden w-5 h-5 cursor-pointer stroke-title left-sidebar-toggle-btn lg:block")
+                        div(class="overflow-auto max-h-[478px] custom-scroll")
+                           +todo-app-data(TODO_APP_DATA)
+
+            // Page Body End  
+            +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+         include ../../components/customizer   
+
+         div.modal-main
+            input#todo-modal(class="peer" name="todo-modal" type='checkbox')
+            label.modal-overlay(class="peer-checked:block" for='todo-modal')
+            div.modal.modal-bottom-right(class="checkout-detail invisible w-11/12 max-w-xl sm:!left-0 transition-all duration-1000 translate-y-0 opacity-0 peer-checked:opacity-100 peer-checked:visible peer-checked:-translate-y-9 !right-[2%]")
+               div.modal-header
+                  h3 Create Task
+                  label(for='todo-modal')
+                     i(data-feather="x" class='w-4 h-4 stroke-title')
+               div.modal-body
+                  form.todo-form.theme-form.m-0.flex.flex-col.gap-3(action="javascript:void(0)")
+                     div   
+                        label(for="taskTitle") Title
+                        input(type="text" name="title" id="taskTitle" placeholder="Enter task name.." required)
+                     div.priority-list
+                        label(for='priority') Priority
+                        select#priority.priority-list-item.form-select.block.w-full.px-3.text-xs.font-normal.text-content3.bg-white.bg-clip-padding.bg-no-repeat.border.border-border-light.rounded-5.transition.ease-in-out.m-0(class='min-w-[150px] py-[9px]' name="priority" aria-label='Default select example')
+                           option(selected='') Normal
+                           option(value='Low') Low
+                           option(value='Medium') Medium
+                           option(value='High') High
+                     div 
+                        label(for='status') Status
+                        select#status.form-select.block.w-full.px-3.text-xs.font-normal.text-content3.bg-white.bg-clip-padding.bg-no-repeat.border.border-border-light.rounded-5.transition.ease-in-out.m-0(class='min-w-[150px] py-[9px]' name="status" aria-label='Default select example')
+                           option(selected='') New
+                           option(value='Inprogress') Inprogress
+                           option(value='Completed') Completed
+                           option(value='Pending') Pending
+                     div.flex.items-center.gap-2
+                        label(for="todo-modal").btn.btn-outline.btn-primary.todo-form-close(class="!p-[0.6rem] 3sm:flex-1 !w-auto !mt-4 !mb-0" type="button") Close  
+                        button.btn.btn-primary.text-white.addTodo(class="3sm:flex-1 !w-auto !mb-0" type="submit") Add  
+
+
+
+
+   include ../../layout/footer-files
+
+
+
+
+

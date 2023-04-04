@@ -1,0 +1,175 @@
+@layer components {
+  .checkbox {
+    @apply relative;
+    input {
+      @apply hidden;
+    }
+
+    &-indicator {
+      @apply transition-all duration-300 flex items-center bg-white justify-center rounded-[0.25rem] border border-content absolute inset-0 w-full h-full;
+      svg {
+        @apply w-[80%] h-[80%] stroke-white;
+      }
+    }
+    input:checked ~ .checkbox-indicator {
+      @apply bg-primary border-primary;
+    }
+
+    &.checkbox-xl{
+      @apply w-[1.75rem] h-[1.75rem];
+    }
+    &.checkbox-lg{
+      @apply w-[1.5rem] h-[1.5rem];
+    }
+    &.checkbox-md{
+      @apply w-[1.25rem] h-[1.25rem];
+    }
+    &.checkbox-sm{
+      @apply w-[.9375rem] h-[.9375rem];
+    }
+  }
+
+  .radio{
+    .radio-xl{
+      @apply w-6 h-6;
+    }
+    .radio-lg{
+      @apply w-5 h-5;
+    }
+    .radio-md{
+      @apply w-4 h-4;
+    }
+    .radio-sm{
+      @apply w-3 h-3;
+    }
+  }
+
+  .radio-button input[type=radio]{
+    @apply absolute invisible;
+  }
+  
+  .radio-button{
+    @apply flex items-center gap-2;
+  }
+
+  .radio-button {
+    &.radio-sm{
+      .check{
+        @apply w-4 h-4;
+        &:before{
+          @apply w-[8px] h-[8px] top-[3px] left-[3px];
+        }
+      }
+    }
+    &.radio-md{
+      .check{
+        @apply w-[1.10rem] h-[1.10rem];
+        &:before{
+          @apply w-[11px] h-[11px] top-[2px] left-[2px];
+        }
+      }
+    }
+    &.radio-lg{
+      .check{
+        @apply w-5 h-5;
+        &:before{
+          @apply w-[12px] h-[12px] top-[3px] left-[3px];
+        }
+      }
+    }
+    &.radio-xl{
+      .check{
+        @apply w-6 h-6;
+        &:before{
+          @apply w-4 h-4 top-[3px] left-[3px];
+        }
+      }
+    }
+  }
+
+  .radio-button .check{
+    @apply block relative rounded-full z-[5] w-[1.10rem] h-[1.10rem];
+    transition: border .25s linear;
+    -webkit-transition: border .25s linear;
+  }
+
+  .radio-button .check::before {
+    @apply block absolute content-[""] rounded-full m-auto w-[11px] h-[11px] top-[2px] left-[2px];
+    transition: background 0.25s linear;
+    -webkit-transition: background 0.25s linear;
+  }
+
+  .primary{
+    input[type=radio]:checked ~ .check, .check {
+      @apply border border-primary;
+    }
+  }
+  .secondary{
+    input[type=radio]:checked ~ .check, .check{
+      @apply border border-secondary;
+    }
+  }
+  .info{
+    input[type=radio]:checked ~ .check, .check{
+      @apply border border-info;
+    }
+  }
+  .success{
+    input[type=radio]:checked ~ .check, .check{
+      @apply border border-success;
+    }
+  }
+  .warning{
+    input[type=radio]:checked ~ .check, .check{
+      @apply border border-warning;
+    }
+  }
+  .danger{
+    input[type=radio]:checked ~ .check, .check{
+      @apply border border-danger;
+    }
+  }
+  .light{
+    input[type=radio]:checked ~ .check, .check{
+      @apply border border-light;
+    }
+  }
+
+
+  .primary{
+    input[type=radio]:checked ~ .check::before {
+      @apply bg-primary;
+    }
+  }
+  .secondary{
+    input[type=radio]:checked ~ .check::before {
+      @apply bg-secondary;
+    }
+  }
+  .info{
+    input[type=radio]:checked ~ .check::before {
+      @apply bg-info;
+    }
+  }
+  .success{
+    input[type=radio]:checked ~ .check::before {
+      @apply bg-success;
+    }
+  }
+  .warning{
+    input[type=radio]:checked ~ .check::before {
+      @apply bg-warning;
+    }
+  }
+  .danger{
+    input[type=radio]:checked ~ .check::before {
+      @apply bg-danger;
+    }
+  }
+  .light{
+    input[type=radio]:checked ~ .check::before {
+      @apply bg-light;
+    }
+  }
+}
+

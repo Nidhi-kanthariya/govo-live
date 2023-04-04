@@ -1,0 +1,41 @@
+/*===============
+  Chartist custom
+  =============*/
+.sales-small {
+  &-1 {
+    .ct-series-a {
+      .ct-bar {
+        @apply stroke-primary;
+      }
+    }
+    .ct-series-b {
+      .ct-bar {
+        @apply stroke-primary opacity-25;
+      }
+    }
+  }
+  &-2 {
+    .ct-series-a {
+      .ct-bar {
+        @apply stroke-secondary;
+      }
+    }
+    .ct-series-b {
+      .ct-bar {
+        @apply stroke-secondary opacity-25;
+      }
+    }
+  }
+  &-3 {
+    .ct-series-a {
+      .ct-bar {
+        @apply stroke-success;
+      }
+    }
+    .ct-series-b {
+      .ct-bar {
+        @apply stroke-success opacity-25;
+      }
+    }
+  }
+}

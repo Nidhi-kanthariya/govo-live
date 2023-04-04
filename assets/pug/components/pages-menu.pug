@@ -1,0 +1,8 @@
+
+// Page Menu 
+ul.flex.gap-3.flex-col 
+   each pagesMenu in PAGES_LIST
+      li 
+         a(href=`${pagesMenu.url}` class="capitalize flex items-center gap-2 text-sm font-medium") 
+            +SVG_ICON(`${pagesMenu.icon}`,"w-5 h-5 stroke-title")    
+            = pagesMenu.title

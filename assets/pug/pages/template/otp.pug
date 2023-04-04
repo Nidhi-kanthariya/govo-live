@@ -1,0 +1,70 @@
+
+//- feather
+-var feather= true;
+
+//- custom select
+-var customSelect= true;
+
+//- otp
+-var otp=true;
+
+//- fontawesome
+-var fontAwesome=true;
+
+doctype html
+html(lang='en')
+    include ../../layout/header-files
+    body(dir="ltr" class="unique-skin")
+        main.page-wrapper
+            // Page Body Start
+            div.page-body(class="h-[100vh]")
+                div(class="!flex items-center justify-center h-full p-[.9375rem] common-animate-main").ratio_asos
+                    img(class="bg-img" src="../../assets/images/dotsbg.jpg")
+                    div(class=" grid grid-cols-12 gap-0 mx-auto w-full max-w-[70%] xl:max-w-[50%] md:max-w-[70%] sm:max-w-[80%] 2sm:max-w-[100%] xl:flex xl:justify-center items-center")
+                        div(class="relative col-span-5 bg-white 2xl:col-span-6 z-1 xl:col-span-12 rounded-xl max-w-[29.375rem] min-w-[18.75rem] max-h-max")
+                            form.theme-form.flex.flex-col.gap-3(class="!m-0 p-8 2sm:p-4" action="reset-password.html")
+                                h3 Verification code
+                                p(class="!mb-0") We have sent the code verification to your email address
+                                span.justify-center.mt-0.edit.flex.items-center.gap-2(class="text-xs !text-primary mt-[15px]")
+                                    | User2211@gmail.com 
+                                    a(href="forgot-password.html") 
+                                        i(class="w-5 h-5 stroke-primary" data-feather="edit-3")
+                                div.flex.items-center.gap-2.mt-6
+                                    input.w-full.text-center(class="input-otp " placeholder='0' type='tel' required oninput='digitValidate(this)' onkeyup='tabChange(1)' maxlength='1')
+                                    input.w-full.text-center(class="input-otp " placeholder='0' type='tel' required oninput='digitValidate(this)' onkeyup='tabChange(2)' maxlength='1')
+                                    input.w-full.text-center(class="input-otp " placeholder='0' type='tel' required oninput='digitValidate(this)' onkeyup='tabChange(3)' maxlength='1')
+                                    input.w-full.text-center(class="input-otp " placeholder='0' type='tel' required oninput='digitValidate(this)' onkeyup='tabChange(4)' maxlength='1')
+                                button.btn.btn-primary.text-white(class="hover:drop-shadow-lg") Submit
+                                div.flex.items-center.justify-center.gap-2
+                                    a.resend-otp(class="text-xs text-primary" href='javascript:void(0)') Resend 
+                                    span.time.flex.gap-2 
+                                        | In 
+                                        span#timer
+                                div
+                                    h4 Or Sign in with 
+                                div.social(class="sm:flex-col")
+                                    a(href="https://www.linkedin.com/login" class="flex items-center justify-center gap-1 btn !text-linkedin")
+                                        i.fa-brands.fa-linkedin-in
+                                        |   Linkedin
+                                    a(href="https://twitter.com/i/flow/login" class="flex items-center justify-center gap-1 btn !text-twitter")
+                                        i.fa-brands.fa-twitter
+                                        |   Twitter
+                                    a(href="https://www.instagram.com/accounts/login/" class="flex items-center justify-center gap-1 btn instagram !text-instagram")
+                                        svg(width='0' height='0')
+                                            radialgradient#rg(r='150%' cx='30%' cy='107%')
+                                                stop(stop-color='#fdf497' offset='0')
+                                                stop(stop-color='#fdf497' offset='0.05')
+                                                stop(stop-color='#fd5949' offset='0.45')
+                                                stop(stop-color='#d6249f' offset='0.6')
+                                                stop(stop-color='#285AEB' offset='0.9')
+                                        i.fa-brands.fa-instagram
+                                        span   Instagram
+                        div(class="col-span-7 rounded-lg 2xl:col-span-6 z-1 xl:col-span-12 xl:hidden")
+                            div(class="flex justify-center items-center relative 4xl:top-[25%]")
+                                img(src="../../assets/images/svg/otp.svg" alt="register vector" class="w-[100%]")
+                                img(src="../../assets/images/svg/otp2.svg" alt="register vector" class="common-animate animate-ping bottom-[28%] absolute left-[11%] w-[52%] animate__animated animate__infinite animate__shakeY animate__slower")
+            // Page Body End
+
+        include ../../components/customizer
+
+    include ../../layout/footer-files

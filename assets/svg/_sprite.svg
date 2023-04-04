@@ -1,0 +1,980 @@
+<svg width="0" height="0" fill="none" style="visibility: hidden; position: absolute;" aria-hidden="true">
+    <symbol id="2-User"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/2-User__2-User"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="2-User__2-User" transform="translate(2.000000, 2.500000)"  stroke-width="1.5">
+                <path d="M7.5915,12.7068 C11.2805,12.7068 14.4335,13.2658 14.4335,15.4988 C14.4335,17.7318 11.3015,18.3068 7.5915,18.3068 C3.9015,18.3068 0.7495,17.7528 0.7495,15.5188 C0.7495,13.2848 3.8805,12.7068 7.5915,12.7068 Z" id="Stroke-1__2-User"></path>
+                <path d="M7.5915,9.5198 C5.1695,9.5198 3.2055,7.5568 3.2055,5.1348 C3.2055,2.7128 5.1695,0.7498 7.5915,0.7498 C10.0125,0.7498 11.976531,2.7128 11.976531,5.1348 C11.9855,7.5478 10.0355,9.5108 7.6225,9.5198 L7.5915,9.5198 Z" id="Stroke-3__2-User" opacity="0.400000006"></path>
+                <path d="M14.4831,8.3816 C16.0841,8.1566 17.3171,6.7826 17.3201,5.1196 C17.3201,3.4806 16.1251,2.1206 14.5581,1.8636" id="Stroke-5__2-User" opacity="0.400000006"></path>
+                <path d="M16.5954,12.2322 C18.1464,12.4632 19.2294,13.0072 19.2294,14.1272 C19.2294,14.8982 18.7194,15.3982 17.8954,15.7112" id="Stroke-7__2-User"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="3-User"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/3-User__3-User"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="3-User__3-User" transform="translate(1.000000, 3.500000)"   stroke-width="1.5">
+                <path d="M16.8877,7.3967 C18.2827,7.2007 19.3567,6.0047 19.3597,4.5557 C19.3597,3.1277 18.3187,1.9437 16.9537,1.7197" id="Stroke-1__3-User" opacity="0.400000006"></path>
+                <path d="M18.7285,10.7503 C20.0795,10.9523 21.0225,11.4253 21.0225,12.4003 C21.0225,13.0713 20.5785,13.5073 19.8605,13.7813" id="Stroke-3__3-User"></path>
+                <path d="M10.8867,11.1638 C7.6727,11.1638 4.9277,11.6508 4.9277,13.5958 C4.9277,15.5398 7.6557,16.0408 10.8867,16.0408 C14.1007,16.0408 16.8447,15.5588 16.8447,13.6128 C16.8447,11.6668 14.1177,11.1638 10.8867,11.1638 Z" id="Stroke-5__3-User"></path>
+                <path d="M10.8867,8.3879 C12.9957,8.3879 14.7057,6.6789 14.7057,4.5689 C14.7057,2.4599 12.9957,0.7499 10.8867,0.7499 C8.7777,0.7499 7.06767183,2.4599 7.06767183,4.5689 C7.0597,6.6709 8.7567,8.3809 10.8587,8.3879 L10.8867,8.3879 Z" id="Stroke-7__3-User" opacity="0.400000006"></path>
+                <path d="M4.8848,7.3967 C3.4888,7.2007 2.4158,6.0047 2.4128,4.5557 C2.4128,3.1277 3.4538,1.9437 4.8188,1.7197" id="Stroke-9__3-User" opacity="0.400000006"></path>
+                <path d="M3.0439,10.7503 C1.6929,10.9523 0.7499,11.4253 0.7499,12.4003 C0.7499,13.0713 1.1939,13.5073 1.9119,13.7813" id="Stroke-11__3-User"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Activity"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Activity__Activity"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Activity__Activity" transform="translate(2.000000, 1.500000)"  stroke-width="1.5">
+                <polyline id="Path_33966__Activity" opacity="0.400000006" points="5.24485128 13.2814646 8.23798631 9.39130439 11.652174 12.0732266 14.5812358 8.29290622"></polyline>
+                <circle id="Ellipse_741__Activity" cx="17.9954234" cy="2.70022885" r="1.92219681"></circle>
+                <path d="M12.9244852,1.62013731 L5.6567506,1.62013731 C2.64530894,1.62013731 0.778032041,3.75286043 0.778032041,6.76430209 L0.778032041,14.846682 C0.778032041,17.8581237 2.60869567,19.9816935 5.6567506,19.9816935 L14.2608696,19.9816935 C17.2723113,19.9816935 19.1395882,17.8581237 19.1395882,14.846682 L19.1395882,7.80778036" id="Path__Activity"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Add-User"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Add-User__Add-User"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Add-User__Add-User" transform="translate(2.000000, 2.000000)"  stroke-width="1.5">
+                <path d="M7.8766,13.2062 C4.0326,13.2062 0.7496,13.7872 0.7496,16.1152 C0.7496,18.4432 4.0126,19.0452 7.8766,19.0452 C11.7216,19.0452 15.0036,18.4632 15.0036,16.1362 C15.0036,13.8092 11.7416,13.2062 7.8766,13.2062 Z" id="Stroke-1__Add-User"></path>
+                <path d="M7.8766,9.8859 C10.3996,9.8859 12.4446,7.8409 12.4446,5.3179 C12.4446,2.7949 10.3996,0.7499 7.8766,0.7499 C5.3546,0.7499 3.30957019,2.7949 3.30957019,5.3179 C3.3006,7.8319 5.3306,9.8769 7.8456,9.8859 L7.8766,9.8859 Z" id="Stroke-3__Add-User" opacity="0.400000006"></path>
+                <line x1="17.2037" y1="6.6691" x2="17.2037" y2="10.6791" id="Stroke-5__Add-User"></line>
+                <line x1="19.2496" y1="8.674" x2="15.1596" y2="8.674" id="Stroke-7__Add-User"></line>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Arrow-Down-2"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Arrow-Down-2__Arrow-Down-2"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Arrow-Down-2__Arrow-Down-2" transform="translate(5.000000, 8.500000)"  stroke-width="1.5">
+                <polyline id="Stroke-1__Arrow-Down-2" points="14 0 7 7 0 0"></polyline>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Arrow-Down-3"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Arrow-Down-3__Arrow-Down-3"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Arrow-Down-3__Arrow-Down-3" transform="translate(6.500000, 3.000000)"  stroke-width="1.5">
+                <line x1="5.7513" y1="9.6998" x2="5.7513" y2="0.7498" id="Stroke-1__Arrow-Down-3" opacity="0.400000006"></line>
+                <polygon id="Stroke-3__Arrow-Down-3" points="0.7503 9.6998 5.7513 17.6368 10.7523 9.6998"></polygon>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Arrow-Down-Circle"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Arrow-Down-Circle__Arrow-Down-Circle"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Arrow-Down-Circle__Arrow-Down-Circle" transform="translate(2.000000, 2.000000)"  stroke-width="1.5">
+                <path d="M0.7502,10 C0.7502,15.108 4.8912,19.25 10.0002,19.25 C15.1082,19.25 19.2502,15.108 19.2502,10 C19.2502,4.892 15.1082,0.75 10.0002,0.75 C4.8912,0.75 0.7502,4.892 0.7502,10 Z" id="Stroke-1__Arrow-Down-Circle" opacity="0.400000006"></path>
+                <polyline id="Stroke-3__Arrow-Down-Circle" points="6.529 8.5577 10 12.0437 13.471 8.5577"></polyline>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Arrow-Down-Square"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Arrow-Down-Square__Arrow-Down-Square"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Arrow-Down-Square__Arrow-Down-Square" transform="translate(2.000000, 2.000000)"  stroke-width="1.5">
+                <path d="M5.6659,19.25 L14.3349,19.25 C17.3549,19.25 19.2499,17.111 19.2499,14.084 L19.2499,5.916 C19.2499,2.889 17.3649,0.75 14.3349,0.75 L5.6659,0.75 C2.6359,0.75 0.7499,2.889 0.7499,5.916 L0.7499,14.084 C0.7499,17.111 2.6359,19.25 5.6659,19.25 Z" id="Stroke-1__Arrow-Down-Square" opacity="0.400000006"></path>
+                <line x1="9.9999" y1="14.086" x2="9.9999" y2="5.914" id="Stroke-3__Arrow-Down-Square"></line>
+                <polyline id="Stroke-5__Arrow-Down-Square" points="13.7479 10.3223 9.9999 14.0863 6.2519 10.3223"></polyline>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Arrow-Down"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Arrow-Down__Arrow-Down"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Arrow-Down__Arrow-Down" transform="translate(5.500000, 4.000000)"  stroke-width="1.5">
+                <line x1="6.7743" y1="15.75" x2="6.7743" y2="0.75" id="Stroke-1__Arrow-Down" opacity="0.400000006"></line>
+                <polyline id="Stroke-3__Arrow-Down" points="12.7987 9.7002 6.7747 15.7502 0.7497 9.7002"></polyline>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Arrow-Left-2"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Arrow-Left-2__Arrow-Left-2"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Arrow-Left-2__Arrow-Left-2" transform="translate(12.000000, 12.000000) rotate(-270.000000) translate(-12.000000, -12.000000) translate(5.000000, 8.500000)"  stroke-width="1.5">
+                <polyline id="Stroke-1__Arrow-Left-2" points="14 0 7 7 0 0"></polyline>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Arrow-Left-3"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Arrow-Left-3__Arrow-Left-3"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Arrow-Left-3__Arrow-Left-3" transform="translate(12.000000, 12.000000) rotate(-270.000000) translate(-12.000000, -12.000000) translate(6.500000, 3.000000)"  stroke-width="1.5">
+                <line x1="5.7513" y1="9.6998" x2="5.7513" y2="0.7498" id="Stroke-1__Arrow-Left-3" opacity="0.400000006"></line>
+                <polygon id="Stroke-3__Arrow-Left-3" points="0.7503 9.6998 5.7513 17.6368 10.7523 9.6998"></polygon>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Arrow-Left-Circle"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Arrow-Left-Circle__Arrow-Left-Circle"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Arrow-Left-Circle__Arrow-Left-Circle" transform="translate(12.000000, 12.000000) rotate(-270.000000) translate(-12.000000, -12.000000) translate(2.000000, 2.000000)"  stroke-width="1.5">
+                <path d="M0.7502,10 C0.7502,15.108 4.8912,19.25 10.0002,19.25 C15.1082,19.25 19.2502,15.108 19.2502,10 C19.2502,4.892 15.1082,0.75 10.0002,0.75 C4.8912,0.75 0.7502,4.892 0.7502,10 Z" id="Stroke-1__Arrow-Left-Circle" opacity="0.400000006"></path>
+                <polyline id="Stroke-3__Arrow-Left-Circle" points="6.529 8.5577 10 12.0437 13.471 8.5577"></polyline>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Arrow-Left-Square"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Arrow-Left-Square__Arrow-Left-Square"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Arrow-Left-Square__Arrow-Left-Square" transform="translate(12.000000, 12.000000) rotate(-270.000000) translate(-12.000000, -12.000000) translate(2.000000, 2.000000)"  stroke-width="1.5">
+                <path d="M5.6659,19.25 L14.3349,19.25 C17.3549,19.25 19.2499,17.111 19.2499,14.084 L19.2499,5.916 C19.2499,2.889 17.3649,0.75 14.3349,0.75 L5.6659,0.75 C2.6359,0.75 0.7499,2.889 0.7499,5.916 L0.7499,14.084 C0.7499,17.111 2.6359,19.25 5.6659,19.25 Z" id="Stroke-1__Arrow-Left-Square" opacity="0.400000006"></path>
+                <line x1="9.9999" y1="14.086" x2="9.9999" y2="5.914" id="Stroke-3__Arrow-Left-Square"></line>
+                <polyline id="Stroke-5__Arrow-Left-Square" points="13.7479 10.3223 9.9999 14.0863 6.2519 10.3223"></polyline>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Arrow-Left"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Arrow-Left__Arrow-Left"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Arrow-Left__Arrow-Left" transform="translate(12.000000, 12.000000) rotate(-270.000000) translate(-12.000000, -12.000000) translate(5.500000, 4.000000)"  stroke-width="1.5">
+                <line x1="6.7743" y1="15.75" x2="6.7743" y2="0.75" id="Stroke-1__Arrow-Left" opacity="0.400000006"></line>
+                <polyline id="Stroke-3__Arrow-Left" points="12.7987 9.7002 6.7747 15.7502 0.7497 9.7002"></polyline>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Arrow-Right-2"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Arrow-Right-2__Arrow-Right-2"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Arrow-Right-2__Arrow-Right-2" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000) translate(5.000000, 8.500000)"  stroke-width="1.5">
+                <polyline id="Stroke-1__Arrow-Right-2" points="14 0 7 7 0 0"></polyline>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Arrow-Right-3"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Arrow-Right-3__Arrow-Right-3"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Arrow-Right-3__Arrow-Right-3" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000) translate(6.500000, 3.000000)"  stroke-width="1.5">
+                <line x1="5.7513" y1="9.6998" x2="5.7513" y2="0.7498" id="Stroke-1__Arrow-Right-3" opacity="0.400000006"></line>
+                <polygon id="Stroke-3__Arrow-Right-3" points="0.7503 9.6998 5.7513 17.6368 10.7523 9.6998"></polygon>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Arrow-Right-Circle"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Arrow-Right-Circle__Arrow-Right-Circle"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Arrow-Right-Circle__Arrow-Right-Circle" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000) translate(2.000000, 2.000000)"  stroke-width="1.5">
+                <path d="M0.7502,10 C0.7502,15.108 4.8912,19.25 10.0002,19.25 C15.1082,19.25 19.2502,15.108 19.2502,10 C19.2502,4.892 15.1082,0.75 10.0002,0.75 C4.8912,0.75 0.7502,4.892 0.7502,10 Z" id="Stroke-1__Arrow-Right-Circle" opacity="0.400000006"></path>
+                <polyline id="Stroke-3__Arrow-Right-Circle" points="6.529 8.5577 10 12.0437 13.471 8.5577"></polyline>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Arrow-Right-Square"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Arrow-Right-Square__Arrow-Right-Square"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Arrow-Right-Square__Arrow-Right-Square" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000) translate(2.000000, 2.000000)"  stroke-width="1.5">
+                <path d="M5.6659,19.25 L14.3349,19.25 C17.3549,19.25 19.2499,17.111 19.2499,14.084 L19.2499,5.916 C19.2499,2.889 17.3649,0.75 14.3349,0.75 L5.6659,0.75 C2.6359,0.75 0.7499,2.889 0.7499,5.916 L0.7499,14.084 C0.7499,17.111 2.6359,19.25 5.6659,19.25 Z" id="Stroke-1__Arrow-Right-Square" opacity="0.400000006"></path>
+                <line x1="9.9999" y1="14.086" x2="9.9999" y2="5.914" id="Stroke-3__Arrow-Right-Square"></line>
+                <polyline id="Stroke-5__Arrow-Right-Square" points="13.7479 10.3223 9.9999 14.0863 6.2519 10.3223"></polyline>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Arrow-Right"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Arrow-Right__Arrow-Right"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Arrow-Right__Arrow-Right" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000) translate(5.500000, 4.000000)"  stroke-width="1.5">
+                <line x1="6.7743" y1="15.75" x2="6.7743" y2="0.75" id="Stroke-1__Arrow-Right" opacity="0.400000006"></line>
+                <polyline id="Stroke-3__Arrow-Right" points="12.7987 9.7002 6.7747 15.7502 0.7497 9.7002"></polyline>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Arrow-Up-2"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Arrow-Up-2__Arrow-Up-2"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Arrow-Up-2__Arrow-Up-2" transform="translate(12.000000, 12.000000) rotate(-180.000000) translate(-12.000000, -12.000000) translate(5.000000, 8.500000)"  stroke-width="1.5">
+                <polyline id="Stroke-1__Arrow-Up-2" points="14 0 7 7 0 0"></polyline>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Arrow-Up-3"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Arrow-Up-3__Arrow-Up-3"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Arrow-Up-3__Arrow-Up-3" transform="translate(12.000000, 12.000000) rotate(-180.000000) translate(-12.000000, -12.000000) translate(6.500000, 3.000000)"  stroke-width="1.5">
+                <line x1="5.7513" y1="9.6998" x2="5.7513" y2="0.7498" id="Stroke-1__Arrow-Up-3" opacity="0.400000006"></line>
+                <polygon id="Stroke-3__Arrow-Up-3" points="0.7503 9.6998 5.7513 17.6368 10.7523 9.6998"></polygon>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Arrow-Up-Circle"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Arrow-Up-Circle__Arrow-Up-Circle"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Arrow-Up-Circle__Arrow-Up-Circle" transform="translate(12.000000, 12.000000) rotate(-180.000000) translate(-12.000000, -12.000000) translate(2.000000, 2.000000)"  stroke-width="1.5">
+                <path d="M0.7502,10 C0.7502,15.108 4.8912,19.25 10.0002,19.25 C15.1082,19.25 19.2502,15.108 19.2502,10 C19.2502,4.892 15.1082,0.75 10.0002,0.75 C4.8912,0.75 0.7502,4.892 0.7502,10 Z" id="Stroke-1__Arrow-Up-Circle" opacity="0.400000006"></path>
+                <polyline id="Stroke-3__Arrow-Up-Circle" points="6.529 8.5577 10 12.0437 13.471 8.5577"></polyline>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Arrow-Up-Square"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Arrow-Up-Square__Arrow-Up-Square"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Arrow-Up-Square__Arrow-Up-Square" transform="translate(12.000000, 12.000000) rotate(-180.000000) translate(-12.000000, -12.000000) translate(2.000000, 2.000000)"  stroke-width="1.5">
+                <path d="M5.6659,19.25 L14.3349,19.25 C17.3549,19.25 19.2499,17.111 19.2499,14.084 L19.2499,5.916 C19.2499,2.889 17.3649,0.75 14.3349,0.75 L5.6659,0.75 C2.6359,0.75 0.7499,2.889 0.7499,5.916 L0.7499,14.084 C0.7499,17.111 2.6359,19.25 5.6659,19.25 Z" id="Stroke-1__Arrow-Up-Square" opacity="0.400000006"></path>
+                <line x1="9.9999" y1="14.086" x2="9.9999" y2="5.914" id="Stroke-3__Arrow-Up-Square"></line>
+                <polyline id="Stroke-5__Arrow-Up-Square" points="13.7479 10.3223 9.9999 14.0863 6.2519 10.3223"></polyline>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Arrow-Up"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Arrow-Up__Arrow-Up"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Arrow-Up__Arrow-Up" transform="translate(12.000000, 12.000000) rotate(-180.000000) translate(-12.000000, -12.000000) translate(5.500000, 4.000000)"  stroke-width="1.5">
+                <line x1="6.7743" y1="15.75" x2="6.7743" y2="0.75" id="Stroke-1__Arrow-Up" opacity="0.400000006"></line>
+                <polyline id="Stroke-3__Arrow-Up" points="12.7987 9.7002 6.7747 15.7502 0.7497 9.7002"></polyline>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Bag-2"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Bag-2__Bag-2"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Bag-2__Bag-2" transform="translate(3.000000, 2.500000)"  stroke-width="1.5">
+                <path d="M12.7729,6.80503597 L12.7729,3.77303597 C12.7729,1.68903597 11.0839,-1.42108547e-14 9.0009,-1.42108547e-14 C6.9169,-0.00896402892 5.2199,1.67203597 5.2109,3.75603597 L5.2109,3.77303597 L5.2109,6.80503597" id="Stroke-1__Bag-2" opacity="0.400000006"></path>
+                <path d="M13.7422153,18.500336 L4.2577847,18.500336 C1.90569395,18.500336 0,16.595336 0,14.245336 L0,8.72933597 C0,6.37933597 1.90569395,4.47433597 4.2577847,4.47433597 L13.7422153,4.47433597 C16.094306,4.47433597 18,6.37933597 18,8.72933597 L18,14.245336 C18,16.595336 16.094306,18.500336 13.7422153,18.500336 Z" id="Stroke-3__Bag-2"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Bag"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Bag__Bag"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Bag__Bag" transform="translate(2.500000, 1.500000)"  stroke-width="1.5">
+                <path d="M14.01373,20.0000001 L5.66590392,20.0000001 C2.59954235,20.0000001 0.247139589,18.8924486 0.915331812,14.4347827 L1.69336385,8.39359272 C2.10526317,6.16933642 3.52402748,5.31807783 4.76887874,5.31807783 L14.9473685,5.31807783 C16.2105264,5.31807783 17.5469108,6.23340964 18.0228834,8.39359272 L18.8009154,14.4347827 C19.3684211,18.3890161 17.0800916,20.0000001 14.01373,20.0000001 Z" id="Path_33955__Bag"></path>
+                <path d="M14.1510298,5.09839819 C14.1510298,2.71232585 12.216736,0.7779932 9.83066366,0.7779932 L9.83066366,0.7779932 C8.68166274,0.773163349 7.57805185,1.22619323 6.76386233,2.03694736 C5.9496728,2.84770148 5.49199087,3.94938696 5.49199087,5.09839819 L5.49199087,5.09839819" id="Path_33956__Bag" opacity="0.400000006"></path>
+                <line x1="12.7963387" y1="9.60183071" x2="12.7505721" y2="9.60183071" id="Line_192__Bag"></line>
+                <line x1="6.96567509" y1="9.60183071" x2="6.9199085" y2="9.60183071" id="Line_193__Bag"></line>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Bookmark"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Bookmark__Bookmark"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Bookmark__Bookmark" transform="translate(4.200000, 2.300000)"  stroke-width="1.5">
+                <path d="M15.5388471,3.85363409 C15.5388471,1.10275689 13.6581454,-2.13162821e-14 10.9503759,-2.13162821e-14 L4.5914787,-2.13162821e-14 C1.96691729,-2.13162821e-14 2.66453526e-15,1.02756892 2.66453526e-15,3.67017544 L2.66453526e-15,18.393985 C2.66453526e-15,19.1197995 0.780952381,19.5769424 1.41353383,19.2220551 L7.79548872,15.6421053 L14.1223058,19.2160401 C14.7558897,19.5729323 15.5388471,19.1157895 15.5388471,18.3889724 L15.5388471,3.85363409 Z" id="Stroke-1__Bookmark"></path>
+                <line x1="4.071178" y1="6.72802013" x2="11.3894737" y2="6.72802013" id="Stroke-3__Bookmark" opacity="0.400000006"></line>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Buy"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Buy__Buy"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Buy__Buy" transform="translate(2.000000, 2.500000)"  stroke-width="1.5">
+                <path d="M5.4223,17.3203 C5.8443,17.3203 6.1873,17.6633 6.1873,18.0853 C6.1873,18.5073 5.8443,18.8493 5.4223,18.8493 C5.0003,18.8493 4.6583,18.5073 4.6583,18.0853 C4.6583,17.6633 5.0003,17.3203 5.4223,17.3203 Z" id="Stroke-1__Buy" opacity="0.400000006"></path>
+                <path d="M16.6747,17.3203 C17.0967,17.3203 17.4397,17.6633 17.4397,18.0853 C17.4397,18.5073 17.0967,18.8493 16.6747,18.8493 C16.2527,18.8493 15.9097,18.5073 15.9097,18.0853 C15.9097,17.6633 16.2527,17.3203 16.6747,17.3203 Z" id="Stroke-3__Buy" opacity="0.400000006"></path>
+                <path d="M0.7499,0.75 L2.8299,1.11 L3.7929,12.583 C3.8709,13.518 4.6519,14.236 5.5899,14.236 L16.5019,14.236 C17.3979,14.236 18.1579,13.578 18.2869,12.69 L19.2359,6.132 C19.3529,5.323 18.7259,4.599 17.9089,4.599 L3.1639,4.599" id="Stroke-5__Buy"></path>
+                <line x1="12.1254" y1="8.295" x2="14.8984" y2="8.295" id="Stroke-7__Buy" opacity="0.400000006"></line>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Calendar"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Calendar__Calendar"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Calendar__Calendar" transform="translate(3.000000, 2.000000)"  stroke-width="1.5">
+                <line x1="0.0926400664" y1="7.40425532" x2="17.9165888" y2="7.40425532" id="Line_200__Calendar" opacity="0.400000006"></line>
+                <path d="M13.4420736,11.3096927 L13.4513376,11.3096927 M9.00461445,11.3096927 L9.01387846,11.3096927 M4.55789127,11.3096927 L4.56715527,11.3096927 M13.4420736,15.1962175 L13.4513376,15.1962175 M9.00461445,15.1962175 L9.01387846,15.1962175 M4.55789127,15.1962175 L4.56715527,15.1962175" id="Combined-Shape__Calendar" opacity="0.400000006"></path>
+                <line x1="13.0437213" y1="-2.26485497e-14" x2="13.0437213" y2="3.29078014" id="Line_207__Calendar"></line>
+                <line x1="4.96550756" y1="-2.26485497e-14" x2="4.96550756" y2="3.29078014" id="Line_208__Calendar"></line>
+                <path d="M13.2382655,1.57919622 L4.77096342,1.57919622 C1.83427331,1.57919622 0,3.21513002 0,6.22222222 L0,15.2718676 C0,18.3262411 1.83427331,20 4.77096342,20 L13.2290015,20 C16.1749556,20 18,18.3546099 18,15.3475177 L18,6.22222222 C18.0092289,3.21513002 16.1842196,1.57919622 13.2382655,1.57919622 Z" id="Path__Calendar"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Call-Missed"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Call-Missed__Call-Missed"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Call-Missed__Call-Missed" transform="translate(2.000000, 2.500000)"  stroke-width="1.5">
+                <g id="Group__Call-Missed" opacity="0.400000006" transform="translate(13.314900, 1.249900)">
+                    <line x1="6" y1="0" x2="0" y2="6" id="Stroke-1__Call-Missed"></line>
+                    <line x1="0" y1="0" x2="6" y2="6" id="Stroke-3__Call-Missed"></line>
+                </g>
+                <path d="M9.03152183,9.97238745 C13.0205087,13.9603606 13.9254376,9.34671782 16.46525,11.8848116 C18.9138181,14.3327574 20.322201,14.8232052 17.2188207,17.9247236 C16.8302273,18.2370218 14.3612634,21.9942591 5.68446558,13.3196663 C-2.9934057,4.64400029 0.761566311,2.17244427 1.07394391,1.78394958 C4.18376493,-1.32615434 4.66682308,0.0893829491 7.11539117,2.53732879 C9.65413011,5.07649576 5.04253498,5.9844143 9.03152183,9.97238745 Z" id="Stroke-5__Call-Missed"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Call-Silent"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Call-Silent__Call-Silent"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Call-Silent__Call-Silent" transform="translate(2.000000, 2.000000)"  stroke-width="1.5">
+                <path d="M4.58522487,12.2052971 C-1.84625992,4.91816427 1.36948248,2.73953694 1.65403337,2.38537585 C4.72274017,-0.726948906 5.19875467,0.689695465 7.60950365,3.13662665 C9.64049885,5.20793244 7.00760976,6.19529063 8.08657596,8.65295397" id="Stroke-1__Call-Silent" opacity="0.400000006"></path>
+                <path d="M10.4903445,11.382439 C13.7705147,14.0762098 14.6956909,10.2233663 17.0191447,12.5844403 C19.4161922,15.0313715 20.7944944,15.5250506 17.7550804,18.6266433 C17.3976259,18.9378757 15.0951988,22.4687546 7.199661,14.7416033" id="Stroke-3__Call-Silent"></path>
+                <line x1="2.5" y1="19.5" x2="17.5" y2="3.5" id="Stroke-5__Call-Silent"></line>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Call"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Call__Call"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Call__Call" transform="translate(2.500000, 2.500000)"  stroke-width="1.5">
+                <path d="M9.03174073,9.97238745 C13.0208243,13.9603606 13.9257751,9.34671782 16.4656491,11.8848116 C18.9142765,14.3327574 20.32162,14.8232052 17.2192381,17.9247236 C16.8306352,18.2370218 14.3616115,21.9942591 5.68460336,13.3196663 C-2.99347825,4.64400029 0.761584769,2.17244427 1.07396994,1.78394958 C4.18386634,-1.32615434 4.6658627,0.0893829491 7.11449014,2.53732879 C9.6543641,5.07649576 5.04265719,5.9844143 9.03174073,9.97238745 Z" id="Stroke-1__Call"></path>
+            </g>
+            <path d="M14.353,6.043 C16.124,6.387 17.508,7.772 17.853,9.543" id="Stroke-3__Call"  stroke-width="1.5" opacity="0.400000006"></path>
+        </g>
+    </symbol>
+    <symbol id="Calling"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Calling__Calling"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Calling__Calling" transform="translate(2.000000, 2.500000)"  stroke-width="1.5">
+                <path d="M12.353,1.95399252e-14 C16.054,0.411 18.978,3.331 19.393,7.032" id="Stroke-1__Calling" opacity="0.400000006"></path>
+                <path d="M12.353,3.543 C14.124,3.887 15.508,5.272 15.853,7.043" id="Stroke-3__Calling" opacity="0.400000006"></path>
+                <path d="M9.03152183,9.97238745 C13.0205087,13.9603606 13.9254376,9.34671782 16.46525,11.8848116 C18.9138181,14.3327574 20.322201,14.8232052 17.2188207,17.9247236 C16.8302273,18.2370218 14.3612634,21.9942591 5.68446558,13.3196663 C-2.9934057,4.64400029 0.761566311,2.17244427 1.07394391,1.78394958 C4.18376493,-1.32615434 4.66682308,0.0893829491 7.11539117,2.53732879 C9.65413011,5.07649576 5.04253498,5.9844143 9.03152183,9.97238745 Z" id="Stroke-5__Calling"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Camera"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Camera__Camera"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Camera__Camera" transform="translate(2.000000, 3.000000)" >
+                <path d="M13.0402,1.0513 C14.0502,1.4533 14.3592,2.8533 14.7722,3.3033 C15.1852,3.7533 15.7762,3.9063 16.1032,3.9063 C17.8412,3.9063 19.2502,5.3153 19.2502,7.0523 L19.2502,12.8473 C19.2502,15.1773 17.3602,17.0673 15.0302,17.0673 L4.9702,17.0673 C2.6392,17.0673 0.7502,15.1773 0.7502,12.8473 L0.7502,7.0523 C0.7502,5.3153 2.1592,3.9063 3.8972,3.9063 C4.2232,3.9063 4.8142,3.7533 5.2282,3.3033 C5.6412,2.8533 5.9492,1.4533 6.9592,1.0513 C7.9702,0.6493 12.0302,0.6493 13.0402,1.0513 Z" id="Stroke-1__Camera" stroke-width="1.5"></path>
+                <g id="Group__Camera" transform="translate(6.820900, 6.200000)" opacity="0.400000006">
+                    <line x1="8.6746" y1="0.5" x2="8.6836" y2="0.5" id="Stroke-13__Camera" stroke-width="1.5"></line>
+                    <path d="M6.358,4.128 C6.358,2.372 4.935,0.949 3.179,0.949 C1.423,0.949 -2.70894418e-14,2.372 -2.70894418e-14,4.128 C-2.70894418e-14,5.884 1.423,7.307 3.179,7.307 C4.935,7.307 6.358,5.884 6.358,4.128 Z" id="Stroke-5__Camera" stroke-width="1.5"></path>
+                </g>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Category"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Category__Category"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Category__Category" transform="translate(2.999141, 3.000000)"  stroke-width="1.5">
+                <path d="M0.000858865205,3.5 C0.000858865205,0.874787053 0.0289681101,0 3.50085887,0 C6.9727494,0 7.00085887,0.874787053 7.00085887,3.5 C7.00085887,6.12521295 7.01193168,7 3.50085887,7 C-0.010214169,7 0.000858865205,6.12521295 0.000858865205,3.5 Z" id="Stroke-1__Category"></path>
+                <path d="M11.0008589,3.5 C11.0008589,0.874787053 11.0289681,0 14.5008589,0 C17.9727494,0 18.0008589,0.874787053 18.0008589,3.5 C18.0008589,6.12521295 18.0119317,7 14.5008589,7 C10.9897858,7 11.0008589,6.12521295 11.0008589,3.5 Z" id="Stroke-3__Category" opacity="0.400000006"></path>
+                <path d="M0.000858865205,14.5 C0.000858865205,11.8747871 0.0289681101,11 3.50085887,11 C6.9727494,11 7.00085887,11.8747871 7.00085887,14.5 C7.00085887,17.1252129 7.01193168,18 3.50085887,18 C-0.010214169,18 0.000858865205,17.1252129 0.000858865205,14.5 Z" id="Stroke-5__Category"></path>
+                <path d="M11.0008589,14.5 C11.0008589,11.8747871 11.0289681,11 14.5008589,11 C17.9727494,11 18.0008589,11.8747871 18.0008589,14.5 C18.0008589,17.1252129 18.0119317,18 14.5008589,18 C10.9897858,18 11.0008589,17.1252129 11.0008589,14.5 Z" id="Stroke-7__Category"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Chart"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Chart__Chart"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Chart__Chart" transform="translate(2.000000, 2.000000)"  stroke-width="1.5">
+                <line x1="5.37142857" y1="8.20171265" x2="5.37142857" y2="15.0618459" id="Line_182__Chart" opacity="0.400000006"></line>
+                <line x1="10.0380952" y1="4.91912464" x2="10.0380952" y2="15.0618459" id="Line_183__Chart" opacity="0.400000006"></line>
+                <line x1="14.6285714" y1="11.8268316" x2="14.6285714" y2="15.0618459" id="Line_184__Chart" opacity="0.400000006"></line>
+                <path d="M14.6857143,0 L5.31428571,0 C2.04761905,0 0,2.31208373 0,5.58515699 L0,14.414843 C0,17.6879163 2.03809524,20 5.31428571,20 L14.6857143,20 C17.9619048,20 20,17.6879163 20,14.414843 L20,5.58515699 C20,2.31208373 17.9619048,0 14.6857143,0 Z" id="Path__Chart"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Chat"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Chat__Chat"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Chat__Chat" transform="translate(2.000000, 2.000000)" >
+                <path d="M17.0713569,17.0698633 C14.0152073,20.1263497 9.48977439,20.7866955 5.78641655,19.0740178 C5.23970647,18.8539025 4.7914846,18.6760012 4.36537232,18.6760012 C3.17848885,18.6830368 1.70116564,19.8338678 0.933359565,19.0669822 C0.165553489,18.2990915 1.3172626,16.8206004 1.3172626,15.6265504 C1.3172626,15.2003912 1.1464157,14.7601607 0.926324692,14.2123853 C-0.787169233,10.5096244 -0.125891225,5.98268764 2.93025835,2.92720636 C6.8315976,-0.975567922 13.1700176,-0.975567922 17.0713569,2.92620127 C20.979731,6.83500611 20.9726961,13.1680941 17.0713569,17.0698633 Z" id="Stroke-4__Chat" stroke-width="1.5"></path>
+                <line x1="13.9394" y1="10.413" x2="13.9484" y2="10.413" id="Stroke-11__Chat" stroke-width="1.5" opacity="0.400000006"></line>
+                <line x1="9.9304" y1="10.413" x2="9.9394" y2="10.413" id="Stroke-13__Chat" stroke-width="1.5" opacity="0.400000006"></line>
+                <line x1="5.9214" y1="10.413" x2="5.9304" y2="10.413" id="Stroke-15__Chat" stroke-width="1.5" opacity="0.400000006"></line>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Close-Square"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Close-Square__Close-Square"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Close-Square__Close-Square" transform="translate(2.000000, 2.000000)"  stroke-width="1.5">
+                <path d="M12.3955,7.5949 L7.6035,12.3869 M12.397,12.3898 L7.601,7.5928" id="Combined-Shape__Close-Square" opacity="0.400000006"></path>
+                <path d="M14.3345,0.7502 L5.6655,0.7502 C2.6445,0.7502 0.7505,2.8892 0.7505,5.9162 L0.7505,14.0842 C0.7505,17.1112 2.6355,19.2502 5.6655,19.2502 L14.3335,19.2502 C17.3645,19.2502 19.2505,17.1112 19.2505,14.0842 L19.2505,5.9162 C19.2505,2.8892 17.3645,0.7502 14.3345,0.7502 Z" id="Stroke-3__Close-Square"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Danger"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Danger__Danger"  stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="Danger__Danger" transform="translate(2.000000, 3.000000)">
+                <path d="M9.2503,13.2696 C9.2503,12.8556 9.5863,12.5136 10.0003,12.5136 C10.4143,12.5136 10.7503,12.8446 10.7503,13.2586 L10.7503,13.2696 C10.7503,13.6836 10.4143,14.0196 10.0003,14.0196 C9.5863,14.0196 9.2503,13.6836 9.2503,13.2696 Z" id="Fill-1__Danger" fill="#000000" fill-rule="nonzero" opacity="0.400000006"></path>
+                <path d="M2.7957,17.4179 L17.2777,17.4179 C18.4247,17.3579 19.3067,16.3809 19.2477,15.2339 C19.2347,15.0019 19.1847,14.7729 19.0967,14.5589 L11.8197,1.8229 C11.2637,0.8179 9.9987,0.4539 8.9937,1.0109 C8.6517,1.1989 8.3697,1.4809 8.1807,1.8229 L0.9037,14.5589 C0.4717,15.6229 0.9837,16.8349 2.0467,17.2679 C2.2627,17.3549 2.4907,17.4049 2.7227,17.4179" id="Stroke-3__Danger"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <line x1="9.9899" y1="10.3961" x2="9.9899" y2="7.2961" id="Stroke-1__Danger"  stroke-width="1.5" opacity="0.400000006" stroke-linecap="round" stroke-linejoin="round"></line>
+            </g>
+        </g>
+    </symbol>
+
+    <symbol id="Danger-Circle" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path opacity="0.4" d="M12 8V12"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path opacity="0.4" d="M12 16H12.01"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="Delete"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Delete__Delete"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Delete__Delete" transform="translate(3.000000, 2.000000)"  stroke-width="1.5">
+                <path d="M16.3249,7.4682 C16.3249,7.4682 15.7819,14.2032 15.4669,17.0402 C15.3169,18.3952 14.4799,19.1892 13.1089,19.2142 C10.4999,19.2612 7.8879,19.2642 5.2799,19.2092 C3.9609,19.1822 3.1379,18.3782 2.9909,17.0472 C2.6739,14.1852 2.1339,7.4682 2.1339,7.4682" id="Stroke-1__Delete" opacity="0.400000006"></path>
+                <line x1="17.7082" y1="4.2397" x2="0.7502" y2="4.2397" id="Stroke-3__Delete"></line>
+                <path d="M14.4406,4.2397 C13.6556,4.2397 12.9796,3.6847 12.8256,2.9157 L12.5826,1.6997 C12.4326,1.1387 11.9246,0.7507 11.3456,0.7507 L7.1126,0.7507 C6.5336,0.7507 6.0256,1.1387 5.8756,1.6997 L5.6326,2.9157 C5.4786,3.6847 4.8026,4.2397 4.0176,4.2397" id="Stroke-5__Delete"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Discount"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Discount__Discount"  stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="Discount__Discount" transform="translate(2.000000, 2.000000)">
+                <path d="M2.7943,5.0558 C2.7943,3.8068 3.8073,2.7938 5.0553,2.7938 L6.0843,2.7938 C6.6803,2.7938 7.2533,2.5578 7.6773,2.1368 L8.3963,1.4168 C9.2773,0.5318 10.7093,0.5278 11.5943,1.4088 L11.6033,1.4168 L12.3233,2.1368 C12.7463,2.5578 13.3193,2.7938 13.9163,2.7938 L14.9443,2.7938 C16.1933,2.7938 17.2063,3.8068 17.2063,5.0558 L17.2063,6.0828 C17.2063,6.6808 17.4423,7.2528 17.8633,7.6768 L18.5833,8.3968 C19.4683,9.2778 19.4733,10.7088 18.5923,11.5948 L18.5833,11.6038 L17.8633,12.3238 C17.4423,12.7458 17.2063,13.3198 17.2063,13.9158 L17.2063,14.9448 C17.2063,16.1938 16.1933,17.2058 14.9443,17.2058 L13.9163,17.2058 C13.3193,17.2058 12.7463,17.4428 12.3233,17.8638 L11.6033,18.5828 C10.7233,19.4688 9.2913,19.4728 8.4053,18.5918 C8.4023,18.5888 8.3993,18.5858 8.3963,18.5828 L7.6773,17.8638 C7.2533,17.4428 6.6803,17.2058 6.0843,17.2058 L5.0553,17.2058 C3.8073,17.2058 2.7943,16.1938 2.7943,14.9448 L2.7943,13.9158 C2.7943,13.3198 2.5573,12.7458 2.1363,12.3238 L1.4173,11.6038 C0.5313,10.7228 0.5273,9.2908 1.4083,8.4058 L1.4173,8.3968 L2.1363,7.6768 C2.5573,7.2528 2.7943,6.6808 2.7943,6.0828 L2.7943,5.0558" id="Stroke-1__Discount"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <line x1="7.43" y1="12.5695" x2="12.57" y2="7.4295" id="Stroke-3__Discount"  stroke-width="1.5" opacity="0.400000006" stroke-linecap="round" stroke-linejoin="round"></line>
+                <path d="M12.5667,13.3224 C12.3667,13.3224 12.1767,13.2424 12.0367,13.1024 C11.9667,13.0324 11.9167,12.9424 11.8767,12.8524 C11.8367,12.7624 11.8167,12.6734 11.8167,12.5724 C11.8167,12.4724 11.8367,12.3724 11.8767,12.2824 C11.9167,12.1924 11.9667,12.1124 12.0367,12.0424 C12.3167,11.7624 12.8167,11.7624 13.0967,12.0424 C13.1667,12.1124 13.2267,12.1924 13.2667,12.2824 C13.2967,12.3724 13.3167,12.4724 13.3167,12.5724 C13.3167,12.6734 13.2967,12.7624 13.2667,12.8524 C13.2267,12.9424 13.1667,13.0324 13.0967,13.1024 C12.9567,13.2424 12.7667,13.3224 12.5667,13.3224" id="Fill-5__Discount" fill="#000000" fill-rule="nonzero" opacity="0.400000006"></path>
+                <path d="M7.4266,8.1828 C7.3266,8.1828 7.2366,8.1618 7.1466,8.1218 C7.0566,8.0818 6.9666,8.0328 6.8966,7.9628 C6.8266,7.8828 6.7766,7.8028 6.7366,7.7128 C6.6966,7.6218 6.6766,7.5328 6.6766,7.4328 C6.6766,7.3318 6.6966,7.2328 6.7366,7.1428 C6.7766,7.0528 6.8266,6.9628 6.8966,6.9028 C7.1866,6.6218 7.6766,6.6218 7.9566,6.9028 C8.0966,7.0418 8.1766,7.2328 8.1766,7.4328 C8.1766,7.5328 8.1666,7.6218 8.1266,7.7128 C8.0866,7.8028 8.0266,7.8828 7.9566,7.9628 C7.8866,8.0328 7.8066,8.0818 7.7166,8.1218 C7.6266,8.1618 7.5266,8.1828 7.4266,8.1828" id="Fill-7__Discount" fill="#000000" fill-rule="nonzero" opacity="0.400000006"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Discovery"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Discovery__Discovery"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Discovery__Discovery" transform="translate(2.000000, 2.000000)"  stroke-width="1.5">
+                <polygon id="Path_33947__Discovery" opacity="0.400000006" points="6.27002291 12.9519451 7.86270027 7.86270027 12.9519451 6.27002291 11.3592678 11.3592678"></polygon>
+                <circle id="Ellipse_738__Discovery" cx="9.61098403" cy="9.61098403" r="9.61098403"></circle>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Document"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Document__Document"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Document__Document" transform="translate(3.000000, 2.000000)"  stroke-width="1.5">
+                <line x1="12.7162" y1="14.2234" x2="5.4962" y2="14.2234" id="Stroke-1__Document" opacity="0.400000006"></line>
+                <line x1="12.7162" y1="10.0369" x2="5.4962" y2="10.0369" id="Stroke-2__Document" opacity="0.400000006"></line>
+                <line x1="8.2513" y1="5.8601" x2="5.4963" y2="5.8601" id="Stroke-3__Document" opacity="0.400000006"></line>
+                <path d="M12.9086,0.7498 C12.9086,0.7498 5.2316,0.7538 5.2196,0.7538 C2.4596,0.7708 0.7506,2.5868 0.7506,5.3568 L0.7506,14.5528 C0.7506,17.3368 2.4726,19.1598 5.2566,19.1598 C5.2566,19.1598 12.9326,19.1568 12.9456,19.1568 C15.7056,19.1398 17.4156,17.3228 17.4156,14.5528 L17.4156,5.3568 C17.4156,2.5728 15.6926,0.7498 12.9086,0.7498 Z" id="Stroke-4__Document"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Download"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Download__Download"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Downlaod__Download" transform="translate(2.000000, 3.000000)"  stroke-width="1.5">
+                <line x1="16.1427" y1="6.4156" x2="4.1017" y2="6.4156" id="Stroke-1__Download" transform="translate(10.122200, 6.415600) rotate(-270.000000) translate(-10.122200, -6.415600) "></line>
+                <polyline id="Stroke-3__Download" transform="translate(10.122200, 10.972400) rotate(-270.000000) translate(-10.122200, -10.972400) " points="8.6582 8.0564 11.5862 10.9724 8.6582 13.8884"></polyline>
+                <path d="M4,6.617 L4,5.684 C4,3.649 5.649,2 7.685,2 L12.569,2 C14.599,2 16.244,3.645 16.244,5.675 L16.244,16.815 C16.244,18.85 14.594,20.5 12.559,20.5 L7.674,20.5 C5.645,20.5 4,18.854 4,16.825 L4,15.883" id="Stroke-4__Download" opacity="0.400000006" transform="translate(10.122000, 11.250000) rotate(-270.000000) translate(-10.122000, -11.250000) "></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Edit-Square"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Edit-Square__Edit-Square"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Edit-Square__Edit-Square" transform="translate(2.000000, 2.000000)"  stroke-width="1.5">
+                <path d="M9.4923,0.789 L5.7533,0.789 C2.6783,0.789 0.7503,2.966 0.7503,6.048 L0.7503,14.362 C0.7503,17.444 2.6693,19.621 5.7533,19.621 L14.5773,19.621 C17.6623,19.621 19.5813,17.444 19.5813,14.362 L19.5813,10.334" id="Stroke-1__Edit-Square" opacity="0.400000006"></path>
+                <path d="M6.8278,8.9209 L14.3008,1.4479 C15.2318,0.5179 16.7408,0.5179 17.6718,1.4479 L18.8888,2.6649 C19.8198,3.5959 19.8198,5.1059 18.8888,6.0359 L11.3798,13.5449 C10.9728,13.9519 10.4208,14.1809 9.8448,14.1809 L6.0988,14.1809 L6.1928,10.4009 C6.2068,9.8449 6.4338,9.3149 6.8278,8.9209 Z" id="Stroke-3__Edit-Square"></path>
+                <line x1="13.1652" y1="2.6025" x2="17.7312" y2="7.1685" id="Stroke-5__Edit-Square"></line>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Edit"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Edit__Edit"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Edit__Edit" transform="translate(3.500000, 3.500000)"  stroke-width="1.5">
+                <line x1="10.1996" y1="16.3981" x2="16.5766" y2="16.3981" id="Stroke-1__Edit" opacity="0.400000006"></line>
+                <path d="M9.3549,1.4557 C10.0919,0.5167 11.2829,0.5657 12.2229,1.3027 L13.6129,2.3927 C14.5529,3.1297 14.8859,4.2727 14.1489,5.2137 L5.8599,15.7887 C5.5829,16.1427 5.1599,16.3517 4.7099,16.3567 L1.5129,16.3977 L0.7889,13.2827 C0.6869,12.8457 0.7889,12.3857 1.0659,12.0307 L9.3549,1.4557 Z" id="Stroke-3__Edit"></path>
+                <line x1="7.8026" y1="3.4361" x2="12.5966" y2="7.1941" id="Stroke-5__Edit" opacity="0.400000006"></line>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Filter-2"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Filter-2__Filter-2"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Filter__Filter-2" transform="translate(3.000000, 3.000000)"  stroke-width="1.5">
+                <path d="M1.56517107,0 C0.701077306,0 0,0.712864241 0,1.59040229 L0,2.52644287 C0,3.17647105 0.247188351,3.80158149 0.689357168,4.27176854 L5.53510122,9.42432527 L5.53723215,9.42107513 C6.47271221,10.3787833 6.99905292,11.6734228 6.99905292,13.0233146 L6.99905292,17.5951795 C6.99905292,17.9006928 7.31869303,18.0957012 7.58399432,17.9516117 L10.3435539,16.4478798 C10.7601515,16.2203699 11.0201255,15.7783508 11.0201255,15.2984133 L11.0201255,13.0113975 C11.0201255,11.6690893 11.5390079,10.3798667 12.4659642,9.42432527 L17.3117083,4.27176854 C17.7528116,3.80158149 18,3.17647105 18,2.52644287 L18,1.59040229 C18,0.712864241 17.2999882,0 16.4358944,0 L1.56517107,0 Z" id="Stroke-1__Filter-2"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Filter"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Filter__Filter"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Filter__Filter" transform="translate(4.000000, 4.000000)"  stroke-width="1.5">
+                <line x1="7" y1="13.5" x2="0" y2="13.5" id="Stroke-1__Filter" opacity="0.400000006"></line>
+                <path d="M16,13.5 C16,14.880719 14.880719,16 13.5,16 C12.119281,16 11,14.880719 11,13.5 C11,12.1182598 12.119281,11 13.5,11 C14.880719,11 16,12.1182598 16,13.5 Z" id="Stroke-3__Filter"></path>
+                <line x1="9" y1="2.5" x2="16" y2="2.5" id="Stroke-5__Filter" opacity="0.400000006"></line>
+                <path d="M0,2.5 C0,3.8817402 1.11928105,5 2.5,5 C3.88071895,5 5,3.8817402 5,2.5 C5,1.11928105 3.88071895,0 2.5,0 C1.11928105,0 0,1.11928105 0,2.5 Z" id="Stroke-7__Filter"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Folder"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Folder__Folder"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Folder__Folder" transform="translate(2.000000, 1.500000)"  stroke-width="1.5">
+                <path d="M19.9445984,14.2578777 C19.9445984,17.8360391 17.8360391,19.9445984 14.2578777,19.9445984 L6.47172553,19.9445984 C2.8844362,19.9445984 0.775876827,17.8360391 0.775876827,14.2578777 L0.775876827,6.46259757 C0.775876827,2.8844362 2.09030345,0.775876827 5.66846482,0.775876827 L7.66748864,0.775876827 C8.38576187,0.775876827 9.06211724,1.11405451 9.49308118,1.68867309 L10.4058774,2.90269213 C10.837782,3.47618249 11.5135349,3.81405896 12.23147,3.8154884 L15.0611384,3.8154884 C18.6484277,3.8154884 19.9719823,5.64108093 19.9719823,9.292266 L19.9445984,14.2578777 Z" id="Path_33957__Folder"></path>
+                <line x1="5.55892927" y1="12.9890909" x2="15.152418" y2="12.9890909" id="Line_194__Folder" opacity="0.400000006"></line>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Game"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Game__Game"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Game__Game" transform="translate(2.000000, 2.000000)"  stroke-width="1.5">
+                <line x1="6.84825686" y1="10.3140022" x2="6.84825686" y2="14.0589969" id="Stroke-1__Game"></line>
+                <line x1="8.75903359" y1="12.1867073" x2="4.93790399" y2="12.1867073" id="Stroke-2__Game"></line>
+                <line x1="13.3661121" y1="10.4280345" x2="13.2590866" y2="10.4280345" id="Stroke-3__Game"></line>
+                <line x1="15.1796122" y1="14.0026039" x2="15.0725866" y2="14.0026039" id="Stroke-4__Game"></line>
+                <path d="M6.07216276,5.32907052e-15 L6.07216276,5.32907052e-15 C6.07216276,0.740482877 6.68464554,1.34076212 7.44018226,1.34076212 L8.49666207,1.34076212 C9.66228674,1.34491631 10.6064427,2.27026027 10.611741,3.41266022 L10.611741,4.08771473" id="Stroke-5__Game" opacity="0.400000006"></path>
+                <path d="M14.4283141,19.9626083 C11.4231218,20.013497 8.47303168,20.0114199 5.57274558,19.9626083 C2.35350217,19.9626083 0,17.6663844 0,14.5112835 L0,9.86171565 C0,6.70661469 2.35350217,4.41039079 5.57274558,4.41039079 C8.48892657,4.36054061 11.441136,4.36157916 14.4283141,4.41039079 C17.6475575,4.41039079 20,6.70765324 20,9.86171565 L20,14.5112835 C20,17.6663844 17.6475575,19.9626083 14.4283141,19.9626083 Z" id="Stroke-7__Game"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Graph"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Graph__Graph"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Graph__Graph" transform="translate(2.300000, 2.100000)"  stroke-width="1.5">
+                <path d="M14.9778947,11.789176 C15.6526316,11.789176 16.2189474,12.3460181 16.1157895,13.0123339 C15.5105263,16.9323339 12.1547368,19.8428602 8.10736842,19.8428602 C3.62947368,19.8428602 -3.55271368e-15,16.2133865 -3.55271368e-15,11.7365444 C-3.55271368e-15,8.04812338 2.80210526,4.6123339 5.95684211,3.8354918 C6.63473684,3.66812338 7.32947368,4.14496548 7.32947368,4.84286022 C7.32947368,9.57128127 7.48842105,10.7944392 8.38631579,11.4597023 C9.28421053,12.1249655 10.34,11.789176 14.9778947,11.789176 Z" id="Stroke-1__Graph"></path>
+                <path d="M19.3925267,7.85159824 C19.4462109,4.8137035 15.714632,-0.0831386003 11.1672636,0.00107192599 C10.8135794,0.00738771546 10.5304215,0.302124558 10.514632,0.654756137 C10.3998952,3.15265087 10.554632,6.38949298 10.6409478,7.8568614 C10.6672636,8.3137035 11.0262109,8.67265087 11.4820004,8.69896666 C12.9904215,8.78528245 16.3451583,8.90317719 18.8072636,8.53054561 C19.1420004,8.48001929 19.3872636,8.18949298 19.3925267,7.85159824 Z" id="Stroke-3__Graph" opacity="0.400000006"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Heart"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Heart__Heart"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Heart__Heart" transform="translate(2.500000, 3.000000)"  stroke-width="1.5">
+                <path d="M0.371865331,8.59832177 C-0.701134669,5.24832177 0.552865331,1.41932177 4.06986533,0.28632177 C5.91986533,-0.31067823 7.96186533,0.0413217701 9.49986533,1.19832177 C10.9548653,0.0733217701 13.0718653,-0.30667823 14.9198653,0.28632177 C18.4368653,1.41932177 19.6988653,5.24832177 18.6268653,8.59832177 C16.9568653,13.9083218 9.49986533,17.9983218 9.49986533,17.9983218 C9.49986533,17.9983218 2.09786533,13.9703218 0.371865331,8.59832177 Z" id="Stroke-1__Heart"></path>
+                <path d="M13.5,3.7 C14.57,4.046 15.326,5.001 15.417,6.122" id="Stroke-3__Heart" opacity="0.400000006"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Hide"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Hide__Hide"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Hide__Hide" transform="translate(2.000000, 3.500000)"  stroke-width="1.5">
+                <path d="M7.7606,10.8668 C7.1856,10.2928 6.8356,9.5128 6.8356,8.6378 C6.8356,6.8848 8.2476,5.4718 9.9996,5.4718 C10.8666,5.4718 11.6646,5.8228 12.2296,6.3968" id="Stroke-1__Hide" opacity="0.400000006"></path>
+                <path d="M13.1048,9.1989 C12.8728,10.4889 11.8568,11.5069 10.5678,11.7409" id="Stroke-3__Hide" opacity="0.400000006"></path>
+                <path d="M4.6546,13.9723 C3.0676,12.7263 1.7236,10.9063 0.7496,8.6373 C1.7336,6.3583 3.0866,4.5283 4.6836,3.2723 C6.2706,2.0163 8.1016,1.3343 9.9996,1.3343 C11.9086,1.3343 13.7386,2.0263 15.3356,3.2913" id="Stroke-5__Hide"></path>
+                <path d="M17.4476,5.4908 C18.1356,6.4048 18.7406,7.4598 19.2496,8.6368 C17.2826,13.1938 13.8066,15.9388 9.9996,15.9388 C9.1366,15.9388 8.2856,15.7988 7.4676,15.5258" id="Stroke-7__Hide"></path>
+                <line x1="17.887" y1="0.7496" x2="2.113" y2="16.5236" id="Stroke-9__Hide"></line>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Home"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Home__Home"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Home__Home" transform="translate(2.500000, 2.000000)"  stroke-width="1.5">
+                <path d="M6.65721519,18.7714023 L6.65721519,15.70467 C6.65719744,14.9246392 7.29311743,14.2908272 8.08101266,14.2855921 L10.9670886,14.2855921 C11.7587434,14.2855921 12.4005063,14.9209349 12.4005063,15.70467 L12.4005063,15.70467 L12.4005063,18.7809263 C12.4003226,19.4432001 12.9342557,19.984478 13.603038,20 L15.5270886,20 C17.4451246,20 19,18.4606794 19,16.5618312 L19,16.5618312 L19,7.8378351 C18.9897577,7.09082692 18.6354747,6.38934919 18.0379747,5.93303245 L11.4577215,0.685301154 C10.3049347,-0.228433718 8.66620456,-0.228433718 7.51341772,0.685301154 L0.962025316,5.94255646 C0.362258604,6.39702249 0.00738668938,7.09966612 0,7.84735911 L0,16.5618312 C0,18.4606794 1.55487539,20 3.47291139,20 L5.39696203,20 C6.08235439,20 6.63797468,19.4499381 6.63797468,18.7714023 L6.63797468,18.7714023"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Image-2"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Image-2__Image-2"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Image-2__Image-2" transform="translate(2.000000, 2.000000)"  stroke-width="1.5">
+                <path d="M14.3027,0.7498 L5.6507,0.7498 C2.6387,0.7498 0.7497,2.8838 0.7497,5.9038 L0.7497,14.0498 C0.7497,17.0698 2.6307,19.2038 5.6507,19.2038 L14.2977,19.2038 C17.3227,19.2038 19.2027064,17.0698 19.2027064,14.0498 L19.2027064,5.9038 C19.2067,2.8838 17.3257,0.7498 14.3027,0.7498 Z" id="Stroke-1__Image-2"></path>
+                <path d="M8.7031,6.785 C8.7031,7.805 7.8771,8.631 6.8571,8.631 C5.8381,8.631 5.0111,7.805 5.0111,6.785 C5.0111,5.765 5.8381,4.939 6.8571,4.939 C7.8761,4.94 8.7021,5.766 8.7031,6.785 Z" id="Stroke-3__Image-2" opacity="0.400000006"></path>
+                <path d="M19.207,12.951 C18.284,12.001 16.509,10.082 14.579,10.082 C12.648,10.082 11.535,14.315 9.678,14.315 C7.821,14.315 6.134,12.401 4.646,13.628 C3.158,14.854 1.75,17.361 1.75,17.361" id="Stroke-5__Image-2" opacity="0.400000006"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Image"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Image__Image"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Image__Image" transform="translate(2.000000, 2.000000)"  stroke-width="1.5">
+                <path d="M19.21,5.8992 L19.21,14.0502 C19.21,17.0702 17.32,19.2002 14.3,19.2002 L5.65,19.2002 C2.63,19.2002 0.75,17.0702 0.75,14.0502 L0.75,5.8992 C0.75,2.8792 2.64,0.7502 5.65,0.7502 L14.3,0.7502 C17.32,0.7502 19.21,2.8792 19.21,5.8992 Z" id="Stroke-1__Image"></path>
+                <path d="M3.2813,14.4309 L4.8093,12.8179 C5.3403,12.2549 6.2253,12.2279 6.7893,12.7579 C6.8063,12.7749 7.7263,13.7099 7.7263,13.7099 C8.2813,14.2749 9.1883,14.2839 9.7533,13.7299 C9.7903,13.6939 12.0873,10.9079 12.0873,10.9079 C12.6793,10.1889 13.7423,10.0859 14.4623,10.6789 C14.5103,10.7189 16.6803,12.9459 16.6803,12.9459" id="Stroke-3__Image" opacity="0.400000006"></path>
+                <path d="M8.3126,7.1331 C8.3126,8.1021 7.5276,8.8871 6.5586,8.8871 C5.5896,8.8871 4.8046,8.1021 4.8046,7.1331 C4.8046,6.1641 5.5896,5.3791 6.5586,5.3791 C7.5276,5.3801 8.3126,6.1641 8.3126,7.1331 Z" id="Stroke-5__Image" opacity="0.400000006"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Info-Circle"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Info-Circle__Info-Circle"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Info-Circle__Info-Circle" transform="translate(2.000000, 2.000000)"  stroke-width="1.5">
+                <path d="M9.9999,0.7502 C15.1089,0.7502 19.2499,4.8922 19.2499,10.0002 C19.2499,15.1082 15.1089,19.2502 9.9999,19.2502 C4.8919,19.2502 0.7499,15.1082 0.7499,10.0002 C0.7499,4.8922 4.8919,0.7502 9.9999,0.7502 Z" id="Stroke-1__Info-Circle"></path>
+                <line x1="9.995" y1="6.2043" x2="9.995" y2="10.6233" id="Stroke-3__Info-Circle" opacity="0.400000006"></line>
+                <line x1="9.995" y1="13.7961" x2="10.005" y2="13.7961" id="Stroke-5__Info-Circle" opacity="0.400000006"></line>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Info-Square"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Info-Square__Info-Square"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Info-Square__Info-Square" transform="translate(2.000000, 2.000000)"  stroke-width="1.5">
+                <line x1="9.9899" y1="13.7961" x2="9.9899" y2="9.3771" id="Stroke-1__Info-Square" opacity="0.400000006"></line>
+                <line x1="9.9899" y1="6.2043" x2="9.9999" y2="6.2043" id="Stroke-2__Info-Square" opacity="0.400000006"></line>
+                <path d="M14.3346,0.7502 L5.6656,0.7502 C2.6446,0.7502 0.7506,2.8892 0.7506,5.9162 L0.7506,14.0842 C0.7506,17.1112 2.6356,19.2502 5.6656,19.2502 L14.3336,19.2502 C17.3646,19.2502 19.2506,17.1112 19.2506,14.0842 L19.2506,5.9162 C19.2506,2.8892 17.3646,0.7502 14.3346,0.7502 Z" id="Stroke-3__Info-Square"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Location"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Location__Location"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Location__Location" transform="translate(3.500000, 2.000000)"  stroke-width="1.5">
+                <path d="M0.739130438,8.39130439 C0.753537867,4.15071799 4.2028919,0.72472301 8.4434783,0.739085164 C12.6840647,0.753537867 16.1100597,4.2028919 16.0956975,8.4434783 L16.0956975,8.53043483 C16.0434783,11.2869566 14.5043479,13.8347827 12.6173914,15.826087 C11.5382412,16.9467164 10.3331375,17.9388114 9.026087,18.7826088 C8.67659293,19.0849173 8.15818976,19.0849173 7.80869569,18.7826088 C5.86019813,17.5143538 4.15006533,15.9131279 2.75652175,14.052174 C1.51448066,12.4293903 0.809295599,10.4597355 0.739130438,8.41739135 L0.739130438,8.39130439 Z" id="Path_33958__Location"></path>
+                <circle id="Ellipse_740__Location" opacity="0.400000006" cx="8.41739135" cy="8.53913048" r="2.46086958"></circle>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Lock"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Lock__Lock"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Lock__Lock" transform="translate(3.500000, 2.000000)"  stroke-width="1.5">
+                <path d="M12.9234,7.4478 L12.9234,5.3008 C12.9234,2.7878 10.8854,0.749755462 8.3724,0.749755462 C5.8594,0.7388 3.8134,2.7668 3.8024,5.2808 L3.8024,5.3008 L3.8024,7.4478" id="Stroke-1__Lock" opacity="0.400000006"></path>
+                <path d="M12.1832,19.2496 L4.5422,19.2496 C2.4482,19.2496 0.7502,17.5526 0.7502,15.4576 L0.7502,11.1686 C0.7502,9.0736 2.4482,7.3766 4.5422,7.3766 L12.1832,7.3766 C14.2772,7.3766 15.9752,9.0736 15.9752,11.1686 L15.9752,15.4576 C15.9752,17.5526 14.2772,19.2496 12.1832,19.2496 Z" id="Stroke-3__Lock"></path>
+                <line x1="8.3629" y1="12.2027" x2="8.3629" y2="14.4237" id="Stroke-5__Lock"></line>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Login"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Login__Login"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Login__Login" transform="translate(3.000000, 2.000000)"  stroke-width="1.5">
+                <line x1="12.8125" y1="10.0218" x2="0.7715" y2="10.0218" id="Stroke-1__Login"></line>
+                <polyline id="Stroke-3__Login" points="9.8848 7.1058 12.8128 10.0218 9.8848 12.9378"></polyline>
+                <path d="M5.5044,5.389 L5.5044,4.456 C5.5044,2.421 7.1534,0.772 9.1894,0.772 L14.0734,0.772 C16.1034,0.772 17.7484,2.417 17.7484,4.447 L17.7484,15.587 C17.7484,17.622 16.0984,19.272 14.0634,19.272 L9.1784,19.272 C7.1494,19.272 5.5044,17.626 5.5044,15.597 L5.5044,14.655" id="Stroke-4__Login" opacity="0.400000006"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Logout"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Logout__Logout"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Logout__Logout" transform="translate(2.000000, 2.000000)"  stroke-width="1.5">
+                <path d="M13.016,5.3895 L13.016,4.4565 C13.016,2.4215 11.366,0.7715 9.331,0.7715 L4.456,0.7715 C2.422,0.7715 0.772,2.4215 0.772,4.4565 L0.772,15.5865 C0.772,17.6215 2.422,19.2715 4.456,19.2715 L9.341,19.2715 C11.37,19.2715 13.016,17.6265 13.016,15.5975 L13.016,14.6545" id="Stroke-1__Logout" opacity="0.400000006"></path>
+                <line x1="19.8095" y1="10.0214" x2="7.7685" y2="10.0214" id="Stroke-3__Logout"></line>
+                <polyline id="Stroke-5__Logout" points="16.8812 7.1063 19.8092 10.0213 16.8812 12.9373"></polyline>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Message"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Message__Message"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Message__Message" transform="translate(2.000000, 3.000000)"  stroke-width="1.5">
+                <path d="M15.2677346,5.56112535 L11.0022884,8.99539646 C10.1950744,9.62826732 9.06350694,9.62826732 8.25629295,8.99539646 L3.95423343,5.56112535" id="Path_445__Message" opacity="0.400000006"></path>
+                <path d="M4.88787188,4.13786652e-14 L14.3157895,4.13786652e-14 C15.6751779,0.015246851 16.9690267,0.589927916 17.8960035,1.59020219 C18.8229802,2.59047647 19.3021688,3.92902958 19.2219681,5.29411767 L19.2219681,11.8219949 C19.3021688,13.187083 18.8229802,14.5256361 17.8960035,15.5259104 C16.9690267,16.5261847 15.6751779,17.1008658 14.3157895,17.1161126 L4.88787188,17.1161126 C1.9679634,17.1161126 -2.4308041e-14,14.740665 -2.4308041e-14,11.8219949 L-2.4308041e-14,5.29411767 C-2.4308041e-14,2.37544758 1.9679634,4.13786652e-14 4.88787188,4.13786652e-14 Z" id="Rectangle_511__Message"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="More-Circle"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/More-Circle__More-Circle"  stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="More-Circle__More-Circle" transform="translate(2.000000, 2.000000)">
+                <path d="M10.0002,0.7502 C15.1082,0.7502 19.2502,4.8922 19.2502,10.0002 C19.2502,15.1082 15.1082,19.2502 10.0002,19.2502 C4.8912,19.2502 0.7502,15.1082 0.7502,10.0002 C0.7502,4.8922 4.8912,0.7502 10.0002,0.7502 Z" id="Stroke-1__More-Circle"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M5.5207,11.1974 C4.8597,11.1974 4.3227,10.6604 4.3227,10.0004 C4.3227,9.3404 4.8597,8.8024 5.5207,8.8024 C6.1817,8.8024 6.7187,9.3404 6.7187,10.0004 C6.7187,10.6604 6.1817,11.1974 5.5207,11.1974" id="Fill-3__More-Circle" fill="#000000" fill-rule="nonzero" opacity="0.400000006"></path>
+                <path d="M10.0002,11.1974 C9.3392,11.1974 8.8022,10.6604 8.8022,10.0004 C8.8022,9.3404 9.3392,8.8024 10.0002,8.8024 C10.6612,8.8024 11.1982,9.3404 11.1982,10.0004 C11.1982,10.6604 10.6612,11.1974 10.0002,11.1974" id="Fill-5__More-Circle" fill="#000000" fill-rule="nonzero" opacity="0.400000006"></path>
+                <path d="M14.4792,11.1974 C13.8182,11.1974 13.2812,10.6604 13.2812,10.0004 C13.2812,9.3404 13.8182,8.8024 14.4792,8.8024 C15.1402,8.8024 15.6772,9.3404 15.6772,10.0004 C15.6772,10.6604 15.1402,11.1974 14.4792,11.1974" id="Fill-7__More-Circle" fill="#000000" fill-rule="nonzero" opacity="0.400000006"></path>
+            </g>
+        </g>
+    </symbol>
+
+    
+    <symbol id="Check-Circle"  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22 11.0801V12.0001C21.9988 14.1565 21.3005 16.2548 20.0093 17.9819C18.7182 19.7091 16.9033 20.9726 14.8354 21.584C12.7674 22.1954 10.5573 22.122 8.53447 21.3747C6.51168 20.6274 4.78465 19.2462 3.61096 17.4372C2.43727 15.6281 1.87979 13.4882 2.02168 11.3364C2.16356 9.18467 2.99721 7.13643 4.39828 5.49718C5.79935 3.85793 7.69279 2.71549 9.79619 2.24025C11.8996 1.76502 14.1003 1.98245 16.07 2.86011"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path opacity="0.4" d="M22 4L12 14.01L9 11.01"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+
+
+    <symbol id="Check-Square"   viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path opacity="0.4" d="M9 11L12 14L22 4"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M21 12V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H16"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+
+    <symbol id="More-Square"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/More-Square__More-Square"  stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="More-Square__More-Square" transform="translate(2.000000, 2.000000)">
+                <path d="M14.3347,0.7502 L5.6657,0.7502 C2.6447,0.7502 0.7507,2.8892 0.7507,5.9162 L0.7507,14.0842 C0.7507,17.1112 2.6347,19.2502 5.6657,19.2502 L14.3337,19.2502 C17.3647,19.2502 19.2507,17.1112 19.2507,14.0842 L19.2507,5.9162 C19.2507,2.8892 17.3647,0.7502 14.3347,0.7502 Z" id="Stroke-1__More-Square"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M5.5208,11.1974 C4.8598,11.1974 4.3228,10.6604 4.3228,10.0004 C4.3228,9.3404 4.8598,8.8024 5.5208,8.8024 C6.1818,8.8024 6.7188,9.3404 6.7188,10.0004 C6.7188,10.6604 6.1818,11.1974 5.5208,11.1974" id="Fill-3__More-Square" fill="#000000" fill-rule="nonzero" opacity="0.400000006"></path>
+                <path d="M10.0002,11.1974 C9.3392,11.1974 8.8022,10.6604 8.8022,10.0004 C8.8022,9.3404 9.3392,8.8024 10.0002,8.8024 C10.6612,8.8024 11.1982,9.3404 11.1982,10.0004 C11.1982,10.6604 10.6612,11.1974 10.0002,11.1974" id="Fill-5__More-Square" fill="#000000" fill-rule="nonzero" opacity="0.400000006"></path>
+                <path d="M14.4792,11.1974 C13.8182,11.1974 13.2812,10.6604 13.2812,10.0004 C13.2812,9.3404 13.8182,8.8024 14.4792,8.8024 C15.1402,8.8024 15.6772,9.3404 15.6772,10.0004 C15.6772,10.6604 15.1402,11.1974 14.4792,11.1974" id="Fill-7__More-Square" fill="#000000" fill-rule="nonzero" opacity="0.400000006"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Notification"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Notification__Notification"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Notification__Notification" transform="translate(3.500000, 2.000000)"  stroke-width="1.5">
+                <path d="M8.5,15.8476424 C14.13923,15.8476424 16.7480515,15.1242108 17,12.220506 C17,9.31879687 15.1811526,9.50539234 15.1811526,5.94511102 C15.1811526,3.16414015 12.5452291,-1.86517468e-14 8.5,-1.86517468e-14 C4.4547709,-1.86517468e-14 1.81884743,3.16414015 1.81884743,5.94511102 C1.81884743,9.50539234 0,9.31879687 0,12.220506 C0.252952291,15.135187 2.86177374,15.8476424 8.5,15.8476424 Z" id="Stroke-1__Notification"></path>
+                <path d="M10.8887931,18.8572176 C9.52465753,20.3719337 7.3966462,20.3898948 6.0194615,18.8572176" id="Stroke-3__Notification" opacity="0.400000006"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Paper-Download"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Paper-Download__Paper-Download"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Paper-Download__Paper-Download" transform="translate(3.500000, 2.000000)"  stroke-width="1.5">
+                <path d="M11.2364,0.7619 L4.5844,0.7619 C2.5254,0.7619 0.7504,2.4309 0.7504,4.4909 L0.7504,15.2279 C0.7504,17.4039 2.4084,19.1149 4.5844,19.1149 L12.5724,19.1149 C14.6324,19.1149 16.3024,17.2879 16.3024,15.2279 L16.3024,6.0379 L11.2364,0.7619 Z" id="Stroke-1__Paper-Download"></path>
+                <path d="M10.9737,0.7502 L10.9737,3.6592 C10.9737,5.0792 12.1227,6.2312 13.5427,6.2342 C14.8587,6.2372 16.2057,6.2382 16.2967,6.2322" id="Stroke-3__Paper-Download"></path>
+                <path d="M5.3023,11.1632 L8.1403,14.0142 L10.9793,11.1632 M8.1407,14.0138 L8.1407,7.4408" id="Combined-Shape__Paper-Download" opacity="0.400000006"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Paper-Fail"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Paper-Fail__Paper-Fail"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Paper-Fail__Paper-Fail" transform="translate(3.500000, 2.000000)"  stroke-width="1.5">
+                <path d="M11.2366,0.7619 L4.4786,0.7619 C2.4196,0.7619 0.7496,2.4309 0.7496,4.4909 L0.7496,15.3399 C0.7496,17.5159 2.5136,19.1149 4.6896,19.1149 L12.5726,19.1149 C14.6326,19.1149 16.3016,17.3999 16.3016,15.3399 L16.3016,6.0379 L11.2366,0.7619 Z" id="Stroke-1__Paper-Fail"></path>
+                <path d="M10.9739,0.7502 L10.9739,3.6592 C10.9739,5.0792 12.1229,6.2312 13.5419,6.2342 C14.8589,6.2372 16.2059,6.2382 16.2969,6.2322" id="Stroke-3__Paper-Fail"></path>
+                <path d="M10.0764,12.6476 L6.6104,9.1816 M6.6106,12.6476 L10.0766,9.1816" id="Combined-Shape__Paper-Fail" opacity="0.400000006"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Paper-Negative"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Paper-Negative__Paper-Negative"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Paper-Negative__Paper-Negative" transform="translate(3.500000, 2.000000)"  stroke-width="1.5">
+                <path d="M11.2365,0.7619 L4.5845,0.7619 C2.5245,0.7619 0.7505,2.4309 0.7505,4.4909 L0.7505,15.3399 C0.7505,17.5159 2.4085,19.1149 4.5845,19.1149 L12.5725,19.1149 C14.6325,19.1149 16.3025,17.3999 16.3025,15.3399 L16.3025,6.0379 L11.2365,0.7619 Z" id="Stroke-1__Paper-Negative"></path>
+                <path d="M10.9738,0.7502 L10.9738,3.6592 C10.9738,5.0792 12.1228,6.2312 13.5428,6.2342 C14.8588,6.2372 16.2058,6.2382 16.2968,6.2322" id="Stroke-3__Paper-Negative"></path>
+                <line x1="10.7941" y1="11.7472" x2="5.8931" y2="11.7472" id="Stroke-5__Paper-Negative" opacity="0.400000006"></line>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Paper-Plus"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Paper-Plus__Paper-Plus"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Paper-Plus__Paper-Plus" transform="translate(3.500000, 2.000000)"  stroke-width="1.5">
+                <path d="M11.2363,0.7619 L4.5843,0.7619 C2.5253,0.7619 0.7503,2.4309 0.7503,4.4909 L0.7503,15.3399 C0.7503,17.5159 2.4083,19.1149 4.5843,19.1149 L12.5723,19.1149 C14.6323,19.1149 16.3023,17.3999 16.3023,15.3399 L16.3023,6.0379 L11.2363,0.7619 Z" id="Stroke-1__Paper-Plus"></path>
+                <path d="M10.9736,0.7502 L10.9736,3.6592 C10.9736,5.0792 12.1226,6.2312 13.5426,6.2342 C14.8586,6.2372 16.2056,6.2382 16.2966,6.2322" id="Stroke-3__Paper-Plus"></path>
+                <path d="M10.7944,10.9142 L5.8934,10.9142 M8.3437,13.3654 L8.3437,8.4644" id="Combined-Shape__Paper-Plus" opacity="0.400000006"></path>
+            </g>
+        </g>
+    </symbol>
+
+    <symbol id="Plus-Circle" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path opacity="0.4" d="M12 8V16M16 12H8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="Shield" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 22C12 22 20 18.2 20 12.5V5.85L12 3L4 5.85V12.5C4 18.2 12 22 12 22Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path opacity="0.4" d="M15 10L10.875 14L9 12.1818" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+
+    <symbol id="Paper-Upload"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Paper-Upload__Paper-Upload"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Paper-Upload__Paper-Upload" transform="translate(3.500000, 2.000000)"  stroke-width="1.5">
+                <path d="M11.2363,0.7619 L4.5843,0.7619 C2.5253,0.7619 0.7503,2.4309 0.7503,4.4909 L0.7503,15.2279 C0.7503,17.4039 2.4083,19.1149 4.5843,19.1149 L12.5723,19.1149 C14.6323,19.1149 16.3023,17.2879 16.3023,15.2279 L16.3023,6.0379 L11.2363,0.7619 Z" id="Stroke-1__Paper-Upload"></path>
+                <path d="M10.9736,0.7502 L10.9736,3.6592 C10.9736,5.0792 12.1226,6.2312 13.5426,6.2342 C14.8586,6.2372 16.2056,6.2382 16.2966,6.2322" id="Stroke-3__Paper-Upload"></path>
+                <path d="M5.3022,10.2912 L8.1402,7.4402 L10.9792,10.2912 M8.1406,7.4406 L8.1406,14.0136" id="Combined-Shape__Paper-Upload" opacity="0.400000006"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Paper"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Paper__Paper"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Paper__Paper" transform="translate(3.500000, 2.000000)"  stroke-width="1.5">
+                <path d="M11.2367,0.7619 L4.5837,0.7619 C2.5247,0.7619 0.7497,2.4309 0.7497,4.4909 L0.7497,15.2039 C0.7497,17.3799 2.4087,19.1149 4.5837,19.1149 L12.5727,19.1149 C14.6327,19.1149 16.3017,17.2649 16.3017,15.2039 L16.3017,6.0379 L11.2367,0.7619 Z" id="Stroke-1__Paper"></path>
+                <path d="M10.974,0.7502 L10.974,3.6592 C10.974,5.0792 12.123,6.2312 13.542,6.2342 C14.859,6.2372 16.206,6.2382 16.297,6.2322" id="Stroke-3__Paper"></path>
+                <line x1="10.784" y1="13.5578" x2="5.387" y2="13.5578" id="Stroke-5__Paper" opacity="0.400000006"></line>
+                <line x1="8.7425" y1="8.6056" x2="5.3865" y2="8.6056" id="Stroke-7__Paper" opacity="0.400000006"></line>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Password"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Password__Password"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Password__Password" transform="translate(2.000000, 2.000000)"  stroke-width="1.5">
+                <path d="M14.3344,0.7502 L5.6654,0.7502 C2.6444,0.7502 0.7504,2.8892 0.7504,5.9162 L0.7504,14.0842 C0.7504,17.1112 2.6354,19.2502 5.6654,19.2502 L14.3334,19.2502 C17.3644,19.2502 19.2504,17.1112 19.2504,14.0842 L19.2504,5.9162 C19.2504,2.8892 17.3644,0.7502 14.3344,0.7502 Z" id="Stroke-1__Password" opacity="0.400000006"></path>
+                <path d="M8.6923,10.0002 C8.6923,11.0222 7.8633,11.8522 6.8403,11.8522 C5.8183,11.8522 4.9893,11.0222 4.9893,10.0002 C4.9893,8.9782 5.8183,8.1482 6.8403,8.1482 C7.8633,8.1482 8.6923,8.9782 8.6923,10.0002 Z" id="Stroke-3__Password"></path>
+                <polyline id="Stroke-5__Password" points="8.6923 10.0002 15.0103 10.0002 15.0103 11.8522"></polyline>
+                <line x1="12.1816" y1="11.8517" x2="12.1816" y2="9.9997" id="Stroke-7__Password"></line>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Play"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Play__Play"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Play__Play" transform="translate(2.500000, 2.500000)"  stroke-width="1.5">
+                <path d="M9.5,0 C14.7459,0 19,4.25315 19,9.5 C19,14.74685 14.7459,19 9.5,19 C4.25315,19 0,14.74685 0,9.5 C0,4.25315 4.25315,0 9.5,0 Z" id="Stroke-1__Play"></path>
+                <path d="M12.5,9.49514457 C12.5,8.68401476 8.34252742,6.08911717 7.87091185,6.55569627 C7.39929629,7.02227536 7.35394864,11.9240477 7.87091185,12.4345929 C8.38787507,12.9469326 12.5,10.3062744 12.5,9.49514457 Z" id="Stroke-3__Play"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Plus"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Plus__Plus"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Plus__Plus" transform="translate(2.000000, 2.000000)"  stroke-width="1.5">
+                <path d="M10,6.32730733 L10,13.6536632 M13.6666667,9.99048525 L6.33333333,9.99048525" id="Combined-Shape__Plus" opacity="0.400000006"></path>
+                <path d="M14.6857143,0 L5.31428571,0 C2.04761905,0 0,2.31208373 0,5.58515699 L0,14.414843 C0,17.6879163 2.03809524,20 5.31428571,20 L14.6857143,20 C17.9619048,20 20,17.6879163 20,14.414843 L20,5.58515699 C20,2.31208373 17.9619048,0 14.6857143,0 Z" id="Path__Plus"></path>
+            </g>
+        </g>
+    </symbol>
+
+
+    <symbol id="Check-List" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path opacity="0.4" d="M16.755 8H14"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.9086 2.74976C15.9086 2.74976 8.23161 2.75376 8.21961 2.75376C5.45961 2.77076 3.75061 4.58676 3.75061 7.35676V16.5528C3.75061 19.3368 5.47261 21.1598 8.25661 21.1598C8.25661 21.1598 15.9326 21.1568 15.9456 21.1568C18.7056 21.1398 20.4156 19.3228 20.4156 16.5528V7.35676C20.4156 4.57276 18.6926 2.74976 15.9086 2.74976Z"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path opacity="0.4" d="M8 8L9 9L11 7"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path opacity="0.4" d="M16.755 12H14"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path opacity="0.4" d="M8 12L9 13L11 11"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path opacity="0.4" d="M16.755 16H14"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path opacity="0.4" d="M8 16L9 17L11 15"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+
+    <symbol id="Profile"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Profile__Profile"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Profile__Profile" transform="translate(4.814286, 2.814476)"  stroke-width="1.5">
+                <path d="M7.17047619,12.531714 C3.30285714,12.531714 -4.08562073e-14,13.1164759 -4.08562073e-14,15.4583807 C-4.08562073e-14,17.8002854 3.28190476,18.4059997 7.17047619,18.4059997 C11.0380952,18.4059997 14.34,17.8202854 14.34,15.479333 C14.34,13.1383807 11.0590476,12.531714 7.17047619,12.531714 Z" id="Stroke-1__Profile"></path>
+                <path d="M7.17047634,9.19142857 C9.70857158,9.19142857 11.7657144,7.13333333 11.7657144,4.5952381 C11.7657144,2.05714286 9.70857158,-5.32907052e-15 7.17047634,-5.32907052e-15 C4.6323811,-5.32907052e-15 2.574259,2.05714286 2.574259,4.5952381 C2.56571443,7.1247619 4.60952396,9.18285714 7.13809539,9.19142857 L7.17047634,9.19142857 Z" id="Stroke-3__Profile" opacity="0.400000006"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Scan"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Scan__Scan"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Scan__Scan" transform="translate(1.500000, 3.500000)"  stroke-width="1.5">
+                <line x1="21.1315238" y1="9.51437143" x2="0" y2="9.51437143" id="Stroke-1__Scan"></line>
+                <path d="M19.2501048,5.27790476 L19.2501048,3.32514286 C19.2501048,1.496 17.7541048,9.76996262e-15 15.9249619,9.76996262e-15 L14.2812476,9.76996262e-15" id="Stroke-3__Scan" opacity="0.400000006"></path>
+                <path d="M1.88152381,5.27790476 L1.88152381,3.32095238 C1.88152381,1.48866667 3.366,0.00314285714 5.19828571,0.00104761905 L6.87866667,9.76996262e-15" id="Stroke-5__Scan" opacity="0.400000006"></path>
+                <path d="M19.2501048,9.51437143 L19.2501048,14.0453238 C19.2501048,15.873419 17.7541048,17.3704667 15.9249619,17.3704667 L14.2812476,17.3704667" id="Stroke-7__Scan"></path>
+                <path d="M1.88152381,9.51437143 L1.88152381,14.0495143 C1.88152381,15.8818 3.366,17.3673238 5.19828571,17.369419 L6.87866667,17.3704667" id="Stroke-9__Scan"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Search"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Search__Search"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Search__Search" transform="translate(2.000000, 2.000000)"  stroke-width="1.5">
+                <circle id="Ellipse_739__Search" cx="9.76659044" cy="9.76659044" r="8.9885584"></circle>
+                <line x1="16.0183067" y1="16.4851259" x2="19.5423342" y2="20.0000001" id="Line_181__Search" opacity="0.400000006"></line>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Send"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Send__Send"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Send__Send" transform="translate(2.500000, 2.500000)"  stroke-width="1.5">
+                <line x1="13.2120035" y1="5.22669668" x2="7.39100352" y2="11.0476967" id="Stroke-1__Send" opacity="0.400000006"></line>
+                <path d="M7.39120352,11.0479967 L0.576203525,6.88099668 C-0.316796475,6.33499668 -0.135796475,4.98799668 0.870203525,4.69699668 L16.9602035,0.0489966826 C17.8752035,-0.216003317 18.7212035,0.637996683 18.4472035,1.54999668 L13.6732035,17.5139967 C13.3742035,18.5139967 12.0332035,18.6859967 11.4912035,17.7939967 L7.39120352,11.0479967" id="Stroke-3__Send"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Setting"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Setting__Setting"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Setting__Setting" transform="translate(2.500000, 1.500000)"  stroke-width="1.5">
+                <path d="M18.3066362,6.12356982 L17.6842106,5.04347829 C17.1576365,4.12955711 15.9906873,3.8142761 15.0755149,4.33867279 L15.0755149,4.33867279 C14.6398815,4.59529992 14.1200613,4.66810845 13.6306859,4.54104256 C13.1413105,4.41397667 12.7225749,4.09747295 12.4668193,3.66132725 C12.3022855,3.38410472 12.2138742,3.06835005 12.2105264,2.74599544 L12.2105264,2.74599544 C12.2253694,2.22917739 12.030389,1.72835784 11.6700024,1.3576252 C11.3096158,0.986892553 10.814514,0.777818938 10.2974829,0.778031878 L9.04347831,0.778031878 C8.53694532,0.778031878 8.05129106,0.97987004 7.69397811,1.33890085 C7.33666515,1.69793166 7.13715288,2.18454839 7.13958814,2.69107553 L7.13958814,2.69107553 C7.12457503,3.73688099 6.27245786,4.57676682 5.22654465,4.57665906 C4.90419003,4.57331126 4.58843537,4.48489995 4.31121284,4.32036615 L4.31121284,4.32036615 C3.39604054,3.79596946 2.22909131,4.11125048 1.70251717,5.02517165 L1.03432495,6.12356982 C0.508388616,7.03634945 0.819378585,8.20256183 1.72997713,8.73226549 L1.72997713,8.73226549 C2.32188101,9.07399614 2.68650982,9.70554694 2.68650982,10.3890161 C2.68650982,11.0724852 2.32188101,11.704036 1.72997713,12.0457667 L1.72997713,12.0457667 C0.820534984,12.5718952 0.509205679,13.7352837 1.03432495,14.645309 L1.03432495,14.645309 L1.6659039,15.7345539 C1.9126252,16.1797378 2.3265816,16.5082503 2.81617164,16.6473969 C3.30576167,16.7865435 3.83061824,16.7248517 4.27459956,16.4759726 L4.27459956,16.4759726 C4.71105863,16.2212969 5.23116727,16.1515203 5.71931837,16.2821523 C6.20746948,16.4127843 6.62321383,16.7330005 6.87414191,17.1716248 C7.03867571,17.4488473 7.12708702,17.764602 7.13043482,18.0869566 L7.13043482,18.0869566 C7.13043482,19.1435014 7.98693356,20.0000001 9.04347831,20.0000001 L10.2974829,20.0000001 C11.3504633,20.0000001 12.2054882,19.1490783 12.2105264,18.0961099 L12.2105264,18.0961099 C12.2080776,17.5879925 12.4088433,17.0999783 12.7681408,16.7406809 C13.1274382,16.3813834 13.6154524,16.1806176 14.1235699,16.1830664 C14.4451523,16.1916732 14.7596081,16.2797208 15.0389017,16.4393593 L15.0389017,16.4393593 C15.9516813,16.9652957 17.1178937,16.6543057 17.6475973,15.7437072 L17.6475973,15.7437072 L18.3066362,14.645309 C18.5617324,14.2074528 18.6317479,13.6859659 18.5011783,13.1963297 C18.3706086,12.7066935 18.0502282,12.2893121 17.6109841,12.0366133 L17.6109841,12.0366133 C17.17174,11.7839145 16.8513595,11.3665332 16.7207899,10.876897 C16.5902202,10.3872608 16.6602358,9.86577384 16.9153319,9.42791767 C17.0812195,9.13829096 17.3213574,8.89815312 17.6109841,8.73226549 L17.6109841,8.73226549 C18.5161253,8.20284891 18.8263873,7.04344892 18.3066362,6.13272314 L18.3066362,6.13272314 L18.3066362,6.12356982 Z" id="Path_33946__Setting"></path>
+                <circle id="Ellipse_737__Setting" opacity="0.400000006" cx="9.67505726" cy="10.3890161" r="2.63615562"></circle>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Shield-Done"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Shield-Done__Shield-Done"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Shield-Done__Shield-Done" transform="translate(3.500000, 2.000000)"  stroke-width="1.5">
+                <path d="M15.365,3.1238 C15.802,3.2768 16.094,3.6888 16.094,4.1518 L16.094,10.9248 C16.094,12.8178 15.406,14.6248 14.191,16.0248 C13.58,16.7298 12.807,17.2788 11.986,17.7228 L8.428,19.6448 L4.864,17.7218 C4.042,17.2778 3.268,16.7298 2.656,16.0238 C1.44,14.6238 0.75,12.8158 0.75,10.9208 L0.75,4.1518 C0.75,3.6888 1.042,3.2768 1.479,3.1238 L8.061,0.8108 C8.295,0.7288 8.55,0.7288 8.783,0.8108 L15.365,3.1238 Z" id="Stroke-1__Shield-Done"></path>
+                <polyline id="Stroke-3__Shield-Done" opacity="0.400000006" points="5.8225 9.9177 7.7145 11.8107 11.6125 7.9127"></polyline>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Shield-Fail"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Shield-Fail__Shield-Fail"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Shield-Fail__Shield-Fail" transform="translate(3.500000, 2.000000)"  stroke-width="1.5">
+                <path d="M15.3651,3.1238 C15.8021,3.2768 16.0941,3.6888 16.0941,4.1518 L16.0941,10.9248 C16.0941,12.8178 15.4051,14.6248 14.1911,16.0248 C13.5791,16.7298 12.8071,17.2788 11.9861,17.7228 L8.4281,19.6448 L4.8641,17.7218 C4.0411,17.2778 3.2681,16.7298 2.6561,16.0238 C1.4401,14.6238 0.7501,12.8158 0.7501,10.9208 L0.7501,4.1518 C0.7501,3.6888 1.0421,3.2768 1.4791,3.1238 L8.0611,0.8108 C8.2951,0.7288 8.5501,0.7288 8.7831,0.8108 L15.3651,3.1238 Z" id="Stroke-1__Shield-Fail"></path>
+                <path d="M10.3011,11.8464 L6.5431,8.0884 M6.5433,11.8464 L10.3013,8.0884" id="Combined-Shape__Shield-Fail" opacity="0.400000006"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Show"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Show__Show"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Show__Show" transform="translate(2.000000, 4.000000)"  stroke-width="1.5">
+                <path d="M13.1615,8.0531 C13.1615,9.7991 11.7455,11.2141 9.9995,11.2141 C8.2535,11.2141 6.8385,9.7991 6.8385,8.0531 C6.8385,6.3061 8.2535,4.8911 9.9995,4.8911 C11.7455,4.8911 13.1615,6.3061 13.1615,8.0531 Z" id="Stroke-1__Show" opacity="0.400000006"></path>
+                <path d="M9.998,15.3549 C13.806,15.3549 17.289,12.6169 19.25,8.0529 C17.289,3.4889 13.806,0.7509 9.998,0.7509 L10.002,0.7509 C6.194,0.7509 2.711,3.4889 0.75,8.0529 C2.711,12.6169 6.194,15.3549 10.002,15.3549 L9.998,15.3549 Z" id="Stroke-3__Show"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Star"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Star__Star"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Star__Star" transform="translate(3.000000, 3.500000)"  stroke-width="1.5">
+                <path d="M10.1042564,0.67700614 L11.9316681,4.32775597 C12.1107648,4.68615589 12.4564632,4.93467388 12.8573484,4.99218218 L16.9453359,5.58061527 C17.9553583,5.72643988 18.3572847,6.95054503 17.6263201,7.65194084 L14.6701824,10.4924399 C14.3796708,10.7717659 14.2474307,11.173297 14.3161539,11.5676396 L15.0137982,15.5778163 C15.1856062,16.5698344 14.1297683,17.3266846 13.2269958,16.8573759 L9.57321374,14.9626829 C9.21502023,14.7768079 8.78602103,14.7768079 8.42678626,14.9626829 L4.77300425,16.8573759 C3.87023166,17.3266846 2.81439382,16.5698344 2.98724301,15.5778163 L3.68384608,11.5676396 C3.75256926,11.173297 3.62032921,10.7717659 3.32981762,10.4924399 L0.373679928,7.65194084 C-0.357284727,6.95054503 0.0446417073,5.72643988 1.05466409,5.58061527 L5.14265161,4.99218218 C5.54353679,4.93467388 5.89027643,4.68615589 6.06937319,4.32775597 L7.89574356,0.67700614 C8.34765049,-0.225668713 9.65234951,-0.225668713 10.1042564,0.67700614 Z" id="Stroke-1__Star"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Swap"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Swap__Swap"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Swap__Swap" transform="translate(2.000000, 3.000000)"  stroke-width="1.5">
+                <line x1="14.8395556" y1="17.1642222" x2="14.8395556" y2="3.54644444" id="Stroke-1__Swap" opacity="0.400000006"></line>
+                <polyline id="Stroke-3__Swap" points="18.9172222 13.0681111 14.8394444 17.1647778 10.7616667 13.0681111"></polyline>
+                <line x1="4.91111111" y1="0.832888889" x2="4.91111111" y2="14.4506667" id="Stroke-5__Swap" opacity="0.400000006"></line>
+                <polyline id="Stroke-7__Swap" points="0.833444444 4.929 4.91122222 0.832333333 8.989 4.929"></polyline>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Tick-Square"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Tick-Square__Tick-Square"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Tick-Square__Tick-Square" transform="translate(2.000000, 2.000000)"  stroke-width="1.5">
+                <path d="M14.3344,0.7502 L5.6654,0.7502 C2.6444,0.7502 0.7504,2.8892 0.7504,5.9162 L0.7504,14.0842 C0.7504,17.1112 2.6354,19.2502 5.6654,19.2502 L14.3334,19.2502 C17.3644,19.2502 19.2504,17.1112 19.2504,14.0842 L19.2504,5.9162 C19.2504,2.8892 17.3644,0.7502 14.3344,0.7502 Z" id="Stroke-1__Tick-Square"></path>
+                <polyline id="Stroke-3__Tick-Square" opacity="0.400000006" points="6.4399 10.0002 8.8139 12.3732 13.5599 7.6272"></polyline>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Ticket-Star"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Ticket-Star__Ticket-Star"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Ticket-Star__Ticket-Star" transform="translate(2.000000, 3.000000)"  stroke-width="1.5">
+                <path d="M15.8573,17.4168 C17.7323,17.4168 19.2503,15.8978 19.2503,14.0238 L19.2503,11.3238 C18.0103,11.3238 17.0103,10.3238 17.0103,9.0848 C17.0103,7.8448 18.0103,6.8458 19.2503,6.8458 L19.2483,4.1428 C19.2483,2.2688 17.7303,0.7498 15.8563,0.7498 L4.1443,0.7498 C2.2703,0.7498 0.7513,2.2688 0.7513,4.1428 L0.7503,6.9328 C1.9893,6.9328 2.9893,7.8448 2.9893,9.0848 C2.9893,10.3238 1.9893,11.3238 0.7503,11.3238 L0.7503,14.0238 C0.7503,15.8978 2.2683,17.4168 4.1423,17.4168 L15.8573,17.4168 Z" id="Stroke-1__Ticket-Star"></path>
+                <path d="M9.9998,10.8543 L11.7398,11.7693 C11.9028,11.8543 12.0938,11.7163 12.0628,11.5353 L11.7298,9.5963 L13.1388,8.2253 C13.2708,8.0963 13.1978,7.8733 13.0158,7.8463 L11.0698,7.5633 L10.1988,5.7993 C10.1178,5.6343 9.8828,5.6343 9.8008,5.7993 L8.9298,7.5633 L6.9848,7.8463 C6.8028,7.8733 6.7298,8.0963 6.8618,8.2253 L8.2698,9.5963 L7.9368,11.5353 C7.9058,11.7163 8.0968,11.8543 8.2598,11.7693 L9.9998,10.8543 L9.9998,10.8543 Z" id="Stroke-3__Ticket-Star" opacity="0.400000006"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Ticket"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Ticket__Ticket"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Ticket__Ticket" transform="translate(2.000000, 4.000000)"  stroke-width="1.5">
+                <g id="Group__Ticket" transform="translate(11.349700, 0.250300)" opacity="0.400000006">
+                    <line x1="0.5" y1="3.64153152e-14" x2="0.5" y2="2.42" id="Stroke-1__Ticket"></line>
+                    <line x1="0.5" y1="13.5098" x2="0.5" y2="15.5338" id="Stroke-3__Ticket"></line>
+                    <line x1="0.5" y1="10.0743" x2="0.5" y2="5.2533" id="Stroke-6__Ticket"></line>
+                </g>
+                <path d="M16.7021277,16 C18.5241969,16 20,14.5425518 20,12.7431441 L20,10.1506373 C18.7943262,10.1506373 17.8233208,9.19170851 17.8233208,8.00103 C17.8233208,6.81035149 18.7943262,5.85039269 20,5.85039269 L19.998957,3.25685593 C19.998957,1.45744818 18.522111,0 16.7010847,0 L3.29891531,0 C1.47788903,0 0.00104297038,1.45744818 0.00104297038,3.25685593 L0,5.93485258 C1.20567376,5.93485258 2.17667918,6.81035149 2.17667918,8.00103 C2.17667918,9.19170851 1.20567376,10.1506373 0,10.1506373 L0,12.7431441 C0,14.5425518 1.47580309,16 3.29787234,16 L16.7021277,16 Z" id="Stroke-7__Ticket"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Time-Circle"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Time-Circle__Time-Circle"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Time-Circle__Time-Circle" transform="translate(2.000000, 2.000000)"  stroke-width="1.5">
+                <path d="M19.2498,10.0005 C19.2498,15.1095 15.1088,19.2505 9.9998,19.2505 C4.8908,19.2505 0.7498,15.1095 0.7498,10.0005 C0.7498,4.8915 4.8908,0.7505 9.9998,0.7505 C15.1088,0.7505 19.2498,4.8915 19.2498,10.0005 Z" id="Stroke-1__Time-Circle"></path>
+                <polyline id="Stroke-3__Time-Circle" opacity="0.400000006" points="13.4314 12.9429 9.6614 10.6939 9.6614 5.8469"></polyline>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Time-Square"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Time-Square__Time-Square"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Time-Square__Time-Square" transform="translate(2.000000, 2.000000)"  stroke-width="1.5">
+                <path d="M14.3347,0.7502 L5.6657,0.7502 C2.6447,0.7502 0.7507,2.8892 0.7507,5.9162 L0.7507,14.0842 C0.7507,17.1112 2.6347,19.2502 5.6657,19.2502 L14.3337,19.2502 C17.3647,19.2502 19.2507,17.1112 19.2507,14.0842 L19.2507,5.9162 C19.2507,2.8892 17.3647,0.7502 14.3347,0.7502 Z" id="Stroke-1__Time-Square"></path>
+                <polyline id="Stroke-3__Time-Square" opacity="0.400000006" points="13.3913 12.0177 10.0003 9.9947 10.0003 5.6337"></polyline>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Unlock"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Unlock__Unlock"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Unlock__Unlock" transform="translate(4.500000, 2.500000)"  stroke-width="1.5">
+                <path d="M11.9242,3.06203682 C11.3072,1.28003682 9.6142,0 7.6222,0 C5.1092,-0.00996317625 3.0632,2.01803682 3.0522,4.53103682 L3.0522,4.55103682 L3.0522,6.69803682" id="Stroke-1__Unlock" opacity="0.400000006"></path>
+                <path d="M11.433,18.5004368 L3.792,18.5004368 C1.698,18.5004368 1.13686838e-13,16.8024368 1.13686838e-13,14.7074368 L1.13686838e-13,10.4194368 C1.13686838e-13,8.32443682 1.698,6.62643682 3.792,6.62643682 L11.433,6.62643682 C13.527,6.62643682 15.225,8.32443682 15.225,10.4194368 L15.225,14.7074368 C15.225,16.8024368 13.527,18.5004368 11.433,18.5004368 Z" id="Stroke-3__Unlock"></path>
+                <line x1="7.6127" y1="11.4526368" x2="7.6127" y2="13.6746368" id="Stroke-5__Unlock"></line>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Upload"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Upload__Upload"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Upload__Upload" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000) translate(2.000000, 2.000000)"  stroke-width="1.5">
+                <path d="M13.016,5.3895 L13.016,4.4565 C13.016,2.4215 11.366,0.7715 9.331,0.7715 L4.456,0.7715 C2.422,0.7715 0.772,2.4215 0.772,4.4565 L0.772,15.5865 C0.772,17.6215 2.422,19.2715 4.456,19.2715 L9.341,19.2715 C11.37,19.2715 13.016,17.6265 13.016,15.5975 L13.016,14.6545" id="Stroke-1__Upload" opacity="0.400000006"></path>
+                <line x1="19.8095" y1="10.0214" x2="7.7685" y2="10.0214" id="Stroke-3__Upload"></line>
+                <polyline id="Stroke-5__Upload" points="16.8812 7.1063 19.8092 10.0213 16.8812 12.9373"></polyline>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Video"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Video__Video"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Video__Video" transform="translate(2.300000, 5.000000)"  stroke-width="1.5">
+                <path d="M13.9968329,10.5383104 C14.0777257,12.3703766 12.599129,13.9196009 10.6945655,13.9974564 C10.5542831,14.0033694 3.71526168,13.9895723 3.71526168,13.9895723 C1.81991377,14.133457 0.161100366,12.7714799 0.0116023677,10.9463123 C0.000338819853,10.8103117 0.00341069653,3.47219182 0.00341069653,3.47219182 C-0.0805539327,1.63815461 1.39599479,0.0849882318 3.30158229,0.00417627553 C3.44391258,-0.00272230611 10.2737184,0.0100893455 10.2737184,0.0100893455 C12.1782819,-0.131824334 13.8422151,1.2400079 13.9896652,3.0740451 C14,3.20610367 13.9968329,10.5383104 13.9968329,10.5383104 Z" id="Stroke-1__Video"></path>
+                <path d="M14,4.97983717 L17.293,2.28483717 C18.109,1.61683717 19.333,2.19883717 19.3320006,3.25183717 L19.32,10.6008372 C19.319,11.6538372 18.094,12.2308372 17.28,11.5628372 L14,8.86783717" id="Stroke-3__Video" opacity="0.400000006"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Voice-2"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Voice-2__Voice-2"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Voice-2__Voice-2" transform="translate(4.000000, 2.000000)"  stroke-width="1.5">
+                <path d="M0.714380952,8.932 C0.714380952,13.0215238 4.02866667,16.3358095 8.11819048,16.3358095 C12.2077143,16.3358095 15.5229524,13.0215238 15.5229524,8.932" id="Stroke-1__Voice-2" opacity="0.400000006"></path>
+                <line x1="8.11857143" y1="19.1468571" x2="8.11857143" y2="16.336381" id="Stroke-3__Voice-2" opacity="0.400000006"></line>
+                <path d="M8.24457143,12.584381 L7.99219048,12.584381 C5.9712381,12.584381 4.33219048,10.9462857 4.33219048,8.92438095 L4.33219048,4.37390476 C4.33219048,2.35295238 5.9712381,0.713904762 7.99219048,0.713904762 L8.24457143,0.713904762 C10.2664762,0.713904762 11.9045714,2.35295238 11.9045714,4.37390476 L11.9045714,8.92438095 C11.9045714,10.9462857 10.2664762,12.584381 8.24457143,12.584381 Z M10.0015238,4.87695238 L11.904381,4.87695238 M9.04914286,8.04847619 L11.904381,8.04847619" id="Combined-Shape__Voice-2"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Voice"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Voice__Voice"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Voice__Voice" transform="translate(4.000000, 2.000000)"  stroke-width="1.5">
+                <path d="M0.71447619,8.932 C0.71447619,13.0215238 4.0287619,16.3358095 8.11828571,16.3358095 C12.2078095,16.3358095 15.5220952,13.0215238 15.5220952,8.932" id="Stroke-1__Voice" opacity="0.400000006"></path>
+                <line x1="8.11866667" y1="19.1468571" x2="8.11866667" y2="16.336381" id="Stroke-3__Voice" opacity="0.400000006"></line>
+                <path d="M8.24466667,12.584381 L7.99228571,12.584381 C5.97133333,12.584381 4.33228571,10.9462857 4.33228571,8.92438095 L4.33228571,4.37390476 C4.33228571,2.35295238 5.97133333,0.713904762 7.99228571,0.713904762 L8.24466667,0.713904762 C10.265619,0.713904762 11.9046667,2.35295238 11.9046667,4.37390476 L11.9046667,8.92438095 C11.9046667,10.9462857 10.265619,12.584381 8.24466667,12.584381 Z" id="Stroke-5__Voice"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Volume-Down"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Volume-Down__Volume-Down"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Volume-Down__Volume-Down" transform="translate(4.000000, 5.000000)"  stroke-width="1.5">
+                <path d="M0.00185460474,7.00013683 C-0.00093541396,8.22978846 -0.0558057818,9.90699383 0.704939318,10.5339278 C1.41453408,11.1187074 1.91394742,10.968028 3.20944611,11.0630996 C4.5058748,11.159068 7.24195314,14.9700015 9.35120728,13.7645662 C10.4393146,12.9089224 10.5202251,11.1151198 10.5202251,7.00013683 C10.5202251,2.88515382 10.4393146,1.09135128 9.35120728,0.235707477 C7.24195314,-0.970624727 4.5058748,2.84120566 3.20944611,2.93717409 C1.91394742,3.03224563 1.41453408,2.88156621 0.704939318,3.46634584 C-0.0558057818,4.09327982 -0.00093541396,5.77048519 0.00185460474,7.00013683 Z" id="Stroke-1__Volume-Down"></path>
+                <path d="M14.5812833,3.31441037 C15.8925921,5.60509621 15.8925921,8.40253126 14.5812833,10.6860419" id="Stroke-5__Volume-Down" opacity="0.400000006"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Volume-Off"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Volume-Off__Volume-Off"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Group-7__Volume-Off" transform="translate(4.000000, 4.000000)"  stroke-width="1.5">
+                <path d="M2.0948,12.65 C1.8598,12.577 1.6468,12.469 1.4598,12.309 C0.6948,11.656 0.7508,9.912 0.7508,8.633 C0.7508,7.355 0.6948,5.61 1.4598,4.958 C2.1688,4.351 2.6728,4.51 3.9698,4.407 C5.2658,4.304 8.0088,0.349 10.1258,1.599 C10.6108,1.993 10.8958,2.581 11.0638,3.486" id="Stroke-1__Volume-Off"></path>
+                <path d="M11.2833,10.6676 C11.2463,13.5406 11.0213,14.9396 10.1263,15.6676 C9.1463,16.2466 8.0363,15.7146 6.9913,14.9586" id="Stroke-3__Volume-Off"></path>
+                <polyline id="Stroke-5__Volume-Off" opacity="0.400000006" points="0.7516 16.7496 4.4646 13.0366 11.2836 6.2166 16.7506 0.7496"></polyline>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Volume-Up"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Volume-Up__Volume-Up"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Volume-Up__Volume-Up" transform="translate(2.500000, 5.000000)"  stroke-width="1.5">
+                <path d="M0.00185460474,7.00013683 C-0.00093541396,8.22978846 -0.0558057818,9.90699383 0.704939318,10.5339278 C1.41453408,11.1187074 1.91394742,10.968028 3.20944611,11.0630996 C4.5058748,11.159068 7.24195314,14.9700015 9.35120728,13.7645662 C10.4393146,12.9089224 10.5202251,11.1151198 10.5202251,7.00013683 C10.5202251,2.88515382 10.4393146,1.09135128 9.35120728,0.235707477 C7.24195314,-0.970624727 4.5058748,2.84120566 3.20944611,2.93717409 C1.91394742,3.03224563 1.41453408,2.88156621 0.704939318,3.46634584 C-0.0558057818,4.09327982 -0.00093541396,5.77048519 0.00185460474,7.00013683 Z" id="Stroke-1__Volume-Up"></path>
+                <path d="M17.0843021,0.903988042 C19.6343792,4.57500493 19.6427493,9.41737486 17.0843021,13.095567" id="Stroke-3__Volume-Up" opacity="0.400000006"></path>
+                <path d="M14.5812833,3.31441037 C15.8925921,5.60509621 15.8925921,8.40253126 14.5812833,10.6860419" id="Stroke-5__Volume-Up" opacity="0.400000006"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Wallet"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Wallet__Wallet"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Wallet__Wallet" transform="translate(2.500000, 3.000000)"  stroke-width="1.5">
+                <path d="M19.1389383,11.3957621 L15.0906357,11.3957621 C13.6041923,11.3948508 12.399362,10.1909319 12.3984507,8.70448849 C12.3984507,7.21804511 13.6041923,6.01412622 15.0906357,6.01321486 L19.1389383,6.01321486" id="Stroke-1__Wallet"></path>
+                <line x1="15.5485988" y1="8.64287993" x2="15.2369105" y2="8.64287993" id="Stroke-3__Wallet"></line>
+                <path d="M5.24766462,1.52259158e-14 L13.8910914,1.52259158e-14 C16.7892458,1.52259158e-14 19.138756,2.34951014 19.138756,5.24766462 L19.138756,12.4246981 C19.138756,15.3228526 16.7892458,17.6723627 13.8910914,17.6723627 L5.24766462,17.6723627 C2.34951014,17.6723627 1.69176842e-15,15.3228526 1.69176842e-15,12.4246981 L1.69176842e-15,5.24766462 C1.69176842e-15,2.34951014 2.34951014,1.52259158e-14 5.24766462,1.52259158e-14 Z" id="Stroke-5__Wallet"></path>
+                <line x1="4.53561176" y1="4.53816359" x2="9.93456368" y2="4.53816359" id="Stroke-7__Wallet" opacity="0.400000006"></line>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="Work"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Iconly/Two-tone/Work__Work"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Work__Work" transform="translate(2.000000, 2.000000)"  stroke-width="1.5">
+                <path d="M0.8041,13.477 C0.8041,13.477 0.9461,15.215 0.9791,15.763 C1.0231,16.498 1.3071,17.319 1.7811,17.889 C2.4501,18.697 3.2381,18.982 4.2901,18.984 C5.5271,18.986 14.5221,18.986 15.7591,18.984 C16.8111,18.982 17.5991,18.697 18.2681,17.889 C18.7421,17.319 19.0261,16.498 19.0711,15.763 C19.1031,15.215 19.2451,13.477 19.2451,13.477" id="Stroke-1__Work" opacity="0.400000006"></path>
+                <path d="M6.496,3.3295 L6.496,2.9585 C6.496,1.7385 7.484,0.7505 8.704,0.7505 L11.286,0.7505 C12.505,0.7505 13.494,1.7385 13.494,2.9585 L13.495,3.3295" id="Stroke-3__Work"></path>
+                <line x1="9.995" y1="14.6782" x2="9.995" y2="13.3842" id="Stroke-5__Work"></line>
+                <path d="M0.7499,6.3891 L0.7499,9.8561 C2.6679,11.1211 4.9659,12.0071 7.4879,12.3581 C7.7899,11.2571 8.7829,10.4501 9.9899,10.4501 C11.1779,10.4501 12.1909,11.2571 12.4729,12.3681 C15.0049,12.0171 17.3119,11.1311 19.2399,9.8561 L19.2399,6.3891 C19.2399,4.6951 17.8769,3.3311 16.1829,3.3311 L3.8169,3.3311 C2.1229,3.3311 0.7499,4.6951 0.7499,6.3891 Z" id="Stroke-7__Work"></path>
+            </g>
+        </g>
+    </symbol>
+
+
+    <symbol id="Dote-v" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></symbol>
+
+    <symbol id="Dote-h" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></symbol>
+
+    <symbol id="home-color" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_1_636)">
+            <path d="M19.7087 9.22635L11.6878 1.77843C11.5916 1.66823 11.4725 1.58039 11.3388 1.52107C11.2051 1.46174 11.06 1.43236 10.9137 1.43498C10.7675 1.4376 10.6235 1.47215 10.492 1.53623C10.3605 1.60031 10.2446 1.69236 10.1524 1.80593L2.29199 9.22635V20.1668C2.29199 20.4099 2.38857 20.643 2.56048 20.8149C2.73239 20.9869 2.96554 21.0834 3.20866 21.0834H18.792C19.0351 21.0834 19.2683 20.9869 19.4402 20.8149C19.6121 20.643 19.7087 20.4099 19.7087 20.1668V9.22635Z" fill="#2586E5"/>
+            <path d="M11.917 7.79175H10.0837C9.5774 7.79175 9.16699 8.20215 9.16699 8.70841V10.5417C9.16699 11.048 9.5774 11.4584 10.0837 11.4584H11.917C12.4233 11.4584 12.8337 11.048 12.8337 10.5417V8.70841C12.8337 8.20215 12.4233 7.79175 11.917 7.79175Z" fill="white"/>
+            <path d="M21.0832 10.977C20.9143 10.9772 20.7511 10.9152 20.6249 10.8028L10.9999 2.17699L1.37491 10.7982C1.30783 10.8588 1.22947 10.9055 1.14431 10.9358C1.05916 10.966 0.968873 10.9792 0.878627 10.9745C0.788381 10.9698 0.699944 10.9474 0.618374 10.9085C0.536803 10.8696 0.4637 10.815 0.403246 10.7478C0.343109 10.6808 0.29681 10.6026 0.267013 10.5177C0.237215 10.4327 0.224506 10.3427 0.229617 10.2528C0.234729 10.163 0.25756 10.075 0.296797 9.99397C0.336033 9.91294 0.390902 9.84048 0.458246 9.78074L10.2024 1.04949C10.4217 0.853324 10.7057 0.744873 10.9999 0.744873C11.2942 0.744873 11.5781 0.853324 11.7974 1.04949L21.5416 9.78074C21.6465 9.87277 21.7207 9.99472 21.7542 10.1302C21.7877 10.2657 21.7789 10.4081 21.7289 10.5385C21.679 10.6688 21.5904 10.7807 21.4749 10.8591C21.3595 10.9375 21.2228 10.9786 21.0832 10.977Z" fill="#DD3E43"/>
+            <path d="M9.16667 15.5833H12.8333C13.0764 15.5833 13.3096 15.6798 13.4815 15.8517C13.6534 16.0236 13.75 16.2568 13.75 16.4999V21.0833H8.25V16.4999C8.25 16.2568 8.34658 16.0236 8.51849 15.8517C8.69039 15.6798 8.92355 15.5833 9.16667 15.5833Z" fill="white"/>
+        </g>
+        <defs>
+        <clipPath id="clip0_1_636">
+        <rect width="22" height="22" fill="white"/>
+        </clipPath>
+        </defs>
+    </symbol>
+
+
+    <symbol id="Fill-Arrow" viewBox="0 0 6 4"  xmlns="http://www.w3.org/2000/svg">
+    <path d="M2.59063 3.61467C2.81832 3.86184 3.18129 3.86184 3.40898 3.61467L5.52145 1.32136C5.89825 0.9123 5.63835 0.200048 5.11228 0.200048H0.887329C0.361259 0.200048 0.101354 0.912299 0.478157 1.32136L2.59063 3.61467Z" />
+    </symbol>
+
+    <symbol id="Menu" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path opacity="0.4" d="M3 12H21" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M3 6H21" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M3 18H21" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+
+    <symbol id="Menu-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path opacity="0.4" d="M3 12H16" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M3 6H21" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M3 18H21" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="Comments" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/symbol" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <rect fill="url(#pattern0)"/>
+            <defs>
+                <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_34930_3517" transform="scale(0.00195312)"/>
+                </pattern>
+            </defs>
+    </symbol>
+
+</svg>

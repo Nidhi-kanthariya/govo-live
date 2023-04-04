@@ -1,0 +1,104 @@
+/*=====================
+  Modal CSS
+  ==========================*/
+
+@layer components {
+  .modal-main {
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    .modal-overlay {
+      @apply w-full h-full fixed top-0 left-0 hidden z-10 bg-content3 opacity-40;
+    }
+
+    .modal {
+      @apply fixed m-auto invisible bg-white z-20 rounded border-primary-light transition ease-linear top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 peer-checked:visible peer-checked:opacity-100;
+
+      &.modal-center {
+        @apply top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2;
+      }
+
+      &.modal-top-left {
+        @apply top-[0%] left-[0%] -translate-x-0 -translate-y-0;
+      }
+
+      &.modal-top-center {
+        @apply top-[0%] left-1/2 -translate-x-1/2 -translate-y-0;
+      }
+
+      &.modal-top-right {
+        @apply top-[0%] right-[0%] left-unset -translate-x-0 -translate-y-0;
+      }
+
+      &.modal-bottom-left {
+        @apply bottom-[0%] top-unset left-[0%] -translate-x-0 -translate-y-0;
+      }
+
+      &.modal-bottom-center {
+        @apply bottom-[0%] top-unset left-1/2 -translate-x-1/2 -translate-y-0;
+      }
+
+      &.modal-bottom-right {
+        @apply bottom-[0%] top-unset right-[0%] left-unset -translate-x-0 -translate-y-0;
+      }
+
+      .modal-header {
+        @apply flex items-center justify-between p-4 border-b border-primary-light bg-white-light;
+
+        h3 {
+          @apply text-lg 4xl:text-base font-bold;
+        }
+
+        label {
+          @apply text-xs text-content cursor-pointer;
+        }
+      }
+
+      .modal-body {
+        @apply p-4 m-0 bg-white-light;
+
+        &.modal-content-scroll {
+          @apply left-0 right-0 w-auto h-[18.75rem] overflow-auto px-2;
+
+          &.custom-scroll {
+            &::-webkit-scrollbar {
+              @apply w-[0.25rem] h-[0.25rem];
+            }
+            &::-webkit-scrollbar-track {
+              @apply bg-gray-200;
+            }
+            /* &::-webkit-scrollbar-thumb {
+              @apply bg-gray-300  rounded-[0.625px] border border-gray-400  h-[0.3125rem];
+            } */
+          }
+        }
+
+        .modal-img {
+          display: flex;
+          justify-content: center;
+        }
+      }
+
+      .modal-footer {
+        @apply m-0 p-4 border-t border-primary-light bg-white-light text-center;
+      }
+    }
+
+    .theme-form {
+      input[type="checkbox"] {
+        display: block;
+      }
+    }
+
+    .avatar {
+      img {
+        @apply object-fill;
+      }
+    }
+  }
+
+  .button-label {
+    @apply inline-block p-2 text-white text-xs font-bold cursor-pointer rounded w-fit;
+  }
+}

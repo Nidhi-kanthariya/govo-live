@@ -1,0 +1,51 @@
+-
+  var KANBAN_BOARD_CARD=[
+    {
+      outline:"Design",
+      subTitle:"Design landing page for support team",
+      status:"primary",
+    },
+    {
+      outline:"marketing",
+      subTitle:"Create plan for next year",
+      status:"warning",
+    },
+    { 
+      outline:"Research",
+      subTitle:"Grow email list",
+      status:"danger", 
+    },
+    {
+      outline:"Design",
+      subTitle:"Design landing page for support team",
+      status:"primary",
+    },
+    {
+      outline:"marketing",
+      subTitle:"Create plan for next year",
+      status:"warning",
+    },
+    { 
+      outline:"Research",
+      subTitle:"Grow email list",
+      status:"danger",
+    },
+  ] 
+mixin kanban-board-card(data)
+  div.col-span-4.shadow-md.rounded-b-md.mb-4.p-3
+    div.flex.flex-col.gap-4
+      div.flex.justify-between
+        button.btn.btn-outline.btn-primary=(data.outline)
+        div.flex
+          div.avatar-group.-space-x-5(class="2md:hidden sm:flex 2sm:hidden")
+            div.avatar.border-white(class='border-2')
+              div.w-6
+                img(src='../../assets/images/avatar/15.jpg' alt='avatar')
+            div.avatar.border-white(class='border-2')
+              div.w-6
+                img(src='../../assets/images/avatar/18.jpg' alt='avatar')
+            div.avatar.border-white(class='border-2')
+              div.w-6
+                img(src='../../assets/images/avatar/24.jpg' alt='avatar')
+      div 
+        h3(class=` text-${data.status}`)=data.subTitle 

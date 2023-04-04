@@ -1,0 +1,165 @@
+//- sidebar
+-var sidebar = true;
+
+//- feathet
+-var feather= true;
+
+//- customSelect
+-var customSelect= true;
+
+//- customizer
+-var customizer=true;
+
+//- prism
+-var prism=true;
+
+//- Breadcrumbs
+-var pageTitle="Divider";
+-var breadcrumb=['Ui Kits','Divider'];
+
+//- json
+include ../../data/all-data
+
+//- mixin
+include ../../mixin/mixin
+
+doctype html
+html(lang='en')  
+   include ../../layout/header-files 
+   body(dir="ltr" class="unique-skin") 
+      main.page-wrapper
+         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+            include ../../layout/header/header     
+            // Sidebar Start 
+            div.page-sidebar.sidebar-dark.unique-sidebar
+               include ../../layout/unique
+            // Sidebar End 
+
+            // Page Body Start 
+            div.page-body
+               div.grid.grid-cols-12.gap-card-gap
+                  div.col-span-6(class="md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Divider Vertical 
+                              p Use  
+                                 strong .divider 
+                                 | class to separate the content and can separate the content vertically.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.w-full.gap-2.items-center
+                                    div.grid.h-20.card.rounded-box.place-items-center(class="w-[40%] bg-[#E5E6E6] bg-opacity-[0.45] sm:w-full") content
+                                    div.divider OR   
+                                    div.grid.h-20.card.rounded-box.place-items-center(class="w-[40%] bg-[#E5E6E6] bg-opacity-[0.45] sm:w-full") content
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-col w-full gap-2"&gt;
+                                       |    &lt;div class="grid h-20 w-[40%] card rounded-box place-items-center bg-[#E5E6E6] bg-opacity-[0.45] sm:w-full"&gt; content &lt;/div&gt; 
+                                       |    &lt;div class="divider"&gt; OR &lt;/div&gt; 
+                                       |    &lt;div class="grid h-20 w-[40%] card rounded-box place-items-center bg-[#E5E6E6] bg-opacity-[0.45] sm:w-full"&gt; content &lt;/div&gt; 
+                                       |&lt;/div&gt;
+
+                  div.col-span-6(class="md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Divider Without Text 
+                              p Use 
+                                 strong .divider 
+                                 | class to separate the two or more content and can separate the content vertically without any text.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.w-full.gap-2.items-center
+                                    div.grid.h-20.card.rounded-box.place-items-center(class="w-[40%] bg-[#E5E6E6] bg-opacity-[0.45] sm:w-full") content
+                                    div.divider(class="before:w-full after:w-0")   
+                                    div.grid.h-20.card.rounded-box.place-items-center(class="w-[40%] bg-[#E5E6E6] bg-opacity-[0.45] sm:w-full") content
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-col w-full gap-2"&gt;
+                                       |    &lt;div class="grid h-20 w-[40%] card rounded-box place-items-center bg-[#E5E6E6] bg-opacity-[0.45] sm:w-full"&gt; content &lt;/div&gt; 
+                                       |    &lt;div class="divider before:w-full after:w-0"&gt; OR &lt;/div&gt; 
+                                       |    &lt;div class="grid h-20 w-[40%] card rounded-box place-items-center bg-[#E5E6E6] bg-opacity-[0.45] sm:w-full"&gt; content &lt;/div&gt; 
+                                       |&lt;/div&gt;
+
+                  div.col-span-6(class="md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Divider Horizontal 
+                              p For separation of content use  
+                                 strong .divider 
+                                 | & 
+                                 strong .horizontal 
+                                 | class to separate the content horizontally.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.w-full.gap-2
+                                    div.grid.h-20.card.rounded-box.place-items-center(class="w-9/12 bg-[#E5E6E6] bg-opacity-[0.45] sm:w-full") content
+                                    div.divider.horizontal.w-auto OR   
+                                    div.grid.h-20.card.rounded-box.place-items-center(class="w-9/12 bg-[#E5E6E6] bg-opacity-[0.45] sm:w-full") content
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex w-full gap-2"&gt;
+                                       |    &lt;div class="grid h-20 card rounded-box place-items-center w-9/12 bg-[#E5E6E6] bg-opacity-[0.45] sm:w-full"&gt; content &lt;/div&gt; 
+                                       |    &lt;div class="w-auto divider horizontal"&gt; OR &lt;/div&gt; 
+                                       |    &lt;div class="grid h-20 card rounded-box place-items-center w-9/12 bg-[#E5E6E6] bg-opacity-[0.45] sm:w-full"&gt; content &lt;/div&gt; 
+                                       |&lt;/div&gt;
+
+                  div.col-span-6(class="md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Responsive Divider 
+                              p To separate the content you can use 
+                                 strong .divider 
+                                 | class for separation horizontally.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.w-full.gap-2(class="lg:flex-col md:items-center")
+                                    div.grid.h-20.card.rounded-box.place-items-center(class="w-9/12 bg-[#E5E6E6] bg-opacity-[0.45] lg:w-full md:w-[40%] sm:w-full") content
+                                    div.divider(class="min-lg:w-auto min-lg:horizontal lg:w-full md:w-[40%] sm:w-full") OR  
+                                    div.grid.h-20.card.rounded-box.place-items-center(class="w-9/12 bg-[#E5E6E6] bg-opacity-[0.45] lg:w-full md:w-[40%] sm:w-full") content
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex w-full gap-2 lg:flex-col"&gt;
+                                       |    &lt;div class="grid h-20 card rounded-box place-items-center w-9/12 bg-[#E5E6E6] bg-opacity-[0.45] lg:w-full"&gt; content &lt;/div&gt; 
+                                       |    &lt;div class="divider min-lg:w-auto min-lg:horizontal lg:w-full md:w-[40%] sm:w-full"&gt; OR &lt;/div&gt; 
+                                       |    &lt;div class="grid h-20 card rounded-box place-items-center w-9/12 bg-[#E5E6E6] bg-opacity-[0.45] lg:w-full"&gt; content &lt;/div&gt; 
+                                       |&lt;/div&gt;
+
+
+
+            // Page Body End 
+            +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+      include ../../components/customizer
+
+   include ../../layout/footer-files

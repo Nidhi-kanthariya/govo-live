@@ -1,0 +1,27 @@
+//- ========================
+//-  Popular Post 
+//- =======================
+table.table
+   thead 
+      tr 
+         each head,index in POPULAR_POST.header
+            if(index === POPULAR_POST.header.length - 1)
+               th(class="text-end")=  head
+            else
+               th=  head
+   tbody
+      each bodyData in POPULAR_POST.body
+         tr
+            td(class="w-[60px] 3xl:w-[50px]")
+               a(href="./blog.html")
+                  img(class="w-[60px] 3xl:w-[45px] 6xl:w-[51px] rounded-5" src=`../../assets/images/post/${bodyData.image}`, alt=`${bodyData.name}`) 
+            td(class="min-w-[120px]") 
+               a(href="./blog.html")
+                  h4(class="text-xs font-semibold text-title leading-none")= bodyData.name
+                  span(class="block text-2xs 3xl:text-3xs font-semibold mt-2 2xl:mt-[2px] 3xl:mt-[5px] text-content leading-none")= bodyData.subTitle
+            td= bodyData.reaction
+            td= bodyData.post
+            td= bodyData.view
+            td= bodyData.like
+            td(class="min-w-[77px] w-[77px]")= bodyData.comment
+

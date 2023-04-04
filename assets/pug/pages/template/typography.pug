@@ -1,0 +1,470 @@
+//- sidebar
+-var sidebar = true;
+
+//- feathet
+-var feather= true;
+
+//- customSelect
+-var customSelect= true;
+
+//- customizer
+-var customizer=true;
+
+//- prism
+-var prism=true;
+
+//- Breadcrumbs
+-var pageTitle="Typography";
+-var breadcrumb=['Ui Kits','Typography'];
+
+//- json
+include ../../data/all-data
+
+//- mixin
+include ../../mixin/mixin
+
+doctype html
+html(lang='en')  
+   include ../../layout/header-files 
+   body(dir="ltr" class="unique-skin") 
+      main.page-wrapper
+         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+            include ../../layout/header/header     
+            // Sidebar Start 
+            div.page-sidebar.sidebar-dark.unique-sidebar
+               include ../../layout/unique
+            // Sidebar End
+
+            // Page Body Start 
+            div.page-body
+               div.grid.grid-cols-12.gap-card-gap
+                  div.col-span-4(class="2xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Heading
+                              p All HTML headings are available from 
+                                 strong h1 
+                                 |  to 
+                                 strong h6 
+                                 | for desire heading.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.gap-2 
+                                    h1(class="text-3xl") This is a Heading 1      
+                                    h2(class="text-2xl") This is a Heading 2      
+                                    h3(class="text-xl") This is a Heading 3      
+                                    h4(class="text-lg") This is a Heading 4      
+                                    h5(class="text-base") This is a Heading 5      
+                                    h6(class="text-sm") This is a Heading 6  
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code 
+                                       |&lt;div class="flex flex-col gap-2"&gt; 
+                                       |   &lt;h1 class="text-3xl"&gt; This is a Heading 1 &lt;/h1&gt; 
+                                       |   &lt;h2 class="text-2xl"&gt; This is a Heading 2 &lt;/h2&gt;
+                                       |   &lt;h3 class="text-xl"&gt; This is a Heading 3 &lt;/h3&gt; 
+                                       |   &lt;h4 class="text-lg"&gt; This is a Heading 4 &lt;/h4&gt; 
+                                       |   &lt;h5 class="text-base"&gt; This is a Heading 5 &lt;/h5&gt; 
+                                       |   &lt;h6 class="text-sm"&gt; This is a Heading 6 &lt;/h6&gt;
+                                       |&lt;/div&gt; 
+                  div.col-span-4(class="2xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Sub Heading
+                              p For all HTML heading 
+                                 strong h1 
+                                 |  to 
+                                 strong h6 
+                                 |  has available sub heading.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.gap-2 
+                                    h1(class="text-3xl text-primary") Heading 1 
+                                       small.text-title Sub Heading    
+                                    h2(class="text-2xl text-secondary") Heading 2 
+                                       small.text-title Sub Heading    
+                                    h3(class="text-xl text-info") Heading 3 
+                                       small.text-title Sub Heading    
+                                    h4(class="text-lg text-success") Heading 4 
+                                       small.text-title Sub Heading    
+                                    h5(class="text-base text-warning") Heading 5 
+                                       small.text-title Sub Heading    
+                                    h6(class="text-sm text-danger") Heading 6 
+                                       small.text-title Sub Heading
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code 
+                                       |&lt;div class="flex flex-col gap-2"&gt; 
+                                       |   &lt;h1 class="text-3xl text-primary"&gt; Heading 1 &lt;small class="text-title"&gt; Sub Heading &lt;/small&gt;&lt;/h1&gt; 
+                                       |   &lt;h2 class="text-2xl text-secondary"&gt; Heading 2 &lt;small class="text-title"&gt; Sub Heading &lt;/small&gt;&lt;/h2&gt;
+                                       |   &lt;h3 class="text-xl text-info"&gt; Heading 3 &lt;small class="text-title"&gt; Sub Heading &lt;/small&gt;&lt;/h3&gt; 
+                                       |   &lt;h4 class="text-lg text-success"&gt; Heading 4 &lt;small class="text-title"&gt; Sub Heading &lt;/small&gt;&lt;/h4&gt; 
+                                       |   &lt;h5 class="text-base text-warning"&gt; Heading 5 &lt;small class="text-title"&gt; Sub Heading &lt;/small&gt;&lt;/h5&gt; 
+                                       |   &lt;h6 class="text-sm text-danger"&gt; Heading 6 &lt;small class="text-title"&gt; Sub Heading &lt;/small&gt;&lt;/h6&gt;
+                                       |&lt;/div&gt; 
+                  div.col-span-4(class="2xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Font Weight
+                              p Using 
+                                 strong .font-*
+                                 |  class, you can add font weight to the text. 
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.gap-2 
+                                    h1(class="font-black") It's black font weight Heading 1      
+                                    h2(class="font-bold") It's bold font weight Heading 2      
+                                    h3(class="font-semibold") It's semibold font weight Heading 3      
+                                    h4(class="font-normal") It's normal font weight Heading 4      
+                                    h5(class="font-light") It's light font weight Heading 5      
+                                    h6(class="font-extralight") It's extralight font weight Heading 6  
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code 
+                                       |&lt;div class="flex flex-col gap-2"&gt; 
+                                       |   &lt;h1 class="font-black"&gt; It's black font weight Heading 1 &lt;/h1&gt; 
+                                       |   &lt;h2 class="font-bold"&gt; It's bold font weight Heading 2 &lt;/h2&gt;
+                                       |   &lt;h3 class="font-semibold"&gt; It's semibold font weight Heading 3 &lt;/h3&gt; 
+                                       |   &lt;h4 class="font-normal"&gt; It's normal font weight Heading 4 &lt;/h4&gt; 
+                                       |   &lt;h5 class="font-light"&gt; It's light font weight Heading 5 &lt;/h5&gt; 
+                                       |   &lt;h6 class="font-extralight"&gt; It's extralight font weight Heading 6 &lt;/h6&gt;
+                                       |&lt;/div&gt; 
+                  div.col-span-6(class="2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Colored Text
+                              p Set the text color using 
+                                 strong .text-* 
+                                 | class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.gap-2 
+                                    p(class="text-primary") This is primary heading 1, you can add using <code class="font-black">.text-primary</code> class.      
+                                    p(class="text-secondary") This is secondary heading 2, you can add using <code class="font-black">.text-secondary</code> class.      
+                                    p(class="text-info") This is info heading 3, you can add using <code class="font-black">.text-info</code> class.      
+                                    p(class="text-success") This is success heading 4, you can add using <code class="font-black">.text-success</code> class.      
+                                    p(class="text-warning") This is warning heading 5, you can add using <code class="font-black">.text-warning</code> class.      
+                                    p(class="text-danger") This is danger heading 6, you can add using <code class="font-black">.text-danger</code> class.
+                                    p(class="text-light") This is light heading 6, you can add using <code class="font-black">.text-light</code> class.  
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code 
+                                       |&lt;div class="flex flex-col gap-2"&gt; 
+                                       |    &lt;p class="text-primary"&gt; This is primary heading 1, you can add using
+                                       |        &lt;code class="font-black"&gt;.text-primary&lt;/code&gt;&lt;/p&gt; 
+                                       |    &lt;p class="text-secondary"&gt; This is secondary heading 2, you can add using
+                                       |        &lt;code class="font-black"&gt;.text-secondary&lt;/code&gt;&lt;/p&gt;
+                                       |    &lt;p class="text-info"&gt; This is info heading 3, you can add using
+                                       |        &lt;code class="font-black"&gt;.text-info&lt;/code&gt;&lt;/p&gt; 
+                                       |    &lt;p class="text-success"&gt; This is success heading 4, you can add using
+                                       |        &lt;code class="font-black"&gt;.text-success&lt;/code&gt;&lt;/p&gt; 
+                                       |    &lt;p class="text-warning"&gt; This is warning heading 5, you can add using
+                                       |        &lt;code class="font-black"&gt;.text-warning&lt;/code&gt;&lt;/p&gt; 
+                                       |    &lt;p class="text-danger"&gt; This is danger heading 6, you can add using
+                                       |        &lt;code class="font-black"&gt;.text-danger&lt;/code&gt;&lt;/p&gt;
+                                       |    &lt;p class="text-light"&gt; This is light heading 6, you can add using
+                                       |        &lt;code class="font-black"&gt;.text-light&lt;/code&gt;&lt;/p&gt;                                   
+                                       |&lt;/div&gt; 
+                  div.col-span-6(class="2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Inline Text Elements
+                              p Styling for common inline HTML5 elements.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.gap-2 
+                                    p You can use the mark tag to 
+                                       | <mark>highlight</mark> text.
+                                    p
+                                       | <del>This line of text is meant to be treated as deleted text.</del>
+                                    p 
+                                       | <s>This line of text is meant to be treated as no longer accurate.</s> 
+                                    p 
+                                       | <u>This line of text will render as underlined</u>
+                                    p 
+                                       | <small>This line of text is meant to be treated as fine print.</small>
+                                    p 
+                                       | <strong>This line rendered as bold text.</strong>
+                                    p 
+                                       | <em>This line rendered as italicized text.</em>
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code 
+                                       |&lt;div class="flex flex-col gap-2"&gt; 
+                                       |   &lt;p&gt; You can use the mark tag to &lt;mark&gt;highlight&lt;/mark&gt;text.&lt;/p&gt; 
+                                       |   &lt;p&gt;&lt;del&gt;This line of text is meant to be treated as deleted text.&lt;/del&gt;&lt;/p&gt;
+                                       |   &lt;p&gt;&lt;s&gt;This line of text is meant to be treated as no longer accurate.&lt;/s&gt;&lt;/p&gt;
+                                       |   &lt;p&gt;&lt;u&gt;This line of text will render as underlined.&lt;/u&gt;&lt;/p&gt;
+                                       |   &lt;p&gt;&lt;small&gt;This line of text is meant to be treated as fine print.&lt;/small&gt;&lt;/p&gt;
+                                       |   &lt;p&gt;&lt;strong&gt;This line rendered as bold text.&lt;/strong&gt;&lt;/p&gt;
+                                       |   &lt;p&gt;&lt;em&gt;This line rendered as italicized text.&lt;/em&gt;&lt;/p&gt;                              
+                                       |&lt;/div&gt; 
+                  div.col-span-4(class="2xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Unordered List
+                              p For list-styling you can use Unordered list using    
+                                 strong ul 
+                                 | and 
+                                 strong li.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div 
+                                    ul(class="pl-4 text-gray-500 list-disc")
+                                       li(class="mt-2 first:mt-0") Click here, for more latest News!!
+                                       li(class="mt-2 first:mt-0") Click here, for more info!
+                                       li(class="mt-2 first:mt-0") Hurry, you got the first price
+                                       li(class="mt-2 first:mt-0") Surprise!!!
+                                       li(class="mt-2 first:mt-0") Here, you can get the more about us
+                                       li(class="mt-2 first:mt-0") Today is the best for you!!
+                                       li(class="mt-2 first:mt-0") Let's friday night!!
+                                       li(class="mt-2 first:mt-0") click on, for new update!
+                                       li(class="mt-2 first:mt-0") Coding Language
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code 
+                                       |&lt;div&gt;
+                                       |   &lt;ul class="pl-4 text-gray-500 list-disc"&gt;
+                                       |       &lt;li class="mt-2 first:mt-0"&gt; Click here, for more latest News!! &lt;/li&gt;
+                                       |       &lt;li class="mt-2 first:mt-0"&gt; Click here, for more info! &lt;/li&gt;
+                                       |       &lt;li class="mt-2 first:mt-0"&gt; Hurry, you got the first price &lt;/li&gt;
+                                       |       &lt;li class="mt-2 first:mt-0"&gt; Surprise!!! &lt;/li&gt;
+                                       |       &lt;li class="mt-2 first:mt-0"&gt; Here, you can get the more about us &lt;/li&gt;
+                                       |       &lt;li class="mt-2 first:mt-0"&gt; Today is the best for you!! &lt;/li&gt;
+                                       |       &lt;li class="mt-2 first:mt-0"&gt; Let's friday night!! &lt;/li&gt;
+                                       |       &lt;li class="mt-2 first:mt-0"&gt; click on, for new update! &lt;/li&gt;
+                                       |       &lt;li class="mt-2 first:mt-0"&gt; Coding Language &lt;/li&gt;
+                                       |   &lt;/ul&gt;
+                                       |&lt;/div&gt;
+                  div.col-span-4(class="2xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Order List
+                              p For list-styling you can use order list using    
+                                 strong ol 
+                                 | and 
+                                 strong li.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div 
+                                    ol(class="pl-4 text-gray-500 list-decimal")
+                                       li(class="mt-2 first:mt-0") Ui kits
+                                       li(class="mt-2 first:mt-0") Bonus ui
+                                       li(class="mt-2 first:mt-0")
+                                          ol(class="pl-8 text-gray-500 list-decimal")
+                                             li(class="mt-2 first:mt-0") Breadcrumb
+                                             li(class="mt-2 first:mt-0") Carousel
+                                             li(class="mt-2 first:mt-0") Countdown
+                                             li(class="mt-2 first:mt-0") Indicator
+                                       li(class="mt-2 first:mt-0") Icon
+                                       li(class="mt-2 first:mt-0") Apex Chart
+                                       li(class="mt-2 first:mt-0") Chat
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code 
+                                       |&lt;div&gt;
+                                       |   &lt;ol class="pl-4 text-gray-500 list-decimal"&gt;
+                                       |       &lt;li class="mt-2 first:mt-0"&gt; Ui kits &lt;/li&gt;
+                                       |       &lt;li class="mt-2 first:mt-0"&gt; Bonus ui &lt;/li&gt;
+                                       |       &lt;li class="mt-2 first:mt-0"&gt;
+                                       |           &lt;ol class="pl-4 text-gray-500 list-decimal"&gt;
+                                       |               &lt;li class="mt-2 first:mt-0"&gt; Breadcrumb &lt;/li&gt;
+                                       |               &lt;li class="mt-2 first:mt-0"&gt; Carousel &lt;/li&gt;
+                                       |               &lt;li class="mt-2 first:mt-0"&gt; Countdown &lt;/li&gt;
+                                       |               &lt;li class="mt-2 first:mt-0"&gt; Indicator &lt;/li&gt;
+                                       |           &lt;/ol&gt;
+                                       |       &lt;/li&gt;
+                                       |       &lt;li class="mt-2 first:mt-0"&gt; Icon &lt;/li&gt;
+                                       |       &lt;li class="mt-2 first:mt-0"&gt; Apex Chart &lt;/li&gt;
+                                       |       &lt;li class="mt-2 first:mt-0"&gt; Chat &lt;/li&gt;
+                                       |   &lt;/ol&gt;
+                                       |&lt;/div&gt;
+                  div.col-span-4(class="2xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Description List
+                              p For list-styling you can use Description list using    
+                                 strong dl 
+                                 | and 
+                                 strong dt
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div 
+                                    dl.text-xs
+                                       dt(class="mt-2 first:mt-0") The way to get started is to quit talking and begin doing.
+                                       dd(class="ml-5 text-gray-500") - Walt Disney
+                                       dt(class="mt-2 first:mt-0") Life is what happens when you're busy making other plans.
+                                       dd(class="ml-5 text-gray-500") - John Lennon 
+                                       dt(class="mt-2 first:mt-0") Whoever is happy will make others happy too.
+                                       dd(class="ml-5 text-gray-500") - Anne Frank
+                                       dt(class="mt-2 first:mt-0") Life is either a daring adventure or nothing at all.
+                                       dd(class="ml-5 text-gray-500") - IHelen Keller
+                                       dt(class="mt-2 first:mt-0") The purpose of our lives is to be happy.
+                                       dd(class="ml-5 text-gray-500") - Dalai Lama
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code 
+                                       |&lt;div&gt;
+                                       |   &lt;dl class="text-xs&gt;
+                                       |       &lt;dt class="mt-2 first:mt-0"&gt; The way to get started is to quit talking and begin doing. &lt;/dt&gt;
+                                       |       &lt;dd class="ml-5 text-gray-500"&gt;- Walt Disney&lt;/dd&gt;
+                                       |       &lt;dt class="mt-2 first:mt-0"&gt; Life is what happens when you're busy making other plans. &lt;/dt&gt;
+                                       |       &lt;dd class="ml-5 text-gray-500"&gt;- John Lennon &lt;/dd&gt;
+                                       |       &lt;dt class="mt-2 first:mt-0"&gt; Whoever is happy will make others happy too. &lt;/dt&gt;
+                                       |       &lt;dd class="ml-5 text-gray-500"&gt;- Anne Frank &lt;/dd&gt;
+                                       |       &lt;dt class="mt-2 first:mt-0"&gt; Life is either a daring adventure or nothing at all. &lt;/dt&gt;
+                                       |       &lt;dd class="ml-5 text-gray-500"&gt;- IHelen Keller &lt;/dd&gt;
+                                       |       &lt;dt class="mt-2 first:mt-0"&gt; The purpose of our lives is to be happy. &lt;/dt&gt;
+                                       |       &lt;dd class="ml-5 text-gray-500"&gt;- Dalai Lama &lt;/dd&gt;
+                                       |   &lt;/dl&gt;
+                                       |&lt;/div&gt;
+                  div.col-span-6(class="2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Alignment
+                              p Set the text alignment using 
+                                 strong .text-* 
+                                 | class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.gap-2
+                                    div
+                                       h4.text-sm.font-semibold.text-title.text-start Alignment Left
+                                       p(class="text-content text-start") You can set start alignment of the text using 
+                                          strong text-start.
+                                    div
+                                       h4.text-sm.font-semibold.text-title.text-center Alignment Center
+                                       p(class="text-center text-content") You can set center alignment of the text using 
+                                          strong text-center.
+                                    div
+                                       h4.text-sm.font-semibold.text-title.text-end Alignment Right
+                                       p(class="text-content text-end") You can set end alignment of the text using 
+                                          strong text-end.
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code 
+                                       |&lt;div class="flex flex-col gap-2"&gt;
+                                       |   &lt;div&gt;
+                                       |       &lt;h4 class="text-sm font-semibold text-title text-start"&gt; Alignment Left &lt;/h4&gt;
+                                       |       &lt;p class="text-content text-start"&gt; You can set start alignment of the text using 
+                                       |           &lt;strong&gt;text-start.&lt;/strong&gt;&lt;/p&gt; 
+                                       |   &lt;/div&gt;
+                                       |   &lt;div&gt;
+                                       |       &lt;h4 class="text-sm font-semibold text-center text-title"&gt; Alignment Center &lt;/h4&gt;
+                                       |       &lt;p class="text-center"&gt; You can set start alignment of the text using 
+                                       |           &lt;strong&gt;text-center.&lt;/strong&gt;&lt;/p&gt;
+                                       |   &lt;/div&gt;
+                                       |   &lt;div&gt;
+                                       |       &lt;h4 class="text-sm font-semibold text-title text-end"&gt; Alignment Right &lt;/h4&gt;
+                                       |       &lt;p class="text-end"&gt; You can set start alignment of the text using 
+                                       |           &lt;strong&gt;text-end.&lt;/strong&gt;&lt;/p&gt; 
+                                       |   &lt;/div&gt;
+                                       |&lt;/div&gt; 
+                  div.col-span-6(class="2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Blockquote 
+                              p Set the blockquote using 
+                                 strong .text-* 
+                                 | class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.gap-2
+                                    blockquote.text-start(class="p-2 border-l-4 border-primary bg-primary-light text-primary")
+                                       p.mb-1  The <code>blockquote</code> tag specifies a section that is quoted from another source.
+                                       .blockquote-footer
+                                          cite(title='Source Title') - Source Title
+                                    blockquote.text-end(class="p-2 border-r-4 border-secondary bg-secondary-extralight text-secondary")
+                                       p.mb-1  The <code>blockquote</code> tag specifies a section that is quoted from another source.
+                                       .blockquote-footer
+                                          cite(title='Source Title') - Source Title
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code 
+                                       |&lt;div class="flex flex-col gap-2"&gt; 
+                                       |   &lt;blockquote class="p-2 border-l-4 text-start border-primary bg-primary-light text-primary"&gt;
+                                       |       &lt;p class="mb-1"&gt;The <code>blockquote</code> tag specifies a section that is quoted from another source.&lt;/p&gt;
+                                       |   &lt;blockquote-footer&gt;&lt;cite title="Source Title"&gt;&lt;cite&gt;&lt;/blockquote-footer&gt; 
+                                       |   &lt;/blockquote&gt; 
+                                       |   &lt;blockquote class="p-2 border-l-4 text-end border-secondary bg-secondary-extralight text-secondary"&gt;
+                                       |       &lt;p class="mb-1"&gt;The <code>blockquote</code> tag specifies a section that is quoted from another source.&lt;/p&gt;
+                                       |   &lt;blockquote-footer&gt;&lt;cite title="Source Title"&gt;&lt;cite&gt;&lt;/blockquote-footer&gt; 
+                                       |   &lt;/blockquote&gt;                               
+                                       |&lt;/div&gt;
+
+
+            // Page Body End 
+            +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+      include ../../components/customizer
+
+   include ../../layout/footer-files

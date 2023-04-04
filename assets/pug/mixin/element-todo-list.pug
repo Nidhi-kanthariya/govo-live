@@ -1,0 +1,29 @@
+
+
+mixin todo-list(data)
+   ul.todo-list
+      each dataItem, index in data
+         li.todo-item.flex.items-center.justify-between(class=`border-l-[3px] mt-[19px] 2xl:mt-[16px] first:mt-0 border-${dataItem.color} gap-[calc(8px_+_(20_-_8)_*_((100vw_-_320px)_/_(1920_-_320)))]`)
+            div.flex.items-center.justify-center(class="flex-[1_1_0]")
+               div(class="p-[15px]") 
+                  label.checkbox(class="w-[18px] h-[18px] rounded-[4px] block")
+                     input(type='checkbox' checked=dataItem.checked)
+                     div.checkbox-indicator
+                        i(data-feather="check")
+               div(class="flex-[1_1_0]")
+                  h5(class="text-title text-xs font-semibold line-clamp-1 focus:border focus:border-light focus:outline-none focus:px-2 focus:rounded-5")= dataItem.title
+                  span.font-normal.text-gray-500.text-2xs.block.mt-1.line-clamp-1
+                     = dataItem.subTitle1  
+                     span(class="text-primary")=` ${dataItem.id} ` 
+                     =  dataItem.subTitle2 
+            div.dropdown.on-hover-show(class=`flex ${data.length === index + 1 ? "top-open" : ""}`)
+               button(class="group bg-gray-light px-[5px] py-[3px]") 
+                  +SVG_ICON("Dote-h","w-[18px] h-[18px] stroke-title")   
+               div.dropdown-menu(class=`!right-0 !left-unset`)
+                  ul
+                     li.group 
+                        a(href="javascript:void(0)" class="edit")
+                           +SVG_ICON("Edit-Square","group-hover:stroke-primary w-[18px] h-[18px] stroke-title")   
+                     li.group 
+                        a(href="javascript:void(0)" class="delete")
+                           +SVG_ICON("Delete","group-hover:stroke-primary w-[18px] h-[18px] stroke-title")   

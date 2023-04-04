@@ -1,0 +1,33 @@
+/*=====================
+    User Profile CSS
+  ==========================*/
+
+@layer components {
+  .user-profile {
+    .user-bg {
+      @apply relative;
+
+      &:before {
+        @apply content-[''] absolute bg-black w-full h-full top-0 left-0 opacity-50;
+      }
+
+      .user-detail {
+        @apply absolute top-10 left-12 2sm:left-4 rtl:left-unset rtl:right-12 rtl:2sm:right-4;
+      }
+    }
+
+    .user-profile-detail {
+      @apply relative z-[1];
+
+      .tab {
+        &.tabs-bordered {
+          &.user-tab {
+            &.tab-active {
+              @apply border-b-[1px] font-semibold;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+/*=====================
+    Apex Custom Tooltip
+  ==========================*/
+@layer components {
+  .apex-custom-tooltip {
+    &.apex-tooltip-style1 {
+      .apexcharts-tooltip {
+        @apply rounded-[0.625rem] border-none p-[0.6875rem] shadow-[0_0.4375rem_1.25rem_rgba(189,182,255,0.3)];
+        .apex-tooltip {
+          > span {
+            @apply flex items-center gap-1 text-3xs text-title font-semibold;
+            span {
+              @apply w-[0.5rem] h-[0.5rem] rounded-full;
+            }
+          }
+        }
+      }
+      .apexcharts-xcrosshairs {
+        stroke-dasharray: none;
+        @apply stroke-[4] fill-primary stroke-primary;
+        &.apexcharts-active {
+          @apply opacity-40;
+        }
+      }
+      .apexcharts-xaxistooltip {
+        @apply !hidden;
+      }
+    }
+  }
+}

@@ -1,0 +1,453 @@
+//- sidebar
+-var sidebar = true;
+
+//- feathet
+-var feather= true;
+
+//- customSelect
+-var customSelect= true;
+
+//- customizer
+-var customizer=true;
+
+//- prism
+-var prism=true;
+
+//- wow animation
+-var wow=true;
+
+//- Breadcrumbs
+-var pageTitle="Wow Animation";
+-var breadcrumb=['Ui Kits','Wow Animation'];
+
+//- json
+include ../../data/all-data
+
+//- mixin
+include ../../mixin/mixin
+
+doctype html
+html(lang='en')  
+   include ../../layout/header-files 
+   body(dir="ltr" class="unique-skin") 
+      main.page-wrapper
+         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+            include ../../layout/header/header     
+            // Sidebar Start 
+            div.page-sidebar.sidebar-dark.unique-sidebar
+               include ../../layout/unique
+            // Sidebar End
+
+            // Page Body Start 
+            div.page-body
+               div.grid.grid-cols-12.gap-card-gap
+                  div.col-span-4(class="2xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold RollIn
+                              p To create RollIn animation, you can add 
+                                 strong wow    
+                                 |   & 
+                                 strong animate__rollIn   
+                                 |   class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.items-center.justify-center.flex-wrap.gap-2.w-full.overflow-hidden
+                                    div
+                                       div.circle(class="wow animate__rollIn" data-wow-delay="0.1s" data-wow-duration="1.5s")
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap items-center justify-center w-full gap-2"&gt; 
+                                       |   &lt;div&gt;
+                                       |       &lt;div class="circle wow animate__rollIn" data-wow-delay="0.1s" data-wow-duration="1.5s""&gt;&lt;/div&gt;
+                                       |   &lt;/div&gt; 
+                                       |&lt;/div&gt; 
+
+                  div.col-span-4(class="2xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold ShakeX
+                              p To create ShakeX animation, add 
+                                 strong woo    
+                                 |   & 
+                                 strong animate__shakeX   
+                                 |   class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.items-center.justify-center.flex-wrap.gap-2.w-full.overflow-hidden
+                                    div
+                                       div.circle(class="wow animate__shakeX" data-wow-delay="0.1s" data-wow-duration="1.5s")
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap items-center justify-center w-full gap-2"&gt; 
+                                       |   &lt;div&gt; 
+                                       |       &lt;div class="circle wow animate__shakeX" data-wow-delay="0.1s" data-wow-duration="1.5s""&gt;&lt;/div&gt;
+                                       |   &lt;/div&gt; 
+                                       |&lt;/div&gt; 
+
+                  div.col-span-4(class="2xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold HeartBeat
+                              p To create HeartBeat animation, add 
+                                 strong woo    
+                                 |   & 
+                                 strong animate__heartBeat   
+                                 |   class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.items-center.justify-center.flex-wrap.gap-2.w-full.overflow-hidden
+                                    div
+                                       div.circle(class="wow animate__heartBeat" data-wow-delay="0.1s" data-wow-duration="1.5s")
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap items-center justify-center w-full gap-2"&gt; 
+                                       |   &lt;div&gt; 
+                                       |       &lt;div class="circle wow animate__heartBeat" data-wow-delay="0.1s" data-wow-duration="1.5s""&gt;&lt;/div&gt;
+                                       |   &lt;/div&gt; 
+                                       |&lt;/div&gt; 
+
+                  div.col-span-4(class="2xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold ZoomInLeft
+                              p You can set ZoomInLeft animation using 
+                                 strong woo    
+                                 |   & 
+                                 strong animate__zoomInLeft   
+                                 |   class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.items-center.justify-center.flex-wrap.gap-2.w-full.overflow-hidden
+                                    div
+                                       div.circle(class="wow animate__zoomInLeft" data-wow-delay="0.1s" data-wow-duration="1.5s")
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap items-center justify-center w-full gap-2"&gt; 
+                                       |   &lt;div&gt; 
+                                       |       &lt;div class="circle wow animate__zoomInLeft" data-wow-delay="0.1s" data-wow-duration="1.5s""&gt;&lt;/div&gt;
+                                       |   &lt;/div&gt; 
+                                       |&lt;/div&gt; 
+
+                  div.col-span-4(class="2xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold ZoomOutRight
+                              p You can set ZoomOutRight animation using 
+                                 strong woo    
+                                 |   & 
+                                 strong animate__zoomOutRight   
+                                 |   class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.items-center.justify-center.flex-wrap.gap-2.w-full.overflow-hidden
+                                    div
+                                       div.circle(class="wow animate__zoomOutRight" data-wow-delay="0.1s" data-wow-duration="1.5s")
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap items-center justify-center w-full gap-2"&gt; 
+                                       |   &lt;div&gt; 
+                                       |       &lt;div class="circle wow animate__zoomOutRight" data-wow-delay="0.1s" data-wow-duration="1.5s""&gt;&lt;/div&gt;
+                                       |   &lt;/div&gt; 
+                                       |&lt;/div&gt; 
+
+                  div.col-span-4(class="2xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold LightSpeedInRight
+                              p You can set LightSpeedInRight animation using 
+                                 strong woo    
+                                 |   & 
+                                 strong animate__lightSpeedInRight   
+                                 |   class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.items-center.justify-center.flex-wrap.gap-2.w-full.overflow-hidden
+                                    div
+                                       div.circle(class="wow animate__lightSpeedInRight" data-wow-delay="0.1s" data-wow-duration="1.5s")
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap items-center justify-center w-full gap-2"&gt; 
+                                       |   &lt;div&gt; 
+                                       |       &lt;div class="circle wow animate__lightSpeedInRight" data-wow-delay="0.1s" data-wow-duration="1.5s""&gt;&lt;/div&gt;
+                                       |   &lt;/div&gt; 
+                                       |&lt;/div&gt; 
+
+                  div.col-span-4(class="2xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold FadeInDownBig
+                              p You can set FadeInDownBig animation using 
+                                 strong woo    
+                                 |   & 
+                                 strong animate__fadeInDownBig   
+                                 |   class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.items-center.justify-center.flex-wrap.gap-2.w-full.overflow-hidden
+                                    div
+                                       div.circle(class="wow animate__fadeInDownBig" data-wow-delay="0.1s" data-wow-duration="1.5s")
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap items-center justify-center w-full gap-2"&gt; 
+                                       |   &lt;div&gt; 
+                                       |       &lt;div class="circle wow animate__fadeInDownBig" data-wow-delay="0.1s" data-wow-duration="1.5s""&gt;&lt;/div&gt;
+                                       |   &lt;/div&gt; 
+                                       |&lt;/div&gt; 
+
+                  div.col-span-4(class="2xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold FadeInDown
+                              p You can set FadeInDown animation using 
+                                 strong woo    
+                                 |   & 
+                                 strong animate__fadeInDown   
+                                 |   class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.items-center.justify-center.flex-wrap.gap-2.w-full.overflow-hidden
+                                    div
+                                       div.circle(class="wow animate__fadeInDown" data-wow-delay="0.1s" data-wow-duration="1.5s")
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap items-center justify-center w-full gap-2"&gt; 
+                                       |   &lt;div&gt; 
+                                       |       &lt;div class="circle wow animate__fadeInDown" data-wow-delay="0.1s" data-wow-duration="1.5s""&gt;&lt;/div&gt;
+                                       |   &lt;/div&gt; 
+                                       |&lt;/div&gt; 
+
+                  div.col-span-4(class="2xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold FadeOutRightBig
+                              p You can set FadeOutRightBig animation using 
+                                 strong woo    
+                                 |   & 
+                                 strong animate__fadeOutRightBig   
+                                 |   class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.items-center.justify-center.flex-wrap.gap-2.w-full.overflow-hidden
+                                    div
+                                       div.circle(class="wow animate__fadeOutRightBig" data-wow-delay="0.1s" data-wow-duration="1.5s")
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap items-center justify-center w-full gap-2"&gt; 
+                                       |   &lt;div&gt; 
+                                       |       &lt;div class="circle wow animate__fadeOutRightBig" data-wow-delay="0.1s" data-wow-duration="1.5s""&gt;&lt;/div&gt;
+                                       |   &lt;/div&gt; 
+                                       |&lt;/div&gt; 
+
+                  div.col-span-4(class="2xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold BackOutRight
+                              p You can set BackOutRight animation using 
+                                 strong woo    
+                                 |   & 
+                                 strong animate__backOutRight   
+                                 |   class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.items-center.justify-center.flex-wrap.gap-2.w-full.overflow-hidden
+                                    div
+                                       div.circle(class="wow animate__backOutRight" data-wow-delay="0.1s" data-wow-duration="1.5s")
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap items-center justify-center w-full gap-2"&gt; 
+                                       |   &lt;div&gt; 
+                                       |       &lt;div class="circle wow animate__backOutRight" data-wow-delay="0.1s" data-wow-duration="1.5s""&gt;&lt;/div&gt;
+                                       |   &lt;/div&gt; 
+                                       |&lt;/div&gt; 
+
+                  div.col-span-4(class="2xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold BackInUp
+                              p You can set BackInUp animation using 
+                                 strong woo    
+                                 |   & 
+                                 strong animate__backInUp   
+                                 |   class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.items-center.justify-center.flex-wrap.gap-2.w-full.overflow-hidden
+                                    div
+                                       div.circle(class="wow animate__backInUp" data-wow-delay="0.1s" data-wow-duration="1.5s")
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap items-center justify-center w-full gap-2"&gt; 
+                                       |   &lt;div&gt; 
+                                       |       &lt;div class="circle wow animate__backInUp" data-wow-delay="0.1s" data-wow-duration="1.5s""&gt;&lt;/div&gt;
+                                       |   &lt;/div&gt; 
+                                       |&lt;/div&gt; 
+
+                  div.col-span-4(class="2xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold SlideInUp
+                              p You can set SlideInUp animation using 
+                                 strong woo    
+                                 |   & 
+                                 strong animate__slideInUp   
+                                 |   class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.items-center.justify-center.flex-wrap.gap-2.w-full.overflow-hidden
+                                    div
+                                       div.circle(class="wow animate__slideInUp" data-wow-delay="0.1s" data-wow-duration="1.5s")
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap items-center justify-center w-full gap-2"&gt; 
+                                       |   &lt;div&gt; 
+                                       |       &lt;div class="circle wow animate__slideInUp" data-wow-delay="0.1s" data-wow-duration="1.5s""&gt;&lt;/div&gt;
+                                       |   &lt;/div&gt; 
+                                       |&lt;/div&gt;
+
+               div.col-span-12
+                  div.grid.grid-cols-2(class="items-center md:gap-3 sm:gap-1")
+                     div.flex.flex-col.items-start(class="gap-y-[0.25rem] md:col-span-2")
+                        h2.py-card-gap.text-2xl.capitalize.font-bold(class="3xl:text-xl md:mt-[-0.125rem]")  How to use WOW animation ?
+                     div.card.col-span-12        
+                        div.card-header.pb-2.header-bottom-border 
+                           h3.font-medium.mb-1(class="3xl:text-lg sm:text-base") Step 1 : Plugin setup for css
+                           p
+                              | By adding this the animation css will added to your project
+                        div.card-body
+                           div.grid.grid-cols-1.gap-5(class="md:gap-1")
+                              div(class="col-span-1 md:col-span-2")                                            
+                                 pre(class="overflow-auto language-js custom-scroll")
+                                    code
+                                       |   plugins: [
+                                       |       require('tailwindcss-animatecss')({
+                                       |           classes: []                                       
+                                       |       }),
+                                       |   ] 
+                        div.card-header.pb-2.header-bottom-border 
+                           h3.font-medium.mb-1(class="3xl:text-lg sm:text-base") Step 2 : Add JS
+                        div.card-body  
+                           div.flex.flex-wrap.gap-2
+                              div.w-full.tabs.flex-col
+                                 div.mb-1.tab-links.flex
+                                    button.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") For PUG User 
+                                    button.tab.tab-lifted(data-tabFilter="2" class="tab-link") For HTML User  
+                                 div.tabs-content
+                                    div(data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5")
+                                       button.btn.copyBtn 
+                                          i(data-feather="clipboard")
+                                       pre(class="overflow-auto language-html custom-scroll")
+                                          code
+                                          |   &lt;!-- you just need to true the wow variable in page --&gt;
+                                          |   -var wow=true;
+                                    div(data-tabContent="2" class="relative tab-pan fade group first:rounded-tl-none rounded-5")
+                                       button.btn.copyBtn 
+                                          i(data-feather="clipboard")
+                                       pre(class="overflow-auto language-html custom-scroll")
+                                          code
+                                             |   &lt;script src="../../assets/js/wow.js"&gt; &lt;/script&gt;
+                                             |   &lt;script src="../../assets/js/wow-custom.js"&gt; &lt;/script&gt;
+                           p(class="pt-2") All set&#128525; Now you can see animations will be revealed when the page scrolls.             
+
+
+            // Page Body End 
+            +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+      include ../../components/customizer
+
+   include ../../layout/footer-files

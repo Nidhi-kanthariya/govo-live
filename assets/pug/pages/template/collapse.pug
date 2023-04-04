@@ -1,0 +1,597 @@
+//- sidebar
+-var sidebar = true;
+
+//- feathet
+-var feather= true;
+
+//- customSelect
+-var customSelect= true;
+
+//- customizer
+-var customizer=true;
+
+//- prism
+-var prism=true;
+
+//- Breadcrumbs
+-var pageTitle="Collapse";
+-var breadcrumb=['Ui Kits','Collapse'];
+
+//- json
+include ../../data/all-data
+
+//- mixin
+include ../../mixin/mixin
+
+doctype html
+html(lang='en')  
+   include ../../layout/header-files 
+   body(dir="ltr" class="unique-skin") 
+      main.page-wrapper
+         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+            include ../../layout/header/header     
+            // Sidebar Start 
+            div.page-sidebar.sidebar-dark.unique-sidebar
+               include ../../layout/unique
+            // Sidebar End 
+
+            // Page Body Start 
+            div.page-body
+               div.grid.grid-cols-12.gap-card-gap
+                  div.col-span-6(class="2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Default Open
+                              p   Use this component to show and hide the information. To set open collapse use  
+                                 strong  .open 
+                                 |   class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.flex-wrap.gap-2
+                                    div.accordionWrapper
+                                       div.accordionItem.open
+                                          h4.accordionItemHeading.bg-primary Open Accordions
+                                          div.accordionItemContent
+                                             p
+                                                | You can set accordion by default open using open class.
+                                             p
+                                                | This is simple accordion for collapse.
+                                             p 
+                                                | This is simple accordion to open & close.                                        
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-col flex-wrap gap-2"&gt;
+                                       |    &lt;div class="accordionWrapper"&gt;
+                                       |     &lt;div class="accordionItem open"&gt;
+                                       |        &lt;h4 class="accordionItemHeading bg-primary"&gt;Open Accordions &lt;/h4&gt;
+                                       |        &lt;div class="accordionItemContent"&gt;
+                                       |          &lt;p&gt; You can set accordion by default open using open class. &lt;/p&gt;
+                                       |          &lt;p&gt; This is simple accordion for collapse. &lt;/p&gt;
+                                       |          &lt;p&gt; This is simple accordion to open & close. &lt;/p&gt;
+                                       |        &lt;/div&gt;
+                                       |     &lt;/div&gt;
+                                       |    &lt;/div&gt; 
+                                       |&lt;/div&gt;
+                  div.col-span-6(class="2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Default Close
+                              p   To set this component default close with the help of 
+                                 strong  .close  
+                                 |   class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.flex-wrap.gap-2
+                                    div.accordionWrapper
+                                       div.accordionItem.close
+                                          h4.accordionItemHeading.bg-primary Close Accordions
+                                          div.accordionItemContent
+                                             p
+                                                | You can set accordion by default close using open class.
+                                             p
+                                                | This is simple accordion for open & close collapse.
+                                       div.accordionItem.close
+                                          h4.accordionItemHeading.bg-primary Close Items
+                                          div.accordionItemContent
+                                             p
+                                                | You can set the list inside the accordion.
+                                             ul.list-disc.pl-4
+                                                li List item 
+                                                li List item 
+                                                li List item 
+                                       div.accordionItem.close
+                                          h4.accordionItemHeading.bg-primary Close Accordions
+                                          div.accordionItemContent
+                                             p
+                                                | You can set accordion by default close using open class.
+                                             p
+                                                | This is simple accordion for open & close collapse.
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-col flex-wrap gap-2"&gt;
+                                       |    &lt;div class="accordionWrapper"&gt;
+                                       |     &lt;div class="accordionItem close"&gt;
+                                       |        &lt;h4 class="accordionItemHeading bg-primary"&gt; Close Accordions &lt;/h4&gt;
+                                       |        &lt;div class="accordionItemContent"&gt;
+                                       |          &lt;p&gt; You can set accordion by default close using open class. &lt;/p&gt;
+                                       |          &lt;p&gt; This is simple accordion for open & close collapse. &lt;/p&gt;
+                                       |        &lt;/div&gt;
+                                       |     &lt;/div&gt;
+                                       |     &lt;div class="accordionItem close"&gt;
+                                       |        &lt;h4 class="accordionItemHeading bg-primary"&gt; Close Items &lt;/h4&gt;
+                                       |        &lt;div class="accordionItemContent"&gt;
+                                       |          &lt;p&gt; You can set the list inside the accordion. &lt;/p&gt;
+                                       |          &lt;ul&gt; 
+                                       |            &lt;li&gt; List item &lt;/li&gt;
+                                       |            &lt;li&gt; List item &lt;/li&gt;
+                                       |            &lt;li&gt; List item &lt;/li&gt;
+                                       |          &lt;/ul&gt;
+                                       |        &lt;/div&gt;
+                                       |     &lt;/div&gt;
+                                       |     &lt;div class="accordionItem close"&gt;
+                                       |        &lt;h4 class="accordionItemHeading bg-primary"&gt; Close Accordions &lt;/h4&gt;
+                                       |        &lt;div class="accordionItemContent"&gt;
+                                       |          &lt;p&gt; You can set accordion by default close using open class. &lt;/p&gt;
+                                       |          &lt;p&gt; This is simple accordion for open & close collapse. &lt;/p&gt;
+                                       |        &lt;/div&gt;
+                                       |     &lt;/div&gt;
+                                       |    &lt;/div&gt; 
+                                       |&lt;/div&gt;
+                  div.col-span-6(class="2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Default Collapse 
+                              p   This is default component, to set default close use 
+                                 strong  .close 
+                                 |   class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.flex-wrap.gap-2
+                                    div.accordionWrapper.default
+                                       div.accordionItem.open
+                                          h4.accordionItemHeading.bg-gray-light.text-title.flex.justify-between Open Accordions
+                                             div.collapse-icon
+                                                +SVG_ICON("Arrow-Down-2","w-[1.25rem] h-[1.25rem] stroke-title")
+                                          div.accordionItemContent
+                                             p
+                                                | You can set accordion by default close using open class.
+                                             p
+                                                | This is simple accordion for open & close collapse.
+                                       div.accordionItem.close
+                                          h4.accordionItemHeading.bg-gray-light.text-title.flex.justify-between Close Items
+                                             div.collapse-icon
+                                                +SVG_ICON("Arrow-Down-2","w-[1.25rem] h-[1.25rem] stroke-title")
+                                          div.accordionItemContent
+                                             p
+                                                | You can set the list inside the accordion.
+                                             ul.list-disc.pl-4
+                                                li List item 
+                                                li List item 
+                                                li List item 
+                                       div.accordionItem.close
+                                          h4.accordionItemHeading.bg-gray-light.text-title.flex.justify-between Close Accordions
+                                             div.collapse-icon
+                                                +SVG_ICON("Arrow-Down-2","w-[1.25rem] h-[1.25rem] stroke-title")
+                                          div.accordionItemContent
+                                             p
+                                                | To expand, click on it.
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-col flex-wrap gap-2"&gt;
+                                       |    &lt;div class="accordionWrapper"&gt;
+                                       |     &lt;div class="accordionItem open"&gt;
+                                       |        &lt;h4 class="flex justify-between accordionItemHeading bg-gray-light text-title"&gt; Open Accordions &lt;/h4&gt;
+                                       |          &lt;div class="collapse-icon"&gt;
+                                       |            +SVG_ICON("Swap","w-[1.25rem] h-[1.25rem] stroke-white")
+                                       |          &lt;/div&gt;
+                                       |        &lt;div class="accordionItemContent"&gt;
+                                       |          &lt;p&gt; You can set accordion by default close using open class. &lt;/p&gt;
+                                       |          &lt;p&gt; This is simple accordion for open & close collapse. &lt;/p&gt;
+                                       |        &lt;/div&gt;
+                                       |     &lt;/div&gt;
+                                       |     &lt;div class="accordionItem close"&gt;
+                                       |        &lt;h4 class="accordionItemHeading bg-gray-light text-title"&gt; Open Item &lt;/h4&gt;
+                                       |          &lt;div class="collapse-icon"&gt;
+                                       |            +SVG_ICON("Swap","w-[1.25rem] h-[1.25rem] stroke-white")
+                                       |          &lt;/div&gt;
+                                       |        &lt;div class="accordionItemContent"&gt;
+                                       |          &lt;p&gt; You can set the list inside the accordion. &lt;/p&gt;
+                                       |          &lt;ul&gt; 
+                                       |            &lt;li&gt; List item &lt;/li&gt;
+                                       |            &lt;li&gt; List item &lt;/li&gt;
+                                       |            &lt;li&gt; List item &lt;/li&gt;
+                                       |          &lt;/ul&gt;
+                                       |        &lt;/div&gt;
+                                       |     &lt;/div&gt;
+                                       |     &lt;div class="accordionItem close"&gt;
+                                       |        &lt;h4 class="accordionItemHeading bg-gray-light text-title"&gt; Close Accordions &lt;/h4&gt;
+                                       |          &lt;div class="collapse-icon"&gt;
+                                       |            +SVG_ICON("Swap","w-[1.25rem] h-[1.25rem] stroke-white")
+                                       |          &lt;/div&gt;
+                                       |        &lt;div class="accordionItemContent"&gt;
+                                       |          &lt;p&gt; To expand, click on it. &lt;/p&gt;
+                                       |        &lt;/div&gt;
+                                       |     &lt;/div&gt;
+                                       |    &lt;/div&gt; 
+                                       |&lt;/div&gt;
+                  div.col-span-6(class="2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Flush Collapse
+                              p   Set background color for collapses using  
+                                 strong  .bg-* 
+                                 |   class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.flex-wrap.gap-2
+                                    div.accordionWrapper.flush
+                                       div.accordionItem.open
+                                          h4.accordionItemHeading Accordions
+                                          div.accordionItemContent
+                                             p
+                                                | You can set accordion by default close using open class.
+                                             p
+                                                | This is simple accordion for open & close collapse.
+                                       div.accordionItem.close
+                                          h4.accordionItemHeading Close Items
+                                          div.accordionItemContent
+                                             p
+                                                | You can set the list inside the accordion.
+                                             ul.list-disc.pl-4
+                                                li List item 
+                                                li List item 
+                                                li List item 
+                                       div.accordionItem.close
+                                          h4.accordionItemHeading Close Accordions
+                                          div.accordionItemContent
+                                             p
+                                                | To expand, click on it.
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-col flex-wrap gap-2"&gt;
+                                       |    &lt;div class="accordionWrapper"&gt;
+                                       |     &lt;div class="accordionItem open"&gt;
+                                       |        &lt;h4 class="accordionItemHeading"&gt; Accordions &lt;/h4&gt;
+                                       |        &lt;div class="accordionItemContent"&gt;
+                                       |          &lt;p&gt; You can set accordion by default close using open class. &lt;/p&gt;
+                                       |          &lt;p&gt; This is simple accordion for open & close collapse. &lt;/p&gt;
+                                       |        &lt;/div&gt;
+                                       |     &lt;/div&gt;
+                                       |     &lt;div class="accordionItem close"&gt;
+                                       |        &lt;h4 class="accordionItemHeading"&gt; Open Item &lt;/h4&gt;
+                                       |        &lt;div class="accordionItemContent"&gt;
+                                       |          &lt;p&gt; You can set the list inside the accordion. &lt;/p&gt;
+                                       |          &lt;ul&gt; 
+                                       |            &lt;li&gt; List item &lt;/li&gt;
+                                       |            &lt;li&gt; List item &lt;/li&gt;
+                                       |            &lt;li&gt; List item &lt;/li&gt;
+                                       |          &lt;/ul&gt;
+                                       |        &lt;/div&gt;
+                                       |     &lt;/div&gt;
+                                       |     &lt;div class="accordionItem close"&gt;
+                                       |        &lt;h4 class="accordionItemHeading"&gt; Close Accordions &lt;/h4&gt;
+                                       |        &lt;div class="accordionItemContent"&gt;
+                                       |          &lt;p&gt; To expand, click on it. &lt;/p&gt;
+                                       |        &lt;/div&gt;
+                                       |     &lt;/div&gt;
+                                       |    &lt;/div&gt; 
+                                       |&lt;/div&gt;
+                  div.col-span-6(class="2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Colored collapse
+                              p   Use different color to set different color accordion by using 
+                                 strong  .bg-* 
+                                 |   class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.flex-wrap.gap-2
+                                    div.accordionWrapper
+                                       div.accordionItem.close
+                                          h4.accordionItemHeading.bg-secondary Close Accordions
+                                          div.accordionItemContent
+                                             p
+                                                | You can set color for accordion with the help of bg-* class.
+                                             p
+                                                | This is simple accordion for open & close collapse.
+                                       div.accordionItem.open
+                                          h4.accordionItemHeading.bg-warning Open Items
+                                          div.accordionItemContent
+                                             p
+                                                | You can set different colors for accordion.
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-col flex-wrap gap-2"&gt;
+                                       |    &lt;div class="accordionWrapper"&gt;
+                                       |     &lt;div class="accordionItem close"&gt;
+                                       |        &lt;h4 class="accordionItemHeading bg-secondary"&gt; Close Accordions &lt;/h4&gt;
+                                       |        &lt;div class="accordionItemContent"&gt;
+                                       |          &lt;p&gt; You can set color for accordion with the help of bg-* class. &lt;/p&gt;
+                                       |          &lt;p&gt; This is simple accordion for open & close collapse. &lt;/p&gt;
+                                       |        &lt;/div&gt;
+                                       |     &lt;/div&gt;
+                                       |     &lt;div class="accordionItem close"&gt;
+                                       |        &lt;h4 class="accordionItemHeading bg-warning"&gt; Open Items &lt;/h4&gt;
+                                       |        &lt;div class="accordionItemContent"&gt;
+                                       |          &lt;p&gt; You can set different colors for accordion. &lt;/p&gt;
+                                       |        &lt;/div&gt;
+                                       |     &lt;/div&gt;
+                                       |    &lt;/div&gt; 
+                                       |&lt;/div&gt;
+                  div.col-span-6(class="2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Collapse With Arrow
+                              p   Set different color accordion with different arrow using 
+                                 strong  .bg-* 
+                                 |   class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.flex-wrap.gap-2
+                                    div.accordionWrapper
+                                       div.accordionItem.close
+                                          h4.accordionItemHeading.flex.justify-between.bg-primary Close Accordions
+                                             div.collapse-icon
+                                                +SVG_ICON("Arrow-Down-2","w-[1.25rem] h-[1.25rem] stroke-white")
+                                          div.accordionItemContent
+                                             p
+                                                | You can set color for arrow inside the accordion.
+                                             p
+                                                | This is simple accordion for arrow collapse.
+                                       div.accordionItem.open
+                                          h4.accordionItemHeading.flex.justify-between.bg-primary Close Items
+                                             div.collapse-icon
+                                                +SVG_ICON("Arrow-Down-2","w-[1.25rem] h-[1.25rem] stroke-white")
+                                          div.accordionItemContent
+                                             p
+                                                | You can set different arrow for accordion.
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-col flex-wrap gap-2"&gt;
+                                       |    &lt;div class="accordionWrapper"&gt;
+                                       |     &lt;div class="accordionItem close"&gt;
+                                       |        &lt;h4 class="flex justify-between accordionItemHeading bg-primary"&gt; Close Accordions &lt;/h4&gt;
+                                       |          &lt;div class="collapse-icon"&gt;
+                                       |            +SVG_ICON("Arrow-Down-2","w-[1.25rem] h-[1.25rem] stroke-white")
+                                       |          &lt;/div&gt;
+                                       |        &lt;div class="accordionItemContent"&gt;
+                                       |          &lt;p&gt; You can set color for arrow inside the accordion. &lt;/p&gt;
+                                       |          &lt;p&gt; This is simple accordion for arrow collapse. &lt;/p&gt;
+                                       |        &lt;/div&gt;
+                                       |     &lt;/div&gt;
+                                       |     &lt;div class="accordionItem open"&gt;
+                                       |        &lt;h4 class="accordionItemHeading bg-primary"&gt; Close Items &lt;/h4&gt;
+                                       |          &lt;div class="collapse-icon"&gt;
+                                       |            +SVG_ICON("Arrow-Down-2","w-[1.25rem] h-[1.25rem] stroke-white")
+                                       |          &lt;/div&gt;
+                                       |        &lt;div class="accordionItemContent"&gt;
+                                       |          &lt;p&gt; You can set different arrow for accordion. &lt;/p&gt;
+                                       |        &lt;/div&gt;
+                                       |     &lt;/div&gt;
+                                       |    &lt;/div&gt; 
+                                       |&lt;/div&gt;
+                  div.col-span-6(class="2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Collapse With Icon
+                              p   Use icons with collapse using  
+                                 strong  .close 
+                                 |   class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.flex-wrap.gap-2
+                                    div.accordionWrapper
+                                       div.accordionItem.open
+                                          h4.accordionItemHeading.flex.flex-row-reverse.justify-end.items-center.btn.border.border-primary(class="!text-primary") Open Accordions
+                                             div
+                                                +SVG_ICON("Swap","w-[1.25rem] h-[1.25rem] !stroke-primary mr-2 ")
+                                          div.accordionItemContent.border-1.border-primary
+                                             p
+                                                | You can set accordion by default close using close class with icon.
+                                             p
+                                                | This is simple accordion for icons collapse.
+                                       div.accordionItem.close
+                                          h4.accordionItemHeading.flex.flex-row-reverse.justify-end.items-center.btn.border.border-secondary(class="!text-secondary") Close Items
+                                             div
+                                                +SVG_ICON("Swap","w-[1.25rem] h-[1.25rem] !stroke-secondary mr-2 ")
+                                          div.accordionItemContent.border-1.border-secondary
+                                             p
+                                                | You can set the list inside the accordion.
+                                             ul.list-disc.pl-4
+                                                li List item 
+                                                li List item 
+                                                li List item 
+                                       div.accordionItem.close
+                                          h4.accordionItemHeading.flex.flex-row-reverse.justify-end.items-center.btn.border.border-info(class="!text-info") Close Accordions
+                                             div
+                                                +SVG_ICON("Swap","w-[1.25rem] h-[1.25rem] !stroke-info mr-2 ")
+                                          div.accordionItemContent.border-1.border-info
+                                             p
+                                                | To expand, click on it.
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-col flex-wrap gap-2"&gt;
+                                       |    &lt;div class="accordionWrapper"&gt;
+                                       |     &lt;div class="accordionItem open "&gt;
+                                       |        &lt;h4 class="accordionItemHeading flex flex-row-reverse justify-end items-center btn border border-primary !text-primary"&gt; Open Accordions &lt;/h4&gt;
+                                       |          &lt;div&gt;
+                                       |            +SVG_ICON("Swap","w-[1.25rem] h-[1.25rem] !stroke-white mr-2 ")
+                                       |          &lt;/div&gt;
+                                       |        &lt;div class="accordionItemContent border-1 border-primary"&gt;
+                                       |          &lt;p&gt; You can set accordion by default close using close class with icon. &lt;/p&gt;
+                                       |          &lt;p&gt; This is simple accordion for icons collapse. &lt;/p&gt;
+                                       |        &lt;/div&gt;
+                                       |     &lt;/div&gt;
+                                       |     &lt;div class="accordionItem close"&gt;
+                                       |        &lt;h4 class="accordionItemHeading flex flex-row-reverse justify-end items-center btn border border-secondary !text-secondary"&gt; Open Item &lt;/h4&gt;
+                                       |          &lt;div&gt;
+                                       |            +SVG_ICON("Swap","w-[1.25rem] h-[1.25rem] !stroke-white mr-2 ")
+                                       |          &lt;/div&gt;
+                                       |        &lt;div class="accordionItemContent border-1 border-secondary"&gt;
+                                       |          &lt;p&gt; You can set the list inside the accordion. &lt;/p&gt;
+                                       |          &lt;ul&gt; 
+                                       |            &lt;li&gt; List item &lt;/li&gt;
+                                       |            &lt;li&gt; List item &lt;/li&gt;
+                                       |            &lt;li&gt; List item &lt;/li&gt;
+                                       |          &lt;/ul&gt;
+                                       |        &lt;/div&gt;
+                                       |     &lt;/div&gt;
+                                       |     &lt;div class="accordionItem close"&gt;
+                                       |        &lt;h4 class="accordionItemHeading flex flex-row-reverse justify-end items-center btn border border-info !text-info"&gt; Close Accordions &lt;/h4&gt;
+                                       |          &lt;div&gt;
+                                       |            +SVG_ICON("Swap","w-[1.25rem] h-[1.25rem] stroke-white mr-2 ")
+                                       |          &lt;/div&gt;
+                                       |        &lt;div class="accordionItemContent border-1 border-info"&gt;
+                                       |          &lt;p&gt; To expand, click on it. &lt;/p&gt;
+                                       |        &lt;/div&gt;
+                                       |     &lt;/div&gt;
+                                       |    &lt;/div&gt; 
+                                       |&lt;/div&gt;
+                  div.col-span-6(class="2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Arrow Style 
+                              p   Use Different type of arrow with collapse  
+                                 strong  .close 
+                                 |   class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.flex-wrap.gap-2
+                                    div.accordionWrapper
+                                       div.accordionItem.open
+                                          h4.accordionItemHeading.flex.justify-between.bg-secondary Open Accordions
+                                             div.collapse-icon
+                                                +SVG_ICON("Swap","w-[1.25rem] h-[1.25rem] stroke-white")
+                                          div.accordionItemContent
+                                             p
+                                                | You can set different arrow with collapse.
+                                             p
+                                                | This is simple accordion with icons collapse.
+                                       div.accordionItem.close
+                                          h4.accordionItemHeading.flex.justify-between.bg-secondary Close Items
+                                             div.collapse-icon
+                                                +SVG_ICON("Arrow-Down-Circle","w-[1.25rem] h-[1.25rem] stroke-white")
+                                          div.accordionItemContent
+                                             p
+                                                | You can set the list inside the accordion.
+                                             ul.list-disc.pl-4
+                                                li List item 
+                                                li List item 
+                                                li List item 
+                                       div.accordionItem.close
+                                          h4.accordionItemHeading.flex.justify-between.bg-secondary Close Accordions
+                                             div.collapse-icon
+                                                +SVG_ICON("Arrow-Down-2","w-[1.25rem] h-[1.25rem] stroke-white")
+                                          div.accordionItemContent
+                                             p
+                                                | To expand, click on it.
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-col flex-wrap gap-2"&gt;
+                                       |    &lt;div class="accordionWrapper"&gt;
+                                       |     &lt;div class="accordionItem open"&gt;
+                                       |        &lt;h4 class="flex justify-between accordionItemHeading bg-secondary"&gt; Open Accordions &lt;/h4&gt;
+                                       |          &lt;div class="collapse-icon"&gt;
+                                       |            +SVG_ICON("Swap","w-[1.25rem] h-[1.25rem] stroke-white")
+                                       |          &lt;/div&gt;
+                                       |        &lt;div class="accordionItemContent"&gt;
+                                       |          &lt;p&gt; You can set different arrow with collapse &lt;/p&gt;
+                                       |          &lt;p&gt; This is simple accordion with icons collapse. &lt;/p&gt;
+                                       |        &lt;/div&gt;
+                                       |     &lt;/div&gt;
+                                       |     &lt;div class="accordionItem close"&gt;
+                                       |        &lt;h4 class="flex justify-between accordionItemHeading bg-secondary"&gt; Open Item &lt;/h4&gt;
+                                       |          &lt;div class="collapse-icon"&gt;
+                                       |             +SVG_ICON("Arrow-Down-Circle","w-[1.25rem] h-[1.25rem] stroke-white")
+                                       |          &lt;/div&gt;
+                                       |        &lt;div class="accordionItemContent"&gt;
+                                       |          &lt;p&gt; You can set the list inside the accordion. &lt;/p&gt;
+                                       |          &lt;ul&gt; 
+                                       |            &lt;li&gt; List item &lt;/li&gt;
+                                       |            &lt;li&gt; List item &lt;/li&gt;
+                                       |            &lt;li&gt; List item &lt;/li&gt;
+                                       |          &lt;/ul&gt;
+                                       |        &lt;/div&gt;
+                                       |     &lt;/div&gt;
+                                       |     &lt;div class="accordionItem close"&gt;
+                                       |        &lt;h4 class="flex justify-between accordionItemHeading bg-secondary"&gt; Close Accordions &lt;/h4&gt;
+                                       |          &lt;div&gt;
+                                       |            +SVG_ICON("Arrow-Down-2","w-[1.25rem] h-[1.25rem] stroke-white")
+                                       |          &lt;/div class="collapse-icon"&gt;
+                                       |        &lt;div class="accordionItemContent"&gt;
+                                       |          &lt;p&gt; To expand, click on it. &lt;/p&gt;
+                                       |        &lt;/div&gt;
+                                       |     &lt;/div&gt;
+                                       |    &lt;/div&gt; 
+                                       |&lt;/div&gt;
+
+
+            // Page Body End 
+            +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+      include ../../components/customizer
+
+   include ../../layout/footer-files

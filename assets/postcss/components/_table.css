@@ -1,0 +1,226 @@
+/*=====================
+    Table CSS
+  ==========================*/
+@layer components {
+  .table {
+    @apply w-full text-left;
+    thead {
+      @apply border-b border-border-light dark:border-border-dark;
+      tr {
+        th {
+          @apply py-[.6875rem] px-[.3438rem] pt-0 first:pl-0 last:pr-0 text-xs font-semibold capitalize text-content3 rtl:text-right;
+        }
+      }
+    }
+    tbody {
+      tr {
+        @apply border-b border-border-light dark:border-border-dark last:border-none;
+        td {
+          @apply 4xl:py-[.9375rem] py-[1.125rem] px-[.3438rem] first:pl-0 last:pr-0 text-xs font-semibold rtl:text-right;
+        }
+        &:last-child {
+          td {
+            @apply pb-0;
+          }
+          .select-items {
+            @apply bottom-[2.1875rem] top-unset;
+          }
+        }
+      }
+    }
+    &.table-sm {
+      thead {
+        tr {
+          th {
+            @apply py-[.6875rem] pt-0 px-[.3438rem];
+          }
+        }
+      }
+      tbody {
+        tr {
+          td {
+            @apply py-[.6875rem] px-[.3438rem] first:pl-0 last:pr-0;
+          }
+          &:last-child {
+            td {
+              @apply pb-0;
+            }
+          }
+        }
+      }
+    }
+    &.equal-space {
+      thead {
+        tr {
+          th {
+            @apply last:text-end first:pl-[.3438rem] last:pr-[.3438rem] rtl:text-right;
+          }
+        }
+      }
+      tbody {
+        tr {
+          td {
+            @apply last:text-end first:pl-[.3438rem] last:pr-[.3438rem] rtl:text-right; 
+          }
+        }
+      }
+      &.table-hover {
+        tbody {
+          tr {
+            &:last-child {
+              td {
+                @apply pb-[18px];
+              }
+            }
+          }
+        }
+      }
+      &.table-action {
+        tr {
+          th {
+            @apply pb-4;
+            &:last-child {
+              @apply text-end;
+            }
+          }
+        }
+        .plus-minus {
+          @apply max-w-max;
+          svg {
+            @apply h-6 w-6 p-1;
+          }
+        }
+        tbody {
+          tr {
+            &:last-child {
+              td {
+                .dropdown {
+                  &.dropdown-bottom {
+                    .dropdown-menu {
+                      @apply !bottom-full !top-unset !right-0 !left-unset;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .dropdown {
+            .dropdown-menu {
+              @apply p-2;
+            }
+          }
+        }
+        &.invoice {
+          thead {
+            tr {
+              th {
+                @apply last:text-start;
+                &:nth-child(2),
+                &:nth-child(4) {
+                  @apply 2md:hidden;
+                }
+              }
+            }
+          }
+          tbody {
+            tr {
+              &:last-child {
+                td {
+                  @apply pb-[18px];
+                }
+              }
+              td {
+                &:nth-child(2),
+                &:nth-child(4) {
+                  @apply 2md:hidden;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &.table-bordered {
+      thead {
+        tr {
+          th {
+            @apply px-[40px] pt-[14px] text-center;
+          }
+        }
+      }
+      tbody {
+        tr {
+          td {
+            @apply px-[40px] text-center;
+          }
+          &:last-child {
+            td {
+              @apply pb-[1.125rem];
+            }
+          }
+        }
+      }
+    }
+    &.table-Color {
+      thead {
+        tr {
+          @apply bg-primary-extralight;
+          th {
+            @apply text-dark;
+          }
+        }
+      }
+      tbody {
+        tr {
+          &:nth-child(odd) {
+            @apply bg-primary-light;
+          }
+          &:nth-child(even) {
+            @apply bg-primary-extralight text-dark;
+          }
+          &:last-child {
+            td {
+              @apply pb-[18px];
+            }
+          }
+        }
+      }
+    }
+    &.table-variant {
+      tbody {
+        tr {
+          &:nth-child(7n + 1) {
+            @apply bg-primary-extralight text-dark;
+          }
+          &:nth-child(7n + 2) {
+            @apply bg-secondary-light text-dark;
+          }
+          &:nth-child(7n + 3) {
+            @apply bg-info-light text-dark;
+          }
+          &:nth-child(7n + 4) {
+            @apply bg-success-light text-dark;
+          }
+          &:nth-child(7n + 5) {
+            @apply bg-warning-light text-dark;
+          }
+          &:nth-child(7n + 6) {
+            @apply bg-danger-light text-dark;
+          }
+          &:nth-child(7n + 7) {
+            @apply bg-light text-dark;
+          }
+        }
+      }
+      &.table-bordered {
+        thead {
+          tr {
+            th {
+              @apply pt-unset;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+/*=====================
+  Variables CSS
+==========================*/
+:root {
+  --primary: 51, 191, 191;
+  --secondary: 255, 97, 80;
+  --success: #63d5be;
+  --success-light: #e9faf3;
+  --info: #b52af6;
+  --info-light: #b52af64d;
+  --warning: #feb858;
+  --warning-light: #feb8584d;
+  --danger: #f1523d;
+  --danger-light: #f1523d4d;
+  --light: #d8ecff;
+  --dark: #44588f;
+  --body: #f4f4f4;
+  --gray-light: #f5f6f9;
+  --gray-extralight: #f5f6f9b0;
+  --dark-header: #10052d;
+  --dark-header2: #31322d;
+  --chart-dark: #072448;
+  --chart-dark-track: #072448;
+  /* Border Color */
+  --border-dark: #2c4050;
+  --border-light: #ededed;
+
+  /* Card Shadow */
+  --card-shadow: 0px 0px 50px rgba(0, 0, 0, 0.03);
+
+  /* Header Shadow */
+  --header-shadow: 0px 10px 23px rgba(0, 0, 0, 0.03);
+
+  /* footer Shadow */
+  --footer-shadow: 0px -10px 23px rgba(0, 0, 0, 0.03);
+
+  /* Sidebar Shadow */
+  --sidebar-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+
+  /* Font Colors  */
+  --title: #1f2f3e;
+  --content: #9fa6ab;
+  --content2: #8fa9c3;
+  --content3: #848789;
+  --content-white: #f7f7f7;
+  --linkedin: #2e7dbb;
+  --twitter: #29a8df;
+  --facebook: #3f5a9e;
+  --instagram1: #fdf497;
+  --instagram2: #fd5949;
+  --instagram3: #285aeb;
+}
+
+html[class="dark"] {
+  --White: #1f2f3e;
+  --black: #fff;
+  --light: #44588f;
+  --dark: #d8ecff;
+  --title: #ffffff
+}
+
+/* Unique Skin */
+.unique-skin {
+  --primary: 51, 191, 191; /*#33BFBF*/
+  --primary-light: rgba(var(--primary), 0.08);
+  --primary-extralight: rgba(var(--primary), 0.2);
+
+  --secondary: 255, 97, 80; /*#FF6150*/
+  --secondary-light: rgba(var(--secondary), 0.3);
+  --secondary-extralight: rgba(var(--secondary), 0.08);
+}

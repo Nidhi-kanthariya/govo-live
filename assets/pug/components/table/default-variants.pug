@@ -1,0 +1,16 @@
+//- ========================
+//- Default variant
+//- =======================
+
+table.table(class="table-bordered table-variant")
+    thead 
+        tr 
+            each head in DEFAULT_VARIANTS.header
+                th=  head
+    tbody
+        each bodyData,index in DEFAULT_VARIANTS.body
+            tr
+                td(class="min-w-[11.125rem]")=bodyData.id
+                td(class="min-w-[11.125rem]")=bodyData.name
+                td(class="min-w-[11.125rem]")=bodyData.position
+                td(class="min-w-[.625rem]")=bodyData.department  

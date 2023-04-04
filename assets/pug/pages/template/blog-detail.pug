@@ -1,0 +1,219 @@
+//- sidebar
+-var sidebar = true;
+
+//- feathet
+-var feather= true;
+
+//- customSelect
+-var customSelect= true;
+
+//- customizer
+-var customizer=true;
+
+//- Breadcrumbs
+-var pageTitle="Blog Detail";
+-var breadcrumb=['Blog','Blog Detail'];
+
+//- json
+include ../../data/all-data
+
+//- mixin
+include ../../mixin/mixin
+
+doctype html
+html(lang='en')  
+   include ../../layout/header-files 
+   body(dir="ltr" class="unique-skin") 
+      main.page-wrapper
+         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+            include ../../layout/header/header     
+            // Sidebar Start 
+            div.page-sidebar.sidebar-dark.unique-sidebar
+               include ../../layout/unique
+            // Sidebar End
+
+            // Page Body Start 
+            div.page-body
+               div.grid.grid-cols-12.gap-card-gap
+                  div.col-span-3(class="4xl:col-span-4 lg:col-span-12")
+                     div.card
+                        div.card-header.border-b-0
+                           div.search-box.relative
+                              input(class="rounded-full bg-gray-light w-full py-[.6875rem] pl-[1.5625rem] pr-[3.4375rem] text-xs font-semibold text-title" placeholder="Type to Search..." type="search")       
+                              +SVG_ICON("Search","w-6 h-6 stroke-title top-1/2 -translate-y-1/2 right-[1.5625rem] absolute")
+                        div.card-body.flex.flex-col.gap-card-space                                  
+                           div(class="p-3 border first:rounded-tl-none border-light rounded-5")
+                              h2(class="mb-4 font-bold") Categories
+                              ul.flex.flex-col.gap-2 
+                                 li.flex.items-center.justify-between(class="p-2 text-xs text-content rounded-5 group hover:bg-primary") 
+                                    a(href="blog-grid.html" class="group-hover:text-white")  Web designer Jobs
+                                    span(class="group-hover:text-white text-content") 39   
+                                 li.flex.items-center.justify-between(class="p-2 text-xs text-content rounded-5 group hover:bg-primary") 
+                                    a(href="blog-grid.html" class="group-hover:text-white")  Engineering Jobs 
+                                    span(class="group-hover:text-white text-content") 25
+                                 li.flex.items-center.justify-between(class="p-2 text-xs text-content rounded-5 group hover:bg-primary") 
+                                    a(href="blog-grid.html" class="group-hover:text-white")  Mainframe Jobs 
+                                    span(class="group-hover:text-white text-content") 15
+                                 li.flex.items-center.justify-between(class="p-2 text-xs text-content rounded-5 group hover:bg-primary") 
+                                    a(href="blog-grid.html" class="group-hover:text-white")  Legal Jobs  
+                                    span(class="group-hover:text-white text-content") 51
+                                 li.flex.items-center.justify-between(class="p-2 text-xs text-content rounded-5 group hover:bg-primary") 
+                                    a(href="blog-grid.html" class="group-hover:text-white")  Government Jobs 
+                                    span(class="group-hover:text-white text-content") 84
+                                 li.flex.items-center.justify-between(class="p-2 text-xs text-content rounded-5 group hover:bg-primary") 
+                                    a(href="blog-grid.html" class="group-hover:text-white") R & D Jobs 
+                                    span(class="group-hover:text-white text-content") 54
+                                 li.flex.items-center.justify-between(class="p-2 text-xs text-content rounded-5 group hover:bg-primary") 
+                                    a(href="blog-grid.html" class="group-hover:text-white") PSL Jobs 
+                                    span(class="group-hover:text-white text-content") 54 
+
+                           div(class="p-3 border first:rounded-tl-none border-light rounded-5")
+                              h2(class="mb-4 font-bold") Tags
+                              div(class="flex flex-wrap gap-3")
+                                 button.btn.btn-outline.btn-primary.btn-sm.text-primary #jobs 
+                                 button.btn.btn-outline.btn-secondary.btn-sm.text-secondary #business
+                                 button.btn.btn-outline.btn-success.btn-sm.text-success #work   
+                                 button.btn.btn-outline.btn-secondary.btn-sm.text-secondary #career
+                                 button.btn.btn-outline.btn-primary.btn-sm.text-primary #hiring 
+                                 button.btn.btn-outline.btn-secondary.btn-sm.text-secondary #photography
+                                 button.btn.btn-outline.btn-success.btn-sm.text-success #jobSearch
+
+                           div(class="p-3 border first:rounded-tl-none border-light rounded-5")
+                              h2(class="mb-4 font-bold") Latest Blogs
+                              ul.flex.flex-col.gap-1 
+                                 li(class=" pt-[.8125rem]  first:pt-0 first:mt-0 first:border-none")                                 
+                                    a.flex.items-center.gap-3(href="blog-grid.html" class="w-[calc(100%_-_0rem)] xl:gap-2")  
+                                       div.avatar  
+                                          div.w-10.rounded-full(class="xl:w-9") 
+                                             img(src='../../assets/images/avatar/25.jpg' alt='avatar')
+                                       div(class="w-[calc(100%_-_3.125rem)]")
+                                          h3.text-xs.font-bold.text-primary(class="leading-none lg:text-2xs") Angela R. Lear
+                                          span.text-content.mt-1.line-clamp-1 War taught me that not everything is glamorous.
+                                 li(class=" pt-[.8125rem]  first:pt-0 first:mt-0 first:border-none")                                 
+                                    a.flex.items-center.gap-3(href="blog-grid.html" class="w-[calc(100%_-_0rem)] xl:gap-2")  
+                                       div.avatar
+                                          div.w-10.rounded-full(class="xl:w-9")
+                                             img(src='../../assets/images/avatar/15.jpg' alt='avatar')
+                                       div(class="w-[calc(100%_-_3.125rem)]")
+                                          h3.text-xs.font-bold.text-primary(class="leading-none lg:text-2xs") Marjorie W. Martin
+                                          span.text-content.mt-1.line-clamp-1 My aim is to make the poor look rich and the rich look poor.
+                                 li(class=" pt-[.8125rem]  first:pt-0 first:mt-0 first:border-none")                                 
+                                    a.flex.items-center.gap-3(href="blog-grid.html" class="w-[calc(100%_-_0rem)] xl:gap-2")  
+                                       div.avatar
+                                          div.w-10.rounded-full(class="xl:w-9")
+                                             img(src='../../assets/images/avatar/6.jpg' alt='avatar')
+                                       div(class="w-[calc(100%_-_3.125rem)]")
+                                          h3.text-xs.font-bold.text-primary(class="leading-none lg:text-2xs") Russell P. Renfrew
+                                          span.text-content.mt-1.line-clamp-1 I think it would rob her of something.  
+                                 li(class=" pt-[.8125rem]  first:pt-0 first:mt-0 first:border-none")                                 
+                                    a.flex.items-center.gap-3(href="blog-grid.html" class="w-[calc(100%_-_0rem)] xl:gap-2")  
+                                       div.avatar
+                                          div.w-10.rounded-full(class="xl:w-9")
+                                             img(src='../../assets/images/avatar/27.jpg' alt='avatar')
+                                       div(class="w-[calc(100%_-_3.125rem)]")
+                                          h3.text-xs.font-bold.text-primary(class="leading-none lg:text-2xs") Kevin A. Ek
+                                          span.text-content.mt-1.line-clamp-1 My aim is to make the poor look rich and the rich look poor.  
+
+                           div(class="p-3 border first:rounded-tl-none border-light rounded-5")
+                              div(class="mb-[1.125rem]")
+                                 h2(class="mb-2 font-bold") Subscribe
+                                 p(class="text-xs text-content") "To get more detail for new types of blogs"
+                              form(class="m-0 theme-form")
+                                 input(type="email" id="Email" placeholder="Enter your email" Name="Email" required)
+                                 button(class="w-full lg:!w-auto p-2 !mb-0 text-white rounded bg-primary hover:drop-shadow-lg") Get Started
+
+                  div.col-span-9(class="4xl:col-span-8 lg:col-span-12")
+                     div.grid.grid-cols-12.gap-card-gap
+                        div.col-span-12(class="lg:col-span-12")
+                           div.card.p-6(class="sm:p-4")
+                              div.card-body
+                                 div.bg-white.rounded-lg
+                                    img.rounded-t-lg(src='../../assets/images/blog/blog-details.svg' alt='blog-details.svg')
+                                 h2.font-bold.mb-3
+                                    | Floyd L. Mitchell
+                                 p.text-content(class="md:line-clamp-2").mb-3 Machines to craft the Geminis DK. Not only his overall appearance was inspired, but his behavior and even the way he shrugs were also fed to the robot, and Scharfe also donated the strands of his own hair to be used in the Geminoid wig. This bot is very realistic as people tend to be mistaken for the person designed to look alike. The main purpose of this creation is to make the humanoid look completely like a human.
+                                 p.text-content(class="md:line-clamp-2").mb-3 Leather detail shoulder contrasting color contour stunning silhouette working peplum. Structured chic panels power party flattering ultimate trim back pencil silhouette perfect look. Wardrobe stylish fitted long sleeves pleats texture fabric mini neckline cobalt blue. Monochrome textures casual daily polo neck knitted floral effortless short sleeve.
+                                 p.text-content(class="md:line-clamp-2").mb-3 Functionality has limited the market for industrial and service robots (built to work in office and home environments). Toy robots, on the other hand, can entertain without performing tasks very reliably, and mechanical varieties have existed for thousands of years. (See automaton.) In the 1980s microprocessor-controlled toys appeared that could speak or move in response to sounds or light. More advanced ones in the 1990s recognized voices and words. In 1999 the Sony Corporation introduced a doglike robot
+                                 div.divider.w-full
+                                 div.flex.items-center.justify-between(class=" pt-[.8125rem] sm:flex-col sm:items-start")  
+                                    div.flex.items-center.gap-3(class="w-[calc(100%_-_0rem)] xl:gap-2")
+                                       a.avatar(href="blog-grid.html")
+                                          div.w-10.rounded-full(class="xl:w-9")
+                                             img(src='../../assets/images/avatar/17.jpg' alt='avatar')
+                                       div(class="w-[calc(100%_-_3.125rem)]")
+                                          h3.text-xs.font-bold.text-primary(class="leading-none lg:text-2xs") Rita Sines
+                                          span.text-content.block.mt-1(class="sm:line-clamp-1") War taught me that not everything is glamorous.
+                                    div.flex.justify-center.items-center.gap-2(class="text-content sm:ml-11")
+                                       i(data-feather="thumbs-up" class="w-[1.125rem] cursor-pointer")
+                                       span 120
+                                       i(data-feather="thumbs-down" class="w-[1.125rem] cursor-pointer")
+                                       span 26
+                                       i(data-feather="share-2" class="w-[1.125rem] cursor-pointer")
+
+                        div.col-span-12(class="xl3:col-span-12")
+                           div.card.p-6(class="sm:p-4")
+                              div.card-body
+                                 h2.font-bold.mb-3.text-2xl Comments
+                                 div.flex.flex-col.justify-center
+                                    div(class="pt-[1rem] first:pt-0 first:mt-0 first:border-none")                                 
+                                       div.flex.items-start.gap-3(class="w-[calc(100%_-_0rem)] xl:gap-2")  
+                                          a(href="blog-grid.html").avatar
+                                             div.w-10.rounded-full(class="xl:w-9")
+                                                img(src='../../assets/images/avatar/33.jpg' alt='avatar')
+                                          div(class="w-[calc(100%_-_3.125rem)]")
+                                             div(class="flex items-center justify-between gap-2 sm:flex-col sm:gap-0 sm:items-start")
+                                                h3.text-xs.font-bold.text-primary(class="leading-none lg:text-2xs lg:leading-none") Annie A. McKinney
+                                                span(class="text-[.75rem]").text-xs.text-content 1 hours ago
+                                             span.text-content.block.mt-1(class="md:line-clamp-2 sm:line-clamp-1") Best seller signature waist cut pockets cotton-mix navy blue tailoring elegant cashmere. Leather detail shoulder contrasting color contour stunning silhouette working peplum. Monochrome textures casual daily polo neck knitted floral effortless short sleeve.
+                                             div.flex.justify-start.items-center.gap-1
+                                                i(data-feather="corner-up-right" class="w-[.75rem]").text-content
+                                                span.text-content Replay
+                                    div(class="mt-3 divider")
+                                    div(class="pt-[1rem] ml-[3.125rem] sm:ml-unset first:pt-0 first:mt-0 first:border-none")                                 
+                                       div.flex.items-start.gap-3(class="w-[calc(100%_-_0rem)] xl:gap-2")  
+                                          a(href="blog-grid.html").avatar
+                                             div.w-10.rounded-full(class="xl:w-9")
+                                                img(src='../../assets/images/avatar/26.jpg' alt='avatar')
+                                          div(class="w-[calc(100%_-_3.125rem)]")
+                                             div(class="flex items-center justify-between gap-2 sm:flex-col sm:gap-0 sm:items-start")
+                                                h3.text-xs.font-bold.text-primary(class="leading-none lg:text-2xs lg:leading-none") Jim P. Jackson
+                                                span(class="text-[.75rem]").text-xs.text-content 2 months ago
+                                             span.text-content.block.mt-1(class="md:line-clamp-2 sm:line-clamp-1") My aim is to make the poor look rich and the rich look poor.
+                                             div.flex.justify-start.items-center.gap-1
+                                                i(data-feather="corner-up-right" class="w-[.75rem]").text-content
+                                                span.text-content Replay
+                                    div(class="mt-3 divider")
+                                    div(class="pt-[1rem] first:pt-0 first:mt-0 first:border-none")                   
+                                       div.flex.items-start.gap-3(class="w-[calc(100%_-_0rem)] xl:gap-2")  
+                                          a(href="blog-grid.html").avatar
+                                             div.w-10.rounded-full(class="xl:w-9")
+                                                img(src='../../assets/images/avatar/28.jpg' alt='avatar')
+                                          div(class="w-[calc(100%_-_3.125rem)]")
+                                             div(class="flex items-center justify-between gap-2 sm:flex-col sm:gap-0 sm:items-start")
+                                                h3.text-xs.font-bold.text-primary(class="leading-none lg:text-2xs lg:leading-none") Tonya D. Harris
+                                                span(class="text-[.75rem]").text-xs.text-content 3 days ago
+                                             span.text-content.block.mt-1(class="md:line-clamp-2 sm:line-clamp-1") Wow, is this a fake Facebook Post? Damn it looks so real! Use the settings to the left to begin - You can also add comments & emoticons.
+                                             div.flex.justify-start.items-center.gap-1
+                                                i(data-feather="corner-up-right" class="w-[.75rem]").text-content
+                                                span.text-content Replay
+
+                  div.col-span-12
+                     div.card.p-4
+                        div.card-body
+                           h2(class="mb-[1.25rem]").font-bold Leave Comment
+                           form(action="index.html" class="m-0 theme-form")
+                              div(class="flex gap-3 md:flex-col mb-[.75rem]")
+                                 div(class="w-full")
+                                    input(type="text" id="Name" class="rounded" placeholder="Enter your name.." name="name" required )
+                                 div(class="w-full")
+                                    input(type="Name" id="Name" class="rounded" placeholder="Enter your id.." name ="Email" required)
+                              input(type="text" id="Comment" class="rounded" placeholder="Enter your message.." name ="" required)   
+                              button(class="!w-auto p-2 text-white rounded bg-primary hover:drop-shadow-lg !mb-0") Post Comment
+
+
+
+            // Page Body End 
+            +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+      include ../../components/customizer
+
+   include ../../layout/footer-files

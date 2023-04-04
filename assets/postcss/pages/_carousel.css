@@ -1,0 +1,20 @@
+/*=====================
+    Carousel CSS
+ ==========================*/
+@layer components {
+    .carousel {
+        @apply flex overflow-scroll snap-mandatory scroll-smooth;
+    }
+
+    .carousel-vertical {
+        @apply flex flex-col overflow-y-scroll snap-y snap-mandatory mx-auto;
+    }
+
+    .carousel-scroll-hide {
+        @apply bg-transparent;
+
+        &::-webkit-scrollbar {
+            @apply w-0 h-0;
+        }
+    }
+}

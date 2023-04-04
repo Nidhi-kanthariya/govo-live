@@ -1,0 +1,572 @@
+//- sidebar
+-var sidebar = true;
+
+//- feathet
+-var feather= true;
+
+//- customSelect
+-var customSelect= true;
+
+//- customizer
+-var customizer=true;
+
+//- prism
+-var prism=true;
+
+//- Breadcrumbs
+-var pageTitle="Switch";
+-var breadcrumb=['Ui Kits','Switch'];    
+
+//- json
+include ../../data/all-data
+
+//- mixin
+include ../../mixin/mixin
+
+doctype html
+html(lang='en')  
+   include ../../layout/header-files 
+   body(dir="ltr" class="unique-skin") 
+      main.page-wrapper
+         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+            include ../../layout/header/header     
+            // Sidebar Start 
+            div.page-sidebar.sidebar-dark.unique-sidebar
+               include ../../layout/unique
+            // Sidebar End
+
+            // Page Body Start 
+            div.page-body
+               div.grid.grid-cols-12.gap-card-gap
+                  div.col-span-4(class="lg:col-span-6 md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Basic Switch
+                              p Here, the basic switch that you can use. 
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.gap-3
+                                    div.flex.justify-between.items-center
+                                       span.text-xs.font-medium.text-content Default Switch
+                                       label.inline-flex.relative.items-center.cursor-pointer
+                                          input.sr-only.peer(type='checkbox' checked="" )
+                                          span.w-11.h-6.bg-content.rounded-full.peer(class="peer-focus:outline-none peer-checked:after:translate-x-full peer-checked:after:content-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-light after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary")
+
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-col gap-3"&gt;
+                                       |   &lt;div class="flex items-center justify-between"&gt; 
+                                       |       &lt;span class="text-xs font-medium text-content"&gt;Default Switch&lt;/span&gt;
+                                       |       &lt;label class="relative inline-flex items-center cursor-pointer"&gt;
+                                       |           &lt;input type="checkbox" class="sr-only peer checked=""/&gt;
+                                       |           &lt;span class="w-11 h-6 bg-content rounded-full peer peer-focus:outline-none 
+                                       |               peer-checked:after:translate-x-full peer-checked:after:content-white after:content-[''] after:absolute after:top-[2px] 
+                                       |               after:left-[2px] after:bg-white after:border-gray-light after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"&gt;&lt;/span&gt;
+                                       |       &lt;/label&gt;
+                                       |   &lt;/div&gt; 
+                                       |&lt;/div&gt;
+
+                  div.col-span-4(class="lg:col-span-6 md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Switch Outline
+                              p Here, the basic switch outline that you can use. 
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.gap-3
+                                    div.flex.justify-between.items-center
+                                       span.text-xs.font-medium.text-content Outlined Switch
+                                       label.inline-flex.relative.items-center.cursor-pointer
+                                          input.sr-only.peer(type='checkbox' checked="" )
+                                          span.w-11.h-6.border-2.rounded-full.peer(class="peer-focus:outline-none peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-content after:border-gray-light after:border after:rounded-full after:h-5 after:w-5 after:transition-all  peer-checked:after:bg-secondary peer-checked:border-secondary")
+
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-col gap-3"&gt;
+                                       |   &lt;div class="flex items-center justify-between"&gt; 
+                                       |       &lt;span class="text-xs font-medium text-content"&gt;Default Switch&lt;/span&gt;
+                                       |       &lt;label class="relative inline-flex items-center cursor-pointer"&gt;
+                                       |           &lt;input type="checkbox" class="sr-only peer checked=""/&gt;
+                                       |           &lt;span class="w-11 h-6 border-2 rounded-full peer peer-focus:outline-none  
+                                       |               peer-checked:after:translate-x-full peer-checked:after:content-white after:content-[''] after:absolute after:top-[2px] 
+                                       |               after:left-[2px] after:bg-content after:border-gray-light after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"&gt;&lt;/span&gt;
+                                       |       &lt;/label&gt;
+                                       |   &lt;/div&gt; 
+                                       |&lt;/div&gt;
+
+                  div.col-span-4(class="lg:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Disable Switch
+                              p You can set disable switch using   
+                                 strong disable 
+                                 | class. 
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.gap-3
+                                    div.flex.justify-between.items-center
+                                       span.text-xs.font-medium.text-content Disable Switch
+                                       label.inline-flex.relative.items-center.cursor-pointer
+                                          input.sr-only.peer(type='checkbox' disabled="disabled")
+                                          span.w-11.h-6.border-2.rounded-full.peer(class="peer-focus:outline-none peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-content after:border-gray-light after:border after:rounded-full after:h-5 after:w-5 after:transition-all  peer-checked:after:bg-primary peer-checked:border-primary")
+
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-col gap-3"&gt;
+                                       |   &lt;div class="flex items-center justify-between"&gt; 
+                                       |       &lt;span class="text-xs font-medium text-content"&gt;Default Switch&lt;/span&gt;
+                                       |       &lt;label class="relative inline-flex items-center cursor-pointer"&gt;
+                                       |           &lt;input type="checkbox" class="sr-only peer disabled="disabled/&gt;
+                                       |           &lt;span class="w-11 h-6 border-2 rounded-full peer peer-focus:outline-none  
+                                       |               peer-checked:after:translate-x-full peer-checked:after:content-white after:content-[''] after:absolute after:top-[2px] 
+                                       |               after:left-[2px] after:bg-content after:border-gray-light after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"&gt;&lt;/span&gt;
+                                       |       &lt;/label&gt;
+                                       |   &lt;/div&gt; 
+                                       |&lt;/div&gt;
+
+                  div.col-span-6(class="md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Colored Switch
+                              p Here, the colored switch that you can use with 
+                                 strong bg-* 
+                                 | class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.gap-3
+                                    div.flex.justify-between.items-center
+                                       span.text-xs.font-medium.text-content Success color of the switch
+                                       label.inline-flex.relative.items-center.cursor-pointer
+                                          input.sr-only.peer(type='checkbox' checked="" )
+                                          span.w-11.h-6.bg-content.rounded-full.peer(class="peer-focus:outline-none peer-checked:after:translate-x-full peer-checked:after:content-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-light after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-success")
+                                    div.flex.justify-between.items-center
+                                       span.text-xs.font-medium.text-content Warning color of the switch
+                                       label.inline-flex.relative.items-center.cursor-pointer
+                                          input.sr-only.peer(type='checkbox')
+                                          span.w-11.h-6.bg-content.rounded-full.peer(class="peer-focus:outline-none peer-checked:after:translate-x-full peer-checked:after:content-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-light after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-warning")
+                                    div.flex.justify-between.items-center
+                                       span.text-xs.font-medium.text-content Info color of the switch
+                                       label.inline-flex.relative.items-center.cursor-pointer
+                                          input.sr-only.peer(type='checkbox' checked="" )
+                                          span.w-11.h-6.bg-content.rounded-full.peer(class="peer-focus:outline-none peer-checked:after:translate-x-full peer-checked:after:content-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-light after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-info")
+                                    div.flex.justify-between.items-center
+                                       span.text-xs.font-medium.text-content Danger color of the switch
+                                       label.inline-flex.relative.items-center.cursor-pointer
+                                          input.sr-only.peer(type='checkbox' )
+                                          span.w-11.h-6.bg-content.rounded-full.peer(class="peer-focus:outline-none peer-checked:after:translate-x-full peer-checked:after:content-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-light after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-danger")
+                                    div.flex.justify-between.items-center
+                                       span.text-xs.font-medium.text-content Primary color of the switch
+                                       label.inline-flex.relative.items-center.cursor-pointer
+                                          input.sr-only.peer(type='checkbox' checked="" )
+                                          span.w-11.h-6.bg-content.rounded-full.peer(class="peer-focus:outline-none peer-checked:after:translate-x-full peer-checked:after:content-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-light after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary")
+
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-col gap-3"&gt;
+                                       |   &lt;div class="flex items-center justify-between"&gt; 
+                                       |       &lt;span class="text-xs font-medium text-content"&gt;Success color of the switch&lt;/span&gt;
+                                       |       &lt;label class="relative inline-flex items-center cursor-pointer"&gt;
+                                       |           &lt;input type="checkbox" class="sr-only peer checked=""/&gt;
+                                       |           &lt;span class="w-11 h-6 bg-content rounded-full peer peer-focus:outline-none 
+                                       |               peer-checked:after:translate-x-full peer-checked:after:content-white after:content-[''] after:absolute after:top-[2px] 
+                                       |               after:left-[2px] after:bg-white after:border-gray-light after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-success"&gt;&lt;/span&gt;
+                                       |       &lt;/label&gt;
+                                       |   &lt;/div&gt; 
+                                       |   &lt;div class="flex items-center justify-between"&gt; 
+                                       |       &lt;span class="text-xs font-medium text-content"&gt;Warning color of the switch&lt;/span&gt;
+                                       |       &lt;label class="relative inline-flex items-center cursor-pointer"&gt;
+                                       |           &lt;input type="checkbox" class="sr-only peer/&gt;
+                                       |           &lt;span class="w-11 h-6 bg-content rounded-full peer peer-focus:outline-none 
+                                       |               peer-checked:after:translate-x-full peer-checked:after:content-white after:content-[''] after:absolute after:top-[2px] 
+                                       |               after:left-[2px] after:bg-white after:border-gray-light after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-warning"&gt;&lt;/span&gt;
+                                       |       &lt;/label&gt;
+                                       |   &lt;/div&gt;
+                                       |   &lt;div class="flex items-center justify-between"&gt; 
+                                       |       &lt;span class="text-xs font-medium text-content"&gt;Info color of the switch&lt;/span&gt;
+                                       |       &lt;label class="relative inline-flex items-center cursor-pointer"&gt;
+                                       |           &lt;input type="checkbox" class="sr-only peer checked=""/&gt;
+                                       |           &lt;span class="w-11 h-6 bg-content rounded-full peer peer-focus:outline-none 
+                                       |               peer-checked:after:translate-x-full peer-checked:after:content-white after:content-[''] after:absolute after:top-[2px] 
+                                       |               after:left-[2px] after:bg-white after:border-gray-light after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-info"&gt;&lt;/span&gt;
+                                       |       &lt;/label&gt;
+                                       |   &lt;/div&gt;
+                                       |   &lt;div class="flex items-center justify-between"&gt; 
+                                       |       &lt;span class="text-xs font-medium text-content"&gt;Danger color of the switch&lt;/span&gt;
+                                       |       &lt;label class="relative inline-flex items-center cursor-pointer"&gt;
+                                       |           &lt;input type="checkbox" class="sr-only peer/&gt;
+                                       |           &lt;span class="w-11 h-6 bg-content rounded-full peer peer-focus:outline-none 
+                                       |               peer-checked:after:translate-x-full peer-checked:after:content-white after:content-[''] after:absolute after:top-[2px] 
+                                       |               after:left-[2px] after:bg-white after:border-gray-light after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-danger"&gt;&lt;/span&gt;
+                                       |       &lt;/label&gt;
+                                       |   &lt;/div&gt;
+                                       |   &lt;div class="flex items-center justify-between"&gt; 
+                                       |       &lt;span class="text-xs font-medium text-content"&gt;Primary color of the switch&lt;/span&gt;
+                                       |       &lt;label class="relative inline-flex items-center cursor-pointer"&gt;
+                                       |           &lt;input type="checkbox" class="sr-only peer checked=""/&gt;
+                                       |           &lt;span class="w-11 h-6 bg-content rounded-full peer peer-focus:outline-none 
+                                       |               peer-checked:after:translate-x-full peer-checked:after:content-white after:content-[''] after:absolute after:top-[2px] 
+                                       |               after:left-[2px] after:bg-white after:border-gray-light after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"&gt;&lt;/span&gt;
+                                       |       &lt;/label&gt;
+                                       |   &lt;/div&gt;
+                                       |&lt;/div&gt;
+
+                  div.col-span-6(class="md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Colored Outline
+                              p Here, the colored switch that you can use with 
+                                 strong bg-* 
+                                 | class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.gap-3 
+                                    div.flex.justify-between.items-center
+                                       span.text-xs.font-medium.text-content Success color of the outline switch
+                                       label.inline-flex.relative.items-center.cursor-pointer
+                                          input.sr-only.peer(type='checkbox'  )
+                                          span.w-11.h-6.border-2.rounded-full.peer(class="peer-focus:outline-none peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-content after:border-gray-light after:border after:rounded-full after:h-5 after:w-5 after:transition-all  peer-checked:after:bg-success peer-checked:border-success")
+                                    div.flex.justify-between.items-center
+                                       span.text-xs.font-medium.text-content Warning color of the outline switch
+                                       label.inline-flex.relative.items-center.cursor-pointer
+                                          input.sr-only.peer(type='checkbox' checked="" )
+                                          span.w-11.h-6.border-2.rounded-full.peer(class="peer-focus:outline-none peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-content after:border-gray-light after:border after:rounded-full after:h-5 after:w-5 after:transition-all  peer-checked:after:bg-warning peer-checked:border-warning")
+                                    div.flex.justify-between.items-center
+                                       span.text-xs.font-medium.text-content Danger color of the outline switch
+                                       label.inline-flex.relative.items-center.cursor-pointer
+                                          input.sr-only.peer(type='checkbox' checked="" )
+                                          span.w-11.h-6.border-2.rounded-full.peer(class="peer-focus:outline-none peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-content after:border-gray-light after:border after:rounded-full after:h-5 after:w-5 after:transition-all  peer-checked:after:bg-danger peer-checked:border-danger")
+                                    div.flex.justify-between.items-center
+                                       span.text-xs.font-medium.text-content Info color of the outline switch
+                                       label.inline-flex.relative.items-center.cursor-pointer
+                                          input.sr-only.peer(type='checkbox' checked="" )
+                                          span.w-11.h-6.border-2.rounded-full.peer(class="peer-focus:outline-none peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-content after:border-gray-light after:border after:rounded-full after:h-5 after:w-5 after:transition-all  peer-checked:after:bg-info peer-checked:border-info")
+                                    div.flex.justify-between.items-center
+                                       span.text-xs.font-medium.text-content secondary color of the outline switch
+                                       label.inline-flex.relative.items-center.cursor-pointer
+                                          input.sr-only.peer(type='checkbox'  )
+                                          span.w-11.h-6.border-2.rounded-full.peer(class="peer-focus:outline-none peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-content after:border-gray-light after:border after:rounded-full after:h-5 after:w-5 after:transition-all  peer-checked:after:bg-secondary peer-checked:border-secondary")
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-col gap-3"&gt;
+                                       |   &lt;div class="flex items-center justify-between"&gt; 
+                                       |       &lt;span class="text-xs font-medium text-content"&gt;Success color of the switch&lt;/span&gt;
+                                       |       &lt;label class="relative inline-flex items-center cursor-pointer"&gt;
+                                       |           &lt;input type="checkbox" class="sr-only peer /&gt;
+                                       |           &lt;span class="w-11 h-6 bg-content rounded-full peer peer-focus:outline-none 
+                                       |               peer-checked:after:translate-x-full peer-checked:after:content-white after:content-[''] after:absolute after:top-[2px] 
+                                       |               after:left-[2px] after:bg-white after:border-gray-light after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:bg-info peer-checked:border-info"&gt;&lt;/span&gt;
+                                       |       &lt;/label&gt;
+                                       |   &lt;/div&gt; 
+                                       |   &lt;div class="flex items-center justify-between"&gt; 
+                                       |       &lt;span class="text-xs font-medium text-content"&gt;Warning color of the switch&lt;/span&gt;
+                                       |       &lt;label class="relative inline-flex items-center cursor-pointer"&gt;
+                                       |           &lt;input type="checkbox" class="sr-only peer checked=""/&gt;
+                                       |           &lt;span class="w-11 h-6 bg-content rounded-full peer peer-focus:outline-none 
+                                       |               peer-checked:after:translate-x-full peer-checked:after:content-white after:content-[''] after:absolute after:top-[2px] 
+                                       |               after:left-[2px] after:bg-white after:border-gray-light after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:bg-success peer-checked:border-success"&gt;&lt;/span&gt;
+                                       |       &lt;/label&gt;
+                                       |   &lt;/div&gt;
+                                       |   &lt;div class="flex items-center justify-between"&gt; 
+                                       |       &lt;span class="text-xs font-medium text-content"&gt;Info color of the switch&lt;/span&gt;
+                                       |       &lt;label class="relative inline-flex items-center cursor-pointer"&gt;
+                                       |           &lt;input type="checkbox" class="sr-only peer checked=""/&gt;
+                                       |           &lt;span class="w-11 h-6 bg-content rounded-full peer peer-focus:outline-none 
+                                       |               peer-checked:after:translate-x-full peer-checked:after:content-white after:content-[''] after:absolute after:top-[2px] 
+                                       |               after:left-[2px] after:bg-white after:border-gray-light after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:bg-secondary peer-checked:border-secondary"&gt;&lt;/span&gt;
+                                       |       &lt;/label&gt;
+                                       |   &lt;/div&gt;
+                                       |   &lt;div class="flex items-center justify-between"&gt; 
+                                       |       &lt;span class="text-xs font-medium text-content"&gt;Danger color of the switch&lt;/span&gt;
+                                       |       &lt;label class="relative inline-flex items-center cursor-pointer"&gt;
+                                       |           &lt;input type="checkbox" class="sr-only peer /&gt;
+                                       |           &lt;span class="w-11 h-6 bg-content rounded-full peer peer-focus:outline-none 
+                                       |               peer-checked:after:translate-x-full peer-checked:after:content-white after:content-[''] after:absolute after:top-[2px] 
+                                       |               after:left-[2px] after:bg-white after:border-gray-light after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:bg-warning peer-checked:border-warning"&gt;&lt;/span&gt;
+                                       |       &lt;/label&gt;
+                                       |   &lt;/div&gt;
+                                       |&lt;/div&gt;
+
+                  div.col-span-4(class="lg:col-span-6 md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Sizes
+                              p You can set switch sizes. 
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.gap-3
+                                    div.flex.justify-between.items-center
+                                       span.text-xs.font-medium.text-content Large size switch
+                                       label.inline-flex.relative.items-center.cursor-pointer
+                                          input.sr-only.peer(type='checkbox'  )
+                                          span.h-7.bg-content.rounded-full.peer(class="w-[3.30rem] peer-focus:outline-none peer-checked:after:translate-x-full peer-checked:after:content-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-light after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-primary")
+                                    div.flex.justify-between.items-center
+                                       span.text-xs.font-medium.text-content Medium size switch
+                                       label.inline-flex.relative.items-center.cursor-pointer
+                                          input.sr-only.peer(type='checkbox' checked="" )
+                                          span.w-11.h-6.bg-content.rounded-full.peer(class="peer-focus:outline-none peer-checked:after:translate-x-full peer-checked:after:content-white after:content-[''] after:absolute  after:top-[2px] after:left-[2px] after:bg-white after:border-gray-light after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary")
+                                    div.flex.justify-between.items-center
+                                       span.text-xs.font-medium.text-content Small size switch
+                                       label.inline-flex.relative.items-center.cursor-pointer
+                                          input.sr-only.peer(type='checkbox' checked="" )
+                                          span.w-9.h-5.bg-content.rounded-full.peer(class="peer-focus:outline-none peer-checked:after:translate-x-full peer-checked:after:content-white after:content-[''] after:absolute after:top-[2px] after:left-[2px]  after:bg-white after:border-gray-light after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary")
+                                    div.flex.justify-between.items-center
+                                       span.text-xs.font-medium.text-content Extra-Small size switch 
+                                       label.inline-flex.relative.items-center.cursor-pointer
+                                          input.sr-only.peer(type='checkbox' checked="" )
+                                          span.w-7.h-4.bg-content.rounded-full.peer(class="peer-focus:outline-none peer-checked:after:translate-x-full peer-checked:after:content-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-light after:border after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-primary")
+
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-col gap-3"&gt;
+                                       |   &lt;div class="flex items-center justify-between"&gt; 
+                                       |       &lt;span class="text-xs font-medium text-content"&gt;Large size switch&lt;/span&gt;
+                                       |       &lt;label class="relative inline-flex items-center cursor-pointer"&gt;
+                                       |           &lt;input type="checkbox" class="sr-only peer /&gt;
+                                       |           &lt;span class="w-[3.30rem] h-7 bg-content rounded-full peer peer-focus:outline-none 
+                                       |               peer-checked:after:translate-x-full peer-checked:after:content-white after:content-[''] after:absolute after:top-[2px] 
+                                       |               after:left-[2px] after:bg-white after:border-gray-light after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-primary"&gt;&lt;/span&gt;
+                                       |       &lt;/label&gt;
+                                       |   &lt;/div&gt; 
+                                       |   &lt;div class="flex items-center justify-between"&gt; 
+                                       |       &lt;span class="text-xs font-medium text-content"&gt;Medium size switch&lt;/span&gt;
+                                       |       &lt;label class="relative inline-flex items-center cursor-pointer"&gt;
+                                       |           &lt;input type="checkbox" class="sr-only peer checked=""/&gt;
+                                       |           &lt;span class="w-11 h-6 bg-content rounded-full peer peer-focus:outline-none 
+                                       |               peer-checked:after:translate-x-full peer-checked:after:content-white after:content-[''] after:absolute after:top-[2px] 
+                                       |               after:left-[2px] after:bg-white after:border-gray-light after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"&gt;&lt;/span&gt;
+                                       |       &lt;/label&gt;
+                                       |   &lt;/div&gt; 
+                                       |   &lt;div class="flex items-center justify-between"&gt; 
+                                       |       &lt;span class="text-xs font-medium text-content"&gt;Small size switch&lt;/span&gt;
+                                       |       &lt;label class="relative inline-flex items-center cursor-pointer"&gt;
+                                       |           &lt;input type="checkbox" class="sr-only peer checked=""/&gt;
+                                       |           &lt;span class="w-9 h-5 bg-content rounded-full peer peer-focus:outline-none 
+                                       |               peer-checked:after:translate-x-full peer-checked:after:content-white after:content-[''] after:absolute after:top-[2px] 
+                                       |               after:left-[2px] after:bg-white after:border-gray-light after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"&gt;&lt;/span&gt;
+                                       |       &lt;/label&gt;
+                                       |   &lt;/div&gt; 
+                                       |   &lt;div class="flex items-center justify-between"&gt; 
+                                       |       &lt;span class="text-xs font-medium text-content"&gt;Extra-Small size switch&lt;/span&gt;
+                                       |       &lt;label class="relative inline-flex items-center cursor-pointer"&gt;
+                                       |           &lt;input type="checkbox" class="sr-only peer checked=""/&gt;
+                                       |           &lt;span class="w-7 h-4 bg-content rounded-full peer peer-focus:outline-none 
+                                       |               peer-checked:after:translate-x-full peer-checked:after:content-white after:content-[''] after:absolute after:top-[2px] 
+                                       |               after:left-[2px] after:bg-white after:border-gray-light after:border after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-primary"&gt;&lt;/span&gt;
+                                       |       &lt;/label&gt;
+                                       |   &lt;/div&gt; 
+                                       |&lt;/div&gt;
+
+                  div.col-span-4(class="lg:col-span-6 md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Outlined Sizes
+                              p You can set outline switch sizes. 
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.gap-3
+                                    div.flex.justify-between.items-center
+                                       span.text-xs.font-medium.text-content Large outline switch
+                                       label.inline-flex.relative.items-center.cursor-pointer
+                                          input.sr-only.peer(type='checkbox' checked="" )
+                                          span.h-7.border-2.rounded-full.peer(class="w-[3.30rem] peer-focus:outline-none peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-content after:border-gray-light after:border after:rounded-full after:h-6 after:w-6 after:transition-all  peer-checked:after:bg-secondary peer-checked:border-secondary")
+                                    div.flex.justify-between.items-center
+                                       span.text-xs.font-medium.text-content Medium outline switch
+                                       label.inline-flex.relative.items-center.cursor-pointer
+                                          input.sr-only.peer(type='checkbox' )
+                                          span.w-11.h-6.border-2.rounded-full.peer(class="peer-focus:outline-none peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-content after:border-gray-light after:border after:rounded-full after:h-5 after:w-5 after:transition-all  peer-checked:after:bg-secondary peer-checked:border-secondary")
+                                    div.flex.justify-between.items-center
+                                       span.text-xs.font-medium.text-content Small outline switch
+                                       label.inline-flex.relative.items-center.cursor-pointer
+                                          input.sr-only.peer(type='checkbox' )
+                                          span.w-9.h-5.border-2.rounded-full.peer(class="peer-focus:outline-none peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-content after:border-gray-light after:border after:rounded-full after:h-4 after:w-4 after:transition-all  peer-checked:after:bg-secondary peer-checked:border-secondary")
+                                    div.flex.justify-between.items-center
+                                       span.text-xs.font-medium.text-content Extra-Small outline switch
+                                       label.inline-flex.relative.items-center.cursor-pointer
+                                          input.sr-only.peer(type='checkbox' checked="" )
+                                          span.w-7.h-4.border-2.rounded-full.peer(class="peer-focus:outline-none peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-content after:border-gray-light after:border after:rounded-full after:h-3 after:w-3 after:transition-all  peer-checked:after:bg-secondary peer-checked:border-secondary")
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-col gap-3"&gt;
+                                       |   &lt;div class="flex items-center justify-between"&gt; 
+                                       |       &lt;span class="text-xs font-medium text-content"&gt;Large outline switch&lt;/span&gt;
+                                       |       &lt;label class="relative inline-flex items-center cursor-pointer"&gt;
+                                       |           &lt;input type="checkbox" class="sr-only peer checked=""/&gt;
+                                       |           &lt;span class="w-[3.30rem] h-7 border-2 rounded-full peer peer-focus:outline-none 
+                                       |               peer-checked:after:translate-x-full peer-checked:after:content-white after:content-[''] after:absolute after:top-[2px] 
+                                       |               after:left-[2px] after:bg-content after:border-gray-light after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:after:bg-secondary peer-checked:border-secondary"&gt;&lt;/span&gt;
+                                       |       &lt;/label&gt;
+                                       |   &lt;/div&gt; 
+                                       |   &lt;div class="flex items-center justify-between"&gt; 
+                                       |       &lt;span class="text-xs font-medium text-content"&gt;Medium outline switch&lt;/span&gt;
+                                       |       &lt;label class="relative inline-flex items-center cursor-pointer"&gt;
+                                       |           &lt;input type="checkbox" class="sr-only peer /&gt;
+                                       |           &lt;span class="w-11 h-6 border-2 rounded-full peer peer-focus:outline-none 
+                                       |               peer-checked:after:translate-x-full peer-checked:after:content-white after:content-[''] after:absolute after:top-[2px] 
+                                       |               after:left-[2px] after:bg-content after:border-gray-light after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:bg-secondary peer-checked:border-secondary"&gt;&lt;/span&gt;
+                                       |       &lt;/label&gt;
+                                       |   &lt;/div&gt; 
+                                       |   &lt;div class="flex items-center justify-between"&gt; 
+                                       |       &lt;span class="text-xs font-medium text-content"&gt;Small outline switch&lt;/span&gt;
+                                       |       &lt;label class="relative inline-flex items-center cursor-pointer"&gt;
+                                       |           &lt;input type="checkbox" class="sr-only peer /&gt;
+                                       |           &lt;span class="w-9 h-5 border-2 rounded-full peer peer-focus:outline-none 
+                                       |               peer-checked:after:translate-x-full peer-checked:after:content-white after:content-[''] after:absolute after:top-[2px] 
+                                       |               after:left-[2px] after:bg-content after:border-gray-light after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:after:bg-secondary peer-checked:border-secondary"&gt;&lt;/span&gt;
+                                       |       &lt;/label&gt;
+                                       |   &lt;/div&gt; 
+                                       |   &lt;div class="flex items-center justify-between"&gt; 
+                                       |       &lt;span class="text-xs font-medium text-content"&gt;Extra-Small outline switch&lt;/span&gt;
+                                       |       &lt;label class="relative inline-flex items-center cursor-pointer"&gt;
+                                       |           &lt;input type="checkbox" class="sr-only peer checked=""/&gt;
+                                       |           &lt;span class="w-7 h-4 border-2 rounded-full peer peer-focus:outline-none 
+                                       |               peer-checked:after:translate-x-full peer-checked:after:content-white after:content-[''] after:absolute after:top-[2px] 
+                                       |               after:left-[2px] after:bg-content after:border-gray-light after:border after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:after:bg-secondary peer-checked:border-secondary"&gt;&lt;/span&gt;
+                                       |       &lt;/label&gt;
+                                       |   &lt;/div&gt; 
+                                       |&lt;/div&gt;
+
+                  div.col-span-4(class="lg:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Outlined style
+                              p You can set outline switch sizes. 
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.gap-3
+                                    div.flex.justify-between.items-center
+                                       span.text-xs.font-medium.text-content Large outline style
+                                       label.inline-flex.relative.items-center.cursor-pointer
+                                          input.sr-only.peer(type='checkbox' checked="" )
+                                          span.h-7.rounded-full.peer(class="w-[3.30rem] ring-2 ring-success peer-focus:ring-2 peer-focus:ring-success peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-success after:rounded-full after:h-6 after:w-6 after:transition-all ")
+                                    div.flex.justify-between.items-center
+                                       span.text-xs.font-medium.text-content Medium outline style
+                                       label.inline-flex.relative.items-center.cursor-pointer
+                                          input.sr-only.peer(type='checkbox'  )
+                                          span.w-11.h-6.rounded-full.peer(class="ring-2 ring-success peer-focus:ring-2 peer-focus:ring-success peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-success after:rounded-full after:h-5 after:w-5 after:transition-all")
+                                    div.flex.justify-between.items-center
+                                       span.text-xs.font-medium.text-content Small outline style
+                                       label.inline-flex.relative.items-center.cursor-pointer
+                                          input.sr-only.peer(type='checkbox' checked="" )
+                                          span.w-9.h-5.rounded-full.peer(class="ring-2 ring-success peer-focus:ring-2 peer-focus:ring-success peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-success after:rounded-full after:h-4 after:w-4 after:transition-all")
+                                    div.flex.justify-between.items-center
+                                       span.text-xs.font-medium.text-content Extra-Small outline style
+                                       label.inline-flex.relative.items-center.cursor-pointer
+                                          input.sr-only.peer(type='checkbox'  )
+                                          span.w-7.h-4.rounded-full.peer(class="ring-2 ring-success peer-focus:ring-2 peer-focus:ring-success peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-success after:rounded-full after:h-3 after:w-3 after:transition-all")
+
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-col gap-3"&gt;
+                                       |   &lt;div class="flex items-center justify-between"&gt; 
+                                       |       &lt;span class="text-xs font-medium text-content"&gt;Large outline style&lt;/span&gt;
+                                       |       &lt;label class="relative inline-flex items-center cursor-pointer"&gt;
+                                       |           &lt;input type="checkbox" class="sr-only peer checked=""/&gt;
+                                       |           &lt;span class="w-[3.30rem] h-7 rounded-full peer ring-2 ring-success peer-focus:ring-2 peer-focus:ring-success 
+                                       |                 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] 
+                                       |                 after:left-[2px] after:bg-success after:rounded-full after:h-6 after:w-6 after:transition-all"&gt;&lt;/span&gt;
+                                       |       &lt;/label&gt;
+                                       |   &lt;/div&gt; 
+                                       |   &lt;div class="flex items-center justify-between"&gt; 
+                                       |       &lt;span class="text-xs font-medium text-content"&gt;Medium outline style&lt;/span&gt;
+                                       |       &lt;label class="relative inline-flex items-center cursor-pointer"&gt;
+                                       |           &lt;input type="checkbox" class="sr-only peer /&gt;
+                                       |           &lt;span class="w-11 h-6 bg-content rounded-full peer ring-2 ring-success peer-focus:ring-2 peer-focus:ring-success 
+                                       |               peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] 
+                                       |               after:left-[2px] after:bg-success after:rounded-full after:h-5 after:w-5 after:transition-all"&gt;&lt;/span&gt;
+                                       |       &lt;/label&gt;
+                                       |   &lt;/div&gt; 
+                                       |   &lt;div class="flex items-center justify-between"&gt; 
+                                       |       &lt;span class="text-xs font-medium text-content"&gt;Small outline style&lt;/span&gt;
+                                       |       &lt;label class="relative inline-flex items-center cursor-pointer"&gt;
+                                       |           &lt;input type="checkbox" class="sr-only peer checked=""/&gt;
+                                       |           &lt;span class="w-9 h-5 bg-content rounded-full peer ring-2 ring-secondary peer-focus:ring-2 peer-focus:ring-success 
+                                       |               peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] 
+                                       |               after:left-[2px] after:bg-success after:rounded-full after:h-4 after:w-4 after:transition-all"&gt;&lt;/span&gt;
+                                       |       &lt;/label&gt;
+                                       |   &lt;/div&gt; 
+                                       |   &lt;div class="flex items-center justify-between"&gt; 
+                                       |       &lt;span class="text-xs font-medium text-content"&gt;Extra-Small outline style&lt;/span&gt;
+                                       |       &lt;label class="relative inline-flex items-center cursor-pointer"&gt;
+                                       |           &lt;input type="checkbox" class="sr-only peer /&gt;
+                                       |           &lt;span class="w-7 h-4 bg-content rounded-full peer ring-2 ring-danger peer-focus:ring-2 peer-focus:ring-success 
+                                       |               peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] 
+                                       |               after:left-[2px] after:bg-success after:rounded-full after:h-3 after:w-3 after:transition-all"&gt;&lt;/span&gt;
+                                       |       &lt;/label&gt;
+                                       |   &lt;/div&gt; 
+                                       |&lt;/div&gt;
+
+
+
+            // Page Body End 
+            +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+
+      include ../../components/customizer
+
+   include ../../layout/footer-files
+
+
+

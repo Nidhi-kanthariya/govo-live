@@ -1,0 +1,124 @@
+/*=====================
+    Breadcumb CSS
+  ==========================*/
+@layer components {
+  .breadcrumb {
+    nav {
+      @apply w-full text-primary;
+      .breadcrumb-list {
+        @apply flex items-center;
+        .breadcrumb-items {
+          @apply items-center flex font-semibold whitespace-nowrap;
+          a {
+            @apply h-7 flex items-center justify-center relative bg-gray-extralight w-[1.875rem] ;
+            svg {
+              @apply w-4 h-4 stroke-primary;
+            }
+          }
+          &.active {
+            @apply font-light;
+          }
+        }
+      }
+    }
+    &-style-2 {
+      nav {
+        @apply text-white;
+        .breadcrumb-list {
+          .breadcrumb-items {
+            @apply whitespace-nowrap;
+            a {
+              @apply bg-white-light;
+              svg {
+                @apply stroke-white;
+              }
+            }
+          }
+        }
+      }
+    }
+    &-style-white {
+      nav {
+        @apply text-title;
+        .breadcrumb-list {
+          .breadcrumb-items {
+            @apply whitespace-nowrap;
+            a {
+              @apply bg-white;
+              svg {
+                @apply stroke-primary;
+              }
+            }
+          }
+        }
+      }
+    }
+    &-style-3{
+      nav{
+        @apply w-full text-success;
+        .breadcrumb-list{
+          .breadcrumb-items{
+            @apply whitespace-nowrap;
+            a{
+              @apply font-extrabold bg-transparent; 
+            }
+            &.active{
+              @apply font-light;
+            }
+          }
+        }
+      }
+    }
+    &-style-4{
+      nav{
+        @apply w-full text-title;
+        .breadcrumb-list {
+          .breadcrumb-items {
+            @apply font-medium whitespace-nowrap;
+            a {
+              @apply bg-gray-light border;
+              svg {
+                @apply stroke-title;
+              }
+            }
+          }
+        }
+      }
+    }
+    &-style-5{
+      nav{
+        @apply text-secondary;
+        .breadcrumb-list{
+          @apply gap-2;
+          .breadcrumb-items{
+            @apply whitespace-nowrap;
+            a{
+              @apply bg-transparent w-auto;
+            }
+          }
+          li{
+            @apply relative;
+            small{
+              &:before{
+                @apply absolute content-[''] w-2 h-2 bg-secondary -top-1 left-1  rounded-full 2sm:left-0;
+              }
+            }
+          }
+        }
+      }
+    }
+    &-style-6{
+      nav{
+        @apply w-full text-info;
+        .breadcrumb-list{
+          .breadcrumb-items{
+            @apply flex items-center whitespace-nowrap;
+            a {
+            @apply flex items-center justify-center bg-transparent w-[1.875rem];
+          }
+          }
+        }
+      }
+    }
+  }
+}

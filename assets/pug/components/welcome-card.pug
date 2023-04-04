@@ -1,0 +1,23 @@
+// Welcome Card 
+div.card(class="p-card-space before:!pt-0 bg-primary relative welcome-card-main h-full gap-0 common-animate-main")  
+  div
+    h4.flex.items-center.gap-2(class="justify-between") 
+      span.flex.items-center.gap-2(class="text-3xl font-semibold text-white 3sm:text-lg 5xl:text-2xl ") Hello, Amirreza
+        img(class="w-[22px] h-[22px]" src="../../assets/images/waving-hand.png" alt="waving-hand")
+      div.dropdown
+        button(class="before:absolute flex items-center justify-center cursor-pointer before:inset-0 before:bg-white before:opacity-[34%] before:rounded-full p-[5px]") 
+          +SVG_ICON("Setting","w-[18px] h-[18px] stroke-white")   
+        div.dropdown-menu(class="!w-36 right-0 !top-11")
+          ul 
+            li
+              a(href="profile.html") Profile Setting  
+            li
+              a(href="email.html") Message
+            li
+              a(href="todo-app.html") Taskboard  
+    p(class="text-xs font-semibold text-content-white leading-[22px] max-w-[285px] mt-1") Welcome to the Govo family! we are glad that you are visite this dashboard.
+    button(class="mt-6 sm:mt-4 rounded-5 py-[8px] px-4 bg-white text-xs font-bold text-title ") What New!
+  div(class="bg-img")
+    img(src="../../assets/images/svg/1.svg" alt="welcome-image" class="img-fluid welcome-card-animate animate-ping animate__animated animate__infinite animate__shakeY animate__slower")   
+
+

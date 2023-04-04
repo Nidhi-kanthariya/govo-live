@@ -1,0 +1,101 @@
+//- sidebar
+-var sidebar = true;
+
+//- feather
+-var feather= true;
+
+//- fontawesome
+-var fontAwesome=true;
+
+//- custom select
+-var customSelect = true;
+
+//- ecommerce
+-var ecommerce = true;
+
+//- swiper-slider
+-var swiper=true;
+
+//- customizer 
+-var customizer = true;
+
+//- calendar_page 
+-var calendar_page = true;
+
+//- Breadcrumbs
+-var pageTitle="Calendar";
+-var breadcrumb=['Calendar'];
+
+//- all JSON  
+include ../../data/all-data
+
+//- all mixin   
+include ../../mixin/mixin
+
+doctype html
+html(lang='en')
+   include ../../layout/header-files
+   body(dir="ltr" class="unique-skin")
+      main.page-wrapper
+         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+            include ../../layout/header/header     
+            // Sidebar Start 
+            div.page-sidebar.sidebar-dark.unique-sidebar
+               include ../../layout/unique 
+            // Sidebar End 
+
+            // Page Body Start
+            div.page-body 
+               div.grid.grid-cols-12.gap-card
+                  div.card.col-span-12
+                     div.card-body 
+                        #wrap.calander-main
+                           #external-events.calander-sidebar
+                              h4.mb-4.text-title.font-bold New Schedule
+                              #external-events-list
+                                 .fc-event.fc-h-event.fc-daygrid-event.fc-daygrid-block-event.bg-primary-light.p-3.text-sm.mb-3.border-0
+                                    .fc-event-main(class="!text-primary") Meeting
+                                 .fc-event.fc-h-event.fc-daygrid-event.fc-daygrid-block-event.bg-secondary-extralight.p-3.text-sm.mb-3.border-0
+                                    .fc-event-main(class="!text-secondary") Event
+                                 .fc-event.fc-h-event.fc-daygrid-event.fc-daygrid-block-event.bg-success-light.p-3.text-sm.mb-3.border-0
+                                    .fc-event-main(class="!text-success") Birthday Party
+                                 .fc-event.fc-h-event.fc-daygrid-event.fc-daygrid-block-event.bg-warning-light.p-3.text-sm.mb-3.border-0
+                                    .fc-event-main(class="!text-warning") Holiday
+                              div.flex.items-center.gap-2
+                                 label.checkbox.checkbox-sm.cursor-pointer  
+                                    input#drop-remove(type='checkbox' class="peer") 
+                                    div.checkbox-indicator(class="peer-checked:!bg-primary !border-primary")  
+                                       i(data-feather="check")
+                                 p(for='drop-remove') Remove After Drop
+                              h5.mt-5.mb-4.text-title.font-semibold My Schedule
+                              div.flex.flex-col.gap-4
+                                 div.card.shadow-sm.border-2.border-light(class="w-[230px] 3sm:w-[220px]") 
+                                    div.card-body.flex.flex-col.gap-4
+                                       div
+                                          h4.text-xs.font-semibold Design Review 
+                                          p.text-content3.font-semibold 10.00 AM  - 11.00 AM
+                                       div.mt.flex.gap-2.items-center
+                                          button.btn.bg-primary-light.text-primary.text-2xs.font-semibold.rounded-none(class="p-2 xl:text-3xs") Online Meeting
+                                          button.btn.bg-secondary-extralight.text-secondary.text-2xs.font-semibold.rounded-none(class="p-2") Urgent
+                                    div.card-footer 
+                                       div.flex.justify-between.items-center(class="pt-4 border-t border-dashed border-border-light")
+                                          div.flex.items-center.gap-2.w-full
+                                             div.avatar.rounded-full(class="w-10 h-10")
+                                                img(src=`../../assets/images/user-app/15.png` alt=`user`)                                                      
+                                             div(class="w-[calc(100%_-_52px)] grid") 
+                                                p.text-title(class="text-xs font-semibold truncate") Tiana Baumbach
+                                                a(href="javascript:void(0)").text-primary(class="font-semibold truncate text-2xs") View Client Profile
+                                          a(href="javascript:void(0)")
+                                             +SVG_ICON("Arrow-Right-Circle", "w-6 h-6 stroke-primary group-hover:stroke-white")     
+                           #calendar-wrap.calander-body
+                              #calendar
+
+            // Page Body End  
+            +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+         include ../../components/customizer                               
+   include ../../layout/footer-files
+
+
+
+
+

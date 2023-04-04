@@ -1,0 +1,268 @@
+//- sidebar
+-var sidebar = true;
+
+//- feathet
+-var feather= true;
+
+//- customSelect
+-var customSelect= true;
+
+//- customizer
+-var customizer=true;
+
+//- prism
+-var prism=true;
+
+//- Breadcrumbs
+-var pageTitle="Tooltip";
+-var breadcrumb=['Ui Kits','Tooltip'];
+
+//- json
+include ../../data/all-data
+
+//- mixin
+include ../../mixin/mixin
+
+doctype html
+html(lang='en')  
+   include ../../layout/header-files 
+   body(dir="ltr" class="unique-skin") 
+      main.page-wrapper
+         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+            include ../../layout/header/header     
+            // Sidebar Start
+            div.page-sidebar.sidebar-dark.unique-sidebar
+               include ../../layout/unique
+            // Sidebar End 
+
+            // Page Body Start 
+            div.page-body
+               div.grid.grid-cols-12.gap-card-gap
+                  div.col-span-6(class="2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Default Tooltip
+                              p Use tooltip in anywhere in code and it's default position is top.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.flex-wrap.gap-2
+                                    div.flex.items-center.flex-wrap.gap-2
+                                       button.btn.btn-primary.text-white(data-tw-tooltip="Always top") Default Top
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-col flex-wrap gap-2"&gt;
+                                       |   &lt;div class="flex flex-wrap items-center gap-2"&gt;
+                                       |       &lt;button class="text-white btn btn-primary" data-tw-tooltip="Always top"&gt;Default Top&lt;/button&gt;
+                                       |   &lt;/div&gt; 
+                                       |&lt;/div&gt;
+                  div.col-span-6(class="2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Focused Tooltip
+                              p Set the focus tooltip.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.flex-wrap.gap-2
+                                    div.flex.items-center.flex-wrap.gap-2
+                                       button.btn.bg-primary-light(data-tw-tooltip="Focused" class="hover:bg-primary hover:text-white focus:bg-primary focus:border-primary focus:text-white") Focused
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-col flex-wrap gap-2"&gt;
+                                       |   &lt;div class="flex flex-wrap items-center gap-2"&gt;
+                                       |       &lt;button class="btn bg-primary-light" data-tw-tooltip="Focused" class="hover:bg-primary hover:text-white focus:bg-primary focus:border-primary focus:text-white&gt;Focused&lt;/button&gt;
+                                       |   &lt;/div&gt; 
+                                       |&lt;/div&gt;
+                  div.col-span-6(class="2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Tooltip Position
+                              p Set the position of tooltips with the help of  
+                                 strong  top / left / right / bottom
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.flex-wrap.gap-2
+                                    div.flex.items-center.flex-wrap.gap-2
+                                       button.btn.btn-primary.text-white(data-tw-tooltip="Top tooltip" data-flow="top") Top Position
+                                       button.btn.btn-secondary.text-white(data-tw-tooltip="Left tooltip" data-flow="left") Left Position
+                                       button.btn.btn-info.text-white(data-tw-tooltip="Right tooltip" data-flow="right") Right Position
+                                       button.btn.btn-warning.text-white(data-tw-tooltip="Bottom tooltip" data-flow="bottom") Bottom Position
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-col flex-wrap gap-2"&gt;
+                                       |   &lt;div class="flex flex-wrap items-center gap-2"&gt;
+                                       |       &lt;button class="text-white btn btn-primary" data-tw-tooltip="Top tooltip" data-flow="top"&gt;Top Position&lt;/button&gt;
+                                       |       &lt;button class="text-white btn btn-secondary" data-tw-tooltip="Left tooltip" data-flow="left"&gt;Left Position&lt;/button&gt;
+                                       |       &lt;button class="text-white btn btn-info" data-tw-tooltip="Right tooltip" data-flow="right"&gt;Right Position&lt;/button&gt;
+                                       |       &lt;button class="text-white btn btn-warning" data-tw-tooltip="Bottom tooltip" data-flow="bottom"&gt;Bottom Position&lt;/button&gt;
+                                       |   &lt;/div&gt; 
+                                       |&lt;/div&gt;; 
+                  div.col-span-6(class="2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Tooltip Outline
+                              p Set the position of tooltips using 
+                                 strong  up / left / right / bottom 
+                                 |   with the outline.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.flex-wrap.gap-2
+                                    div.flex.items-center.flex-wrap.gap-2
+                                       button.btn.border.border-primary(data-tw-tooltip="Top tooltip" data-flow="top") Top Tooltip
+                                       button.btn.border.border-primary(data-tw-tooltip="Left tooltip" data-flow="left") Left Tooltip
+                                       button.btn.border.border-primary(data-tw-tooltip="Right tooltip" data-flow="right") Right Tooltip
+                                       button.btn.border.border-primary(data-tw-tooltip="Bottom tooltip" data-flow="bottom") Bottom Tooltip
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-col flex-wrap gap-2"&gt;
+                                       |   &lt;div class="flex flex-wrap items-center gap-2"&gt;
+                                       |       &lt;button class="border btn border-primary" data-tw-tooltip="Top tooltip" data-flow="top"&gt;Top Tooltip&lt;/button&gt;
+                                       |       &lt;button class="border btn border-primary" data-tw-tooltip="Left tooltip" data-flow="left"&gt;Left Tooltip&lt;/button&gt;
+                                       |       &lt;button class="border btn border-primary" data-tw-tooltip="Right tooltip" data-flow="right"&gt;Right Tooltip&lt;/button&gt;
+                                       |       &lt;button class="border btn border-primary" data-tw-tooltip="Bottom tooltip" data-flow="bottom"&gt;Bottom Tooltip&lt;/button&gt;
+                                       |   &lt;/div&gt; 
+                                       |&lt;/div&gt;; 
+                  div.col-span-6(class="2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Filled Tooltip
+                              p Set the position of tooltips with the halp of  
+                                 strong  up / left / right / bottom 
+                                 |   with focus.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.flex-wrap.gap-2
+                                    div.flex.items-center.flex-wrap.gap-2
+                                       button.btn.btn-outline.btn-primary(data-tw-tooltip="Top tooltip" data-flow="top") Top Tooltip
+                                       button.btn.btn-outline.btn-primary(data-tw-tooltip="Left tooltip" data-flow="left") Left Tooltip
+                                       button.btn.btn-outline.btn-primary(data-tw-tooltip="Right tooltip" data-flow="right") Right Tooltip
+                                       button.btn.btn-outline.btn-primary(data-tw-tooltip="Bottom tooltip" data-flow="bottom") Bottom Tooltip
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-col flex-wrap gap-2"&gt;
+                                       |   &lt;div class="flex flex-wrap items-center gap-2"&gt;
+                                       |       &lt;button class="btn btn-outline btn-primary" data-tw-tooltip="Top tooltip" data-flow="top"&gt;Top Tooltip&lt;/button&gt;
+                                       |       &lt;button class="btn btn-outline btn-primary" data-tw-tooltip="Left tooltip" data-flow="left"&gt;Left Tooltip&lt;/button&gt;
+                                       |       &lt;button class="btn btn-outline btn-primary" data-tw-tooltip="Right tooltip" data-flow="right"&gt;Right Tooltip&lt;/button&gt;
+                                       |       &lt;button class="btn btn-outline btn-primary" data-tw-tooltip="Bottom tooltip" data-flow="bottom"&gt;Bottom Tooltip&lt;/button&gt;
+                                       |   &lt;/div&gt; 
+                                       |&lt;/div&gt;;
+                  div.col-span-6(class="2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Colored Tooltip
+                              p Using 
+                                 strong  .btn- *
+                                 | class set the colored tooltips.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.flex-wrap.gap-2
+                                    div.flex.items-center.flex-wrap.gap-2
+                                       button.btn.btn-primary.text-white(data-tw-tooltip="Primary") Primary
+                                       button.btn.btn-secondary.text-white(data-tw-tooltip="Secondary") Secondary
+                                       button.btn.btn-info.text-white(data-tw-tooltip="Info") Info
+                                       button.btn.btn-success.text-white(data-tw-tooltip="Success") Success
+                                       button.btn.btn-warning.text-white(data-tw-tooltip="Warning") Warning
+                                       button.btn.btn-danger.text-white(data-tw-tooltip="Danger") Danger
+                                       button.btn.btn-light.text-title(data-tw-tooltip="Light") Light
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-col flex-wrap gap-2"&gt;
+                                       |   &lt;div class="flex flex-wrap items-center gap-2"&gt;
+                                       |       &lt;button class="text-white btn btn-primary" data-tw-tooltip="Primary"&gt;Primary&lt;/button&gt;
+                                       |       &lt;button class="text-white btn btn-secondary" data-tw-tooltip="Secondary"&gt;Secondary&lt;/button&gt;
+                                       |       &lt;button class="text-white btn btn-info" data-tw-tooltip="Info"&gt;Info&lt;/button&gt;
+                                       |       &lt;button class="text-white btn btn-success" data-tw-tooltip="Success"&gt;Success&lt;/button&gt;
+                                       |       &lt;button class="text-white btn btn-warning" data-tw-tooltip="Warning"&gt;Warning&lt;/button&gt;
+                                       |       &lt;button class="text-white btn btn-danger" data-tw-tooltip="Danger"&gt;Danger&lt;/button&gt;
+                                       |       &lt;button class="btn btn-light text-title" data-tw-tooltip="Light"&gt;Light&lt;/button&gt;
+                                       |   &lt;/div&gt; 
+                                       |&lt;/div&gt;;
+                  div.col-span-12
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Inline Tooltip Content
+                              p Set tooltip inside the content.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.flex-wrap.gap-2
+                                    div.flex.items-center.flex-wrap.gap-2
+                                       p   Here, is some content about tooltips that you can set the  
+                                          a(href="javascript:void(0)" class="font-semibold text-secondary" data-tw-tooltip="link") tooltip
+                                          |   inside the content with help of tooltip and also you can add 
+                                          button.btn.btn-xs.bg-primary-light.font-semibold.text-title(data-tw-tooltip="link") button
+                                          |   . Tooltips helps you to add more and more content. A tooltip is often used to specify extra information about something when the user moves the mouse pointer over an element
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-col flex-wrap gap-2"&gt;
+                                       |    &lt;div class="flex flex-wrap items-center gap-2"&gt;
+                                       |        &lt;p&gt;Here, is some content about tooltips that you can set the 
+                                       |            &lt;a href="javascript:void(0)" class="font-semibold text-secondary" data-tw-tooltip="link"&gt; tooltip &lt;/a&gt;
+                                       |           inside the content with help of tooltip and also you can add  
+                                       |           &lt;button class="font-semibold btn btn-xs bg-primary-light text-title" data-tw-tooltip="link"&gt; Button &lt;button&gt;
+                                       |           . Tooltips helps you to add more and more content. A tooltip is often used to specify extra information about something when the user moves the mouse pointer over an element
+                                       |        &lt;/p&gt;
+                                       |    &lt;/div&gt; 
+                                       |&lt;/div&gt;
+
+
+            // Page Body End
+            +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+      include ../../components/customizer
+
+   include ../../layout/footer-files

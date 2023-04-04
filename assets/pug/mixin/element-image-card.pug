@@ -1,0 +1,41 @@
+
+
+//- =====================
+//-  Image Card  
+//- =====================
+mixin image-card(data, sideType,link) 
+    ul  
+        each dataItem, index in data
+            li.group.flex.items-center.group(class="justify-between gap-3 first:pt-0 last:pb-0 first:border-none py-[13px] border-t border-border-light")  
+                div.flex.items-center(class="gap-[10px] flex-[1_1_0]")
+                    div.rounded-5.overflow-hidden(class="w-[60px] 5xl:w-[59px] lg:w-[51px] 2sm:w-[48px]")
+                        img.w-full.h-auto.object-cover(src=`../../assets/images/${dataItem.image}` alt="event" )  
+                    div(class="flex-1")  
+                        if(link == "link")
+                            a(href=`${dataItem.url}`)
+                                h4.transition-all(class="text-xs text-title font-semibold line-clamp-1 group-hover:text-primary")= dataItem.title 
+                        if(link !== "link")
+                            h4.transition-all(class="text-xs text-title font-semibold line-clamp-1 group-hover:text-primary")= dataItem.title 
+                        span(class="text-2xs font-semibold text-content line-clamp-1 mt-[4px]")= dataItem.subTitle 
+                if (sideType === "badge") 
+                    span(class="min-w-fit badge bg-gray-light text-3xs text-title py-[7px] px-[13px]")= dataItem.badge
+
+
+mixin image-card-rounded(data, sideType,link) 
+    ul  
+        each dataItem, index in data
+            li.group.flex.items-center.group(class="justify-between gap-3 first:pt-0 last:pb-0 first:border-none py-[13px] border-t border-border-light")  
+                div.flex.items-center(class="gap-[10px] flex-[1_1_0]")
+                    div.overflow-hidden.rounded-full(class="object-cover sm:min-w-[38px] sm:min-h-[38px] 5xl:min-w-[42px] 5xl:min-h-[42px] min-w-[45px] min-h-[45px]")
+                        img.w-full.h-auto.object-cover(src=`../../assets/images/${dataItem.image}` alt="event" )  
+                    div(class="flex-1")  
+                        if(link == "link")
+                            a(href=`${dataItem.url}`)
+                                h4.transition-all(class="text-xs text-title font-semibold line-clamp-1 group-hover:text-primary")= dataItem.title 
+                        if(link !== "link")
+                            h4.transition-all(class="text-xs text-title font-semibold line-clamp-1 group-hover:text-primary")= dataItem.title 
+                        span(class="text-2xs font-semibold text-content line-clamp-1 mt-[4px]")= dataItem.subTitle 
+                if (sideType === "badge") 
+                    span(class="min-w-fit badge text-3xs bg-gray-light text-title py-[7px] px-[13px]")= dataItem.badge
+
+

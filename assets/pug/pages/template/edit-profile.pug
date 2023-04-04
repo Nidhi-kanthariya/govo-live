@@ -1,0 +1,386 @@
+//- sidebar
+-var sidebar = true;
+
+//- feather
+-var feather= true;
+
+//- fontAwesome
+-var fontAwesome = true;
+
+//- custom select
+-var customSelect = true;
+
+//- userCustom
+-var userCustom = true;
+
+//- customizer 
+-var customizer = true;
+
+//- Breadcrumbs
+-var pageTitle="Edit Profile";
+-var breadcrumb=['User','Edit Profile'];
+
+//- all JSON  
+include ../../data/all-data
+
+//- all mixin   
+include ../../mixin/mixin
+
+doctype html
+html(lang='en')
+   include ../../layout/header-files
+   body(dir="ltr" class="unique-skin")
+      main.page-wrapper
+         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+            include ../../layout/header/header     
+            // Sidebar Start 
+            div.page-sidebar.sidebar-dark.unique-sidebar
+               include ../../layout/unique 
+            // Sidebar End 
+
+            // Page Body Start
+            div.page-body
+               div.user-profile
+                  div.grid.grid-cols-12.gap-card-gap
+                     div.col-span-12
+                        div.user-bg.card.p-0
+                           img(src="../../assets/images/user-app/bg.jpg" alt="" class="w-full h-80")
+
+                  div.grid.grid-cols-12.gap-card-gap(class="user-profile-detail px-body-space mt-[-70px] relative 3sm:px-unset")
+                     div.col-span-3(class="4xl:col-span-4 lg:col-span-12")
+                        div.grid.grid-cols-12.gap-4.top-0.sticky  
+                           div.col-span-12
+                              div.card
+                                 div.card-body 
+                                    div.user-detail.flex.flex-col.gap-4.items-center
+                                       div.flex.items-center.gap-5(class="2sm:gap-2")
+                                          div.avatar.rounded-full(class="w-20 2sm:w-16 2sm:h-16 h-20 p-[2px] bg-white")
+                                             img(src='../../assets/images/avatar/38.jpg' alt='girl in yellow jacket' class="rounded-full")
+                                       div.flex.flex-col.gap-2
+                                          div.text-center 
+                                             p.text-content-title(class="font-semibold text-base") Emayila Sidorshina
+                                             p.text-content-title(class="font-semibold text-sm") Freelancer
+                                       div.flex.items-center.gap-6
+                                          div.text-center 
+                                             p.text-content-title.font-semibold.text-xs 359 
+                                             span.text-content-title.font-medium Posts
+                                          div.text-center 
+                                             p.text-content-title.font-semibold.text-xs 4.5K 
+                                             span.text-content-title.font-medium Followers
+                                          div.text-center 
+                                             p.text-content-title.font-semibold.text-xs 2.487 
+                                             span.text-content-title.font-medium Following       
+                           div.col-span-12
+                              div.card 
+                                 div.card-header 
+                                    h6.font-bold Social Media  
+                                 div.card-body.flex.flex-col.gap-3.checkout-detail
+                                    form.social(class="flex flex-col gap-1 theme-form m-0")
+                                       div.flex.items-center.gap-4
+                                          span(class="bg-gray-light rounded-full btn !text-facebook")
+                                             i.fa-brands.fa-facebook-f(class="w-4 h-4")
+                                          input(type="text" id="firstName" value="emayila567" class="!py-2" required)                                                
+                                       div.flex.items-center.gap-4
+                                          span(class="bg-gray-light rounded-full btn !text-linkedin")
+                                             i.fa-brands.fa-linkedin-in(class="w-4 h-4")
+                                          input(type="text" id="firstName" value="emayilasidorshina21" class="!py-2" required)
+                                       div.flex.items-center.gap-4
+                                          span(class="bg-gray-light rounded-full btn !text-twitter")
+                                             i.fa-brands.fa-twitter(class="w-4 h-4")
+                                          input(type="text" id="firstName" value="Emayila_Sidorshina" class="!py-2" required)
+                                       div.flex.items-center.gap-4
+                                          span(class="bg-gray-light rounded-full btn instagram !text-instagram")
+                                             svg(width='0' height='0')
+                                                radialgradient#rg(r='150%' cx='30%' cy='107%')
+                                                   stop(stop-color='#fdf497' offset='0')
+                                                   stop(stop-color='#fdf497' offset='0.05')
+                                                   stop(stop-color='#fd5949' offset='0.45')
+                                                   stop(stop-color='#d6249f' offset='0.6')
+                                                   stop(stop-color='#285AEB' offset='0.9')
+                                             i.fa-brands.fa-instagram(class="w-4 h-4")
+                                          input(type="text" id="firstName" value="emayila_sidorshina_21" class="!py-2" required)
+                                       div.flex.items-center.gap-4
+                                          span(class="bg-gray-light rounded-full btn !text-danger")
+                                             i.fa-solid.fa-rss(class="w-4 h-4")
+                                          input(type="text" id="firstName" value="Sidorshinaemayila12" class="!py-2" required)
+
+                     div.col-span-9(class="4xl:col-span-8 lg:col-span-12 w-full tabs flex flex-col") 
+                        div.card.gap-1
+                           div.card-header.flex.items-center
+                              div.tab-links.flex.items-center.justify-start.w-full(class="2md:w-full border-b border-border-light md:flex-col")
+                                 button.tab.tabs-bordered.user-tab.flex.items-center.justify-center.tab-active(data-tabFilter="1" class="text-content3 !flex-row !gap-2 tab-link md:w-full")
+                                    i.fa-solid.fa-user(class="w-4 h-4 stroke-title-content3")
+                                    | Personal Detail  
+                                 button.tab.tabs-bordered.user-tab.flex.items-center.justify-center(data-tabFilter="2" class="text-content3 !flex-row !gap-2 tab-link md:w-full")
+                                    i.fa-solid.fa-gear(class="w-4 h-4 stroke-title-content3")
+                                    | Setting
+                                 button.tab.tabs-bordered.user-tab.flex.items-center.justify-center(data-tabFilter="3" class="text-content3 !flex-row !gap-2 tab-link md:w-full")
+                                    i.fa-solid.fa-briefcase(class="w-4 h-4 stroke-title-content3")
+                                    | Experience 
+                                 button.tab.tabs-bordered.user-tab.flex.items-center.justify-center(data-tabFilter="4" class="text-content3 !flex-row !gap-2 tab-link md:w-full")
+                                    i.fa-solid.fa-scroll(class="w-4 h-4 stroke-title-content3")
+                                    | Privacy Policy 
+                           div.card-body 
+                              div.tabs-content.checkout-detail
+                                 div(data-tabContent="1" class="tab-pan  fade active show first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                                    form(class="theme-form flex flex-col gap-4 m-0")
+                                       div.grid.grid-cols-12.gap-5
+                                          div.col-span-6(class="sm:col-span-12")
+                                             label(for="firstName") First Name
+                                             input(type="text" id="firstName" value="Emayila" required)
+                                          div.col-span-6(class="sm:col-span-12")
+                                             label(for="lastName") Last Name
+                                             input(type="text" id="lastName" value="Emayila" required)
+                                       div.grid.grid-cols-12.gap-5
+                                          div.col-span-6(class="sm:col-span-12")
+                                             label(for="number") Contact No
+                                             input(type="Number" id="number" value="7738478982" maxlength="10" pattern="\d{10}" class="rounded"  required)
+                                          div.col-span-6(class="sm:col-span-12")
+                                             label(for="email") Email
+                                             input(type="email" id="email" value="emayiladosidorshina@gmail.com" required)      
+                                       div.grid.grid-cols-12.gap-5
+                                          div.col-span-6(class="sm:col-span-12")
+                                             label(for="designation") Designation
+                                             input(type="text" id="designation" value="Fullstack Developer" required)
+                                          div.col-span-6(class="sm:col-span-12")
+                                             label(for="website") Website
+                                             input(type="text" id="website" value="www.govo.com" required) 
+                                       div.grid.grid-cols-12.gap-5
+                                          div.col-span-4(class="2md:col-span-6 sm:col-span-12")
+                                             label(for="country") Country
+                                             select.form-select.block.w-full.px-3.text-xs.font-normal.text-content3.bg-white.bg-clip-padding.bg-no-repeat.border.border-border-light.rounded-5.transition.ease-in-out.m-0(class='min-w-[150px] py-[9px]' id="country" aria-label='Default select example')
+                                                option(selected='') Australia 
+                                                option(value='1') India
+                                                option(value='2') South Korea
+                                                option(value='3') Canada
+                                                option(value='4') USA
+                                                option(value='5') UAE
+                                                option(value='6') UK
+                                          div.col-span-4(class="2md:col-span-6 sm:col-span-12")
+                                             label(for="state") State
+                                             input(type="text" id="state" value="New South Wales" required)
+                                          div.col-span-4(class="2md:col-span-12")
+                                             label(for="postcode") Postcode
+                                             input(type="text" id="postcode" value="2179" required)
+                                       div 
+                                          label(for="otherNotes") Other Notes 
+                                          textarea(placeholder="Enter your address.." row="3" id="otherNotes" class="p-[11px] focus:!border-border-light").w-full.border.border-border-light.rounded-5.text-xs.text-content
+                                       div.flex.justify-end.items-center(class="gap-3")
+                                          a(href="javascript:void(0)").btn.bg-secondary.text-xs.text-white.flex.items-center.gap-2(class="!w-fit justify-center !m-0 py-2" type='button') Update
+                                          a(href="javascript:void(0)").btn.btn-primary.text-xs.text-white.flex.items-center.gap-2(class="!w-fit justify-center !m-0 py-2" type='button') Cancel
+
+                                 div(data-tabContent="2" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                                    form(class="theme-form flex flex-col gap-4 m-0 mb-2")                        
+                                       h6.font-bold Change Password 
+                                       div.grid.grid-cols-12.gap-5
+                                          div.col-span-4(class="2md:col-span-12")
+                                             label(for="oldpassword") Old Password* 
+                                             input(type="password" id="oldpassword" value="1587845" required)
+                                          div.col-span-4(class="2md:col-span-12")
+                                             label(for="newpassword") New Password* 
+                                             input(type="password" id="newpassword" value="1587845" required)
+                                          div.col-span-4(class="2md:col-span-12")
+                                             label(for="confirmpassword") Confirm Password* 
+                                             input(type="password" id="confirmpassword" value="1587845" required)
+                                       div(class="!mb-0")
+                                          a(href="javascript:void(0)" class="!text-primary text-xs") Forgot Password?
+                                       div.flex.justify-end.items-center 
+                                          a(href="javascript:void(0)").btn.bg-primary.text-xs.text-white.flex.items-center.gap-2(class="!w-fit justify-center py-2 !m-0" type='button') Change Password
+                                    form(class="theme-form flex flex-col gap-4 m-0 mb-2")    
+                                       div
+                                          h6.font-bold Verification code
+                                          span(class="!mb-0 mt-2 !text-start") We have sent the code verification to your email address
+                                       span.mt-0.edit.flex.items-center.gap-2(class="text-xs !text-primary")
+                                          | User2211@gmail.com 
+                                          a(href="javascript:void(0)") 
+                                             i(class="w-5 h-5 stroke-primary" data-feather="edit-3")
+                                       div.flex.items-center.gap-2
+                                          input.text-center(class="input-otp " placeholder='0' type='tel' required oninput='digitValidate(this)' onkeyup='tabChange(1)' maxlength='1')
+                                          input.text-center(class="input-otp " placeholder='0' type='tel' required oninput='digitValidate(this)' onkeyup='tabChange(2)' maxlength='1')
+                                          input.text-center(class="input-otp " placeholder='0' type='tel' required oninput='digitValidate(this)' onkeyup='tabChange(3)' maxlength='1')
+                                          input.text-center(class="input-otp " placeholder='0' type='tel' required oninput='digitValidate(this)' onkeyup='tabChange(4)' maxlength='1')
+                                       div.flex.justify-end.items-center 
+                                          a(href="javascript:void(0)").btn.bg-primary.text-xs.text-white.flex.items-center.gap-2(class="!w-fit justify-center py-2 !m-0" type='button') Submit
+                                    div.mb-2 
+                                       h6.font-bold.mb-2 Login History 
+                                       div.flex.gap-3.items-center.justify-between(class="border-b border-border-light last:border-none pb-3 last:pb-0 pt-3 first:pt-0") 
+                                          div.flex.items-center.gap-4 
+                                             i.fa-brands.fa-windows(class="w-5 h-5 text-primary")
+                                             div  
+                                                p.text-title.text-xs  Chrome on Windows
+                                                span.text-content3.text-xs Dubai, 20 Jan 2023 23:07
+                                          div 
+                                             p.text-content3.text-xs Logout
+                                       div.flex.gap-3.items-center.justify-between(class="border-b border-border-light last:border-none pb-3 last:pb-0 pt-3 first:pt-0") 
+                                          div.flex.items-center.gap-4 
+                                             i.fa-brands.fa-apple(class="w-5 h-5 text-title")
+                                             div  
+                                                p.text-title.text-xs  Chrome on MacOS
+                                                span.text-content3.text-xs  Australia, 16 Jan 2023 15:07
+                                          div 
+                                             p.text-content3.text-xs Logout
+                                       div.flex.gap-3.items-center.justify-between(class="border-b border-border-light last:border-none pb-3 last:pb-0 pt-3 first:pt-0") 
+                                          div.flex.items-center.gap-4 
+                                             i.fa-solid.fa-mobile-screen(class="w-5 h-5 text-secondary")
+                                             div  
+                                                p.text-title.text-xs  Chrome on iPhone
+                                                span.text-content3.text-xs  India, 12 Jan 2023 17:07
+                                          div 
+                                             p.text-content3.text-xs Logout
+                                       div.flex.gap-3.items-center.justify-between(class="border-b border-border-light last:border-none pb-3 last:pb-0 pt-3 first:pt-0") 
+                                          div.flex.items-center.gap-4 
+                                             i.fa-solid.fa-robot(class="w-5 h-5 text-success")
+                                             div  
+                                                p.text-title.text-xs Chrome on Android
+                                                span.text-content3.text-xs  Switzerland, 10 Jan 2023 13:07
+                                          div 
+                                             p.text-content3.text-xs Logout
+
+                                 div(data-tabContent="3" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                                    form(class="theme-form flex flex-col gap-2 m-0")
+                                       div(id="newForm" class="flex flex-col gap-4 m-0")
+                                          div(id="1" class="flex flex-col gap-4 m-0")
+                                             div 
+                                                h6.font-bold Job Detail
+                                             div
+                                                label(for="jobtitle") Job Title
+                                                input(type="text" id="jobtitle" placeholder="Enter your first name" required)
+                                             div.grid.grid-cols-12.gap-5
+                                                div.col-span-6(class="4xl:col-span-5 xl:col-span-4 2md:col-span-12")
+                                                   label(for="companyName") Company Name
+                                                   input(type="text" id="companyName" placeholder="Enter your first name" required)
+                                                div.col-span-6(class="4xl:col-span-7 xl:col-span-8 2md:col-span-12")
+                                                   label(for="companyName") Experience Year
+                                                   div.grid.grid-cols-12
+                                                      div.col-span-5
+                                                         select.form-select.block.w-full.px-3.text-xs.font-normal.text-content3.bg-white.bg-clip-padding.bg-no-repeat.border.border-border-light.rounded-5.transition.ease-in-out.m-0(class='min-w-[150px] py-[9px] 2md:min-w-fit' id="sortby" aria-label='Default select example')
+                                                            option(selected='') 2017
+                                                            option(value='1') 2018
+                                                            option(value='2') 2019
+                                                            option(value='3') 2020
+                                                            option(value='4') 2021
+                                                            option(value='5') 2022 
+                                                      div.col-auto(class="flex items-center justify-center") to 
+                                                      div.col-span-5
+                                                         select.form-select.block.w-full.px-3.text-xs.font-normal.text-content3.bg-white.bg-clip-padding.bg-no-repeat.border.border-border-light.rounded-5.transition.ease-in-out.m-0(class='min-w-[150px] py-[9px] 2md:min-w-fit' id="sortby" aria-label='Default select example')
+                                                            option(selected='') 2017
+                                                            option(value='1') 2018
+                                                            option(value='2') 2019
+                                                            option(value='3') 2020
+                                                            option(value='4') 2021
+                                                            option(value='5') 2022
+                                             div
+                                                label(for="address") Job Description 
+                                                textarea(placeholder="Enter your address.." row="3" id="address" class="p-[11px] focus:!border-border-light").w-full.border.border-border-light.rounded-5.text-xs.text-content   
+                                             div.text-end
+                                                a(href="javascript:deleteEl(1)").btn.btn-primary.text-xs.text-white(class="!w-fit !m-0 py-2" type='button') Delete 
+
+                                       div(id="latestForm")
+
+                                       div.flex.justify-end.items-center.gap-3
+                                          a(href="javascript:void(0)").btn.bg-secondary.text-xs.text-white(class="!w-fit !m-0 py-2" type='button') Update
+                                          a(href="javascript:new_form()").btn.btn-primary.text-xs.text-white(class="!w-fit !m-0 py-2" type='button') Add 
+
+                                 div(data-tabContent="4" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                                    div.flex.flex-col.gap-4
+                                       div(class="border-b border-border-light border-dashed last:border-none pb-5 last:pb-0") 
+                                          h6.font-bold(class="mb-[2px]") Password Manager
+                                          div.flex.items-base.justify-between.gap-2(class="border-b border-border-light last:border-none pb-4 pt-4 first:pt-0 last:pb-0")
+                                             span.font-medium(class="text-[15px]") Offer to save passwords
+                                             label.inline-flex.relative.items-center.cursor-pointer
+                                                input.sr-only.peer(type='checkbox')
+                                                span.w-7.h-4.bg-content.rounded-full.peer(class="peer-focus:outline-none peer-checked:after:translate-x-full peer-checked:after:content-white after:content-[''] after:absolute after:top-[3px] after:left-[2px] after:bg-white after:border-gray-light after:border after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-primary")
+                                          div(class="border-b border-border-light last:border-none pb-4 pt-4 first:pt-0 last:pb-0")
+                                             span.font-medium(class="text-[15px]") Auto Sign-in
+                                             div.flex.items-base.justify-between.gap-2 
+                                                p.text-content3.text-2xs Use saved credentials to log in automatically to websites and applications. If it's disabled, you'll always be prompted for confirmation before logging in to a website or app. 
+                                                label.inline-flex.relative.items-base.cursor-pointer
+                                                   input.sr-only.peer(type='checkbox' checked)
+                                                   span.w-7.h-4.bg-content.rounded-full.peer(class="peer-focus:outline-none peer-checked:after:translate-x-full peer-checked:after:content-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-light after:border after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-primary")
+                                       div(class="border-b border-border-light border-dashed last:border-none pb-5 last:pb-0") 
+                                          h6.font-bold(class="mb-[2px]") Payment Method
+                                          div(class="border-b border-border-light last:border-none pb-4 pt-4 first:pt-0 last:pb-0")
+                                             span.font-medium(class="text-[15px]") Save and fill payment methods
+                                             div.flex.items-base.justify-between.gap-2 
+                                                p.text-content3.text-2xs Utilizes your saved payment methods to complete payment forms 
+                                                label.inline-flex.relative.items-base.cursor-pointer
+                                                   input.sr-only.peer(type='checkbox' checked)
+                                                   span.w-7.h-4.bg-content.rounded-full.peer(class="peer-focus:outline-none peer-checked:after:translate-x-full peer-checked:after:content-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-light after:border after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-primary")
+                                          div.flex.items-base.justify-between.gap-2(class="border-b border-border-light last:border-none pb-4 pt-4 first:pt-0 last:pb-0")
+                                             span.font-medium(class="text-[15px]") Allow sites to check if you have payment methods saved
+                                             label.inline-flex.relative.items-base.cursor-pointer
+                                                input.sr-only.peer(type='checkbox')
+                                                span.w-7.h-4.bg-content.rounded-full.peer(class="peer-focus:outline-none peer-checked:after:translate-x-full peer-checked:after:content-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-light after:border after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-primary")
+                                       div(class="border-b border-border-light border-dashed last:border-none pb-5 last:pb-0") 
+                                          h6.font-bold(class="mb-[2px]") Addresses
+                                          div(class="border-b border-border-light last:border-none pb-4 pt-4 first:pt-0 last:pb-0")
+                                             span.font-medium(class="text-[15px]") Save and fill addresses
+                                             div.flex.items-base.justify-between.gap-2 
+                                                p.text-content3.text-2xs Includes details such contact details, email addresses, and delivery addresses.
+                                                label.inline-flex.relative.items-base.cursor-pointer
+                                                   input.sr-only.peer(type='checkbox')
+                                                   span.w-7.h-4.bg-content.rounded-full.peer(class="peer-focus:outline-none peer-checked:after:translate-x-full peer-checked:after:content-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-light after:border after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-primary")
+                                       div(class="border-b border-border-light border-dashed last:border-none pb-5 last:pb-0") 
+                                          h6.font-bold(class="mb-[2px]") Safe Browsing
+                                          div(class="border-b border-border-light last:border-none pb-4 pt-4 first:pt-0 last:pb-0")
+                                             div.radio-button.radio-md.primary(class="!gap-4")
+                                                input#security1(type='radio' name='security')
+                                                div.check(class="min-w-[1.15rem] !h-[1.15rem] before:!w-3 before:!h-3")
+                                                label(for='security1' class="text-xs cursor-pointer text-[15px] font-medium") 
+                                                   p.font-medium(class="text-xs") Enhanced protection   
+                                                   p.text-content3.text-2xs Faster, more proactive defense against malicious downloads, extensions, and websites. Warns you about password breaches. Needs surfing data to be provided to Google.                                                          
+                                          div(class="border-b border-border-light last:border-none pb-4 pt-4 first:pt-0 last:pb-0")
+                                             div.radio-button.radio-md.primary(class="!gap-4")
+                                                input#security2(type='radio' name='security' checked)
+                                                div.check(class="min-w-[1.15rem] !h-[1.15rem] before:!w-3 before:!h-3")
+                                                label(for='security2' class="text-xs cursor-pointer text-[15px] font-medium") 
+                                                   p.font-medium(class="text-xs") Standard protection 
+                                                   p.text-content3.text-2xs Standard protection against websites, downloads and extensions that are known to be dangerous
+                                          div(class="border-b border-border-light last:border-none pb-4 pt-4 first:pt-0 last:pb-0")
+                                             div.radio-button.radio-md.primary(class="!gap-4")
+                                                input#security2(type='radio' name='security')
+                                                div.check(class="min-w-[1.15rem] !h-[1.15rem] before:!w-3 before:!h-3")
+                                                label(for='security2' class="text-xs cursor-pointer text-[15px] font-medium") 
+                                                   p.font-medium(class="text-xs") No protection (not recommended) 
+                                                   p.text-content3.text-2xs Does not protect you against dangerous websites, downloads and extensions. Other Google services, such as Gmail and Search, will still provide Safe Browsing protection for you, if it is available.
+                                       div(class="border-b border-border-light border-dashed last:border-none pb-5 last:pb-0") 
+                                          h6.font-bold(class="mb-[2px]") Notifications
+                                          p.text-content3.text-2xs Sites automatically follow this setting when you visit them
+                                          div(class="border-b border-border-light last:border-none pb-4 pt-4 first:pt-0 last:pb-0")
+                                             div.radio-button.radio-md.primary(class="!gap-4")
+                                                input#notify1(type='radio' name='notify' checked)
+                                                div.check(class="min-w-[1.15rem] !h-[1.15rem] before:!w-3 before:!h-3")
+                                                label(for='notify1' class="text-xs cursor-pointer text-[15px] font-medium") 
+                                                   div.flex.gap-2.items-center 
+                                                      i(data-feather="bell" class="w-4 h-4 stroke-title")
+                                                      p.font-medium(class="text-xs") Sites can ask to send notifications  
+                                          div(class="border-b border-border-light last:border-none pb-4 pt-4 first:pt-0 last:pb-0")
+                                             div.radio-button.radio-md.primary(class="!gap-4")
+                                                input#notify2(type='radio' name='notify')
+                                                div.check(class="min-w-[1.15rem] !h-[1.15rem] before:!w-3 before:!h-3")
+                                                label(for='notify2' class="text-xs cursor-pointer text-[15px] font-medium") 
+                                                   div.flex.gap-2.items-center 
+                                                      i(data-feather="bell" class="w-4 h-4 stroke-title")
+                                                      div 
+                                                         p.font-medium(class="text-xs") Use quieter messaging 
+                                                         p.text-content3.text-2xs Sites are blocked from interrupting you when they ask to send notifications
+                                          div(class="border-b border-border-light last:border-none pb-4 pt-4 first:pt-0 last:pb-0")
+                                             div.radio-button.radio-md.primary(class="!gap-4")
+                                                input#notify3(type='radio' name='notify')
+                                                div.check(class="min-w-[1.15rem] !h-[1.15rem] before:!w-3 before:!h-3")
+                                                label(for='notify3' class="text-xs cursor-pointer text-[15px] font-medium") 
+                                                   div.flex.gap-2.items-center 
+                                                      i(data-feather="bell-off" class="w-4 h-4 stroke-title")
+                                                      div
+                                                         p.font-medium(class="text-xs") Don't allow sites to send notifications 
+                                                         p.text-content3.text-2xs Features that need notifications won't work
+
+
+
+            // Page Body End  
+            +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+         include ../../components/customizer
+
+
+
+   include ../../layout/footer-files

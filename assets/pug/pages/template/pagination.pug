@@ -1,0 +1,446 @@
+//- sidebar
+-var sidebar = true;
+
+//- feathet
+-var feather= true;
+
+//- customSelect
+-var customSelect= true;
+
+//- customizer
+-var customizer=true;
+
+//- prism
+-var prism=true;
+
+//- Breadcrumbs
+-var pageTitle="Pagination";
+-var breadcrumb=['Ui Kits','Pagination'];
+
+//- json
+include ../../data/all-data
+
+//- mixin
+include ../../mixin/mixin
+
+doctype html
+html(lang='en')  
+   include ../../layout/header-files 
+   body(dir="ltr" class="unique-skin") 
+      main.page-wrapper
+         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+            include ../../layout/header/header     
+            // Sidebar Start 
+            div.page-sidebar.sidebar-dark.unique-sidebar
+               include ../../layout/unique
+            // Sidebar End
+
+            // Page Body Start 
+            div.page-body
+               div.grid.grid-cols-12.gap-card-gap
+                  div.col-span-4(class="xl:col-span-6 2lg:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Pagination
+                              p Add pagination with the help of 
+                                 strong .btn 
+                                 | class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.tabs-content
+                           div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                              div(class="overflow-auto custom-scroll")
+                                 div.flex
+                                    button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-primary hover:text-white") 1
+                                    button.btn.btn-active.text-white.border.border-border-light.bg-primary.rounded-none(class="hover:bg-primary hover:text-white") 2
+                                    button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-primary hover:text-white") 3
+                                    button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-primary hover:text-white") 4
+                                    button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-primary hover:text-white") 5
+                                    button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-primary hover:text-white") 6
+                           div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                              button.btn.copyBtn 
+                                 i(data-feather="clipboard")
+                              pre(class="overflow-auto language-html custom-scroll")
+                                 code
+                                    |&lt;div class="overflow-auto custom-scroll"&gt;
+                                    |   &lt;div class="flex"&gt;
+                                    |       &lt;button class="border rounded-none btn border-border-light text-title hover:bg-primary hover:text-white"&gt; 1 &lt;/button&gt;
+                                    |       &lt;button class="text-white border rounded-none btn btn-active border-border-light bg-primary hover:bg-primary hover:text-white"&gt; 2 &lt;/button&gt;
+                                    |       &lt;button class="border rounded-none btn border-border-light text-title hover:bg-primary hover:text-white"&gt; 3 &lt;/button&gt;
+                                    |       &lt;button class="border rounded-none btn border-border-light text-title hover:bg-primary hover:text-white"&gt; 4 &lt;/button&gt;
+                                    |       &lt;button class="border rounded-none btn border-border-light text-title hover:bg-primary hover:text-white"&gt; 5 &lt;/button&gt;
+                                    |       &lt;button class="border rounded-none btn border-border-light text-title hover:bg-primary hover:text-white"&gt; 6 &lt;/button&gt;
+                                    |   &lt;/div&gt;
+                                    |&lt;/div&gt;
+                  div.col-span-4(class="xl:col-span-6 2lg:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold With Disabled 
+                              p Set disable btn with the help of 
+                                 strong .btn-disabled 
+                                 | class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.tabs-content
+                           div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                              div(class="overflow-auto custom-scroll")
+                                 div.flex
+                                    button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-primary hover:text-white") 1
+                                    button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-primary hover:text-white") 2
+                                    button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-primary hover:text-white") 3
+                                    button.btn.btn-disable.border.border-border-light.bg-gray-light.rounded-none(class="!cursor-auto") ...
+                                    button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-primary hover:text-white") 9
+                                    button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-primary hover:text-white") 10
+                           div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                              button.btn.copyBtn 
+                                 i(data-feather="clipboard")
+                              pre(class="overflow-auto language-html custom-scroll")
+                                 code
+                                    |&lt;div class="overflow-auto custom-scroll"&gt;
+                                    |    &lt;div class="flex"&gt;
+                                    |        &lt;button class="border rounded-none btn border-border-light text-title hover:bg-primary hover:text-white"&gt; 1 &lt;/button&gt;
+                                    |        &lt;button class="border rounded-none btn border-border-light text-title hover:bg-primary hover:text-white"&gt; 2 &lt;/button&gt;
+                                    |        &lt;button class="border rounded-none btn border-border-light text-title hover:bg-primary hover:text-white"&gt; 3 &lt;/button&gt;
+                                    |        &lt;button class="btn btn-disable border border-border-light bg-gray-light rounded-none !cursor-auto"&gt; ... &lt;/button&gt;
+                                    |        &lt;button class="border rounded-none btn border-border-light text-title hover:bg-primary hover:text-white"&gt; 9 &lt;/button&gt;
+                                    |        &lt;button class="border rounded-none btn border-border-light text-title hover:bg-primary hover:text-white"&gt; 10 &lt;/button&gt;
+                                    |    &lt;/div&gt;
+                                    |&lt;/div&gt;
+                  div.col-span-4(class="xl:col-span-6 2lg:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold With Forward-Backward
+                              p Add Forward-Backward button with pagination.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.tabs-content
+                           div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                              div(class="overflow-auto custom-scroll")
+                                 div.flex
+                                    button.btn.border.border-border-light.rounded-none(class="hover:bg-primary group") 
+                                       +SVG_ICON("Arrow-Left-2" ,"w-[0.875rem] h-[0.875rem] stroke-title group-hover:stroke-white")
+                                    button.btn.btn-active.border.border-border-light.rounded-none.text-title(class="hover:bg-primary hover:text-white") 13
+                                    button.btn.btn-active.border.border-border-light.rounded-none.text-white.bg-primary.whitespace-nowrap Page 14
+                                    button.btn.btn-active.border.border-border-light.rounded-none.text-title(class="hover:bg-primary hover:text-white") 15
+                                    button.btn.border.border-border-light.rounded-none(class="hover:bg-primary group")
+                                       +SVG_ICON("Arrow-Right-2" ,"w-[0.875rem] h-[0.875rem] stroke-title group-hover:stroke-white")
+                           div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                              button.btn.copyBtn 
+                                 i(data-feather="clipboard")
+                              pre(class="overflow-auto language-html custom-scroll")
+                                 code
+                                    |&lt;div class="overflow-auto custom-scroll"&gt;
+                                    |    &lt;div class="flex"&gt;
+                                    |        &lt;button class="border rounded-none btn border-border-light hover:bg-primary group"&gt;
+                                    |           +SVG_ICON("Arrow-Left-2" ,"w-[0.875rem] h-[0.875rem] stroke-title group-hover:stroke-white")
+                                    |        &lt;/button&gt;
+                                    |        &lt;button class="border rounded-none btn btn-active border-border-light text-title hover:bg-primary hover:text-white"&gt; 13 &lt;/button&gt;
+                                    |        &lt;button class="text-white border rounded-none btn btn-active border-border-light bg-primary whitespace-nowrap"&gt; Page 14 &lt;/button&gt;
+                                    |        &lt;button class="border rounded-none btn btn-active border-border-light text-title hover:bg-primary hover:text-white"&gt; 15 &lt;/button&gt;
+                                    |        &lt;button class="border rounded-none btn border-border-light hover:bg-primary group"&gt;
+                                    |           +SVG_ICON("Arrow-Right-2" ,"w-[0.875rem] h-[0.875rem] stroke-title group-hover:stroke-white")
+                                    |        &lt;/button&gt;
+                                    |    &lt;/div&gt;
+                                    |&lt;/div&gt;
+                  div.col-span-4(class="xl:col-span-6 2lg:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold With Preview-Next
+                              p Add Preview-Next button with pagination.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.tabs-content
+                           div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                              div(class="overflow-auto custom-scroll")
+                                 div.flex
+                                    button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-primary hover:text-white") Preview
+                                    button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-primary hover:text-white") 1
+                                    button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-primary hover:text-white") 2
+                                    button.btn.btn-active.border.border-border-light.rounded-none.text-white.bg-primary(class="hover:bg-primary hover:text-white") 3
+                                    button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-primary hover:text-white") 4
+                                    button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-primary hover:text-white ") Next
+                           div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                              button.btn.copyBtn 
+                                 i(data-feather="clipboard")
+                              pre(class="overflow-auto language-html custom-scroll")
+                                 code
+                                    |&lt;div class="overflow-auto custom-scroll"&gt;
+                                    |    &lt;div class="flex"&gt;
+                                    |        &lt;button class="border rounded-none btn border-border-light text-title hover:bg-primary hover:text-white"&gt; Preview &lt;/button&gt;
+                                    |        &lt;button class="border rounded-none btn border-border-light text-title hover:bg-primary hover:text-white"&gt; 1 &lt;/button&gt;
+                                    |        &lt;button class="border rounded-none btn border-border-light text-title hover:bg-primary hover:text-white"&gt; 2 &lt;/button&gt;
+                                    |        &lt;button class="text-white border rounded-none btn btn-active border-border-light bg-primary hover:bg-primary hover:text-white"&gt; 3 &lt;/button&gt;
+                                    |        &lt;button class="border rounded-none btn border-border-light text-title hover:bg-primary hover:text-white"&gt; 4 &lt;/button&gt;
+                                    |        &lt;button class="border rounded-none btn border-border-light text-title hover:bg-primary hover:text-white"&gt; Next &lt;/button&gt;
+                                    |    &lt;/div&gt;
+                                    |&lt;/div&gt;
+
+                  div.col-span-4(class="xl:col-span-6 2lg:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold With Outline 
+                              p Add pagination with the help of 
+                                 strong .btn 
+                                 | class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.tabs-content
+                           div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                              div(class="overflow-auto custom-scroll")
+                                 div.flex
+                                    button.btn.border.border-border-light.rounded-none.text-title(class="hover:border-primary hover:text-primary") 1
+                                    button.btn.border.border-border-light.rounded-none.text-title(class="hover:border-primary hover:text-primary") 2
+                                    button.btn.btn-active.text-primary.border.border-primary.rounded-none(class="hover:border-primary hover:text-primary") 3
+                                    button.btn.border.border-border-light.rounded-none.text-title(class="hover:border-primary hover:text-primary") 4
+                                    button.btn.border.border-border-light.rounded-none.text-title(class="hover:border-primary hover:text-primary") 5
+                           div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                              button.btn.copyBtn 
+                                 i(data-feather="clipboard")
+                              pre(class="overflow-auto language-html custom-scroll")
+                                 code
+                                    |&lt;div class="overflow-auto custom-scroll"&gt;
+                                    |    &lt;div class="flex"&gt;
+                                    |        &lt;button class="border rounded-none btn border-border-light text-title hover:border-primary hover:text-primary"&gt; 1 &lt;/button&gt;
+                                    |        &lt;button class="border rounded-none btn border-border-light text-title hover:border-primary hover:text-primary"&gt; 2 &lt;/button&gt;
+                                    |        &lt;button class="border rounded-none btn btn-active text-primary border-border-light bg-primary hover:border-primary hover:text-primary"&gt; 3 &lt;/button&gt;
+                                    |        &lt;button class="border rounded-none btn border-border-light text-title hover:border-primary hover:text-primary"&gt; 4 &lt;/button&gt;
+                                    |        &lt;button class="border rounded-none btn border-border-light text-title hover:border-primary hover:text-primary"&gt; 5 &lt;/button&gt;
+                                    |    &lt;/div&gt;
+                                    |&lt;/div&gt;
+                  div.col-span-4(class="xl:col-span-6 2lg:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold With Icon 
+                              p Set Forward-Backward button with icons in pagination.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.tabs-content
+                           div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                              div(class="overflow-auto custom-scroll")
+                                 div.flex
+                                    button.btn.border.border-border-light.rounded-none.flex.items-center.gap-2(class="hover:bg-primary group hover:text-white") 
+                                       +SVG_ICON("Arrow-Left-2" ,"w-[0.875rem] h-[0.875rem] stroke-title group-hover:stroke-white") 
+                                       |   Priview
+                                    button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-primary hover:text-white") 1
+                                    button.btn.btn-active.text-white.border.border-border-light.bg-primary.rounded-none(class="hover:bg-primary hover:text-white") 2
+                                    button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-primary hover:text-white") 3
+                                    button.btn.border.border-border-light.rounded-none.flex.items-center.gap-2(class="hover:bg-primary group hover:text-white") Next
+                                       +SVG_ICON("Arrow-Right-2" ,"w-[0.875rem] h-[0.875rem] stroke-title group-hover:stroke-white")
+                           div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                              button.btn.copyBtn 
+                                 i(data-feather="clipboard")
+                              pre(class="overflow-auto language-html custom-scroll")
+                                 code
+                                    |&lt;div class="overflow-auto custom-scroll"&gt;
+                                    |    &lt;div class="flex"&gt;
+                                    |       &lt;button class="flex items-center gap-1 border rounded-none btn border-border-light hover:bg-primary group hover:text-white"&gt; 
+                                    |           +SVG_ICON("Arrow-Left-2" ,"w-[0.875rem] h-[0.875rem] stroke-title group-hover:stroke-white") Preview 
+                                    |       &lt;/button&gt;
+                                    |       &lt;button class="border rounded-none btn border-border-light text-title hover:bg-primary hover:text-white"&gt; 1 &lt;/button&gt;
+                                    |       &lt;button class="text-white border rounded-none btn btn-active border-border-light bg-primary hover:bg-primary hover:text-white"&gt; 2 &lt;/button&gt;
+                                    |       &lt;button class="border rounded-none btn border-border-light text-title hover:bg-primary hover:text-white"&gt; 3 &lt;/button&gt;
+                                    |       &lt;button class="flex items-center gap-1 border rounded-none btn border-border-light hover:bg-primary group hover:text-white"&gt; Next 
+                                    |           +SVG_ICON("Arrow-Right-2" ,"w-[0.875rem] h-[0.875rem] stroke-title group-hover:stroke-white") 
+                                    |       &lt;/button&gt;
+                                    |    &lt;/div&gt;
+                                    |&lt;/div&gt;
+
+                  div.col-span-6(class="2lg:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Sizes
+                              p Set different size of pagination with the help of 
+                                 strong .btn-* 
+                                 | class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.tabs-content
+                           div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                              div(class="overflow-auto custom-scroll")
+                                 div.flex.flex-col.gap-2
+                                    div.flex
+                                       button.btn.btn-xs.border.border-border-light.rounded-none.text-title(class="hover:bg-primary hover:text-white") 1
+                                       button.btn.btn-xs.btn-active.text-white.border.border-border-light.bg-primary.rounded-none(class="hover:bg-primary hover:text-white") 2
+                                       button.btn.btn-xs.border.border-border-light.rounded-none.text-title(class="hover:bg-primary hover:text-white") 3
+                                       button.btn.btn-xs.border.border-border-light.rounded-none.text-title(class="hover:bg-primary hover:text-white") 4
+                                       button.btn.btn-xs.border.border-border-light.rounded-none.text-title(class="hover:bg-primary hover:text-white") 5
+                                       button.btn.btn-xs.border.border-border-light.rounded-none.text-title(class="hover:bg-primary hover:text-white") 6
+                                    div.flex
+                                       button.btn.btn-sm.border.border-border-light.rounded-none.text-title(class="hover:bg-warning hover:text-white") 1
+                                       button.btn.btn-sm.border.border-border-light.rounded-none.text-title(class="hover:bg-warning hover:text-white") 2
+                                       button.btn.btn-sm.border.border-border-light.rounded-none.text-title(class="hover:bg-warning hover:text-white") 3
+                                       button.btn.btn-sm.btn-active.text-white.border.border-border-light.bg-warning.rounded-none(class="hover:bg-warning hover:text-white") 4
+                                       button.btn.btn-sm.border.border-border-light.rounded-none.text-title(class="hover:bg-warning hover:text-white") 5
+                                       button.btn.btn-sm.border.border-border-light.rounded-none.text-title(class="hover:bg-warning hover:text-white") 6
+                                    div.flex     
+                                       button.btn.btn-md.border.border-border-light.rounded-none.text-title(class="hover:bg-danger hover:text-white") 1
+                                       button.btn.btn-md.btn-active.text-white.border.border-border-light.bg-danger.rounded-none(class="hover:bg-danger hover:text-white") 2
+                                       button.btn.btn-md.border.border-border-light.rounded-none.text-title(class="hover:bg-danger hover:text-white") 3
+                                       button.btn.btn-md.border.border-border-light.rounded-none.text-title(class="hover:bg-danger hover:text-white") 4
+                                       button.btn.btn-md.border.border-border-light.rounded-none.text-title(class="hover:bg-danger hover:text-white") 5
+                                       button.btn.btn-md.border.border-border-light.rounded-none.text-title(class="hover:bg-danger hover:text-white") 6
+
+                                    div.flex     
+                                       button.btn.btn-lg.border.border-border-light.rounded-none.text-title(class="hover:bg-info hover:text-white") 1
+                                       button.btn.btn-lg.border.border-border-light.rounded-none.text-title(class="hover:bg-info hover:text-white") 2
+                                       button.btn.btn-lg.border.border-border-light.rounded-none.text-title(class="hover:bg-info hover:text-white") 3
+                                       button.btn.btn-lg.border.border-border-light.rounded-none.text-title(class="hover:bg-info hover:text-white") 4
+                                       button.btn.btn-lg.btn-active.text-white.border.border-border-light.bg-info.rounded-none(class="hover:bg-info hover:text-white") 5
+                                       button.btn.btn-lg.border.border-border-light.rounded-none.text-title(class="hover:bg-info hover:text-white") 6
+                           div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                              button.btn.copyBtn 
+                                 i(data-feather="clipboard")
+                              pre(class="overflow-auto language-html custom-scroll")
+                                 code
+                                    |&lt;div class="overflow-auto custom-scroll"&gt;
+                                    |   &lt;div class="flex flex-col gap-2"&gt;
+                                    |      &lt;div class="flex"&gt;
+                                    |          &lt;button class="border rounded-none btn btn-xs border-border-light text-title hover:bg-primary hover:text-white"&gt; 1 &lt;/button&gt;
+                                    |          &lt;button class="text-white border rounded-none btn btn-xs btn-active border-border-light bg-primary hover:bg-primary hover:text-white"&gt; 2 &lt;/button&gt;
+                                    |          &lt;button class="border rounded-none btn btn-xs border-border-light text-title hover:bg-primary hover:text-white"&gt; 3 &lt;/button&gt;
+                                    |          &lt;button class="border rounded-none btn btn-xs border-border-light text-title hover:bg-primary hover:text-white"&gt; 4 &lt;/button&gt;
+                                    |          &lt;button class="border rounded-none btn btn-xs border-border-light text-title hover:bg-primary hover:text-white"&gt; 5 &lt;/button&gt;
+                                    |          &lt;button class="border rounded-none btn btn-xs border-border-light text-title hover:bg-primary hover:text-white"&gt; 6 &lt;/button&gt;
+                                    |      &lt;/div&gt;
+                                    |
+                                    |      &lt;div class="flex"&gt;
+                                    |          &lt;button class="border rounded-none btn btn-sm border-border-light text-title hover:bg-warning hover:text-white"&gt; 1 &lt;/button&gt;
+                                    |          &lt;button class="border rounded-none btn btn-sm border-border-light text-title hover:bg-warning hover:text-white"&gt; 2 &lt;/button&gt;
+                                    |          &lt;button class="border rounded-none btn btn-sm border-border-light text-title hover:bg-warning hover:text-white"&gt; 3 &lt;/button&gt;
+                                    |          &lt;button class="text-white border rounded-none btn btn-sm btn-active border-border-light bg-warning hover:bg-warning hover:text-white"&gt; 4 &lt;/button&gt;
+                                    |          &lt;button class="border rounded-none btn btn-sm border-border-light text-title hover:bg-warning hover:text-white"&gt; 5 &lt;/button&gt;
+                                    |          &lt;button class="border rounded-none btn btn-sm border-border-light text-title hover:bg-warning hover:text-white"&gt; 6 &lt;/button&gt;
+                                    |      &lt;/div&gt;
+                                    |
+                                    |      &lt;div class="flex"&gt;
+                                    |          &lt;button class="border rounded-none btn btn-md border-border-light text-title hover:bg-danger hover:text-white"&gt; 1 &lt;/button&gt;
+                                    |          &lt;button class="text-white border rounded-none btn btn-md btn-active border-border-light bg-danger hover:bg-danger hover:text-white"&gt; 2 &lt;/button&gt;
+                                    |          &lt;button class="border rounded-none btn btn-md border-border-light text-title hover:bg-danger hover:text-white"&gt; 3 &lt;/button&gt;
+                                    |          &lt;button class="border rounded-none btn btn-md border-border-light text-title hover:bg-danger hover:text-white"&gt; 4 &lt;/button&gt;
+                                    |          &lt;button class="border rounded-none btn btn-md border-border-light text-title hover:bg-danger hover:text-white"&gt; 5 &lt;/button&gt;
+                                    |          &lt;button class="border rounded-none btn btn-md border-border-light text-title hover:bg-danger hover:text-white"&gt; 6 &lt;/button&gt;
+                                    |      &lt;/div&gt;
+                                    |
+                                    |      &lt;div class="flex"&gt;
+                                    |          &lt;button class="border rounded-none btn btn-lg border-border-light text-title hover:bg-info hover:text-white"&gt; 1 &lt;/button&gt;
+                                    |          &lt;button class="border rounded-none btn btn-lg border-border-light text-title hover:bg-info hover:text-white"&gt; 2 &lt;/button&gt;
+                                    |          &lt;button class="border rounded-none btn btn-lg border-border-light text-title hover:bg-info hover:text-white"&gt; 3 &lt;/button&gt;
+                                    |          &lt;button class="border rounded-none btn btn-lg border-border-light text-title hover:bg-info hover:text-white"&gt; 4 &lt;/button&gt;
+                                    |          &lt;button class="text-white border rounded-none btn btn-lg btn-active border-border-light bg-info hover:bg-info hover:text-white"&gt; 5 &lt;/button&gt;
+                                    |          &lt;button class="border rounded-none btn btn-lg border-border-light text-title hover:bg-info hover:text-white"&gt; 6 &lt;/button&gt;
+                                    |      &lt;/div&gt;
+                                    |   &lt;/div&gt;
+                                    |&lt;/div&gt;
+                  div.col-span-6(class="2lg:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold With Different Colors
+                              p Set different colors of pagination using 
+                                 strong .bg-*  
+                                 | class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.tabs-content
+                           div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                              div(class="overflow-auto custom-scroll")
+                                 div.flex.flex-col.gap-2
+                                    div.flex.justify-start    
+                                       button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-info hover:text-white") 1
+                                       button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-info hover:text-white") 2
+                                       button.btn.btn-active.text-white.border.border-border-light.bg-info.rounded-none(class="hover:bg-info hover:text-white") 3
+                                       button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-info hover:text-white") 4
+                                       button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-info hover:text-white") 5
+                                       button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-info hover:text-white") 6
+                                       button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-info hover:text-white") 7
+                                    div.flex.justify-center
+                                       button.btn.btn-active.text-white.border.border-border-light.bg-primary.rounded-none(class="hover:bg-primary hover:text-white") 1
+                                       button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-primary hover:text-white") 2
+                                       button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-primary hover:text-white") 3
+                                       button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-primary hover:text-white") 4
+                                       button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-primary hover:text-white") 5
+                                       button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-primary hover:text-white") 6
+                                    div.flex.justify-center     
+                                       button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-warning hover:text-white") 1
+                                       button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-warning hover:text-white") 2
+                                       button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-warning hover:text-white") 3
+                                       button.btn.btn-active.text-white.border.border-border-light.bg-warning.rounded-none(class="hover:bg-warning hover:text-white") 4
+                                       button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-warning hover:text-white") 5
+                                       button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-warning hover:text-white") 6
+                                       button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-warning hover:text-white") 7
+                                       button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-warning hover:text-white") 8
+                                    div.flex.justify-end
+                                       button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-secondary hover:text-white") 1
+                                       button.btn.btn-active.text-white.border.border-border-light.bg-secondary.rounded-none(class="hover:bg-secondary hover:text-white") 2
+                                       button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-secondary hover:text-white") 3
+                                       button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-secondary hover:text-white") 4
+                                       button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-secondary hover:text-white") 5
+                           div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                              button.btn.copyBtn 
+                                 i(data-feather="clipboard")
+                              pre(class="overflow-auto language-html custom-scroll")
+                                 code
+                                    |&lt;div class="overflow-auto custom-scroll"&gt;
+                                    |   &lt;div class="flex flex-col gap-2"&gt;
+                                    |      &lt;div class="flex justify-start"&gt;
+                                    |          &lt;button class="border rounded-none btn border-border-light text-title hover:bg-info hover:text-white"&gt; 1 &lt;/button&gt;
+                                    |          &lt;button class="border rounded-none btn border-border-light text-title hover:bg-info hover:text-white"&gt; 2 &lt;/button&gt;
+                                    |          &lt;button class="text-white border rounded-none btn btn-active border-border-light bg-info hover:bg-info hover:text-white"&gt; 3 &lt;/button&gt;
+                                    |          &lt;button class="border rounded-none btn border-border-light text-title hover:bg-primary hover:text-white"&gt; 4 &lt;/button&gt;
+                                    |          &lt;button class="border rounded-none btn border-border-light text-title hover:bg-primary hover:text-white"&gt; 5 &lt;/button&gt;
+                                    |          &lt;button class="border rounded-none btn border-border-light text-title hover:bg-primary hover:text-white"&gt; 6 &lt;/button&gt;
+                                    |          &lt;button class="border rounded-none btn border-border-light text-title hover:bg-primary hover:text-white"&gt; 7 &lt;/button&gt;
+                                    |      &lt;/div&gt;
+                                    |
+                                    |      &lt;div class="flex justify-center"&gt;
+                                    |          &lt;button class="text-white border rounded-none btn btn-active border-border-light bg-primary hover:bg-primary hover:text-white"&gt; 1 &lt;/button&gt;
+                                    |          &lt;button class="border rounded-none btn border-border-light text-title hover:bg-primary hover:text-white"&gt; 2 &lt;/button&gt;
+                                    |          &lt;button class="border rounded-none btn border-border-light text-title hover:bg-primary hover:text-white"&gt; 3 &lt;/button&gt;
+                                    |          &lt;button class="border rounded-none btn border-border-light text-title hover:bg-primary hover:text-white"&gt; 4 &lt;/button&gt;
+                                    |          &lt;button class="border rounded-none btn border-border-light text-title hover:bg-primary hover:text-white"&gt; 5 &lt;/button&gt;
+                                    |          &lt;button class="border rounded-none btn border-border-light text-title hover:bg-primary hover:text-white"&gt; 6 &lt;/button&gt;
+                                    |      &lt;/div&gt;
+                                    |
+                                    |      &lt;div class="flex justify-center"&gt;
+                                    |          &lt;button class="border rounded-none btn border-border-light text-title hover:bg-warning hover:text-white"&gt; 1 &lt;/button&gt;
+                                    |          &lt;button class="border rounded-none btn border-border-light text-title hover:bg-warning hover:text-white"&gt; 2 &lt;/button&gt;
+                                    |          &lt;button class="border rounded-none btn border-border-light text-title hover:bg-warning hover:text-white"&gt; 3 &lt;/button&gt;
+                                    |          &lt;button class="text-white border rounded-none btn btn-active border-border-light bg-warning hover:bg-warning hover:text-white"&gt; 4 &lt;/button&gt;
+                                    |          &lt;button class="border rounded-none btn border-border-light text-title hover:bg-warning hover:text-white"&gt; 5 &lt;/button&gt;
+                                    |          &lt;button class="border rounded-none btn border-border-light text-title hover:bg-warning hover:text-white"&gt; 6 &lt;/button&gt;
+                                    |          &lt;button class="border rounded-none btn border-border-light text-title hover:bg-warning hover:text-white"&gt; 7 &lt;/button&gt;
+                                    |          &lt;button class="border rounded-none btn border-border-light text-title hover:bg-warning hover:text-white"&gt; 8 &lt;/button&gt;
+                                    |      &lt;/div&gt;
+                                    |
+                                    |      &lt;div class="flex justify-end"&gt;
+                                    |          &lt;button class="border rounded-none btn border-border-light text-title hover:bg-secondary hover:text-white"&gt; 1 &lt;/button&gt;
+                                    |          &lt;button class="text-white border rounded-none btn btn-active border-border-light bg-secondary hover:bg-secondary hover:text-white"&gt; 2 &lt;/button&gt;
+                                    |          &lt;button class="border rounded-none btn border-border-light text-title hover:bg-secondary hover:text-white"&gt; 3 &lt;/button&gt;
+                                    |          &lt;button class="border rounded-none btn border-border-light text-title hover:bg-secondary hover:text-white"&gt; 4 &lt;/button&gt;
+                                    |          &lt;button class="border rounded-none btn border-border-light text-title hover:bg-secondary hover:text-white"&gt; 5 &lt;/button&gt;
+                                    |     &lt;/div&gt;
+                                    |   &lt;/div&gt;
+                                    |&lt;/div&gt;
+
+
+            // Page Body End 
+            +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+
+      include ../../components/customizer
+
+   include ../../layout/footer-files

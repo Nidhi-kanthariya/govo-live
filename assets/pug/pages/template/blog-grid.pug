@@ -1,0 +1,362 @@
+//- sidebar
+-var sidebar = true;
+
+//- feathet
+-var feather= true;
+
+//- customSelect
+-var customSelect= true;
+
+//- customizer
+-var customizer=true;
+
+//-  macy
+-var macy= true;
+
+//- Breadcrumbs
+-var pageTitle="Blog Grid";
+-var breadcrumb=['Blog','Blog Grid'];
+
+//- json
+include ../../data/all-data
+
+//- mixin
+include ../../mixin/mixin
+
+doctype html
+html(lang='en')  
+   include ../../layout/header-files 
+   body(dir="ltr" class="unique-skin") 
+      main.page-wrapper
+         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+            include ../../layout/header/header     
+            // Sidebar Start 
+            div.page-sidebar.sidebar-dark.unique-sidebar
+               include ../../layout/unique
+            // Sidebar End
+
+            // Page Body Start 
+            div.page-body
+               div.grid.grid-cols-12.gap-card-gap
+                  div.col-span-3(class="xl:col-span-4 lg:col-span-12")
+                     div.card.sticky.top-0
+                        div.card-header.border-b-0
+                           div.search-box.relative
+                              input(class="rounded-full bg-gray-light w-full py-[.6875rem] pl-[1.5625rem] pr-[3.4375rem] text-xs font-semibold text-title" placeholder="Type to Search..." type="search")       
+                              +SVG_ICON("Search","w-6 h-6 stroke-title top-1/2 -translate-y-1/2 right-[1.5625rem] absolute")
+                        div.card-body.flex.flex-col.gap-card-space                                  
+                           div(class="p-3 border first:rounded-tl-none border-light rounded-5")
+                              h2(class="mb-4 font-bold") Categories
+                              ul.flex.flex-col.gap-2 
+                                 li.flex.items-center.justify-between(class="p-2 text-xs text-content rounded-5 group hover:bg-primary") 
+                                    a(href="blog-grid.html" class="group-hover:text-white")  Web designer Jobs
+                                    span(class="group-hover:text-white text-content") 39   
+                                 li.flex.items-center.justify-between(class="p-2 text-xs text-content rounded-5 group hover:bg-primary") 
+                                    a(href="blog-grid.html" class="group-hover:text-white")  Engineering Jobs 
+                                    span(class="group-hover:text-white text-content") 25
+                                 li.flex.items-center.justify-between(class="p-2 text-xs text-content rounded-5 group hover:bg-primary") 
+                                    a(href="blog-grid.html" class="group-hover:text-white")  Mainframe Jobs 
+                                    span(class="group-hover:text-white text-content") 15
+                                 li.flex.items-center.justify-between(class="p-2 text-xs text-content rounded-5 group hover:bg-primary") 
+                                    a(href="blog-grid.html" class="group-hover:text-white")  Legal Jobs  
+                                    span(class="group-hover:text-white text-content") 51
+                                 li.flex.items-center.justify-between(class="p-2 text-xs text-content rounded-5 group hover:bg-primary") 
+                                    a(href="blog-grid.html" class="group-hover:text-white")  Government Jobs 
+                                    span(class="group-hover:text-white text-content") 84
+                                 li.flex.items-center.justify-between(class="p-2 text-xs text-content rounded-5 group hover:bg-primary") 
+                                    a(href="blog-grid.html" class="group-hover:text-white") R & D Jobs 
+                                    span(class="group-hover:text-white text-content") 54
+                                 li.flex.items-center.justify-between(class="p-2 text-xs text-content rounded-5 group hover:bg-primary") 
+                                    a(href="blog-grid.html" class="group-hover:text-white") PSL Jobs 
+                                    span(class="group-hover:text-white text-content") 54 
+
+                           div(class="p-3 border first:rounded-tl-none border-light rounded-5")
+                              h2(class="mb-4 font-bold") Tags
+                              div(class="flex flex-wrap gap-3")
+                                 button.btn.btn-outline.btn-primary.btn-sm.text-primary #jobs 
+                                 button.btn.btn-outline.btn-secondary.btn-sm.text-secondary #business
+                                 button.btn.btn-outline.btn-success.btn-sm.text-success #work   
+                                 button.btn.btn-outline.btn-secondary.btn-sm.text-secondary #career
+                                 button.btn.btn-outline.btn-primary.btn-sm.text-primary #hiring 
+                                 button.btn.btn-outline.btn-secondary.btn-sm.text-secondary #photography
+                                 button.btn.btn-outline.btn-success.btn-sm.text-success #jobSearch
+
+                           div(class="p-3 border first:rounded-tl-none border-light rounded-5")
+                              h2(class="mb-4 font-bold") Latest Blogs
+                              ul.flex.flex-col.gap-1 
+                                 li(class=" pt-[.8125rem]  first:pt-0 first:mt-0 first:border-none")                                 
+                                    a.flex.items-center.gap-3(href="blog-grid.html" class="w-[calc(100%_-_0rem)] xl:gap-2")  
+                                       div.avatar  
+                                          div.w-10.rounded-full(class="xl:w-9") 
+                                             img(src='../../assets/images/avatar/25.jpg' alt='avatar')
+                                       div(class="w-[calc(100%_-_3.125rem)]")
+                                          h3.text-xs.font-bold.text-primary(class="leading-none lg:text-2xs") Angela R. Lear
+                                          span.text-content.mt-1.line-clamp-1 War taught me that not everything is glamorous.
+                                 li(class=" pt-[.8125rem]  first:pt-0 first:mt-0 first:border-none")                                 
+                                    a.flex.items-center.gap-3(href="blog-grid.html" class="w-[calc(100%_-_0rem)] xl:gap-2")  
+                                       div.avatar
+                                          div.w-10.rounded-full(class="xl:w-9")
+                                             img(src='../../assets/images/avatar/15.jpg' alt='avatar')
+                                       div(class="w-[calc(100%_-_3.125rem)]")
+                                          h3.text-xs.font-bold.text-primary(class="leading-none lg:text-2xs") Marjorie W. Martin
+                                          span.text-content.mt-1.line-clamp-1 My aim is to make the poor look rich and the rich look poor.
+                                 li(class=" pt-[.8125rem]  first:pt-0 first:mt-0 first:border-none")                                 
+                                    a.flex.items-center.gap-3(href="blog-grid.html" class="w-[calc(100%_-_0rem)] xl:gap-2")  
+                                       div.avatar
+                                          div.w-10.rounded-full(class="xl:w-9")
+                                             img(src='../../assets/images/avatar/6.jpg' alt='avatar')
+                                       div(class="w-[calc(100%_-_3.125rem)]")
+                                          h3.text-xs.font-bold.text-primary(class="leading-none lg:text-2xs") Russell P. Renfrew
+                                          span.text-content.mt-1.line-clamp-1 I think it would rob her of something.  
+                                 li(class=" pt-[.8125rem]  first:pt-0 first:mt-0 first:border-none")                                 
+                                    a.flex.items-center.gap-3(href="blog-grid.html" class="w-[calc(100%_-_0rem)] xl:gap-2")  
+                                       div.avatar
+                                          div.w-10.rounded-full(class="xl:w-9")
+                                             img(src='../../assets/images/avatar/27.jpg' alt='avatar')
+                                       div(class="w-[calc(100%_-_3.125rem)]")
+                                          h3.text-xs.font-bold.text-primary(class="leading-none lg:text-2xs") Kevin A. Ek
+                                          span.text-content.mt-1.line-clamp-1 My aim is to make the poor look rich and the rich look poor.  
+
+                           div(class="p-3 border first:rounded-tl-none border-light rounded-5")
+                              div(class="mb-[1.125rem]")
+                                 h2(class="mb-2 font-bold") Subscribe
+                                 p(class="text-xs text-content") "To get more detail for new types of blogs"
+                              form(class="m-0 theme-form")
+                                 input(type="email" id="Email" placeholder="Enter your email" Name="Email" required)
+                                 button(class="w-full lg:!w-auto p-2 !mb-0 text-white rounded bg-primary hover:drop-shadow-lg") Get Started
+
+                  div.col-span-9(class="xl:col-span-8 lg:col-span-12")
+                     div.grid.grid-cols-12.gap-card-gap.w-full.masonryComponent
+                        div.col-span-4(class="2lg:col-span-6 sm:col-span-12 masonryItem")
+                           div.card.p-0.group
+                              div.blog-img.overflow-hidden.card-image(class="rounded-tr-[0.625rem] rounded-tl-[0.625rem]")
+                                 img(src='../../assets/images/blog/blog-contains.webp' class="duration-700 ease-in scale-100 group-hover:scale-125" alt='blog-img')
+                              div.card-body.px-3.flex.flex-col.gap-4
+                                 div.flex.justify-between.items-center
+                                    div.flex.items-start.justify-between.gap-2.items-center(class="pt-[13px] first:pt-0 first:mt-0 first:border-none")  
+                                       div.avatar
+                                          div.w-10.rounded-full(class="xl:w-9")
+                                             img(src='../../assets/images/avatar/1.jpg' alt='avatar')
+                                       div
+                                          a(href="blog-grid.html")
+                                             p.text-title.font-bold Mitchel P. Lawyer
+                                          span.text-content Feb 6,2023
+                                    i(data-feather="more-vertical" class="h-5 stroke-content")
+                                 div
+                                    h5(class="mb-2 font-bold") Cracking The Code 
+                                    p(class="text-content") Lining hemline knee burgundy satin finish concealed 
+                                       |small buttons rayon. Wardrobe stylish fitted long sleeves pleats the  
+                                       a(href="blog-detail.html" class="text-secondary hover:underline").decoration-1 Read more...
+                                 div.pb-3
+                                    div.divider.w-full
+                                    div.flex.items-center.justify-between.mt-3
+                                       span(class="text-content") 8k views
+                                       i(data-feather="heart" class="h-5 stroke-secondary")
+
+                        div.col-span-4(class="2lg:col-span-6 sm:col-span-12 masonryItem")  
+                           div.card.p-0.group
+                              div.blog-img.overflow-hidden(class="rounded-tr-[0.625rem] rounded-tl-[0.625rem]")
+                                 img(src='../../assets/images/blog/robot.webp' class="duration-700 ease-in scale-100 group-hover:scale-125" alt='blog-img')
+                              div.card-body.px-3.flex.flex-col.gap-4
+                                 div.flex.justify-between.items-center
+                                    div.flex.items-start.justify-between.gap-2.items-center(class="pt-[13px] first:pt-0 first:mt-0 first:border-none")
+                                       div.avatar 
+                                          div.w-10.rounded-full(class="xl:w-9")
+                                             img(src='../../assets/images/avatar/5.jpg' alt='avatar')
+                                       div
+                                          a(href="blog-grid.html")
+                                             p.text-title.font-bold Amy A. Servants
+                                          span.text-content Feb 2,2023
+                                    i(data-feather="more-vertical" class="h-5 stroke-content")
+                                 div 
+                                    h5(class="mb-2 font-bold") Take The Stress Out Of Code
+                                    p(class="text-content") This could be used to hide someone's true
+                                       | invasion of the Soviet Union was given the code name of Barbarossa  
+                                       a(href="blog-detail.html" class="text-secondary hover:underline").decoration-1 Read more...
+                                 div.pb-3
+                                    div.divider.w-full 
+                                    div.flex.items-center.justify-between.mt-3  
+                                       span(class="text-content") 2k views
+                                       i(data-feather="heart" class="h-5 stroke-secondary")
+                        div.col-span-4(class="2lg:col-span-6 sm:col-span-12 masonryItem")  
+                           div.card.p-0.group
+                              div.blog-img.overflow-hidden(class="rounded-tr-[0.625rem] rounded-tl-[0.625rem]")
+                                 img(src='../../assets/images/blog/blog-contains3.webp' class="duration-700 ease-in scale-100 group-hover:scale-125" alt='blog-contains3')
+                              div.card-body.px-3.flex.flex-col.gap-4
+                                 div.flex.justify-between.items-center
+                                    div.flex.items-start.justify-between.gap-2.items-center(class="pt-[13px] first:pt-0 first:mt-0 first:border-none")
+                                       div.avatar 
+                                          div.w-10.rounded-full(class="xl:w-9")
+                                             img(src='../../assets/images/avatar/2.jpg' alt='avatar')
+                                       div
+                                          a(href="blog-grid.html")
+                                             p.text-title.font-bold Keith K. Levitt 
+                                          span.text-content Jan 30,2023
+                                    i(data-feather="more-vertical" class="h-5 stroke-content")
+                                 div 
+                                    h5(class="mb-2 font-bold") Why I Hate
+                                    p(class="text-content") We’ll show you how Duads BI lets you use all of
+                                       | connections to inject data into R and then visualize and interact with the   
+                                       a(href="blog-detail.html" class="text-secondary hover:underline").decoration-1 Read more...
+                                 div.pb-3
+                                    div.divider.w-full 
+                                    div.flex.items-center.justify-between.mt-3  
+                                       span(class="text-content") 12k views
+                                       i(data-feather="heart" class="h-5 stroke-secondary")
+                        div.col-span-4(class="2lg:col-span-6 sm:col-span-12 masonryItem")  
+                           div.card.p-0.group
+                              div.blog-img.overflow-hidden(class="rounded-tr-[0.625rem] rounded-tl-[0.625rem]")
+                                 img(src='../../assets/images/blog/blog-contains5.webp' class="duration-700 ease-in scale-100 group-hover:scale-125" alt='blog-contains5')
+                              div.card-body.px-3.flex.flex-col.gap-4
+                                 div.flex.justify-between.items-center
+                                    div.flex.items-start.justify-between.gap-2.items-center(class="pt-[13px] first:pt-0 first:mt-0 first:border-none")
+                                       div.avatar 
+                                          div.w-10.rounded-full(class="xl:w-9")
+                                             img(src='../../assets/images/avatar/17.jpg' alt='avatar')
+                                       div
+                                          a(href="blog-grid.html")
+                                             p.text-title.font-bold Mitchel P. Lawyer  
+                                          span.text-content Jan 25,2023  
+                                    i(data-feather="more-vertical" class="h-5 stroke-content")
+                                 div 
+                                    h5(class="mb-2 font-bold") Take The Stress Out Of Code
+                                    p(class="text-content")  We’ll show you how Duads BI lets you use all of
+                                       | connections to inject data into R and then visualize and interact with the
+                                       a(href="blog-detail.html" class="text-secondary hover:underline").decoration-1 Read more...
+                                 div.pb-3
+                                    div.divider.w-full 
+                                    div.flex.items-center.justify-between.mt-3  
+                                       span(class="text-content") 25k views
+                                       i(data-feather="heart" class="h-5 stroke-secondary")
+                        div.col-span-4(class="2lg:col-span-6 sm:col-span-12 masonryItem")  
+                           div.card.p-0.group
+                              div.blog-img.overflow-hidden(class="rounded-tr-[0.625rem] rounded-tl-[0.625rem]")
+                                 img(src='../../assets/images/blog/blog-contains6.webp' class="duration-700 ease-in scale-100 group-hover:scale-125" alt='blog-contains6')
+                              div.card-body.px-3.flex.flex-col.gap-4
+                                 div.flex.justify-between.items-center
+                                    div.flex.items-start.justify-between.gap-2.items-center(class="pt-[13px] first:pt-0 first:mt-0 first:border-none")
+                                       div.avatar 
+                                          div.w-10.rounded-full(class="xl:w-9")
+                                             img(src='../../assets/images/avatar/3.jpg' alt='avatar')
+                                       div
+                                          a(href="blog-grid.html")
+                                             p.text-title.font-bold Katherine W. McWilliams  
+                                          span.text-content Jan 5,2023
+                                    i(data-feather="more-vertical" class="h-5 stroke-content")
+                                 div 
+                                    h5(class="mb-2 font-bold") The Death Of Avoid It Code 
+                                    p(class="text-content")  Are you wondering how to get a text short code and get started with 
+                                       | reaching your customers in new SMS into your short steps.  
+                                       a(href="blog-detail.html" class="text-secondary hover:underline").decoration-1 Read more...
+                                 div.pb-3
+                                    div.divider.w-full 
+                                    div.flex.items-center.justify-between.mt-3  
+                                       span(class="text-content") 18k views
+                                       i(data-feather="heart" class="h-5 stroke-secondary")
+                        div.col-span-4(class="2lg:col-span-6 sm:col-span-12 masonryItem")  
+                           div.card.p-0.group
+                              div.blog-img.overflow-hidden(class="rounded-tr-[0.625rem] rounded-tl-[0.625rem]")
+                                 img(src='../../assets/images/blog/blog-contains7.webp' class="duration-700 ease-in scale-100 group-hover:scale-125" alt='blog-contains7')
+                              div.card-body.px-3.flex.flex-col.gap-4
+                                 div.flex.justify-between.items-center
+                                    div.flex.items-start.justify-between.gap-2.items-center(class="pt-[13px] first:pt-0 first:mt-0 first:border-none")
+                                       div.avatar 
+                                          div.w-10.rounded-full(class="xl:w-9")
+                                             img(src='../../assets/images/avatar/13.jpg' alt='avatar')
+                                       div
+                                          a(href="blog-grid.html")
+                                             p.text-title.font-bold Mitchel P. Lawyer  
+                                          span.text-content Jan 1,2023
+                                    i(data-feather="more-vertical" class="h-5 stroke-content")
+                                 div 
+                                    h5(class="mb-2 font-bold") The Biggest Lie In The Code 
+                                    p(class="text-content")  I think programming plays a huge role in our lives,
+                                       | and every kid should definitely be taught programming at some point during their education 
+                                       a(href="blog-detail.html" class="text-secondary hover:underline").decoration-1 Read more...
+                                 div.pb-3
+                                    div.divider.w-full 
+                                    div.flex.items-center.justify-between.mt-3  
+                                       span(class="text-content") 6k views
+                                       i(data-feather="heart" class="h-5 stroke-secondary")
+                        div.col-span-4(class="2lg:col-span-6 sm:col-span-12 masonryItem")  
+                           div.card.p-0.group
+                              div.blog-img.overflow-hidden(class="rounded-tr-[0.625rem] rounded-tl-[0.625rem]")
+                                 img(src='../../assets/images/blog/blog-contains8.webp' class="duration-700 ease-in scale-100 group-hover:scale-125" alt='blog-contains8')
+                              div.card-body.px-3.flex.flex-col.gap-4
+                                 div.flex.justify-between.items-center
+                                    div.flex.items-start.justify-between.gap-2.items-center(class="pt-[13px] first:pt-0 first:mt-0 first:border-none")
+                                       div.avatar 
+                                          div.w-10.rounded-full(class="xl:w-9")
+                                             img(src='../../assets/images/avatar/5.jpg' alt='avatar')
+                                       div
+                                          a(href="blog-grid.html")
+                                             p.text-title.font-bold Anna G. Proas  
+                                          span.text-content Dec 31, 2022
+                                    i(data-feather="more-vertical" class="h-5 stroke-content")
+                                 div 
+                                    h5(class="mb-2 font-bold") Old School Coded 
+                                    p(class="text-content")  In particular I learned about our mental and physical limits,
+                                       | the nature of stress and anxiety, and most importantly, how to take care of myself so that I could stop this happening again.
+                                       a(href="blog-detail.html" class="text-secondary hover:underline").decoration-1 Read more...
+                                 div.pb-3
+                                    div.divider.w-full 
+                                    div.flex.items-center.justify-between.mt-3  
+                                       span(class="text-content") 25k views
+                                       i(data-feather="heart" class="h-5 stroke-secondary")
+                        div.col-span-4(class="2lg:col-span-6 sm:col-span-12 masonryItem")  
+                           div.card.p-0.group
+                              div.blog-img.overflow-hidden(class="rounded-tr-[0.625rem] rounded-tl-[0.625rem]")
+                                 img(src='../../assets/images/blog/blog-contains9.webp' class="duration-700 ease-in scale-100 group-hover:scale-125" alt='blog-contains9')
+                              div.card-body.px-3.flex.flex-col.gap-4
+                                 div.flex.justify-between.items-center
+                                    div.flex.items-start.justify-between.gap-2.items-center(class="pt-[13px] first:pt-0 first:mt-0 first:border-none")
+                                       div.avatar 
+                                          div.w-10.rounded-full(class="xl:w-9")
+                                             img(src='../../assets/images/avatar/13.jpg' alt='avatar')
+                                       div
+                                          a(href="blog-grid.html")
+                                             p.text-title.font-bold Ronald M. Spelean  
+                                          span.text-content Dec 27, 2022 
+                                    i(data-feather="more-vertical" class="h-5 stroke-content")
+                                 div 
+                                    h5(class="mb-2 font-bold") Take The Stress Out Of Code 
+                                    p(class="text-content")  Complexity can often come through making the quick fix, taking the shortcut and creating technical debt. 
+                                       | Technical debt is another name for complexity because technical debt makes code  and more difficult to work with.  
+                                       a(href="blog-detail.html" class="text-secondary hover:underline").decoration-1 Read more...
+                                 div.pb-3
+                                    div.divider.w-full 
+                                    div.flex.items-center.justify-between.mt-3  
+                                       span(class="text-content") 7k views
+                                       i(data-feather="heart" class="h-5 stroke-secondary")
+                        div.col-span-4(class="2lg:col-span-6 sm:col-span-12 masonryItem")  
+                           div.card.p-0.group
+                              div.blog-img.overflow-hidden(class="rounded-tr-[0.625rem] rounded-tl-[0.625rem]")
+                                 img(src='../../assets/images/blog/blog-contains10.webp' class="duration-700 ease-in scale-100 group-hover:scale-125" alt='blog-contains10')
+                              div.card-body.px-3.flex.flex-col.gap-4
+                                 div.flex.justify-between.items-center
+                                    div.flex.items-start.justify-between.gap-2.items-center(class="pt-[13px] first:pt-0 first:mt-0 first:border-none")
+                                       div.avatar 
+                                          div.w-10.rounded-full(class="xl:w-9")
+                                             img(src='../../assets/images/avatar/20.jpg' alt='avatar')
+                                       div
+                                          a(href="blog-grid.html")
+                                             p.text-title.font-bold Shannon T. Clemons    
+                                          span.text-content Dec 5, 2022
+                                    i(data-feather="more-vertical" class="h-5 stroke-content")
+                                 div 
+                                    h5(class="mb-2 font-bold") Myths About Code
+                                    p(class="text-content")  No! All of the paragraphs in the  are written by humans,
+                                       | not computers. thought about using computers to generate the paragraphs, but they weren't very. 
+                                       a(href="blog-detail.html" class="text-secondary hover:underline").decoration-1 Read more...
+                                 div.pb-3
+                                    div.divider.w-full 
+                                    div.flex.items-center.justify-between.mt-3  
+                                       span(class="text-content") 28k views
+                                       i(data-feather="heart" class="h-5 stroke-secondary")
+
+
+            // Page Body End 
+            +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+      include ../../components/customizer
+
+   include ../../layout/footer-files

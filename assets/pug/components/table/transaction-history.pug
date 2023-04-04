@@ -1,0 +1,31 @@
+//- ========================
+//-  Transaction History
+//- =======================
+table.table 
+   thead 
+      tr 
+         each head in TRANSACTION_HISTORY.header
+            th=  head
+   tbody
+      each bodyData in TRANSACTION_HISTORY.body
+         tr
+            td(class="min-w-[11.125rem]") 
+               div.flex.items-center(class="gap-[.5625rem]")
+                  img(class="w-10 h-10 rounded-full" src=`../../assets/images/product/${bodyData.image}`, alt=`${bodyData.title}`) 
+                  div
+                     h4(class="text-xs font-semibold text-title")=bodyData.title
+                     span(class="block mt-1 font-semibold text-2xs text-content")=bodyData.subTitle  
+
+            td(class="min-w-[7.5rem]") 
+               div 
+                  h4(class="text-xs font-semibold text-title")= bodyData.date  
+                  span(class="block mt-1 font-semibold text-2xs text-content")=bodyData.subTitle  
+            td(class="min-w-[6.25rem]") 
+               h4(class=`text-xs font-semibold text-${bodyData.status}`)= bodyData.amount
+            td(class="min-w-[5.3125rem]") 
+               h4(class="text-xs font-semibold uppercase text-title")=bodyData.invoice
+            td(class="min-w-[4.6875rem]") 
+               div(class="progress-bar progress-sm max-w-[3.375rem]")
+                  div(class=`bg-${bodyData.status}` style=`width:${bodyData.pgres}%`)  
+            td(class="min-w-[6.25rem]") 
+               h4(class="text-xs font-semibold text-title")= bodyData.payment

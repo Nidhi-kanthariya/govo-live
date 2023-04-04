@@ -1,0 +1,30 @@
+
+//- feather
+-var feather= true;
+
+//- custom select
+-var customSelect= true;
+
+//- customizer  
+-var customizer=true;
+
+doctype html
+html(lang='en')
+    include ../../layout/header-files
+    body(dir="ltr" class="unique-skin")
+        main.page-wrapper
+            // Page Body Start
+            div.page-body(class="h-[100vh]")
+                div.flex.items-center.flex-col.justify-center.text-center.common-animate-main
+                    div(class="w-full relative max-w-[35%] 4xl:max-w-[40%] xl:max-w-[48%] lg:max-w-[55%] md:max-w-[68%] sm:max-w-[75%] 2sm:max-w-[80%]")
+                        img(src="../../assets/images/svg/404.svg" class="w-full" alt="404")
+                        img(src="../../assets/images/svg/opps.svg" class="common-animate ops-svg animate__animated animate__infinite animate__shakeY animate__slower")
+                    div(class="mt-3 mb-4")
+                        h1(class="mb-2 font-extrabold text-7xl text-primary lg:text-4xl sm:text-lg") Page Not Found
+                        p(class="font-normal text-content lg:text-base sm:text-xs ") The page you are looking for not available! &#128557;
+                    a(class="p-2 text-white rounded bg-dark hover:drop-shadow-lg" href="index.html") Back to home 
+            // Page Body End
+
+        include ../../components/customizer
+
+    include ../../layout/footer-files

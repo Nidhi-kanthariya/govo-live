@@ -1,0 +1,30 @@
+/*=====================
+    Stack CSS
+  ==========================*/
+@layer components {
+    .stack {
+        @apply inline-grid;
+
+        >.stack-item {
+            @apply grid w-32 h-16 col-start-1 row-start-1;
+
+            &:nth-child(1) {
+                @apply translate-y-0 z-[3];
+            }
+            &:nth-child(2) {
+                @apply translate-y-2 scale-95 opacity-80 z-[2];
+            }
+            &:nth-child(3) {
+                @apply translate-y-4 scale-90 opacity-60 z-[1];
+            }
+
+            &.card{
+                .card-body{
+                    .card-title{
+                        @apply font-bold;
+                    }
+                }
+            }
+        }
+    }
+}

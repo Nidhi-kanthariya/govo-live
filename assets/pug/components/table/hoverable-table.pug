@@ -1,0 +1,18 @@
+//- ========================
+//- Hoverable table    
+//- =======================
+
+table.table.equal-space.table-hover
+    thead 
+        tr 
+            each head in HOVERABLE_TABLE.header
+                th=  head
+    tbody
+        each bodyData,index in HOVERABLE_TABLE.body
+            tr(class="hover:bg-primary-light hover:text-title")
+                td(class="min-w-[1.25rem]")=index+1
+                td(class="min-w-[8.125rem]")=bodyData.name
+                td(class="min-w-[8.125rem]")=bodyData.website
+                td(class="min-w-[8.125rem]")=bodyData.company
+                td(class="min-w-[8.625rem]")=bodyData.birthday
+

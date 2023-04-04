@@ -1,0 +1,341 @@
+/*=====================
+  Sidebar CSS
+==========================*/
+@layer components {
+  .page-sidebar {
+    /* Unique Sidebar */
+    &.unique-sidebar {
+      @apply 2xl:-left-[62.4375rem] rtl:2xl:-right-[62.4375rem] fixed z-10 top-0 bottom-0 left-0 w-[15.8125rem] 4xl:w-[14.375rem] transition-all duration-300 rtl:right-0 rtl:left-unset;
+
+      &.hide-show-sidebar {
+        @apply left-[-62.4375rem] 2xl:left-0 rtl:right-[-62.4375rem] rtl:2xl:right-0 rtl:left-unset rtl:2xl:left-unset;
+        ~.page-footer{
+          @apply !w-full;
+        }
+      }
+      .sidebar {
+        .logo-wrapper {
+          @apply border-b border-border-dark px-[1.4375rem] 4xl:px-[1.125rem] flex items-center justify-between pt-[1.0625rem] pb-5;
+          img {
+            @apply w-[5.6875rem] 4xl:w-[4.6875rem] h-auto;
+          }
+        }
+        .search-wrapper {
+          @apply px-[1.4375rem] 4xl:p-[1.125rem] pt-[1.25rem] 4xl:pt-[1.125rem];
+          .search-box {
+            @apply relative;
+            .search {
+              @apply py-3 4xl:py-2 pl-11 pr-3 w-full  rounded-5;
+            }
+            svg {
+              @apply absolute top-1/2 left-3 -translate-y-1/2;
+            }
+          }
+        }
+        .sidebar-main {
+          @apply p-[.625rem];
+          .sidebar-links {
+            @apply px-[1.375rem] py-[.9375rem] h-[calc(100vh_-_9.625rem)] overflow-auto;
+            li {
+              @apply first:mt-0;
+            }
+            .title {
+              @apply mt-[1.5625rem] mb-[.625rem] uppercase text-title text-3xs font-extrabold;
+            }
+            .sidebar-list {
+              @apply py-[.5rem];
+              span {
+                @apply flex items-center gap-3 text-xs text-title leading-none;
+                svg {
+                  @apply w-5 h-5 stroke-title;
+                }
+              }
+              a {
+                @apply text-xs justify-between flex items-center text-content font-semibold;
+                > svg {
+                  @apply w-4 h-4 stroke-title;
+                }
+              }
+              .sidebar-submenu {
+                @apply hidden flex-col gap-[.5rem] pl-[1.375rem] mt-[.9375rem] border-l-2 border-border-dark  ml-[.5625rem];
+
+                a {
+                  @apply text-xs text-content font-medium;
+                }
+              }
+              &.active {
+                .sidebar-submenu {
+                  @apply flex;
+                }
+                a {
+                  > svg {
+                    @apply rotate-90;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    /* Dark Sidebar */
+    &.sidebar-dark {
+      &.unique-sidebar {
+        @apply bg-sidebar-dark;
+        .logo-wrapper {
+          svg {
+            @apply stroke-white;
+          }
+        }
+        .search-box {
+          @apply relative;
+          .search {
+            @apply bg-sidebar-dark2 text-content2;
+          }
+          svg {
+            @apply stroke-content2;
+          }
+        }
+        .sidebar-main {
+          .sidebar-links {
+            .title {
+              @apply text-content2;
+            }
+            .sidebar-list {
+              span {
+                @apply text-content2;
+                svg {
+                  @apply stroke-content2;
+                }
+              }
+              > a {
+                @apply text-content2;
+                > svg {
+                  @apply stroke-content2;
+                }
+              }
+              .submenu-wrapper {
+                > h4 {
+                  @apply text-content2;
+                  svg {
+                    @apply stroke-content2;
+                  }
+                }
+              }
+              .sidebar-submenu {
+                li {
+                  a {
+                    @apply text-content2;
+                  }
+                }
+              }
+              &.active {
+                span {
+                  @apply text-white;
+                  svg {
+                    @apply stroke-white;
+                  }
+                }
+                > a {
+                  @apply text-white;
+                  > svg {
+                    @apply stroke-white;
+                  }
+                }
+                .submenu-wrapper {
+                  > h4 {
+                    @apply text-white;
+                    svg {
+                      @apply stroke-white;
+                    }
+                  }
+                }
+              }
+              .sidebar-submenu {
+                li {
+                  a {
+                    &.active {
+                      @apply text-white;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    /* Friendly Sidebar */
+    &.friendly-sidebar {
+      @apply p-[.8125rem] 3xl:p-[.625rem] xl:rounded-tl-none xl:rounded-bl-none xl:top-0 xl:bottom-0 xl:left-[-62.4375rem] left-body-space2 rounded-[.625rem] bottom-[2.1875rem] top-[7.375rem] w-auto;
+      &.hide-show-sidebar {
+        @apply xl:left-0;
+      }
+      &.sidebar-dark {
+        @apply bg-sidebar-dark;
+      }
+      .sidebar {
+        .sidebar-main {
+          @apply p-[.0625rem];
+          .sidebar-links {
+            @apply p-[.625rem] gap-[1.6875rem] 3xl:gap-[1.25rem] flex flex-col 3xl:h-[calc(100vh_-_10.9375rem)] xl:h-[calc(100vh_-_4.1875rem)] h-[calc(100vh_-_11.25rem)];
+
+            .sidebar-list {
+              @apply static py-[.75rem] 3xl:py-[.6875rem] 3xl:px-[.75rem] 5xl:px-[1rem] px-[1.3125rem] bg-sidebar-dark3 rounded-5;
+
+              .submenu-wrapper {
+                @apply absolute min-w-[10.625rem] invisible top-0 bottom-0 3xl:left-[--0.5rem] 5xl:left-[.4375rem] left-[1.25rem] translate-x-[6.25rem]  transition-all duration-300 opacity-0 m-0 p-[.9375rem] rounded-5 z-10 bg-sidebar-dark3;
+                .sidebar-submenu {
+                  @apply flex border-white-light;
+                  li {
+                    &:hover {
+                      a {
+                        @apply text-white;
+                      }
+                    }
+                  }
+                }
+              }
+              &:hover {
+                .sidebar-link {
+                  svg {
+                    @apply stroke-white;
+                  }
+                }
+                .submenu-wrapper {
+                  @apply block visible opacity-100;
+                  .sidebar-submenu {
+                    @apply border-white-light;
+                  }
+                }
+              }
+              span {
+                svg {
+                  @apply 3xl:w-[1.375rem] 3xl:h-[1.375rem] 5xl:w-[1.4375rem] 5xl:h-[1.4375rem] w-[1.625rem] h-[1.625rem];
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    /* Minimal Sidebar */
+    &.minimal-sidebar {
+      @apply bg-white shadow-sidebar;
+      .sidebar {
+        .logo-wrapper {
+          @apply border-none;
+          svg {
+            @apply stroke-title;
+          }
+        }
+        .sidebar-main {
+          .sidebar-links {
+            @apply h-[calc(100vh_-_6.1875rem)];
+            .sidebar-list {
+              span {
+                @apply text-title;
+                svg {
+                  @apply stroke-title;
+                }
+              }
+              .sidebar-submenu {
+                @apply border-primary;
+                a {
+                  @apply text-title hover:text-primary;
+                }
+              }
+              &.active,
+              &:hover {
+                span {
+                  @apply text-primary;
+                  svg {
+                    @apply stroke-primary;
+                  }
+                }
+                > a {
+                  svg {
+                    @apply stroke-primary;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    /* Material Sidebar */
+    &.material-sidebar {
+      @apply -left-[62.4375rem];
+      &.hide-show-sidebar {
+        @apply left-0;
+      }
+      &.sidebar-dark {
+        @apply bg-header-dark;
+        .sidebar {
+          @apply bg-white-light;
+          .search-box {
+            .search {
+              @apply bg-header-dark;
+            }
+          }
+          .logo-wrapper {
+            @apply border-content;
+          }
+          .search-box {
+            .search {
+              @apply text-white;
+            }
+            svg {
+              @apply stroke-white;
+            }
+          }
+          .sidebar-main {
+            .sidebar-links {
+              .title {
+                @apply text-white;
+              }
+              .sidebar-list {
+                > a {
+                  > svg {
+                    @apply stroke-content;
+                  }
+                }
+                span {
+                  @apply text-content;
+                  svg {
+                    @apply stroke-content;
+                  }
+                }
+                &.active {
+                  > a {
+                    > svg {
+                      @apply stroke-white;
+                    }
+                  }
+                  span {
+                    @apply text-white;
+                    svg {
+                      @apply stroke-white;
+                    }
+                  }
+                }
+                .sidebar-submenu {
+                  @apply border-content;
+                  li {
+                    a {
+                      @apply text-content;
+                      &.active {
+                        @apply text-white;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

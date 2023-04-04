@@ -1,0 +1,584 @@
+//- sidebar
+-var sidebar = true;
+
+//- feathet
+-var feather= true;
+
+//- customSelect
+-var customSelect= true;
+
+//- customizer
+-var customizer=true;
+
+//- prism
+-var prism=true;
+
+//- Breadcrumbs
+-var pageTitle="Tabs";
+-var breadcrumb=['Bonus Ui','Tabs'];
+
+//- json
+include ../../data/all-data
+
+//- mixin
+include ../../mixin/mixin
+
+doctype html
+html(lang='en')  
+   include ../../layout/header-files 
+   body(dir="ltr" class="unique-skin")
+      main.page-wrapper
+         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+            include ../../layout/header/header     
+            // Sidebar Start 
+            div.page-sidebar.sidebar-dark.unique-sidebar
+               include ../../layout/unique
+            // Sidebar End 
+
+            // Page Body Start 
+            div.page-body
+               div.grid.grid-cols-12.gap-card-gap
+                  div.col-span-6(class="md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Tabs
+                              p   Set tabs using 
+                                 strong  .tabs 
+                                 |   class.            
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.gap-2
+                                    div.w-full.tabs.flex-col
+                                       div.mb-1.tab-links.flex
+                                          button.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Title 1 
+                                          button.tab.tab-lifted(data-tabFilter="2" class="tab-link") Title 2  
+                                       div.tabs-content
+                                          div(data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5")
+                                             p.text-xs.text-gray-500  Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive.
+                                                |   Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive.
+                                          div(data-tabContent="2" class="relative tab-pan fade group first:rounded-tl-none rounded-5")
+                                             p.text-xs.text-gray-500 We use tabs to manage space and to make the website more attractive. Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive.
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap gap-2"&gt;
+                                       |   &lt;div class="w-full .tabs flex-col"&gt;
+                                       |       &lt;div class="flex mb-1 tab-links"&gt;
+                                       |           &lt;button class="tab tab-lifted tab-active tab-link" data-tabFilter="1"&gt; Title 1 &lt;/button&gt;
+                                       |           &lt;button class="tab tab-lifted tab-link" data-tabFilter="2"&gt; Title 2 &lt;/button&gt;
+                                       |       &lt;/div&gt;
+                                       |       &lt;div class="tabs-content"&gt;
+                                       |           &lt;div data-tabContent="1" class="tab-pan fade active show first:rounded-tl -none rounded-5"&gt; 
+                                       |               &lt;p class="text-xs text-gray-500"&gt; Tabs are used ...attractive.&lt;/p&gt;  
+                                       |           &lt;/div&gt;
+                                       |           &lt;div data-tabContent="2" class="relative tab-pan fade group first:rounded-tl-none rounded-5"&gt; 
+                                       |               &lt;p class="text-xs text-gray-500"&gt; We use tabs to ...attractive.&lt;/p&gt;  
+                                       |           &lt;/div&gt;
+                                       |       &lt;/div&gt;
+                                       |   &lt;/div&gt; 
+                                       |&lt;/div&gt;
+
+                  div.col-span-6(class="md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold rounded Tab 
+                              p   Set tabs with border using  
+                                 strong  .rounded-bg 
+                                 |   class.            
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.gap-2
+                                    div.w-full.tabs.flex-col
+                                       div.mb-1.tab-links.flex
+                                          button.tab.tab-lifted.rounded-bg(data-tabFilter="1" class="tab-link") Description 1  
+                                          button.tab.tab-lifted.rounded-bg.tab-active(data-tabFilter="2" class="tab-link") Description 2  
+                                       div.tabs-content
+                                          div(data-tabContent="1" class="tab-pan fade group first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                                             p.text-xs.text-gray-500  Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive.
+                                                |    Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive.
+                                                |    Tabs are used to navigate and display different content around the website. 
+                                          div(data-tabContent="2" class="tab-pan fade active show relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                                             p.text-xs.text-gray-500 We use tabs to manage space and to make the website more attractive. Tabs are used to navigate and display different content around the website.
+                                                |    We use tabs to manage space and to make the website more attractive. abs are used to navigate and display different content around the website. 
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap gap-2"&gt;
+                                       |    &lt;div class="flex-col w-full tabs"&gt;
+                                       |       &lt;div class="flex mb-1 tab-links"&gt;
+                                       |           &lt;button class="tab tab-lifted rounded-bg tab-link" data-tabFilter="1"&gt; Description 1 &lt;/button&gt;
+                                       |           &lt;button class="tab tab-lifted rounded-bg tab-active tab-link" data-tabFilter="2"&gt; Description 2 &lt;/button&gt;
+                                       |       &lt;/div&gt;
+                                       |       &lt;div class="tabs-content"&gt;
+                                       |           &lt;div data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
+                                       |               &lt;p class="text-xs text-gray-500"&gt; Tabs are used ...attractive.&lt;/p&gt;  
+                                       |           &lt;/div&gt;
+                                       |           &lt;div data-tabContent="2" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
+                                       |               &lt;p class="text-xs text-gray-500"&gt; We use tabs to ...attractive.&lt;/p&gt;  
+                                       |           &lt;/div&gt;
+                                       |       &lt;/div&gt;
+                                       |   &lt;/div&gt; 
+                                       |&lt;/div&gt;
+
+                  div.col-span-6(class="md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold With Bordered
+                              p   Set bordered tabs using 
+                                 strong  .tabs-bordered 
+                                 |   class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.gap-2
+                                    div.w-full.tabs.flex-col
+                                       div.mb-1.tab-links.flex(class="3sm:justify-center")
+                                          button.tab.tabs-bordered.warning-border.tab-active(data-tabFilter="1" class="tab-link") Title 
+                                          button.tab.tabs-bordered.warning-border(data-tabFilter="2" class="tab-link") Description
+                                          button.tab.tabs-bordered.warning-border(data-tabFilter="3" class="tab-link") Others
+                                       div.tabs-content
+                                          div(data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                                             p.text-xs.text-gray-500  Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive.
+                                                |   Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive. 
+                                          div(data-tabContent="2" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                                             p.text-xs.text-gray-500 We use tabs to manage space and to make the website more attractive. Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive.
+                                          div(data-tabContent="3" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                                             p.text-xs.text-gray-500 Tabs are used to navigate and display different content around the website. abs are used to navigate and display different content around the website.
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap gap-2"&gt;
+                                       |   &lt;div class="flex-col w-full tabs"&gt;
+                                       |       &lt;div class="flex mb-1 tab-links"&gt;
+                                       |           &lt;button class="tab tabs-bordered warning-border tab-active tab-link" data-tabFilter="1"&gt; Title &lt;/button&gt;
+                                       |           &lt;button class="tab tabs-bordered warning-border tab-link" data-tabFilter="2"&gt; Description &lt;/button&gt;
+                                       |           &lt;button class="tab tabs-bordered warning-border tab-link" data-tabFilter="3"&gt; Others &lt;/button&gt;
+                                       |       &lt;/div&gt;
+                                       |       &lt;div class="tabs-content"&gt;
+                                       |           &lt;div data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
+                                       |               &lt;p class="text-xs text-gray-500"&gt; Tabs are used ...attractive.&lt;/p&gt;  
+                                       |           &lt;/div&gt;
+                                       |           &lt;div data-tabContent="2" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
+                                       |               &lt;p class="text-xs text-gray-500"&gt; We use tabs to ...attractive.&lt;/p&gt;  
+                                       |           &lt;/div&gt;
+                                       |           &lt;div data-tabContent="3" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
+                                       |               &lt;p class="text-xs text-gray-500"&gt; Tabs are used to ...websites.&lt;/p&gt;  
+                                       |           &lt;/div&gt;
+                                       |       &lt;/div&gt;
+                                       |   &lt;/div&gt; 
+                                       |&lt;/div&gt;
+
+                  div.col-span-6(class="md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold With Boxed
+                              p   Add boxed tabs using 
+                                 strong  .tabs-boxed 
+                                 |   class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.gap-2
+                                    div.w-full.tabs.flex-col
+                                       div.mb-1.tab-links.flex
+                                          button.tab.tabs-boxed.tab-active(data-tabFilter="1" class="tab-link") Home  
+                                          button.tab.tabs-boxed(data-tabFilter="2" class="tab-link") Profile
+                                          button.tab.tabs-boxed(data-tabFilter="3" class="tab-link") Contacts
+                                       div.tabs-content
+                                          div(data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                                             p.text-xs.text-gray-500  Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive.
+                                                |   Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive. 
+                                          div(data-tabContent="2" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                                             p.text-xs.text-gray-500 We use tabs to manage space and to make the website more attractive. Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive.
+                                          div(data-tabContent="3" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                                             p.text-xs.text-gray-500 Tabs are used to navigate and display different content around the website. abs are used to navigate and display different content around the website.
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap gap-2"&gt;
+                                       |    &lt;div class="flex-col w-full tabs"&gt;
+                                       |       &lt;div class="flex mb-1 tab-links"&gt;
+                                       |           &lt;button class="tab tab-boxed tab-active tab-link" data-tabFilter="1"&gt;Home &lt;/button&gt;
+                                       |           &lt;button class="tab tab-boxed tab-link" data-tabFilter="2"&gt; Profile &lt;/button&gt;
+                                       |           &lt;button class="tab tab-boxed tab-link" data-tabFilter="3"&gt; Contacts &lt;/button&gt;
+                                       |       &lt;/div&gt;
+                                       |       &lt;div class="tabs-content"&gt;
+                                       |           &lt;div data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
+                                       |               &lt;p class="text-xs text-gray-500"&gt; Tabs are used ...attractive.&lt;/p&gt;  
+                                       |           &lt;/div&gt;
+                                       |           &lt;div data-tabContent="2" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
+                                       |               &lt;p class="text-xs text-gray-500"&gt; We use tabs to ...attractive.&lt;/p&gt;  
+                                       |           &lt;/div&gt;
+                                       |           &lt;div data-tabContent="3" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
+                                       |               &lt;p class="text-xs text-gray-500"&gt; Tabs are used to ...websites.&lt;/p&gt;  
+                                       |           &lt;/div&gt;
+                                       |       &lt;/div&gt;
+                                       |   &lt;/div&gt; 
+                                       |&lt;/div&gt;
+
+                  div.col-span-6(class="2lg:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Vertical Tabs
+                              p   Add vertical tabs with the help of  
+                                 strong  .tab-vertical 
+                                 |   class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.gap-2
+                                    div.w-full.flex(class="sm:block").tabs
+                                       div.mb-1.flex.flex-col.justify-center.tab-links.flex(class="min-w-[8.125rem]")
+                                          button.tab.tabs-vertical.tab-active(data-tabFilter="1" class="tab-link") Home  
+                                          button.tab.tabs-vertical(data-tabFilter="2" class="tab-link") Tasks
+                                          button.tab.tabs-vertical(data-tabFilter="3" class="tab-link") Location  
+                                       div.tabs-content
+                                          div(data-tabContent="1" class="tab-pan px-[0.9375rem] fade active show first:rounded-tl-none rounded-5 border-none !pt-2")
+                                             p.text-xs.text-gray-500  Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive.
+                                                |   Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive. 
+                                          div(data-tabContent="2" class="tab-pan px-[0.9375rem] fade group relative first:rounded-tl-none rounded-5 border-none !pt-2")
+                                             p.text-xs.text-gray-500 We use tabs to manage space and to make the website more attractive. Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive.
+                                          div(data-tabContent="3" class="tab-pan px-[0.9375rem] fade group relative first:rounded-tl-none rounded-5 border-none !pt-2")
+                                             p.text-xs.text-gray-500 Tabs are used to navigate and display different content around the website. abs are used to navigate and display different content around the website.
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap gap-2"&gt;
+                                       |    &lt;div class="flex w-full sm:block tabs"&gt;
+                                       |       &lt;div class="mb-1 flex flex-col justify-center tab-links min-w-[8.125rem]"&gt;
+                                       |           &lt;button class="tab tab-vertical tab-active tab-link" data-tabFilter="1"&gt; Home &lt;/button&gt;
+                                       |           &lt;button class="tab tab-vertical tab-link" data-tabFilter="2"&gt; Tasks &lt;/button&gt;
+                                       |           &lt;button class="tab tab-vertical tab-link" data-tabFilter="3"&gt; Location &lt;/button&gt;
+                                       |       &lt;/div&gt;
+                                       |       &lt;div class="tabs-content"&gt;
+                                       |           &lt;div data-tabContent="1" class="tab-pan px-[0.9375rem] fade active show first:rounded-tl-none rounded-5 border-none !pt-2"&gt; 
+                                       |               &lt;p class="text-xs text-gray-500"&gt; Tabs are used ...attractive.&lt;/p&gt;  
+                                       |           &lt;/div&gt;
+                                       |           &lt;div data-tabContent="2" class="tab-pan px-[0.9375rem] fade group relative first:rounded-tl-none rounded-5 border-none !pt-2"&gt; 
+                                       |               &lt;p class="text-xs text-gray-500"&gt; We use tabs to ...attractive.&lt;/p&gt;  
+                                       |           &lt;/div&gt;
+                                       |           &lt;div data-tabContent="3" class="tab-pan px-[0.9375rem] fade group relative first:rounded-tl-none rounded-5 border-none !pt-2"&gt; 
+                                       |               &lt;p class="text-xs text-gray-500"&gt; Tabs are used to ...websites.&lt;/p&gt;  
+                                       |           &lt;/div&gt;
+                                       |       &lt;/div&gt;
+                                       |    &lt;/div&gt; 
+                                       |&lt;/div&gt;
+
+                  div.col-span-6(class="2lg:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Vertical Boxed Tabs
+                              p   Add vertical Boxed tabs using 
+                                 strong  .tab-boxed 
+                                 |   class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.gap-2
+                                    div.w-full.flex(class="sm:block").tabs
+                                       div.mb-1.flex.flex-col.justify-center.tab-links(class="min-w-[8.125rem]")
+                                          button.tab.tabs-boxed.secondary-boxed.tab-active(data-tabFilter="1" class="tab-link") Home  
+                                          button.tab.tabs-boxed.secondary-boxed(data-tabFilter="2" class="tab-link") Tasks
+                                          button.tab.tabs-boxed.secondary-boxed(data-tabFilter="3" class="tab-link") Location  
+                                       div.tabs-content
+                                          div(data-tabContent="1" class="tab-pan px-[0.9375rem] fade active show first:rounded-tl-none rounded-5 border-none !pt-2")
+                                             p.text-xs.text-gray-500  Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive.
+                                                |   Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive. 
+                                          div(data-tabContent="2" class="tab-pan px-[0.9375rem] fade group relative first:rounded-tl-none rounded-5 border-none !pt-2")
+                                             p.text-xs.text-gray-500 We use tabs to manage space and to make the website more attractive. Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive.
+                                          div(data-tabContent="3" class="tab-pan px-[0.9375rem] fade group relative first:rounded-tl-none rounded-5 border-none !pt-2")
+                                             p.text-xs.text-gray-500 Tabs are used to navigate and display different content around the website. abs are used to navigate and display different content around the website.
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap gap-2"&gt;
+                                       |   &lt;div class="flex w-full sm:block tabs"&gt;
+                                       |       &lt;div class="mb-1 flex flex-col justify-center min-w-[8.125rem] tab-links"&gt;
+                                       |           &lt;button class="tab tab-boxed secondary-boxed tab-active tab-link" data-tabFilter="1"&gt; Home &lt;/button&gt;
+                                       |           &lt;button class="tab tab-boxed secondary-boxed tab-link" data-tabFilter="2"&gt; Tasks &lt;/button&gt;
+                                       |           &lt;button class="tab tab-boxed secondary-boxed tab-link" data-tabFilter="3"&gt; Location &lt;/button&gt;
+                                       |       &lt;/div&gt;
+                                       |       &lt;div class="tabs-content"&gt;
+                                       |           &lt;div data-tabContent="1" class="tab-pan px-[0.9375rem] fade active show first:rounded-tl-none rounded-5 border-none !pt-2&gt; 
+                                       |               &lt;p class="text-xs text-gray-500"&gt; Tabs are used ...attractive.&lt;/p&gt;  
+                                       |           &lt;/div&gt;
+                                       |           &lt;div data-tabContent="2" class="tab-pan px-[0.9375rem] fade group relative first:rounded-tl-none rounded-5 border-none !pt-2"&gt; 
+                                       |               &lt;p class="text-xs text-gray-500"&gt; We use tabs to ...attractive.&lt;/p&gt;  
+                                       |           &lt;/div&gt;
+                                       |           &lt;div data-tabContent="3" class="tab-pan px-[0.9375rem] fade group relative first:rounded-tl-none rounded-5 border-none !pt-2"&gt; 
+                                       |               &lt;p class="text-xs text-gray-500"&gt; Tabs are used to ...websites.&lt;/p&gt;  
+                                       |           &lt;/div&gt;
+                                       |       &lt;/div&gt;
+                                       |   &lt;/div&gt; 
+                                       |&lt;/div&gt;
+                  div.col-span-6(class="md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Centered Tabs
+                              p   Add tabs centered using 
+                                 strong .justify-center 
+                                 |   class. 
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.gap-2
+                                    div.w-full.tabs.flex-col
+                                       div.mb-1.justify-center.tab-links.flex
+                                          button.tab.tabs-bordered.tab-active(data-tabFilter="1" class="tab-link") Dark  
+                                          button.tab.tabs-bordered(data-tabFilter="2" class="tab-link") Light
+                                          button.tab.tabs-bordered(data-tabFilter="3" class="tab-link") System  
+                                       div.tabs-content
+                                          div(data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                                             p.text-xs.text-gray-500  Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive.
+                                                |   Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive. 
+                                          div(data-tabContent="2" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                                             p.text-xs.text-gray-500 We use tabs to manage space and to make the website more attractive. Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive.
+                                          div(data-tabContent="3" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                                             p.text-xs.text-gray-500 Tabs are used to navigate and display different content around the website. abs are used to navigate and display different content around the website.
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap gap-2"&gt;
+                                       |    &lt;div class="flex-col w-full tabs"&gt;
+                                       |       &lt;div class="flex justify-center mb-1 tab-links"&gt;
+                                       |           &lt;button class="tab tabs-bordered tab-active tab-link" data-tabFilter="1"&gt; Dark &lt;/button&gt;
+                                       |           &lt;button class="tab tabs-bordered tab-link" data-tabFilter="2"&gt; Light &lt;/button&gt;
+                                       |           &lt;button class="tab tabs-bordered tab-link" data-tabFilter="3"&gt; System &lt;/button&gt;
+                                       |       &lt;/div&gt;
+                                       |       &lt;div class="tabs-content"&gt;
+                                       |           &lt;div data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
+                                       |               &lt;p class="text-xs text-gray-500"&gt; Tabs are used ...attractive.&lt;/p&gt;  
+                                       |           &lt;/div&gt;
+                                       |           &lt;div data-tabContent="2" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
+                                       |               &lt;p class="text-xs text-gray-500"&gt; We use tabs to ...attractive.&lt;/p&gt;  
+                                       |           &lt;/div&gt;
+                                       |           &lt;div data-tabContent="3" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
+                                       |               &lt;p class="text-xs text-gray-500"&gt; Tabs are used to ...websites.&lt;/p&gt;  
+                                       |           &lt;/div&gt;
+                                       |       &lt;/div&gt;
+                                       |    &lt;/div&gt; 
+                                       |&lt;/div&gt;
+
+                  div.col-span-6(class="md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Ended Tabs
+                              p   Set tabs at the end with the help of  
+                                 strong .justify-end 
+                                    |   class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.gap-2
+                                    div.w-full.tabs.flex-col
+                                       div.mb-1.justify-end.tab-links.flex(class="2sm:justify-center")
+                                          button.tab.tabs-boxed.success-boxed.tab-active(data-tabFilter="1" class="tab-link") Product  
+                                          button.tab.tabs-boxed.success-boxed(data-tabFilter="2" class="tab-link") Price
+                                          button.tab.tabs-boxed.success-boxed(data-tabFilter="3" class="tab-link") Offer
+                                       div.tabs-content
+                                          div(data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                                             p.text-xs.text-gray-500  Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive.
+                                                |   Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive. 
+                                          div(data-tabContent="2" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                                             p.text-xs.text-gray-500 We use tabs to manage space and to make the website more attractive. Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive.
+                                          div(data-tabContent="3" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                                             p.text-xs.text-gray-500 Tabs are used to navigate and display different content around the website. abs are used to navigate and display different content around the website.
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap gap-2"&gt;
+                                       |   &lt;div class="flex-col w-full tabs"&gt;
+                                       |       &lt;div class="flex justify-end mb-1 tab-links 2sm:justify-center"&gt;
+                                       |           &lt;button class="tab tab-boxed success-boxed tab-active tab-link" data-tabFilter="1"&gt; Product &lt;/button&gt;
+                                       |           &lt;button class="tab tab-boxed success-boxed tab-link" data-tabFilter="2"&gt; Price &lt;/button&gt;
+                                       |           &lt;button class="tab tab-boxed success-boxed tab-link" data-tabFilter="3"&gt; Offer &lt;/button&gt;
+                                       |       &lt;/div&gt;
+                                       |       &lt;div class="tabs-content"&gt;
+                                       |           &lt;div data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
+                                       |               &lt;p class="text-xs text-gray-500"&gt; Tabs are used ...attractive.&lt;/p&gt;  
+                                       |           &lt;/div&gt;
+                                       |           &lt;div data-tabContent="2" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
+                                       |               &lt;p class="text-xs text-gray-500"&gt; We use tabs to ...attractive.&lt;/p&gt;  
+                                       |           &lt;/div&gt;
+                                       |           &lt;div data-tabContent="3" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
+                                       |               &lt;p class="text-xs text-gray-500"&gt; Tabs are used to ...websites.&lt;/p&gt;  
+                                       |           &lt;/div&gt;
+                                       |       &lt;/div&gt;
+                                       |   &lt;/div&gt; 
+                                       |&lt;/div&gt;
+
+                  div.col-span-6(class="md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Colored Tabs
+                              p   Adding background with the help of  
+                                 strong  .tabs-bordered-bg 
+                                 |   & 
+                                 strong  .tabs-bordered 
+                                 |   class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.gap-2
+                                    div.w-full.tabs.flex-col
+                                       div.mb-1.tab-links.flex(class="3sm:justify-center")
+                                          button.tab.tabs-bordered.tabs-bordered-bg.tab-active(data-tabFilter="1" class="tab-link") Products  
+                                          button.tab.tabs-bordered.tabs-bordered-bg(data-tabFilter="2" class="tab-link") Reviews
+                                          button.tab.tabs-bordered.tabs-bordered-bg(data-tabFilter="3" class="tab-link") More  
+                                       div.tabs-content
+                                          div(data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                                             p.text-xs.text-gray-500  Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive.
+                                                |   Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive. 
+                                                |   Tabs are used to navigate and display different content around the website. 
+                                          div(data-tabContent="2" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                                             p.text-xs.text-gray-500 We use tabs to manage space and to make the website more attractive. Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive.
+                                          div(data-tabContent="3" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                                             p.text-xs.text-gray-500 Tabs are used to navigate and display different content around the website. abs are used to navigate and display different content around the website.
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap gap-2"&gt;
+                                       |   &lt;div class="flex-col w-full tabs"&gt;
+                                       |       &lt;div class="flex mb-1 tab-links"&gt;
+                                       |           &lt;button class="tab tabs-bordered tabs-bordered-bg tab-active tab-link" data-tabFilter="1"&gt; Products &lt;/button&gt;
+                                       |           &lt;button class="tab tabs-bordered tabs-bordered-bg tab-link" data-tabFilter="2"&gt; Reviews &lt;/button&gt;
+                                       |           &lt;button class="tab tabs-bordered tabs-bordered-bg tab-link" data-tabFilter="3"&gt; More &lt;/button&gt;
+                                       |       &lt;/div&gt;
+                                       |       &lt;div class="tabs-content"&gt;
+                                       |           &lt;div data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
+                                       |               &lt;p class="text-xs text-gray-500"&gt; Tabs are used ...attractive.&lt;/p&gt;  
+                                       |           &lt;/div&gt;
+                                       |           &lt;div data-tabContent="2" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
+                                       |               &lt;p class="text-xs text-gray-500"&gt; We use tabs to ...attractive.&lt;/p&gt;  
+                                       |           &lt;/div&gt;
+                                       |           &lt;div data-tabContent="3" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
+                                       |               &lt;p class="text-xs text-gray-500"&gt; Tabs are used to ...websites.&lt;/p&gt;  
+                                       |           &lt;/div&gt;
+                                       |       &lt;/div&gt;
+                                       |   &lt;/div&gt; 
+                                       |&lt;/div&gt;
+
+                  div.col-span-6(class="md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Tabs With Icons
+                              p   Adding icons inside the tabs with the help of 
+                                 strong .tabs 
+                                 | class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.gap-2
+                                    div.w-full.tabs.flex-col
+                                       div.mb-1.tab-links.flex(class="3sm:justify-center")
+                                          button.tab.tabs-bordered.tabs-bordered-bg.secondary-bg.tab-active(data-tabFilter="1" class="tab-link") 
+                                             +SVG_ICON("2-User","w-[1.125rem] h-[1.125rem] stroke-title")
+                                             |   Profile 
+                                          button.tab.tabs-bordered.tabs-bordered-bg.secondary-bg(data-tabFilter="2" class="tab-link") 
+                                             +SVG_ICON("Message","w-[1.125rem] h-[1.125rem] stroke-title")
+                                             |   Message
+                                          button.tab.tabs-bordered.tabs-bordered-bg.secondary-bg(data-tabFilter="3" class="tab-link") 
+                                             +SVG_ICON("Setting","w-[1.125rem] h-[1.125rem] stroke-title")
+                                             |   Setting 
+                                       div.tabs-content
+                                          div(data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                                             p.text-xs.text-gray-500  Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive.
+                                                |   Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive. 
+                                          div(data-tabContent="2" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                                             p.text-xs.text-gray-500 We use tabs to manage space and to make the website more attractive. Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive.
+                                          div(data-tabContent="3" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                                             p.text-xs.text-gray-500 Tabs are used to navigate and display different content around the website. abs are used to navigate and display different content around the website.
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap gap-2"&gt;
+                                       |   &lt;div class="flex-col w-full tabs"&gt;
+                                       |       &lt;div class="flex mb-1 tab-links"&gt;
+                                       |           &lt;button class="tab tabs-bordered tabs-bordered-bg secondary-bg tab-active tab-link" data-tabFilter="1"&gt;
+                                       |               +SVG_ICON("2-User","w-[1.125rem] h-[1.125rem] stroke-title") Profile &lt;/button&gt;
+                                       |           &lt;button class="tab tabs-bordered tabs-bordered-bg secondary-bg tab-link" data-tabFilter="2"&gt;
+                                       |               +SVG_ICON("Message","w-[1.125rem] h-[1.125rem] stroke-title") Message &lt;/button&gt;
+                                       |           &lt;button class="tab tabs-bordered tabs-bordered-bg secondary-bg tab-link" data-tabFilter="3"&gt;
+                                       |               +SVG_ICON("Setting","w-[1.125rem] h-[1.125rem] stroke-title") Setting &lt;/button&gt;
+                                       |       &lt;/div&gt;
+                                       |       &lt;div class="tabs-content"&gt;
+                                       |           &lt;div data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
+                                       |               &lt;p class="text-xs text-gray-500"&gt; Tabs are used ...attractive.&lt;/p&gt;  
+                                       |           &lt;/div&gt;
+                                       |           &lt;div data-tabContent="2" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
+                                       |               &lt;p class="text-xs text-gray-500"&gt; We use tabs to ...attractive.&lt;/p&gt;  
+                                       |           &lt;/div&gt;
+                                       |           &lt;div data-tabContent="3" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
+                                       |               &lt;p class="text-xs text-gray-500"&gt; Tabs are used to ...websites.&lt;/p&gt;  
+                                       |           &lt;/div&gt;
+                                       |       &lt;/div&gt;
+                                       |   &lt;/div&gt; 
+                                       |&lt;/div&gt;
+
+            // Page Body End 
+            +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+      include ../../components/customizer
+
+   include ../../layout/footer-files

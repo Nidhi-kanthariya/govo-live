@@ -1,0 +1,74 @@
+//- sidebar
+-var sidebar = true;
+
+//- feather
+-var feather= true;
+
+//- fontAwesome
+-var fontAwesome = true;
+
+//- custom select
+-var customSelect = true;
+
+//- customizer 
+-var customizer = true;
+
+//- Breadcrumbs
+-var pageTitle="User Card";
+-var breadcrumb=['User','User Card'];
+
+//- all JSON  
+include ../../data/all-data
+
+//- all mixin   
+include ../../mixin/mixin
+
+doctype html
+html(lang='en')
+   include ../../layout/header-files
+   body(dir="ltr" class="unique-skin")
+      main.page-wrapper
+         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+            include ../../layout/header/header     
+            // Sidebar Start 
+            div.page-sidebar.sidebar-dark.unique-sidebar
+               include ../../layout/unique 
+            // Sidebar End 
+
+            // Page Body Start
+            div.page-body
+               div.grid.grid-cols-12.gap-card-gap
+                  div.col-span-3(class='4xl:col-span-4 lg:col-span-6 sm:col-span-12 user-card-box')
+                     div.card.p-0.gap-0.h-full
+                        div.card-body.flex.flex-col.gap-4.items-center.justify-center(class="p-12 2md:p-8")
+                           div.border-2.border-dashed.border-border-light.rounded-full(class="w-[128px] h-[123px] grid place-content-center") 
+                              +SVG_ICON("Add-User","w-9 h-9 stroke-title")
+                           div.text-center
+                              p.text-xs.text-title(class="font-semibold") Invite New User
+                              span.text-2xs.text-content3(class="font-semibold") Invite to Your Organizations your members by email
+                           label.button-label.btn.btn-primary.text-white.text-sm.mt-8.px-6(for='modal-invite-user') Invite New Users
+                  each data in USER_CARD_DATA
+                     div.col-span-3(class='4xl:col-span-4 lg:col-span-6 sm:col-span-12 user-card-box')
+                        +user-card(data)
+
+
+
+            // Page Body End  
+            +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+         include ../../components/customizer
+
+         //-  Invite new user
+         div.modal-main
+            input#modal-invite-user(class="peer" name="modal-invite-user" type='checkbox')
+            label.modal-overlay(class="peer-checked:block" for='modal-invite-user')
+            div.modal.modal-center(class="peer-checked:opacity-100 peer-checked:visible min-w-[290px]")
+               div.modal-header
+                  h3.text-title.font-medium Invite Members
+                  label(for="modal-invite-user")
+                     i(data-feather="x" class="w-4 h-4 stroke-title")
+               div.modal-body
+                  form(class="theme-form flex flex-col gap-4 m-0")
+                     div.flex.gap-2.items-center
+                        input(type="email" id="email" placeholder="Enter email id.." required)
+                        label(for="modal-invite-user" class="!text-white").btn.btn-primary.px-2.py-3 Send                             
+   include ../../layout/footer-files
