@@ -396,7 +396,7 @@ suggest?.forEach((el) => {
   const suggestButton = el.querySelector('.suggest-btn');
   suggestButton.addEventListener('click', function () {
     suggestButton.innerHTML = `<svg class="w-6 h-6 stroke-white bg-primary p-1">
-                                <use href="../../assets/svg/_sprite.svg#Profile"></use> 
+                                <use href="../../assets/svg/sprite.svg#Profile"></use> 
                               </svg>`;
     suggestButton.style.padding = "0px";
   });

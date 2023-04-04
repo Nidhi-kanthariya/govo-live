@@ -1,21 +1,21 @@
 var kanban1 = new jKanban({
-  element: '.kanab-1',
-  boards: [
-    {
-      id: '_todo',
-      title: 'Todo Taks',
-      gutter: '15px',
-      widthBoard: '250px',
-      responsive: '700',
-      item: [  
-        {
-          title: `
+   element: '.kanab-1',
+   boards: [
+      {
+         id: '_todo',
+         title: 'Todo Taks',
+         gutter: '15px',
+         widthBoard: '250px',
+         responsive: '700',
+         item: [
+            {
+               title: `
                <div class="kanban-box w-full">  
                   <div class="kanab-item-1 p-5 2xl:p-4 shadow-md bg-white rounded-5 flex flex-col gap-5 2xl:gap-3"> 
                      <div class="flex justify-between"> 
                            <div class="badge border border-primary text-primary rounded">Design</div>
                            <svg class="w-6 h-6 stroke-primary">
-                                 <use href="../../assets/svg/_sprite.svg#Plus"></use> 
+                                 <use href="../../assets/svg/sprite.svg#Plus"></use> 
                            </svg>
                      </div>
                      <div class="flex items-center gap-2"> 
@@ -30,7 +30,7 @@ var kanban1 = new jKanban({
                               <div class="flex items-center gap-1">
                                  <span class="text-content">25</span>
                                  <svg class="w-5 h-5 stroke-content">
-                                    <use href="../../assets/svg/_sprite.svg#Chat"></use>
+                                    <use href="../../assets/svg/sprite.svg#Chat"></use>
                                  </svg>
                               </div>
                               <div class="avatar-group -space-x-6"> 
@@ -53,15 +53,15 @@ var kanban1 = new jKanban({
                   </div>
                </div>
                `,
-        },
-        {
-          title: ` 
+            },
+            {
+               title: ` 
             <div class="kanban-box w-full">  
                <div class="kanab-item-1 p-5 2xl:p-4 shadow-md bg-white rounded-5 flex flex-col gap-5 2xl:gap-3"> 
                   <div class="flex justify-between"> 
                         <div class="badge border border-warning text-warning rounded">Research</div>                      
                         <svg class="w-6 h-6 stroke-warning">
-                              <use href="../../assets/svg/_sprite.svg#Plus"></use> 
+                              <use href="../../assets/svg/sprite.svg#Plus"></use> 
                         </svg> 
                   </div> 
                   <div class="flex items-center gap-2"> 
@@ -76,7 +76,7 @@ var kanban1 = new jKanban({
                            <div class="flex items-center gap-1">
                               <span class="text-content">120</span> 
                               <svg class="w-5 h-5 stroke-content">
-                                 <use href="../../assets/svg/_sprite.svg#Chat"></use>
+                                 <use href="../../assets/svg/sprite.svg#Chat"></use>
                               </svg>
                            </div>
                            <div class="avatar-group -space-x-6"> 
@@ -99,15 +99,15 @@ var kanban1 = new jKanban({
                </div>  
             </div> 
                             `,
-        },
-        {
-          title: `  
+            },
+            {
+               title: `  
             <div class="kanban-box w-full">  
               <div class="kanab-item-1 p-5 2xl:p-4 shadow-md bg-white rounded-5 flex flex-col gap-5 2xl:gap-3"> 
                  <div class="flex justify-between"> 
                        <div class="badge border border-danger text-danger rounded">Update</div> 
                         <svg class="w-6 h-6 stroke-danger">
-                              <use href="../../assets/svg/_sprite.svg#Plus"></use> 
+                              <use href="../../assets/svg/sprite.svg#Plus"></use> 
                         </svg>
                  </div> 
                  <div class="flex items-center gap-2"> 
@@ -122,7 +122,7 @@ var kanban1 = new jKanban({
                           <div class="flex items-center gap-1">
                              <span class="text-content">25</span> 
                              <svg class="w-5 h-5 stroke-content">
-                                <use href="../../assets/svg/_sprite.svg#Chat"></use>
+                                <use href="../../assets/svg/sprite.svg#Chat"></use>
                              </svg>
                           </div>
                           <div class="avatar-group -space-x-6"> 
@@ -144,21 +144,21 @@ var kanban1 = new jKanban({
                   </div>
                </div>  
             </div> `,
-        },
-      ],
-    },
-    {
-      id: '_doing',
-      title: 'In Progress',
-      item: [
-        { 
-          title: `
+            },
+         ],
+      },
+      {
+         id: '_doing',
+         title: 'In Progress',
+         item: [
+            {
+               title: `
            <div class="kanban-box w-full">  
                <div class="kanab-item-1 p-5 2xl:p-4 shadow-md bg-white rounded-5 flex flex-col gap-5 2xl:gap-3"> 
                   <div class="flex justify-between"> 
                         <div class="badge border border-info text-info rounded">Reference</div>
                         <svg class="w-6 h-6 stroke-info">
-                              <use href="../../assets/svg/_sprite.svg#Plus"></use> 
+                              <use href="../../assets/svg/sprite.svg#Plus"></use> 
                         </svg>
                   </div> 
                   <div class="flex items-center gap-2"> 
@@ -173,7 +173,7 @@ var kanban1 = new jKanban({
                            <div class="flex items-center gap-1">
                               <span class="text-content">25</span> 
                               <svg class="w-5 h-5 stroke-content">
-                                 <use href="../../assets/svg/_sprite.svg#Chat"></use>
+                                 <use href="../../assets/svg/sprite.svg#Chat"></use>
                               </svg>
                            </div>
                            <div class="avatar-group -space-x-6"> 
@@ -196,15 +196,15 @@ var kanban1 = new jKanban({
                </div>   
             </div>
                             `,
-        },
-        {
-          title: `
+            },
+            {
+               title: `
                <div class="kanban-box w-full">  
                   <div class="kanab-item-1 p-5 2xl:p-4 shadow-md bg-white rounded-5 flex flex-col gap-5 2xl:gap-3"> 
                      <div class="flex justify-between"> 
                            <div class="badge border border-info text-info rounded">Code</div> 
                            <svg class="w-6 h-6 stroke-info">
-                                 <use href="../../assets/svg/_sprite.svg#Plus"></use> 
+                                 <use href="../../assets/svg/sprite.svg#Plus"></use> 
                            </svg> 
                      </div> 
                      <div class="flex items-center gap-2"> 
@@ -219,7 +219,7 @@ var kanban1 = new jKanban({
                               <div class="flex items-center gap-1">
                                  <span class="text-content">61</span>
                                  <svg class="w-5 h-5 stroke-content">
-                                    <use href="../../assets/svg/_sprite.svg#Chat"></use>
+                                    <use href="../../assets/svg/sprite.svg#Chat"></use>
                                  </svg>
                               </div>
                               <div class="avatar-group -space-x-6"> 
@@ -242,21 +242,21 @@ var kanban1 = new jKanban({
                   </div>   
                </div>
                             `,
-        },
-      ],
-    },
-    {
-      id: '_done',
-      title: 'Done',
-      item: [
-        {
-          title: `
+            },
+         ],
+      },
+      {
+         id: '_done',
+         title: 'Done',
+         item: [
+            {
+               title: `
              <div class="kanban-box w-full">  
                <div class="kanab-item-1 p-5 2xl:p-4 shadow-md bg-white rounded-5 flex flex-col gap-5 2xl:gap-3"> 
                   <div class="flex justify-between"> 
                         <div class="badge border border-warning text-warning rounded">Release</div>
                         <svg class="w-6 h-6 stroke-warning">
-                              <use href="../../assets/svg/_sprite.svg#Plus"></use> 
+                              <use href="../../assets/svg/sprite.svg#Plus"></use> 
                         </svg>
                   </div> 
                   <div class="flex items-center gap-2"> 
@@ -271,7 +271,7 @@ var kanban1 = new jKanban({
                            <div class="flex items-center gap-1">
                               <span class="text-content">120</span> 
                               <svg class="w-5 h-5 stroke-content">
-                                 <use href="../../assets/svg/_sprite.svg#Chat"></use>
+                                 <use href="../../assets/svg/sprite.svg#Chat"></use>
                               </svg>
                            </div>
                            <div class="avatar-group -space-x-6"> 
@@ -294,15 +294,15 @@ var kanban1 = new jKanban({
                </div>   
             </div>
                             `,
-        },
-        {
-          title: `
+            },
+            {
+               title: `
             <div class="kanban-box w-full">  
                <div class="kanab-item-1 p-5 2xl:p-4 shadow-md bg-white rounded-5 flex flex-col gap-5 2xl:gap-3"> 
                     <div class="flex justify-between"> 
                           <div class="badge border border-primary text-primary rounded">Design</div>
                            <svg class="w-6 h-6 stroke-primary">
-                                 <use href="../../assets/svg/_sprite.svg#Plus"></use> 
+                                 <use href="../../assets/svg/sprite.svg#Plus"></use> 
                            </svg>
                     </div>
                     <div class="flex items-center gap-2"> 
@@ -317,7 +317,7 @@ var kanban1 = new jKanban({
                              <div class="flex items-center gap-1">
                                 <span class="text-content">1k</span> 
                                 <svg class="w-5 h-5 stroke-content">
-                                   <use href="../../assets/svg/_sprite.svg#Chat"></use>
+                                   <use href="../../assets/svg/sprite.svg#Chat"></use>
                                 </svg>
                              </div>
                              <div class="avatar-group -space-x-6"> 
@@ -340,15 +340,15 @@ var kanban1 = new jKanban({
                  </div> 
             </div>
                             `,
-        },
-        {
-          title: `
+            },
+            {
+               title: `
            <div class="kanban-box w-full">  
                <div class="kanab-item-1 p-5 2xl:p-4 shadow-md bg-white rounded-5 flex flex-col gap-5 2xl:gap-3"> 
                   <div class="flex justify-between"> 
                         <div class="badge border border-primary text-primary rounded">Creativity</div>  
                         <svg class="w-6 h-6 stroke-primary">
-                              <use href="../../assets/svg/_sprite.svg#Plus"></use> 
+                              <use href="../../assets/svg/sprite.svg#Plus"></use> 
                         </svg>
                   </div>
                   <div class="flex items-center gap-2"> 
@@ -363,7 +363,7 @@ var kanban1 = new jKanban({
                            <div class="flex items-center gap-1"> 
                               <span class="text-content">134</span> 
                               <svg class="w-5 h-5 stroke-content">
-                                 <use href="../../assets/svg/_sprite.svg#Chat"></use>
+                                 <use href="../../assets/svg/sprite.svg#Chat"></use>
                               </svg>
                            </div>
                            <div class="avatar-group -space-x-6"> 
@@ -386,33 +386,33 @@ var kanban1 = new jKanban({
                </div> 
             </div> 
                             `,
-        },
-      ],
-    },
-  ],
+            },
+         ],
+      },
+   ],
 });
 
 var kanban2 = new jKanban({
-  element: '.kanab-2',
-  gutter: '15px',
-  click: function (el) {
-    alert(el.innerHTML);
-  },
-  boards: [
-    {
-      id: '_todo',
-      title: 'To Do (Item only in Working)',
-      class: 'bg-info',
-      dragTo: ['_working'],
-      item: [
-        {
-          title: `
+   element: '.kanab-2',
+   gutter: '15px',
+   click: function (el) {
+      alert(el.innerHTML);
+   },
+   boards: [
+      {
+         id: '_todo',
+         title: 'To Do (Item only in Working)',
+         class: 'bg-info',
+         dragTo: ['_working'],
+         item: [
+            {
+               title: `
                <div class="kanban-box w-full">
                   <div class="kanab-item-1 p-5 2xl:p-4 shadow-md bg-white rounded-5 flex flex-col gap-5 2xl:gap-3"> 
                      <div class="flex justify-between"> 
                            <div class="badge border border-primary text-primary rounded">Technology</div> 
                            <svg class="w-6 h-6 stroke-primary">
-                                 <use href="../../assets/svg/_sprite.svg#Plus"></use> 
+                                 <use href="../../assets/svg/sprite.svg#Plus"></use> 
                            </svg>
                      </div>
                      <div class="flex items-center gap-2"> 
@@ -427,7 +427,7 @@ var kanban2 = new jKanban({
                               <div class="flex items-center gap-1"> 
                                  <span class="text-content">121</span> 
                                  <svg class="w-5 h-5 stroke-content">
-                                    <use href="../../assets/svg/_sprite.svg#Chat"></use>
+                                    <use href="../../assets/svg/sprite.svg#Chat"></use>
                                  </svg>
                               </div>
                               <div class="avatar-group -space-x-6"> 
@@ -450,15 +450,15 @@ var kanban2 = new jKanban({
                   </div> 
                </div> 
                `,
-        },
-        {
-          title: ` 
+            },
+            {
+               title: ` 
             <div class="kanban-box w-full">
                 <div class="kanab-item-1 p-5 2xl:p-4 shadow-md bg-white rounded-5 flex flex-col gap-5 2xl:gap-3"> 
                   <div class="flex justify-between"> 
                         <div class="badge border border-warning text-warning rounded">Testing</div>  
                         <svg class="w-6 h-6 stroke-warning">
-                              <use href="../../assets/svg/_sprite.svg#Plus"></use> 
+                              <use href="../../assets/svg/sprite.svg#Plus"></use> 
                         </svg>
                   </div>
                   <div class="flex items-center gap-2"> 
@@ -473,7 +473,7 @@ var kanban2 = new jKanban({
                            <div class="flex items-center gap-1"> 
                               <span class="text-content">361</span> 
                               <svg class="w-5 h-5 stroke-content">
-                                 <use href="../../assets/svg/_sprite.svg#Chat"></use>
+                                 <use href="../../assets/svg/sprite.svg#Chat"></use>
                               </svg>
                            </div>
                            <div class="avatar-group -space-x-6"> 
@@ -496,15 +496,15 @@ var kanban2 = new jKanban({
                </div>
             </div> 
           `,
-        },
-        {
-          title: ` 
+            },
+            {
+               title: ` 
             <div class="kanban-box w-full">
                <div class="kanab-item-1 p-5 2xl:p-4 shadow-md bg-white rounded-5 flex flex-col gap-5 2xl:gap-3"> 
                   <div class="flex justify-between"> 
                         <div class="badge border border-secondary text-secondary rounded">Finish Book</div>  
                         <svg class="w-6 h-6 stroke-secondary">
-                              <use href="../../assets/svg/_sprite.svg#Plus"></use> 
+                              <use href="../../assets/svg/sprite.svg#Plus"></use> 
                         </svg> 
                   </div>
                   <div class="flex items-center gap-2"> 
@@ -519,7 +519,7 @@ var kanban2 = new jKanban({
                            <div class="flex items-center gap-1"> 
                               <span class="text-content">151</span> 
                               <svg class="w-5 h-5 stroke-content">
-                                 <use href="../../assets/svg/_sprite.svg#Chat"></use>
+                                 <use href="../../assets/svg/sprite.svg#Chat"></use>
                               </svg>
                            </div>
                            <div class="avatar-group -space-x-6"> 
@@ -542,22 +542,22 @@ var kanban2 = new jKanban({
                </div>
             </div> 
                             `,
-        },
-      ],
-    },
-    {
-      id: '_working',
-      title: 'Working',
-      class: 'bg-warning',
-      item: [
-        {
-          title: `
+            },
+         ],
+      },
+      {
+         id: '_working',
+         title: 'Working',
+         class: 'bg-warning',
+         item: [
+            {
+               title: `
             <div class="kanban-box w-full">
                <div class="kanab-item-1 p-5 2xl:p-4 shadow-md bg-white rounded-5 flex flex-col gap-5 2xl:gap-3"> 
                   <div class="flex justify-between"> 
                         <div class="badge border border-info text-info rounded">Finish Book</div>  
                         <svg class="w-6 h-6 stroke-info">
-                              <use href="../../assets/svg/_sprite.svg#Plus"></use> 
+                              <use href="../../assets/svg/sprite.svg#Plus"></use> 
                         </svg>
                   </div>
                   <div class="flex items-center gap-2">
@@ -572,7 +572,7 @@ var kanban2 = new jKanban({
                            <div class="flex items-center gap-1"> 
                               <span class="text-content">611</span> 
                               <svg class="w-5 h-5 stroke-content">
-                                 <use href="../../assets/svg/_sprite.svg#Chat"></use>
+                                 <use href="../../assets/svg/sprite.svg#Chat"></use>
                               </svg>
                            </div>
                            <div class="avatar-group -space-x-6"> 
@@ -595,15 +595,15 @@ var kanban2 = new jKanban({
                </div>
             </div> 
                             `,
-        },
-        {
-          title: `
+            },
+            {
+               title: `
             <div class="kanban-box w-full">
                <div class="kanab-item-1 p-5 2xl:p-4 shadow-md bg-white rounded-5 flex flex-col gap-5 2xl:gap-3"> 
                   <div class="flex justify-between"> 
                         <div class="badge border border-info text-info rounded">Design System</div>  
                         <svg class="w-6 h-6 stroke-info">
-                              <use href="../../assets/svg/_sprite.svg#Plus"></use> 
+                              <use href="../../assets/svg/sprite.svg#Plus"></use> 
                         </svg>
                   </div>
                   <div class="flex items-center gap-2">
@@ -618,7 +618,7 @@ var kanban2 = new jKanban({
                            <div class="flex items-center gap-1"> 
                               <span class="text-content">141</span> 
                               <svg class="w-5 h-5 stroke-content">
-                                 <use href="../../assets/svg/_sprite.svg#Chat"></use>
+                                 <use href="../../assets/svg/sprite.svg#Chat"></use>
                               </svg>
                            </div>
                            <div class="avatar-group -space-x-6"> 
@@ -641,23 +641,23 @@ var kanban2 = new jKanban({
                </div>
             </div> 
                             `,
-        },
-      ],
-    },
-    {
-      id: '_done',
-      title: 'Done (Item only in Working)',
-      class: 'bg-success',
-      dragTo: ['_working'],
-      item: [
-        {
-          title: `
+            },
+         ],
+      },
+      {
+         id: '_done',
+         title: 'Done (Item only in Working)',
+         class: 'bg-success',
+         dragTo: ['_working'],
+         item: [
+            {
+               title: `
             <div class="kanban-box w-full">
                <div class="kanab-item-1 p-5 2xl:p-4 shadow-md bg-white rounded-5 flex flex-col gap-5 2xl:gap-3"> 
                   <div class="flex justify-between"> 
                         <div class="badge border border-warning text-warning rounded">Gather team</div>  
                         <svg class="w-6 h-6 stroke-warning">
-                              <use href="../../assets/svg/_sprite.svg#Plus"></use> 
+                              <use href="../../assets/svg/sprite.svg#Plus"></use> 
                         </svg>
                   </div>
                   <div class="flex items-center gap-2">
@@ -672,7 +672,7 @@ var kanban2 = new jKanban({
                            <div class="flex items-center gap-1"> 
                               <span class="text-content">141</span> 
                               <svg class="w-5 h-5 stroke-content">
-                                 <use href="../../assets/svg/_sprite.svg#Chat"></use>
+                                 <use href="../../assets/svg/sprite.svg#Chat"></use>
                               </svg>
                            </div>
                            <div class="avatar-group -space-x-6"> 
@@ -695,15 +695,15 @@ var kanban2 = new jKanban({
                </div>
             </div> 
                             `,
-        },
-        {
-          title: `
+            },
+            {
+               title: `
             <div class="kanban-box w-full">
                <div class="kanab-item-1 p-5 2xl:p-4 shadow-md bg-white rounded-5 flex flex-col gap-5 2xl:gap-3"> 
                   <div class="flex justify-between"> 
                         <div class="badge border border-primary text-primary rounded">HI-FI Design</div>  
                         <svg class="w-6 h-6 stroke-primary">
-                              <use href="../../assets/svg/_sprite.svg#Plus"></use> 
+                              <use href="../../assets/svg/sprite.svg#Plus"></use> 
                         </svg>
                   </div>
                   <div class="flex items-center gap-2">
@@ -718,7 +718,7 @@ var kanban2 = new jKanban({
                            <div class="flex items-center gap-1"> 
                               <span class="text-content">141</span> 
                               <svg class="w-5 h-5 stroke-content">
-                                 <use href="../../assets/svg/_sprite.svg#Chat"></use>
+                                 <use href="../../assets/svg/sprite.svg#Chat"></use>
                               </svg>
                            </div>
                            <div class="avatar-group -space-x-6"> 
@@ -741,15 +741,15 @@ var kanban2 = new jKanban({
                </div>
             </div>
                             `,
-        },
-        {
-          title: `
+            },
+            {
+               title: `
           <div class="kanban-box w-full">
             <div class="kanab-item-1 p-5 2xl:p-4 shadow-md bg-white rounded-5 flex flex-col gap-5 2xl:gap-3"> 
                   <div class="flex justify-between"> 
                         <div class="badge border border-primary text-primary rounded">NFT Design</div>  
                         <svg class="w-6 h-6 stroke-primary">
-                              <use href="../../assets/svg/_sprite.svg#Plus"></use> 
+                              <use href="../../assets/svg/sprite.svg#Plus"></use> 
                         </svg>
                   </div>
                   <div class="flex items-center gap-2">
@@ -764,7 +764,7 @@ var kanban2 = new jKanban({
                            <div class="flex items-center gap-1"> 
                               <span class="text-content">841</span> 
                               <svg class="w-5 h-5 stroke-content">
-                                 <use href="../../assets/svg/_sprite.svg#Chat"></use>
+                                 <use href="../../assets/svg/sprite.svg#Chat"></use>
                               </svg>
                            </div>
                            <div class="avatar-group -space-x-6"> 
@@ -787,33 +787,33 @@ var kanban2 = new jKanban({
                </div>
             </div>
                             `,
-        },
-      ],
-    },
-  ],
+            },
+         ],
+      },
+   ],
 });
 
 var kanban3 = new jKanban({
-  element: '.kanab-3',
-  gutter: '15px',
-  click: function (el) {
-    alert(el.innerHTML);
-  },
-  boards: [
-    {
-      id: '_todo',
-      title: 'To Do',
-      class: 'info',
-      item: [
-        {
-          title: `
+   element: '.kanab-3',
+   gutter: '15px',
+   click: function (el) {
+      alert(el.innerHTML);
+   },
+   boards: [
+      {
+         id: '_todo',
+         title: 'To Do',
+         class: 'info',
+         item: [
+            {
+               title: `
             <div class="kanban-box">
                   <div class="border-l-4 border-l-success border border-light">
                         <div class="kanab-item-1 p-5 2xl:p-4  bg-white rounded-5 flex flex-col gap-5 2xl:gap-3"> 
                               <div class="flex justify-between">  
                                     <div class="badge border border-primary text-primary rounded">Research</div>  
                                     <svg class="w-6 h-6 stroke-primary">
-                                          <use href="../../assets/svg/_sprite.svg#Plus"></use> 
+                                          <use href="../../assets/svg/sprite.svg#Plus"></use> 
                                     </svg>
                               </div>
                               <div class="flex items-center gap-2">
@@ -828,7 +828,7 @@ var kanban3 = new jKanban({
                                        <div class="flex items-center gap-1"> 
                                           <span class="text-content">261</span> 
                                           <svg class="w-5 h-5 stroke-content">
-                                             <use href="../../assets/svg/_sprite.svg#Chat"></use>
+                                             <use href="../../assets/svg/sprite.svg#Chat"></use>
                                           </svg>
                                        </div>
                                     <div class="avatar-group -space-x-6"> 
@@ -852,16 +852,16 @@ var kanban3 = new jKanban({
                   </div> 
              </div>
                `,
-        },
-        {
-          title: ` 
+            },
+            {
+               title: ` 
           <div class="kanban-box">
             <div class="border-l-4 border-l-warning border border-light">
                 <div class="kanab-item-1 p-5 2xl:p-4  bg-white rounded-5 flex flex-col gap-5 2xl:gap-3"> 
                       <div class="flex justify-between"> 
                            <div class="badge border border-warning text-warning rounded">Code</div>  
                            <svg class="w-6 h-6 stroke-warning"> 
-                                 <use href="../../assets/svg/_sprite.svg#Plus"></use> 
+                                 <use href="../../assets/svg/sprite.svg#Plus"></use> 
                            </svg>
                       </div>
                       <div class="flex items-center gap-2">
@@ -876,7 +876,7 @@ var kanban3 = new jKanban({
                                <div class="flex items-center gap-1"> 
                                   <span class="text-content">21</span> 
                                   <svg class="w-5 h-5 stroke-content">
-                                     <use href="../../assets/svg/_sprite.svg#Chat"></use>
+                                     <use href="../../assets/svg/sprite.svg#Chat"></use>
                                   </svg>
                                </div>
                             <div class="avatar-group -space-x-6"> 
@@ -900,16 +900,16 @@ var kanban3 = new jKanban({
              </div> 
          </div>
                             `,
-        },
-        {
-          title: ` 
+            },
+            {
+               title: ` 
           <div class="kanban-box">
             <div class="border-l-4 border-l-danger border border-light ">
                 <div class="kanab-item-1 p-5 2xl:p-4  bg-white rounded-5 flex flex-col gap-5 2xl:gap-3"> 
                       <div class="flex justify-between"> 
                            <div class="badge border border-danger text-danger rounded">Redesign</div>  
                            <svg class="w-6 h-6 stroke-danger"> 
-                                 <use href="../../assets/svg/_sprite.svg#Plus"></use> 
+                                 <use href="../../assets/svg/sprite.svg#Plus"></use> 
                            </svg>
                       </div>
                       <div class="flex items-center gap-2">
@@ -924,7 +924,7 @@ var kanban3 = new jKanban({
                                <div class="flex items-center gap-1"> 
                                   <span class="text-content">251</span> 
                                   <svg class="w-5 h-5 stroke-content">
-                                     <use href="../../assets/svg/_sprite.svg#Chat"></use>
+                                     <use href="../../assets/svg/sprite.svg#Chat"></use>
                                   </svg> 
                                </div>
                             <div class="avatar-group -space-x-6"> 
@@ -948,23 +948,23 @@ var kanban3 = new jKanban({
              </div>
          </div>
                             `,
-        },
-      ],
-    },
-    {
-      id: '_working',
-      title: 'Working',
-      class: 'warning',
-      item: [
-        {
-          title: `
+            },
+         ],
+      },
+      {
+         id: '_working',
+         title: 'Working',
+         class: 'warning',
+         item: [
+            {
+               title: `
          <div class="kanban-box">
              <div class="border-l-4 border-l-info border border-light">
                 <div class="kanab-item-1 p-5 2xl:p-4  bg-white rounded-5 flex flex-col gap-5 2xl:gap-3"> 
                       <div class="flex justify-between"> 
                            <div class="badge border border-info text-info rounded">Service</div>  
                            <svg class="w-6 h-6 stroke-info"> 
-                                 <use href="../../assets/svg/_sprite.svg#Plus"></use> 
+                                 <use href="../../assets/svg/sprite.svg#Plus"></use> 
                            </svg> 
                       </div>
                       <div class="flex items-center gap-2">
@@ -979,7 +979,7 @@ var kanban3 = new jKanban({
                                <div class="flex items-center gap-1"> 
                                   <span class="text-content">61</span> 
                                   <svg class="w-5 h-5 stroke-content">
-                                     <use href="../../assets/svg/_sprite.svg#Chat"></use>
+                                     <use href="../../assets/svg/sprite.svg#Chat"></use>
                                   </svg> 
                                </div>
                             <div class="avatar-group -space-x-6"> 
@@ -1003,16 +1003,16 @@ var kanban3 = new jKanban({
              </div> 
          </div>
                             `,
-        },
-        {
-          title: `
+            },
+            {
+               title: `
          <div class="kanban-box">
             <div class="border-l-4 border-l-info border border-light ">
                 <div class="kanab-item-1 p-5 2xl:p-4  bg-white rounded-5 flex flex-col gap-5 2xl:gap-3"> 
                       <div class="flex justify-between">  
                            <div class="badge border border-info text-info rounded">Marketing</div>  
                            <svg class="w-6 h-6 stroke-info"> 
-                                 <use href="../../assets/svg/_sprite.svg#Plus"></use> 
+                                 <use href="../../assets/svg/sprite.svg#Plus"></use> 
                            </svg>
                       </div>
                       <div class="flex items-center gap-2">
@@ -1027,7 +1027,7 @@ var kanban3 = new jKanban({
                                <div class="flex items-center gap-1"> 
                                   <span class="text-content">151</span> 
                                   <svg class="w-5 h-5 stroke-content">
-                                     <use href="../../assets/svg/_sprite.svg#Chat"></use>
+                                     <use href="../../assets/svg/sprite.svg#Chat"></use>
                                   </svg> 
                                </div>
                             <div class="avatar-group -space-x-6"> 
@@ -1052,23 +1052,23 @@ var kanban3 = new jKanban({
          </div>                     
 
                             `,
-        },
-      ],
-    },
-    {
-      id: '_done',
-      title: 'Done',
-      class: 'success',
-      item: [
-        {
-          title: `
+            },
+         ],
+      },
+      {
+         id: '_done',
+         title: 'Done',
+         class: 'success',
+         item: [
+            {
+               title: `
          <div class="kanban-box">
             <div class="border-l-4 border-l-warning border border-light ">
                 <div class="kanab-item-1 p-5 2xl:p-4  bg-white rounded-5 flex flex-col gap-5 2xl:gap-3"> 
                       <div class="flex justify-between">  
                            <div class="badge border border-warning text-warning rounded">Prototyping</div>  
                            <svg class="w-6 h-6 stroke-warning"> 
-                                 <use href="../../assets/svg/_sprite.svg#Plus"></use> 
+                                 <use href="../../assets/svg/sprite.svg#Plus"></use> 
                            </svg>
                       </div>
                       <div class="flex items-center gap-2">
@@ -1083,7 +1083,7 @@ var kanban3 = new jKanban({
                                <div class="flex items-center gap-1"> 
                                   <span class="text-content">261</span> 
                                   <svg class="w-5 h-5 stroke-content">
-                                     <use href="../../assets/svg/_sprite.svg#Chat"></use>
+                                     <use href="../../assets/svg/sprite.svg#Chat"></use>
                                   </svg> 
                                </div>
                             <div class="avatar-group -space-x-6"> 
@@ -1108,16 +1108,16 @@ var kanban3 = new jKanban({
          </div>
 
                             `,
-        },
-        {
-          title: `
+            },
+            {
+               title: `
          <div class="kanban-box">
             <div class="border-l-4 border-l-warning border border-light">
                 <div class="kanab-item-1 p-5 2xl:p-4  bg-white rounded-5 flex flex-col gap-5 2xl:gap-3"> 
                       <div class="flex justify-between">  
                            <div class="badge border border-warning text-warning rounded">Growth hacking</div>  
                            <svg class="w-6 h-6 stroke-warning"> 
-                                 <use href="../../assets/svg/_sprite.svg#Plus"></use> 
+                                 <use href="../../assets/svg/sprite.svg#Plus"></use> 
                            </svg> 
                       </div>
                       <div class="flex items-center gap-2">
@@ -1132,7 +1132,7 @@ var kanban3 = new jKanban({
                                <div class="flex items-center gap-1"> 
                                   <span class="text-content">191</span> 
                                   <svg class="w-5 h-5 stroke-content">
-                                     <use href="../../assets/svg/_sprite.svg#Chat"></use>
+                                     <use href="../../assets/svg/sprite.svg#Chat"></use>
                                   </svg> 
                                </div>
                             <div class="avatar-group -space-x-6"> 
@@ -1156,16 +1156,16 @@ var kanban3 = new jKanban({
              </div>
           </div>
                             `,
-        },
-        {
-          title: `
+            },
+            {
+               title: `
           <div class="kanban-box">
             <div class="border-l-4 border-l-success border border-light">
                 <div class="kanab-item-1 p-5 2xl:p-4  bg-white rounded-5 flex flex-col gap-5 2xl:gap-3"> 
                       <div class="flex justify-between">  
                            <div class="badge border border-success text-success rounded">Video Campaign</div>  
                            <svg class="w-6 h-6 stroke-success"> 
-                                 <use href="../../assets/svg/_sprite.svg#Plus"></use> 
+                                 <use href="../../assets/svg/sprite.svg#Plus"></use> 
                            </svg>
                       </div>
                       <div class="flex items-center gap-2">
@@ -1180,7 +1180,7 @@ var kanban3 = new jKanban({
                                <div class="flex items-center gap-1"> 
                                   <span class="text-content">161</span> 
                                   <svg class="w-5 h-5 stroke-content">
-                                     <use href="../../assets/svg/_sprite.svg#Chat"></use>
+                                     <use href="../../assets/svg/sprite.svg#Chat"></use>
                                   </svg> 
                                </div>
                             <div class="avatar-group -space-x-6"> 
@@ -1204,16 +1204,16 @@ var kanban3 = new jKanban({
              </div> 
          </div>
                             `,
-        },
-      ],
-    },
-  ],
+            },
+         ],
+      },
+   ],
 });
 
 var toDoButton = document.getElementById('addToDo');
 toDoButton.addEventListener('click', function () {
-  kanban3.addElement('_todo', {
-    title: `  
+   kanban3.addElement('_todo', {
+      title: `  
      <div class="kanban-box">
                   <div class="kanab-item-1 p-5 2xl:p-4  border border-light bg-white rounded-5 flex flex-col gap-5 2xl:gap-3">
                         <div class="flex items-center gap-2">
@@ -1245,18 +1245,18 @@ toDoButton.addEventListener('click', function () {
                   </div> 
              </div>
                             `,
-  });
+   });
 });
 
 var addBoardDefault = document.getElementById('addDefault');
 addBoardDefault.addEventListener('click', function () {
-  kanban3.addBoards([
-    {
-      id: '_default',
-      title: 'Kanban Default',
-      item: [
-        {
-          title: ` 
+   kanban3.addBoards([
+      {
+         id: '_default',
+         title: 'Kanban Default',
+         item: [
+            {
+               title: ` 
            <div class="kanban-box"> 
                   <div class="kanab-item-1 p-5 2xl:p-4  border border-light bg-white rounded-5 flex flex-col gap-5 2xl:gap-3">
                         <div class="flex items-center gap-2">
@@ -1291,10 +1291,10 @@ addBoardDefault.addEventListener('click', function () {
 
 
                             `,
-        },
+            },
 
-        {
-          title: `
+            {
+               title: `
                        
           
            <div class="kanban-box">
@@ -1330,14 +1330,14 @@ addBoardDefault.addEventListener('click', function () {
              </div>
 
                             `,
-        },
-      ],
-    }, 
-  ]);
+            },
+         ],
+      },
+   ]);
 });
 
 feather.replace();
 var removeBoard = document.getElementById('removeBoard');
 removeBoard.addEventListener('click', function () {
-  kanban3.removeBoard('_done');
+   kanban3.removeBoard('_done');
 });
