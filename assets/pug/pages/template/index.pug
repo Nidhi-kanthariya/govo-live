@@ -45,8 +45,8 @@ html(lang='en')
                      div.card
                         div.card-header.transaction-history 
                            +card-header("Transaction History","select", HISTORY_DROPDOWN)
-                        div.card-body
-                           div.overflow-auto.custom-scroll  
+                        div.card-body  
+                           div.overflow-auto.custom-scroll
                               include ../../components/table/transaction-history
                   div.col-span-3(class="4xl:col-span-4 lg:col-span-12")
                      div.grid.grid-cols-2.gap-card-gap  

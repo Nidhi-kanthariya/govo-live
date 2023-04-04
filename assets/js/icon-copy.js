@@ -24,14 +24,14 @@ iconWrapper.addEventListener('click', function (event) {
   const iconlyHtml = `
             <div class="flex items-center justify-center rounded-5 "> 
                <svg class="w-6 h-6 stroke-title"> 
-                    <use href="../../assets/svg/_sprite.svg#${iconName}"></use>
+                    <use href="../../assets/svg/sprite.svg#${iconName}"></use>
                </svg>
               
              </div>
               <div class="relative bg-white2-light copyParent w-full overflow-auto rounded-5">
                  <button class="btn copyBtn border-border-light !top-4 ! !right-[10px]"> <i data-feather="clipboard"></i></button>
                   <pre class="language-html !whitespace-pre-wrap custom-scroll overflow-auto"><code>&lt;svg class="w-6 h-6 stroke-title"&gt;
-  &lt;use href="../../assets/images/icons/_sprite.svg#${iconName}" &gt;&lt;/use&gt;
+  &lt;use href="../../assets/images/icons/sprite.svg#${iconName}" &gt;&lt;/use&gt;
 &lt;/svg&gt;</code></pre>
                </div>
             </div> 
