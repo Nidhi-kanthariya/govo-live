@@ -1,0 +1,18 @@
+//- ==================
+//-  Recent Activity  
+//- ==================
+mixin recent-activity(data)
+   div
+      each dataItem in data
+         if(dataItem.title)
+            h5(class="text-xs font-bold text-primary mt-[22px] first:mt-0")=dataItem.title
+         ul
+            each item in dataItem.activity
+               li.flex.items-center.justify-between.gap-2(class="py-[6px] after:w-[calc(100%_-_48px)] relative last:after:hidden last:pb-0 after:h-[1px] after:bg-border-light after:absolute after:bottom-0 after:right-0") 
+                  div.flex.items-center.gap-2
+                     span(class="p-[8px] block bg-gray-light rounded-full")
+                        +SVG_ICON(`${item.icon}`,"w-6 h-6 4xl:w-5 4xl:h-5 stroke-title") 
+                     p(class="text-xs text-title font-semibold line-clamp-1")= item.title 
+                  a(href="javascript:void(0)" class="flex leading-none items-center text-4xs gap-[2px] px-[10px] py-[9px] bg-gray-light") 
+                     = item.badge
+                     +SVG_ICON("Arrow-Right-2","w-[11px] h-[11px] stroke-title")   

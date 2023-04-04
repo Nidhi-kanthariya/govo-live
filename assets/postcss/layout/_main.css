@@ -1,0 +1,14 @@
+/*=====================
+  Main Css CSS
+  ==========================*/
+@layer components {
+  .page-wrapper{
+    @apply overflow-hidden;
+  }
+  .page-body-wrapper {
+    @apply sm:mb-20 mb-14;
+    .page-body {
+      @apply py-main-space px-body-space ml-auto h-full dark:bg-sidebar-dark2;
+    }
+  }
+}

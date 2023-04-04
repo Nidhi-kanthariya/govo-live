@@ -1,0 +1,120 @@
+//- sidebar
+-var sidebar = true;
+
+//- feather
+-var feather= true;
+
+//- custom select
+-var customSelect = true;
+
+//- customizer 
+-var customizer = true;
+
+//- Breadcrumbs
+-var pageTitle="Invoice Preview";
+-var breadcrumb=['Ecommerce','Invoice Preview'];
+
+//- all JSON  
+include ../../data/all-data
+
+//- all mixin   
+include ../../mixin/mixin
+
+doctype html
+html(lang='en')
+   include ../../layout/header-files
+   body(dir="ltr" class="unique-skin")
+      main.page-wrapper
+         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+            include ../../layout/header/header     
+            // Sidebar Start 
+            div.page-sidebar.sidebar-dark.unique-sidebar
+               include ../../layout/unique 
+            // Sidebar End 
+
+            // Page Body Start
+            div.page-body
+               div.grid.grid-cols-12.gap-card-gap
+                  div.col-span-12
+                     div.card(class="max-w-5xl m-auto overflow-auto invoice-preview custom-scroll") 
+                        table(class="table equal-space")
+                           tbody   
+                              tr                               
+                                 td(class="min-w-[220px]")
+                                    img(src='../../assets/images/logo/logo-dark.png' alt='logo' class="w-20")
+                                    div.mt-4
+                                       p.text-title.text-xs.font-bold.uppercase Address 
+                                       p.font-medium.text-content3 Washington, United States
+                                       p.font-medium.text-content3 98499
+
+                                 td(class="min-w-[220px]")
+                                    p.text-title.text-xs.font-semibold Registration No: 
+                                       span.font-medium.text-content3 8459725
+                                    p.text-title.text-xs.font-semibold Email Id: 
+                                       span.font-medium.text-content3 govo@theme.com
+                                    p.text-title.text-xs.font-semibold Contact No: 
+                                       span.font-medium.text-content3 (773) 847-8982 
+                              tr  
+                                 td(colspan="2")
+                                    table(class="table equal-space")
+                                       tbody   
+                                          tr 
+                                             td(class="min-w-[120px]")
+                                                p.text-title.text-xs.font-bold.uppercase Invoice No
+                                                span.font-medium.text-content3 go157864
+                                             td(class="min-w-[150px]")
+                                                p.text-title.text-xs.font-bold.uppercase Date 
+                                                span.font-medium.text-content3 23Feb, 2023 
+                                                small.font-medium.text-content3.text-2xs 2:45PM 
+                                             td(class="min-w-[150px]")
+                                                p.text-title.text-xs.font-bold.uppercase payment Status
+                                                div.badge.bg-success-light.text-success.rounded.inline-block Paid
+                                             td(class="min-w-[130px]")
+                                                p.text-title.text-xs.font-bold.uppercase Total Amount
+                                                span.font-medium.text-content3 $787.6
+                              tr
+                                 td(class="min-w-[220px]") 
+                                    p.text-title.text-xs.font-bold.uppercase(class="!mb-0") Shipping Address 
+                                    p.text-title.text-xs.font-bold 	Vilma Gerhold
+                                    p.font-medium.text-content3 14300 Gallant Fox Ln, Bowie
+                                    p.font-medium.text-content3 Maryland, 20715, US
+                                    p.font-medium.text-content3 (301) 464-0110
+                                 td(class="min-w-[220px]") 
+                                    p.text-title.text-xs.font-bold.uppercase(class="!mb-0") Billing Address 
+                                    p.text-title.text-xs.font-bold 	Vilma Gerhold
+                                    p.font-medium.text-content3 14300 Gallant Fox Ln, Bowie
+                                    p.font-medium.text-content3 Maryland, 20715, US
+                                    p.font-medium.text-content3 (301) 464-0110
+                              tr  
+                                 td(colspan="2" class="invoice-table")
+                                    div.overflow-auto.custom-scroll  
+                                       include ../../components/table/checkout-table     
+                              tr  
+                                 td(colspan="2" class="!text-left rtl:!text-right")
+                                    p.text-title.text-xs.font-bold.uppercase Payment Detail
+                                    p.text-title.text-xs.font-semibold Payment Method: 
+                                       span.font-medium.text-content3 Mastercard
+                                    p.text-title.text-xs.font-semibold Card Holder: 
+                                       span.font-medium.text-content3 	Vilma Gerhold
+                                    p.text-title.text-xs.font-semibold Card Number: 
+                                       span.font-medium.text-content3 xxx xxxx xxxx 7159       
+                                    p.text-title.text-xs.font-semibold Total Amount: 
+                                       span.font-medium.text-content3 $787.6                                     
+                              tr 
+                                 td(colspan="2" class="!text-left rtl:!text-right")
+                                    p.text-title.text-xs.font-bold.uppercase Notes 
+                                    p.font-medium.text-content3 All accounts must be settled within seven days of receiving an invoice. to be paid by check, credit card, or online direct deposit. If the account is not paid within seven days, the agreed-upon quoted fee indicated above will be charged to the credits details provided as confirmation of the task completed.
+                              tr 
+                                 td(colspan="2")
+                                    div.flex.items-center.gap-2.justify-end
+                                       a(href="javascript:window.print()").btn.btn-success.py-1.text-white.text-xs.flex.gap-2.items-center  
+                                          i(data-feather="printer" class="w-4 h-4 stroke-white")
+                                          | Print
+                                       a(href="../../assets/chat-doc/invoice.pdf" Download).btn.btn-secondary.py-1.text-white.text-xs.flex.gap-2.items-center 
+                                          i(data-feather="arrow-down" class="w-4 h-4 stroke-white")                                               
+                                          | Download
+
+            // Page Body End  
+            +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+         include ../../components/customizer
+   include ../../layout/footer-files

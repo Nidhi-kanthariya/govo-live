@@ -1,0 +1,111 @@
+/*=====================
+  Buttons CSS
+==========================*/
+@layer components {
+  .btn {
+    @apply p-3 text-xs rounded text-center leading-none;
+
+    &-lg {
+      @apply py-4 px-5 text-base font-extrabold leading-none;
+    }
+    &-md {
+      @apply p-3 text-xs font-extrabold leading-none;
+    }
+    &-sm {
+      @apply py-2 px-3 text-2xs font-extrabold leading-none;
+    }
+    &-xs {
+      @apply py-1 px-2 text-3xs font-extrabold leading-none;
+    }
+    &.btn-circle {
+      @apply rounded-full;
+    }
+    &.btn-outline {
+      @apply hover:text-white;
+    }
+    &.loading {
+      @apply gap-3;
+    }
+    &-block {
+      @apply w-full;
+    }
+
+    &-primary{
+      @apply bg-primary;
+    }
+    &-secondary{
+      @apply bg-secondary;
+    }
+    &-info{
+      @apply bg-info;
+    }
+    &-success{
+      @apply bg-success;
+    }
+    &-warning{
+      @apply bg-warning;
+    }
+    &-danger{
+      @apply bg-danger;
+    }
+    &-light{
+      @apply bg-gray-light;
+    }
+
+    &-outline{
+      &.btn-primary{
+        @apply border border-primary bg-white text-primary hover:text-white hover:bg-primary;
+      }
+    }
+    &-outline{
+      &.btn-secondary{
+        @apply border border-secondary bg-white text-secondary hover:text-white hover:bg-secondary;
+      }
+    }
+    &-outline{
+      &.btn-info{
+        @apply border border-info bg-white text-info hover:text-white hover:bg-info;
+      }
+    }
+    &-outline{
+      &.btn-success{
+        @apply border border-success bg-white text-success hover:text-white hover:bg-success;
+      }
+    }
+    &-outline{
+      &.btn-warning{
+        @apply border border-warning bg-white text-warning hover:text-white hover:bg-warning;
+      }
+    }
+    &-outline{
+      &.btn-danger{
+        @apply border border-danger bg-white text-danger hover:text-white hover:bg-danger;
+      }
+    }
+    &-outline{
+      &.btn-light{
+        @apply border border-gray-light bg-white text-dark hover:text-dark hover:bg-gray-light;
+      }
+    }
+
+    &-square{
+      @apply py-[0.9375rem] px-[1.25rem];
+    }
+
+    &-rounded{
+      @apply rounded-full py-[1.0625rem] px-[1.25rem];
+    }
+
+    &-disabled,
+    &[disabled='disabled'] {
+      @apply bg-gray-300 text-white;
+    }
+
+    &.copyBtn {
+      @apply transition-all shadow-md opacity-0 group-hover:opacity-100 border-none hover:bg-white bg-white p-1 absolute top-8 !right-4; 
+      svg {
+        @apply w-4 h-4;
+      }
+    }
+  }
+}

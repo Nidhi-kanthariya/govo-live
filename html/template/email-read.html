@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Govo admin is super flexible, powerful, clean &amp; modern responsive tailwind admin template with unlimited possibilities.">
+    <meta name="keywords" content="admin template, Govo admin template, dashboard template, tailwind admin template, responsive admin template, web app">
+    <meta name="author" content="pixelstrap">
+    <title>Govo - Premium Admin Template</title>
+    <!-- Favicon icon-->
+    <link rel="icon" href="../../assets/images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
+    <!-- Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <!-- Custom Select css-->
+    <link rel="stylesheet" href="../../assets/css/vendors/custom-select.css">
+    <!-- App css-->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+  </head>
+  <body class="unique-skin" dir="ltr">
+    <main class="page-wrapper">
+      <div class="page-body-wrapper mb-10 2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300">
+        <!-- Page Header start-->
+        <header class="sticky top-0 z-[4]">
+          <div class="page-header w-full transition-all bg-white shadow-header">
+            <div class="py-[11px] sm:py-[17px] flex items-center xl:relative justify-between px-body-space">
+              <div class="left-header flex items-center gap-2">
+                <button class="sidebar-toggle hide"> 
+                  <svg class="w-6 4xl:w-5 h-6 4xl:h-5 stroke-title"> 
+                    <use href="../../assets/svg/_sprite.svg#Category"> </use>
+                  </svg>
+                </button>
+                <h1 class="flex items-center gap-1 text-lg font-extrabold leading-none sm:hidden 4xl:text-base">Email Read</h1>
+              </div>
+              <div class="right-header flex items-center flex-1 sm:gap-[calc(7px_+_(14_-_7)_*_((100vw_-_320px)_/_(1920_-_320)))] gap-[calc(20px_+_(30_-_20)_*_((100vw_-_320px)_/_(1920_-_320)))] xl:gap-[calc(20px_+_(45_-_20)_*_((100vw_-_320px)_/_(1920_-_320)))]  justify-end">
+                <div class="search-box-wrapper transition-all duration-300 max-w-[40%] xl:scale-0 xl:opacity-0 xl:invisible xl:px-body-space xl:max-w-full w-full xl:z-[5] flex-1 xl:absolute xl:left-0">
+                  <!-- Search Start -->
+                  <div class="search-box relative">
+                    <input class="bg-gray-light rounded-5 w-full py-[11px] pl-[25px] pr-[55px]  text-xs font-semibold text-title" placeholder="Type to Search..." type="search">
+                    <svg class="xl:hidden w-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] stroke-title top-1/2 -translate-y-1/2 right-[25px] absolute"> 
+                      <use href="../../assets/svg/_sprite.svg#Search"> </use>
+                    </svg><i class="search-close hidden cursor-pointer xl:block w-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] stroke-title top-1/2 -translate-y-1/2 right-[25px] absolute" data-feather="x"></i>
+                  </div>
+                  <!-- Search End  -->
+                </div>
+                <div class="icon-menu">
+                  <ul class="flex items center"> 
+                    <li class="hidden xl:flex items-center justify-center px-[calc(7px_+_(14_-_7)_*_((100vw_-_320px)_/_(1920_-_320)))] first:pl-0 last:pr-0  last:border-r-none border-r border-border-light">
+                      <button class="search-show">
+                        <svg class="w-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] stroke-title"> 
+                          <use href="../../assets/svg/_sprite.svg#Search"> </use>
+                        </svg>
+                      </button>
+                    </li>
+                    <li class="flex items-center justify-center xl:pl-[calc(7px_+_(14_-_7)_*_((100vw_-_320px)_/_(1920_-_320)))] pl-0 px-[calc(7px_+_(14_-_7)_*_((100vw_-_320px)_/_(1920_-_320)))] first:pl-0 last:pr-0  last:border-r-none border-r border-border-light"> 
+                      <!-- Notification Start -->
+                      <div class="dropdown">
+                        <div class="indicator flex"><span class="indicator-item badge bg-success p-0 right-[4px] top-0 border-[2px] border-white w-[8px] h-[8px] rounded-full"></span>
+                          <svg class="w-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] stroke-title"> 
+                            <use href="../../assets/svg/_sprite.svg#Notification"> </use>
+                          </svg>
+                        </div>
+                        <div class="dropdown-menu !min-w-[280px] sm:!-right-[163px]"> 
+                          <div class="flex items-center justify-between pb-[15px] border-b border-border-light"> 
+                            <h4 class="text-base font-bold text-title">Notification</h4>
+                            <button class="text-primary text-3xs font-medium">
+                               Mark All As Read </button>
+                          </div>
+                          <div class="search-box relative mt-5">
+                            <input class="bg-gray-light border border-border-light w-full py-[8px] pl-[15px] pr-[30px] rounded-5 text-xs font-medium text-title" placeholder="Type to Search..." type="search">
+                            <svg class="w-4 h-4 stroke-title top-1/2 -translate-y-1/2 right-[15px] absolute"> 
+                              <use href="../../assets/svg/_sprite.svg#Search"> </use>
+                            </svg>
+                          </div>
+                          <ul class="mt-5 flex flex-col max-h-[232px] overflow-auto custom-scroll px-2"> 
+                            <li class="flex items-center gap-3 py-3 px-2 last:border-b-0 border-b border-border-light transition-all duration-300 hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./chat.html">
+                                <div class="rounded-full relative "><img class="rounded-full w-9 min-w-[2.25rem] min-h-[2.25rem] h-auto object-cover" src="../../assets/images/avatar/2.jpg" alt="Dmitriy Groshev">
+                                  <div class="indicator absolute border-[2px] border-white top-[-2px] right-[-2px] w-3 h-3 rounded-full bg-success"></div>
+                                </div>
+                                <div>
+                                  <h4 class="line-clamp-1 text-xs font-semibold text-title">Dmitriy Groshev</h4>
+                                  <p class="line-clamp-1 text-xs font-semibold text-content">Hi, i am josephin. How are you... </p>
+                                </div></a>
+                              <div class="flex items-end flex-col gap-1 ml-auto"><span class="text-3xs font-normal text-content">17:12</span><span class="rounded-full badge text-4xs bg-primary leading-none text-white">3</span>
+                              </div>
+                            </li>
+                            <li class="flex items-center gap-3 py-3 px-2 last:border-b-0 border-b border-border-light transition-all duration-300 hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./chat.html">
+                                <div class="rounded-full relative "><img class="rounded-full w-9 min-w-[2.25rem] min-h-[2.25rem] h-auto object-cover" src="../../assets/images/avatar/3.jpg" alt="Sufiya Elija">
+                                  <div class="indicator absolute border-[2px] border-white top-[-2px] right-[-2px] w-3 h-3 rounded-full bg-danger"></div>
+                                </div>
+                                <div>
+                                  <h4 class="line-clamp-1 text-xs font-semibold text-title">Sufiya Elija</h4>
+                                  <p class="line-clamp-1 text-xs font-semibold text-content">I need job, Please help me.</p>
+                                </div></a>
+                              <div class="flex items-end flex-col gap-1 ml-auto"><span class="text-3xs font-normal text-content">Fri</span>
+                              </div>
+                            </li>
+                            <li class="flex items-center gap-3 py-3 px-2 last:border-b-0 border-b border-border-light transition-all duration-300 hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./chat.html">
+                                <div class="rounded-full relative "><img class="rounded-full w-9 min-w-[2.25rem] min-h-[2.25rem] h-auto object-cover" src="../../assets/images/avatar/5.jpg" alt="Janis Evans">
+                                  <div class="indicator absolute border-[2px] border-white top-[-2px] right-[-2px] w-3 h-3 rounded-full bg-success"></div>
+                                </div>
+                                <div>
+                                  <h4 class="line-clamp-1 text-xs font-semibold text-title">Janis Evans</h4>
+                                  <p class="line-clamp-1 text-xs font-semibold text-content">Good Morning!</p>
+                                </div></a>
+                              <div class="flex items-end flex-col gap-1 ml-auto"><span class="text-3xs font-normal text-content">8:22</span><span class="rounded-full badge text-4xs bg-primary leading-none text-white">12</span>
+                              </div>
+                            </li>
+                            <li class="flex items-center gap-3 py-3 px-2 last:border-b-0 border-b border-border-light transition-all duration-300 hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./chat.html">
+                                <div class="rounded-full relative "><img class="rounded-full w-9 min-w-[2.25rem] min-h-[2.25rem] h-auto object-cover" src="../../assets/images/avatar/4.jpg" alt="Mukrani Pabelo">
+                                  <div class="indicator absolute border-[2px] border-white top-[-2px] right-[-2px] w-3 h-3 rounded-full bg-success"></div>
+                                </div>
+                                <div>
+                                  <h4 class="line-clamp-1 text-xs font-semibold text-title">Mukrani Pabelo</h4>
+                                  <p class="line-clamp-1 text-xs font-semibold text-content">Hi, i am josephin. How are you...</p>
+                                </div></a>
+                              <div class="flex items-end flex-col gap-1 ml-auto"><span class="text-3xs font-normal text-content">03:14</span><span class="rounded-full badge text-4xs bg-primary leading-none text-white">10</span>
+                              </div>
+                            </li>
+                            <li class="flex items-center gap-3 py-3 px-2 last:border-b-0 border-b border-border-light transition-all duration-300 hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./chat.html">
+                                <div class="rounded-full relative "><img class="rounded-full w-9 min-w-[2.25rem] min-h-[2.25rem] h-auto object-cover" src="../../assets/images/avatar/2.jpg" alt="Josephin Water">
+                                  <div class="indicator absolute border-[2px] border-white top-[-2px] right-[-2px] w-3 h-3 rounded-full bg-danger"></div>
+                                </div>
+                                <div>
+                                  <h4 class="line-clamp-1 text-xs font-semibold text-title">Josephin Water</h4>
+                                  <p class="line-clamp-1 text-xs font-semibold text-content">You’ve got some kind of a stom...</p>
+                                </div></a>
+                              <div class="flex items-end flex-col gap-1 ml-auto"><span class="text-3xs font-normal text-content">Thu</span>
+                              </div>
+                            </li>
+                            <li class="flex items-center gap-3 py-3 px-2 last:border-b-0 border-b border-border-light transition-all duration-300 hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./chat.html">
+                                <div class="rounded-full relative "><img class="rounded-full w-9 min-w-[2.25rem] min-h-[2.25rem] h-auto object-cover" src="../../assets/images/avatar/5.jpg" alt="Janis Evans">
+                                  <div class="indicator absolute border-[2px] border-white top-[-2px] right-[-2px] w-3 h-3 rounded-full bg-success"></div>
+                                </div>
+                                <div>
+                                  <h4 class="line-clamp-1 text-xs font-semibold text-title">Janis Evans</h4>
+                                  <p class="line-clamp-1 text-xs font-semibold text-content">Good Morning!</p>
+                                </div></a>
+                              <div class="flex items-end flex-col gap-1 ml-auto"><span class="text-3xs font-normal text-content">8:22</span><span class="rounded-full badge text-4xs bg-primary leading-none text-white">12</span>
+                              </div>
+                            </li>
+                            <li class="flex items-center gap-3 py-3 px-2 last:border-b-0 border-b border-border-light transition-all duration-300 hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./chat.html">
+                                <div class="rounded-full relative "><img class="rounded-full w-9 min-w-[2.25rem] min-h-[2.25rem] h-auto object-cover" src="../../assets/images/avatar/3.jpg" alt="Sufiya Elija">
+                                  <div class="indicator absolute border-[2px] border-white top-[-2px] right-[-2px] w-3 h-3 rounded-full bg-danger"></div>
+                                </div>
+                                <div>
+                                  <h4 class="line-clamp-1 text-xs font-semibold text-title">Sufiya Elija</h4>
+                                  <p class="line-clamp-1 text-xs font-semibold text-content">I need job, Please help me.</p>
+                                </div></a>
+                              <div class="flex items-end flex-col gap-1 ml-auto"><span class="text-3xs font-normal text-content">Fri</span>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- Notification End -->
+                    </li>
+                    <li class="flex items-center justify-center px-[calc(7px_+_(14_-_7)_*_((100vw_-_320px)_/_(1920_-_320)))] first:pl-0 last:pr-0  last:border-r-none border-r border-border-light">
+                      <svg class="w-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] stroke-title"> 
+                        <use href="../../assets/svg/_sprite.svg#Star"> </use>
+                      </svg>
+                    </li>
+                    <li class="2md:hidden flex items-center justify-center px-[calc(7px_+_(14_-_7)_*_((100vw_-_320px)_/_(1920_-_320)))] first:pl-0 last:pr-0  last:border-r-none border-r border-border-light">
+                      <!-- Message Start -->
+                      <div class="dropdown"> 
+                        <div class="indicator flex"><span class="indicator-item bg-danger badge p-0 right-[4px] top-0 border-[2px] border-white w-[8px] h-[8px] rounded-full"></span>
+                          <svg class="w-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] stroke-title"> 
+                            <use href="../../assets/svg/_sprite.svg#Message"> </use>
+                          </svg>
+                        </div>
+                        <div class="dropdown-menu !min-w-[280px]">
+                          <div class="flex items-center justify-between pb-[15px] border-b border-border-light"> 
+                            <h4 class="text-base font-bold text-title">Notification</h4>
+                            <div class="badge bg-primary text-white text-3xs leading-none rounded-full">25</div>
+                          </div>
+                          <ul class="mt-[15px] flex flex-col max-h-[232px] overflow-auto custom-scroll px-2"> 
+                            <li class="flex items-center gap-3 py-3 px-2 last:border-b-0 border-b border-border-light transition-all duration-300 hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./message.html">
+                                <div class="rounded-full relative shadow-lg bg-success flex items-center justify-center rounded-full p-2">
+                                  <svg class="w-5 h-5 stroke-white"> 
+                                    <use href="../../assets/svg/_sprite.svg#Chat"> </use>
+                                  </svg>
+                                </div>
+                                <div>
+                                  <h4 class="line-clamp-1 text-xs font-semibold text-title">New Review Receive</h4>
+                                  <p class="line-clamp-1 text-xs font-semibold text-content">15 min ago</p>
+                                </div></a></li>
+                            <li class="flex items-center gap-3 py-3 px-2 last:border-b-0 border-b border-border-light transition-all duration-300 hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./message.html">
+                                <div class="rounded-full relative shadow-lg bg-danger flex items-center justify-center rounded-full p-2">
+                                  <svg class="w-5 h-5 stroke-white"> 
+                                    <use href="../../assets/svg/_sprite.svg#Scan"> </use>
+                                  </svg>
+                                </div>
+                                <div>
+                                  <h4 class="line-clamp-1 text-xs font-semibold text-title">Transaction $250 Success</h4>
+                                  <p class="line-clamp-1 text-xs font-semibold text-content">2 hours ago</p>
+                                </div></a></li>
+                            <li class="flex items-center gap-3 py-3 px-2 last:border-b-0 border-b border-border-light transition-all duration-300 hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./message.html">
+                                <div class="rounded-full relative shadow-lg bg-warning flex items-center justify-center rounded-full p-2">
+                                  <svg class="w-5 h-5 stroke-white"> 
+                                    <use href="../../assets/svg/_sprite.svg#Buy"> </use>
+                                  </svg>
+                                </div>
+                                <div>
+                                  <h4 class="line-clamp-1 text-xs font-semibold text-title">Order Place Success</h4>
+                                  <p class="line-clamp-1 text-xs font-semibold text-content">2 week ago</p>
+                                </div></a></li>
+                            <li class="flex items-center gap-3 py-3 px-2 last:border-b-0 border-b border-border-light transition-all duration-300 hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./message.html">
+                                <div class="rounded-full relative shadow-lg bg-info flex items-center justify-center rounded-full p-2">
+                                  <svg class="w-5 h-5 stroke-white"> 
+                                    <use href="../../assets/svg/_sprite.svg#Lock"> </use>
+                                  </svg>
+                                </div>
+                                <div>
+                                  <h4 class="line-clamp-1 text-xs font-semibold text-title">Netflix Subscription Expires</h4>
+                                  <p class="line-clamp-1 text-xs font-semibold text-content">4 days ago</p>
+                                </div></a></li>
+                            <li class="flex items-center gap-3 py-3 px-2 last:border-b-0 border-b border-border-light transition-all duration-300 hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./message.html">
+                                <div class="rounded-full relative shadow-lg bg-danger flex items-center justify-center rounded-full p-2">
+                                  <svg class="w-5 h-5 stroke-white"> 
+                                    <use href="../../assets/svg/_sprite.svg#Discount"> </use>
+                                  </svg>
+                                </div>
+                                <div>
+                                  <h4 class="line-clamp-1 text-xs font-semibold text-title">Congratulations You Won $2500</h4>
+                                  <p class="line-clamp-1 text-xs font-semibold text-content">12 days ago</p>
+                                </div></a></li>
+                            <li class="flex items-center gap-3 py-3 px-2 last:border-b-0 border-b border-border-light transition-all duration-300 hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./message.html">
+                                <div class="rounded-full relative shadow-lg bg-success flex items-center justify-center rounded-full p-2">
+                                  <svg class="w-5 h-5 stroke-white"> 
+                                    <use href="../../assets/svg/_sprite.svg#Upload"> </use>
+                                  </svg>
+                                </div>
+                                <div>
+                                  <h4 class="line-clamp-1 text-xs font-semibold text-title">Latest Updates On You Phone</h4>
+                                  <p class="line-clamp-1 text-xs font-semibold text-content">25 days ago</p>
+                                </div></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- Message End -->
+                    </li>
+                    <li class="2md:hidden flex items-center justify-center px-[calc(7px_+_(14_-_7)_*_((100vw_-_320px)_/_(1920_-_320)))] first:pl-0 last:pr-0  last:border-r-none border-r border-border-light">
+                      <!-- Cart Start -->
+                      <div class="dropdown shopping-bag"> 
+                        <svg class="w-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] stroke-title"> 
+                          <use href="../../assets/svg/_sprite.svg#Buy"> </use>
+                        </svg>
+                        <div class="dropdown-menu !min-w-[320px]">
+                          <div class="flex items-center justify-between pb-[15px] border-b border-border-light"> 
+                            <h4 class="text-base font-bold text-title">Cart Items<span class="text-sm text-content font-bold"> (25)</span></h4>
+                            <button class="p-2 rounded-full bg-gray-light transition-all duration-300 group hover:bg-primary">
+                              <svg class="w-[18px] h-[18px] transition-all duration-300 group-hover:stroke-white stroke-title"> 
+                                <use href="../../assets/svg/_sprite.svg#Delete"> </use>
+                              </svg>
+                            </button>
+                          </div>
+                          <ul class="flex flex-col max-h-[232px] overflow-auto custom-scroll px-1"> 
+                            <li class="cart-item flex items-center gap-3 py-3  last:border-b-0 border-b border-border-light transition-all duration-300  rounded-5"><a class="flex items-center gap-[12px]" href="./product.html">
+                                <div class="rounded-full relative "><img class="rounded-full min-w-[2.25rem] min-h-[2.25rem] w-full h-auto object-cover" src="../../assets/images/product/1.jpg" alt="Flower Pot"></div>
+                                <div>
+                                  <h4 class="line-clamp-1 text-xs font-semibold text-title">Flower Pot</h4>
+                                  <p class="line-clamp-1 text-xs font-semibold text-content ">$25.00</p>
+                                </div></a>
+                              <div class="items-center flex gap-2 ml-auto">
+                                <div class="plus-minus flex items-center text-center bg-primary-light border border-primary rounded-5"><i class="sub cursor-pointer w-5 h-5 bg-primary border-r border-primary stroke-white" data-feather="minus"></i>
+                                  <input class="text-center bg-transparent text-title" type="number" value="5" min="1" max="10"/><i class="add cursor-pointer w-5 h-5 bg-primary border-l border-primary stroke-white" data-feather="plus"></i>
+                                </div>
+                                <svg class="remove-cart w-[16px] h-[16px] cursor-pointer transition-all duration-300 hover:stroke-primary stroke-title"> 
+                                  <use href="../../assets/svg/_sprite.svg#Delete"> </use>
+                                </svg>
+                              </div>
+                            </li>
+                            <li class="cart-item flex items-center gap-3 py-3  last:border-b-0 border-b border-border-light transition-all duration-300  rounded-5"><a class="flex items-center gap-[12px]" href="./product.html">
+                                <div class="rounded-full relative "><img class="rounded-full min-w-[2.25rem] min-h-[2.25rem] w-full h-auto object-cover" src="../../assets/images/product/2.jpg" alt="Iphone Max pro"></div>
+                                <div>
+                                  <h4 class="line-clamp-1 text-xs font-semibold text-title">Iphone Max pro</h4>
+                                  <p class="line-clamp-1 text-xs font-semibold text-content ">$35.20</p>
+                                </div></a>
+                              <div class="items-center flex gap-2 ml-auto">
+                                <div class="plus-minus flex items-center text-center bg-primary-light border border-primary rounded-5"><i class="sub cursor-pointer w-5 h-5 bg-primary border-r border-primary stroke-white" data-feather="minus"></i>
+                                  <input class="text-center bg-transparent text-title" type="number" value="12" min="1" max="10"/><i class="add cursor-pointer w-5 h-5 bg-primary border-l border-primary stroke-white" data-feather="plus"></i>
+                                </div>
+                                <svg class="remove-cart w-[16px] h-[16px] cursor-pointer transition-all duration-300 hover:stroke-primary stroke-title"> 
+                                  <use href="../../assets/svg/_sprite.svg#Delete"> </use>
+                                </svg>
+                              </div>
+                            </li>
+                            <li class="cart-item flex items-center gap-3 py-3  last:border-b-0 border-b border-border-light transition-all duration-300  rounded-5"><a class="flex items-center gap-[12px]" href="./product.html">
+                                <div class="rounded-full relative "><img class="rounded-full min-w-[2.25rem] min-h-[2.25rem] w-full h-auto object-cover" src="../../assets/images/product/3.jpg" alt="Royal Party Glass"></div>
+                                <div>
+                                  <h4 class="line-clamp-1 text-xs font-semibold text-title">Royal Party Glass</h4>
+                                  <p class="line-clamp-1 text-xs font-semibold text-content ">$45.10</p>
+                                </div></a>
+                              <div class="items-center flex gap-2 ml-auto">
+                                <div class="plus-minus flex items-center text-center bg-primary-light border border-primary rounded-5"><i class="sub cursor-pointer w-5 h-5 bg-primary border-r border-primary stroke-white" data-feather="minus"></i>
+                                  <input class="text-center bg-transparent text-title" type="number" value="2" min="1" max="10"/><i class="add cursor-pointer w-5 h-5 bg-primary border-l border-primary stroke-white" data-feather="plus"></i>
+                                </div>
+                                <svg class="remove-cart w-[16px] h-[16px] cursor-pointer transition-all duration-300 hover:stroke-primary stroke-title"> 
+                                  <use href="../../assets/svg/_sprite.svg#Delete"> </use>
+                                </svg>
+                              </div>
+                            </li>
+                            <li class="cart-item flex items-center gap-3 py-3  last:border-b-0 border-b border-border-light transition-all duration-300  rounded-5"><a class="flex items-center gap-[12px]" href="./product.html">
+                                <div class="rounded-full relative "><img class="rounded-full min-w-[2.25rem] min-h-[2.25rem] w-full h-auto object-cover" src="../../assets/images/product/4.jpg" alt="Water Proof Watch"></div>
+                                <div>
+                                  <h4 class="line-clamp-1 text-xs font-semibold text-title">Water Proof Watch</h4>
+                                  <p class="line-clamp-1 text-xs font-semibold text-content ">$12.30</p>
+                                </div></a>
+                              <div class="items-center flex gap-2 ml-auto">
+                                <div class="plus-minus flex items-center text-center bg-primary-light border border-primary rounded-5"><i class="sub cursor-pointer w-5 h-5 bg-primary border-r border-primary stroke-white" data-feather="minus"></i>
+                                  <input class="text-center bg-transparent text-title" type="number" value="5" min="1" max="10"/><i class="add cursor-pointer w-5 h-5 bg-primary border-l border-primary stroke-white" data-feather="plus"></i>
+                                </div>
+                                <svg class="remove-cart w-[16px] h-[16px] cursor-pointer transition-all duration-300 hover:stroke-primary stroke-title"> 
+                                  <use href="../../assets/svg/_sprite.svg#Delete"> </use>
+                                </svg>
+                              </div>
+                            </li>
+                            <li class="cart-item flex items-center gap-3 py-3  last:border-b-0 border-b border-border-light transition-all duration-300  rounded-5"><a class="flex items-center gap-[12px]" href="./product.html">
+                                <div class="rounded-full relative "><img class="rounded-full min-w-[2.25rem] min-h-[2.25rem] w-full h-auto object-cover" src="../../assets/images/product/5.jpg" alt="Traveling Duffle Bag"></div>
+                                <div>
+                                  <h4 class="line-clamp-1 text-xs font-semibold text-title">Traveling Duffle Bag</h4>
+                                  <p class="line-clamp-1 text-xs font-semibold text-content ">$32.10</p>
+                                </div></a>
+                              <div class="items-center flex gap-2 ml-auto">
+                                <div class="plus-minus flex items-center text-center bg-primary-light border border-primary rounded-5"><i class="sub cursor-pointer w-5 h-5 bg-primary border-r border-primary stroke-white" data-feather="minus"></i>
+                                  <input class="text-center bg-transparent text-title" type="number" value="12" min="1" max="10"/><i class="add cursor-pointer w-5 h-5 bg-primary border-l border-primary stroke-white" data-feather="plus"></i>
+                                </div>
+                                <svg class="remove-cart w-[16px] h-[16px] cursor-pointer transition-all duration-300 hover:stroke-primary stroke-title"> 
+                                  <use href="../../assets/svg/_sprite.svg#Delete"> </use>
+                                </svg>
+                              </div>
+                            </li>
+                          </ul>
+                          <div class="pt-[15px] border-t border-light">
+                            <div class="flex items-center justify-between mb-[15px]">
+                              <h4 class="text-sm font-semibold">Bag Total</h4><span class="text-base font-semibold">$250.00 </span>
+                            </div><a class="btn btn-primary text-sm font-semibold text-white w-full" href="checkout.html">Proceed to Checkout </a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Cart Start -->
+                    </li>
+                    <li class="flex customizer-btn items-center justify-center px-[calc(7px_+_(14_-_7)_*_((100vw_-_320px)_/_(1920_-_320)))] first:pl-0 last:pr-0 last:border-r-none sm:last:pr-[calc(7px_+_(14_-_7)_*_((100vw_-_320px)_/_(1920_-_320)))] sm:last:border-r border-r border-border-light">
+                      <svg class="w-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] cursor-pointer transition-all duration-300 group-hover:stroke-primary stroke-title"> 
+                        <use href="../../assets/svg/_sprite.svg#Setting"> </use>
+                      </svg>
+                    </li>
+                  </ul>
+                </div>
+                <ul class="profile-box flex items-center">
+                  <li class="pr-[11px] last:pr-0 sm:pr-0 sm:border-none last:border-none border-r border-border-2 flex items-center"> 
+                    <!-- Language Start -->
+                    <div class="language-select dropdown group">
+                      <button class="flex items-center max-w-[87px] min-w-[87px] gap-[11px]" id="language-select"><img class="w-[35px] h-auto" src="../../assets/images/flag/en.svg" alt="flag"><span class="flex items-center gap-1 text-lg font-bold 4xl:text-base">En</span>
+                        <svg class="w-[6px] h-[4px] stroke-title group-hover:rotate-180 duration-300 transition-all"> 
+                          <use href="../../assets/svg/_sprite.svg#Fill-Arrow"> </use>
+                        </svg>
+                      </button>
+                      <ul class="language-menu dropdown-menu flex flex-col gap-3 !min-w-[145px]">
+                        <li class="language-option flex items-center gap-2 cursor-pointer" data-value="En"> <img class="w-[32px] h-auto" src="../../assets/images/flag/en.svg" alt="flag"><span class="flex items-center gap-1 text-xs font-bold hover:text-primary duration-300 transition-all">
+                             English</span></li>
+                        <li class="language-option flex items-center gap-2 cursor-pointer" data-value="Fr"> <img class="w-[32px] h-auto" src="../../assets/images/flag/fr.svg" alt="flag"><span class="flex items-center gap-1 text-xs font-bold hover:text-primary duration-300 transition-all">
+                             French</span></li>
+                        <li class="language-option flex items-center gap-2 cursor-pointer" data-value="Es"> <img class="w-[32px] h-auto" src="../../assets/images/flag/es.svg" alt="flag"><span class="flex items-center gap-1 text-xs font-bold hover:text-primary duration-300 transition-all">
+                             Spanich</span></li>
+                        <li class="language-option flex items-center gap-2 cursor-pointer" data-value="Ar"> <img class="w-[32px] h-auto" src="../../assets/images/flag/sa.svg" alt="flag"><span class="flex items-center gap-1 text-xs font-bold hover:text-primary duration-300 transition-all">
+                             Arabic</span></li>
+                      </ul>
+                    </div>
+                    <!-- Language End -->
+                  </li>
+                  <li class="flex- pl-[11px] first:pl-0 flex items-center sm:hidden">
+                    <!-- Profile Start -->
+                    <div class="dropdown"> 
+                      <div class="flex items-center gap-[10px] cursor-pointer"> 
+                        <div><img class="w-[calc(35px_+_(40_-_35)_*_((100vw_-_320px)_/_(1920_-_320)))] h-auto rounded-full" src="../../assets/images/avatar/1.jpg" alt="avatar"></div>
+                        <div class="md:hidden">
+                          <h4 class="text-xs font-bold"> Helen Walter</h4><span class="flex items-center gap-1 text-3xs font-semibold text-content">Admin
+                            <svg class="w-[6px] h-[4px]"> 
+                              <use href="../../assets/svg/_sprite.svg#Fill-Arrow"> </use>
+                            </svg></span>
+                        </div>
+                      </div>
+                      <div class="dropdown-menu !min-w-[170px]"> 
+                        <ul class="flex flex-col gap-3"> 
+                          <li> <a class="text-title flex items-center gap-2" href="profile.html">
+                              <svg class="w-[22px] h-[22px] stroke-title"> 
+                                <use href="../../assets/svg/_sprite.svg#2-User"> </use>
+                              </svg>Profile Setting</a></li>
+                          <li> <a class="text-title flex items-center gap-2" href="message.html">
+                              <svg class="w-[22px] h-[22px] stroke-title"> 
+                                <use href="../../assets/svg/_sprite.svg#More-Square"> </use>
+                              </svg>Message</a></li>
+                          <li> <a class="text-title flex items-center gap-2" href="todo-app.html">
+                              <svg class="w-[22px] h-[22px] stroke-title"> 
+                                <use href="../../assets/svg/_sprite.svg#Edit-Square"> </use>
+                              </svg>Taskboard</a></li>
+                          <li> <a class="text-title flex items-center gap-2" href="faqs.html">
+                              <svg class="w-[22px] h-[22px] stroke-title"> 
+                                <use href="../../assets/svg/_sprite.svg#Shield-Done"> </use>
+                              </svg>Help</a></li>
+                          <li> <a class="text-title flex items-center gap-2" href="javascript:void(0)">
+                              <svg class="w-[22px] h-[22px] stroke-title"> 
+                                <use href="../../assets/svg/_sprite.svg#Login"> </use>
+                              </svg>Logout</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- Profile End -->
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Sub Header Start -->
+            <div class="md:hidden py-[14px] border-t border-border-light px-body-space"> 
+              <div class="relative flex items-center justify-between"> 
+                <ul class="flex items-center 2md:shadow-lg 2md:border 2md:border-border-light 2md:z-[5] 2md:p-4 2md:absolute 2md:top-[38px] 2md:rounded-5 2md:left-0 2md:items-start 2md:bg-white 2md:flex-col gap-[calc(8px_+_(31_-_8)_*_((100vw_-_320px)_/_(1920_-_320)))]"> 
+                  <li class="dropdown on-hover-show cursor-pointer pb-[6px] transition-all relative group before:bg-primary before:absolute before:-translate-x-1/2 before:bottom-0 before:left-1/2 before:w-full before:h-[2px]"> <span class="text-xs font-bold transition-all text-primary">General</span>
+                    <div class="dropdown-menu !min-w-[890px] lg:!min-w-[660px] !left-0 !right-unset !p-0"> 
+                      <!-- General menu-->
+                      <div class="grid grid-cols-12 gap-2">
+                        <div class="col-span-8">
+                          <ul class="columns-2 gap-[10px] p-[15px]"> 
+                            <li class="p-2 rounded-5 transition-all duration-300 hover:bg-gray-light"><a class="flex items-center gap-2" href="index.html"> 
+                                <div class="p-2 rounded-5  border border-primary">
+                                  <svg class="w-5 h-5 stroke-primary"> 
+                                    <use href="../../assets/svg/_sprite.svg#Home"> </use>
+                                  </svg>
+                                </div>
+                                <div>
+                                  <h4 class="text-xs font-semibold text-title capitalize line-clamp-1">Unique Dashboard</h4><span class="text-xs font-medium text-content line-clamp-1">Over view of all</span>
+                                </div></a></li>
+                            <li class="p-2 rounded-5 transition-all duration-300 hover:bg-gray-light"><a class="flex items-center gap-2" href="friendly.html"> 
+                                <div class="p-2 rounded-5  border border-primary">
+                                  <svg class="w-5 h-5 stroke-primary"> 
+                                    <use href="../../assets/svg/_sprite.svg#3-User"> </use>
+                                  </svg>
+                                </div>
+                                <div>
+                                  <h4 class="text-xs font-semibold text-title capitalize line-clamp-1">Friendly Dashboard</h4><span class="text-xs font-medium text-content line-clamp-1">Social connectivity</span>
+                                </div></a></li>
+                            <li class="p-2 rounded-5 transition-all duration-300 hover:bg-gray-light"><a class="flex items-center gap-2" href="minimal.html"> 
+                                <div class="p-2 rounded-5  border border-primary">
+                                  <svg class="w-5 h-5 stroke-primary"> 
+                                    <use href="../../assets/svg/_sprite.svg#Ticket"> </use>
+                                  </svg>
+                                </div>
+                                <div>
+                                  <h4 class="text-xs font-semibold text-title capitalize line-clamp-1">Minimal Dashboard</h4><span class="text-xs font-medium text-content line-clamp-1">Minimal over view </span>
+                                </div></a></li>
+                            <li class="p-2 rounded-5 transition-all duration-300 hover:bg-gray-light"><a class="flex items-center gap-2" href="material.html"> 
+                                <div class="p-2 rounded-5  border border-primary">
+                                  <svg class="w-5 h-5 stroke-primary"> 
+                                    <use href="../../assets/svg/_sprite.svg#Calendar"> </use>
+                                  </svg>
+                                </div>
+                                <div>
+                                  <h4 class="text-xs font-semibold text-title capitalize line-clamp-1">Material Dashboard</h4><span class="text-xs font-medium text-content line-clamp-1">Material design</span>
+                                </div></a></li>
+                            <li class="p-2 rounded-5 transition-all duration-300 hover:bg-gray-light"><a class="flex items-center gap-2" href="shopping-place.html"> 
+                                <div class="p-2 rounded-5  border border-primary">
+                                  <svg class="w-5 h-5 stroke-primary"> 
+                                    <use href="../../assets/svg/_sprite.svg#Bag"> </use>
+                                  </svg>
+                                </div>
+                                <div>
+                                  <h4 class="text-xs font-semibold text-title capitalize line-clamp-1">Shopping Place Dashboard</h4><span class="text-xs font-medium text-content line-clamp-1">Ecommerce shop place</span>
+                                </div></a></li>
+                            <li class="p-2 rounded-5 transition-all duration-300 hover:bg-gray-light"><a class="flex items-center gap-2" href="retro.html"> 
+                                <div class="p-2 rounded-5  border border-primary">
+                                  <svg class="w-5 h-5 stroke-primary"> 
+                                    <use href="../../assets/svg/_sprite.svg#Activity"> </use>
+                                  </svg>
+                                </div>
+                                <div>
+                                  <h4 class="text-xs font-semibold text-title capitalize line-clamp-1">Retro Dashboard</h4><span class="text-xs font-medium text-content line-clamp-1">Monochrome mode eye friendly</span>
+                                </div></a></li>
+                            <li class="p-2 rounded-5 transition-all duration-300 hover:bg-gray-light"><a class="flex items-center gap-2" href="crypto.html"> 
+                                <div class="p-2 rounded-5  border border-primary">
+                                  <svg class="w-5 h-5 stroke-primary"> 
+                                    <use href="../../assets/svg/_sprite.svg#Graph"> </use>
+                                  </svg>
+                                </div>
+                                <div>
+                                  <h4 class="text-xs font-semibold text-title capitalize line-clamp-1">Crypto Dashboard</h4><span class="text-xs font-medium text-content line-clamp-1">Crypto curacy analysis</span>
+                                </div></a></li>
+                            <li class="p-2 rounded-5 transition-all duration-300 hover:bg-gray-light"><a class="flex items-center gap-2" href="advanced.html"> 
+                                <div class="p-2 rounded-5  border border-primary">
+                                  <svg class="w-5 h-5 stroke-primary"> 
+                                    <use href="../../assets/svg/_sprite.svg#Upload"> </use>
+                                  </svg>
+                                </div>
+                                <div>
+                                  <h4 class="text-xs font-semibold text-title capitalize line-clamp-1">Advanced Dashboard</h4><span class="text-xs font-medium text-content line-clamp-1">Mordent analysis</span>
+                                </div></a></li>
+                          </ul>
+                        </div>
+                        <div class="col-span-4 bg-gray-light p-[15px]">
+                          <h4 class="text-base font-semibold text-title mb-3">More Dashboard                     </h4>
+                          <ul class="flex flex-col gap-2">
+                            <li><a href="reports.html"><span class="transition-all duration-300 hover:text-primary text-xs font-semibold text-title capitalize">
+                                    Reports Dashboard</span></a></li>
+                            <li><a href="support.html"><span class="transition-all duration-300 hover:text-primary text-xs font-semibold text-title capitalize">
+                                    Support Dashboard</span></a></li>
+                            <li><a href="elegance.html"> <span class="transition-all duration-300 hover:text-primary text-xs font-semibold text-title capitalize">
+                                      Elegance Dashboard</span></a></li>
+                            <li><a href="project.html"><span class="transition-all duration-300 hover:text-primary text-xs font-semibold text-title capitalize">
+                                      Project Dashboard </span></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="dropdown on-hover-show cursor-pointer pb-[6px] transition-all duration-300 relative group before:bg-primary before:absolute before:-translate-x-1/2 before:bottom-0 before:left-1/2 hover:before:w-full before:h-[2px] before:w-0 "> <span class="text-xs font-bold text-content transition-all duration-300	group-hover:text-primary">Components</span>
+                    <div class="dropdown-menu !min-w-[220px] !left-0 !right-unset"> 
+                      <!-- Componant menu-->
+                      <ul class="flex flex-col gap-3"> 
+                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2 justify-between" href="javascript:void(0)"><span class="flex items-center gap-2">
+                              <svg class="w-5 h-5 stroke-title"> 
+                                <use href="../../assets/svg/_sprite.svg#Folder"> </use>
+                              </svg>Ui Kits</span>
+                            <svg class="w-4 h-4 stroke-title ml-auto"> 
+                              <use href="../../assets/svg/_sprite.svg#Arrow-Right-2"> </use>
+                            </svg></a>
+                          <div class="dropdown-menu dropdown-sub-menu">
+                            <ul class="flex flex-col gap-2"> 
+                              <li><a href="typography.html">Typography</a></li>
+                              <li><a href="avatar.html">Avatar</a></li>
+                              <li><a href="buttons.html">Buttons</a></li>
+                              <li><a href="badge.html">Badges</a></li>
+                              <li><a href="progress.html">Progress</a></li>
+                              <li><a href="modal.html">Modal</a></li>
+                              <li><a href="alert.html">Alert</a></li>
+                              <li><a href="dropdown.html">Dropdown</a></li>
+                              <li><a href="collapse.html">Collapse</a></li>
+                              <li><a href="tooltip.html">Tooltip</a></li>
+                              <li><a href="divider.html">Divider</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2 justify-between" href="javascript:void(0)"><span class="flex items-center gap-2">
+                              <svg class="w-5 h-5 stroke-title"> 
+                                <use href="../../assets/svg/_sprite.svg#Ticket-Star"> </use>
+                              </svg>Bonus Ui</span>
+                            <svg class="w-4 h-4 stroke-title ml-auto"> 
+                              <use href="../../assets/svg/_sprite.svg#Arrow-Right-2"> </use>
+                            </svg></a>
+                          <div class="dropdown-menu dropdown-sub-menu">
+                            <ul class="flex flex-col gap-2"> 
+                              <li><a href="breadcrumb.html">Breadcrumbs</a></li>
+                              <li><a href="pagination.html">Pagination</a></li>
+                              <li><a href="carousel.html">Carousel</a></li>
+                              <li><a href="countdown.html">Countdown</a></li>
+                              <li><a href="radial-progress.html">Radial progress</a></li>
+                              <li><a href="swap.html">Swap</a></li>
+                              <li><a href="indicator.html">Indicator</a></li>
+                              <li><a href="mask.html">Mask</a></li>
+                              <li><a href="stack.html">Stack</a></li>
+                              <li><a href="toast.html">Toast</a></li>
+                              <li><a href="steps.html">Steps</a></li>
+                              <li><a href="tabs.html">Tabs</a></li>
+                              <li><a href="rating.html">Rating</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2 justify-between" href="javascript:void(0)"><span class="flex items-center gap-2">
+                              <svg class="w-5 h-5 stroke-title"> 
+                                <use href="../../assets/svg/_sprite.svg#Plus"> </use>
+                              </svg>Form Components</span>
+                            <svg class="w-4 h-4 stroke-title ml-auto"> 
+                              <use href="../../assets/svg/_sprite.svg#Arrow-Right-2"> </use>
+                            </svg></a>
+                          <div class="dropdown-menu dropdown-sub-menu">
+                            <ul class="flex flex-col gap-2"> 
+                              <li><a href="input-textarea.html">Input and Textarea</a></li>
+                              <li><a href="checkbox-radio.html">Checkbox and Radio</a></li>
+                              <li><a href="select.html">Select</a></li>
+                              <li><a href="switch.html">Switch</a></li>
+                              <li><a href="range.html">Range</a></li>
+                              <li><a href="input-group.html">Input Group </a></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2 justify-between" href="javascript:void(0)"><span class="flex items-center gap-2">
+                              <svg class="w-5 h-5 stroke-title"> 
+                                <use href="../../assets/svg/_sprite.svg#Edit-Square"> </use>
+                              </svg>Builders</span>
+                            <svg class="w-4 h-4 stroke-title ml-auto"> 
+                              <use href="../../assets/svg/_sprite.svg#Arrow-Right-2"> </use>
+                            </svg></a>
+                          <div class="dropdown-menu dropdown-sub-menu">
+                            <ul class="flex flex-col gap-2"> 
+                              <li><a href="form-builder1.html">Form Builder 1</a></li>
+                              <li><a href="form-builder2.html">Form Builder 2</a></li>
+                              <li><a href="form-builder2.html">Form Builder 2</a></li>
+                              <li><a href="form-builder3.html">Form Builder 3</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2 justify-between" href="javascript:void(0)"><span class="flex items-center gap-2">
+                              <svg class="w-5 h-5 stroke-title"> 
+                                <use href="../../assets/svg/_sprite.svg#Scan"> </use>
+                              </svg>Animation</span>
+                            <svg class="w-4 h-4 stroke-title ml-auto"> 
+                              <use href="../../assets/svg/_sprite.svg#Arrow-Right-2"> </use>
+                            </svg></a>
+                          <div class="dropdown-menu dropdown-sub-menu">
+                            <ul class="flex flex-col gap-2"> 
+                              <li><a href="animate.html">Animate</a></li>
+                              <li><a href="scroll-reveal.html">Scroll Reveal</a></li>
+                              <li><a href="aos.html">AOS animation</a></li>
+                              <li><a href="tilt.html">Tilt Animation</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2 justify-between" href="javascript:void(0)"><span class="flex items-center gap-2">
+                              <svg class="w-5 h-5 stroke-title"> 
+                                <use href="../../assets/svg/_sprite.svg#Danger-Circle"> </use>
+                              </svg>Icons</span>
+                            <svg class="w-4 h-4 stroke-title ml-auto"> 
+                              <use href="../../assets/svg/_sprite.svg#Arrow-Right-2"> </use>
+                            </svg></a>
+                          <div class="dropdown-menu dropdown-sub-menu">
+                            <ul class="flex flex-col gap-2"> 
+                              <li><a href="fontawesome-icon.html">Fontawesome Icon</a></li>
+                              <li><a href="iconly-icon.html">Iconly Icons</a></li>
+                              <li><a href="feather.html">Feather Icons</a></li>
+                              <li><a href="thimify-icon.html">Thimify Icon</a></li>
+                              <li><a href="whether-icon.html">Whether Icon</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2 justify-between" href="javascript:void(0)"><span class="flex items-center gap-2">
+                              <svg class="w-5 h-5 stroke-title"> 
+                                <use href="../../assets/svg/_sprite.svg#Chart"> </use>
+                              </svg>Chart</span>
+                            <svg class="w-4 h-4 stroke-title ml-auto"> 
+                              <use href="../../assets/svg/_sprite.svg#Arrow-Right-2"> </use>
+                            </svg></a>
+                          <div class="dropdown-menu dropdown-sub-menu">
+                            <ul class="flex flex-col gap-2"> 
+                              <li><a href="apex-chart.html">Apex Chart</a></li>
+                              <li><a href="echarts.html">Echarts</a></li>
+                              <li><a href="google-chart.html">Google Chart</a></li>
+                              <li><a href="sparkline-chart.html">Sparkline Chart</a></li>
+                              <li><a href="flot-chart.html">Flot Chart</a></li>
+                              <li><a href="knob-chart.html">Knob Chart</a></li>
+                              <li><a href="morris-chart.html">Morris Chart</a></li>
+                              <li><a href="chatjs-chart.html">Chatjs Chart</a></li>
+                              <li><a href="peity-chart.html">Peity Chart</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="dropdown on-hover-show cursor-pointer pb-[6px] transition-all duration-300 relative group before:bg-primary before:absolute before:-translate-x-1/2 before:bottom-0 before:left-1/2 hover:before:w-full before:h-[2px] before:w-0 "> <span class="text-xs font-bold text-content transition-all duration-300	group-hover:text-primary">Applications</span>
+                    <div class="dropdown-menu !min-w-[190px] !left-0 !right-unset"> 
+                      <!-- App Menu -->
+                      <ul class="flex flex-col gap-3"> 
+                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2" href="javascript:void(0)"><span class="flex items-center gap-2">
+                              <svg class="w-5 h-5 stroke-title"> 
+                                <use href="../../assets/svg/_sprite.svg#Message"> </use>
+                              </svg>Email App</span>
+                            <svg class="w-4 h-4 stroke-title ml-auto"> 
+                              <use href="../../assets/svg/_sprite.svg#Arrow-Right-2"> </use>
+                            </svg></a>
+                          <div class="dropdown-menu dropdown-sub-menu">
+                            <ul class="flex flex-col gap-2"> 
+                              <li><a href="email.html">Email</a></li>
+                              <li><a href="email-read.html">Email Read</a></li>
+                              <li><a href="email-compose.html">Email Compose</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2" href="javascript:void(0)"><span class="flex items-center gap-2">
+                              <svg class="w-5 h-5 stroke-title"> 
+                                <use href="../../assets/svg/_sprite.svg#Buy"> </use>
+                              </svg>Ecommerce</span>
+                            <svg class="w-4 h-4 stroke-title ml-auto"> 
+                              <use href="../../assets/svg/_sprite.svg#Arrow-Right-2"> </use>
+                            </svg></a>
+                          <div class="dropdown-menu dropdown-sub-menu">
+                            <ul class="flex flex-col gap-2"> 
+                              <li><a href="shop.html">Shop</a></li>
+                              <li><a href="product.html">Product</a></li>
+                              <li><a href="cart.html">Cart</a></li>
+                              <li><a href="checkout.html">Checkout</a></li>
+                              <li><a href="invoice.html">Invoice</a></li>
+                              <li><a href="invoice-preview.html">Invoice Preview</a></li>
+                              <li><a href="wishlist.html">Wishlist</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2" href="javascript:void(0)"><span class="flex items-center gap-2">
+                              <svg class="w-5 h-5 stroke-title"> 
+                                <use href="../../assets/svg/_sprite.svg#Paper-Plus"> </use>
+                              </svg>Project</span>
+                            <svg class="w-4 h-4 stroke-title ml-auto"> 
+                              <use href="../../assets/svg/_sprite.svg#Arrow-Right-2"> </use>
+                            </svg></a>
+                          <div class="dropdown-menu dropdown-sub-menu">
+                            <ul class="flex flex-col gap-2"> 
+                              <li><a href="project-list.html">Project List</a></li>
+                              <li><a href="project-create.html">Project Create</a></li>
+                              <li><a href="target.html">Target</a></li>
+                              <li><a href="budget.html">Budget</a></li>
+                              <li><a href="user.html">User</a></li>
+                              <li><a href="activity.html">Activity</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="w-full "><a class="flex items-center gap-2" href="chat-app.html"><span class="flex items-center gap-2">
+                              <svg class="w-5 h-5 stroke-title"> 
+                                <use href="../../assets/svg/_sprite.svg#Chat"> </use>
+                              </svg>Chat App</span></a>
+                        </li>
+                        <li class="w-full "><a class="flex items-center gap-2" href="tasks.html"><span class="flex items-center gap-2">
+                              <svg class="w-5 h-5 stroke-title"> 
+                                <use href="../../assets/svg/_sprite.svg#Check-Circle"> </use>
+                              </svg>Tasks</span></a>
+                        </li>
+                        <li class="w-full "><a class="flex items-center gap-2" href="social-App.html"><span class="flex items-center gap-2">
+                              <svg class="w-5 h-5 stroke-title"> 
+                                <use href="../../assets/svg/_sprite.svg#3-User"> </use>
+                              </svg>Social App</span></a>
+                        </li>
+                        <li class="w-full "><a class="flex items-center gap-2" href="social-App.html"><span class="flex items-center gap-2">
+                              <svg class="w-5 h-5 stroke-title"> 
+                                <use href="../../assets/svg/_sprite.svg#Check-List"> </use>
+                              </svg>Todo App</span></a>
+                        </li>
+                        <li class="w-full "><a class="flex items-center gap-2" href="to-do-app.html"><span class="flex items-center gap-2">
+                              <svg class="w-5 h-5 stroke-title"> 
+                                <use href="../../assets/svg/_sprite.svg#Video"> </use>
+                              </svg>Video Chat</span></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="dropdown on-hover-show cursor-pointer pb-[6px] transition-all duration-300 relative group before:bg-primary before:absolute before:-translate-x-1/2 before:bottom-0 before:left-1/2 hover:before:w-full before:h-[2px] before:w-0 "> <span class="text-xs font-bold text-content transition-all duration-300	group-hover:text-primary">Pages</span>
+                    <div class="dropdown-menu !min-w-[190px] !left-0 !right-unset"> 
+                      <!-- App Menu -->
+                      <ul class="flex flex-col gap-3"> 
+                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2" href="javascript:void(0)"><span class="flex items-center gap-2">
+                              <svg class="w-5 h-5 stroke-title"> 
+                                <use href="../../assets/svg/_sprite.svg#Message"> </use>
+                              </svg>Email App</span>
+                            <svg class="w-4 h-4 stroke-title ml-auto"> 
+                              <use href="../../assets/svg/_sprite.svg#Arrow-Right-2"> </use>
+                            </svg></a>
+                          <div class="dropdown-menu dropdown-sub-menu">
+                            <ul class="flex flex-col gap-2"> 
+                              <li><a href="email.html">Email</a></li>
+                              <li><a href="email-read.html">Email Read</a></li>
+                              <li><a href="email-compose.html">Email Compose</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2" href="javascript:void(0)"><span class="flex items-center gap-2">
+                              <svg class="w-5 h-5 stroke-title"> 
+                                <use href="../../assets/svg/_sprite.svg#Buy"> </use>
+                              </svg>Ecommerce</span>
+                            <svg class="w-4 h-4 stroke-title ml-auto"> 
+                              <use href="../../assets/svg/_sprite.svg#Arrow-Right-2"> </use>
+                            </svg></a>
+                          <div class="dropdown-menu dropdown-sub-menu">
+                            <ul class="flex flex-col gap-2"> 
+                              <li><a href="shop.html">Shop</a></li>
+                              <li><a href="product.html">Product</a></li>
+                              <li><a href="cart.html">Cart</a></li>
+                              <li><a href="checkout.html">Checkout</a></li>
+                              <li><a href="invoice.html">Invoice</a></li>
+                              <li><a href="invoice-preview.html">Invoice Preview</a></li>
+                              <li><a href="wishlist.html">Wishlist</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2" href="javascript:void(0)"><span class="flex items-center gap-2">
+                              <svg class="w-5 h-5 stroke-title"> 
+                                <use href="../../assets/svg/_sprite.svg#Paper-Plus"> </use>
+                              </svg>Project</span>
+                            <svg class="w-4 h-4 stroke-title ml-auto"> 
+                              <use href="../../assets/svg/_sprite.svg#Arrow-Right-2"> </use>
+                            </svg></a>
+                          <div class="dropdown-menu dropdown-sub-menu">
+                            <ul class="flex flex-col gap-2"> 
+                              <li><a href="project-list.html">Project List</a></li>
+                              <li><a href="project-create.html">Project Create</a></li>
+                              <li><a href="target.html">Target</a></li>
+                              <li><a href="budget.html">Budget</a></li>
+                              <li><a href="user.html">User</a></li>
+                              <li><a href="activity.html">Activity</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="w-full "><a class="flex items-center gap-2" href="chat-app.html"><span class="flex items-center gap-2">
+                              <svg class="w-5 h-5 stroke-title"> 
+                                <use href="../../assets/svg/_sprite.svg#Chat"> </use>
+                              </svg>Chat App</span></a>
+                        </li>
+                        <li class="w-full "><a class="flex items-center gap-2" href="tasks.html"><span class="flex items-center gap-2">
+                              <svg class="w-5 h-5 stroke-title"> 
+                                <use href="../../assets/svg/_sprite.svg#Check-Circle"> </use>
+                              </svg>Tasks</span></a>
+                        </li>
+                        <li class="w-full "><a class="flex items-center gap-2" href="social-App.html"><span class="flex items-center gap-2">
+                              <svg class="w-5 h-5 stroke-title"> 
+                                <use href="../../assets/svg/_sprite.svg#3-User"> </use>
+                              </svg>Social App</span></a>
+                        </li>
+                        <li class="w-full "><a class="flex items-center gap-2" href="social-App.html"><span class="flex items-center gap-2">
+                              <svg class="w-5 h-5 stroke-title"> 
+                                <use href="../../assets/svg/_sprite.svg#Check-List"> </use>
+                              </svg>Todo App</span></a>
+                        </li>
+                        <li class="w-full "><a class="flex items-center gap-2" href="to-do-app.html"><span class="flex items-center gap-2">
+                              <svg class="w-5 h-5 stroke-title"> 
+                                <use href="../../assets/svg/_sprite.svg#Video"> </use>
+                              </svg>Video Chat</span></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="dropdown on-hover-show cursor-pointer pb-[6px] transition-all duration-300 relative group before:bg-primary before:absolute before:-translate-x-1/2 before:bottom-0 before:left-1/2 hover:before:w-full before:h-[2px] before:w-0 "> <span class="text-xs font-bold text-content transition-all duration-300	group-hover:text-primary">Miscellaneous</span></li>
+                </ul>
+                <div class="flex items-center gap-[14px]">
+                  <!-- Breadcrumbs Start -->
+                  <div class="breadcrumb undefined">
+                    <nav>
+                      <ol class="breadcrumb-list">
+                        <li class="breadcrumb-items"><a href="index.html">
+                            <svg class="w-5 h-5"> 
+                              <use href="../../assets/svg/_sprite.svg#Home"> </use>
+                            </svg></a></li>
+                        <li class="px-2"> <span>/</span></li>
+                        <li class="breadcrumb-items capitalize">Email</li>
+                        <li class="px-2"> <span>/</span></li>
+                        <li class="breadcrumb-items capitalize active">Email Read</li>
+                      </ol>
+                    </nav>
+                  </div>
+                  <!-- Breadcrumbs End -->
+                  <div class="custom-select select-style-1 lg:hidden">
+                    <select>
+                      <option selected value="">Last 7 Days </option>
+                      <option value="">Last 2 Weeks </option>
+                      <option value="">Last 1 Month </option>
+                      <option value="">Last 3 Month </option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Sub Header End -->
+          </div>
+        </header>
+        <!-- Page Header end-->
+        <!-- Sidebar Start -->
+        <div class="page-sidebar sidebar-dark unique-sidebar">
+          <aside class="sidebar"> 
+            <div class="logo-wrapper"><a href="index.html"> <img class="w-full" src="../../assets/images/logo/logo.png" alt="logo"></a>
+              <button class="sidebar-btn">
+                <svg class="w-6 h-6"> 
+                  <use href="../../assets/svg/_sprite.svg#Category"> </use>
+                </svg>
+              </button>
+            </div>
+            <div class="search-wrapper">
+              <div class="search-box">
+                <input class="search" placeholder="Search" type="search">
+                <svg class="w-5 h-5"> 
+                  <use href="../../assets/svg/_sprite.svg#Search"> </use>
+                </svg>
+              </div>
+            </div>
+            <nav class="sidebar-main"> 
+              <ul class="sidebar-links custom-scroll">
+                <li class="title">General</li>
+                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
+                      <svg> 
+                        <use href="../../assets/svg/_sprite.svg#Home"> </use>
+                      </svg><span>Dashboards</span></span>
+                    <svg> 
+                      <use href="../../assets/svg/_sprite.svg#Arrow-Right-2"> </use>
+                    </svg></a>
+                  <ul class="sidebar-submenu">
+                    <li> <a href="./index.html">Unique</a></li>
+                    <li> <a href="./friendly.html">Friendly</a></li>
+                  </ul>
+                </li>
+                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="./widgets.html"><span> 
+                      <svg> 
+                        <use href="../../assets/svg/_sprite.svg#Graph"> </use>
+                      </svg><span>Widgets</span></span></a>
+                </li>
+                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
+                      <svg> 
+                        <use href="../../assets/svg/_sprite.svg#Document"> </use>
+                      </svg><span>Page layout</span></span>
+                    <svg> 
+                      <use href="../../assets/svg/_sprite.svg#Arrow-Right-2"> </use>
+                    </svg></a>
+                  <ul class="sidebar-submenu">
+                    <li> <a href="./rtl.html">RTL</a></li>
+                    <li> <a href="./dark-layout.html">Dark Layout</a></li>
+                    <li> <a href="./monochrome-mode.html">Monochrome Mode</a></li>
+                  </ul>
+                </li>
+                <li class="title">Components</li>
+                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
+                      <svg> 
+                        <use href="../../assets/svg/_sprite.svg#Folder"> </use>
+                      </svg><span>Ui Kits</span></span>
+                    <svg> 
+                      <use href="../../assets/svg/_sprite.svg#Arrow-Right-2"> </use>
+                    </svg></a>
+                  <ul class="sidebar-submenu">
+                    <li> <a href="./alert.html">Alert</a></li>
+                    <li> <a href="./avatars.html">Avatars</a></li>
+                    <li> <a href="./badge.html">Badge</a></li>
+                    <li> <a href="./button.html">Button</a></li>
+                    <li> <a href="./collapse.html">Collapse</a></li>
+                    <li> <a href="./divider.html">Divider</a></li>
+                    <li> <a href="./dropdown.html">Dropdown</a></li>
+                    <li> <a href="./modal.html">Modal</a></li>
+                    <li> <a href="./progress.html">Progress</a></li>
+                    <li> <a href="./tooltip.html">Tooltip</a></li>
+                    <li> <a href="./typography.html">Typography</a></li>
+                  </ul>
+                </li>
+                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
+                      <svg> 
+                        <use href="../../assets/svg/_sprite.svg#Ticket-Star"> </use>
+                      </svg><span>Bonus Ui</span></span>
+                    <svg> 
+                      <use href="../../assets/svg/_sprite.svg#Arrow-Right-2"> </use>
+                    </svg></a>
+                  <ul class="sidebar-submenu">
+                    <li> <a href="./breadcrumb.html">Breadcrumb</a></li>
+                    <li> <a href="./carousel.html">Carousel</a></li>
+                    <li> <a href="./countdown.html">Countdown</a></li>
+                    <li> <a href="./indicator.html">Indicator</a></li>
+                    <li> <a href="./mask.html">Mask</a></li>
+                    <li> <a href="./pagination.html">Pagination</a></li>
+                    <li> <a href="./radial-progress.html">Radial Progress</a></li>
+                    <li> <a href="./rating.html">Rating</a></li>
+                    <li> <a href="./stack.html">Stack</a></li>
+                    <li> <a href="./steps.html">Steps</a></li>
+                    <li> <a href="./swap.html">Swap</a></li>
+                    <li> <a href="./swiper-slider.html">Swiper Slider</a></li>
+                    <li> <a href="./tabs.html">Tabs</a></li>
+                    <li> <a href="./toast.html">Toast</a></li>
+                  </ul>
+                </li>
+                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
+                      <svg> 
+                        <use href="../../assets/svg/_sprite.svg#Info-Square"> </use>
+                      </svg><span>Icons</span></span>
+                    <svg> 
+                      <use href="../../assets/svg/_sprite.svg#Arrow-Right-2"> </use>
+                    </svg></a>
+                  <ul class="sidebar-submenu">
+                    <li> <a href="./feather.html">Feather</a></li>
+                    <li> <a href="./fontawesome.html">Font Awesome</a></li>
+                    <li> <a href="./iconly.html">Iconly</a></li>
+                  </ul>
+                </li>
+                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="apex-chart.html"><span> 
+                      <svg> 
+                        <use href="../../assets/svg/_sprite.svg#Chart"> </use>
+                      </svg><span>Apex Chart</span></span></a>
+                </li>
+                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="wow-animation.html"><span> 
+                      <svg> 
+                        <use href="../../assets/svg/_sprite.svg#Video"> </use>
+                      </svg><span>Wow Animation</span></span></a>
+                </li>
+                <li class="title">Applications</li>
+                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
+                      <svg> 
+                        <use href="../../assets/svg/_sprite.svg#Chat"> </use>
+                      </svg><span>Chat</span></span>
+                    <svg> 
+                      <use href="../../assets/svg/_sprite.svg#Arrow-Right-2"> </use>
+                    </svg></a>
+                  <ul class="sidebar-submenu">
+                    <li> <a href="chat-app.html">Chat App</a></li>
+                    <li> <a href="video-app.html">Video App</a></li>
+                  </ul>
+                </li>
+                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="calendar.html"><span> 
+                      <svg> 
+                        <use href="../../assets/svg/_sprite.svg#Calendar"> </use>
+                      </svg><span>Calendar</span></span></a>
+                </li>
+                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
+                      <svg> 
+                        <use href="../../assets/svg/_sprite.svg#Bag"> </use>
+                      </svg><span>Ecommerce</span></span>
+                    <svg> 
+                      <use href="../../assets/svg/_sprite.svg#Arrow-Right-2"> </use>
+                    </svg></a>
+                  <ul class="sidebar-submenu">
+                    <li> <a href="add-product.html">Add Product</a></li>
+                    <li> <a href="cart.html">Cart</a></li>
+                    <li> <a href="checkout.html">Checkout</a></li>
+                    <li> <a href="invoice.html">Invoice</a></li>
+                    <li> <a href="invoice-preview.html">Invoice Preview</a></li>
+                    <li> <a href="product.html">Product</a></li>
+                    <li> <a href="shop.html">Shop</a></li>
+                    <li> <a href="wishlist.html">Wishlist</a></li>
+                  </ul>
+                </li>
+                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="email.html"><span> 
+                      <svg> 
+                        <use href="../../assets/svg/_sprite.svg#Message"> </use>
+                      </svg><span>Email</span></span></a>
+                </li>
+                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="kanban-board.html"><span> 
+                      <svg> 
+                        <use href="../../assets/svg/_sprite.svg#Paper"> </use>
+                      </svg><span>Kanban Board</span></span></a>
+                </li>
+                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="todo.html"><span> 
+                      <svg> 
+                        <use href="../../assets/svg/_sprite.svg#Time-Circle"> </use>
+                      </svg><span>Todo</span></span></a>
+                </li>
+                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
+                      <svg> 
+                        <use href="../../assets/svg/_sprite.svg#2-User"> </use>
+                      </svg><span>User</span></span>
+                    <svg> 
+                      <use href="../../assets/svg/_sprite.svg#Arrow-Right-2"> </use>
+                    </svg></a>
+                  <ul class="sidebar-submenu">
+                    <li> <a href="user-card.html">User Cards</a></li>
+                    <li> <a href="user-profile.html">User Profile</a></li>
+                  </ul>
+                </li>
+                <li class="title">Forms &amp; Table</li>
+                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
+                      <svg> 
+                        <use href="../../assets/svg/_sprite.svg#Paper"> </use>
+                      </svg><span>Forms</span></span>
+                    <svg> 
+                      <use href="../../assets/svg/_sprite.svg#Arrow-Right-2"> </use>
+                    </svg></a>
+                  <ul class="sidebar-submenu">
+                    <li> <a href="./checkbox-radio.html">Checkbox &amp; Radio</a></li>
+                    <li> <a href="./form-validation.html">Form Validation</a></li>
+                    <li> <a href="./input-textarea.html">Input &amp; Textarea</a></li>
+                    <li> <a href="./range.html">Range</a></li>
+                    <li> <a href="./select.html">Select</a></li>
+                    <li> <a href="./switch.html">Switch</a></li>
+                  </ul>
+                </li>
+                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="table.html"><span> 
+                      <svg> 
+                        <use href="../../assets/svg/_sprite.svg#Graph"> </use>
+                      </svg><span>Tables</span></span></a>
+                </li>
+                <li class="title">Pages</li>
+                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
+                      <svg> 
+                        <use href="../../assets/svg/_sprite.svg#Folder"> </use>
+                      </svg><span>Other Pages</span></span>
+                    <svg> 
+                      <use href="../../assets/svg/_sprite.svg#Arrow-Right-2"> </use>
+                    </svg></a>
+                  <ul class="sidebar-submenu">
+                    <li> <a href="./coming-soon.html">Coming Soon</a></li>
+                    <li> <a href="./error.html">Error</a></li>
+                    <li> <a href="./forgot-password.html">Forgot Password</a></li>
+                    <li> <a href="./login.html">Login</a></li>
+                    <li> <a href="./otp.html">Otp</a></li>
+                    <li> <a href="./register.html">Register</a></li>
+                    <li> <a href="./reset-password.html">Reset Password</a></li>
+                  </ul>
+                </li>
+                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="sample-page.html"><span> 
+                      <svg> 
+                        <use href="../../assets/svg/_sprite.svg#Paper"> </use>
+                      </svg><span>Sample Page</span></span></a>
+                </li>
+                <li class="title">Miscellaneous</li>
+                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
+                      <svg> 
+                        <use href="../../assets/svg/_sprite.svg#Folder"> </use>
+                      </svg><span>Blog</span></span>
+                    <svg> 
+                      <use href="../../assets/svg/_sprite.svg#Arrow-Right-2"> </use>
+                    </svg></a>
+                  <ul class="sidebar-submenu">
+                    <li> <a href="./blog-grid.html">Blog Grid</a></li>
+                    <li> <a href="./blog-detail.html">Blog Detail</a></li>
+                  </ul>
+                </li>
+                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="knowledgebase.html"><span> 
+                      <svg> 
+                        <use href="../../assets/svg/_sprite.svg#Scan"> </use>
+                      </svg><span>Knowledgebase</span></span></a>
+                </li>
+                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="map.html"><span> 
+                      <svg> 
+                        <use href="../../assets/svg/_sprite.svg#Location"> </use>
+                      </svg><span>Map</span></span></a>
+                </li>
+              </ul>
+            </nav>
+          </aside>
+        </div>
+        <!-- Sidebar End -->
+        <!-- Page Body Start-->
+        <div class="page-body">
+          <div class="grid grid-cols-12 email-main card lg:gap-0">
+            <div class="col-span-3 xl:col-span-4"> 
+              <!-- email left sidebar Start -->
+              <div class="card gap-0 lg:z-10 2xl:p-card-spacing lg:p-3 left-sidebar-aside z-[3] lg:w-[280px] sticky min-lg:top-0 sm:w-[269px] lg:fixed lg:h-[100vh]">
+                <div class="flex justify-between">   
+                  <div class="flex items-center gap-3 mb-4 sm:gap-1">
+                    <div class="avatar"> 
+                      <div class="w-10 rounded-full"><img src="../../assets/images/avatar/2.jpg" alt="avatar"></div>
+                    </div>
+                    <div>
+                      <h4 class="text-xs font-semibold text-title leading-none 3sm:text-2xs 3sm:leading-none">Dmitriy Groshev </h4>
+                      <div class="flex items-center gap-1 mt-1"><span class="text-content3 text-2xs">alan.Dmitriy@Groshev</span></div>
+                    </div>
+                  </div>
+                  <button class="hidden lg:flex left-sidebar-toggle">  <i class="w-5 h-5 stroke-title" data-feather="x"></i></button>
+                </div>
+                <label class="button-label btn-primary flex gap-2 items-center justify-center w-full text-sm left-sidebar-toggle" for="modal-16"> 
+                  <svg class="w-[1.125rem] h-[1.125rem] stroke-white"> 
+                    <use href="../../assets/svg/_sprite.svg#Close-Square"> </use>
+                  </svg>New Mail
+                </label>
+                <div class="mt-4 bg-gray-light lg:h-full">
+                  <ul class="flex flex-col gap-0">
+                    <li class="pl-3 pr-2 rounded-5 py-[0.6rem] last:mb-4 hover:bg-white dark:hover:bg-mode-200 mr-4 first:mt-[20px] hover:rounded-tr-[25px] hover:rounded-br-[25px] bg-white rounded-tr-[25px] rounded-br-[25px]"><a class="flex items-center justify-between" href="javascript:void(0)"><span class="flex items-center gap-2 text-xs text-primary font-medium">
+                          <svg class="w-4 h-4 stroke-primary hover:primary"> 
+                            <use href="../../assets/svg/_sprite.svg#Message"> </use>
+                          </svg>Inbox</span><span class="text-sm text-primary">(30)</span></a></li>
+                    <li class="pl-3 pr-2 rounded-5 py-[0.6rem] last:mb-4 hover:bg-white dark:hover:bg-mode-200 mr-4 first:mt-[20px] hover:rounded-tr-[25px] hover:rounded-br-[25px]"><a class="flex items-center justify-between" href="javascript:void(0)"><span class="flex items-center gap-2 text-xs text-content3 font-medium">
+                          <svg class="w-4 h-4 stroke-title hover:primary"> 
+                            <use href="../../assets/svg/_sprite.svg#Send"> </use>
+                          </svg>Send Mail</span></a></li>
+                    <li class="pl-3 pr-2 rounded-5 py-[0.6rem] last:mb-4 hover:bg-white dark:hover:bg-mode-200 mr-4 first:mt-[20px] hover:rounded-tr-[25px] hover:rounded-br-[25px]"><a class="flex items-center justify-between" href="javascript:void(0)"><span class="flex items-center gap-2 text-xs text-content3 font-medium">
+                          <svg class="w-4 h-4 stroke-title hover:primary"> 
+                            <use href="../../assets/svg/_sprite.svg#Star"> </use>
+                          </svg>Starred</span></a></li>
+                    <li class="pl-3 pr-2 rounded-5 py-[0.6rem] last:mb-4 hover:bg-white dark:hover:bg-mode-200 mr-4 first:mt-[20px] hover:rounded-tr-[25px] hover:rounded-br-[25px]"><a class="flex items-center justify-between" href="javascript:void(0)"><span class="flex items-center gap-2 text-xs text-content3 font-medium">
+                          <svg class="w-4 h-4 stroke-title hover:primary"> 
+                            <use href="../../assets/svg/_sprite.svg#Message"> </use>
+                          </svg>All Mail</span><span class="text-sm text-content3">(1,235)</span></a></li>
+                    <li class="pl-3 pr-2 rounded-5 py-[0.6rem] last:mb-4 hover:bg-white dark:hover:bg-mode-200 mr-4 first:mt-[20px] hover:rounded-tr-[25px] hover:rounded-br-[25px]"><a class="flex items-center justify-between" href="javascript:void(0)"><span class="flex items-center gap-2 text-xs text-content3 font-medium">
+                          <svg class="w-4 h-4 stroke-title hover:primary"> 
+                            <use href="../../assets/svg/_sprite.svg#Edit-Square"> </use>
+                          </svg>Draft</span><span class="text-sm text-content3">(30)</span></a></li>
+                    <li class="pl-3 pr-2 rounded-5 py-[0.6rem] last:mb-4 hover:bg-white dark:hover:bg-mode-200 mr-4 first:mt-[20px] hover:rounded-tr-[25px] hover:rounded-br-[25px]"><a class="flex items-center justify-between" href="javascript:void(0)"><span class="flex items-center gap-2 text-xs text-content3 font-medium">
+                          <svg class="w-4 h-4 stroke-title hover:primary"> 
+                            <use href="../../assets/svg/_sprite.svg#Danger-Circle"> </use>
+                          </svg>Important</span></a></li>
+                    <li class="pl-3 pr-2 rounded-5 py-[0.6rem] last:mb-4 hover:bg-white dark:hover:bg-mode-200 mr-4 first:mt-[20px] hover:rounded-tr-[25px] hover:rounded-br-[25px]"><a class="flex items-center justify-between" href="javascript:void(0)"><span class="flex items-center gap-2 text-xs text-content3 font-medium">
+                          <svg class="w-4 h-4 stroke-title hover:primary"> 
+                            <use href="../../assets/svg/_sprite.svg#Delete"> </use>
+                          </svg>Trash<span class="text-sm text-content3">(326)</span></span></a></li><span class="border border-dashed border-border-light w-[90%] mx-auto"></span>
+                    <li class="pl-3 pr-2 rounded-5 py-[0.6rem] last:mb-4 hover:bg-white dark:hover:bg-mode-200 mr-4 first:mt-[20px] hover:rounded-tr-[25px] hover:rounded-br-[25px]"><a class="flex items-center justify-between" href="javascript:void(0)"><span class="flex items-center gap-2 text-xs text-content3 font-medium">
+                          <svg class="w-4 h-4 stroke-title hover:primary"> 
+                            <use href="../../assets/svg/_sprite.svg#Message"> </use>
+                          </svg>Unread</span><span class="text-sm text-content3">(45)</span></a></li>
+                    <li class="pl-3 pr-2 rounded-5 py-[0.6rem] last:mb-4 hover:bg-white dark:hover:bg-mode-200 mr-4 first:mt-[20px] hover:rounded-tr-[25px] hover:rounded-br-[25px]"><a class="flex items-center justify-between" href="javascript:void(0)"><span class="flex items-center gap-2 text-xs text-content3 font-medium">
+                          <svg class="w-4 h-4 stroke-title hover:primary"> 
+                            <use href="../../assets/svg/_sprite.svg#Download"> </use>
+                          </svg>Spam</span></a></li>
+                    <li class="pl-3 pr-2 rounded-5 py-[0.6rem] last:mb-4 hover:bg-white dark:hover:bg-mode-200 mr-4 first:mt-[20px] hover:rounded-tr-[25px] hover:rounded-br-[25px]"><a class="flex items-center justify-between" href="javascript:void(0)"><span class="flex items-center gap-2 text-xs text-content3 font-medium">
+                          <svg class="w-4 h-4 stroke-title hover:primary"> 
+                            <use href="../../assets/svg/_sprite.svg#Logout"> </use>
+                          </svg>Outbox</span><span class="text-sm text-content3">(265)</span></a></li>
+                    <li class="pl-3 pr-2 rounded-5 py-[0.6rem] last:mb-4 hover:bg-white dark:hover:bg-mode-200 mr-4 first:mt-[20px] hover:rounded-tr-[25px] hover:rounded-br-[25px]"><a class="flex items-center justify-between" href="javascript:void(0)"><span class="flex items-center gap-2 text-xs text-content3 font-medium">
+                          <svg class="w-4 h-4 stroke-title hover:primary"> 
+                            <use href="../../assets/svg/_sprite.svg#Paper"> </use>
+                          </svg>Update</span><span class="text-sm text-content3">(36)</span></a></li>
+                    <li class="pl-3 pr-2 rounded-5 py-[0.6rem] last:mb-4 hover:bg-white dark:hover:bg-mode-200 mr-4 first:mt-[20px] hover:rounded-tr-[25px] hover:rounded-br-[25px]"><a class="flex items-center justify-between" href="javascript:void(0)"><span class="flex items-center gap-2 text-xs text-content3 font-medium">
+                          <svg class="w-4 h-4 stroke-title hover:primary"> 
+                            <use href="../../assets/svg/_sprite.svg#Notification"> </use>
+                          </svg>Alert</span></a></li>
+                    <li class="pl-3 pr-2 rounded-5 py-[0.6rem] last:mb-4 hover:bg-white dark:hover:bg-mode-200 mr-4 first:mt-[20px] hover:rounded-tr-[25px] hover:rounded-br-[25px]"><a class="flex items-center justify-between" href="javascript:void(0)"><span class="flex items-center gap-2 text-xs text-content3 font-medium">
+                          <svg class="w-4 h-4 stroke-title hover:primary"> 
+                            <use href="../../assets/svg/_sprite.svg#Document"> </use>
+                          </svg>Notes</span><span class="text-sm text-content3">(56)</span></a></li><span class="border border-dashed border-border-light w-[90%] mx-auto"></span>
+                    <li class="pl-3 pr-2 rounded-5 py-[0.6rem] last:mb-4 hover:bg-white dark:hover:bg-mode-200 mr-4 first:mt-[20px] hover:rounded-tr-[25px] hover:rounded-br-[25px]"><a class="flex items-center justify-between" href="javascript:void(0)"><span class="flex items-center gap-2 text-xs text-content3 font-medium">
+                          <svg class="w-4 h-4 stroke-title hover:primary"> 
+                            <use href="../../assets/svg/_sprite.svg#Setting"> </use>
+                          </svg>Setting</span></a></li>
+                    <li class="pl-3 pr-2 rounded-5 py-[0.6rem] last:mb-4 hover:bg-white dark:hover:bg-mode-200 mr-4 first:mt-[20px] hover:rounded-tr-[25px] hover:rounded-br-[25px]"><a class="flex items-center justify-between" href="javascript:void(0)"><span class="flex items-center gap-2 text-xs text-content3 font-medium">
+                          <svg class="w-4 h-4 stroke-title hover:primary"> 
+                            <use href="../../assets/svg/_sprite.svg#Profile"> </use>
+                          </svg>Change Profile</span></a></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- email left sidebar Start -->
+            </div>
+            <div class="col-span-9 xl:col-span-8 lg:col-span-12">
+              <div class="flex items-center justify-between pb-3 pl-2 2xl:p-card-spacing 2sm:flex-col-reverse 2sm:gap-4 2sm:items-start">
+                <div class="flex items-center gap-3 sm:gap-1">
+                  <div class="avatar"> 
+                    <div class="w-9 rounded-full"><img src="../../assets/images/avatar/2.jpg" alt="avatar"></div>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-semibold text-title leading-none 3sm:text-2xs 3sm:leading-none">Ronald Hoffmann </h4>
+                    <div class="flex items-center gap-1 mt-1"><span class="text-content3 text-2xs">errichoffman@gmaiol.com</span></div>
+                  </div>
+                </div>
+                <div class="flex gap-2 items-center">
+                  <ul class="flex items-center gap-1 email-read">
+                    <li><span class="text-content3 text-sm text-semibold">July 23, 2020 06:41</span></li>
+                    <li>
+                      <svg class="w-5 h-5 stroke-title"> 
+                        <use href="../../assets/svg/_sprite.svg#Logout"> </use>
+                      </svg>
+                    </li>
+                    <li>
+                      <svg class="w-5 h-5 stroke-title"> 
+                        <use href="../../assets/svg/_sprite.svg#Message"> </use>
+                      </svg>
+                    </li>
+                    <li>
+                      <svg class="w-5 h-5 stroke-title"> 
+                        <use href="../../assets/svg/_sprite.svg#Star"> </use>
+                      </svg>
+                    </li>
+                    <li>   
+                      <svg class="w-5 h-5 stroke-title"> 
+                        <use href="../../assets/svg/_sprite.svg#Delete"> </use>
+                      </svg>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="flex flex-col gap-4 py-6 border-b border-border-light border-dashed">
+                <h4 class="text-content3 font-semibold leading-7">Hello Malikan! </h4>
+                <p class="text-title font-bold text-[26px] leading-9">Minimalistic Photos for Ui/Ux Designers</p>
+                <p class="text-sm text-content3 font-semibold leading-7">Since You want to be Competitive you want to come up with a material that will make you stand out and recognizable. we all know that competition in the industry is tight so there is a need for every business to come up with excellent prints that will help their companies create a remarkable name.</p>
+                <p class="text-sm text-content3 font-semibold leading-7">The page also has a number of identity related issues that can be linked on he internet to get connected to people of common Interest and issues.</p>
+                <p class="text-sm text-content3 font-semibold leading-7">They can be preferred forms such as hobbies, interests and common issues followed by the people in the general. it depends on the background employed by the user of the account. the background conveys many things to the visitors of the page.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Page Body End -->
+        <div class="page-footer sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap"> 
+          <p class="text-xs font-semibold text-center text-content">Copyright 2023 © Govo theme by pixelstrap</p>
+          <div class="flex items-center gap-2"> 
+            <p class="text-xs font-semibold text-center text-content">Hand crafted & made with</p><i class="stroke-danger h-[18px] w-[18px] fill-danger" data-feather="heart"></i>
+          </div>
+        </div>
+      </div>
+      <!-- Customizer-->
+      <div class="customizer-sidebar bg-white">
+        <div class="flex rtl:flex items-center text-title bg-primary justify-between  p-[15px] shadow-md"> <span class="text-base font-semibold text-white">Customizer</span>
+          <button class="customizer-close"> <i class="w-4 h-4 stroke-white" data-feather="x"></i></button>
+        </div>
+        <div class="py-[4px] dark:bg-mode-200">
+          <div class="px-[15px] py-7  h-[calc(100vh_-_139px)] overflow-auto ">
+            <ul class="flex flex-col gap-7 mode-event">  
+              <li>
+                <div>
+                  <h5 class="leading-none text-dark font-semibold text-sm">Template Mode</h5><span class="leading-none text-content text-xs font-medium">Choose template mode dark & light</span>
+                </div>
+                <div class="mt-2">
+                  <ul class="flex items-center gap-3 flex-wrap"> 
+                    <li class="relative">
+                      <input class="peer absolute opacity-0 invisible" checked id="light-checked" type="radio" name="mode"><i class="stroke-primary z-[10] transition-all scale-0 opacity-0 absolute peer-checked:opacity-100 peer-checked:scale-100 top-2 right-2 w-4 h-4" data-feather="check-circle"></i>
+                      <label class="mode-theme-light shadow-md border border-light overflow-hidden rounded-5 block" for="light-checked"> <img class="w-[90px] object-cover" src="../../assets/images/customizer/light.png" alt="light"></label>
+                    </li>
+                    <li class="relative">
+                      <input class="peer absolute opacity-0 invisible" id="dark-checked" type="radio" name="mode"><i class="stroke-white z-[10] transition-all scale-0 opacity-0 absolute peer-checked:opacity-100 peer-checked:scale-100 top-2 right-2 w-4 h-4" data-feather="check-circle"></i>
+                      <label class="mode-theme-dark shadow-md border border-light overflow-hidden rounded-5 block" for="dark-checked"> <img class="w-[90px] object-cover" src="../../assets/images/customizer/dark.png" alt="dark"></label>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h5 class="leading-none text-dark font-semibold text-sm">Layout Type</h5><span class="leading-none text-content text-xs">Choose layout Ltr & Rtl</span>
+                </div>
+                <div class="mt-2">
+                  <ul class="flex items-center gap-3">
+                    <li class="relative">
+                      <input class="peer absolute opacity-0 invisible" checked id="ltr-checked" type="radio" name="dir"><i class="stroke-primary z-[10] transition-all scale-0 opacity-0 absolute peer-checked:opacity-100 peer-checked:scale-100 top-2 right-2 w-4 h-4" data-feather="check-circle"></i>
+                      <label class="layout-ltr shadow-md border border-light overflow-hidden rounded-5 block" for="ltr-checked"> <img class="w-[90px] object-cover" src="../../assets/images/customizer/ltr.png" alt="ltr"></label>
+                    </li>
+                    <li class="relative"> 
+                      <input class="peer absolute opacity-0 invisible" id="rtl-checked" type="radio" name="dir"><i class="stroke-white z-[10] transition-all scale-0 opacity-0 absolute peer-checked:opacity-100 peer-checked:scale-100 top-2 right-2 w-4 h-4" data-feather="check-circle"></i>
+                      <label class="layout-rtl shadow-md border border-light overflow-hidden rounded-5 block" for="rtl-checked"> <img class="w-[90px] object-cover" src="../../assets/images/customizer/rtl.png" alt="rtl"></label>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h5 class="leading-none text-dark font-semibold text-sm">Sidebar Type</h5><span class="leading-none text-content text-xs">Choose Sidebar  icon & full</span>
+                </div>
+                <div class="mt-2">
+                  <ul class="flex items-center gap-3">
+                    <li class="relative">
+                      <input class="peer absolute opacity-0 invisible" checked id="full-sidebar" type="radio" name="sidebar-type"><i class="stroke-primary z-[10] transition-all scale-0 opacity-0 absolute peer-checked:opacity-100 peer-checked:scale-100 top-2 right-2 w-4 h-4" data-feather="check-circle"></i>
+                      <label class="sidebar-full shadow-md border border-light overflow-hidden rounded-5 block" for="full-sidebar"> <img class="w-[90px] object-cover" src="../../assets/images/customizer/full-sidebar.png" alt="full sidebar"></label>
+                    </li>
+                    <li class="relative"> 
+                      <input class="peer absolute opacity-0 invisible" id="icon-sidebar" type="radio" name="sidebar-type"><i class="stroke-primary z-[10] transition-all scale-0 opacity-0 absolute peer-checked:opacity-100 peer-checked:scale-100 top-2 right-2 w-4 h-4" data-feather="check-circle"></i>
+                      <label class="sidebar-icon shadow-md border border-light overflow-hidden rounded-5 block" for="icon-sidebar"> <img class="w-[90px] object-cover" src="../../assets/images/customizer/icon-sidebar.png" alt="icon sidebar"></label>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="flex items-center justify-between"> 
+                  <label class="leading-none text-dark font-semibold text-sm" for="monochrome">Monochrome Mode</label>
+                  <input class="monochrome toggle toggle-primary" id="monochrome" name="monochrome" type="checkbox">
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 p-[15px] border-t border-light dark:bg-primaryLight"> 
+          <button class="btn btn-ghost reset-customizer flex-1">Reset  </button>
+          <button class="btn btn-primary text-white flex-1">Buy Now</button>
+        </div>
+      </div>
+    </main>
+  </body>
+  <!-- Feather Icon Js -->
+  <script src="../../assets/js/feather.min.js"></script>
+  <script src="../../assets/js/feather-custom.js"></script>
+  <!-- Select Js -->
+  <script src="../../assets/js/custom-select.js"></script>
+  <!-- Sidebar Js -->
+  <script src="../../assets/js/sidebar.js"></script>
+  <!-- Custom script   -->
+  <script src="../../assets/js/script.js">  </script>
+</html>

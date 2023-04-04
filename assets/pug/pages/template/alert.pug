@@ -1,0 +1,314 @@
+//- sidebar
+-var sidebar = true;
+
+//- feathet
+-var feather= true;
+
+//- customSelect
+-var customSelect= true;
+
+//- customizer
+-var customizer=true;
+
+//- prism
+-var prism=true;
+
+//- Breadcrumbs
+-var pageTitle="Alert";
+-var breadcrumb=['Ui Kits','Alert'];
+
+//- json
+include ../../data/all-data
+
+//- mixin
+include ../../mixin/mixin
+
+doctype html
+html(lang='en')  
+   include ../../layout/header-files 
+   body(dir="ltr" class="unique-skin") 
+      main.page-wrapper
+         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+            include ../../layout/header/header     
+            // Sidebar Start 
+            div.page-sidebar.sidebar-dark.unique-sidebar
+               include ../../layout/unique
+            // Sidebar End
+
+            // Page Body Start 
+            div.page-body
+               div.grid.grid-cols-12.gap-card-gap
+                  div.col-span-6(class="2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Alert
+                              p Use the   
+                                 strong .alert  
+                                 | utility class to add the alert.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.flex-wrap.gap-2
+                                    div.flex.flex-col.flex-wrap.gap-2.bg-primary-light.px-4.py-3.rounded.text-primary.w-full(role='alert')
+                                       p 
+                                          span.font-extrabold Harry up, 
+                                          | Sale is live now !!
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-col flex-wrap gap-2"&gt;
+                                       |    &lt;div class="flex flex-col flex-wrap w-full gap-2 px-4 py-3 rounded bg-primary-light text-primary" role="alert"&gt;
+                                       |        &lt;p&gt;&lt;span class="font-extrabold"&gt;Harry up,&lt;/span&gt; Sale is live now !!&lt;/p&gt;
+                                       |    &lt;/div&gt; 
+                                       |&lt;/div&gt; 
+                  div.col-span-6(class="2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Outlined
+                              p Use the 
+                                 strong .border- * 
+                                 | utility class to set the alert.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.flex-wrap.gap-2
+                                    div.flex.border.flex-col.flex-wrap.gap-2.border.border-primary.px-4.py-3.rounded.text-primary.w-full(role='alert')
+                                       p 
+                                          span.font-extrabold Harry up, 
+                                          | Sale is live now !!
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-col flex-wrap gap-2"&gt;
+                                       |    &lt;div class="flex flex-col flex-wrap w-full gap-2 px-4 py-3 border rounded border-primary text-primary" role="alert"&gt;
+                                       |        &lt;p&gt;&lt;span class="font-extrabold"&gt;Harry up,&lt;/span&gt; Sale is live now !!&lt;/p&gt;
+                                       |    &lt;/div&gt;
+                                       |&lt;/div&gt;
+                  div.col-span-6(class="2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Filled
+                              p Use the  
+                                 strong .bg- * 
+                                 |  class to filled the alert.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.flex-wrap.gap-2
+                                    div.flex.flex-col.flex-wrap.gap-2.bg-success.px-4.py-3.rounded.text-white.w-full(role='alert')
+                                       p 
+                                          span.font-extrabold Harry up, 
+                                          | Sale is live now !!
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-col flex-wrap gap-2"&gt;
+                                       |    &lt;div class="flex flex-col flex-wrap w-full gap-2 px-4 py-3 text-white rounded bg-success" role="alert"&gt;
+                                       |        &lt;p&gt;&lt;span class="font-extrabold"&gt;Harry up,&lt;/span&gt; Sale is live now !!&lt;/p&gt;
+                                       |    &lt;/div&gt;
+                                       |&lt;/div&gt;
+                  div.col-span-6(class="2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold With Icon
+                              p Set the icons with alert.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.flex-wrap.gap-2
+                                    div.flex.items-center.bg-warning.px-4.py-3.rounded.text-white.w-full(role='alert')
+                                       +SVG_ICON("Info-Circle","w-[1.25rem] h-[1.25rem] stroke-white mr-2")
+                                       p 
+                                          span.font-extrabold Harry up, 
+                                          | Sale is live now !!
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-col flex-wrap gap-2"&gt;
+                                       |    &lt;div class="flex items-center w-full px-4 py-3 text-white rounded bg-warning" role="alert"&gt;
+                                       |        +SVG_ICON("Info-Circle","w-[1.25rem] h-[1.25rem] stroke-white mr-2")
+                                       |        &lt;p&gt;&lt;span class="font-extrabold"&gt;Harry up,&lt;/span&gt; Sale is live now !!&lt;/p&gt;
+                                       |    &lt;/div&gt;
+                                       |&lt;/div&gt;
+                  div.col-span-6(class="2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold With Button
+                              p Use the 
+                                 strong .btn 
+                                 |   utility class to add button with alert.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.flex-wrap.gap-2
+                                    div.flex.justify-between.items-center.border.border-secondary.text-secondary.px-4.py-3.rounded.w-full(class="lg:flex-col lg:items-start 2xl:justify-between 2xl:items-center 2xl:gap-2 2md:flex-row 2md:items-center sm:flex-col sm:items-start" role='alert')
+                                       div.flex
+                                          +SVG_ICON("Check-Square","w-[1.25rem] h-[1.25rem] stroke-secondary mr-2")
+                                          p    Accept terms and conditions 
+                                       div.flex.flex-wrap.gap-2
+                                          button.btn.btn-secondary.py-2.px-3.btn-rounded.text-white Deny
+                                          button.btn.btn-secondary.py-2.px-3.btn-rounded.text-white Accept
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-col flex-wrap gap-2"&gt;
+                                       |    &lt;div class="flex items-center justify-between w-full px-4 py-3 border rounded border-secondary text-secondary lg:flex-col lg:items-start 2xl:justify-between 2xl:items-center 2xl:gap-2 2md:flex-row 2md:items-center sm:flex-col sm:items-start" role="alert"&gt;
+                                       |        &lt;div class="flex"&gt;
+                                       |            +SVG_ICON("Check-Square","w-[1.25rem] h-[1.25rem] stroke-secondary mr-2")
+                                       |            &lt;p&gt; Accept terms and conditions &lt;/p&gt;
+                                       |        &lt;/div&gt;
+                                       |        &lt;div class="flex flex-wrap gap-2"&gt;
+                                       |             &lt;button class="px-3 py-2 text-white btn btn-secondary btn-rounded"&gt;Deny&lt;/button&gt;
+                                       |             &lt;button class="px-3 py-2 text-white btn btn-secondary btn-rounded"&gt;Accept&lt;/button&gt;      
+                                       |        &lt;/div&gt;
+                                       |    &lt;/div&gt;
+                                       |&lt;/div&gt;
+                  div.col-span-6(class="2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold With Button & Icons
+                              p Use the  
+                                 strong .btn  
+                                 | utility class with icons in alert.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.flex-wrap.gap-2
+                                    div.flex.justify-between.items-center.border.border-primary.text-primary.px-4.py-3.rounded.w-full(class="lg:flex-col lg:justify-start lg:items-start lg:gap-2 2md:flex-row 2md:justify-between 2md:items-center sm:flex-col sm:justify-start sm:items-start" role='alert')
+                                       p    Space running out 
+                                       div
+                                          button.btn.btn-primary.flex.items-center.py-1.px-3.btn-rounded.text-white 
+                                             +SVG_ICON("Notification","w-[1.25rem] h-[1.25rem] stroke-white mr-2")
+                                             p   REMIND ME LATER
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-col flex-wrap gap-2"&gt;
+                                       |    &lt;div class="flex items-center justify-between w-full px-4 py-3 border rounded border-primary lg:flex-col lg:justify-start lg:items-start lg:gap-2 2md:flex-row 2md:justify-between 2md:items-center sm:flex-col sm:justify-start sm:items-start" role="alert"&gt;
+                                       |      &lt;p&gt; Space running out &lt;/p&gt;
+                                       |      &lt;div&gt;
+                                       |        &lt;button class="flex px-3 py-1 text-white btn btn-primary btn-rounded"&gt;
+                                       |          +SVG_ICON("Notification","w-[1.25rem] h-[1.25rem] stroke-white mr-2") 
+                                       |           &lt;p&gt; REMIND ME LATER &lt;/p&gt;
+                                       |        &lt;/button&gt;
+                                       |      &lt;/div&gt;
+                                       |    &lt;/div&gt;
+                                       |&lt;/div&gt; 
+                  div.col-span-6(class="2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold With Description
+                              p Use the 
+                                 strong .alert  
+                                 |   utility class to provide additional content within any alerts.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.flex-wrap.gap-2
+                                    div.flex.bg-info.px-4.py-3.rounded.text-white.w-full(role='alert')
+                                       div
+                                          +SVG_ICON("Download","w-[1.25rem] h-[1.25rem] stroke-white mr-2")
+                                       div
+                                          span.font-extrabold.text-sm Update
+                                          p   Ready to update 
+                                             span.font-extrabold ~Check it out!
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class=".flex flex-col gap-2"&gt; 
+                                       |    &lt;div class="flex w-full px-4 py-3 text-white rounded bg-info" role="alert"&gt;
+                                       |      &lt;div&gt;+SVG_ICON("Download","w-[1.25rem] h-[1.25rem] stroke-white mr-2")&lt;/div&gt;
+                                       |      &lt;div&gt;
+                                       |        &lt;span class="font-extrabold text-sm&gt;Update&lt;/span&gt;
+                                       |        &lt;p&gt;Ready to update&lt;span class="font-extrabold"&gt;~Check it out&lt;/span&gt;&lt;/p&gt;
+                                       |      &lt;/div&gt;
+                                       |    &lt;/div&gt; 
+                                       |&lt;/div&gt;
+                  div.col-span-6(class="2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold With List
+                              p Use the 
+                                 strong .alert 
+                                 |   utility class to provide additional list within alerts.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.flex-wrap.gap-2
+                                    div.flex.bg-danger.px-4.py-3.rounded.text-white.w-full(role='alert')
+                                       div
+                                          +SVG_ICON("Danger","w-[1.25rem] h-[1.25rem] stroke-white mr-2")
+                                       div
+                                          span.font-extrabold.text-sm It's required for password
+                                          ul(class="pl-4 list-disc text-white-500")
+                                             li(class="mt-2 first:mt-0") At least 10 characters with at least one uppercase character
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn  
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-col flex-wrap gap-2"&gt;
+                                       |    &lt;div class="flex w-full px-4 py-3 text-white rounded bg-danger" role="alert"&gt;
+                                       |      &lt;div&gt;+SVG_ICON("Danger","w-[1.25rem] h-[1.25rem] stroke-white mr-2")&lt;/div&gt;
+                                       |      &lt;div&gt;
+                                       |        &lt;span class="font-extrabold text-sm&gt;Update&lt;/span&gt;
+                                       |        &lt;ul class="pl-4 list-disc text-white-500"&gt;
+                                       |          &lt;li class="mt-2 first:mt-0"&gt; At least 10 characters with at least one uppercase character &lt;/li&gt;
+                                       |        &lt;/ul&gt;
+                                       |      &lt;/div&gt;
+                                       |    &lt;/div&gt;
+                                       |&lt;/div&gt;
+
+
+            // Page Body End 
+            +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+
+      include ../../components/customizer
+
+   include ../../layout/footer-files

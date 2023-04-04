@@ -1,0 +1,30 @@
+- 
+  var KANBAN_BOARD = [
+    {
+      Name: "Ready",
+      date: "15 Feb",
+      status:"primary",
+      topBorder:"primary",
+    },
+    { 
+      Name: "In Progress",
+      date: "15 Feb",
+      status:"warning",
+      topBorder:"warning",
+    },
+    {
+      Name: "Review",
+      date: "15 Feb",
+      status:"danger",
+      topBorder:"danger",
+    },
+  ];
+
+mixin kanban-board(data)
+  div.col-span-4.shadow-md.rounded-b-md.mb-4
+    div.h-1.rounded-t-md(class=`bg-${data.topBorder}`)
+    div.p-3
+      div.flex.justify-between
+        h3(class="font-bold text-title")=(data.Name)
+        i(data-feather="plus" class=`stroke-${data.status} border rounded`)
+

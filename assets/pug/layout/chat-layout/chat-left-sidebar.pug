@@ -1,0 +1,39 @@
+
+// Chat left sidebar Start 
+
+div.border-r.border-gray-light.h-full.tabs.flex.flex-col.gap-0.left-sidebar-aside
+    div(class="h-full overflow-auto custom-scroll chat-sidebar-scroll carousel-scroll-hide")
+        div.p-4.pb-0
+            div.flex.items-center.justify-between
+                h4.text-xl.font-extrabold  Messages
+                i(data-feather="plus" class="block p-2 w-11 h-9 stroke-primary bg-gray-light lg:hidden")
+                i(data-feather="chevrons-left" class="hidden h-6 cursor-pointer stroke-title left-sidebar-toggle lg:block")
+
+        div.p-4.pb-0
+            div.swiper.basicSlider
+                +recent-chat(BIO_DATA)
+        div.p-4.pb-0
+            div.search-box.relative(class="w-full max-w-[480px] rounded-5 overflow-hidden")
+                input(class="bg-transparent w-full py-[11px] pl-[25px] pr-[55px] text-xs font-semibold text-title border border-gray-light" placeholder="Type to Search..." type="search")       
+                +SVG_ICON("Search","w-6 h-6 stroke-title top-1/2 -translate-y-1/2 right-[25px] absolute cursor-pointer")
+        div.p-4.pb-0.tab-links.flex.justify-between.mb-1
+            button.tab.tab-lifted.w-full.pb-3.border-b.border-gray-light.tab-active.font-semibold.text-sm(data-tabFilter="1" class="tab-link leading-[22px]") 
+                p Chat
+            button.tab.tab-lifted.w-full.pb-3.border-b.border-gray-light.font-semibold.text-sm(data-tabFilter="2" class="tab-link leading-[22px]") 
+                p Story
+            button.tab.tab-lifted.w-full.pb-3.border-b.border-gray-light.font-semibold.text-sm(data-tabFilter="3" class="tab-link leading-[22px]") 
+                p Call
+        div.tabs-content
+            div(data-tabContent="1" class="tab-pan !p-0 !pb-4 !border-0 active show first:rounded-tl-none rounded-5")                                     
+                div.p-4.overflow-auto(class="max-h-[639px] custom-scroll")
+                    +message-data("chat",MESSAGE_DATA)
+
+            div(data-tabContent="2" class="tab-pan !p-0 !pb-4 !border-0 first:rounded-tl-none rounded-5")
+                div.p-4.overflow-auto(class="max-h-[639px] custom-scroll")
+                    +story-data("story",MESSAGE_DATA)
+
+            div(data-tabContent="3" class="tab-pan !p-0 !pb-4 !border-0 first:rounded-tl-none rounded-5")
+                div.p-4.overflow-auto(class="max-h-[639px] custom-scroll")
+                    +call-data("calls",MESSAGE_DATA)
+
+// Chat left sidebar end 

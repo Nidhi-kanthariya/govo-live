@@ -1,0 +1,14 @@
+/*=====================
+    Prism custom CSS
+  ==========================*/
+
+@layer components {
+  pre[class*="language-"] {
+    @apply p-4;
+  }
+
+  code[class*="language-"],
+  pre[class*="language-"] { 
+    @apply bg-gray-light leading-tight rtl:text-start;
+  }
+}

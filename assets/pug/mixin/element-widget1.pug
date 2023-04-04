@@ -1,0 +1,21 @@
+//- =============
+//-  Widget 1  
+//- =============
+mixin widget1(data)
+   div 
+      div.flex.items-center.justify-between
+         div
+            h3(class="text-lg font-bold leading-none text-title")= data.title
+            h4.flex.items-center(class="mt-[12px] text-2xl 5xl:text-lg 4xl:text-base font-extrabold text-title gap-[7px]")= data.price 
+               span(class=`flex items-center gap-1 text-3xs font-semibold text-${data.status}`)= `${data.gros}%`
+                  +SVG_ICON("Fill-Arrow",`w-[6px] h-[6px] ${data.status =="success" ? "-rotate-180" : ""} fill-${data.status} stroke-${data.status}`)                       
+         div.avatar-group.-space-x-6(class="justify-center")
+            each avatarBox in data.avatarGroup
+               div.avatar.w-12.h-12(class="5xl:w-11 5xl:h-11 border-[2px] border-white")
+                  div
+                     img(src=`../../assets/images/avatar/${avatarBox}.jpg` alt="avatar") 
+            if(data.placeholder)
+               div.avatar.placeholder.w-12.h-12(class="5xl:w-11 5xl:h-11 border-[2px] bg-gray-light border-white")
+                  div
+                     span(class="text-xs font-bold text-title")= `${data.placeholder}+` 
+      div(id=`${data.chart}` class="mt-[17px]")

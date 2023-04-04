@@ -1,0 +1,90 @@
+/*=====================
+    Swiper Slider CSS
+ ==========================*/
+@layer components {
+    .swiper {
+        @apply mx-auto relative overflow-hidden list-none p-0 z-[1];
+
+        .swiper-wrapper {
+            @apply relative w-full h-full z-[1] flex transform box-content flex-none;
+
+            .swiper-slide {
+                @apply flex-shrink-0 h-full relative transform;
+            }
+        }
+
+        &.navigationBtnSlider {
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                @apply flex h-7 w-7 items-center justify-center rounded-full bg-opacity-100 bg-white cursor-pointer absolute top-[50%] z-10;
+
+                &.swiper-button-disabled {
+                    @apply opacity-[0.35] cursor-auto pointer-events-none;
+                }
+            }
+
+            .swiper-button-prev {
+                @apply left-3 right-0;
+            }
+
+            .swiper-button-next {
+                @apply right-3 left-unset;
+            }
+        }
+
+        .swiper-pagination {
+            @apply left-1/2 -translate-x-1/2 whitespace-nowrap text-center font-semibold text-xs text-primary;
+
+            &.fraction-custom {
+                .swiper-pagination-bullet {
+                    @apply inline-flex h-5 w-5 items-center justify-center border border-secondary bg-opacity-100 bg-transparent text-xs leading-none text-secondary opacity-60 rounded-full cursor-pointer mx-1 my-0;
+
+                    &.swiper-pagination-bullet-active {
+                        @apply opacity-100 bg-secondary text-white;
+                    }
+                }
+            }
+        }
+
+        &.sliderPagination,
+        &.sliderLazyLoading {
+            .swiper-pagination {
+                @apply left-1/2 -translate-x-1/2 whitespace-nowrap text-center font-semibold text-xs text-primary;
+
+                .swiper-pagination-bullet {
+                    @apply my-0 mx-1 cursor-auto bg-primary opacity-20 w-2 h-2 inline-block rounded-full;
+
+                    &.swiper-pagination-bullet-active {
+                        @apply opacity-100 bg-primary;
+                    }
+                }
+            }
+        }
+
+        &.sliderThumbnail {
+            @apply mt-[.625rem];
+
+            .swiper-wrapper{
+                .swiper-slide{
+                    @apply opacity-50;
+                    &.swiper-slide-thumb-active{
+                        @apply opacity-100;
+                    }
+                }
+            }
+
+        }
+
+        &.sliderLazyLoading {
+            .swiper-pagination {
+                .swiper-pagination-bullet {
+                    @apply cursor-pointer;
+                }
+            }
+        }
+        [dir='rtl'] & {
+            direction: ltr;
+        }
+    }
+}

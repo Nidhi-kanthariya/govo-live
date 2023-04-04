@@ -1,0 +1,119 @@
+/*=====================
+    Basic Reset CSS
+  ==========================*/
+@layer base {
+  * {
+    &:after,
+    &:before {
+      @apply p-0 m-0;
+    }
+  }
+
+  html {
+    @apply h-full;
+  }
+
+  html,
+  body {
+    @apply w-full;
+  }
+  body {
+    @apply bg-body;
+  }
+  input,
+  select,
+  textarea {
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+  ::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: inherit;
+    opacity: 1; /* Firefox */
+  }
+
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+
+  .dashed-border-horizontal {
+    @apply bg-dashed-horizontal bg-sm-h bg-bottom bg-repeat-x;
+  }
+  .dashed-border-vertical {
+    @apply bg-dashed-vertical bg-sm-v bg-right bg-repeat-y;
+  }
+  .custom-scroll {
+    &::-webkit-scrollbar {
+      @apply w-[0.25rem] h-[0.25rem];
+    }
+    &::-webkit-scrollbar-track {
+      @apply bg-gray-200;
+    }
+    &::-webkit-scrollbar-thumb {
+      @apply bg-gray-300  rounded-[0.625px] border border-gray-400  h-[0.3125rem];
+    }
+  }
+  .customizer-sidebar {
+    @apply duration-300 z-10 transition-all fixed min-w-[17.5rem] max-w-[17.5rem]  h-screen -right-full top-0 bottom-0 bg-white border-l border-light;
+    &.show {
+      @apply right-0 rtl:left-0 rtl:right-unset;
+    }
+  }
+  .apex-custom-text {
+    .apexcharts-xaxis-title-text {
+      @apply -translate-x-1/2 2md:translate-x-0;
+    }
+  }
+  .custom-data-label {
+    .apexcharts-datalabels {
+      rect {
+        filter: drop-shadow(0 0.25rem 0.25rem rgb(0 0 0 / 0.2));
+        @apply w-[1.5625rem] h-[1.5625rem] stroke-[0.1875rem] stroke-white;
+      }
+      text {
+        @apply translate-x-[0.125rem] translate-y-[0.25rem];
+      }
+      .apexcharts-data-labels {
+        &:nth-child(4n + 1) {
+          rect {
+            @apply fill-primary;
+          }
+        }
+        &:nth-child(4n + 2) {
+          rect {
+            @apply fill-secondary;
+          }
+        }
+        &:nth-child(4n + 3) {
+          rect {
+            @apply fill-[var(--chart-dark)];
+          }
+        }
+        &:nth-child(4n + 4) {
+          rect {
+            @apply fill-warning;
+          }
+        }
+      }
+    }
+  }
+  .round-bar {
+    .apexcharts-plot-series {
+      .apexcharts-series {
+        path {
+          clip-path: inset(5% 5% 5% 0% round 0.5rem) !important;
+        }
+      }
+    }
+  }
+}

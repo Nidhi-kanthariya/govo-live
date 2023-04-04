@@ -1,0 +1,69 @@
+/*=====================
+  Ratio CSS
+==========================*/
+
+.ratio2_3 {
+  .bg-size {
+    @apply before:block before:pt-[60%];
+  }
+}
+.ratio_36 {
+  .bg-size {
+    @apply before:block before:pt-[36%];
+  }
+}
+.ratio_19 {
+  .bg-size {
+    @apply before:block before:pt-[19%];
+  }
+}
+.ratio_47 {
+  .bg-size {
+    @apply before:block before:pt-[47%];
+  }
+}
+.ratio_56 {
+  .bg-size {
+    @apply before:block before:pt-[56%];
+  }
+}
+.ratio_80 {
+  .bg-size {
+    @apply before:block before:pt-[80%];
+  }
+}
+.ratio_asos {
+  .bg-size {
+    @apply before:block before:pt-[100%];
+  }
+}
+.ratio_109 {
+  .bg-size {
+    @apply before:block before:pt-[109%];
+  }
+}
+
+.b-top {
+  background-position: top !important;
+}
+.b-bottom {
+  background-position: bottom !important;
+}
+.b-center {
+  background-position: center !important;
+}
+.b_size_content {
+  background-size: contain !important;
+  background-repeat: no-repeat;
+}
+
+.welcome-card-main{
+  &.common-animate-main{
+    .bg-img{
+      @apply absolute bottom-0 left-0 right-0 top-0 !block h-full;
+      .welcome-card-animate{
+        animation-duration: 40000ms;
+      }
+    }
+  }
+}

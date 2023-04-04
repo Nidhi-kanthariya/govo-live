@@ -1,0 +1,17 @@
+//- ========================
+//- colors table
+//- =======================
+
+table.table.table-Color.table-bordered
+  thead 
+    tr
+      each head in COLORS_TABLE.header
+        th=  head
+  tbody
+    each bodyData,index in COLORS_TABLE.body
+      tr
+        td(class="min-w-[.625rem]")=index+1
+        td(class="min-w-[.625rem]")=bodyData.customer
+        td(class="min-w-[1.25rem]")=bodyData.date
+        td(class="min-w-[.625rem]")=bodyData.invoice
+        td(class="min-w-[.625rem]")=bodyData.website

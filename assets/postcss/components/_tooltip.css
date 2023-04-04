@@ -1,0 +1,108 @@
+/*=====================
+  Tooltip CSS
+  ==========================*/
+
+@layer components {
+  /* START TOOLTIP STYLES */
+  [data-tw-tooltip] {
+    @apply relative inline-block text-center;
+  }
+
+  /* Applies to all tooltips */
+  [data-tw-tooltip]::before,
+  [data-tw-tooltip]::after {
+    @apply text-xs leading-none absolute hidden opacity-0;
+  }
+
+  [data-tw-tooltip]::before {
+    content: '';
+    @apply border-4 border-solid border-transparent;
+  }
+
+  [data-tw-tooltip]::after {
+    content: attr(data-tw-tooltip);
+    @apply font-sans min-w-min max-w-xs whitespace-nowrap p-2 border-primary bg-white text-title shadow-md rounded;
+  }
+
+  /* Make the tooltips respond to hover */
+  [data-tw-tooltip]:hover::before,
+  [data-tw-tooltip]:hover::after {
+    @apply block;
+  }
+
+  /* don't show empty tooltips */
+  [data-tw-tooltip='']::before,
+  [data-tw-tooltip='']::after {
+    @apply hidden;
+  }
+
+  /* FLOW: TOP */
+  [data-tw-tooltip]:not([data-flow])::before,
+  [data-tw-tooltip][data-flow^='top']::before {
+    @apply left-[50%] bottom-full border-b-0 border-t-gray-400;
+  }
+
+  [data-tw-tooltip]:not([data-flow])::after,
+  [data-tw-tooltip][data-flow^='top']::after {
+    @apply bottom-[calc(100%+.3125rem)] left-0 right-0;
+  }
+
+  /* FLOW: BOTTOM */
+  [data-tw-tooltip][data-flow^='bottom']::before {
+    @apply left-[50%] top-full border-t-0 border-b-gray-400;
+  }
+
+  [data-tw-tooltip][data-flow^='bottom']::after {
+    @apply top-[calc(100%+.3125rem)] left-0 right-0;
+  }
+
+  /* FLOW: LEFT */
+  [data-tw-tooltip][data-flow^='left']::before {
+    @apply top-[41%] border-r-0 border-l-gray-400 left-[calc(0em-.3125rem)];
+  }
+
+  [data-tw-tooltip][data-flow^='left']::after {
+    @apply top-[11%] right-[calc(100%+.3125rem)] z-10;
+  }
+
+  /* FLOW: RIGHT */
+  [data-tw-tooltip][data-flow^='right']::before {
+    @apply top-[41%] border-l-0 border-r-gray-400 right-[calc(0em-.3125rem)];
+  }
+
+  [data-tw-tooltip][data-flow^='right']::after {
+    @apply top-[11%] left-[calc(100%+.3125rem)] z-10;
+  }
+
+  /* KEYFRAMES */
+  @keyframes tooltips-vert {
+    to {
+      opacity: 0.9;
+      transition: all 0.5s ease-out;
+    }
+  }
+
+  @keyframes tooltips-horz {
+    to {
+      opacity: 0.9;
+      transition: all 0.5s ease-out;
+    }
+  }
+
+  /* FX All The Things */
+  [data-tw-tooltip]:not([data-flow]):hover::before,
+  [data-tw-tooltip]:not([data-flow]):hover::after,
+  [data-tw-tooltip][data-flow^='top']:hover::before,
+  [data-tw-tooltip][data-flow^='top']:hover::after,
+  [data-tw-tooltip][data-flow^='bottom']:hover::before,
+  [data-tw-tooltip][data-flow^='bottom']:hover::after {
+    animation: tooltips-vert 300ms ease-out forwards;
+  }
+
+  [data-tw-tooltip][data-flow^='left']:hover::before,
+  [data-tw-tooltip][data-flow^='left']:hover::after,
+  [data-tw-tooltip][data-flow^='right']:hover::before,
+  [data-tw-tooltip][data-flow^='right']:hover::after {
+    animation: tooltips-horz 300ms ease-out forwards;
+  }
+}

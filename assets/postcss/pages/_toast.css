@@ -1,0 +1,36 @@
+/*=====================
+  Toast CSS
+  ==========================*/
+
+@layer components {
+    /* body {
+        @apply relative;
+    }
+
+    .toast {
+        @apply inline-block;
+
+        .toast-menu {
+            @apply rounded z-[20] min-w-max opacity-0 invisible absolute shadow-lg;
+        }
+
+        &.show {
+            .toast-menu {
+                @apply opacity-100 visible;
+
+                &.toast-default{
+                    @apply top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 bg-white; 
+                }
+                &.toast-top-left{
+                    @apply top-0 left-0 bg-white;
+                }
+                &.toast-top-center{
+                    @apply top-0 left-[50%] -translate-y-1/2 bg-white;
+                }
+                &.toast-top-right{
+                    @apply top-0 left-unset right-0 bg-white;
+                }
+            }
+        }
+    } */
+}

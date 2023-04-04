@@ -1,0 +1,360 @@
+//- sidebar
+-var sidebar = true;
+
+//- feather
+-var feather= true;
+
+//- fontawesome
+-var fontAwesome=true;
+
+//- custom select
+-var customSelect = true;
+
+//- ecommerce
+-var ecommerce = true;
+
+//- swiper-slider
+-var swiper=true;
+
+//- customizer 
+-var customizer = true;
+
+//- Breadcrumbs
+-var pageTitle="Shop";
+-var breadcrumb=['Ecommerce','Shop'];
+
+//- all JSON  
+include ../../data/all-data
+
+//- all mixin   
+include ../../mixin/mixin
+
+doctype html
+html(lang='en')
+   include ../../layout/header-files
+   body(dir="ltr" class="unique-skin")
+      main.page-wrapper
+         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+            include ../../layout/header/header     
+            // Sidebar Start 
+            div.page-sidebar.sidebar-dark.unique-sidebar
+               include ../../layout/unique 
+            // Sidebar End 
+
+            // Page Body Start
+            div.page-body 
+               div.grid.grid-cols-12.gap-card-gap
+                  div.col-span-12 
+                     div.rounded-5.overflow-hidden.relative
+                        img(src="../../assets/images/ecommerce/light-berner.jpg" alt="light-banner.jpg" class="w-full drop-shadow-lg min-h-[120px] max-h-[300px]")
+                        div.absolute(class="text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[40%] lg:max-w-[75%] xl:max-w-[50%]")
+                           div.search-box.relative
+                              input(class="focus:ring-2 focus:ring-warning bg-wi border-border-light border ring-offset-2 rounded-5 w-full py-[11px] pl-[25px] pr-[55px] md:py-[5px] text-xs font-semibold text-title" placeholder="Search Brands..." type="search")       
+                              +SVG_ICON("Search","xl:hidden w-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] stroke-title top-1/2 -translate-y-1/2 right-[25px] absolute")
+                              i(data-feather="x" class="search-close hidden cursor-pointer xl:block w-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] stroke-title top-1/2 -translate-y-1/2 right-[25px] absolute")
+
+                  div.col-span-12.flex.items-center.justify-between.gap-3.bg-white.p-3.rounded-5(class="2sm:flex-col") 
+                     div.flex.items-center.gap-3
+                        label(for="sortby" class="min-w-max text-xs text-content3") Sort By                                    
+                        select.form-select.block.w-full.px-3.text-xs.font-normal.text-content3.bg-white.bg-clip-padding.bg-no-repeat.border.border-border-light.rounded-5.transition.ease-in-out.m-0(class='min-w-[150px] py-[9px]' id="sortby" aria-label='Default select example')
+                           option(selected='') All
+                           option(value='1') Popular
+                           option(value='2') Price Low
+                           option(value='3') Price Hight
+                     div.flex.items-center.gap-3
+                        div.product-filter 
+                           +SVG_ICON("Filter", "w-6 h-6 stroke-content3 xl:block hidden shop-toggle")
+                        div.product-setting 
+                           a(href="javscript:void(0)" class="grid-layout-view")
+                              i(data-feather="grid" class="w-6 h-6 stroke-content3")
+                        div.product-setting 
+                           a(href="javscript:void(0)" class="list-layout-view")
+                              i(data-feather="list" class="w-6 h-6 stroke-content3")
+                  div.col-span-3(class="shop-sidebar")
+                     div.card.sticky.top-0(class="product-filter")
+                        div.card-header 
+                           div.flex.items-center.justify-between(class="w-full") 
+                              h2(class="font-bold text-title") Filters
+                              button(class="p-1 rounded-full sm:p-1 shop-close-sidebar hidden xl:block")
+                                 i(class="w-4 h-4" data-feather="x")
+                        div.card-body.flex.flex-col.gap-1
+                           div.flex.flex-col.flex-wrap.gap-2
+                              div.accordionWrapper
+                                 div.accordionItem.open
+                                    h4.accordionItemHeading.bg-primary Brand
+                                    div.accordionItemContent
+                                       ul.flex.gap-2.flex-col
+                                          li.flex.items-center.gap-2(a href="javascript:void(0)")
+                                             div.checkbox(class="w-4 h-4") 
+                                                input(type='checkbox' class="peer" id="zara") 
+                                                div.checkbox-indicator(class="peer-checked:!bg-primary !border peer-checked:!border-primary") 
+                                                   i(data-feather="check")
+                                             label(for="zara").text-content Zara (21)
+                                          li.flex.items-center.gap-2(a href="javascript:void(0)")
+                                             div.checkbox(class="w-4 h-4") 
+                                                input(type='checkbox' class="peer" id="nike")
+                                                div.checkbox-indicator(class="peer-checked:!bg-primary !border peer-checked:!border-primary") 
+                                                   i(data-feather="check")
+                                             label(for="nike").text-content Nike (31)
+                                          li.flex.items-center.gap-2(a href="javascript:void(0)")   
+                                             div.checkbox(class="w-4 h-4") 
+                                                input(type='checkbox' class="peer" id="louis-vuitton" checked) 
+                                                div.checkbox-indicator(class="peer-checked:!bg-primary !border peer-checked:!border-primary") 
+                                                   i(data-feather="check")
+                                             label(for="louis-vuitton").text-content Louis Vuitton (15)
+                                          li.flex.items-center.gap-2(a href="javascript:void(0)")
+                                             div.checkbox(class="w-4 h-4")
+                                                input(type='checkbox' class="peer" id="puma") 
+                                                div.checkbox-indicator(class="peer-checked:!bg-primary !border peer-checked:!border-primary") 
+                                                   i(data-feather="check")
+                                             label(for="puma").text-content Puma (21)
+                                          li.flex.items-center.gap-2(a href="javascript:void(0)")
+                                             div.checkbox(class="w-4 h-4")
+                                                input(type='checkbox' class="peer" id="dior" checked) 
+                                                div.checkbox-indicator(class="peer-checked:!bg-primary !border peer-checked:!border-primary") 
+                                                   i(data-feather="check")
+                                             label(for="dior").text-content Dior (25)
+                                          li.flex.items-center.gap-2(a href="javascript:void(0)")
+                                             div.checkbox(class="w-4 h-4")
+                                                input(type='checkbox' class="peer" id="H&m") 
+                                                div.checkbox-indicator(class="peer-checked:!bg-primary !border peer-checked:!border-primary") 
+                                                   i(data-feather="check")
+                                             label(for="H&m").text-content H & M (5)
+
+                           div.flex.flex-col.flex-wrap.gap-2
+                              div.accordionWrapper
+                                 div.accordionItem.open
+                                    h4.accordionItemHeading.bg-primary Categories
+                                    div.accordionItemContent
+                                       ul.flex.gap-2.flex-col
+                                          li(a href="javascript:void(0)").flex.items-center.justify-between.cursor-pointer
+                                             span.text-xs.text-content Fashion
+                                             small.text-2x.text-content 39   
+                                          li(a href="javascript:void(0)").flex.items-center.justify-between.cursor-pointer 
+                                             span.text-xs.text-content Trends
+                                             small.text-2x.text-content 25
+                                          li(a href="javascript:void(0)").flex.items-center.justify-between.cursor-pointer 
+                                             span.text-xs.text-content  Designer
+                                             small.text-2x.text-content 15
+                                          li(a href="javascript:void(0)").flex.items-center.justify-between.cursor-pointer 
+                                             span.text-xs.text-content  Swimwear
+                                             small.text-2x.text-content 51
+                                          li(a href="javascript:void(0)").flex.items-center.justify-between.cursor-pointer 
+                                             span.text-xs.text-content Home & kitchen  
+                                             small.text-2x.text-content 84
+                                          li(a href="javascript:void(0)").flex.items-center.justify-between.cursor-pointer
+                                             span.text-xs.text-content Toys & hobbies
+                                             small.text-2x.text-content 54
+                                          li(a href="javascript:void(0)").flex.items-center.justify-between.cursor-pointer
+                                             span.text-xs.text-content Tools & hardware
+                                             small.text-2x.text-content 54
+
+                           div.flex.flex-col.flex-wrap.gap-2
+                              div.accordionWrapper
+                                 div.accordionItem.open
+                                    h4.accordionItemHeading.bg-primary Discount 
+                                    div.accordionItemContent
+                                       ul.flex.gap-2.flex-col
+                                          li.flex.items-center.gap-2(a href="javascript:void(0)")
+                                             div.checkbox(class="w-4 h-4") 
+                                                input(type='checkbox' class="peer" id="50%off") 
+                                                div.checkbox-indicator(class="peer-checked:!bg-primary !border peer-checked:!border-primary") 
+                                                   i(data-feather="check")
+                                             label(for="50%off").text-content 50% or more
+                                          li.flex.items-center.gap-2(a href="javascript:void(0)")
+                                             div.checkbox(class="w-4 h-4") 
+                                                input(type='checkbox' class="peer" id="40%off" checked)
+                                                div.checkbox-indicator(class="peer-checked:!bg-primary !border peer-checked:!border-primary") 
+                                                   i(data-feather="check")
+                                             label(for="40%off").text-content 40% or more
+                                          li.flex.items-center.gap-2(a href="javascript:void(0)")   
+                                             div.checkbox(class="w-4 h-4") 
+                                                input(type='checkbox' class="peer" id="30%off") 
+                                                div.checkbox-indicator(class="peer-checked:!bg-primary !border peer-checked:!border-primary") 
+                                                   i(data-feather="check")
+                                             label(for="30%off").text-content 30% or more
+                                          li.flex.items-center.gap-2(a href="javascript:void(0)")
+                                             div.checkbox(class="w-4 h-4")
+                                                input(type='checkbox' class="peer" id="20%off") 
+                                                div.checkbox-indicator(class="peer-checked:!bg-primary !border peer-checked:!border-primary") 
+                                                   i(data-feather="check")
+                                             label(for="20%off").text-content 20% or more
+                                          li.flex.items-center.gap-2(a href="javascript:void(0)")
+                                             div.checkbox(class="w-4 h-4")
+                                                input(type='checkbox' class="peer" id="10%off") 
+                                                div.checkbox-indicator(class="peer-checked:!bg-primary !border peer-checked:!border-primary") 
+                                                   i(data-feather="check")
+                                             label(for="10%off").text-content 10% or more
+                                          li.flex.items-center.gap-2(a href="javascript:void(0)")
+                                             div.checkbox(class="w-4 h-4")
+                                                input(type='checkbox' class="peer" id="less10%") 
+                                                div.checkbox-indicator(class="peer-checked:!bg-primary !border peer-checked:!border-primary") 
+                                                   i(data-feather="check")
+                                             label(for="less10%").text-content Less than 10%
+
+                           div.flex.flex-col.flex-wrap.gap-2
+                              div.accordionWrapper
+                                 div.accordionItem.open
+                                    h4.accordionItemHeading.bg-primary Rating 
+                                    div.accordionItemContent
+                                       ul.flex.gap-2.flex-col
+                                          li.flex.items-center.gap-2(a href="javascript:void(0)")
+                                             div.checkbox(class="w-4 h-4") 
+                                                input(type='checkbox' class="peer" id="4above" checked)
+                                                div.checkbox-indicator(class="peer-checked:!bg-primary !border peer-checked:!border-primary") 
+                                                   i(data-feather="check")
+                                             div.flex.items-center.gap-1
+                                                i(data-feather="star" class="w-5 h-5 fill-warning")
+                                                i(data-feather="star" class="w-5 h-5 fill-warning")
+                                                i(data-feather="star" class="w-5 h-5 fill-warning")
+                                                i(data-feather="star" class="w-5 h-5 fill-warning")
+                                                i(data-feather="star" class="w-5 h-5 fill-content")
+                                             label(for="4above").text-content 4 & Above
+                                          li.flex.items-center.gap-2(a href="javascript:void(0)")   
+                                             div.checkbox(class="w-4 h-4") 
+                                                input(type='checkbox' class="peer" id="3above") 
+                                                div.checkbox-indicator(class="peer-checked:!bg-primary !border peer-checked:!border-primary") 
+                                                   i(data-feather="check")
+                                             div.flex.items-center.gap-1
+                                                i(data-feather="star" class="w-5 h-5 fill-warning")
+                                                i(data-feather="star" class="w-5 h-5 fill-warning")
+                                                i(data-feather="star" class="w-5 h-5 fill-warning")
+                                                i(data-feather="star" class="w-5 h-5 fill-content")
+                                                i(data-feather="star" class="w-5 h-5 fill-content")
+                                             label(for="3above").text-content 3 & Above
+                                          li.flex.items-center.gap-2(a href="javascript:void(0)")
+                                             div.checkbox(class="w-4 h-4")
+                                                input(type='checkbox' class="peer" id="2above") 
+                                                div.checkbox-indicator(class="peer-checked:!bg-primary !border peer-checked:!border-primary") 
+                                                   i(data-feather="check")
+                                             div.flex.items-center.gap-1
+                                                i(data-feather="star" class="w-5 h-5 fill-warning")
+                                                i(data-feather="star" class="w-5 h-5 fill-warning")
+                                                i(data-feather="star" class="w-5 h-5 fill-content")
+                                                i(data-feather="star" class="w-5 h-5 fill-content")
+                                                i(data-feather="star" class="w-5 h-5 fill-content")
+                                             label(for="2above").text-content 2 & Above
+                                          li.flex.items-center.gap-2(a href="javascript:void(0)")
+                                             div.checkbox(class="w-4 h-4")
+                                                input(type='checkbox' class="peer" id="1star") 
+                                                div.checkbox-indicator(class="peer-checked:!bg-primary !border peer-checked:!border-primary") 
+                                                   i(data-feather="check")
+                                             div.flex.items-center.gap-1
+                                                i(data-feather="star" class="w-5 h-5 fill-warning")
+                                                i(data-feather="star" class="w-5 h-5 fill-content")
+                                                i(data-feather="star" class="w-5 h-5 fill-content")
+                                                i(data-feather="star" class="w-5 h-5 fill-content")
+                                                i(data-feather="star" class="w-5 h-5 fill-content")
+                                             label(for="1star").text-content 1
+
+                           div.flex.flex-col
+                              h4.bg-primary.text-white.text-sm.p-3.w-full.cursor-pointer.rounded.font-bold(class="rounded-tr-[0.25rem] rounded-tl-[0.25rem] rounded-br-none rounded-bl-none") New Product
+                              div(class="block w-full p-3 mb-2 border-2 bg-white-light border-primary-light")
+                                 +new-product-card(NEW_PRODUCT)
+
+                  div.col-span-9(class="xl:col-span-12 product-wrapper-grid")
+                     .grid.grid-cols-12.gap-6(class="sm:mt-5") 
+                        each data in PRODUCT_BOX
+                           div.col-span-3(class='4xl:col-span-4 md:col-span-6 sm:col-span-12 product-box')
+                              +product(data,"modal", "productmodal")
+
+            // Page Body End  
+            +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+         include ../../components/customizer                   
+
+         //- Product View Modal
+         div.modal-main
+            input#productmodal(class="peer" name="productmodal" type='checkbox')
+            label.modal-overlay(class="peer-checked:block" for='productmodal')
+            div.modal.modal-center(class="peer-checked:opacity-100 peer-checked:visible !duration-75 w-11/12 max-w-5xl")
+               div.modal-body.product-modal(class="md:modal-content-scroll md:custom-scroll md:!h-[90vh] !px-4")
+                  div.grid.grid-cols-12.gap-card-gap
+                     div.col-span-6(class="md:col-span-12")             
+                        div.product-slider
+                           div.swiper.productImgNav
+                              div.swiper-wrapper
+                                 div.swiper-slide
+                                    img(src="../../assets/images/ecommerce/18.jpg" alt="product")
+                                 div.swiper-slide
+                                    img(src="../../assets/images/ecommerce/17.jpg" alt="product")
+                                 div.swiper-slide
+                                    img(src="../../assets/images/ecommerce/19.jpg" alt="product")
+                                 div.swiper-slide
+                                    img(src="../../assets/images/ecommerce/20.jpg" alt="product")
+                                 div.swiper-slide
+                                    img(src="../../assets/images/ecommerce/21.jpg" alt="product")
+                              div.swiper-button-next(class="text-primary")
+                              div.swiper-button-prev(class="text-primary")
+                           div.swiper.productImg( class="mt-4 md:mt-3")
+                              div.swiper-wrapper
+                                 div.swiper-slide
+                                    img(src="../../assets/images/ecommerce/18.jpg" alt="product")
+                                 div.swiper-slide
+                                    img(src="../../assets/images/ecommerce/17.jpg" alt="product")
+                                 div.swiper-slide
+                                    img(src="../../assets/images/ecommerce/19.jpg" alt="product")
+                                 div.swiper-slide
+                                    img(src="../../assets/images/ecommerce/20.jpg" alt="product")
+                                 div.swiper-slide
+                                    img(src="../../assets/images/ecommerce/21.jpg" alt="product")
+                     div.col-span-6(class="md:col-span-12")  
+                        div.flex.justify-between.gap-2
+                           div.flex.items-center.gap-2
+                              h3.leading-none(class="font-semibold 3xl:flex 3xl:justify-between 3xl:items-center text-primary ") Casual Men's t-shirt
+                              i.fa-solid.fa-share(class="w-4 h-4 text-content")
+                           div.flex.gap-2.items-center 
+                              label(for='productmodal') 
+                                 i(data-feather="x" class="w-4 h-4 stroke-dark cursor-pointer")
+                        span.text-content3.text-xs.leading-none #15704                  
+                        p.text-content3.text-xs.leading-none Currently in stock    
+                        h4(class="font-semibold text-title lg:text-lg my-2") $500 
+                           del(class="text-danger") $350 
+                        div.flex.items-center.gap-2
+                           div.flex.items-center.gap-0
+                              i(data-feather="star" class="w-4 h-4 fill-warning stroke-transparent")
+                              i(data-feather="star" class="w-4 h-4 fill-warning stroke-transparent")
+                              i(data-feather="star" class="w-4 h-4 fill-warning stroke-transparent")
+                              i(data-feather="star" class="w-4 h-4 fill-warning stroke-transparent")
+                              i(data-feather="star" class="w-4 h-4 fill-content stroke-transparent")
+                           label(for="4above").text-content3.text-xs.font-semibold 1059 ratings
+                        p.text-content3.text-sm.mt-1.line-clamp-2 This Men's Oversize T-Shirt is ideal for daily wear or for college because it is incredibly cool and cosy.
+                        div.divider.w-full.my-4(class="before:!bg-border-light after:!bg-border-light 2lg:my-3")
+                        div.grid.grid-cols-12.gap-card-gap.items-center 
+                           div.col-span-6(class="2lg:col-span-7 2sm:col-span-12")
+                              div.flex.items-center.gap-3
+                                 label.text-title.text-sm.font-medium(for="color") Color
+                                 ul(class="flex flex-wrap gap-1 items-center" id="color")
+                                    li(class="w-5 h-5 bg-light rounded-full cursor-pointer")
+                                    li(class="w-5 h-5 bg-black rounded-full cursor-pointer")
+                                    li(class="w-5 h-5 bg-warning rounded-full cursor-pointer")
+                                    li(class="w-5 h-5 bg-danger rounded-full cursor-pointer")
+                                    li(class="w-5 h-5 bg-info rounded-full cursor-pointer")
+                           div.col-span-6(class="2lg:col-span-5 2sm:col-span-12")
+                              div.flex.items-center.gap-3
+                                 label.text-title.text-sm.font-medium(for="qty") Qty   
+                                 select.form-select.block.w-full.px-3.text-xs.font-normal.text-content3.bg-white.bg-clip-padding.bg-no-repeat.border.border-border-light.rounded-5.transition.ease-in-out.m-0(class='py-1 min-w-[50px] 2sm:w-[100px]' id="qty" aria-label='Default select example')
+                                    option(selected='') 1
+                                    option(value='1') 2
+                                    option(value='2') 3
+                                    option(value='3') 4
+                                    option(value='3') 5
+                        div.divider.w-full.my-4(class="before:!bg-border-light after:!bg-border-light 2lg:my-3")
+                        div.flex.items-center.gap-3
+                           label.text-title.text-sm.font-medium(for="size") Sizes   
+                           ul.flex.items-center.gap-2
+                              li.border.border-border-light.rounded-full.text-title.leading-none.w-8.h-8.flex.items-center.justify-center(class="hover:bg-gray-extralight") S 
+                              li.btn-active.text-title.leading-none.w-8.h-8.flex.items-center.justify-center.border.border-border-light.bg-gray-extralight.rounded-full(class="hover:bg-gray-extralight") M
+                              li.border.border-border-light.rounded-full.text-title.leading-none.w-8.h-8.flex.items-center.justify-center(class="hover:bg-gray-extralight") L
+                              li.border.border-border-light.rounded-full.text-title.leading-none.w-8.h-8.flex.items-center.justify-center(class="hover:bg-gray-extralight") XL
+                        div.divider.w-full.my-4(class="before:!bg-border-light after:!bg-border-light 2lg:my-3")
+                        div.flex.flex-wrap.gap-2.items-center.capitalize(class="2lg:gap-1") 
+                           a(href="cart.html").btn.btn-primary.text-white.text-sm(class="lg:px-2 lg:text-xs") Add to cart         
+                           a(href="wishlist.html").btn.btn-secondary.text-white.text-sm(class="lg:px-2 lg:text-xs") Add to wishlist         
+                           a(href="checkout.html").btn.btn-warning.text-white.text-sm(class="lg:px-2 lg:text-xs") Buy it now         
+
+   include ../../layout/footer-files
+
+
+
+
+

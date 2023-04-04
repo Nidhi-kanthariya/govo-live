@@ -1,0 +1,646 @@
+//- sidebar
+-var sidebar = true;
+
+//- feather
+-var feather= true;
+
+//- fontAwesome
+-var fontAwesome = true;
+
+//- custom select
+-var customSelect = true;
+
+//- swiper-slider
+-var swiper=true;
+
+//- customizer 
+-var customizer = true;
+
+//- Breadcrumbs
+-var pageTitle="User Profile";
+-var breadcrumb=['User','User Profile'];
+
+//- all JSON  
+include ../../data/all-data
+
+//- all mixin   
+include ../../mixin/mixin
+
+doctype html
+html(lang='en')
+   include ../../layout/header-files
+   body(dir="ltr" class="unique-skin")
+      main.page-wrapper
+         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+            include ../../layout/header/header     
+            // Sidebar Start 
+            div.page-sidebar.sidebar-dark.unique-sidebar
+               include ../../layout/unique 
+            // Sidebar End 
+
+            // Page Body Start
+            div.page-body.user-profile
+               div.grid.grid-cols-12.gap-card-gap
+                  div.col-span-12
+                     div.user-bg.card.p-0
+                        img(src="../../assets/images/user-app/bg.jpg" alt="" class="w-full h-80")
+                        div.user-detail.flex.flex-col.gap-4
+                           div.flex.items-center.gap-5(class="2sm:gap-2")
+                              div.avatar.rounded-full(class="w-20 2sm:w-16 2sm:h-16 h-20 p-[2px] bg-white")
+                                 img(src='../../assets/images/avatar/38.jpg' alt='girl in yellow jacket' class="rounded-full")
+
+                              div.flex.items-center.gap-3(class="2sm:gap-2")
+                                 div.text-center 
+                                    p.text-white.font-semibold.text-xs 359 
+                                    span.text-white.font-medium Posts
+                                 div.text-center 
+                                    p.text-white.font-semibold.text-xs 4.5K 
+                                    span.text-white.font-medium Followers
+                                 div.text-center 
+                                    p.text-white.font-semibold.text-xs 2.487 
+                                    span.text-white.font-medium Following
+                           div.flex.flex-col.gap-2
+                              div 
+                                 p.text-content-white(class="font-semibold text-xs") Emayila Sidorshina
+                                 p.text-content-white(class="font-semibold text-xs") Freelancer
+                              div.flex.flex-wrap.items-center.gap-2
+                                 a(href="edit-profile.html").btn.bg-content.text-white.text-xs.py-1 Edit Profile
+                                 div.dropdown
+                                    button.btn.bg-content.text-white.text-xs.py-1 Share Profile
+                                    div.dropdown-menu(class="!w-fit !top-8 left-0 !p-2 2sm:-left-24 rtl:left-0 rtl:right-unset")
+                                       div.social(class="flex flex-wrap items-center gap-2")
+                                          a(href="https://www.facebook.com/login" class="bg-gray-light rounded-full btn 2sm:p-2 !text-facebook")
+                                             i.fa-brands.fa-facebook-f(class="w-4 h-4")
+                                          a(href="https://www.linkedin.com/login" class="bg-gray-light rounded-full btn 2sm:p-2 !text-linkedin")
+                                             i.fa-brands.fa-linkedin-in(class="w-4 h-4")
+                                          a(href="https://twitter.com/i/flow/login" class="bg-gray-light rounded-full btn 2sm:p-2 !text-twitter")
+                                             i.fa-brands.fa-twitter(class="w-4 h-4")
+                                          a(href="https://www.instagram.com/accounts/login/" class="bg-gray-light rounded-full btn 2sm:p-2 instagram !text-instagram")
+                                             svg(width='0' height='0')
+                                                radialgradient#rg(r='150%' cx='30%' cy='107%')
+                                                   stop(stop-color='#fdf497' offset='0')
+                                                   stop(stop-color='#fdf497' offset='0.05')
+                                                   stop(stop-color='#fd5949' offset='0.45')
+                                                   stop(stop-color='#d6249f' offset='0.6')
+                                                   stop(stop-color='#285AEB' offset='0.9')
+                                             i.fa-brands.fa-instagram(class="w-4 h-4")
+                                          a(href="https://www.rss.com/" class="bg-gray-light rounded-full btn 2sm:p-2 !text-danger")
+                                             i.fa-solid.fa-rss(class="w-4 h-4")
+               div.grid.grid-cols-12.gap-card-gap(class="user-profile-detail px-body-space mt-[-70px] relative 3sm:px-unset")
+                  div.col-span-3(class="4xl:col-span-4 lg:col-span-12")
+                     div.grid.grid-cols-12.gap-4.top-0.sticky                               
+                        div.col-span-12(class="lg:col-span-6 2md:col-span-12 lg:order-first")
+                           div.card 
+                              div.card-header 
+                                 h6.font-bold Info  
+                              div.card-body.flex.flex-col.gap-3
+                                 div 
+                                    p.text-title.text-xs.font-semibold.capitalize Contact No
+                                    span.font-medium.text-content3 (773) 847-8982 
+                                 div 
+                                    p.text-title.text-xs.font-semibold.capitalize Registration date
+                                    span.font-medium.text-content3 Oct, 25,2022
+                                 div 
+                                    p.text-title.text-xs.font-semibold.capitalize Member Status
+                                    span.font-medium.text-content3 Active Member
+
+                        div.col-span-12(class="lg:col-span-6 2md:col-span-12 lg:order-2")
+                           +user_suggestion(USER_SUGGESTION)
+
+                        div.col-span-12(class="lg:col-span-6 2md:col-span-12 lg:order-2")
+                           +user_friend(USER_FRIEND)
+
+                        div.col-span-12(class="lg:col-span-6 2md:col-span-12 lg:order-2")
+                           +user_follower(USER_FOLLOWER)
+
+                  div.col-span-9(class="4xl:col-span-8 lg:col-span-12 w-full tabs flex flex-col") 
+                     div.card.gap-1
+                        div.card-header.flex.items-center.justify-between.gap-2(class="2md:flex-col 2md:items-start")
+                           h6.font-bold Portfolio 
+                           div.tab-links.flex.items-center.justify-end(class="2md:w-full border-b border-border-light sm:flex-col")
+                              button.tab.tabs-bordered.user-tab.flex.items-center.justify-center.tab-active(data-tabFilter="1" class="text-content3 !flex-row !gap-2 tab-link 2md:w-full")
+                                 i.fa-solid.fa-user(class="w-4 h-4 stroke-title-content3")
+                                 | Profile  
+                              button.tab.tabs-bordered.user-tab.flex.items-center.justify-center(data-tabFilter="2" class="text-content3 !flex-row !gap-2 tab-link 2md:w-full")
+                                 i.fa-solid.fa-briefcase(class="w-4 h-4 stroke-title-content3")
+                                 | Experience
+                              button.tab.tabs-bordered.user-tab.flex.items-center.justify-center(data-tabFilter="3" class="text-content3 !flex-row !gap-2 tab-link 2md:w-full")
+                                 i.fa-regular.fa-image(class="w-4 h-4 stroke-title-content3")
+                                 | Photos  
+                        div.card-body 
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                                 div.flex.flex-col.gap-4
+                                    div.flex.items-center.gap-4(class="2md:flex-col 2md:items-start") 
+                                       div.flex.user-detail.items-center.gap-4
+                                          div.bg-gray-light(class="w-8 h-8 grid place-content-center rounded-full")
+                                             i.fa-solid.fa-user-tie
+                                          div.text-start
+                                             p.text-title(class="font-semibold text-xs") Designation
+                                             span.text-content3(class="font-semibold text-2xs") Fullstack Developer        
+                                       div.flex.user-detail.items-center.gap-4
+                                          div.bg-gray-light(class="w-8 h-8 grid place-content-center rounded-full")
+                                             i.fa-solid.fa-globe
+                                          div.text-start
+                                             p.text-title(class="font-semibold text-xs") Website
+                                             span.text-content3(class="font-semibold text-2xs") www.govo.com                                                         
+                                    div.flex.flex-col.gap-2
+                                       p.text-content3.text-xs(class="sm:line-clamp-6") Emayila Sidorshina here. It will be as straightforward as Occidental—it will even be Occidental. It will appear to be simplified English to an English person, as a dubious Cambridge friend of mine explained to me what Occidental is. The family of European languages includes all of them.
+                                       p.text-content3.text-xs(class="sm:hidden") Always check to see if your typefaces are compatible with one another, and aim to use no more than three. Use the fonts that you already have in the software you're using to experiment and play around with. This could be the advice that I heard from designers the most frequently. They strongly advise using multiple typefaces in a single design, but refrain from going overboard and
+                                    div.flex.flex-col.gap-3 
+                                       h6.font-semibold.text-title Projects 
+                                       div.grid.grid-cols-12.gap-card-gap 
+                                          div.col-span-4(class="xl:col-span-6 2md:col-span-12")
+                                             div.border.border-border-light.border-dashed.p-4.flex.flex-col.gap-5 
+                                                div.flex.items-start.justify-between 
+                                                   span(class="bg-danger p-3 grid place-content-center rounded-full")
+                                                      i.fa-brands.fa-figma(class="w-6 h-6 text-white")
+                                                   span.text-content3.text-2xs 3hr Ago 
+                                                div.flex.flex-col.gap-2 
+                                                   div 
+                                                      p.text-title.text-sm.font-semibold.mb-1 Figma Logo Design 
+                                                      p.text-content3.text-2xs.truncate New Latest figma logo design for membership
+                                                   div   
+                                                      p.text-content3.text-xs Team Members                                                                 
+                                                      div.avatar-group
+                                                         div.avatar.border-white(class='border-[0.125rem]')
+                                                            div.w-8
+                                                               img(src='../../assets/images/user-app/13.png' alt='avatar')
+                                                         div.avatar.border-white(class='border-[0.125rem]')
+                                                            div.w-8
+                                                               img(src='../../assets/images/user-app/14.png' alt='avatar')
+                                                         div.avatar.border-white(class='border-[0.125rem]')
+                                                            div.w-8
+                                                               img(src='../../assets/images/user-app/15.png' alt='avatar')
+                                                   badge.bg-secondary-extralight.text-secondary.badge-sm.rounded-5.w-max Inprogress  
+                                          div.col-span-4(class="xl:col-span-6 2md:col-span-12")
+                                             div.border.border-border-light.border-dashed.p-4.flex.flex-col.gap-5 
+                                                div.flex.items-start.justify-between 
+                                                   span(class="bg-info p-3 grid place-content-center rounded-full")
+                                                      i.fa-solid.fa-dumbbell(class="w-6 h-6 text-white")
+                                                   span.text-content3.text-2xs 3months Ago
+                                                div.flex.flex-col.gap-2 
+                                                   div 
+                                                      p.text-title.text-sm.font-semibold.mb-1 Fitness Club 
+                                                      p.text-content3.text-2xs.truncate Design & Developed Fitness Club website 
+                                                   div   
+                                                      p.text-content3.text-xs Team Members                                                                 
+                                                      div.avatar-group
+                                                         div.avatar.border-white(class='border-[0.125rem]')
+                                                            div.w-8
+                                                               img(src='../../assets/images/user-app/17.png' alt='avatar')
+                                                         div.avatar.border-white(class='border-[0.125rem]')
+                                                            div.w-8
+                                                               img(src='../../assets/images/user-app/18.png' alt='avatar')
+                                                         div.avatar.border-white(class='border-[0.125rem]')
+                                                            div.w-8
+                                                               img(src='../../assets/images/user-app/19.png' alt='avatar')
+                                                   badge.bg-success-light.text-success.badge-sm.rounded-5.w-max Active
+                                          div.col-span-4(class="xl:col-span-6 2md:col-span-12")
+                                             div.border.border-border-light.border-dashed.p-4.flex.flex-col.gap-5 
+                                                div.flex.items-start.justify-between 
+                                                   span(class="bg-primary p-3 grid place-content-center rounded-full")
+                                                      i.fa-solid.fa-file-lines(class="w-6 h-6 text-white")
+                                                   span.text-content3.text-2xs 3months Ago
+                                                div.flex.flex-col.gap-2 
+                                                   div 
+                                                      p.text-title.text-sm.font-semibold.mb-1 Landing Page 
+                                                      p.text-content3.text-2xs.truncate Design ecommerce website landing page for vegetable market 
+                                                   div   
+                                                      p.text-content3.text-xs Team Members                                                                 
+                                                      div.avatar-group
+                                                         div.avatar.border-white(class='border-[0.125rem]')
+                                                            div.w-8
+                                                               img(src='../../assets/images/user-app/22.png' alt='avatar')
+                                                         div.avatar.border-white(class='border-[0.125rem]')
+                                                            div.w-8
+                                                               img(src='../../assets/images/user-app/23.png' alt='avatar')
+                                                   badge.bg-secondary-extralight.text-secondary.badge-sm.rounded-5.w-max Inprogress  
+                                          div.col-span-4(class="xl:col-span-6 2md:col-span-12")
+                                             div.border.border-border-light.border-dashed.p-4.flex.flex-col.gap-5 
+                                                div.flex.items-start.justify-between 
+                                                   span(class="bg-warning p-3 grid place-content-center rounded-full")
+                                                      i.fa-solid.fa-database(class="w-6 h-6 text-white")
+                                                   span.text-content3.text-2xs 12hr Ago 
+                                                div.flex.flex-col.gap-2 
+                                                   div 
+                                                      p.text-title.text-sm.font-semibold.mb-1 Web Development 
+                                                      p.text-content3.text-2xs.truncate Create new features and upgrade infrastructure to meet the needs of projects
+                                                   div   
+                                                      p.text-content3.text-xs Team Members                                                                 
+                                                      div.avatar-group
+                                                         div.avatar.border-white(class='border-[0.125rem]')
+                                                            div.w-8
+                                                               img(src='../../assets/images/user-app/12.png' alt='avatar')
+                                                         div.avatar.border-white(class='border-[0.125rem]')
+                                                            div.w-8
+                                                               img(src='../../assets/images/user-app/6.png' alt='avatar')
+                                                         div.avatar.border-white(class='border-[0.125rem]')
+                                                            div.w-8
+                                                               img(src='../../assets/images/user-app/20.png' alt='avatar')
+                                                         div.avatar.border-white(class='border-[0.125rem]')
+                                                            div.w-8
+                                                               img(src='../../assets/images/user-app/23.png' alt='avatar')
+                                                   badge.bg-secondary-extralight.text-secondary.badge-sm.rounded-5.w-max Inprogress  
+                                          div.col-span-4(class="xl:col-span-6 2md:col-span-12")
+                                             div.border.border-border-light.border-dashed.p-4.flex.flex-col.gap-5 
+                                                div.flex.items-start.justify-between 
+                                                   span(class="bg-success p-3 grid place-content-center rounded-full")
+                                                      i.fa-solid.fa-stethoscope(class="w-6 h-6 text-white")
+                                                   span.text-content3.text-2xs 7months Ago
+                                                div.flex.flex-col.gap-2 
+                                                   div 
+                                                      p.text-title.text-sm.font-semibold.mb-1 Health Club 
+                                                      p.text-content3.text-2xs.truncate Design health & care consulting website 
+                                                   div   
+                                                      p.text-content3.text-xs Team Members                                                                 
+                                                      div.avatar-group
+                                                         div.avatar.border-white(class='border-[0.125rem]')
+                                                            div.w-8
+                                                               img(src='../../assets/images/user-app/17.png' alt='avatar')
+                                                         div.avatar.border-white(class='border-[0.125rem]')
+                                                            div.w-8
+                                                               img(src='../../assets/images/user-app/18.png' alt='avatar')
+                                                   badge.bg-success-light.text-success.badge-sm.rounded-5.w-max Completed
+                                          div.col-span-4(class="xl:col-span-6 2md:col-span-12")
+                                             div.border.border-border-light.border-dashed.p-4.flex.flex-col.gap-5 
+                                                div.flex.items-start.justify-between 
+                                                   span(class="bg-dark p-3 grid place-content-center rounded-full")
+                                                      i.fa-brands.fa-html5(class="w-6 h-6 text-white")
+                                                   span.text-content3.text-2xs 9months Ago
+                                                div.flex.flex-col.gap-2 
+                                                   div 
+                                                      p.text-title.text-sm.font-semibold.mb-1 Landing Page 
+                                                      p.text-content3.text-2xs.truncate Design admin  landing page for ecommerce website 
+                                                   div   
+                                                      p.text-content3.text-xs Team Members                                                                 
+                                                      div.avatar-group
+                                                         div.avatar.border-white(class='border-[0.125rem]')
+                                                            div.w-8
+                                                               img(src='../../assets/images/user-app/22.png' alt='avatar')                                                                                                                                                               
+                                                   badge.bg-success-light.text-success.badge-sm.rounded-5.w-max Completed 
+                                          div.col-span-4(class="xl:col-span-6 2md:col-span-12")
+                                             div.border.border-border-light.border-dashed.p-4.flex.flex-col.gap-5 
+                                                div.flex.items-start.justify-between 
+                                                   span(class="bg-secondary p-3 grid place-content-center rounded-full")
+                                                      i.fa-solid.fa-baseball-bat-ball(class="w-6 h-6 text-white")
+                                                   span.text-content3.text-2xs 10months Ago
+                                                div.flex.flex-col.gap-2 
+                                                   div 
+                                                      p.text-title.text-sm.font-semibold.mb-1 Sports Club 
+                                                      p.text-content3.text-2xs.truncate Design sports website 
+                                                   div   
+                                                      p.text-content3.text-xs Team Members                                                                 
+                                                      div.avatar-group
+                                                         div.avatar.border-white(class='border-[0.125rem]')
+                                                            div.w-8
+                                                               img(src='../../assets/images/user-app/15.png' alt='avatar')
+                                                         div.avatar.border-white(class='border-[0.125rem]')
+                                                            div.w-8
+                                                               img(src='../../assets/images/user-app/12.png' alt='avatar')
+                                                   badge.bg-success-light.text-success.badge-sm.rounded-5.w-max Completed
+                                          div.col-span-4(class="xl:col-span-6 2md:col-span-12")
+                                             div.border.border-border-light.border-dashed.p-4.flex.flex-col.gap-5 
+                                                div.flex.items-start.justify-between 
+                                                   span(class="bg-info p-3 grid place-content-center rounded-full")
+                                                      i.fa-solid.fa-file-lines(class="w-6 h-6 text-white")
+                                                   span.text-content3.text-2xs 11months Ago
+                                                div.flex.flex-col.gap-2 
+                                                   div 
+                                                      p.text-title.text-sm.font-semibold.mb-1 Document Page 
+                                                      p.text-content3.text-2xs.truncate Design admin document page for ecommerce website 
+                                                   div   
+                                                      p.text-content3.text-xs Team Members                                                                 
+                                                      div.avatar-group
+                                                         div.avatar.border-white(class='border-[0.125rem]')
+                                                            div.w-8
+                                                               img(src='../../assets/images/user-app/13.png' alt='avatar')                                                                                                                                                               
+                                                   badge.bg-success-light.text-success.badge-sm.rounded-5.w-max Completed  
+
+                              div(data-tabContent="2" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                                 div.flex.flex-col.gap-4 
+                                    div.flex.items-start.user-detail.gap-4(class="border-b border-border-light border-dashed last:border-none pb-5 last:pb-0 sm:flex-col")
+                                       div.grid.place-content-center.bg-gray-light.rounded-full.text-xl(class="h-16 min-w-[4rem]")
+                                          i.fa-brands.fa-html5(class="text-danger")
+                                       div.text-start
+                                          h5.text-title(class="font-semibold") Software Technology
+                                          p.text-content3(class="font-semibold text-xs") Senior Web Designer
+                                          span.text-content3(class="font-semibold text-xs") Working
+                                          ul.list-disc.pl-5.mt-2 
+                                             li.text-content3.text-xs To accommodate the requirements of projects and enterprises that are designing swiftly, add new features and upgrade infrastructure.
+                                             li.text-content3.text-xs Participate in all phases of agile software development, including design, implementation, and deployment.
+                                    div.flex.items-start.user-detail.gap-4(class="border-b border-border-light border-dashed last:border-none pb-5 last:pb-0 sm:flex-col")
+                                       div.grid.place-content-center.bg-gray-light.rounded-full.text-xl(class="h-16 min-w-[4rem]")
+                                          i.fa-brands.fa-codepen(class="text-info")
+                                       div.text-start
+                                          h5.text-title(class="font-semibold") Software Express
+                                          p.text-content3(class="font-semibold text-xs") Frontend Engineer        
+                                          span.text-content3(class="font-semibold text-xs") 2019 - 2021 / 2 yrs
+                                          ul.list-disc.pl-5.mt-2 
+                                             li.text-content3.text-xs Create new features and upgrade infrastructure to meet the needs of projects and businesses that are developing quickly.
+                                             li.text-content3.text-xs Work using agile development processes, following best practices, and seeking out opportunities for ongoing learning.
+                                             li.text-content3.text-xs Take the helm of new projects from conception to execution.
+                                             li.text-content3.text-xs Build highly scalable distributed systems that provide satisfying user experiences and quantifiable company growth by working across the entire stack.
+                                             li.text-content3.text-xs While upholding strict standards for the quality of the code and the smart design of the programme, ensure application performance, uptime, and scale.
+                                    div.flex.items-start.user-detail.gap-4(class="border-b border-border-light border-dashed last:border-none pb-5 last:pb-0 sm:flex-col")
+                                       div.grid.place-content-center.bg-gray-light.rounded-full.text-xl(class="h-16 min-w-[4rem]")
+                                          i.fa-solid.fa-code(class="text-primary")
+                                       div.text-start
+                                          h5.text-title(class="font-semibold") Technical Info
+                                          p.text-content3(class="font-semibold text-xs") Designer/developer in charge         
+                                          span.text-content3(class="font-semibold text-xs") 2016 - 2019 / 3 yrs
+                                          ul.list-disc.pl-5.mt-2 
+                                             li.text-content3.text-xs To accommodate the requirements of projects and enterprises that are designing swiftly, add new features and upgrade infrastructure.
+                                             li.text-content3.text-xs The performance, uptime, and scale of the application should be ensured while adhering to tight criteria for the calibre of the code and the clever design of the programme.                                                  
+                                    div.flex.items-start.user-detail.gap-4(class="border-b border-border-light border-dashed last:border-none pb-5 last:pb-0 sm:flex-col")
+                                       div.grid.place-content-center.bg-gray-light.rounded-full.text-xl(class="h-16 min-w-[4rem]")
+                                          i.fa-solid.fa-cubes(class="text-dark")
+                                       div.text-start
+                                          h5.text-title(class="font-semibold") Freelancer
+                                          p.text-content3(class="font-semibold text-xs") Fullstack Engineer        
+                                          span.text-content3(class="font-semibold text-xs") 2012 - 2016 / 4 yrs  
+                                          ul.list-disc.pl-5.mt-2 
+                                             li.text-content3.text-xs Take part in the design, execution, and deployment of all areas of agile software development.
+                                             li.text-content3.text-xs Use Slack, GitHub comments, papers, and frequent video conferencing to collaborate across time zones.
+                                             li.text-content3.text-xs Build end-to-end systems that are architected and guided for speed and size.
+                                             li.text-content3.text-xs Collaboration with talented back end engineers, front end engineers, and designers.
+
+                              div(data-tabContent="3" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+
+                                 div.flex.flex-col.gap-4(class="border-b border-border-light border-dashed last:border-none pb-5 last:pb-0 pt-5 first:pt-0")
+                                    div.flex.flex-col.gap-2
+                                       div.flex.items-center.gap-4.w-full
+                                          div.avatar.rounded-full(class="w-10 h-10")
+                                             img(src='../../assets/images/avatar/38.jpg' alt='')                                                      
+                                          div(class="w-[calc(100%_-_70px)]") 
+                                             p.text-title(class="font-semibold text-xs") Emayila Sidorshina
+                                             span.text-content3(class="font-semibold text-2xs") Desert
+                                    div
+                                       img(src='../../assets/images/user-app/bg-2.jpg' alt='' class="w-full h-60 sm:h-44")    
+                                    div.flex.items-center.gap-1
+                                       div.flex.flex-wrap.items-center.gap-2 
+                                          a(href="javascript:void(0)" class="text-content3 text-xs flex items-center gap-1")
+                                             i(data-feather="heart" class="w-5 h-5 stroke-content3") 
+                                             span(class="3sm:hidden leading-none") Likes
+                                          a(href="javascript:void(0)" class="text-content3 text-xs flex items-center gap-1")
+                                             i(data-feather="message-circle" class="w-5 h-5 stroke-content3") 
+                                             span(class="3sm:hidden leading-none") Comments
+                                          a(href="javascript:void(0)" class="text-content3 text-xs flex items-center gap-1")
+                                             i(data-feather="corner-up-right" class="w-5 h-5 stroke-content3") 
+                                             span(class="3sm:hidden leading-none") Share
+                                    div.flex.items-center.gap-1
+                                       div.avatar-group.-space-x-6.justify-center.items-center
+                                          div.avatar.border-white(class='border-[0.125rem]')
+                                             div.w-8
+                                                img(src='../../assets/images/user-app/20.png' alt='avatar')
+                                          div.avatar.border-white(class='border-[0.125rem]')
+                                             div.w-8
+                                                img(src='../../assets/images/user-app/21.png' alt='avatar')
+                                          div.avatar.placeholder.bg-gray-light.border-white(class='border-[0.125rem]')
+                                             div.w-8
+                                                span.text-xs.font-bold.text-title 26+ 
+                                       p.text-content3.text-xs Liked  
+                                          span(class="3sm:hidden") by birdie_hoeger
+                                    div
+                                       p.text-content3.text-xs(class="sm:line-clamp-4") He's being polite, but I want a change. Consider not throwing sociable kids Mr. Am overcame yourself. She may act totally hastily. My first smile is solid by things fanny. chuckled at how sophisticated Mr. Elegance was. While they eat at home, the sons want to. self-evaluation unsatiable imprudence a he at an. Be in a situation where the principle is perpetually offending allowance. Moreover, greater carriage securing is desired.
+
+                                 div.flex.flex-col.gap-4(class="border-b border-border-light border-dashed last:border-none pb-5 last:pb-0 pt-5 first:pt-0")
+                                    div.flex.flex-col.gap-2
+                                       div.flex.items-center.gap-4.w-full
+                                          div.avatar.rounded-full(class="w-10 h-10")
+                                             img(src='../../assets/images/avatar/38.jpg' alt='')                                                      
+                                          div(class="w-[calc(100%_-_70px)]") 
+                                             p.text-title(class="font-semibold text-xs") Emayila Sidorshina
+                                             span.text-content3(class="font-semibold text-2xs") Blue Ridge Mountain    
+                                    div
+                                       img(src='../../assets/images/user-app/24.jpeg' alt='' class="w-full h-60 sm:h-44")    
+                                    div.flex.items-center.gap-1
+                                       div.flex.flex-wrap.items-center.gap-2 
+                                          a(href="javascript:void(0)" class="text-content3 text-xs flex items-center gap-1")
+                                             i(data-feather="heart" class="w-5 h-5 stroke-content3") 
+                                             span(class="3sm:hidden leading-none") Likes
+                                          a(href="javascript:void(0)" class="text-content3 text-xs flex items-center gap-1")
+                                             i(data-feather="message-circle" class="w-5 h-5 stroke-content3") 
+                                             span(class="3sm:hidden leading-none") Comments 
+                                          a(href="javascript:void(0)" class="text-content3 text-xs flex items-center gap-1")
+                                             i(data-feather="corner-up-right" class="w-5 h-5 stroke-content3") 
+                                             span(class="3sm:hidden leading-none") Share
+                                    div.flex.items-center.gap-1
+                                       div.avatar-group.-space-x-6.justify-center.items-center
+                                          div.avatar.border-white(class='border-[0.125rem]')
+                                             div.w-8
+                                                img(src='../../assets/images/user-app/15.png' alt='avatar')
+                                          div.avatar.border-white(class='border-[0.125rem]')
+                                             div.w-8
+                                                img(src='../../assets/images/user-app/18.png' alt='avatar')
+                                          div.avatar.placeholder.bg-gray-light.border-white(class='border-[0.125rem]')
+                                             div.w-8
+                                                span.text-xs.font-bold.text-title 5+ 
+                                       p.text-content3.text-xs Liked  
+                                          span(class="3sm:hidden") by birdie_hoeger  
+                                    div
+                                       p.text-content3.text-xs(class="sm:line-clamp-4") Although he's being courteous, I want a change. Do not toss sociable children. Mr. Am triumphed against himself. She might behave rashly. My initial grin is genuine by things fanny. Mr. Elegance's sophistication made him chuckle. The sons want to eat dinner at home. He at a self-evaluation unsatiable imprudence. Be in a circumstance where the principle consistently violates the allowance. Additional carriage securing is also desired.
+
+                                 div.flex.flex-col.gap-4(class="border-b border-border-light border-dashed last:border-none pb-5 last:pb-0 pt-5 first:pt-0")
+                                    div.flex.flex-col.gap-2
+                                       div.flex.items-center.gap-4.w-full
+                                          div.avatar.rounded-full(class="w-10 h-10")
+                                             img(src='../../assets/images/avatar/38.jpg' alt='')                                                      
+                                          div(class="w-[calc(100%_-_70px)]") 
+                                             p.text-title(class="font-semibold text-xs") Emayila Sidorshina
+                                             span.text-content3(class="font-semibold text-2xs") Aesthetic 
+                                    div
+                                       img(src='../../assets/images/user-app/bg-1.jpg' alt='' class="w-full h-60 sm:h-44")    
+                                    div.flex.items-center.gap-1
+                                       div.flex.flex-wrap.items-center.gap-2 
+                                          a(href="javascript:void(0)" class="text-content3 text-xs flex items-center gap-1")
+                                             i(data-feather="heart" class="w-5 h-5 stroke-content3") 
+                                             span(class="3sm:hidden leading-none") Likes
+                                          a(href="javascript:void(0)" class="text-content3 text-xs flex items-center gap-1")
+                                             i(data-feather="message-circle" class="w-5 h-5 stroke-content3") 
+                                             span(class="3sm:hidden leading-none") Comments 
+                                          a(href="javascript:void(0)" class="text-content3 text-xs flex items-center gap-1")
+                                             i(data-feather="corner-up-right" class="w-5 h-5 stroke-content3") 
+                                             span(class="3sm:hidden leading-none") Share
+                                    div.flex.items-center.gap-1
+                                       div.avatar-group.-space-x-6.justify-center.items-center
+                                          div.avatar.border-white(class='border-[0.125rem]')
+                                             div.w-8
+                                                img(src='../../assets/images/user-app/23.png' alt='avatar')
+                                          div.avatar.border-white(class='border-[0.125rem]')
+                                             div.w-8
+                                                img(src='../../assets/images/user-app/14.png' alt='avatar')
+                                          div.avatar.placeholder.bg-gray-light.border-white(class='border-[0.125rem]')
+                                             div.w-8
+                                                span.text-xs.font-bold.text-title 15+ 
+                                       p.text-content3.text-xs Liked  
+                                          span(class="3sm:hidden") by birdie_hoeger  
+                                    div
+                                       p.text-content3.text-xs(class="sm:line-clamp-4") He's being polite, but I want a change. Social kids shouldn't be thrown out. Mr. Am won the battle with himself. She could act hastily. By things fanny, my initial grin is real. He laughed at the refinement of Mr. Elegance. It's their preference to eat dinner at home. He was being unsatisfactorily imprudent with himself. be in a situation where the allowance is consistently broken by the principle. Furthermore wanted is additional carriage securing.
+
+
+
+            // Page Body End  
+            +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+         include ../../components/customizer
+
+         //- Suggest modal
+         div.modal-main
+            input#suggest-modal(class="peer" name="suggest-modal" type='checkbox')
+            label.modal-overlay(class="peer-checked:block" for='suggest-modal')
+            div.modal.modal-center(class="peer-checked:opacity-100 peer-checked:visible w-full max-w-sm")
+               div.modal-body
+                  form.flex.flex-col.gap-4(class="!m-0")
+                     div.modal-img
+                        img(class="" src="../../assets/images/user-app/send-1.gif" alt="send" class="w-16")               
+                     h5.text-center.font-semibold Add team member or new ones
+                     div.search-box.relative
+                        input(class="border border-border-light rounded-5 w-full py-[11px] pl-[25px] pr-[55px]  text-xs font-semibold text-title" placeholder="Type to Search..." type="search")       
+                        +SVG_ICON("Search","xl:hidden w-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] stroke-title top-1/2 -translate-y-1/2 right-[25px] absolute")
+                        i(data-feather="x" class="search-close hidden cursor-pointer xl:block w-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] stroke-title top-1/2 -translate-y-1/2 right-[25px] absolute")
+                     ul.flex.flex-col.gap-3 
+                        li.flex.justify-between.items-center.suggest-friend
+                           div.flex.items-center.gap-2.w-full
+                              div.avatar.rounded-full(class="w-10 h-10")
+                                 img(src=`../../assets/images/user-app/17.png` alt=`user`)                                                      
+                              div(class="w-[calc(100%_-_52px)]") 
+                                 p.text-title(class="text-xs font-semibold") Gretchen Harvey
+                                 span.text-content3(class="font-semibold text-2xs") Web Developer
+                           a(href="javascript:void(0)").btn.btn-primary.btn-outline.p-1.group.suggest-btn
+                              +SVG_ICON("Profile", "w-4 h-4 stroke-primary group-hover:stroke-white") 
+                        li.flex.justify-between.items-center.suggest-friend
+                           div.flex.items-center.gap-2.w-full
+                              div.avatar.rounded-full(class="w-10 h-10")
+                                 img(src=`../../assets/images/user-app/16.png` alt=`user`)                                                      
+                              div(class="w-[calc(100%_-_52px)]") 
+                                 p.text-title(class="text-xs font-semibold") Raegan Corkery
+                                 span.text-content3(class="font-semibold text-2xs") Fullstack Developer
+                           a(href="javascript:void(0)").btn.btn-primary.btn-outline.p-1.group.suggest-btn
+                              +SVG_ICON("Profile", "w-4 h-4 stroke-primary group-hover:stroke-white") 
+                        li.flex.justify-between.items-center.suggest-friend
+                           div.flex.items-center.gap-2.w-full
+                              div.avatar.rounded-full(class="w-10 h-10")
+                                 img(src=`../../assets/images/user-app/21.png` alt=`user`)                                                      
+                              div(class="w-[calc(100%_-_52px)]") 
+                                 p.text-title(class="text-xs font-semibold") Josue Smith
+                                 span.text-content3(class="font-semibold text-2xs") Fullstack Developer
+                           a(href="javascript:void(0)").btn.btn-primary.btn-outline.p-1.group.suggest-btn
+                              +SVG_ICON("Profile", "w-4 h-4 stroke-primary group-hover:stroke-white") 
+                        li.flex.justify-between.items-center.suggest-friend
+                           div.flex.items-center.gap-2.w-full
+                              div.avatar.rounded-full(class="w-10 h-10")
+                                 img(src=`../../assets/images/user-app/18.png` alt=`user`)                                                      
+                              div(class="w-[calc(100%_-_52px)]") 
+                                 p.text-title(class="text-xs font-semibold") Abdul Volkman
+                                 span.text-content3(class="font-semibold text-2xs") Web Developer
+                           a(href="javascript:void(0)").btn.btn-primary.btn-outline.p-1.group.suggest-btn
+                              +SVG_ICON("Profile", "w-4 h-4 stroke-primary group-hover:stroke-white") 
+                     div(class="justify-end flex items-center gap-3")
+                        label(for="suggest-modal").btn.bg-gray-light.p-2.text-title Save                                
+                        label(for="suggest-modal").btn.bg-success.p-2.text-white Cancel                                
+
+         //- Add friends modal
+         div.modal-main
+            input#add-friend-modal(class="peer" name="add-friend-modal" type='checkbox')
+            label.modal-overlay(class="peer-checked:block" for='add-friend-modal')
+            div.modal.modal-center(class="peer-checked:opacity-100 peer-checked:visible w-full max-w-sm")
+               div.modal-body
+                  form.flex.flex-col.gap-4(class="!m-0")
+                     div.modal-img
+                        img(class="" src="../../assets/images/user-app/send-1.gif" alt="send" class="w-16") 
+                     h5.text-center.font-semibold Add team member or new ones
+                     div.search-box.relative
+                        input(class="border border-border-light rounded-5 w-full py-[11px] pl-[25px] pr-[55px]  text-xs font-semibold text-title" placeholder="Type to Search..." type="search")       
+                        +SVG_ICON("Search","xl:hidden w-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] stroke-title top-1/2 -translate-y-1/2 right-[25px] absolute")
+                        i(data-feather="x" class="search-close hidden cursor-pointer xl:block w-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] stroke-title top-1/2 -translate-y-1/2 right-[25px] absolute")
+                     ul.flex.flex-col.gap-3 
+                        li.flex.justify-between.items-center.add-friend
+                           div.flex.items-center.gap-2.w-full
+                              div.avatar.rounded-full(class="w-10 h-10")
+                                 img(src=`../../assets/images/user-app/14.png` alt=`user`)                                                      
+                              div(class="w-[calc(100%_-_52px)]") 
+                                 p.text-title(class="text-xs font-semibold") Tiana Baumbach
+                                 span.text-content3(class="font-semibold text-2xs") Web Designer
+                           a(href="javascript:void(0)").add-btn.btn.bg-gray-light.p-2  Add
+                        li.flex.justify-between.items-center.add-friend
+                           div.flex.items-center.gap-2.w-full
+                              div.avatar.rounded-full(class="w-10 h-10")
+                                 img(src=`../../assets/images/user-app/19.png` alt=`user`)                                                      
+                              div(class="w-[calc(100%_-_52px)]") 
+                                 p.text-title(class="text-xs font-semibold") Ally Kshlerin
+                                 span.text-content3(class="font-semibold text-2xs") Fullstack Developer
+                           a(href="javascript:void(0)").add-btn.btn.bg-gray-light.p-2  Add
+                        li.flex.justify-between.items-center.add-friend
+                           div.flex.items-center.gap-2.w-full
+                              div.avatar.rounded-full(class="w-10 h-10")
+                                 img(src=`../../assets/images/user-app/23.png` alt=`user`)                                                      
+                              div(class="w-[calc(100%_-_52px)]") 
+                                 p.text-title(class="text-xs font-semibold") Werner Barrows
+                                 span.text-content3(class="font-semibold text-2xs") Fullstack Developer
+                           a(href="javascript:void(0)").add-btn.btn.bg-gray-light.p-2  Add
+                        li.flex.justify-between.items-center.add-friend
+                           div.flex.items-center.gap-2.w-full
+                              div.avatar.rounded-full(class="w-10 h-10")
+                                 img(src=`../../assets/images/user-app/15.png` alt=`user`)                                                      
+                              div(class="w-[calc(100%_-_52px)]") 
+                                 p.text-title(class="text-xs font-semibold") Tiana Baumbach
+                                 span.text-content3(class="font-semibold text-2xs") Web Designer
+                           a(href="javascript:void(0)").add-btn.btn.bg-gray-light.p-2  Add
+                     div(class="justify-end flex items-center gap-3")
+                        label(for="add-friend-modal").btn.bg-gray-light.p-2.text-title Save                                
+                        label(for="add-friend-modal").btn.bg-secondary.p-2.text-white Cancel                               
+
+
+         //- Follow modal
+         div.modal-main
+            input#follow-modal(class="peer" name="follow-modal" type='checkbox')
+            label.modal-overlay(class="peer-checked:block" for='follow-modal')
+            div.modal.modal-center(class="peer-checked:opacity-100 peer-checked:visible w-full max-w-sm")
+               div.modal-body
+                  form.flex.flex-col.gap-4(class="!m-0")
+                     div.modal-img
+                        img(class="" src="../../assets/images/user-app/send-1.gif" alt="send" class="w-16")
+                     h5.text-center.font-semibold Follow team member or new ones
+                     div.search-box.relative
+                        input(class="border border-border-light rounded-5 w-full py-[11px] pl-[25px] pr-[55px]  text-xs font-semibold text-title" placeholder="Type to Search..." type="search")       
+                        +SVG_ICON("Search","xl:hidden w-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] stroke-title top-1/2 -translate-y-1/2 right-[25px] absolute")
+                        i(data-feather="x" class="search-close hidden cursor-pointer xl:block w-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] stroke-title top-1/2 -translate-y-1/2 right-[25px] absolute")
+                     ul.flex.flex-col.gap-3 
+                        li.flex.justify-between.items-center.follow-friend
+                           div.flex.items-center.gap-2.w-full
+                              div.avatar.rounded-full(class="w-10 h-10")
+                                 img(src=`../../assets/images/user-app/20.png` alt=`user`)                                                      
+                              div(class="w-[calc(100%_-_52px)]") 
+                                 p.text-title(class="text-xs font-semibold") Patricia Kulas
+                                 span.text-content3(class="font-semibold text-2xs") Fullstack Developer
+                           a(href="javascript:void(0)").follow-btn.btn.bg-gray-light.p-2  Follow
+                        li.flex.justify-between.items-center.follow-friend
+                           div.flex.items-center.gap-2.w-full
+                              div.avatar.rounded-full(class="w-10 h-10")
+                                 img(src=`../../assets/images/user-app/21.png` alt=`user`)                                                      
+                              div(class="w-[calc(100%_-_52px)]") 
+                                 p.text-title(class="text-xs font-semibold") Josue Smith
+                                 span.text-content3(class="font-semibold text-2xs") Fullstack Developer
+                           a(href="javascript:void(0)").follow-btn.btn.bg-gray-light.p-2  Follow
+                        li.flex.justify-between.items-center.follow-friend
+                           div.flex.items-center.gap-2.w-full
+                              div.avatar.rounded-full(class="w-10 h-10")
+                                 img(src=`../../assets/images/user-app/16.png` alt=`user`)                                                      
+                              div(class="w-[calc(100%_-_52px)]") 
+                                 p.text-title(class="text-xs font-semibold") Raegan Corkery
+                                 span.text-content3(class="font-semibold text-2xs") Fullstack Developer
+                           a(href="javascript:void(0)").follow-btn.btn.bg-gray-light.p-2  Follow
+                        li.flex.justify-between.items-center.follow-friend
+                           div.flex.items-center.gap-2.w-full
+                              div.avatar.rounded-full(class="w-10 h-10")
+                                 img(src=`../../assets/images/user-app/18.png` alt=`user`)                                                      
+                              div(class="w-[calc(100%_-_52px)]") 
+                                 p.text-title(class="text-xs font-semibold") Abdul Volkman
+                                 span.text-content3(class="font-semibold text-2xs") Web Developer
+                           a(href="javascript:void(0)").follow-btn.btn.bg-gray-light.p-2  Follow                     
+                     div(class="justify-end flex items-center gap-3")
+                        label(for="follow-modal").btn.bg-gray-light.p-2.text-title Save                                
+                        label(for="follow-modal").btn.bg-dark.p-2.text-white Cancel                                
+
+
+   include ../../layout/footer-files

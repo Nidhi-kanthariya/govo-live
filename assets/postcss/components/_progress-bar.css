@@ -1,0 +1,50 @@
+/*=====================
+    Progress Bar CSS
+  ==========================*/
+@layer components {
+    .progress-bar {
+      @apply h-2.5 w-full bg-gray-light rounded-full;
+
+      div {
+        @apply h-2.5 rounded-full;
+      }
+
+    &.multi-bar {
+      div {
+        @apply first:rounded-r-none last:rounded-l-none;
+      }
+    }
+
+    &.progress-sm {
+      @apply h-1.5 md:h-1;
+
+      div {
+        @apply h-1.5 md:h-1;
+      }
+    }
+
+    &.progress-md {
+      @apply h-2.5 md:h-2;
+
+      div {
+        @apply h-2.5 md:h-2;
+      }
+    }
+
+    &.progress-lg {
+      @apply h-4 md:h-3;
+
+      div {
+        @apply h-4 md:h-3;
+      }
+    }
+
+    &.progress-xl {
+      @apply h-6 md:h-4;
+
+      div {
+        @apply h-6 md:h-4;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+//- ========================
+//- Checkout Table
+//- =======================
+
+table.table.equal-space
+    thead 
+        tr 
+            each head in CHECKOUT_TABLE.header
+                th= head
+    tbody
+        each bodyData in CHECKOUT_TABLE.body
+            tr
+                td
+                    img(class="w-16 h-14 rounded-5" src=`../../assets/images/ecommerce/${bodyData.product}` alt=`${bodyData.product}`) 
+                td(class="min-w-[158px]")
+                    div
+                        h4(class="text-xs font-semibold text-title")=bodyData.productDetail
+                        span(class="block mt-1 font-semibold text-2xs text-content")=bodyData.subDetail 
+                td(class="min-w-[.625rem]")=bodyData.price   
+        tr 
+            td(class="font-bold text-xs" colspan="2") Sub Total :
+            td(class="font-bold text-xs text-end") $851.00 
+        tr  
+            td(class="text-xs" colspan="2") Discount :
+            td(class="text-content3 text-xs text-end") -$50.00
+        tr  
+            td(class="text-xs" colspan="2") Shipping Charge :
+            td(class="text-content3 text-xs text-end") -$25.99  
+        tr  
+            td(class="text-xs" colspan="2") Tax :
+            td(class="text-content3 text-xs text-end") -$12.59  
+        tr  
+            td(class="font-bold text-xs" colspan="2") Total (USD) :
+            td(class="font-bold text-xs text-end") $787.6 
+            
+ 
+
+        
+            
+            
+                

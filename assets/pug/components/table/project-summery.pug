@@ -1,0 +1,26 @@
+//- ========================
+//-  Project Summery 
+//- =======================
+table.table.equal-space
+   thead 
+      tr 
+         each head in PROJECT_SUMMERY.header
+            th= head
+   tbody
+      each bodyData in PROJECT_SUMMERY.body
+         tr
+            td(class="min-w-[60px]")= bodyData.id
+            td(class="min-w-[148px]")= bodyData.name
+            td(class="min-w-[100px]")
+               div.avatar-group.-space-x-5(class="justify-start")
+                  each avatarBox in bodyData.team
+                     div.avatar(class="w-[35px] h-[35px] 4xl:w-[34px] 4xl:h-[34px] lg:w-[35px] lg:h-[35px] xl3:w-[28px] xl3:h-[28px] border-[2px] border-white")
+                        div
+                           img(src=`../../assets/images/avatar/${avatarBox}.jpg` alt="avatar") 
+                  if(bodyData.placeholder)
+                     div.avatar.placeholder(class="w-[35px] h-[35px] 4xl:w-[34px] 4xl:h-[34px] lg:w-[35px] lg:h-[35px] xl3:w-[28px] xl3:h-[28px] border-[2px] bg-primary border-white")
+                        div
+                           span(class="text-3xs font-bold text-white")= `${bodyData.placeholder}+` 
+            td(class="min-w-[100px]")= `$${bodyData.amount}`
+            td(class="min-w-[115px]")= bodyData.status 
+            td(class=`min-w-[50px] text-${bodyData.statusCode}`)= bodyData.payment 

@@ -1,0 +1,19 @@
+//- =====================
+//-  Breadcrumb 
+//- =====================
+mixin breadcrumb-3(items,breadcrumbStyle,iconName)
+   -var itemGet=`${items}`;
+   -var breadcrumbItem= itemGet.split(",");
+   div(class=`breadcrumb ${breadcrumbStyle}`)
+      nav
+         ol.flex.flex-wrap.items-center.breadcrumb-list
+            li.breadcrumb-items
+               a(href="javascript:void(0)")
+                  +SVG_ICON("Home","w-4 h-4 stroke-primary") 
+            each breadcrumbData , index in breadcrumbItem
+               li.px-2 
+                  span /
+               li.breadcrumb-items.capitalize.font-light(class=`${(index === breadcrumbItem.length - 1 ?'active':'')}`)
+                  a(href="javascript:void(0)")
+                     +SVG_ICON(`${(index === breadcrumbItem.length - 1 ?'Document':'Folder')}`,"w-4 h-4 stroke-primary")
+                  =breadcrumbData  

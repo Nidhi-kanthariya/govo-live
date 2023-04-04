@@ -1,0 +1,131 @@
+/*=====================
+    tab CSS
+  ==========================*/
+
+@layer components {
+  .tab {
+    @apply text-gray-500 relative py-0 px-1 text-xs cursor-pointer;
+
+    &-active {
+      @apply text-primary font-extrabold;
+      svg {
+        @apply stroke-primary;
+      }
+    }
+    &.rounded-bg {
+      @apply rounded-3xl py-[0.3rem] px-[0.5rem];
+
+      &.tab-active {
+        @apply bg-info text-white;
+      }
+    }
+  }
+
+  .tabs {
+    @apply flex gap-1;
+
+    .tab {
+      @apply flex flex-col gap-1 justify-center items-center;
+      &.tabs-bordered {
+        @apply transition-all border-b border-border-light py-2 px-3;
+
+        &.tab-active {
+          @apply border-b-2 border-primary text-primary;
+          &.warning-border {
+            @apply border-warning text-warning;
+          }
+          &.danger-border {
+            @apply border-danger text-danger;
+          }
+        }
+
+        &.tabs-bordered-bg {
+          @apply hover:bg-primary-light hover:border-b-2 hover:border-primary hover:text-primary;
+
+          &.secondary-bg {
+            @apply hover:bg-secondary-extralight hover:border-secondary hover:text-secondary;
+            &.tab-active {
+              @apply bg-secondary-extralight text-secondary border-secondary;
+              svg {
+                @apply stroke-secondary;
+              }
+            }
+          }
+          &.tab-active {
+            @apply bg-primary-light;
+          }
+        }
+      }
+
+      &.tabs-boxed {
+        @apply bg-transparent p-2;
+
+        &.tab-active {
+          @apply text-white bg-primary rounded;
+          &.secondary-boxed {
+            @apply bg-secondary;
+          }
+          &.success-boxed {
+            @apply bg-success;
+          }
+        }
+      }
+
+      &.tabs-vertical {
+        @apply transition-all border-r border-border-light p-2 sm:border-r-0 sm:border-b;
+
+        &.tab-active {
+          @apply border-r-2 border-primary text-primary sm:border-r-0 sm:border-b-2;
+        }
+      }
+
+      &.product-tab {
+        @apply bg-primary-light border-none text-title items-center flex gap-2 flex-row p-4;
+        svg {
+          @apply p-2 bg-primary rounded-full text-white w-4 h-4;
+        }
+        &.tab-active {
+          @apply bg-primary-extralight text-primary font-semibold;
+        }
+      }
+    }
+  }
+}
+
+.tab-lifted {
+  &.tab-active {
+    @apply bg-white-light dark:bg-transparent;
+  }
+}
+
+.tabs-content {
+  @apply z-[0];
+
+  .tab-pan {
+    @apply mt-[-0.3125rem] hidden pt-[0.9375rem] text-start;
+
+    &.active {
+      @apply block bg-white-light dark:bg-transparent;
+    }
+
+    &.fade {
+      @apply transition-opacity;
+    }
+
+    &.show {
+      @apply opacity-100;
+    }
+  }
+
+  &.tabs-content-px-0 {
+    .tab-pan {
+      @apply px-0;
+    }
+  }
+
+  .copyParent {
+    code {
+      @apply text-[0.75rem];
+    }
+  }
+}

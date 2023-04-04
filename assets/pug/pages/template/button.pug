@@ -1,0 +1,417 @@
+//- sidebar
+-var sidebar = true;
+
+//- feathet
+-var feather= true;
+
+//- customSelect
+-var customSelect= true;
+
+//- customizer
+-var customizer=true;
+
+//- prism
+-var prism=true;
+
+//- Breadcrumbs
+-var pageTitle="Button";
+-var breadcrumb=['Ui Kits','Button'];
+
+//- json
+include ../../data/all-data
+
+//- mixin
+include ../../mixin/mixin
+
+doctype html
+html(lang='en')  
+   include ../../layout/header-files 
+   body(dir="ltr" class="unique-skin") 
+      main.page-wrapper
+         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+            include ../../layout/header/header     
+            // Sidebar Start 
+            div.page-sidebar.sidebar-dark.unique-sidebar
+               include ../../layout/unique
+            // Sidebar End 
+
+            // Page Body Start 
+            div.page-body
+               div.grid.grid-cols-12.gap-card-gap
+                  div.col-span-6(class="2md:col-span-12") 
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Buttons
+                              p Use  
+                                 strong .btn 
+                                 |  class to add btn.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.gap-2 
+                                    button.btn.btn-primary.text-white(class="hover:-translate-y-1 hover:transition-all hover:ease-in-out") Primary
+                                    button.btn.btn-secondary.text-white(class="hover:-translate-y-1 hover:transition-all hover:ease-in-out") Secondary
+                                    button.btn.btn-info.text-white(class="hover:-translate-y-1 hover:transition-all hover:ease-in-out") Info
+                                    button.btn.btn-success.text-white(class="hover:-translate-y-1 hover:transition-all hover:ease-in-out") Success
+                                    button.btn.btn-warning.text-white(class="hover:-translate-y-1 hover:transition-all hover:ease-in-out") Warning
+                                    button.btn.btn-danger.text-white(class="hover:-translate-y-1 hover:transition-all hover:ease-in-out") Danger
+                                    button.btn.btn-light.text-title(class="hover:-translate-y-1 hover:transition-all hover:ease-in-out") Light 
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap gap-2"&gt; 
+                                       |    &lt;button class="text-white btn btn-primary hover:-translate-y-1 hover:transition-all hover:ease-in-out"&gt;Primary&lt;/button&gt; 
+                                       |    &lt;button class="text-white btn btn-secondary hover:-translate-y-1 hover:transition-all hover:ease-in-out"&gt;Secondary&lt;/button&gt;
+                                       |    &lt;button class="text-white btn btn-info hover:-translate-y-1 hover:transition-all hover:ease-in-out"&gt;Info&lt;/button&gt; 
+                                       |    &lt;button class="text-white btn btn-success hover:-translate-y-1 hover:transition-all hover:ease-in-out"&gt;Success&lt;/button&gt; 
+                                       |    &lt;button class="text-white btn btn-warning hover:-translate-y-1 hover:transition-all hover:ease-in-out"&gt;Warning&lt;/button&gt; 
+                                       |    &lt;button class="text-white btn btn-danger hover:-translate-y-1 hover:transition-all hover:ease-in-out"&gt;Danger&lt;/button&gt;
+                                       |    &lt;button class="btn btn-light text-title"&gt;Light&lt;/button&gt; 
+                                       |&lt;/div&gt; 
+                  div.col-span-6(class="2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Buttons Active
+                              p To set button active, you can use  
+                                 strong .btn-active  
+                                 |  class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.gap-2 
+                                    button.btn.btn-active.btn-primary.text-white(class="hover:-translate-y-1 hover:transition-all hover:ease-in-out") Primary
+                                    button.btn.btn-active.btn-secondary.text-white(class="hover:-translate-y-1 hover:transition-all hover:ease-in-out") Secondary
+                                    button.btn.btn-active.btn-info.text-white(class="hover:-translate-y-1 hover:transition-all hover:ease-in-out") Info
+                                    button.btn.btn-active.btn-success.text-white(class="hover:-translate-y-1 hover:transition-all hover:ease-in-out") Success
+                                    button.btn.btn-active.btn-warning.text-white(class="hover:-translate-y-1 hover:transition-all hover:ease-in-out") Warning
+                                    button.btn.btn-active.btn-danger.text-white(class="hover:-translate-y-1 hover:transition-all hover:ease-in-out") Danger
+                                    button.btn.btn-active.btn-light.text-title(class="hover:-translate-y-1 hover:transition-all hover:ease-in-out") Light
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap gap-2"&gt; 
+                                       |    &lt;button class="text-white btn btn-active btn-primary hover:-translate-y-1 hover:transition-all hover:ease-in-out"&gt;Primary&lt;/button&gt; 
+                                       |    &lt;button class="text-white btn btn-active btn-secondary hover:-translate-y-1 hover:transition-all hover:ease-in-out"&gt;Secondary&lt;/button&gt;
+                                       |    &lt;button class="text-white btn btn-active btn-info hover:-translate-y-1 hover:transition-all hover:ease-in-out"&gt;Info&lt;/button&gt; 
+                                       |    &lt;button class="text-white btn btn-active btn-success hover:-translate-y-1 hover:transition-all hover:ease-in-out"&gt;Success&lt;/button&gt; 
+                                       |    &lt;button class="text-white btn btn-active btn-warning hover:-translate-y-1 hover:transition-all hover:ease-in-out"&gt;Warning&lt;/button&gt; 
+                                       |    &lt;button class="text-white btn btn-active btn-danger hover:-translate-y-1 hover:transition-all hover:ease-in-out"&gt;Danger&lt;/button&gt;
+                                       |    &lt;button class="btn btn-active btn-light hover:-translate-y-1 hover:transition-all hover:ease-in-out text-title"&gt;Light&lt;/button&gt; 
+                                       |&lt;/div&gt;
+                  div.col-span-6(class="2md:col-span-12") 
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Buttons Outline                                       
+                              p Use  
+                                 strong .btn-outline   
+                                 |  class to set the button outline.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.gap-2 
+                                    button.btn.btn-outline.btn-primary Primary
+                                    button.btn.btn-outline.btn-secondary Secondary
+                                    button.btn.btn-outline.btn-info Info
+                                    button.btn.btn-outline.btn-success Success
+                                    button.btn.btn-outline.btn-warning Warning
+                                    button.btn.btn-outline.btn-danger Danger
+                                    button.btn.btn-outline.btn-light Light
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap gap-2"&gt;  
+                                       |    &lt;button class="btn btn-outline btn-primary"&gt;Primary&lt;/button&gt; 
+                                       |    &lt;button class="btn btn-outline btn-secondary"&gt;Secondary&lt;/button&gt;
+                                       |    &lt;button class="btn btn-outline btn-info"&gt;Info&lt;/button&gt; 
+                                       |    &lt;button class="btn btn-outline btn-success"&gt;Success&lt;/button&gt; 
+                                       |    &lt;button class="btn btn-outline btn-warning"&gt;Warning&lt;/button&gt; 
+                                       |    &lt;button class="btn btn-outline btn-danger"&gt;Danger&lt;/button&gt;
+                                       |    &lt;button class="btn btn-outline btn-light"&gt;Light&lt;/button&gt; 
+                                       |&lt;/div&gt;
+                  div.col-span-6(class="2md:col-span-12") 
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border 
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Buttons using HTML tags
+                              p Use the  
+                                 strong .btn
+                                 |  class to set  
+                                 strong  input, button, link, etc.
+                                 | as a button.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.gap-2
+                                    a.btn.btn-primary.text-white(href="javascript:void(0)" role="button") Link
+                                    button.btn.btn-secondary.text-white Button 
+                                    input.btn.btn-info.text-white(type="submit" value="Submit") 
+                                    input.btn.btn-success.text-white(type="button" value="Button")  
+                                    input.btn.btn-warning.text-white(type="reset" value="Reset")
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap gap-2"&gt; 
+                                       |    &lt;a class="text-white btn btn-primary" href="javascript:void(0)" role="button"&gt;Link&lt;/a&gt; 
+                                       |    &lt;button class="text-white btn btn-secondary"&gt;Button&lt;/button&gt;
+                                       |    &lt;input class="text-white btn btn-info" type="submit" value="Submit"&gt;
+                                       |    &lt;input class="text-white btn btn-success" type="button" value="Button"&gt;
+                                       |    &lt;input class="text-white btn btn-warning" type="reset" value="Reset"&gt;
+                                       |&lt;/div&gt;
+                  div.col-span-6(class="2md:col-span-12")  
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border 
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Buttons Sizes
+                              p To set the button size, you can use  
+                                 strong .btn-*
+                                 |  class. ie. 
+                                 strong  xs, sm, md, lg.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.items-center.gap-2
+                                    button.btn.btn-outline.btn-primary.btn-lg.text-primary Large
+                                    button.btn.btn-outline.btn-primary.btn-md.text-primary Medium
+                                    button.btn.btn-outline.btn-primary.btn-sm.text-primary Small
+                                    button.btn.btn-outline.btn-primary.btn-xs.text-primary Ex-small 
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap gap-2"&gt; 
+                                       |    &lt;button class="btn btn-outline btn-success btn-lg.text-primary"&gt;Large&lt;/button&gt;
+                                       |    &lt;button class="btn btn-outline btn-info btn-md.text-primary"&gt;Medium&lt;/button&gt;
+                                       |    &lt;button class="btn btn-outline btn-secondary btn-sm.text-primary"&gt;Small&lt;/button&gt;
+                                       |    &lt;button class="btn btn-outline btn-primary btn-xs.text-primary"&gt;Ex-small&lt;/button&gt; 
+                                       |&lt;/div&gt;
+                  div.col-span-6(class="2md:col-span-12")  
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border 
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Buttons Shape 
+                              p Use  
+                                 strong .btn-*                            
+                                 |  class to set the shape of the button. ie.
+                                 strong  square, rounded.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.gap-2.text-white
+                                    button.btn.btn-warning.btn-rounded.h-14.w-14 
+                                       i(data-feather="x" class="w-4 h-4 stroke-white")
+                                    button.btn.btn-outline.btn-warning.btn-rounded.h-14.w-14.group
+                                       i(data-feather="x" class="w-4 h-4 stroke-warning group-hover:stroke-white")
+                                    button.btn.btn-success.btn-square.h-14.w-14
+                                       i(data-feather="x" class="w-4 h-4 stroke-white")
+                                    button.btn.btn-outline.btn-success.btn-square.h-14.w-14.group
+                                       i(data-feather="x" class="w-4 h-4 stroke-success group-hover:stroke-white")
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap gap-2"&gt; 
+                                       |    &lt;button class="btn btn-warning btn-rounded h-14 w-14"&gt; &lt;i class="w-4 h-4 stroke-white"&gt; &lt;/i&gt;  &lt;/button&gt; 
+                                       |    &lt;button class="btn btn-outline btn-warning btn-rounded h-14 w-14"&gt; &lt;i class="w-4 h-4 stroke-warning group-hover:stroke-white"&gt; &lt;/i&gt;  &lt;/button&gt;
+                                       |    &lt;button class="btn btn-success btn-square h-14 w-14"&gt; &lt;i class="w-4 h-4 stroke-white"&gt; &lt;/i&gt;  &lt;/button&gt;
+                                       |    &lt;button class="btn btn-outline btn-success btn-square h-14 w-14"&gt; &lt;i class="w-4 h-4 stroke-success group-hover:stroke-white"&gt; &lt;/i&gt;  &lt;/button&gt;
+                                       |&lt;/div&gt;
+                  div.col-span-6(class="2md:col-span-12")  
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border 
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Buttons Disabled 
+                              p use  
+                                 strong .btn-disabled 
+                                 |or 
+                                 strong disabled="disabled"
+                                 |  class to disable the button.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.gap-2
+                                    button.btn.btn-primary(disabled="disabled") Disabled attribute
+                                    button.btn.btn-secondary.btn-disabled.cursor-auto Disabled class
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap gap-2"&gt; 
+                                       |    &lt;button class="btn btn-primary" disabled="disabled"&gt;disabled attribute&lt;/button&gt; 
+                                       |    &lt;button class="cursor-auto btn btn-secondary btn-disabled"&gt;disabled class&lt;/button&gt;
+                                       |&lt;/div&gt;
+                  div.col-span-6(class="2md:col-span-12")  
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border 
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Buttons with icons 
+                              p Set the icon with button using 
+                                 strong .btn 
+                                 |  class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.gap-2
+                                    button.btn.btn-secondary.text-white.flex.justify-center.items-center.gap-2
+                                       +SVG_ICON("Heart","w-[1.125rem] h-[1.125rem] stroke-white") 
+                                       |  Likes
+                                    button.btn.btn-secondary.text-white.flex.justify-center.items-center.gap-2
+                                       |   Wishlist   
+                                       +SVG_ICON("Heart","w-[1.125rem] h-[1.125rem] stroke-white")
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap gap-2"&gt; 
+                                       |    &lt;button class="flex items-center justify-center gap-2 text-white btn btn-secondary"&gt;
+                                       |       +SVG_ICON("Heart","w-[1.125rem] h-[1.125rem] stroke-white")Likes
+                                       |    &lt;/button&gt; 
+                                       |    &lt;button class="flex items-center justify-center gap-2 text-white btn btn-secondary"&gt;
+                                       |       +SVG_ICON("Heart","w-[1.125rem] h-[1.125rem] stroke-white")Wishlist
+                                       |    &lt;/button&gt;
+                                       |&lt;/div&gt;
+                  div.col-span-4(class="2xl:col-span-6 2md:col-span-12") 
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border 
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Buttons with loader
+                              p Use loader with button.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.gap-2
+                                    button.btn.btn-primary
+                                       div(role='status')
+                                          svg.w-5.h-5.text-gray-200.animate-spin.fill-primary(aria-hidden='true' viewBox='0 0 100 101' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                             path(d='M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z' fill='currentColor')
+                                             path(d='M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z' fill='currentFill')
+                                          span.sr-only
+                                    button.btn.btn-primary.flex.items-center.text-white
+                                       div(role='status')
+                                          svg.mr-2.w-5.h-5.text-gray-200.animate-spin.fill-primary(aria-hidden='true' viewBox='0 0 100 101' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                             path(d='M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z' fill='currentColor')
+                                             path(d='M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z' fill='currentFill')
+                                          span.sr-only
+                                       | loading
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap gap-2"&gt;
+                                       |    &lt;button class="btn btn-primary"&gt;
+                                       |      &lt;div role="status"&gt;
+                                       |        &lt;svg class="w-5 h-5 text-gray-200 animate-spin fill-primary"&gt;&lt;/svg&gt;
+                                       |        &lt;span class="sr-only"&gt;&lt;/span&gt;
+                                       |      &lt;/div&gt;
+                                       |    &lt;/button&gt;
+                                       |    &lt;button class="btn btn-success btn-square"&gt;
+                                       |      &lt;div role="status"&gt;
+                                       |        &lt;svg class="w-5 h-5 mr-2 text-gray-200 animate-spin fill-primary"&gt;&lt;/svg&gt;
+                                       |        &lt;span class="sr-only"&gt;&lt;/span&gt;
+                                       |      &lt;/div&gt;
+                                       |    &lt;/button&gt;
+                                       |&lt;/div&gt;
+                  div.col-span-4(class="2xl:col-span-6 2md:col-span-12") 
+                     div.card.tabs 
+                        div.card-header.pb-2.header-bottom-border 
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Buttons block 
+                              p Set the button as a block using  
+                                 strong .block 
+                                 | class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.gap-2
+                                    button.btn.btn-primary.block.w-full.text-white Button block
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap gap-2"&gt;
+                                       |    &lt;button class="block w-full text-white btn btn-primary"&gt;Button block&lt;/button&gt;
+                                       |&lt;/div&gt;
+                  div.col-span-4(class="2xl:col-span-6 2md:col-span-12")
+                     div.card.tabs 
+                        div.card-header.pb-2.header-bottom-border 
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Buttons group
+                              p To set the group of button you can use 
+                                 strong .btn 
+                                 |   class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.gap-2
+                                    div.inline-flex.rounded-none.flex-wrap
+                                       button.py-2.px-3.text-sm.font-medium.text-white.bg-primary.rounded-none.border.border-gray-200(class='hover:bg-primary hover:text-white focus:text-white focus:bg-primary')
+                                          | Profile
+                                       button.py-2.px-3.text-sm.font-medium.text-gray-900.bg-white.rounded-none.border-t.border-b.border-gray-200(class='hover:bg-primary hover:text-white focus:text-white focus:bg-primary')
+                                          | Setting
+                                       button.py-2.px-3.text-sm.font-medium.text-gray-900.bg-white.rounded-none.border.border-gray-200(class='hover:bg-primary hover:text-white focus:text-white focus:bg-primary')
+                                          | Message
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap gap-2"&gt;
+                                       |    &lt;button class="px-3 py-2 text-sm font-medium text-white border border-gray-200 rounded-none bg-primary hover:bg-primary hover:text-white focus:text-white focus:bg-primary"&gt;Profile&lt;/button&gt;
+                                       |    &lt;button class="px-3 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-none hover:bg-primary hover:text-white focus:text-white focus:bg-primary"&gt;Setting&lt;/button&gt;
+                                       |    &lt;button class="px-3 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-none hover:bg-primary hover:text-white focus:text-white focus:bg-primary"&gt;Message&lt;/button&gt;
+                                       |&lt;/div&gt;  
+            // Page Body End 
+            +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+      include ../../components/customizer
+
+   include ../../layout/footer-files

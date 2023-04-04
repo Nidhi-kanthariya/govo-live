@@ -1,0 +1,908 @@
+//- sidebar
+-var sidebar = true;
+
+//- feathet
+-var feather= true;
+
+//- customSelect
+-var customSelect= true;
+
+//- customizer
+-var customizer=true;
+
+//- prism
+-var prism=true;
+
+//- Breadcrumbs
+-var pageTitle="Modal";
+-var breadcrumb=['Ui Kits','Modal'];
+
+//- json
+include ../../data/all-data
+
+//- mixin
+include ../../mixin/mixin
+
+doctype html
+html(lang='en')  
+   include ../../layout/header-files 
+   body(dir="ltr" class="unique-skin") 
+      main.page-wrapper
+         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+            include ../../layout/header/header     
+            // Sidebar Start
+            div.page-sidebar.sidebar-dark.unique-sidebar
+               include ../../layout/unique
+            // Sidebar End 
+
+            // Page Body Start 
+            div.page-body
+               div.grid.grid-cols-12.gap-card-gap
+                  div.col-span-6(class="xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Modal  
+                              p Use modal component to show interactive dialogs and notifications.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.gap-2
+                                    label.button-label.btn-primary(for='modal-1') Default Modal
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;!-- The button to open modal --&gt;
+                                       |    &lt;div class="flex flex-wrap gap-2"&gt;
+                                       |        &lt;label class="button-label btn-primary" for="modal-1"&gt;Default Modal&lt;/label&gt;
+                                       |    &lt;/div&gt;
+                                       |
+                                       |&lt;!-- Put this part before &lt;/body&gt; tag for default modal --&gt;
+                                       |    &lt;div&gt;
+                                       |       &lt;input class="peer" name="modal-1" type="checkbox" id="modal-1"&gt;
+                                       |       &lt;label class="modal-overlay peer-checked:block" for="modal-1"&gt;&lt;/label&gt;
+                                       |       &lt;div class="modal peer-checked:block w-[18.75rem]"&gt;
+                                       |           &lt;div class="modal-header"&gt;
+                                       |               &lt;h3&gt;Hurry !!&lt;/h3&gt;
+                                       |               &lt;label class="modal-1"&gt;  &lt;i class="w-4 h-4 stroke-dark"&gt; &lt;/i&gt; &lt;/label&gt;
+                                       |           &lt;/div&gt;
+                                       |           &lt;div class="text-center modal-body"&gt;
+                                       |               &lt;p class="text-lg font-bold"&gt;Up to &lt;span class="text-xl text-secondary"&gt; 85% OFF &lt;/span&gt; , Hurry Up Online Shopping &lt;/p&gt;
+                                       |               &lt;div class="modal-img"&gt;
+                                       |                    &lt;img src="../../image.gif" alt="shopping"/ class="w-52"&gt;
+                                       |               &lt;div&gt;
+                                       |           &lt;/div&gt;
+                                       |           &lt;label for="modal-1" class="px-2 py-1 text-white rounded bg-primary text-end" &gt;Subscribe now&lt;/label&gt;
+                                       |       &lt;/div&gt;
+                                       |    &lt;/div&gt;
+
+                  div.col-span-6(class="xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Sizes  
+                              p Use different size of modal to show more information.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.gap-2
+                                    label.button-label.btn-secondary(for='modal-2') Small Modal
+                                    label.button-label.btn-success(for='modal-3') Large Modal
+                                    label.button-label.btn-warning(for='modal-4') Extralarge Modal
+
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;!-- The button to open modal --&gt;
+                                       |    &lt;div class="flex flex-col flex-wrap gap-2"&gt;
+                                       |        &lt;label class="button-label btn-secondary" for="modal-2"&gt;Small Modal&lt;/label&gt;
+                                       |        &lt;label class="button-label btn-success" for="modal-3"&gt;Large Modal&lt;/label&gt;
+                                       |        &lt;label class="button-label btn-warning" for="modal-4"&gt;Extralarge Modal&lt;/label&gt;
+                                       |    &lt;/div&gt;
+                                       |
+                                       |&lt;!-- Put this part before &lt;/body&gt; tag for small size modal --&gt;
+                                       |   &lt;div&gt;
+                                       |       &lt;input class="peer" name="modal-2" type="checkbox" id="modal-2"&gt;                        
+                                       |       &lt;label class="modal-overlay peer-checked:block" for="modal-2"&gt;&lt;/label&gt;
+                                       |       &lt;div class="modal peer-checked:block w-[15.625rem]"&gt;
+                                       |           &lt;div class="modal-header"&gt;
+                                       |               &lt;h3&gt;Web Design&lt;/h3&gt;
+                                       |               &lt;label class="modal-2"&gt; &lt;i class="w-4 h-4 stroke-dark"&gt; &lt;/i&gt; &lt;/label&gt;
+                                       |           &lt;/div&gt;
+                                       |           &lt;div class="modal-body h-[12.5rem]"&gt;
+                                       |               &lt;p&gt;We build specialized websites for companies...&lt;/p&gt;
+                                       |           &lt;/div&gt;
+                                       |       &lt;/div&gt;
+                                       |   &lt;/div&gt;
+                                       |
+                                       |&lt;!-- Put this part before &lt;/body&gt; tag for large modal --&gt;
+                                       |   &lt;div&gt;
+                                       |       &lt;input type="checkbox" id="modal-3"&gt;                        
+                                       |       &lt;label class="modal-overlay peer-checked:block" for="modal-3"&gt;&lt;/label&gt;
+                                       |       &lt;div class="w-11/12 modal peer-checked:block mzx-w-2xl"&gt;
+                                       |           &lt;div class="modal-header"&gt;
+                                       |               &lt;h3&gt; Start with your goals&lt;/h3&gt;
+                                       |               &lt;label class="modal-3"&gt; &lt;i class="w-4 h-4 stroke-dark"&gt; &lt;/i&gt; &lt;/label&gt;
+                                       |           &lt;/div&gt;
+                                       |           &lt;div class="modal-body h-[12.5rem]"&gt;
+                                       |               &lt;p&gt;No matter how talented...&lt;/p&gt;
+                                       |               &lt;ul class="mt-1"&gt;
+                                       |                    &lt;li class="flex items-center gap-2"&gt;
+                                       |                        +SVG_ICON("Arrow-Right","w-[1.125rem] h-[1.125rem] stroke-title")
+                                       |                         What must you achieve, and by when?
+                                       |                    &lt;/li&gt;
+                                       |                    &lt;li class="flex items-center gap-2"&gt;
+                                       |                        +SVG_ICON("Arrow-Right","w-[1.125rem] h-[1.125rem] stroke-title")
+                                       |                          How will you evaluate your level of success?
+                                       |                    &lt;/li&gt;
+                                       |                    &lt;li class="flex items-center gap-2"&gt;
+                                       |                        +SVG_ICON("Arrow-Right","w-[1.125rem] h-[1.125rem] stroke-title")
+                                       |                         Can you accomplish it with the available resources?
+                                       |                    &lt;/li&gt;
+                                       |                    &lt;li class="flex items-center gap-2"&gt;
+                                       |                        +SVG_ICON("Arrow-Right","w-[1.125rem] h-[1.125rem] stroke-title")
+                                       |                         Does it advance your core business aims?
+                                       |                    &lt;/li&gt;
+                                       |               &lt;/ul&gt;
+                                       |           &lt;/div&gt;
+                                       |       &lt;/div&gt;
+                                       |   &lt;/div&gt;
+                                       |
+                                       |&lt;!-- Put this part before &lt;/body&gt; tag for extralarge modal --&gt;
+                                       |   &lt;div&gt;
+                                       |       &lt;input class="peer" name="modal-4" type="checkbox" id="modal-4"&gt;
+                                       |       &lt;label class="modal-overlay peer-checked:block" for="modal-4"&gt;&lt;/label&gt;
+                                       |       &lt;div class="w-11/12 max-w-5xl modal peer-checked:block "&gt;
+                                       |           &lt;div class="modal-header"&gt;
+                                       |               &lt;h3&gt;congratulations !!&lt;/h3&gt;
+                                       |               &lt;label class="modal-4"&gt; &lt;i class="w-4 h-4 stroke-dark"&gt; &lt;/i&gt; &lt;/label&gt;
+                                       |           &lt;/div&gt;
+                                       |           &lt;div class="modal-body h-[12.5rem]"&gt;
+                                       |               &lt;p&gt;The capacity to comprehend and experience other...&lt;/p&gt;
+                                       |               &lt;ul class="mt-1"&gt;
+                                       |                    &lt;li class="flex items-center gap-2"&gt;
+                                       |                        +SVG_ICON("Arrow-Right","w-[1.125rem] h-[1.125rem] stroke-title")
+                                       |                         What must you achieve, and by when?
+                                       |                    &lt;/li&gt;
+                                       |                    &lt;li class="flex items-center gap-2"&gt;
+                                       |                        +SVG_ICON("Arrow-Right","w-[1.125rem] h-[1.125rem] stroke-title")
+                                       |                          How will you evaluate your level of success?
+                                       |                    &lt;/li&gt;
+                                       |                    &lt;li class="flex items-center gap-2"&gt;
+                                       |                        +SVG_ICON("Arrow-Right","w-[1.125rem] h-[1.125rem] stroke-title")
+                                       |                         Can you accomplish it with the available resources?
+                                       |                    &lt;/li&gt;
+                                       |                    &lt;li class="flex items-center gap-2"&gt;
+                                       |                        +SVG_ICON("Arrow-Right","w-[1.125rem] h-[1.125rem] stroke-title")
+                                       |                         Does it advance your core business aims?
+                                       |                    &lt;/li&gt;
+                                       |               &lt;/ul&gt;
+                                       |           &lt;/div&gt;
+                                       |       &lt;/div&gt;
+                                       |   &lt;/div&gt;
+
+                  div.col-span-6(class="xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Top Positions  
+                              p  To Set position top-left, top-center & top-right use 
+                                 strong .modal-top-left, .modal-top-center  
+                                 |   &  
+                                 strong .modal-top-right 
+                                 |   class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.gap-2
+                                    label.button-label.btn-primary(for='modal-10') Top Left Modal
+                                    label.button-label.btn-warning(for='modal-11') Top Center Modal
+                                    label.button-label.btn-secondary(for='modal-14') Top Right Modal
+
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-6")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;!-- The button to open modal --&gt;
+                                       |    &lt;div class="flex flex-col flex-wrap gap-2"&gt;
+                                       |        &lt;label class="button-label btn-primary" for="modal-10"&gt;Top Left Modal&lt;/label&gt;
+                                       |        &lt;label class="button-label btn-warning" for="modal-11"&gt;Top Center Modal&lt;/label&gt;
+                                       |        &lt;label class="button-label btn-warning" for="modal-14"&gt;Top Right Modal&lt;/label&gt;
+                                       |    &lt;/div&gt;                        
+                                       |
+                                       |&lt;!-- Put this part before &lt;/body&gt; tag for top left position modal --&gt;
+                                       |    &lt;div&gt;                        
+                                       |       &lt;input class="peer" name="modal-10" type="checkbox" id="modal-10"&gt;
+                                       |       &lt;label class="modal-overlay peer-checked:block" for="modal-10"&gt;&lt;/label&gt;
+                                       |       &lt;div class="modal modal-top-left peer-checked:block w-[18.75rem]"&gt;
+                                       |           &lt;div class="text-center modal-body"&gt;
+                                       |               &lt;ul class="modal-img"&gt;
+                                       |                    &lt;li class="flex items-center gap-2"&gt;
+                                       |                        &lt;img src="../../image.gif" alt="whatsapp" class="w-52"/&gt;
+                                       |                    &lt;/li&gt;
+                                       |                    &lt;li class="flex items-center gap-2"&gt;
+                                       |                        &lt;img src="../../image.gif" alt="instagram" class="w-52"/&gt;
+                                       |                    &lt;/li&gt;
+                                       |                    &lt;li class="flex items-center gap-2"&gt;
+                                       |                        &lt;img src="../../image.gif" alt="facebook" class="w-52"/&gt;
+                                       |                    &lt;/li&gt;
+                                       |               &lt;/ul&gt;  
+                                       |               &lt;p class="my-3" for="modal-10"&gt;Create an account&lt;/p&gt;
+                                       |               &lt;label class="p-2 text-white btn btn-primary" for="modal-10"&gt;Create an account&lt;/label&gt;
+                                       |           &lt;/div&gt;
+                                       |       &lt;/div&gt;
+                                       |    &lt;/div&gt; 
+                                       |
+                                       |&lt;!-- Put this part before &lt;/body&gt; tag for top center position modal --&gt;
+                                       |   &lt;div&gt;                        
+                                       |      &lt;input class="peer" name="modal-11" type="checkbox" id="modal-11"&gt;
+                                       |      &lt;label class="modal-overlay peer-checked:block" for="modal-11"&gt;&lt;/label&gt;
+                                       |      &lt;div class="modal modal-top-center peer-checked:block w-[18.75rem]"&gt;
+                                       |           &lt;div class="text-center modal-body"&gt;
+                                       |               &lt;ul class="modal-img"&gt;
+                                       |                    &lt;li class="flex items-center gap-2"&gt;
+                                       |                        &lt;img src="../../image.gif" alt="whatsapp" class="w-52"/&gt;
+                                       |                    &lt;/li&gt;
+                                       |                    &lt;li class="flex items-center gap-2"&gt;
+                                       |                        &lt;img src="../../image.gif" alt="instagram" class="w-52"/&gt;
+                                       |                    &lt;/li&gt;
+                                       |                    &lt;li class="flex items-center gap-2"&gt;
+                                       |                        &lt;img src="../../image.gif" alt="facebook" class="w-52"/&gt;
+                                       |                    &lt;/li&gt;
+                                       |               &lt;/ul&gt;  
+                                       |               &lt;p class="my-3" for="modal-10"&gt;Create an account&lt;/p&gt;
+                                       |               &lt;label class="p-2 text-white btn btn-primary" for="modal-11"&gt;Create an account&lt;/label&gt;
+                                       |           &lt;/div&gt;
+                                       |       &lt;/div&gt;
+                                       |   &lt;/div&gt;
+                                       |
+                                       |&lt;!-- Put this part before &lt;/body&gt; tag for top right position modal --&gt;
+                                       |   &lt;div&gt;                        
+                                       |      &lt;input class="peer" name="modal-14" type="checkbox" id="modal-14"&gt;
+                                       |      &lt;label class="modal-overlay peer-checked:block" for="modal-14"&gt;&lt;/label&gt;
+                                       |      &lt;div class="modal modal-top-right peer-checked:block w-[18.75rem]"&gt;
+                                       |           &lt;div class="text-center modal-body"&gt;
+                                       |               &lt;ul class="modal-img"&gt;
+                                       |                    &lt;li class="flex items-center gap-2"&gt;
+                                       |                        &lt;img src="../../image.gif" alt="whatsapp" class="w-52"/&gt;
+                                       |                    &lt;/li&gt;
+                                       |                    &lt;li class="flex items-center gap-2"&gt;
+                                       |                        &lt;img src="../../image.gif" alt="instagram" class="w-52"/&gt;
+                                       |                    &lt;/li&gt;
+                                       |                    &lt;li class="flex items-center gap-2"&gt;
+                                       |                        &lt;img src="../../image.gif" alt="facebook" class="w-52"/&gt;
+                                       |                    &lt;/li&gt;
+                                       |               &lt;/ul&gt;  
+                                       |               &lt;p class="my-3" for="modal-10"&gt;Create an account&lt;/p&gt;
+                                       |               &lt;label class="p-2 text-white btn btn-primary" for="modal-14"&gt;Create an account&lt;/label&gt;
+                                       |           &lt;/div&gt;
+                                       |       &lt;/div&gt;
+                                       |   &lt;/div&gt; 
+
+                  div.col-span-6(class="xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Bottom Positions  
+                              p Set position bottom-left bottom-center & bottom-right with the help of   
+                                 strong .modal-bottom-left, .modal-bottom-center  
+                                 |   & 
+                                 strong .modal-bottom-right  
+                                 |   class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.gap-2
+                                    label.button-label.btn-info(for='modal-12') Bottom Left Modal
+                                    label.button-label.btn-success(for='modal-13') Bottom Center Modal
+                                    label.button-label.btn-danger(for='modal-15') Bottom Right Modal
+
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-6")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;!-- The button to open modal --&gt;
+                                       |    &lt;div class="flex flex-col flex-wrap gap-2"&gt;
+                                       |       &lt;label class="button-label btn-info" for="modal-12"&gt;Bottom Left Modal&lt;/label&gt;
+                                       |       &lt;label class="button-label btn-success" for="modal-13"&gt;Bottom Center Modal&lt;/label&gt;
+                                       |       &lt;label class="button-label btn-success" for="modal-13"&gt;Bottom Right Modal&lt;/label&gt;
+                                       |    &lt;/div&gt;                        
+                                       |
+                                       |&lt;!-- Put this part before &lt;/body&gt; tag for bottom left position modal --&gt;
+                                       |   &lt;div&gt;                        
+                                       |      &lt;input class="peer" name="modal-12" type="checkbox" id="modal-12"&gt;
+                                       |      &lt;label class="modal-overlay peer-checked:block" for="modal-12"&gt;&lt;/label&gt;
+                                       |      &lt;div class="modal modal-bottom-left peer-checked:block w-[18.75rem]"&gt;                                 
+                                       |           &lt;div class="text-center modal-body"&gt;
+                                       |               &lt;div class="modal-img"&gt;
+                                       |                    &lt;img src="../../image.gif" alt="success"/ class="w-52"&gt;
+                                       |               &lt;div&gt;
+                                       |               &lt;h3 class="mt-1 text-lg font-bold leading-none"&gt;Success Message&lt;/h3&gt;
+                                       |               &lt;p class="my-3"&gt;Now, you can access your account.&lt;/p&gt;
+                                       |               &lt;label class="p-2 text-white btn btn-success" for="modal-12"&gt;Close&lt;/label&gt;
+                                       |           &lt;/div&gt;
+                                       |       &lt;/div&gt;
+                                       |   &lt;/div&gt; 
+                                       |
+                                       |&lt;!-- Put this part before &lt;/body&gt; tag for bottom center position modal --&gt;
+                                       |   &lt;div&gt;                        
+                                       |      &lt;input class="peer" name="modal-13" type="checkbox" id="modal-13"&gt;
+                                       |      &lt;label class="modal-overlay peer-checked:block" for="modal-13"&gt;&lt;/label&gt;
+                                       |      &lt;div class="modal modal-bottom-left peer-checked:block w-[18.75rem]"&gt;                                 
+                                       |           &lt;div class="text-center modal-body"&gt;
+                                       |               &lt;div class="modal-img"&gt;
+                                       |                    &lt;img src="../../image.gif" alt="success"/ class="w-52"&gt;
+                                       |               &lt;div&gt;
+                                       |               &lt;h3 class="mt-1 text-lg font-bold leading-none"&gt;Success Message&lt;/h3&gt;
+                                       |               &lt;p class="my-3"&gt;Now, you can access your account.&lt;/p&gt;
+                                       |               &lt;label class="p-2 text-white btn btn-success" for="modal-13"&gt;Close&lt;/label&gt;
+                                       |           &lt;/div&gt;
+                                       |       &lt;/div&gt;
+                                       |   &lt;/div&gt;
+                                       |
+                                       |&lt;!-- Put this part before &lt;/body&gt; tag for bottom right position modal --&gt;
+                                       |   &lt;div&gt;                        
+                                       |      &lt;input class="peer" name="modal-15" type="checkbox" id="modal-15"&gt;
+                                       |      &lt;label class="modal-overlay peer-checked:block" for="modal-15"&gt;&lt;/label&gt;
+                                       |      &lt;div class="modal modal-bottom-left peer-checked:block w-[18.75rem]"&gt;                                 
+                                       |           &lt;div class="text-center modal-body"&gt;
+                                       |               &lt;div class="modal-img"&gt;
+                                       |                    &lt;img src="../../image.gif" alt="success"/ class="w-52"&gt;
+                                       |               &lt;div&gt;
+                                       |               &lt;h3 class="mt-1 text-lg font-bold leading-none"&gt;Success Message&lt;/h3&gt;
+                                       |               &lt;p class="my-3"&gt;Now, you can access your account.&lt;/p&gt;
+                                       |               &lt;label class="p-2 text-white btn btn-success" for="modal-15"&gt;Close&lt;/label&gt;
+                                       |           &lt;/div&gt;
+                                       |       &lt;/div&gt;
+                                       |   &lt;/div&gt; 
+
+                  div.col-span-6(class="xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Centered Position 
+                              p  To set centered position use   
+                                 strong .modal-center 
+                                 |   class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.gap-2
+                                    label.button-label.btn-primary(for='modal-6') Centered Modal
+
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-6")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;!-- The button to open modal --&gt;
+                                       |     &lt;div class="flex flex-col flex-wrap gap-2"&gt;
+                                       |         &lt;label class="button-label btn-primary" for="modal-6"&gt;Centered Modal&lt;/label&gt;
+                                       |     &lt;/div&gt;                        
+                                       |
+                                       |&lt;!-- Put this part before &lt;/body&gt; tag for centered modal --&gt;
+                                       |   &lt;div&gt;                        
+                                       |      &lt;input class="peer" name="modal-6" type="checkbox" id="modal-6"&gt;
+                                       |      &lt;label class="modal-overlay peer-checked:block" for="modal-6"&gt;&lt;/label&gt;
+                                       |      &lt;div class="modal modal-center peer-checked:block w-[18.75rem]"&gt;
+                                       |           &lt;div class="text-center modal-body"&gt;
+                                       |               &lt;div class="modal-img"&gt;
+                                       |                    &lt;img src="../../image.gif" alt="danger"/ class="w-52"&gt;
+                                       |               &lt;div&gt;
+                                       |               &lt;h3 class="mt-1 text-lg font-bold leading-none"&gt;Ohh! Something went wrong!&lt;/h3&gt;
+                                       |               &lt;p class="my-3"&gt;Attackers on malicious activity may...&lt;/p&gt;
+                                       |               &lt;label class="p-2 text-white btn btn-danger" for="modal-6"&gt;Close&lt;/label&gt;
+                                       |           &lt;/div&gt;
+                                       |      &lt;/div&gt;
+                                       |  &lt;/div&gt; 
+
+                  div.col-span-6(class="xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold With footer  
+                              p Add footer in modal to create the modal-footer.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.flex-wrap.gap-2
+                                    label.button-label.btn-danger(for='modal-5') Footer Modal
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;!-- The button to open modal --&gt;
+                                       |    &lt;div class="flex flex-col flex-wrap gap-2"&gt;
+                                       |        &lt;label class="button-label btn-danger" for="modal-5"&gt;Footer Modal&lt;/label&gt;
+                                       |    &lt;/div&gt;
+                                       |
+                                       |&lt;!-- Put this part before &lt;/body&gt; tag for footer modal--&gt;
+                                       |     &lt;div&gt;
+                                       |     &lt;input class="peer" name="modal-5" type="checkbox" id="modal-5"&gt;
+                                       |     &lt;label class="modal-overlay peer-checked:block" for="modal-5"&gt;&lt;/label&gt;
+                                       |     &lt;div class="modal w-[18.75rem] h-[18.75rem] peer-checked:block"&gt;
+                                       |       &lt;div class="modal-header"&gt;
+                                       |         &lt;h3&gt;Cookies&lt;/h3&gt;
+                                       |         &lt;label class="modal-5"&gt; &lt;i class="w-4 h-4 stroke-dark"&gt; &lt;/i&gt; &lt;/label&gt;
+                                       |       &lt;/div&gt;
+                                       |       &lt;div class="modal-body h-[9.375rem]"&gt;
+                                       |         &lt;p&gt;Accept the all cookies&lt;/p&gt;
+                                       |         &lt;div class="modal-img"&gt;
+                                       |                    &lt;img src="../../image.gif" alt="cookie"/ class="w-52"&gt;
+                                       |               &lt;div&gt;
+                                       |       &lt;/div&gt;
+                                       |       &lt;div class="modal-footer"&gt;
+                                       |         &lt;label class="p-2 text-white btn btn-primary" for="modal-5"&gt;Accept&lt;/label&gt;
+                                       |       &lt;/div&gt;
+                                       |     &lt;/div&gt;                    
+                                       |   &lt;/div&gt;
+
+                  div.col-span-4(class="xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Scrollable  
+                              p Set the scrollable modal with the help of 
+                                 strong .modal-content-scroll 
+                                 | class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.gap-2
+                                    label.button-label.btn-info(for='modal-7') Scrollable Modal
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-6")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;!-- The button to open modal --&gt;
+                                       |   &lt;div class="flex flex-col flex-wrap gap-2"&gt;
+                                       |      &lt;label class="button-label btn-info" for="modal-7"&gt;Scrollable Modal&lt;/label&gt;
+                                       |   &lt;/div&gt;
+                                       |
+                                       |&lt;!-- Put this part before &lt;/body&gt; tag for scrollable modal--&gt;
+                                       |   &lt;div&gt;
+                                       |       &lt;input class="peer" name="modal-7" type="checkbox" id="modal-7"&gt;
+                                       |       &lt;label class="modal-overlay peer-checked:block" for="modal-7"&gt;&lt;/label&gt;
+                                       |       &lt;div class="modal peer-checked:block w-[18.75rem]"&gt;
+                                       |           &lt;div class="modal-header"&gt;
+                                       |               &lt;h3&gt;Wed Designer&lt;/h3&gt;
+                                       |               &lt;label class="modal-7"&gt; &lt;i class="w-4 h-4 stroke-dark"&gt; &lt;/i&gt; &lt;/label&gt;
+                                       |           &lt;/div&gt;
+                                       |           &lt;div class="modal-body modal-content-scroll h-[25rem]"&gt;
+                                       |               &lt;div class="flex items-center gap-3"&gt;
+                                       |                  +SVG_ICON("Arrow-Right","w-[1.125rem] h-[1.125rem] stroke-title")
+                                       |                   &lt;p&gt;For a site to be successful, a designer must be able to communicate their ideas.&lt;/p&gt;
+                                       |               &lt;/div&gt;
+                                       |               &lt;div class="flex items-center gap-3"&gt;
+                                       |                  +SVG_ICON("Arrow-Right","w-[1.125rem] h-[1.125rem] stroke-title")
+                                       |                   &lt;p&gt;Most businesses employ a certain font or typography so that clients can quickly distinguish them from their rivals.&lt;/p&gt;
+                                       |               &lt;/div&gt;
+                                       |               &lt;div class="flex items-center gap-3"&gt;
+                                       |                  +SVG_ICON("Arrow-Right","w-[1.125rem] h-[1.125rem] stroke-title")
+                                       |                   &lt;p&gt;We build specialized websites for companies, list them on digital directories, and set up a sales funnel to boost ROI.&lt;/p&gt;
+                                       |               &lt;/div&gt;
+                                       |               &lt;div class="flex items-center gap-3"&gt;
+                                       |                  +SVG_ICON("Arrow-Right","w-[1.125rem] h-[1.125rem] stroke-title")
+                                       |                   &lt;p&gt;Chat with a firm about what they want, and inquire about the target audience.&lt;/p&gt;
+                                       |               &lt;/div&gt;
+                                       |               &lt;div class="flex items-center gap-3"&gt;
+                                       |                  +SVG_ICON("Arrow-Right","w-[1.125rem] h-[1.125rem] stroke-title")
+                                       |                   &lt;p&gt;firms may more easily and precisely communicate their brands through typography.&lt;/p&gt;
+                                       |               &lt;/div&gt;
+                                       |           &lt;/div&gt;
+                                       |           &lt;div class="modal-footer"&gt;
+                                       |               &lt;label  class="p-2 text-white btn btn-primary" for="modal-7"&gt;Close&lt;/button &gt;
+                                       |           &lt;/div&gt;
+                                       |       &lt;/div&gt;
+                                       |   &lt;/div&gt; 
+
+                  div.col-span-4(class="xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Form Element  
+                              p Add the form element inside the modal content.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.gap-2
+                                    label.button-label.btn-warning(for='modal-8') Login Form
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;!-- The button to open modal --&gt;
+                                       |   &lt;div class="flex flex-col flex-wrap gap-2"&gt;
+                                       |      &lt;label class="button-label btn-warning" for="modal-8"&gt;Login Form&lt;/label&gt;
+                                       |   &lt;/div&gt;
+                                       |
+                                       |&lt;!-- Put this part before &lt;/body&gt; tag for form modal--&gt;
+                                       |   &lt;div&gt;
+                                       |       &lt;input class="peer" name="modal-8" type="checkbox" id="modal-8"&gt;
+                                       |       &lt;label class="modal-overlay peer-checked:block" for="modal-8"&gt;&lt;/label&gt;
+                                       |       &lt;div class="max-w-sm modal peer-checked:block"&gt;
+                                       |           &lt;div class="modal-body"&gt;
+                                       |               &lt;form class="flex flex-col gap-3 theme-form"&gt;
+                                       |                   &lt;h3&gt;Log in to account&lt;/h3&gt;
+                                       |                   &lt;p&gt;Hello, enter your email id and password for log in to your account&lt;/p&gt;
+                                       |                   &lt;div&gt; &lt;input type="email" placeholder="Enter your id.." required&gt; &lt;/div&gt;
+                                       |                   &lt;div&gt; &lt;input type="password" placeholder="Password.." required&gt; &lt;/div&gt;
+                                       |                   &lt;div class="flex items-center justify-between gap-1"&gt; 
+                                       |                       &lt;div class="flex items-center gap-2 !mb-0"&gt; 
+                                       |                           &lt;input type="checkbox" id="checkbox-1"&gt;
+                                       |                           &lt;label for=checkbox-1 class="!text-content !text-xs"&gt; Remember me &lt;/label&gt;
+                                       |                       &lt;/div&gt;
+                                       |                       &lt;div class="!mb-0"&gt;&lt;a href="/forgot-password"&gt; Forgot Password? &lt;/a&gt; &lt;/div&gt;
+                                       |                   &lt;/div&gt;
+                                       |                   &lt;div&gt; &lt;h4&gt; Or Sign in with &lt;/h4&gt; &lt;/div&gt;
+                                       |                   &lt;div class="social"&gt;
+                                       |                       &lt;a href="https://www.linkedin.com/login" class="btn flex gap-1 justify-center items-center&gt; 
+                                       |                           &lt;img src="../../image.svg" alt="linkedin"/&gt; Linkedin &lt;/a&gt;
+                                       |                       &lt;a href="https://twitter.com/i/flow/login" class="btn flex gap-1 justify-center items-center&gt; 
+                                       |                           &lt;img src="../../image.svg" alt="twitter"/&gt; Twitter &lt;/a&gt;
+                                       |                       &lt;a href="https://www.facebook.com/" class="btn flex gap-1 justify-center items-center&gt; 
+                                       |                           &lt;img src="../../image.svg" alt="facebook"/&gt; Facebook &lt;/a&gt;
+                                       |                   &lt;/div&gt;
+                                       |                   &lt;div class="text-center"&gt; 
+                                       |                       &lt;span&gt; Don't have an account? &lt;small class="cursor-pointer"&gt; Create Now &lt;/small&gt; &lt;/span&gt; 
+                                       |                   &lt;/div&gt;
+                                       |               &lt;/form&gt;
+                                       |           &lt;/div&gt;
+                                       |       &lt;/div&gt; 
+                                       |   &lt;/div&gt;               
+
+                  div.col-span-4(class="xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Tooltip & Popover  
+                              p Add tooltip inside the popover modal.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.gap-2
+                                    label.button-label.btn-danger(for='modal-9') Tooltip & Popover
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;!-- The button to open modal for tooltips & popover modal--&gt;
+                                       |   &lt;div class="flex flex-col flex-wrap gap-2"&gt;
+                                       |      &lt;label class="button-label btn-danger" for="modal-9"&gt;Modal&lt;/label&gt;
+                                       |   &lt;/div&gt;
+                                       |
+                                       |&lt;!-- Put this part before &lt;/body&gt; tag --&gt;
+                                       |   &lt;div&gt;
+                                       |       &lt;input class="peer" name="modal-9" type="checkbox" id="modal-9"&gt;
+                                       |       &lt;label class="modal-overlay peer-checked:block" for="modal-9"&gt;&lt;/label&gt;
+                                       |       &lt;div class="modal w-[18.75rem]" peer-checked:block&gt;
+                                       |           &lt;div class="modal-header"&gt;
+                                       |               &lt;h3&gt;Modal Title&lt;/h3&gt;
+                                       |               &lt;label class="modal-9"&gt; &lt;i class="w-4 h-4 stroke-dark"&gt; &lt;/i&gt; &lt;/label&gt;
+                                       |           &lt;/div&gt;
+                                       |           &lt;div class="modal-body"&gt;
+                                       |               &lt;p&gt;Content for the modal&lt;/p&gt;
+                                       |           &lt;/div&gt;
+                                       |       &lt;/div&gt;
+                                       |   &lt;/div&gt;
+            // Page Body End 
+            +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+      include ../../components/customizer
+
+      //- Modal with checkbox
+      div.modal-main
+         input#modal-1(class="peer" name="modal-1" type='checkbox')
+         label.modal-overlay(class="peer-checked:block" for='modal-1')
+         div.modal(class="peer-checked:opacity-100 peer-checked:visible w-[18.75rem]")
+            div.modal-header
+               h3 Hurry !!
+               label(for='modal-1') 
+                  i(data-feather="x" class="w-4 h-4 stroke-dark")
+            div.modal-body.text-center
+               p.text-lg.font-bold Up to 
+                  span.text-xl.text-secondary 85% OFF
+                  |  , Hurry Up Online Shopping
+               div.modal-img
+                  img(class="" src="../../assets/images/modal/online-shopping.gif" alt="shopping" class="w-52")
+               label(for="modal-1").bg-primary.text-white.py-1.px-2.rounded.text-end Explore More
+
+      //- Small size modal
+      div.modal-main
+         input#modal-2(class="peer" name="modal-2" type='checkbox')
+         label.modal-overlay(class="peer-checked:block" for='modal-2')
+         div.modal(class="peer-checked:opacity-100 peer-checked:visible w-[15.625rem]")
+            div.modal-header
+               h3 Web Design
+               label(for='modal-2') 
+                  i(data-feather="x" class="w-4 h-4 stroke-dark")
+            div.modal-body(class="h-[12.5rem]")
+               p 
+               | We build specialized websites for companies, list them on digital directories, and set up a sales funnel to boost ROI.
+
+      //- large size modal
+      div.modal-main
+         input#modal-3(class="peer" name="modal-3" type='checkbox')
+         label.modal-overlay(class="peer-checked:block" for='modal-3')
+         div.modal(class="w-11/12 max-w-2xl peer-checked:opacity-100 peer-checked:visible")
+            div.modal-header
+               h3 Start with your goals
+               label(for='modal-3') 
+                  i(data-feather="x" class="w-4 h-4 stroke-dark")
+            div.modal-body(class="h-[12.5rem]")
+               p 
+               | No matter how talented you are as a content writer or creator, you will always fail if you don't have a clear set of goals. First of all, without goals, there is no way to determine your success. Additionally, you lack direction.
+               | Together with your team, respond to the following questions to make sure they are:
+               ul.mt-1 
+                  li.flex.gap-2.items-center 
+                     +SVG_ICON("Arrow-Right","w-[1.125rem] h-[1.125rem] stroke-title")
+                     | What must you achieve, and by when?
+                  li.flex.gap-2.items-center 
+                     +SVG_ICON("Arrow-Right","w-[1.125rem] h-[1.125rem] stroke-title")
+                     | How will you evaluate your level of success?
+                  li.flex.gap-2.items-center 
+                     +SVG_ICON("Arrow-Right","w-[1.125rem] h-[1.125rem] stroke-title")
+                     | Can you accomplish it with the available resources?
+                  li.flex.gap-2.items-center 
+                     +SVG_ICON("Arrow-Right","w-[1.125rem] h-[1.125rem] stroke-title")
+                     | Does it advance your core business aims?
+
+      //- Extralarge size modal
+      div.modal-main
+         input#modal-4(class="peer" name="modal-4" type='checkbox')
+         label.modal-overlay(class="peer-checked:block" for='modal-4')
+         div.modal(class="w-11/12 max-w-5xl peer-checked:opacity-100 peer-checked:visible")
+            div.modal-header
+               h3 UX Designer
+               label(for='modal-4') 
+                  i(data-feather="x" class="w-4 h-4 stroke-dark")
+            div.modal-body(class="h-[12.5rem]")
+               p 
+               | The capacity to comprehend and experience other people's feelings is known as empathy. A positive consumer experience is prioritized by UX. The finest UX designers spend time studying individuals and their tendencies because of this. Designers may produce goods that genuinely engage and excite customers by having a thorough understanding of the end consumers.
+               ul.mt-1 
+                  li.flex.gap-2.items-center 
+                     +SVG_ICON("Arrow-Right","w-[1.125rem] h-[1.125rem] stroke-title")
+                     | What must you achieve, and by when?
+                  li.flex.gap-2.items-center 
+                     +SVG_ICON("Arrow-Right","w-[1.125rem] h-[1.125rem] stroke-title")
+                     | How will you evaluate your level of success?
+                  li.flex.gap-2.items-center 
+                     +SVG_ICON("Arrow-Right","w-[1.125rem] h-[1.125rem] stroke-title")
+                     | Can you accomplish it with the available resources?
+                  li.flex.gap-2.items-center 
+                     +SVG_ICON("Arrow-Right","w-[1.125rem] h-[1.125rem] stroke-title")
+                     | Does it advance your core business aims?
+
+      //- Modal with footer
+      div.modal-main
+         input#modal-5(class="peer" name="modal-5" type='checkbox')
+         label.modal-overlay(class="peer-checked:block" for='modal-5')
+         div.modal(class="w-[18.75rem] peer-checked:opacity-100 peer-checked:visible")
+            div.modal-header
+               h3 Cookies
+               label(for='modal-5') 
+                  i(data-feather="x" class="w-4 h-4 stroke-dark")
+            div.modal-body
+               p Accept the all cookies 
+               div.modal-img
+                  img(class="" src="../../assets/images/modal/cookies-sendcookie.gif" alt="whatsapp" class="w-52")               
+            div.modal-footer
+               label(for="modal-5").btn.btn-primary.p-2.text-white Accept
+
+      //- Centered modal
+      div.modal-main
+         input#modal-6(class="peer" name="modal-6" type='checkbox')
+         label.modal-overlay(class="peer-checked:block" for='modal-6')
+         div.modal.modal-center(class="peer-checked:opacity-100 peer-checked:visible w-[18.75rem]")
+            div.modal-body.text-center
+               div.modal-img
+                  img(class="" src="../../assets/images/modal/danger.gif" alt="danger" class="w-14")
+               h3.text-lg.font-bold.mb-2 Ohh! Something went wrong!
+               p.mb-3 Attackers on malicious activity may trick you into doing something dangerous like installing software or revealing your personal information.
+               label(for="modal-6").btn.btn-danger.p-2.text-white Close
+
+      //- Scrollable modal
+      div.modal-main
+         input#modal-7(class="peer" name="modal-7" type='checkbox')
+         label.modal-overlay(class="peer-checked:block" for='modal-7')
+         div.modal(class="peer-checked:opacity-100 peer-checked:visible w-[18.75rem]")
+            div.modal-header
+               h3 Wed Designer
+               label(for='modal-7') 
+                  i(data-feather="x" class="w-4 h-4 stroke-dark")
+            div.modal-body.modal-content-scroll(class="h-[25rem]")
+               div.flex.items-center.mb-3.gap-3 
+                  +SVG_ICON("Arrow-Right","w-[2.5rem] h-[2.5rem] stroke-title")
+                  p For a site to be successful, a designer must be able to communicate their ideas.
+               div.flex.items-center.mb-3.gap-3 
+                  +SVG_ICON("Arrow-Right","w-[2.5rem] h-[2.5rem] stroke-title")
+                  p Most businesses employ a certain font or typography so that clients can quickly distinguish them from their rivals.
+               div.flex.items-center.mb-3.gap-3 
+                  +SVG_ICON("Arrow-Right","w-[2.5rem] h-[2.5rem] stroke-title")
+                  p We build specialized websites for companies, list them on digital directories, and set up a sales funnel to boost ROI.
+               div.flex.items-center.mb-3.gap-3 
+                  +SVG_ICON("Arrow-Right","w-[2.5rem] h-[2.5rem] stroke-title")
+                  p  Chat with a firm about what they want, and inquire about the target audience.
+               div.flex.items-center.mb-3.gap-3 
+                  +SVG_ICON("Arrow-Right","w-[2.5rem] h-[2.5rem] stroke-title")
+                  p firms may more easily and precisely communicate their brands through typography.
+            div.modal-footer
+               label(for="modal-7").btn.btn-primary.text-white.p-2(class="!text-end") Close
+
+      //- Form modal
+      div.modal-main
+         input#modal-8(class="peer" name="modal-8" type='checkbox')
+         label.modal-overlay(class="peer-checked:block" for='modal-8')
+         div.modal(class="max-w-sm peer-checked:opacity-100 peer-checked:visible")
+            div.modal-body
+               form.theme-form.flex.flex-col.gap-3
+                  h3 Log in to account
+                  p Hello, enter your email id and password for log in to your account
+                  div
+                     input(type="email" placeholder="Enter your id.." required)
+                  div
+                     input(type="password" placeholder="password.." required)
+                  div.flex.justify-between.items-center.gap-1
+                     div.flex.items-center.gap-2
+                        label.checkbox(class="w-[1rem] h-[1rem]")   
+                           input(type='checkbox' class="peer") 
+                           div.checkbox-indicator(class="peer-checked:!bg-primary !border-primary")  
+                              i(data-feather="check")
+                        span Remember Me
+                     div(class="!mb-0")
+                        a(href="forgot-password.html") Forgot Password? 
+                  div(class="!mb-0")
+                     button.btn.btn-primary.text-white(a href="index.html") Sign in
+                  div
+                     h4 Or Sign in with 
+                  div.social
+                     a(href="https://www.linkedin.com/login" class="flex items-center justify-center gap-1 btn !text-linkedin")
+                        img(src='../../assets/images/social/linkd2.svg' alt='linkedin')
+                        | Linkedin
+                     a(href="https://twitter.com/i/flow/login" class="flex items-center justify-center gap-1 btn !text-twitter")
+                        img(src='../../assets/images/social/tw2.svg' alt='twitter')
+                        | Twitter 
+                     a(href="https://www.facebook.com/" class="flex items-center justify-center gap-1 btn !text-facebook") 
+                        img(src='../../assets/images/social/fb2.svg' alt='facebook')
+                        | Facebook  
+                  div.text-center
+                     span Don't have an account? 
+                        a(href="register.html") Create Now
+
+      //- Tooltip & popover modal
+      div.modal-main
+         input#modal-9(class="peer" name="modal-9" type='checkbox')
+         label.modal-overlay(class="peer-checked:block" for='modal-9')
+         div.modal(class="w-[18.75rem] peer-checked:opacity-100 peer-checked:visible")
+            div.modal-header
+               h3 Modal Title
+               label(for='modal-9') 
+                  i(data-feather="x" class="w-4 h-4 stroke-dark")
+            div.modal-body
+               p.leading- Here, you can see that inside the
+                  label.button-label.btn-secondary(data-tw-tooltip="Tooltip") popover
+                  |   modal, you can set the tooltip.
+
+      //- Top-left modal
+      div.modal-main
+         input#modal-10(class="peer" name="modal-10" type='checkbox')
+         label.modal-overlay(class="peer-checked:block" for='modal-10')
+         div.modal.modal-top-left(class="peer-checked:opacity-100 peer-checked:visible w-[18.75rem]")
+            div.modal-body.text-center
+               ul.modal-img
+                  li
+                     img(class="" src="../../assets/images/modal/whatsapp.gif" alt="whatsapp" class="w-52")
+                  li
+                     img(class="" src="../../assets/images/modal/instagram.gif" alt="instagram" class="w-52")
+                  li
+                     img(class="" src="../../assets/images/modal/facebook.gif" alt="facebook" class="w-52")
+               p.my-3 Remove your complete account from your phone or tablet to sign out of the Gmail app.
+               label(for="modal-10").btn.btn-primary.p-2.text-white Create an account
+
+      //- Top-center modal
+      div.modal-main
+         input#modal-11(class="peer" name="modal-11" type='checkbox')
+         label.modal-overlay(class="peer-checked:block" for='modal-11')
+         div.modal.modal-top-center(class="peer-checked:opacity-100 peer-checked:visible w-[18.75rem]")
+            div.modal-body.text-center
+               ul.modal-img
+                  li
+                     img(class="" src="../../assets/images/modal/whatsapp.gif" alt="whatsapp" class="w-52")
+                  li
+                     img(class="" src="../../assets/images/modal/instagram.gif" alt="instagram" class="w-52")
+                  li
+                     img(class="" src="../../assets/images/modal/facebook.gif" alt="facebook" class="w-52")
+               p.my-3 Remove your complete account from your phone or tablet to sign out of the Gmail app.
+               label(for="modal-11").btn.btn-primary.p-2.text-white Create an account
+
+      //- Top-right modal
+      div.modal-main
+         input#modal-14(class="peer" name="modal-14" type='checkbox')
+         label.modal-overlay(class="peer-checked:block" for='modal-14')
+         div.modal.modal-top-right(class="peer-checked:opacity-100 peer-checked:visible w-[18.75rem]")
+            div.modal-body.text-center
+               ul.modal-img
+                  li
+                     img(class="" src="../../assets/images/modal/whatsapp.gif" alt="whatsapp" class="w-52")
+                  li
+                     img(class="" src="../../assets/images/modal/instagram.gif" alt="instagram" class="w-52")
+                  li
+                     img(class="" src="../../assets/images/modal/facebook.gif" alt="facebook" class="w-52")
+               p.my-3 Remove your complete account from your phone or tablet to sign out of the Gmail app.
+               label(for="modal-14").btn.btn-primary.p-2.text-white  Create an account
+
+      //- Bottom-left modal
+      div.modal-main
+         input#modal-12(class="peer" name="modal-12" type='checkbox')
+         label.modal-overlay(class="peer-checked:block" for='modal-12')
+         div.modal.modal-bottom-left(class="peer-checked:opacity-100 peer-checked:visible w-[18.75rem]")
+            div.modal-body.text-center
+               div.modal-img
+                  img(class="" src="../../assets/images/modal/success.gif" alt="success" class="w-28")
+               h3.text-lg.font-bold.leading-none.mt-1 Success Message
+               p.my-2 Now, you can access your account.
+               label(for="modal-12").btn.btn-success.py-2px-3.text-white Close
+
+      //- Bottom-center modal
+      div.modal-main
+         input#modal-13(class="peer" name="modal-13" type='checkbox')
+         label.modal-overlay(class="peer-checked:block" for='modal-13')
+         div.modal.modal-bottom-center(class="peer-checked:opacity-100 peer-checked:visible w-[18.75rem]")
+            div.modal-body.text-center
+               div.modal-img
+                  img(class="" src="../../assets/images/modal/success.gif" alt="success" class="w-28")
+               h3.text-lg.font-bold.leading-none.mt-1 Success Message
+               p.my-2 Now, you can access your account.
+               label(for="modal-13").btn.btn-success.py-2px-3.text-white Close
+
+      //- Bottom-right modal
+      div.modal-main
+         input#modal-15(class="peer" name="modal-15" type='checkbox')
+         label.modal-overlay(class="peer-checked:block" for='modal-15')
+         div.modal.modal-bottom-right(class="peer-checked:opacity-100 peer-checked:visible w-[18.75rem]")
+            div.modal-body.text-center
+               div.modal-img
+                  img(class="" src="../../assets/images/modal/success.gif" alt="success" class="w-28")
+               h3.text-lg.font-bold.leading-none.mt-1 Success Message
+               p.my-2 Now, you can access your account.
+               label(for="modal-15").btn.btn-success.py-2px-3.text-white Close
+
+
+
+   include ../../layout/footer-files

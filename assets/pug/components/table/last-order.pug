@@ -1,0 +1,36 @@
+//- ====================
+//- Last Order Table
+//- ====================
+table.table 
+   thead 
+      tr 
+         each userHead,index in LAST_ORDER.header
+            th=  userHead
+
+   tbody
+      each bodyData,index in LAST_ORDER.body
+         tr
+            td(class="min-w-[12.5rem]") 
+               div(class="flex items-center gap-2")
+                  div.flex.items-center(class="gap-[.5625rem]")
+                     img(class="h-10 rounded-full W-10 2sm:w-9 2sm:h-9" src=`../../assets/images/avatar/${bodyData.image}`, alt=`${bodyData.title}`) 
+                     div
+                        h4(class="text-xs font-semibold text-title")=bodyData.title
+                        span(class="block mt-1 font-semibold text-2xs 2sm:mt-0 text-content")=bodyData.subTitle  
+
+            td(class="min-w-[6.875rem] text-content")= bodyData.orderNo
+            td(class="min-w-[5rem]")= `$${bodyData.amount}`
+            td(class="min-w-[7.5rem]")= bodyData.paymentType
+            td(class="min-w-[7.5rem]")= bodyData.date
+            td(class="min-w-[3.125rem] text-right") 
+               div.dropdown.on-hover-show(class=`inline-flex justify-end ${LAST_ORDER.body.length === index + 1 ? "top-open" : ""}`)
+                  button(class="group bg-gray-light px-[.3125rem] py-[.1875rem]") 
+                     +SVG_ICON("Dote-h","w-[1.125rem] h-[1.125rem] stroke-title")   
+                  div.dropdown-menu(class=`!right-0 !left-unset `)
+                     ul
+                        li.group 
+                           a(href="javascript:void(0)")
+                              +SVG_ICON("Edit-Square","group-hover:stroke-primary w-[1.125rem] h-[1.125rem] stroke-title")   
+                        li.group 
+                           a(href="javascript:void(0)")
+                              +SVG_ICON("Delete","group-hover:stroke-primary w-[1.125rem] h-[1.125rem] stroke-title")   

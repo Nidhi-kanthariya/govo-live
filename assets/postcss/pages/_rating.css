@@ -1,0 +1,48 @@
+/*=====================
+    Mask CSS
+  ==========================*/
+@layer components {
+
+    .rating-number{
+        clip-path: inset(0 0 0 0);
+    }
+    
+    .rating-star {
+        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    }
+
+    .rating-star-2 {
+        clip-path: polygon(50% 0%, 68% 25%, 98% 35%, 75% 66%, 79% 91%, 50% 77%, 21% 91%, 25% 68%, 2% 35%, 34% 25%);
+    }
+    .rating-heart{
+        clip-path: path("M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z");
+    }
+
+    .rating input {
+        @apply appearance-none;
+    }
+
+    .rating .rating-hidden {
+        @apply w-2 bg-transparent;
+    }
+
+    .rating input:focus-visible {
+        @apply transition-all duration-300 translate-y-[-0.125em]; 
+    }
+
+    .rating input:active:focus {
+        @apply animate-none translate-y-[-0.125em];
+    }
+
+    .rating-half :where(input:not(.rating-hidden)) {
+        @apply w-3;
+    }
+
+    .rating {
+        @apply relative inline-flex;
+    }
+
+    .rating :where(input) {
+        @apply cursor-pointer h-6 w-6 opacity-100 ;
+    }
+}

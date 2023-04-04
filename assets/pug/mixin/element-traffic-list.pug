@@ -1,0 +1,10 @@
+mixin traffic-list(data)
+   ul 
+      each dataItem in data
+         li.flex.items-center.justify-between(class="gap-[15px] 5xl:mt-[20px] mt-[28px] first:mt-0")
+            div.flex.items-center(class="gap-[20px] min-w-[120px] max-w-[120px] sm:gap-[10px] ")
+               img(class="3xl:w-[30px] w-[35px]" src=`../../assets/icons/${dataItem.image}` alt=`${dataItem.title}`)
+               h5(class="text-xs font-semibold text-title")=dataItem.title 
+            div(class="progress-bar progress-sm max-w-[92px]")
+               div(class=`bg-${dataItem.status}` style=`width:${dataItem.traffic}%`)
+            span(class="text-xs font-semibold text-content")=`${dataItem.traffic}%`

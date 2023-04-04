@@ -1,0 +1,8 @@
+//- =====================
+//-  Plus Minus 
+//- =====================
+mixin PlusMinus(data)
+   div.plus-minus.flex.items-center.text-center.bg-primary-light(class="border border-primary rounded-5")
+      i.sub(data-feather='minus' class="cursor-pointer w-5 h-5 bg-primary border-r border-primary stroke-white p-[3px]")
+      input.text-center.bg-transparent(class="text-title" type='number' value=`${data}` min='1' max='10')
+      i.add(data-feather='plus' class="cursor-pointer w-5 h-5 bg-primary border-l border-primary stroke-white p-[3px]")

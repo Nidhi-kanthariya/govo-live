@@ -1,0 +1,58 @@
+//- sidebar
+-var sidebar = true;
+
+//- feathet
+-var feather= true;
+
+//- customSelect
+-var customSelect= true;
+
+//- customizer
+-var customizer=true;
+
+//- prism
+-var prism=true;
+
+//- Breadcrumbs
+-var pageTitle="Sample Page";
+-var breadcrumb=['dashboard','Sample Page'];
+
+//- json
+include ../../data/all-data
+
+//- mixin
+include ../../mixin/mixin
+
+doctype html
+html(lang='en')
+   include ../../layout/header-files
+   body(dir="ltr" class="unique-skin")
+      main.page-wrapper
+         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+            include ../../layout/header/header     
+            // Sidebar Start 
+            div.page-sidebar.sidebar-dark.unique-sidebar
+               include ../../layout/unique
+            // Sidebar End 
+
+            // Page Body Start
+            div.page-body
+               div.grid.grid-cols-12.gap-card-gap
+                  div.col-span-12
+                     div.card
+                        div.card-header.pb-2.header-bottom-border
+                           h3(class="font-bold text-title") Sample Card
+                           p.text-content3 Subtitle here
+                        div.card-body
+                           p "In a first ever statement of this kind, Santa Clause has stated that he is imposing a lifetime Christmas present embargo on Darren P Smith, after stating that he was "simply appalled" with the behaviour of Darren Smith over the last year.One of Santa's inner circle of elves told the Polar Paper: "I've never seen Santa this irate before. He was shouting with rage so much that his cheeks turned purple and his beard was covered in little flecks of spittle. Darren Smith must have done some pretty naughty things to make him this furious. I mean, a lifetime ban on Christmas presents - it's unheard of!". Considerable speculation has circulated regarding precisely what it is that Darren Smith did to arouse Santa's wrath, but no clear answers have emerged."
+                           ul.mt-5(class="list-decimal list-inside text-content3")
+                              li Delete the negative; accentuate the positive!
+                              li The great thing about fashion is that it always looks forward.
+                              li Fashion moves so quickly that, unless you have.
+                              li I have an obsession with details and pattern.
+
+            // Page Body End 
+            +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+         include ../../components/customizer
+
+   include ../../layout/footer-files

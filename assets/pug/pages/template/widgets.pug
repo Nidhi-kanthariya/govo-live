@@ -1,0 +1,147 @@
+//- sidebar
+-var sidebar = true;
+
+//- feather
+-var feather= true;
+
+//- custom select
+-var customSelect= true;
+
+//- customizer  
+-var customizer=true;
+
+//- apex-chart
+-var apexChart=true;
+-var uniqueApex=true; 
+-var friendlyApex=true;
+-var materialApex=true;
+-var minimalApex=true;
+
+//- Chart Js
+-var chartJs=true;
+
+//- Breadcrumbs
+-var pageTitle="Widgets";
+-var breadcrumb=['Widgets'];
+
+//- all JSON  
+include ../../data/all-data
+
+//- all mixin   
+include ../../mixin/mixin
+
+doctype html
+html(lang='en')
+   include ../../layout/header-files
+   body(dir="ltr" class="unique-skin")
+      main.page-wrapper
+         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+            include ../../layout/header/header     
+            // Sidebar Start 
+            div.page-sidebar.sidebar-dark.unique-sidebar
+               include ../../layout/unique
+            // Sidebar End
+
+            // Page Body Start
+            div.page-body
+               div.grid.grid-cols-12.gap-card-gap
+                  div.col-span-8(class="xl:col-span-12") 
+                     div(class="grid grid-cols-2 gap-card-gap")
+                        each data in WIDGET3_DATA
+                           div.col-span-1(class="md:col-span-2")
+                              div.card
+                                 +widget3(data)
+                  div.col-span-4(class="xl:col-span-6 xl3:col-span-12")
+                     div.card.gap-0
+                        div.card-header
+                           +card-header("Recent Statistics","select",HiSTORY_DATE_DROPDOWN)
+                        div.card-body
+                           div.relative 
+                              div#recentStatisticsChart1           
+                              div#recentStatisticsChart2(class="absolute inset-0")
+
+                  div.col-span-4(class="xl:col-span-6 lg:col-span-12 xl3:order-5")
+                     div.grid.grid-cols-2.gap-card-gap  
+                        div.col-span-2(class="lg:col-span-1 2md:col-span-2")
+                           div.card
+                              div.card-header
+                                 +card-header("Earnings","setting", HISTORY_DROPDOWN)
+                              div.card-body
+                                 +widget2(EARNINGS_WIDGET)
+                        div.col-span-2(class="lg:col-span-1 2md:col-span-2")
+                           div.card
+                              div.card-body
+                                 +widget1(REVENUE_WIDGET)
+                  div.col-span-4(class="xl:col-span-6 lg:col-span-12")
+                     div.grid.grid-cols-2.gap-card-gap
+                        div.col-span-2(class="lg:col-span-1 2md:col-span-2")  
+                           div.card
+                              div.card-header
+                                 +card-header("Inventory Cost","setting", HISTORY_DROPDOWN)
+                              div.card-body 
+                                 +product-list(INVENTORY_CARD)
+                        div.col-span-2(class="lg:col-span-1 2md:col-span-2")
+                           div.card.p-0(class="overflow-hidden")
+                              div.relative
+                                 img(class="w-full h-[178px] 2xl:h-[170px] lg:h-[193px] 2md:h-[170px]" src="../../assets/images/banner/2.jpg" alt="banner") 
+                                 div(class="absolute top-1/2 -translate-y-1/2 left-0 max-w-[70%] px-card-space")   
+                                    h5(class="text-lg font-extrabold text-title") $5,859
+                                    p(class="text-lg font-normal 4xl:text-sm text-title") Make an announcement to your coworkers
+
+                  div.col-span-4(class="xl:col-span-6 lg:col-span-12")
+                     div.grid.grid-cols-2.gap-card-gap
+                        div.col-span-2(class="lg:col-span-1 2md:col-span-2")
+                           div.card
+                              div.card-header
+                                 +card-header("Advertising","setting", HISTORY_DROPDOWN)
+                              div.card-body 
+                                 +product-list(ADVERTISE_CARD)
+                        div.col-span-2(class="lg:col-span-1 2md:col-span-2")
+                           div.card(class="!gap-1 lg:!gap-6") 
+                              div.card-header
+                                 +card-header("Most Location Visits") 
+                              div.card-body
+                                 div.flex.items-center.h-full  
+                                    +legend-image-1(IMAGE_LEGEND_1)
+
+                  div.col-span-8(class="xl3:order-last 3xl:col-span-8 xl3:col-span-12")
+                     div.card(class="overflow-hidden")
+                        div.card-header
+                           +card-header("Social Media Statistics","select", HISTORY_DROPDOWN)
+                        div.card-body
+                           div#socialAreaChart(class="-mx-[60px] md:-mx-[45px] sm:-mx-[35px] 2sm:-mx-[34px]")      
+
+                  div.col-span-4(class="xl3:col-span-6 lg:col-span-12")
+                     div.card  
+                        div.card-header
+                           +card-header("Sell Overview","setting", HISTORY_DROPDOWN)
+                        div.card-body
+                           div#market-overview-chart(class="-mx-card-space")
+                           ul.flex.items-center.justify-between(class="2md:max-w-[60%] 3sm:max-w-full sm:max-w-[90%] 2md:mx-auto")
+                              li(class="px-[5px]")
+                                 div(class="w-[46px] mx-auto text-center") 
+                                    div.sales-small.sales-small-1(class="h-[45px]")
+                                 div.flex.items-center.justify-center.flex-col 
+                                    span(class="text-sm font-semibold text-title") 300     
+                                    span(class="font-semibold text-3xs text-content") Watch Sale     
+                              li(class="w-[1px] h-[30px] bg-border-light")  
+                              li(class="px-[5px]")
+                                 div(class="w-[46px] mx-auto text-center") 
+                                    div.sales-small.sales-small-2(class="h-[45px]")
+                                 div.flex.items-center.justify-center.flex-col 
+                                    span(class="text-sm font-semibold text-title") 1120   
+                                    span(class="font-semibold text-3xs text-content") Phone Sale    
+                              li(class="w-[1px] h-[30px] bg-border-light")  
+                              li(class="px-[5px]")
+                                 div(class="w-[46px] mx-auto text-center") 
+                                    div.sales-small.sales-small-3(class="h-[45px]") 
+                                 div.flex.items-center.justify-center.flex-col 
+                                    span(class="text-sm font-semibold text-title") 530    
+                                    span(class="font-semibold text-3xs text-content") Tablet Sale 
+
+
+            // Page Body End 
+            +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+         include ../../components/customizer
+
+   include ../../layout/footer-files

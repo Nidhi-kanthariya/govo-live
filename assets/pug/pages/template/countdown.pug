@@ -1,0 +1,519 @@
+//- sidebar
+-var sidebar = true;
+
+//- feathet
+-var feather= true;
+
+//- customSelect
+-var customSelect= true;
+
+//- customizer
+-var customizer=true;
+
+//- prism
+-var prism=true;
+
+//- Breadcrumbs
+-var pageTitle="Countdown";
+-var breadcrumb=['Bonus Ui','Countdown'];
+
+//- json
+include ../../data/all-data
+
+//- mixin
+include ../../mixin/mixin
+
+doctype html
+html(lang='en')  
+   include ../../layout/header-files 
+   body(dir="ltr" class="unique-skin")
+      main.page-wrapper
+         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+            include ../../layout/header/header     
+            // Sidebar Start 
+            div.page-sidebar.sidebar-dark.unique-sidebar
+               include ../../layout/unique
+            // Sidebar End 
+
+            // Page Body Start 
+            div.page-body
+               div.grid.grid-cols-12.gap-card-gap
+                  div.col-span-4(class="lg:col-span-6 2lg:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold With Seconds
+                              p   Add only seconds countdown using 
+                                 strong .countdown-1 
+                                 |   class.                                    
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5 sm:!p-2")
+                                 div.flex.flex-wrap.gap-2.justify-center.items-center
+                                    div.bg-gray-light.p-4(class="sm:p-2")
+                                       ul.timer.countdown-1.flex.flex-wrap.gap-2.justify-center.items-center(class="sm:gap-1")
+                                          li
+                                             span.seconds.time-value
+                                             span.timer-label Sec
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap items-center justify-center gap-2"&gt;
+                                       |    &lt;div class="p-4 bg-gray-light sm:p-2"&gt;
+                                       |       &lt;ul class="flex flex-wrap items-center justify-center gap-2 timer countdown-1 sm:gap-1"&gt;
+                                       |         &lt;li&gt;
+                                       |           &lt;span class="seconds time-value"&gt;&lt;/span&gt;
+                                       |           &lt;span class="timer-label"&gt; Sec &lt;/span&gt;
+                                       |         &lt;/li&gt;
+                                       |       &lt;/ul&gt;  
+                                       |    &lt;/div&gt; 
+                                       |&lt;/div&gt;
+                  div.col-span-4(class="lg:col-span-6 2lg:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold With minutes
+                              p   Set minutes countdown style using 
+                                 strong .countdown-1 
+                                 |   class.                                    
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5 sm:!p-2")
+                                 div.flex.flex-wrap.gap-2(class="items-center justify-center")
+                                    div.bg-gray-light.p-4(class="sm:p-2")
+                                       ul.timer.countdown-1.flex.flex-wrap.gap-2.justify-center.items-center2(class="sm:gap-1")
+                                          li
+                                             span.minutes.time-value
+                                             span.timer-label Min
+                                          li
+                                             span.seconds.time-value
+                                             span.timer-label Sec
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap items-center justify-center gap-2"&gt;
+                                       |    &lt;div class="p-4 bg-gray-light sm:p-2"&gt;
+                                       |       &lt;ul class="flex flex-wrap items-center justify-center gap-2 timer countdown-1 sm:gap-1"&gt;
+                                       |         &lt;li"&gt;
+                                       |           &lt;span class="minutes time-value"&gt;&lt;/span&gt;
+                                       |           &lt;span class="timer-label"&gt; Min &lt;/span&gt;
+                                       |         &lt;/li&gt;
+                                       |         &lt;li"&gt;
+                                       |           &lt;span class="seconds time-value"&gt;&lt;/span&gt;
+                                       |           &lt;span class="timer-label"&gt; Sec &lt;/span&gt;
+                                       |         &lt;/li&gt;
+                                       |       &lt;/ul&gt;  
+                                       |    &lt;/div&gt; 
+                                       |&lt;/div&gt;
+                  div.col-span-4(class="lg:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold With Hours
+                              p   Add hours countdown using 
+                                 strong .countdown 
+                                 |   class.                                    
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5 sm:!p-2")
+                                 div.flex.flex-wrap.gap-2.justify-center.items-center
+                                    div.bg-gray-light.p-4(class="sm:p-2")
+                                       ul.timer.countdown.flex.flex-wrap.gap-2.justify-center.items-center(class="sm:gap-1")
+                                          li
+                                             span.hours.time-value
+                                             span.timer-label Hours
+                                          li
+                                             span.minutes.time-value
+                                             span.timer-label Min
+                                          li
+                                             span.seconds.time-value
+                                             span.timer-label Sec
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap items-center justify-center gap-2"&gt;
+                                       |    &lt;div class="p-4 bg-gray-light sm:p-2"&gt;
+                                       |       &lt;ul class="flex flex-wrap items-center justify-center gap-2 timer countdown sm:gap-1"&gt;
+                                       |         &lt;li&gt;
+                                       |           &lt;span class="hour time-value"&gt;&lt;/span&gt;
+                                       |           &lt;span class="timer-label"&gt; Hours &lt;/span&gt;
+                                       |         &lt;/li&gt;
+                                       |         &lt;li&gt;
+                                       |           &lt;span class="minutes time-value"&gt;&lt;/span&gt;
+                                       |           &lt;span class="timer-label"&gt; Min &lt;/span&gt;
+                                       |         &lt;/li&gt;
+                                       |         &lt;li&gt;
+                                       |           &lt;span class="seconds time-value"&gt;&lt;/span&gt;
+                                       |           &lt;span class="timer-label"&gt; Sec &lt;/span&gt;
+                                       |         &lt;/li&gt;
+                                       |       &lt;/ul&gt;  
+                                       |    &lt;/div&gt; 
+                                       |&lt;/div&gt;
+                  div.col-span-12
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Countdown Styles
+                              p   Set the countdown using 
+                                 strong .countdown 
+                                 | or 
+                                 strong .countdown-1
+                                 |   class.                                    
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5 sm:!p-2")
+                                 div.flex.flex-wrap.gap-4.justify-center.items-center
+                                    div.bg-gray-light.p-4(class="sm:p-2")
+                                       ul.timer.countdown.flex.flex-wrap.gap-2.justify-center.items-center(class="sm:gap-1")
+                                          li
+                                             span.days.time-value
+                                             span.timer-label Days
+                                          li
+                                             span.hours.time-value
+                                             span.timer-label Hours
+                                          li
+                                             span.minutes.time-value
+                                             span.timer-label Min
+                                          li
+                                             span.seconds.time-value
+                                             span.timer-label Sec
+
+                                    div.bg-gray-light.p-4(class="sm:p-2")
+                                       ul.timer.countdown-1.flex.flex-wrap.gap-2.justify-center.items-center(class="sm:gap-1")
+                                          li
+                                             span.days.time-value
+                                             span.timer-label Days
+                                          li
+                                             span.hours.time-value
+                                             span.timer-label Hours
+                                          li
+                                             span.minutes.time-value
+                                             span.timer-label Min
+                                          li
+                                             span.seconds.time-value
+                                             span.timer-label Sec
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap items-center justify-center gap-2"&gt;
+                                       |    &lt;!-- Countdown style start --&gt;
+                                       |    &lt;div class="p-4 bg-gray-light sm:p-2"&gt;
+                                       |       &lt;ul class="flex flex-wrap items-center justify-center gap-2 timer countdown sm:gap-1"&gt;
+                                       |         &lt;li&gt;
+                                       |           &lt;span class="days time-value"&gt;&lt;/span&gt;
+                                       |           &lt;span class="timer-label"&gt; Days &lt;/span&gt;
+                                       |         &lt;/li&gt;
+                                       |         &lt;li&gt;
+                                       |           &lt;span class="hour time-value"&gt;&lt;/span&gt;
+                                       |           &lt;span class="timer-label"&gt; Hours &lt;/span&gt;
+                                       |         &lt;/li&gt;
+                                       |         &lt;li&gt;
+                                       |           &lt;span class="minutes time-value"&gt;&lt;/span&gt;
+                                       |           &lt;span class="timer-label"&gt; Min &lt;/span&gt;
+                                       |         &lt;/li&gt;
+                                       |         &lt;li&gt;
+                                       |           &lt;span class="seconds time-value"&gt;&lt;/span&gt;
+                                       |           &lt;span class="timer-label"&gt; Sec &lt;/span&gt;
+                                       |         &lt;/li&gt;
+                                       |       &lt;/ul&gt;  
+                                       |    &lt;/div&gt; 
+                                       |
+                                       |    &lt;!-- Countdown-1 style start --&gt;
+                                       |    &lt;div class="p-4 bg-gray-light sm:p-2"&gt;
+                                       |       &lt;ul class="flex flex-wrap items-center justify-center gap-2 timer countdown-1 sm:gap-1"&gt;
+                                       |         &lt;li&gt;
+                                       |           &lt;span class="days time-value"&gt;&lt;/span&gt;
+                                       |           &lt;span class="timer-label"&gt; Days &lt;/span&gt;
+                                       |         &lt;/li&gt;
+                                       |         &lt;li&gt;
+                                       |           &lt;span class="hour time-value"&gt;&lt;/span&gt;
+                                       |           &lt;span class="timer-label"&gt; Hours &lt;/span&gt;
+                                       |         &lt;/li&gt;
+                                       |         &lt;li&gt;
+                                       |           &lt;span class="minutes time-value"&gt;&lt;/span&gt;
+                                       |           &lt;span class="timer-label"&gt; Min &lt;/span&gt;
+                                       |         &lt;/li&gt;
+                                       |         &lt;li&gt;
+                                       |           &lt;span class="seconds time-value"&gt;&lt;/span&gt;
+                                       |           &lt;span class="timer-label"&gt; Sec &lt;/span&gt;
+                                       |         &lt;/li&gt;
+                                       |       &lt;/ul&gt;  
+                                       |    &lt;/div&gt; 
+                                       |&lt;/div&gt;
+                  div.col-span-12
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Countdown Label Styles
+                              p   Set countdown style using 
+                                 strong .countdown-3  
+                                 |   or 
+                                 strong .countdown-4 
+                                 |   class.                                    
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5 sm:!p-2")
+                                 div.flex.flex-wrap.gap-4.justify-center.items-center
+                                    div.bg-gray-light.p-4(class="sm:p-2")
+                                       ul.timer.countdown-3.flex.flex-wrap.gap-2.justify-center.items-center(class="sm:gap-1")
+                                          li
+                                             span.days.time-value
+                                             span.timer-label d
+                                          li
+                                             span.hours.time-value
+                                             span.timer-label h
+                                          li
+                                             span.minutes.time-value
+                                             span.timer-label m
+                                          li
+                                             span.seconds.time-value
+                                             span.timer-label s
+
+                                    div.bg-gray-light.p-4(class="sm:p-2")
+                                       ul.timer.countdown-4.flex.flex-wrap.gap-2.justify-center.items-center(class="sm:gap-1")
+                                          li
+                                             span.days.time-value
+                                             span.timer-label Days
+                                          li
+                                             span.hours.time-value
+                                             span.timer-label Hours
+                                          li
+                                             span.minutes.time-value
+                                             span.timer-label Min
+                                          li
+                                             span.seconds.time-value
+                                             span.timer-label Sec
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap items-center justify-center gap-2"&gt;
+                                       |    &lt;!-- Countdown-3 style start --&gt;
+                                       |    &lt;div class="p-4 bg-gray-light sm:p-2"&gt;
+                                       |       &lt;ul class="flex flex-wrap items-center justify-center gap-2 timer countdown-3 sm:gap-1"&gt;
+                                       |         &lt;li&gt;
+                                       |           &lt;span class="days time-value"&gt;&lt;/span&gt;
+                                       |           &lt;span class="timer-label"&gt; d &lt;/span&gt;
+                                       |         &lt;/li&gt;
+                                       |         &lt;li&gt;
+                                       |           &lt;span class="hour time-value"&gt;&lt;/span&gt;
+                                       |           &lt;span class="timer-label"&gt; h &lt;/span&gt;
+                                       |         &lt;/li&gt;
+                                       |         &lt;li&gt;
+                                       |           &lt;span class="minutes time-value"&gt;&lt;/span&gt;
+                                       |           &lt;span class="timer-label"&gt; m &lt;/span&gt;
+                                       |         &lt;/li&gt;
+                                       |         &lt;li&gt;
+                                       |           &lt;span class="seconds time-value"&gt;&lt;/span&gt;
+                                       |           &lt;span class="timer-label"&gt; s &lt;/span&gt;
+                                       |         &lt;/li&gt;
+                                       |       &lt;/ul&gt;  
+                                       |    &lt;/div&gt; 
+                                       |  
+                                       |    &lt;!-- Countdown-4 style start --&gt;
+                                       |    &lt;div class="p-4 bg-gray-light sm:p-2"&gt;
+                                       |       &lt;ul class="flex flex-wrap items-center justify-center gap-2 timer countdown-4 sm:gap-1"&gt;
+                                       |         &lt;li&gt;
+                                       |           &lt;span class="days time-value"&gt;&lt;/span&gt;
+                                       |           &lt;span class="timer-label"&gt; Days &lt;/span&gt;
+                                       |         &lt;/li&gt;
+                                       |         &lt;li&gt;
+                                       |           &lt;span class="hour time-value"&gt;&lt;/span&gt;
+                                       |           &lt;span class="timer-label"&gt; Hours &lt;/span&gt;
+                                       |         &lt;/li&gt;
+                                       |         &lt;li&gt;
+                                       |           &lt;span class="minutes time-value"&gt;&lt;/span&gt;
+                                       |           &lt;span class="timer-label"&gt; Min &lt;/span&gt;
+                                       |         &lt;/li&gt;
+                                       |         &lt;li&gt;
+                                       |           &lt;span class="seconds time-value"&gt;&lt;/span&gt;
+                                       |           &lt;span class="timer-label"&gt; Sec &lt;/span&gt;
+                                       |         &lt;/li&gt;
+                                       |       &lt;/ul&gt;  
+                                       |    &lt;/div&gt; 
+                                       |&lt;/div&gt;
+                  div.col-span-6(class="lg:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Background Countdown
+                              p   Add countdown with background using 
+                                 strong .countdown-5 
+                                 |   or 
+                                 strong .countdown-6  
+                                 |   class.                                  
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5 sm:!p-2")
+                                 div.flex.flex-wrap.gap-4.justify-center.items-center
+                                    div.bg-primary.p-4(class="sm:p-2")
+                                       ul.timer.countdown-5.flex.flex-wrap.gap-2.justify-center.items-center(class="sm:gap-1")
+                                          li
+                                             span.timer-label Days
+                                             span.days.time-value
+                                          li
+                                             span.timer-label Hours
+                                             span.hours.time-value
+                                          li
+                                             span.timer-label Min
+                                             span.minutes.time-value
+                                          li
+                                             span.timer-label Sec
+                                             span.seconds.time-value
+                                    div.bg-gray-light.p-4(class="sm:p-2")
+                                       ul.timer.countdown-6.flex.flex-wrap.gap-2.justify-center.items-center(class="sm:!gap-1")
+                                          li
+                                             span.days.time-value
+                                             span.timer-label Days
+                                          li
+                                             span.hours.time-value
+                                             span.timer-label Hours
+                                          li
+                                             span.minutes.time-value
+                                             span.timer-label Min
+                                          li
+                                             span.seconds.time-value
+                                             span.timer-label Sec
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap items-center justify-center gap-2"&gt;
+                                       |    &lt;!-- Countdown-5 style start --&gt;
+                                       |    &lt;div class="p-4 bg-primary sm:p-2"&gt;
+                                       |       &lt;ul class="flex flex-wrap items-center justify-center gap-2 timer countdown-5 sm:gap-1"&gt;
+                                       |         &lt;li&gt;
+                                       |           &lt;span class="days time-value"&gt;&lt;/span&gt;
+                                       |           &lt;span class="timer-label"&gt; Days &lt;/span&gt;
+                                       |         &lt;/li&gt;
+                                       |         &lt;li&gt;
+                                       |           &lt;span class="hour time-value"&gt;&lt;/span&gt;
+                                       |           &lt;span class="timer-label"&gt; Hours &lt;/span&gt;
+                                       |         &lt;/li&gt;
+                                       |         &lt;li&gt;
+                                       |           &lt;span class="minutes time-value"&gt;&lt;/span&gt;
+                                       |           &lt;span class="timer-label"&gt; Min &lt;/span&gt;
+                                       |         &lt;/li&gt;
+                                       |         &lt;li&gt;
+                                       |           &lt;span class="seconds time-value"&gt;&lt;/span&gt;
+                                       |           &lt;span class="timer-label"&gt; Sec &lt;/span&gt;
+                                       |         &lt;/li&gt;
+                                       |       &lt;/ul&gt;  
+                                       |    &lt;/div&gt;
+                                       |  
+                                       |    &lt;!-- Countdown-6 style start --&gt;
+                                       |    &lt;div class="p-4 bg-gray-light sm:p-2"&gt;
+                                       |       &lt;ul class="flex flex-wrap items-center justify-center gap-2 timer countdown-6 sm:gap-1"&gt;
+                                       |         &lt;li&gt;
+                                       |           &lt;span class="days time-value"&gt;&lt;/span&gt;
+                                       |           &lt;span class="timer-label"&gt; Days &lt;/span&gt;
+                                       |         &lt;/li&gt;
+                                       |         &lt;li&gt;
+                                       |           &lt;span class="hour time-value"&gt;&lt;/span&gt;
+                                       |           &lt;span class="timer-label"&gt; Hours &lt;/span&gt;
+                                       |         &lt;/li&gt;
+                                       |         &lt;li&gt;
+                                       |           &lt;span class="minutes time-value"&gt;&lt;/span&gt;
+                                       |           &lt;span class="timer-label"&gt; Min &lt;/span&gt;
+                                       |         &lt;/li&gt;
+                                       |         &lt;li&gt;
+                                       |           &lt;span class="seconds time-value"&gt;&lt;/span&gt;
+                                       |           &lt;span class="timer-label"&gt; Sec &lt;/span&gt;
+                                       |         &lt;/li&gt;
+                                       |       &lt;/ul&gt;  
+                                       |    &lt;/div&gt;  
+                                       |&lt;/div&gt;
+                  div.col-span-6(class="lg:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Countdown Label 
+                              p   Add countdown with label style using 
+                                 strong .countdown-7 
+                                 |   class.                                    
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5 sm:!p-2")
+                                 div.flex.flex-wrap.gap-2.justify-center.items-center
+                                    div.bg-gray-light.p-4(class="sm:p-2")
+                                       ul.timer.flex.flex-col.flex-wrap.gap-2.justify-center.items-center
+                                          li.flex.flex-col.gap-1.justify-center.items-center.font-bold
+                                             span.days.time-value.leading-none(class="text-[1.25rem]")
+                                             span.timer-label Days
+                                          ul.timer.countdown-7.flex.flex-wrap.gap-2(class="items-center justify-center sm:gap-1")
+                                             li
+                                                span.hours.time-value
+                                                span.timer-label Hours
+                                             li
+                                                span.minutes.time-value
+                                                span.timer-label Min
+                                             li
+                                                span.seconds.time-value
+                                                span.timer-label Sec
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap items-center justify-center gap-2"&gt;
+                                       |    &lt;div class="p-4 bg-gray-light sm:p-2"&gt;
+                                       |       &lt;ul class="flex flex-col items-center justify-center gap-2 timer"&gt;
+                                       |         &lt;li class="flex flex-col items-center justify-center gap-1 font-bold"&gt;
+                                       |           &lt;span class="days time-value text-[1.25rem]"&gt;&lt;/span&gt;
+                                       |           &lt;span class="timer-label"&gt; Days &lt;/span&gt;
+                                       |         &lt;/li&gt;
+                                       |         &lt;ul class="flex flex-wrap items-center justify-center gap-2 timer countdown-7 sm:gap-1"&gt;
+                                       |           &lt;li&gt;
+                                       |             &lt;span class="hour time-value"&gt;&lt;/span&gt;
+                                       |             &lt;span class="timer-label"&gt; Hours &lt;/span&gt;
+                                       |           &lt;/li&gt;
+                                       |           &lt;li&gt;
+                                       |             &lt;span class="minutes time-value"&gt;&lt;/span&gt;
+                                       |             &lt;span class="timer-label"&gt; Minu &lt;/span&gt;
+                                       |           &lt;/li&gt;
+                                       |           &lt;li&gt;
+                                       |             &lt;span class="seconds time-value"&gt;&lt;/span&gt;
+                                       |             &lt;span class="timer-label"&gt; Sec &lt;/span&gt;
+                                       |           &lt;/li&gt;
+                                       |         &lt;/ul&gt; 
+                                       |       &lt;/ul&gt; 
+                                       |    &lt;/div&gt; 
+                                       |&lt;/div&gt;
+
+
+            // Page Body End 
+            +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+      include ../../components/customizer
+
+   include ../../layout/footer-files

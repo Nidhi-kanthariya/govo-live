@@ -1,0 +1,146 @@
+//- sidebar
+-var sidebar = true;
+
+//- feather
+-var feather= true;
+
+//- customSelect
+-var customSelect= true;
+
+//- customizer 
+-var customizer=true;
+
+//- swiper-slider
+-var swiper=true;
+
+//-  emojiPicker
+-var emojiPicker=true;
+
+//-  photoswipe
+-var photoswipe=true;
+
+//-  chatApp
+-var chatApp=true;
+
+//- Breadcrumbs
+-var pageTitle="Chat App";
+-var breadcrumb=['Ui Kits','Chat App'];
+
+//- json
+include ../../data/all-data
+
+//- mixin
+include ../../mixin/mixin
+
+doctype html
+html(lang='en')
+   include ../../layout/header-files 
+   body(dir="ltr" class="unique-skin") 
+      main.page-wrapper
+         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+            include ../../layout/header/header
+            // Sidebar Start 
+            div.page-sidebar.sidebar-dark.unique-sidebar
+               include ../../layout/unique
+            // Sidebar End 
+
+            // Page Body Start 
+            div.page-body
+               div.grid.grid-cols-12.border.border-gray-light.bg-white.rounded.h-full.gap-0.relative.overflow-hidden.chatting-app
+                  div.col-span-3(class="2xl:col-span-4")
+                     include ../../layout/chat-layout/chat-left-sidebar
+                  div.col-span-6(class="chat-main 2xl:col-span-8 lg:col-span-12") 
+                     div.relative.main-wrapper(class="lg:h-[920px] sm:h-[670px]") 
+                        div.p-4.pb-0
+                           include ../../layout/chat-layout/chat-main-header
+                        div.h-full.relative
+                           include ../../layout/chat-layout/chat-main
+                        div.p-4.pt-0.absolute.bottom-0.left-0.right-0.mx-4.right-sidebar(class="lg:mb-5")
+                           include ../../layout/chat-layout/chat-main-footer
+                  div.col-span-3(class="2xl:col-span-4")
+                     include ../../layout/chat-layout/chat-right-sidebar
+
+            // Page Body End 
+            +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+      include ../../components/customizer
+
+      //- Voice call modal
+      div.modal-main
+         input#voice-call-modal(class="peer" name="voice-call-modal" type='checkbox')
+         label.modal-overlay(class="peer-checked:block" for='voice-call-modal')
+         div.modal.modal-center(class="max-w-[450px] 2md:!w-full peer-checked:opacity-100 peer-checked:visible rounded-xl")
+            div.modal-body(class="!p-0 min-h-[500px]")
+               div.voicecall.relative
+                  img(src="../../assets/images/chat-app/12.jpg" alt="girl" class="h-[500px] w-[450px] opacity-70")
+                  div.voicecall-content.flex.flex-col.gap-3.absolute.items-center(class="bottom-[10%] left-0 right-0")
+                     h3.font-bold.text-white.m-0.text-xl3 Dmitriy Groshev
+                     spa.text-white.font-semibold LOG ANGELINA CALIFORNIA 
+                     ul.flex.gap-3.flex-wrap.items-center.justify-center
+                        li
+                           label(for='accept-call-modal')
+                              +SVG_ICON("Calling","w-[4rem] h-[4rem] p-[12px] stroke-white bg-success rounded-full relative")
+                        li  
+                           label(for="voice-call-modal")
+                              +SVG_ICON("Call","w-[4rem] h-[4rem] p-[12px] stroke-white bg-danger rounded-full rotate-[132deg]")
+
+      //- Accept call modal
+      div.modal-main
+         input#accept-call-modal(class="peer" name="accept-call-modal" type='checkbox')
+         label.modal-overlay(class="peer-checked:block" for='accept-call-modal')
+         div.modal.modal-center(class="max-w-[450px] 2md:!w-full peer-checked:opacity-100 peer-checked:visible rounded-xl")
+            div.modal-body(class="!p-0 min-h-[500px]")
+               div.voicecall.relative
+                  img(src="../../assets/images/chat-app/12.jpg" alt="girl" class="h-[500px] w-[450px] opacity-70")
+                  div.voicecall-content.flex.flex-col.gap-3.absolute.items-center(class="bottom-[10%] left-0 right-0")
+                     h3.font-bold.text-white.m-0.text-xl3 Dmitriy Groshev
+                     spa.text-white.font-semibold LOG ANGELINA CALIFORNIA 
+                     ul.flex.gap-3.flex-wrap.items-center.justify-center
+                        li  
+                           +SVG_ICON("Voice-2","w-9 h-9 p-2 stroke-title bg-white rounded-full" )
+                        li 
+                           label.swap
+                              input(type='checkbox')
+                              span.text-3xl.swap-on
+                                 +SVG_ICON("Volume-Off","w-9 h-9 p-2 stroke-title bg-white rounded-full" )
+                              span.text-3xl.swap-off
+                                 +SVG_ICON("Volume-Up","w-9 h-9 p-2 stroke-title bg-white rounded-full" )
+                        li
+                           label(for="voice-call-modal")
+                              +SVG_ICON("Call","w-[4rem] h-[4rem] p-[12px] cursor-pointer stroke-white bg-danger rounded-full rotate-[132deg] relative" )
+                        li  
+                           +SVG_ICON("Add-User","w-9 h-9 p-2 stroke-title bg-white rounded-full" )
+                        li  
+                           i(data-feather="pause" ,class="p-2 bg-white rounded-full w-9 h-9 stroke-title")
+
+
+      //- Video call modal
+      div.modal-main 
+         input#video-call-modal(class="peer" name="video-call-modal" type='checkbox')
+         label.modal-overlay(class="peer-checked:block" for='video-call-modal')
+         div.modal.modal-center(class="!min-w-[850px] lg:!min-w-[600px] 2md:!min-w-[450px] sm:!min-w-[300px] !h-[715px] lg:!h-[692px] 2md:!h-[400px] 2sm:!min-w-[200px] 2sm:!h-[250px] peer-checked:opacity-100 peer-checked:visible rounded-none")
+            div.modal-body(class="!p-0")
+               div.countdown.flex.gap-1.wrap.items-center.absolute(class="top-[3%] z-[1] right-[5%] text-[36px] 2md:text-3xl-responsive text-white font-extrabold")
+                  label#callminutes 00
+                  span :
+                  label#callseconds 00
+               div.avatar.rounded-none.relative(class="!min-w-[850px] !h-[400px] lg:!min-w-[600px] 2md:!min-w-[450px] sm:!min-w-[300px] 2sm:!min-w-[200px] 2sm:!h-[250px]")
+                  img(src='../../assets/images/chat-app/8.jpg' alt='avatar')
+
+               div.video-setting.flex.justify-center.items-center.gap-2.py-4(class="2md:absolute 2md:bottom-[5%] 2md:left-0 2md:right-0")
+                  label.swap
+                     input(type='checkbox')
+                     span.text-3xl.swap-on
+                        +SVG_ICON("Volume-Off","w-[50px] h-[50px] lg:w-[35px] lg:h-[35px] lg:p-[0.5rem] stroke-title cursor-pointer p-[0.90rem] bg-gray-light rounded-full")
+                     span.text-3xl.swap-off
+                        +SVG_ICON("Volume-Up","w-[50px] h-[50px] lg:w-[35px] lg:h-[35px] lg:p-[0.5rem] stroke-title cursor-pointer p-[0.90rem] bg-gray-light rounded-full")
+                  +SVG_ICON("Voice-2","w-[50px] h-[50px] lg:w-[35px] lg:h-[35px] lg:p-[0.5rem] stroke-title cursor-pointer p-[0.90rem] bg-gray-light rounded-full")
+                  +SVG_ICON("Calling","w-[60px] h-[60px] lg:w-[50px] lg:h-[50px] lg:p-[0.75rem] stroke-white cursor-pointer p-4 bg-danger rounded-full")
+                  +SVG_ICON("Video","w-[50px] h-[50px] lg:w-[35px] lg:h-[35px] lg:p-[0.5rem] stroke-title cursor-pointer p-[0.90rem] bg-gray-light rounded-full")
+                  +SVG_ICON("Add-User","w-[50px] h-[50px] lg:w-[35px] lg:h-[35px] lg:p-[0.5rem] stroke-title cursor-pointer p-[0.90rem] bg-gray-light rounded-full")
+
+               div.group-videocall.flex.gap-4.flex-wrap.justify-center.items-center(class="lg:gap-2 2md:hidden")
+                  img(src='../../assets/images/chat-app/9.jpg' alt='women wear black jacket' class="max-w-[200px] lg:max-w-[190px] h-[200px] rounded-none")
+                  img(src='../../assets/images/chat-app/10.jpg' alt='men in jacket' class="max-w-[200px] lg:max-w-[190px] h-[200px] rounded-none")
+                  img(src='../../assets/images/chat-app/11.jpg' alt='women in gray shirt' class="max-w-[200px] lg:max-w-[190px] h-[200px] rounded-none")
+
+   include ../../layout/footer-files

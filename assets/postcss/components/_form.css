@@ -1,0 +1,274 @@
+/*=====================
+    Form CSS
+  ==========================*/
+
+@layer components {
+  .theme-form {
+    @apply m-4;
+
+    h3 {
+      @apply text-xl text-title font-bold mb-1 text-center;
+    }
+
+    p {
+      @apply text-xs font-semibold text-content mb-5 text-center mt-[-0.75rem];
+    }
+
+    label {
+      @apply text-sm !leading-none font-semibold text-content;
+    }
+
+    input {
+      @apply bg-gray-light rounded-5 w-full py-[0.6875rem] pl-[1.5625rem] pr-[3.4375rem] text-xs font-semibold text-title;
+    }
+
+    input[type="checkbox"] {
+      @apply h-[0.8125rem] w-[0.8125rem];
+    }
+
+    a {
+      @apply text-primary text-xs font-semibold;
+    }
+
+    button {
+      @apply my-4 w-full;
+    }
+
+    h4 {
+      @apply relative text-xs font-semibold text-content before:content-[''] after:content-[''] before:left-[22%] 3sm:before:left-[16%] after:right-[22%] 3sm:after:right-[16%] flex flex-row items-center justify-center;
+
+      &:before,
+      &:after {
+        @apply absolute w-8 h-[0.0625rem] bg-primary-extralight top-[50%];
+      }
+    }
+
+    .social {
+      @apply flex gap-2 justify-center;
+
+      .btn {
+        @apply bg-gray-light py-2 px-4 rounded-none text-primary text-xs;
+      }
+
+      img {
+        @apply w-6 h-6;
+      }
+    }
+
+    span {
+      @apply text-xs font-semibold text-content;
+
+      small {
+        @apply text-title text-xs font-bold;
+      }
+    }
+
+    &.login {
+      label {
+        @apply mb-1 block text-xs;
+      }
+
+      input[type="Email"] {
+        @apply focus:border focus:border-primary border-border-light border bg-white w-full;
+      }
+
+      input[type="Date"] {
+        @apply focus:border focus:border-primary border-border-light border bg-white w-full;
+      }
+
+      input[type="password"] {
+        @apply focus:border focus:border-primary border-border-light border bg-white w-full;
+      }
+    }
+
+    .input-lg {
+      @apply text-sm !leading-none mb-0 block font-semibold text-content p-6;
+    }
+
+    .input-md {
+      @apply text-sm !leading-none mb-0 block font-semibold text-content p-4;
+    }
+
+    .input-sm {
+      @apply text-sm !leading-none mb-0 block font-semibold text-content p-2;
+    }
+
+    .input-with-button {
+      @apply text-sm !leading-none mb-0 block font-semibold text-white;
+    }
+
+    textarea {
+      @apply focus:border focus:border-primary border-border-light border bg-gray-light w-full py-[11px] pl-[25px] pr-[55px] text-xs font-semibold text-title;
+    }
+
+    .form-heading {
+      @apply font-extrabold text-5xl mb-3;
+    }
+
+    .input-otp {
+      @apply border-border-light border bg-gray-light rounded-lg p-3;
+    }
+
+    .timer {
+      span {
+        @apply text-title;
+      }
+    }
+
+    &#form-validation {
+      small {
+        @apply hidden text-danger;
+
+        &.error {
+          @apply block;
+        }
+      }
+
+      &.style-error {
+        small {
+          @apply bg-danger text-white rounded-5 px-1;
+        }
+      }
+    }
+
+    &#tooltipvalidation {
+      span {
+        &.error {
+          @apply mt-1 inline-block rounded-5 p-1 text-3xs leading-4;
+          background-color: rgb(241 89 92 / var(--tw-bg-opacity));
+          color: rgb(255 255 255 / var(--tw-text-opacity));
+        }
+      }
+    }
+
+  }
+
+  .ops-svg {
+    @apply absolute top-[11%] right-[30%] w-[23%];
+  }
+
+  .instagram {
+    svg {
+      * {
+        fill: url(#rg);
+      }
+
+      &:not(.svg-inline--fa) {
+        position: absolute;
+      }
+    }
+
+    span {
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      @apply bg-gradient-to-r from-amber-400 via-red-600 to-blue-600;
+    }
+  }
+
+  .heart {
+    svg {
+      * {
+        fill: url(#lgrad);
+      }
+
+      &:not(.svg-inline--fa) {
+        position: absolute;
+      }
+    }
+  }
+
+  .shopping-cart {
+    svg {
+      * {
+        fill: url(#grid);
+      }
+
+      &:not(.svg-inline--fa) {
+        position: absolute;
+      }
+    }
+  }
+
+  .modal-eye {
+    svg {
+      * {
+        fill: url(#rgrad);
+      }
+
+      &:not(.svg-inline--fa) {
+        position: absolute;
+      }
+    }
+  }
+}
+
+.form-outer {
+  form {
+    width: calc(100% * var(--stepNumber));
+
+    .page {
+      width: calc(100% / var(--stepNumber));
+      transition: margin-left 0.3s ease-in-out;
+      
+      input.invalid-input {
+        @apply border border-danger;
+      }
+    }
+  }
+}
+
+.validation-bar {
+  .step {
+    @apply relative;
+    p {
+      &.active {
+        @apply text-primary transition-all ease-linear;
+      }
+    }
+
+    .bullet {
+      @apply h-6 bg-white w-6 border-2 transition-all ease-linear border-title inline-block rounded-full relative text-xs font-medium;
+
+      &.active {
+        @apply border border-primary bg-primary;
+
+        span {
+          @apply hidden;
+        }
+         &:after{
+          @apply bg-primary;
+        }
+      }
+
+      span {
+        @apply text-xs leading-[1.2];
+      }
+
+      
+      &:after {
+        @apply absolute content-[""] left-full rtl:left-unset rtl:right-full bottom-1/2  h-[.125rem] w-[calc(57px_+_(227_-_57)_*_((100vw_-_320px)_/_(1920_-_320)))] md:w-[calc(65px_+_(581_-_65)_*_((100vw_-_320px)_/_(1920_-_320)))] 2xl:w-[calc(54px_+_(250_-_54)_*_((100vw_-_320px)_/_(1920_-_320)))] rtl:w-[calc(57px_+_(227_-_57)_*_((100vw_-_320px)_/_(1920_-_320)))] rtl:md:w-[calc(65px_+_(581_-_65)_*_((100vw_-_320px)_/_(1920_-_320)))] rtl:2xl:w-[calc(54px_+_(250_-_54)_*_((100vw_-_320px)_/_(1920_-_320)))] bg-title;
+      }
+    }
+    &:last-child {
+      .bullet {
+        &:after {
+          @apply hidden;
+        }
+      }
+    }
+  }
+  .check {
+    @apply absolute left-[50%] top-[71%] -translate-x-1/2 -translate-y-1/2 text-sm hidden;
+
+    &.active {
+      @apply block text-white;
+    }
+  }
+}
+
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}

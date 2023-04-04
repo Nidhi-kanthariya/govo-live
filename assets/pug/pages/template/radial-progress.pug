@@ -1,0 +1,237 @@
+//- sidebar
+-var sidebar = true;
+
+//- feathet
+-var feather= true;
+
+//- customSelect
+-var customSelect= true;
+
+//- customizer
+-var customizer=true;
+
+//- prism
+-var prism=true;
+
+//- Breadcrumbs
+-var pageTitle="Radial Progress";
+-var breadcrumb=['Ui Kits','Radial Progress'];
+
+//- json
+include ../../data/all-data
+
+//- mixin
+include ../../mixin/mixin
+
+doctype html
+html(lang='en')  
+   include ../../layout/header-files 
+   body(dir="ltr" class="unique-skin") 
+      main.page-wrapper
+         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+            include ../../layout/header/header     
+            // Sidebar Start
+            div.page-sidebar.sidebar-dark.unique-sidebar
+               include ../../layout/unique
+            // Sidebar End 
+
+            // Page Body Start 
+            div.page-body
+               div.grid.grid-cols-12.gap-card-gap
+                  div.col-span-6(class="xl:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Radial  
+                              p Add radial progress using  
+                                 strong .radial-progress  
+                                 |   class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.items-center.justify-center.flex-wrap.gap-4
+                                    div.radial-progress.text-primary(style="--value:70;") 70% 
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap items-center justify-center gap-2"&gt;
+                                       |    &lt;div class="radial-progress text-primary" style="--value:70;"&gt; 70% &lt;/div&gt;
+                                       |&lt;/div&gt;
+
+                  div.col-span-6(class="xl:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Different Radial  
+                              p Use radial progress With the help of   
+                                 strong .radial-progress  
+                                 |   class with different value.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.items-center.justify-center.flex-wrap.gap-4
+                                    div.radial-progress(style='--value:0;') 0% 
+                                    div.radial-progress(style='--value:15;') 15% 
+                                    div.radial-progress(style='--value:40;') 40% 
+                                    div.radial-progress(style='--value:65;') 65%
+                                    div.radial-progress(style='--value:95;') 95%
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap items-center justify-center gap-2"&gt;
+                                       |    &lt;div class="radial-progress" style="--value:0;"&gt; 0% &lt;/div&gt;
+                                       |    &lt;div class="radial-progress" style="--value:15;"&gt; 15% &lt;/div&gt;
+                                       |    &lt;div class="radial-progress" style="--value:40;"&gt; 40% &lt;/div&gt;
+                                       |    &lt;div class="radial-progress" style="--value:65;"&gt; 65% &lt;/div&gt;
+                                       |    &lt;div class="radial-progress" style="--value:95;"&gt; 95% &lt;/div&gt;
+                                       |&lt;/div&gt;
+
+                  div.col-span-6(class="xl:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Colored Radial  
+                              p  Adding colored radial progress with help of   
+                                 strong .radial-progress  
+                                 |   & 
+                                 strong .text-* 
+                                 |   class with different value.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.items-center.justify-center.flex-wrap.gap-4
+                                    div.radial-progress.radial-sm.text-primary(style='--value:5;') 5% 
+                                    div.radial-progress.radial-sm.text-secondary(style='--value:25;') 25% 
+                                    div.radial-progress.radial-sm.text-info(style='--value:57;') 57% 
+                                    div.radial-progress.radial-sm.text-success(style='--value:78;') 78%
+                                    div.radial-progress.radial-sm.text-warning(style='--value:88;') 88%
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap items-center justify-center gap-2"&gt;
+                                       |    &lt;div class="radial-progress radial-sm text-primary" style="--value:5;"&gt; 5% &lt;/div&gt;
+                                       |    &lt;div class="radial-progress radial-sm text-secondary" style="--value:25;"&gt; 25% &lt;/div&gt;
+                                       |    &lt;div class="radial-progress radial-sm text-info" style="--value:57;"&gt; 57% &lt;/div&gt;
+                                       |    &lt;div class="radial-progress radial-sm text-success" style="--value:78;"&gt; 78% &lt;/div&gt;
+                                       |    &lt;div class="radial-progress radial-sm text-warning" style="--value:88;"&gt; 88% &lt;/div&gt;
+                                       |&lt;/div&gt;
+
+                  div.col-span-6(class="xl:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Radial Label  
+                              p Add colored radial progress bar with label.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.items-center.justify-center.flex-wrap.gap-4
+                                    div.flex.flex-col.justify-center.items-center.gap-2.text-primary
+                                       div.radial-progress(style='--value:5;') 
+                                       span 5%
+                                    div.flex.flex-col.justify-center.items-center.gap-2.text-secondary
+                                       div.radial-progress(style='--value:25;') 
+                                       span 25% 
+                                    div.flex.flex-col.justify-center.items-center.gap-2.text-info
+                                       div.radial-progress(style='--value:57;') 
+                                       span 57% 
+                                    div.flex.flex-col.justify-center.items-center.gap-2.text-success
+                                       div.radial-progress(style='--value:78;') 
+                                       span 78%
+                                    div.flex.flex-col.justify-center.items-center.gap-2.text-warning
+                                       div.radial-progress(style='--value:88;') 
+                                       span 88%
+                                    div.flex.flex-col.justify-center.items-center.gap-2.text-danger
+                                       div.radial-progress(style='--value:97;') 
+                                       span 97%
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap items-center justify-center gap-2"&gt;
+                                       |    &lt;div class="flex flex-col items-center justify-center gap-2 text-primary"&gt;
+                                       |        &lt;div class="radial-progress bg-gray-light" style="--value:5;"&gt;&lt;/div&gt;
+                                       |        &lt;span&gt; 5% &lt;/span&gt;
+                                       |    &lt;/div&gt;
+                                       |    &lt;div class="flex flex-col items-center justify-center gap-2 text-secondary"&gt;
+                                       |        &lt;div class="radial-progress bg-gray-light" style="--value:25;"&gt; 25% &lt;/div&gt;
+                                       |        &lt;span&gt; 25% &lt;/span&gt;
+                                       |    &lt;/div&gt;
+                                       |    &lt;div class="flex flex-col items-center justify-center gap-2 text-info"&gt;
+                                       |        &lt;div class="radial-progress bg-gray-light" style="--value:57;"&gt; 57% &lt;/div&gt;
+                                       |        &lt;span&gt; 57% &lt;/span&gt;
+                                       |    &lt;/div&gt;
+                                       |    &lt;div class="flex flex-col items-center justify-center gap-2 text-success"&gt;
+                                       |        &lt;div class="radial-progress bg-gray-light" style="--value:78;"&gt; 78% &lt;/div&gt;
+                                       |        &lt;span&gt; 78% &lt;/span&gt;
+                                       |    &lt;/div&gt;
+                                       |    &lt;div class="flex flex-col items-center justify-center gap-2 text-warning"&gt;
+                                       |        &lt;div class="radial-progress bg-gray-light" style="--value:88;"&gt; 88% &lt;/div&gt;
+                                       |        &lt;span&gt; 88% &lt;/span&gt;
+                                       |    &lt;/div&gt;
+                                       |    &lt;div class="flex flex-col items-center justify-center gap-2 text-danger"&gt;
+                                       |        &lt;div class="radial-progress bg-gray-light" style="--value:97;"&gt; 97% &lt;/div&gt;
+                                       |        &lt;span&gt; 97% &lt;/span&gt;
+                                       |    &lt;/div&gt;
+                                       |&lt;/div&gt;
+
+                  div.col-span-12
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Radial  
+                              p Add radial progress using  
+                                 strong .radial-progress  
+                                 |   class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.items-center.justify-center.flex-wrap.gap-4
+                                    div.radial-progress.radial-xs.text-primary(style="--value:70;") 70% 
+                                    div.radial-progress.radial-sm.text-secondary(style="--value:70;") 70% 
+                                    div.radial-progress.radial-md.text-info(style="--value:70;") 70% 
+                                    div.radial-progress.radial-lg.text-success(style="--value:70;") 70% 
+                                    div.radial-progress.radial-xl.text-warning(style="--value:70;") 70% 
+
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap items-center justify-center gap-2"&gt;
+                                       |    &lt;div class="radial-progress radial-xs text-primary" style="--value:70;"&gt; 70% &lt;/div&gt;
+                                       |    &lt;div class="radial-progress radial-sm text-primary" style="--value:70;"&gt; 70% &lt;/div&gt;
+                                       |    &lt;div class="radial-progress radial-md text-primary" style="--value:70;"&gt; 70% &lt;/div&gt;
+                                       |    &lt;div class="radial-progress radial-lg text-primary" style="--value:70;"&gt; 70% &lt;/div&gt;
+                                       |    &lt;div class="radial-progress radial-xl text-primary" style="--value:70;"&gt; 70% &lt;/div&gt;
+                                       |&lt;/div&gt;
+
+
+
+            // Page Body End 
+            +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+      include ../../components/customizer
+
+   include ../../layout/footer-files

@@ -1,0 +1,16 @@
+//- =====================
+//-  Breadcrumb 
+//- =====================
+mixin breadcrumb(items,breadcrumbStyle)
+  -var itemGet=`${items}`;
+  -var breadcrumbItem= itemGet.split(",");
+  div(class=`breadcrumb ${breadcrumbStyle}`)
+    nav
+      ol.breadcrumb-list
+        li.breadcrumb-items
+          a(href='index.html')
+            +SVG_ICON("Home","w-5 h-5")
+        each pageName, index in breadcrumbItem
+          li.px-2 
+            span /
+          li.breadcrumb-items.capitalize(class=`${(index === breadcrumbItem.length - 1 ?'active':'')}`)= pageName

@@ -1,0 +1,19 @@
+
+//- =====================
+//-  Social Media 
+//- =====================
+
+mixin social-mediadata(data)
+    ul.list-inline.flex.flex-wrap.gap-2
+        each dataItem in data
+            li.list-inline-item.bg-white.rounded-full
+                a(href=`https://www.${dataItem.name}.com/`)
+                    img(src=`../../assets/images/social/${dataItem.image}`, alt=`${dataItem.name}`, class="w-6 h-6 p-[6px]")
+
+
+mixin user-social-media(data)
+    ul.list-inline.flex.flex-wrap.gap-2
+        each dataItem in data
+            li.list-inline-item.bg-gray-light.rounded-full
+                a(href=`https://www.${dataItem.name}.com/`)
+                    img(src=`../../assets/images/social/${dataItem.image}`, alt=`${dataItem.name}`, class="w-6 h-6 p-[6px]")

@@ -1,0 +1,21 @@
+@layer components {
+  .page-header {
+    .hide {
+      @apply hidden 2xl:flex;
+    }
+    .right-header{
+      .icon-menu{
+        ul{
+          li{
+            &:last-child{
+              @apply rtl:pr-[calc(7px_+_(14_-_7)_*_((100vw_-_320px)_/_(1920_-_320)))];
+            }
+            &:first-child{
+              @apply rtl:pl-[calc(7px_+_(14_-_7)_*_((100vw_-_320px)_/_(1920_-_320)))];
+            }
+          }
+        }
+      }
+    }
+  }
+}

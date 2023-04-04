@@ -1,0 +1,381 @@
+//- sidebar
+-var sidebar = true;
+
+//- feathet
+-var feather= true;
+
+//- customSelect
+-var customSelect= true;
+
+//- customizer
+-var customizer=true;
+
+//- prism
+-var prism=true;
+
+//- Breadcrumbs
+-var pageTitle="Stack";
+-var breadcrumb=['Bonus Ui','Stack'];
+
+//- json
+include ../../data/all-data
+
+//- mixin
+include ../../mixin/mixin
+
+doctype html
+html(lang='en')  
+   include ../../layout/header-files 
+   body(dir="ltr" class="unique-skin")
+      main.page-wrapper
+         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+            include ../../layout/header/header     
+            // Sidebar Start 
+            div.page-sidebar.sidebar-dark.unique-sidebar
+               include ../../layout/unique
+            // Sidebar End 
+
+            // Page Body Start 
+            div.page-body
+               div.grid.grid-cols-12.gap-card-gap
+                  div.col-span-6(class="2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Boxes Without Stacked
+                              p   Stack puts elements on top of each other.            
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.gap-2.justify-center
+                                    div 
+                                       div.grid.h-16.w-32.rounded.bg-primary.text-white.place-content-center 1
+                                       div.grid.h-16.w-32.rounded.bg-secondary.text-white.place-content-center 2
+                                       div.grid.h-16.w-32.rounded.bg-info.text-white.place-content-center 3
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap justify-center gap-2"&gt;
+                                       |    &lt;div&gt;
+                                       |        &lt;div class="grid w-32 h-16 text-white rounded bg-primary place-content-center"&gt; 1 &lt;/div&gt;
+                                       |        &lt;div class="grid w-32 h-16 text-white rounded bg-secondary place-content-center"&gt; 2 &lt;/div&gt;
+                                       |        &lt;div class="grid w-32 h-16 text-white rounded bg-info place-content-center"&gt; 3 &lt;/div&gt;
+                                       |    &lt;/div&gt; 
+                                       |&lt;/div&gt;
+                  div.col-span-6(class="2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Images Without Stacked
+                              p   Stack puts elements on top of each other. You can set images.            
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.gap-2.justify-center
+                                    div 
+                                       img(src='../../assets/images/carousel/5.jpg' alt='city' class="w-32 h-16 rounded")
+                                       img(src='../../assets/images/carousel/5.jpg' alt='city' class="w-32 h-16 rounded")
+                                       img(src='../../assets/images/carousel/5.jpg' alt='city' class="w-32 h-16 rounded")
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap justify-center gap-2"&gt;
+                                       |    &lt;div&gt;
+                                       |        &lt;img src="../../image.jpg" alt="city" class="w-32 h-16 rounded"&gt;
+                                       |        &lt;img src="../../image.jpg" alt="city" class="w-32 h-16 rounded"&gt;
+                                       |        &lt;img src="../../image.jpg" alt="city" class="w-32 h-16 rounded"&gt;
+                                       |    &lt;/div&gt; 
+                                       |&lt;/div&gt;
+                  div.col-span-4(class="xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Boxes Stacked
+                              p   Set stacked boxes using 
+                                 strong .stack 
+                                 |   class.          
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.gap-2.justify-center
+                                    div.stack.mb-3 
+                                       div.stack-item.text-white.place-content-center.rounded.bg-success 1
+                                       div.stack-item.text-white.place-content-center.rounded.bg-danger 2
+                                       div.stack-item.text-white.place-content-center.rounded.bg-warning 3
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap justify-center gap-2"&gt;
+                                       |    &lt;div class="mb-3 stack"&gt;
+                                       |        &lt;div class="text-white rounded stack-item place-content-center bg-success"&gt; 1 &lt;/div&gt;
+                                       |        &lt;div class="text-white rounded stack-item place-content-center bg-danger"&gt; 2 &lt;/div&gt;
+                                       |        &lt;div class="text-white rounded stack-item place-content-center bg-warning"&gt; 3 &lt;/div&gt;
+                                       |    &lt;/div&gt; 
+                                       |&lt;/div&gt;
+                  div.col-span-4(class="xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Images Stacked
+                              p   Add stacked images using 
+                                 strong .stack 
+                                 |   class.            
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.gap-2.justify-center
+                                    div.stack.mb-3 
+                                       div.stack-item
+                                          img(src='../../assets/images/carousel/5.jpg' alt='city' class="w-32 h-16 rounded")
+                                       div.stack-item
+                                          img(src='../../assets/images/carousel/5.jpg' alt='city' class="w-32 h-16 rounded")
+                                       div.stack-item
+                                          img(src='../../assets/images/carousel/5.jpg' alt='city' class="w-32 h-16 rounded")
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap justify-center gap-2"&gt;
+                                       |    &lt;div class="mb-3 stack"&gt;
+                                       |        &lt;div class="stack-item"&gt;
+                                       |            &lt;img src="../../image.jpg" alt="city" class="w-32 h-16 rounded"&gt; 
+                                       |        &lt;/div&gt;
+                                       |        &lt;div class="stack-item"&gt;
+                                       |            &lt;img src="../../image.jpg" alt="city" class="w-32 h-16 rounded"&gt; 
+                                       |        &lt;/div&gt;
+                                       |        &lt;div class="stack-item"&gt;
+                                       |            &lt;img src="../../image.jpg" alt="city" class="w-32 h-16 rounded"&gt; 
+                                       |        &lt;/div&gt;
+                                       |    &lt;/div&gt; 
+                                       |&lt;/div&gt;
+                  div.col-span-4(class="xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Simple Cards Stacked
+                              p   Set stacked simple cards using 
+                                 strong .stack 
+                                 |   class.            
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.gap-2.justify-center
+                                    div.stack.mb-3 
+                                       div.stack-item.card.border.border-gray.bg-gray-light.text-title.shawod-none.rounded-2xl.place-content-center(class="!w-40")
+                                          div.card-body card-1
+                                       div.stack-item.card.border.border-gray.bg-gray-light.text-title.shawod-none.rounded-2xl.place-content-center(class="!w-40")
+                                          div.card-body card-2
+                                       div.stack-item.card.border.border-gray.bg-gray-light.text-title.shawod-none.rounded-2xl.place-content-center(class="!w-40")
+                                          div.card-body card-3
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap justify-center gap-2"&gt;
+                                       |    &lt;div class="mb-3 stack"&gt;
+                                       |        &lt;div class="stack-item card border border-gray bg-gray-light text-title shawod-none rounded-2xl place-content-center !w-40"&gt;
+                                       |            &lt;div class="card-body"&gt; card-1 &lt;/div&gt;
+                                       |        &lt;/div&gt;
+                                       |        &lt;div class="stack-item card border border-gray bg-gray-light text-title shawod-none rounded-2xl place-content-center !w-40"&gt;
+                                       |            &lt;div class="card-body"&gt; card-2 &lt;/div&gt;
+                                       |        &lt;/div&gt;
+                                       |        &lt;div class="stack-item card border border-gray bg-gray-light text-title shawod-none rounded-2xl place-content-center !w-40"&gt;
+                                       |            &lt;div class="card-body"&gt; card-3 &lt;/div&gt;
+                                       |        &lt;/div&gt;
+                                       |    &lt;/div&gt; 
+                                       |&lt;/div&gt;
+                  div.col-span-4(class="xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Cards Stacked
+                              p   Stacked cards with the help of  
+                                 strong .stack 
+                                 |   class.            
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.gap-2.justify-center
+                                    div.stack.mb-3 
+                                       div.stack-item.card.border.border-gray.bg-white.text-title.shadow-none.rounded-2xl(class="!w-auto !h-auto")
+                                          div.card-body 
+                                             h3.card-title Need Update 
+                                             p You need update right now!
+                                       div.stack-item.card.border.border-gray.bg-white.text-title.shadow-none.rounded-2xl(class="!w-auto !h-auto")
+                                          div.card-body 
+                                             h3.card-title Need Update 
+                                             p You need update right now!
+                                       div.stack-item.card.border.border-gray.bg-white.text-title.shadow-none.rounded-2xl(class="!w-auto !h-auto")
+                                          div.card-body 
+                                             h3.card-title Need Update 
+                                             p You need update right now!
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap justify-center gap-2"&gt;
+                                       |    &lt;div class="mb-3 stack"&gt;
+                                       |        &lt;div class="stack-item card border border-gray bg-white text-title shadow-none rounded-2xl !w-auto !h-auto"&gt;
+                                       |            &lt;div class="card-body"&gt; 
+                                       |                &lt;h3 class="card-title text-title"&gt; Need Update &lt;/h3&gt;
+                                       |                &lt;p&gt; You need update right now! &lt;/p&gt;
+                                       |            &lt;/div&gt;
+                                       |        &lt;/div&gt;
+                                       |        &lt;div class="stack-item card border border-gray bg-white text-title shadow-none rounded-2xl !w-auto !h-auto"&gt;
+                                       |            &lt;div class="card-body"&gt; 
+                                       |                &lt;h3 class="card-title text-title"&gt; Need Update &lt;/h3&gt;
+                                       |                &lt;p&gt; You need update right now! &lt;/p&gt;
+                                       |            &lt;/div&gt;
+                                       |        &lt;/div&gt;
+                                       |        &lt;div class="stack-item card border border-gray bg-white text-title shadow-none rounded-2xl !w-auto !h-auto"&gt;
+                                       |            &lt;div class="card-body"&gt; 
+                                       |                &lt;h3 class="card-title text-title"&gt; Need Update &lt;/h3&gt;
+                                       |                &lt;p&gt; You need update right now! &lt;/p&gt;
+                                       |            &lt;/div&gt;
+                                       |        &lt;/div&gt;
+                                       |    &lt;/div&gt; 
+                                       |&lt;/div&gt;
+                  div.col-span-4(class="xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Colored Cards Stacked
+                              p   Stacked cards using 
+                                 strong .stack 
+                                 |   class.            
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.gap-2.justify-center
+                                    div.stack.mb-3 
+                                       div.stack-item.card.bg-danger.text-white.shawod-none.rounded-2xl(class="!w-auto !h-auto")
+                                          div.card-body 
+                                             h3.card-title Latest News
+                                             p Click here, for more latest update!!
+                                       div.stack-item.card.bg-danger.text-white.shawod-none.rounded-2xl(class="!w-auto !h-auto")
+                                          div.card-body 
+                                             h3.card-title Latest News
+                                             p Click here, for more latest update!!
+                                       div.stack-item.card.bg-danger.text-white.shawod-none.rounded-2xl(class="!w-auto !h-auto")
+                                          div.card-body 
+                                             h3.card-title Latest News
+                                             p Click here, for more latest update!!
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap justify-center gap-2"&gt;
+                                       |    &lt;div class="mb-3 stack"&gt;
+                                       |        &lt;div class="stack-item card bg-danger text-white shawod-none rounded-2xl !w-auto !h-auto"&gt;
+                                       |            &lt;div class="card-body"&gt; 
+                                       |                &lt;h3 class="card-title"&gt; Latest News &lt;/h3&gt;
+                                       |                &lt;p&gt; Click here, for more latest update!! &lt;/p&gt;
+                                       |            &lt;/div&gt;
+                                       |        &lt;/div&gt;
+                                       |        &lt;div class="stack-item card bg-danger text-white shawod-none rounded-2xl !w-auto !h-auto"&gt;
+                                       |            &lt;div class="card-body"&gt; 
+                                       |                &lt;h3 class="card-title"&gt; Latest News &lt;/h3&gt;
+                                       |                &lt;p&gt; Click here, for more latest update!! &lt;/p&gt;
+                                       |            &lt;/div&gt;
+                                       |        &lt;/div&gt;
+                                       |        &lt;div class="stack-item card bg-danger text-white shawod-none rounded-2xl !w-auto !h-auto"&gt;
+                                       |            &lt;div class="card-body"&gt; 
+                                       |                &lt;h3 class="card-title"&gt; Latest News &lt;/h3&gt;
+                                       |                &lt;p&gt; Click here, for more latest update!! &lt;/p&gt;
+                                       |            &lt;/div&gt;
+                                       |        &lt;/div&gt;
+                                       |    &lt;/div&gt; 
+                                       |&lt;/div&gt;
+                  div.col-span-4(class="xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Multi Colored Stacked
+                              p   Set stacked colored cards using 
+                                 strong .stack 
+                                 |   class.            
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.gap-2.justify-center
+                                    div.stack.mb-3 
+                                       div.stack-item.card.bg-info.text-white.shawod-none.rounded-2xl(class="!w-auto !h-auto")
+                                          div.card-body 
+                                             h3.card-title Notifications
+                                             p You have 4 unread messages. Tap to see
+                                       div.stack-item.card.bg-danger.text-white.shawod-none.rounded-2xl(class="!w-auto !h-auto")
+                                          div.card-body 
+                                             h3.card-title Notifications
+                                             p You have 4 unread messages. Tap to see
+                                       div.stack-item.card.bg-warning.text-white.shawod-none.rounded-2xl(class="!w-auto !h-auto")
+                                          div.card-body 
+                                             h3.card-title Notifications
+                                             p You have 4 unread messages. Tap to see
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap justify-center gap-2"&gt;
+                                       |    &lt;div class="mb-3 stack"&gt;
+                                       |        &lt;div class="stack-item card bg-info text-white shawod-none rounded-2xl !w-auto !h-auto"&gt;
+                                       |            &lt;div class="card-body"&gt; 
+                                       |                &lt;h3 class="card-title"&gt; Notifications &lt;/h3&gt;
+                                       |                &lt;p&gt; You have 4 unread messages. Tap to see &lt;/p&gt;
+                                       |            &lt;/div&gt;
+                                       |        &lt;/div&gt;
+                                       |        &lt;div class="stack-item card bg-danger text-white shawod-none rounded-2xl !w-auto !h-auto"&gt;
+                                       |            &lt;div class="card-body"&gt; 
+                                       |                &lt;h3 class="card-title"&gt; Notifications &lt;/h3&gt;
+                                       |                &lt;p&gt; You have 4 unread messages. Tap to see &lt;/p&gt;
+                                       |            &lt;/div&gt;
+                                       |        &lt;/div&gt;
+                                       |        &lt;div class="stack-item card bg-warning text-white shawod-none rounded-2xl !w-auto !h-auto"&gt;
+                                       |            &lt;div class="card-body"&gt; 
+                                       |                &lt;h3 class="card-title"&gt; Notifications &lt;/h3&gt;
+                                       |                &lt;p&gt; You have 4 unread messages. Tap to see &lt;/p&gt;
+                                       |            &lt;/div&gt;
+                                       |        &lt;/div&gt;
+                                       |    &lt;/div&gt; 
+                                       |&lt;/div&gt;
+
+
+            // Page Body End 
+            +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+      include ../../components/customizer
+
+   include ../../layout/footer-files

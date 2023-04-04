@@ -1,0 +1,16 @@
+
+//- =====================
+//-  Recent Chat 
+//- =====================
+
+mixin recent-chat(data)
+    ul.recent-chat.items-center.swiper-wrapper
+        each dataItem in data
+            li.recent-chat-item.flex.flex-col.gap-2.items-center.justify-center.swiper-slide
+                div.avatar(class="w-[73px] rounded-xl") 
+                    img(src=`../../assets/images/avatar/${dataItem.image}`, alt=`${dataItem.name}`) 
+                div.flex.items-center.justify-center.gap-1
+                    span.bg-transparent.rounded-full.w-2.h-2(class=`recent-${dataItem.status}`)
+                    span.text-title.font-semibold(class="leading-[16px] text-[12px]")= dataItem.name 
+
+

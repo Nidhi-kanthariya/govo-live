@@ -1,0 +1,73 @@
+//- sidebar
+-var sidebar = true;
+
+//- feather
+-var feather=true;
+
+//- custom select
+-var customSelect = true;
+
+//- customizer 
+-var customizer = true;
+
+//- jkanban  
+-var jkanban = true;
+
+//- Breadcrumbs
+-var pageTitle="Kanban-board";
+-var breadcrumb=['Kanban-board'];
+
+//- all JSON  
+include ../../data/all-data
+
+//- all mixin   
+include ../../mixin/mixin
+
+
+doctype html
+html(lang='en')
+   include ../../layout/header-files
+   body(dir="ltr" class="unique-skin")
+      main.page-wrapper
+         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+            include ../../layout/header/header     
+            // Sidebar Start 
+            div.page-sidebar.sidebar-dark.unique-sidebar
+               include ../../layout/unique 
+            // Sidebar End 
+
+            // Page Body Start
+            div.page-body
+               div.grid.grid-cols-12.gap-card 
+                  div.card.col-span-12.mb-4
+                     div.card-header
+                        +card-header("Default Demo")     
+                     div.card-body
+                        div.kanab-1.kanab-common
+                  div.card.col-span-12.mb-4
+                     div.card-header
+                        +card-header("Custom Board")      
+                     div.card-body
+                        div.kanab-2.kanab-common
+                  div.card.col-span-12.mb-4  
+                     div.card-header
+                        +card-header("API")  
+                     div.card-body 
+                        div.kanab-3.kanab-common 
+               //- div.grid.grid-cols-12.gap-card-gaps
+               //-   div.col-span-12 
+               //-     div.card  
+               //-       div.card-header   
+               //-         h3(class="font-bold text-title mb-3") Custom Board
+               //-         .divider.w-full      
+               //-       div.card-body  
+               //-         div.grid.grid-cols-12.gap-3 
+               //-           each data in KANBAN_BOARD 
+               //-             +kanban-board(data)  
+               //-           each data in KANBAN_BOARD_CARD
+               //-              +kanban-board-card(data) 
+
+               // Page Body End
+               +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+         include ../../components/customizer   
+   include ../../layout/footer-files

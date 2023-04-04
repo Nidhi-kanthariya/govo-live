@@ -1,0 +1,202 @@
+/*=====================
+    Ecommerce CSS
+  ==========================*/
+@layer components {
+  .product-modal {
+    .product-slider {
+      .swiper {
+        &.productImg {
+          .swiper-wrapper {
+            .swiper-slide {
+              @apply opacity-50;
+              &.swiper-slide-thumb-active {
+                @apply opacity-100;
+              }
+            }
+          }
+        }
+        &.productImgNav {
+          .swiper-wrapper {
+            .swiper-slide {
+              img {
+                @apply md:w-full md:max-h-[21rem] md:min-h-[15rem] md:object-fill;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .social {
+      a {
+        @apply bg-gray-extralight p-3 rounded-full;
+      }
+    }
+  }
+
+  .shop-sidebar {
+    @apply sm:w-[16.875rem] xl:opacity-0 xl:invisible xl:absolute xl:left-[-19.375rem] xl:top-0 xl:transition-all xl:z-[4] xl:duration-1000 xl:translate-x-[-19.375rem] xl:ease-in-out;
+    &.show {
+      @apply opacity-100 visible absolute top-0 left-0 z-[4] transition-all duration-1000 translate-x-0 ease-in-out;
+    }
+  }
+
+  .product-wrapper-grid {
+    &.list-view {
+      .product-box {
+        .card {
+          @apply hover:scale-100;
+          .card-body {
+            @apply flex gap-3;
+            .relative {
+              img {
+                @apply w-[18.75rem];
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .checkout-detail,
+  .add-product,
+  .invoice-preview {
+    form {
+      label {
+        @apply mb-2 text-content3 font-semibold text-xs inline-block;
+      }
+      input,
+      textarea {
+        @apply bg-transparent text-xs p-[11px] text-content border border-border-light;
+      }
+      a {
+        @apply text-white;
+      }
+    }
+    table {
+      &.equal-space {
+        tbody {
+          tr {
+            td {
+              @apply py-4;
+            }
+          }
+        }
+      }
+    }
+  }
+  .invoice-preview {
+    form {
+      label {
+        @apply text-title text-xs font-bold uppercase;
+      }
+    }
+  }
+  .product-detail {
+    .product-slider {
+      .swiper.productImgNav {
+        .swiper-wrapper {
+          .swiper-slide {
+            img {
+              @apply w-full;
+            }
+          }
+        }
+      }
+    }
+    .tabs {
+      .tab {
+        &.tabs-bordered {
+          &.tab-active {
+            @apply border-b-[.0625rem] font-medium;
+          }
+        }
+      }
+    }
+    table {
+      &.equal-space {
+        tr {
+          th,
+          td {
+            @apply p-4;
+          }
+          &:last-child {
+            th,
+            td {
+              @apply pb-0;
+            }
+          }
+          &:first-child {
+            th,
+            td {
+              @apply pt-0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .invoice-preview {
+    .table {
+      &.equal-space {
+        tbody {
+          tr {
+            &:first-child {
+              td {
+                @apply pt-0;
+              }
+            }
+            td {
+              &:last-child {
+                @apply text-right;
+              }
+            }
+          }
+          p {
+            @apply mb-1;
+          }
+        }
+        .invoice-table {
+          thead {
+            tr {
+              th {
+                @apply bg-body py-3;
+              }
+            }
+          }
+          tbody {
+            tr {
+              td {
+                @apply py-3;
+              }
+            }
+          }
+        }
+      }
+    }
+    .invoice-table-detail {
+      .table {
+        thead {
+          tr {
+            th {
+              @apply bg-body py-3;
+            }
+          }
+        }
+        tbody {
+          tr {
+            td {
+              @apply py-3;
+            }
+            &:first-child {
+              td {
+                @apply pt-3;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

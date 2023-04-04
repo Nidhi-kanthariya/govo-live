@@ -1,0 +1,343 @@
+//- sidebar
+-var sidebar = true;
+
+//- feathet
+-var feather= true;
+
+//- customSelect
+-var customSelect= true;
+
+//- customizer
+-var customizer=true;
+
+//- prism
+-var prism=true;
+
+//- Breadcrumbs
+-var pageTitle="Breadcrumb";
+-var breadcrumb=['Bonus Ui','Breadcrumb'];
+
+//- json
+include ../../data/all-data
+
+//- mixin
+include ../../mixin/mixin
+
+doctype html
+html(lang='en')  
+   include ../../layout/header-files 
+   body(dir="ltr" class="unique-skin") 
+      main.page-wrapper
+         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+            include ../../layout/header/header     
+            // Sidebar Start 
+            div.page-sidebar.sidebar-dark.unique-sidebar
+               include ../../layout/unique
+            // Sidebar End 
+
+            // Page Body Start 
+            div.page-body
+               div.grid.grid-cols-12.gap-card-gap
+                  div.col-span-6(class="2lg:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Default Breadcrumb 
+                              p   Adding breadcrumb using 
+                                 strong .breadcrumb 
+                                 |   class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div(class="overflow-auto custom-scroll")
+                                    div.breadcrumb
+                                       nav
+                                          ol.flex.items-center.breadcrumb-list 
+                                             li.breadcrumb-items
+                                                a(href="javascript:void(0)")
+                                                   +SVG_ICON("Home","stroke-primary")
+                                             li.px-2 
+                                                span /
+                                             li.breadcrumb-items.capitalize Bonus Ui 
+                                             li.px-2 
+                                                span /
+                                             li.breadcrumb-items.capitalize.font-light.active Breadcrumb
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="overflow-auto custom-scroll"&gt;
+                                       |    &lt;div class="breadcrumb"&gt;
+                                       |     &lt;nav&gt;
+                                       |      &lt;ol class="flex items-center breadcrumb-list"&gt;
+                                       |        &lt;li class="breadcrumb-items"&gt;
+                                       |          &lt;a href="javascript:void(0)"&gt; +SVG_ICON("Home","stroke-primary") &lt;/a&gt;
+                                       |        &lt;/li&gt;
+                                       |        &lt;li class="px-2"&gt;&lt;span&gt;/&lt;/span&gt;&lt;/li&gt;
+                                       |        &lt;li class="capitalize breadcrumb-items"&gt;Bonus Ui&lt;/li&gt;
+                                       |        &lt;li class="px-2"&gt;&lt;span&gt;/&lt;/span&gt;&lt;/li&gt;
+                                       |        &lt;li class="font-light capitalize breadcrumb-items active"&gt;Breadcrumb&lt;/li&gt;
+                                       |      &lt;/ol&gt;
+                                       |     &lt;/nav&gt; 
+                                       |    &lt;/div&gt;
+                                       |&lt;/div&gt;
+                  div.col-span-6(class="2lg:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Breadcrumb
+                              p   Set breadcrumb with the page name.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div(class="overflow-auto custom-scroll")
+                                    div.breadcrumb-2.breadcrumb-style-3
+                                       nav.w-full(class="!text-warning") 
+                                          ol.flex.items-center.breadcrumb-list 
+                                             li.breadcrumb-items
+                                                a(href="javascript:void(0)") Home
+                                             li.px-2 
+                                                +SVG_ICON("Arrow-Right-2","w-4 h-4 stroke-warning")
+                                             li.breadcrumb-items.capitalize Ui Kits 
+                                             li.px-2 
+                                                +SVG_ICON("Arrow-Right-2","w-4 h-4 stroke-warning")
+                                             li.breadcrumb-items.capitalize.font-light.active Typography
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="overflow-auto custom-scroll"&gt;
+                                       |    &lt;div class="breadcrumb-2 breadcrumb-style-3"&gt;
+                                       |     &lt;nav class="w-full text-primary"&gt;
+                                       |      &lt;ol class="flex items-center breadcrumb-list"&gt;
+                                       |        &lt;li class="breadcrumb-items"&gt;
+                                       |          &lt;a href="javascript:void(0)"&gt; Home &lt;/a&gt;
+                                       |        &lt;/li&gt;
+                                       |        &lt;li class="px-2"&gt; +SVG_ICON("Arrow-Right-2","w-4 h-4 stroke-primary") &lt;/li&gt;
+                                       |        &lt;li class="capitalize breadcrumb-items"&gt;Ui Kits&lt;/li&gt;
+                                       |        &lt;li class="px-2"&gt; +SVG_ICON("Arrow-Right-2","w-4 h-4 stroke-primary") ;&lt;/li&gt;
+                                       |        &lt;li class="font-light capitalize breadcrumb-items active"&gt;Typography&lt;/li&gt;
+                                       |      &lt;/ol&gt;
+                                       |     &lt;/nav&gt; 
+                                       |    &lt;/div&gt;
+                                       |&lt;/div&gt;
+
+                  div.col-span-6(class="2lg:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Breadcrumb With Icon
+                              p   Set the icons with breadcrumb using 
+                                 strong .breadcrumb  
+                                 | & 
+                                 strong .breadcrumb-3, .breadcrumb-style-6 
+                                 |   class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div(class="overflow-auto custom-scroll")
+                                    div.breadcrumb
+                                       nav 
+                                          ol.flex.items-center.breadcrumb-list 
+                                             li.breadcrumb-items
+                                                a(href="javascript:void(0)")
+                                                   +SVG_ICON("Home","stroke-primary")
+                                             li.px-2 
+                                                +SVG_ICON("Arrow-Right-2","w-4 h-4 stroke-primary")
+                                             li.breadcrumb-items.capitalize Project 
+                                             li.px-2 
+                                                +SVG_ICON("Arrow-Right-2","w-4 h-4 stroke-primary")
+                                             li.breadcrumb-items.capitalize.font-light.active Project List
+                                    div.breadcrumb-3.breadcrumb-style-6
+                                       nav
+                                          ol.flex.items-center.breadcrumb-list 
+                                             li.breadcrumb-items
+                                                a(href="javascript:void(0)")
+                                                   +SVG_ICON("Home","w-4 h-7 stroke-info") 
+                                                |   Home
+                                             li.px-2 
+                                                span /
+                                             li.breadcrumb-items.capitalize
+                                                a(href="javascript:void(0)")
+                                                   +SVG_ICON("Folder","w-4 h-7 stroke-info")
+                                                |   Tables
+                                             li.px-2 
+                                                span /
+                                             li.breadcrumb-items.capitalize.font-light.active
+                                                a(href="javascript:void(0)")
+                                                   +SVG_ICON("Document","w-4 h-7 stroke-info")
+                                                |   Simple 
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="overflow-auto custom-scroll"&gt;
+                                       |    &lt;div class="breadcrumb"&gt;
+                                       |     &lt;nav&gt;
+                                       |      &lt;ol class="flex items-center breadcrumb-list"&gt;
+                                       |        &lt;li class="breadcrumb-items"&gt;
+                                       |          &lt;a href="javascript:void(0)"&gt; +SVG_ICON("Home","stroke-primary") &lt;/a&gt;
+                                       |        &lt;/li&gt;
+                                       |        &lt;li class="px-2"&gt; +SVG_ICON("Arrow-Right-2","w-4 h-4 stroke-primary") &lt;/li&gt;
+                                       |        &lt;li class="capitalize breadcrumb-items"&gt;Project&lt;/li&gt;
+                                       |        &lt;li class="px-2"&gt; +SVG_ICON("Arrow-Right-2","w-4 h-4 stroke-primary") &lt;/li&gt;
+                                       |        &lt;li class="font-light capitalize breadcrumb-items active"&gt;Project List&lt;/li&gt;
+                                       |      &lt;/ol&gt;
+                                       |     &lt;/nav&gt; 
+                                       |    &lt;/div&gt;
+                                       |    &lt;div class="breadcrumb breadcrumb-style-6"&gt;
+                                       |     &lt;nav&gt;
+                                       |      &lt;ol class="flex items-center breadcrumb-list"&gt;
+                                       |        &lt;li class="breadcrumb-items"&gt;
+                                       |          &lt;a href="javascript:void(0)"&gt; +SVG_ICON("Home","w-4 h-7 stroke-primary") &lt;/a&gt; Home
+                                       |        &lt;/li&gt;
+                                       |        &lt;li class="px-2"&gt;span&gt;/&lt;/span&gt;&lt;/li&gt;
+                                       |        &lt;li class="capitalize breadcrumb-items"&gt;
+                                       |          &lt;a href="javascript:void(0)"&gt; +SVG_ICON("Ticket-Star","w-4 h-7 stroke-primary") &lt;/a&gt; Tables
+                                       |        &lt;/li&gt;
+                                       |        &lt;li class="px-2"&gt;span&gt;/&lt;/span&gt;;&lt;/li&gt;
+                                       |        &lt;li class="font-light capitalize breadcrumb-items active"&gt;Simple&lt;/li&gt;
+                                       |      &lt;/ol&gt;
+                                       |     &lt;/nav&gt;
+                                       |    &lt;/div&gt;
+                                       |&lt;/div&gt;
+
+                  div.col-span-6(class="2lg:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Breadcrumb Style
+                              p   Set the icons with different style using 
+                                 strong .breadcrumb, .breadcrumb-style-4 
+                                 | & 
+                                 strong .breadcrumb-style-5.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div(class="overflow-auto custom-scroll")
+                                    div.breadcrumb.breadcrumb-style-4
+                                       nav
+                                          ol.flex.items-center.breadcrumb-list 
+                                             li.breadcrumb-items
+                                                a(href="javascript:void(0)")
+                                                   +SVG_ICON("Home","stroke-title")
+                                             li.px-2 
+                                                span /
+                                             li.breadcrumb-items.capitalize Ecommerce 
+                                             li.px-2 
+                                                span /
+                                             li.breadcrumb-items.capitalize.font-light.active Shop
+                                    div.breadcrumb.breadcrumb-style-5
+                                       nav.text-secondary
+                                          ol.flex.items-center.breadcrumb-list 
+                                             li.breadcrumb-items
+                                                a(href="javascript:void(0)") Home 
+                                             li.px-2 
+                                                small 
+                                             li.breadcrumb-items.capitalize Form 
+                                             li.px-2 
+                                                small 
+                                             li.breadcrumb-items.capitalize.font-light.active Validation
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="overflow-auto custom-scroll"&gt;
+                                       |    &lt;div class="breadcrumb breadcrumb-style-4"&gt;
+                                       |     &lt;nav&gt;
+                                       |      &lt;ol class="flex items-center breadcrumb-list"&gt;
+                                       |        &lt;li class="breadcrumb-items"&gt;
+                                       |          &lt;a href="javascript:void(0)"&gt; +SVG_ICON("Home","stroke-title") &lt;/a&gt;
+                                       |        &lt;/li&gt;
+                                       |        &lt;li class="px-2"&gt;&lt;span&gt;/&lt;/span&gt;&lt;/li&gt;
+                                       |        &lt;li class="capitalize breadcrumb-items"&gt;Ecommerce&lt;/li&gt;
+                                       |        &lt;li class="px-2"&gt;&lt;span&gt;/&lt;/span&gt;&lt;/li&gt;
+                                       |        &lt;li class="font-light capitalize breadcrumb-items active"&gt;Shop&lt;/li&gt;
+                                       |      &lt;/ol&gt;
+                                       |     &lt;/nav&gt; 
+                                       |    &lt;/div&gt;
+                                       |    &lt;div class="breadcrumb breadcrumb-style-5"&gt;
+                                       |     &lt;nav&gt;
+                                       |      &lt;ol class="flex items-center breadcrumb-list"&gt;
+                                       |        &lt;li class="breadcrumb-items"&gt;
+                                       |          &lt;a href="javascript:void(0)"&gt;Home&lt;/a&gt;
+                                       |        &lt;/li&gt;
+                                       |        &lt;li class="px-2"&gt;&lt;small&gt;&lt;/small&gt;&lt;/li&gt;
+                                       |        &lt;li class="capitalize breadcrumb-items"&gt;Form&lt;/li&gt;
+                                       |        &lt;li class="px-2"&gt;&lt;small&gt;&lt;/small&gt;&lt;/li&gt;
+                                       |        &lt;li class="font-light capitalize breadcrumb-items active"&gt;Validation&lt;/li&gt;
+                                       |      &lt;/ol&gt;
+                                       |     &lt;/nav&gt; 
+                                       |    &lt;/div&gt;
+                                       |&lt;/div&gt;
+
+                  div.col-span-6(class="2lg:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Simple Breadcrumb
+                              p   Breadcrumb with page name. 
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div(class="overflow-auto custom-scroll")
+                                    div.breadcrumb.breadcrumb-style-3
+                                       nav(class="text-success")
+                                          ol.flex.items-center.breadcrumb-list 
+                                             li.breadcrumb-items
+                                                a(href="javascript:void(0)")
+                                                   +SVG_ICON("Home","stroke-success") 
+                                                |   Home
+                                             li.px-2 
+                                                span /
+                                             li.breadcrumb-items.capitalize Icons 
+                                             li.px-2 
+                                                span /
+                                             li.breadcrumb-items.capitalize.font-light.active Feather
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="overflow-auto custom-scroll"&gt;
+                                       |    &lt;div class="breadcrumb breadcrumb-style-3"&gt;
+                                       |     &lt;nav&gt;
+                                       |      &lt;ol class="flex items-center breadcrumb-list"&gt;
+                                       |        &lt;li class="breadcrumb-items"&gt;
+                                       |          &lt;a href="javascript:void(0)"&gt; +SVG_ICON("Home","stroke-title") &lt;/a&gt; Home
+                                       |        &lt;/li&gt;
+                                       |        &lt;li class="px-2"&gt;span&gt;/&lt;/span&gt;&lt;/li&gt;
+                                       |        &lt;li class="capitalize breadcrumb-items"&gt;Icons&lt;/li&gt;
+                                       |        &lt;li class="px-2"&gt;span&gt;/&lt;/span&gt;;&lt;/li&gt;
+                                       |        &lt;li class="font-light capitalize breadcrumb-items active"&gt;Feather&lt;/li&gt;
+                                       |      &lt;/ol&gt;
+                                       |     &lt;/nav&gt; 
+                                       |    &lt;/div&gt;
+                                       |&lt;/div&gt;
+
+
+
+            // Page Body End 
+            +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+      include ../../components/customizer
+
+   include ../../layout/footer-files

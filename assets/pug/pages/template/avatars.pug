@@ -1,0 +1,618 @@
+//- sidebar
+-var sidebar = true;
+
+//- feather
+-var feather= true;
+
+//- customSelect
+-var customSelect= true;
+
+//- customizer
+-var customizer=true;
+
+//- prism
+-var prism=true;
+
+//- Breadcrumbs
+-var pageTitle="Avatars";
+-var breadcrumb=['Ui Kits','Avatars'];
+
+//- json
+include ../../data/all-data
+
+//- mixin
+include ../../mixin/mixin
+
+doctype html
+html(lang='en')  
+   include ../../layout/header-files 
+   body(dir="ltr" class="unique-skin") 
+      main.page-wrapper
+         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+            include ../../layout/header/header     
+            // Sidebar Start 
+            div.page-sidebar.sidebar-dark.unique-sidebar
+               include ../../layout/unique
+            // Sidebar End 
+
+            // Page Body Start 
+            div.page-body
+               div.grid.grid-cols-12.gap-card-gap
+                  div.col-span-4(class="2xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Sizes
+                              p Use the  
+                                 strong .w-[size] 
+                                 |  class to add custom size for avatar.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body 
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div(class="flex flex-wrap items-center gap-[0.5rem] 2xl:gap-[0.375rem]")
+                                    div.avatar
+                                       div.w-28.rounded 
+                                          img(src="../../assets/images/avatar/20.jpg" alt="avatar")   
+                                    div.avatar
+                                       div.w-24.rounded 
+                                          img(src="../../assets/images/avatar/20.jpg" alt="avatar") 
+                                    div.avatar
+                                       div.w-20.rounded
+                                          img(src="../../assets/images/avatar/20.jpg" alt="avatar")
+                                    div.avatar
+                                       div.w-16.rounded
+                                          img(src="../../assets/images/avatar/20.jpg" alt="avatar")
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap items-center gap-[0.5rem] 2xl:gap-[0.375rem]"&gt;
+                                       |    &lt;div class="avatar"&gt;
+                                       |     &lt;div class="rounded w-28"&gt;
+                                       |       &lt;img src="../../image.jpg" alt="avatar"/&gt;
+                                       |      &lt;/div&gt;
+                                       |    &lt;/div&gt;
+                                       |    &lt;div class="avatar"&gt;
+                                       |      &lt;div class="w-24 rounded"&gt;
+                                       |        &lt;img src="../../image.jpg" alt="avatar"/&gt;
+                                       |      &lt;/div&gt;
+                                       |    &lt;/div&gt;
+                                       |    &lt;div class="avatar"&gt;
+                                       |      &lt;div class="w-20 rounded"&gt;
+                                       |       &lt;img src="../../image.jpg" alt="avatar"/&gt;
+                                       |      &lt;/div&gt;
+                                       |    &lt;/div&gt;
+                                       |    &lt;div class="avatar"&gt;
+                                       |      &lt;div class="w-16 rounded"&gt;
+                                       |        &lt;img src="../../image.jpg" alt="avatar"/&gt;
+                                       |      &lt;/div&gt;
+                                       |    &lt;/div&gt;
+                                       |&lt;/div&gt;  
+                  div.col-span-4(class="2xl:col-span-6 2md:col-span-12") 
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Shapes
+                              p Use the   
+                                 strong .rounded-*
+                                 |  utility class to create avatar shapes.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body 
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div(class="flex flex-wrap items-center gap-[0.5rem] 2xl:gap-[0.375rem]")
+                                    div.avatar.rounded-none
+                                       div.w-28
+                                          img(src="../../assets/images/avatar/20.jpg" alt="avatar")
+                                    div.avatar.rounded-xl
+                                       div.w-24 
+                                          img(src="../../assets/images/avatar/20.jpg" alt="avatar")
+                                    div.avatar.rounded-3xl
+                                       div.w-20 
+                                          img(src="../../assets/images/avatar/20.jpg" alt="avatar")
+                                    div.avatar.rounded-full
+                                       div.w-16 
+                                          img(src="../../assets/images/avatar/20.jpg" alt="avatar")
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap items-center gap-[0.5rem] 2xl:gap-[0.375rem]"&gt;
+                                       |    &lt;div class="rounded-none avatar"&gt;
+                                       |     &lt;div class="w-28 "&gt;
+                                       |       &lt;img src="../../image.jpg" alt="avatar"/&gt;
+                                       |      &lt;/div&gt;
+                                       |    &lt;/div&gt;
+                                       |    &lt;div class="avatar rounded-xl"&gt;
+                                       |      &lt;div class="w-24"&gt;
+                                       |       &lt;img src="../../image.jpg" alt="avatar"/&gt;
+                                       |      &lt;/div&gt;
+                                       |    &lt;/div&gt;
+                                       |    &lt;div class="avatar rounded-3xl"&gt;
+                                       |      &lt;div class="w-20"&gt;
+                                       |        &lt;img src="../../image.jpg" alt="avatar"/&gt;
+                                       |      &lt;/div&gt;
+                                       |    &lt;/div&gt; 
+                                       |    &lt;div class="rounded-full avatar"&gt;
+                                       |      &lt;div class="w-16"&gt;
+                                       |        &lt;img src="../../image.jpg" alt="avatar"/&gt;
+                                       |      &lt;/div&gt;
+                                       |    &lt;/div&gt;
+                                       |&lt;/div&gt;
+                  div.col-span-4(class="2xl:col-span-6 2md:col-span-12") 
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Status
+                              p  Use the 
+                                 strong .status-*
+                                 |  class to indicate the status of avatar.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body 
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div(class="flex flex-wrap items-center gap-[0.5rem] 2xl:gap-[0.375rem]")
+                                    div.avatar.relative(class="overflow-visible")
+                                       div.w-28.rounded
+                                          img(class="rounded-full" src="../../assets/images/avatar/20.jpg" alt="avatar")
+                                          div.status-offline
+                                    div.avatar.relative(class="overflow-visible")
+                                       div.w-24.rounded
+                                          img(class="rounded-full" src="../../assets/images/avatar/20.jpg" alt="avatar")
+                                          div.status-online
+                                    div.avatar.relative(class="overflow-visible")
+                                       div.w-20.rounded 
+                                          img(class="rounded-full" src="../../assets/images/avatar/20.jpg" alt="avatar")
+                                          div.status-online
+                                    div.avatar.relative(class="overflow-visible")
+                                       div.w-16.rounded 
+                                          img(class="rounded-full" src="../../assets/images/avatar/20.jpg" alt="avatar")
+                                          div.status-dnd
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap items-center gap-[0.5rem] 2xl:gap-[0.375rem]"&gt;
+                                       |    &lt;div class="avatar"&gt;
+                                       |     &lt;div class="relative overflow-visible rounded w-28"&gt;
+                                       |       &lt;img src="../../image.jpg" alt="avatar"/&gt;
+                                       |       &lt;div class="status-offline"&gt;&lt;/div&gt;
+                                       |      &lt;/div&gt;
+                                       |    &lt;/div&gt;
+                                       |    &lt;div class="avatar"&gt;
+                                       |      &lt;div class="relative w-24 overflow-visible rounded"&gt;
+                                       |        &lt;img src="../../image.jpg" alt="avatar"/&gt;
+                                       |       &lt;div class="status-online"&gt;&lt;/div&gt;
+                                       |      &lt;/div&gt;
+                                       |    &lt;/div&gt;
+                                       |    &lt;div class="avatar"&gt;
+                                       |      &lt;div class="relative w-20 overflow-visible rounded"&gt;
+                                       |       &lt;img src="../../image.jpg" alt="avatar"/&gt;
+                                       |       &lt;div class="status-online"&gt;&lt;/div&gt;
+                                       |      &lt;/div&gt;
+                                       |    &lt;/div&gt;
+                                       |    &lt;div class="avatar"&gt;
+                                       |      &lt;div class="relative w-16 overflow-visible rounded"&gt;
+                                       |        &lt;img src="../../image.jpg" alt="avatar"/&gt;
+                                       |       &lt;div class="status-dnd"&gt;&lt;/div&gt;
+                                       |      &lt;/div&gt;
+                                       |    &lt;/div&gt;
+                                       |&lt;/div&gt;
+                  div.col-span-6(class="2md:col-span-12") 
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Groups
+                              p Use the 
+                                 strong .avatar-group
+                                 |  class to create the group of avatars with the size.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body 
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div(class="flex flex-wrap items-center gap-[0.5rem] 2xl:gap-[0.375rem]")
+                                    div.avatar-group.-space-x-6.justify-center.items-center
+                                       div.avatar.border-white.rounded-xl(class='border-[0.125rem]')
+                                          div.w-24
+                                             img(src='../../assets/images/avatar/20.jpg' alt='avatar')
+                                       div.avatar.border-white.rounded-xl(class='border-[0.125rem]')
+                                          div.w-20
+                                             img(src='../../assets/images/avatar/20.jpg' alt='avatar')
+                                       div.avatar.border-white.rounded-xl(class='border-[0.125rem]')
+                                          div.w-16   
+                                             img(src='../../assets/images/avatar/20.jpg' alt='avatar')
+
+                                    div.avatar-group.-space-x-6.justify-center.items-center
+                                       div.avatar.border-white(class='border-[0.125rem]')
+                                          div.w-20
+                                             img(src='../../assets/images/avatar/20.jpg' alt='avatar')
+                                       div.avatar.border-white(class='border-[0.125rem]')
+                                          div.w-16
+                                             img(src='../../assets/images/avatar/20.jpg' alt='avatar')
+                                       div.avatar.border-white(class='border-[0.125rem]')
+                                          div.w-12
+                                             img(src='../../assets/images/avatar/20.jpg' alt='avatar')
+
+                                    div.avatar-group.-space-x-6.justify-center
+                                       div.avatar.border-white(class='border-[0.125rem]')
+                                          div.w-12
+                                             img(src='../../assets/images/avatar/20.jpg' alt='avatar')
+                                       div.avatar.border-white(class='border-[0.125rem]')
+                                          div.w-12
+                                             img(src='../../assets/images/avatar/20.jpg' alt='avatar')
+                                       div.avatar.border-white(class='border-[0.125rem]')
+                                          div.w-12
+                                             img(src='../../assets/images/avatar/20.jpg' alt='avatar')
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap items-center gap-[0.5rem] 2xl:gap-[0.375rem]"&gt;
+                                       |    &lt;div class="items-center justify-center avatar-group"&gt;
+                                       |     &lt;div class="border-white avatar rounded-xl"&gt;
+                                       |      &lt;div class="w-24"&gt;
+                                       |        &lt;img src="../../image.jpg" alt="avatar"/&gt;
+                                       |       &lt;/div&gt;
+                                       |     &lt;/div&gt;
+                                       |      &lt;div class="border-white avatar rounded-xl"&gt;
+                                       |      &lt;div class="w-20"&gt;
+                                       |        &lt;img src="../../image.jpg" alt="avatar"/&gt;
+                                       |       &lt;/div&gt;
+                                       |     &lt;/div&gt;
+                                       |      &lt;div class="border-white avatar rounded-xl"&gt;
+                                       |      &lt;div class="w-16"&gt;
+                                       |         &lt;span class="text-xs font-bold text-title"/&gt; 26+
+                                       |       &lt;/div&gt;
+                                       |     &lt;/div&gt;
+                                       |     &lt;div class="items-center justify-center avatar-group"&gt;
+                                       |     &lt;div class="border-white avatar"&gt;
+                                       |      &lt;div class="w-20"&gt;
+                                       |        &lt;img src="../../image.jpg" alt="avatar"/&gt;
+                                       |       &lt;/div&gt;
+                                       |     &lt;/div&gt;
+                                       |      &lt;div class="border-white avatar"&gt;
+                                       |      &lt;div class="w-16"&gt;
+                                       |        &lt;img src="../../image.jpg" alt="avatar"/&gt;
+                                       |       &lt;/div&gt;
+                                       |     &lt;/div&gt;
+                                       |      &lt;div class="border-white avatar"&gt;
+                                       |      &lt;div class="w-12"&gt;
+                                       |         &lt;span class="text-xs font-bold text-title"/&gt; 26+
+                                       |       &lt;/div&gt;
+                                       |     &lt;/div&gt;
+                                       |     &lt;div class="items-center justify-center avatar-group"&gt;
+                                       |     &lt;div class="border-white avatar"&gt;
+                                       |      &lt;div class="w-12"&gt;
+                                       |        &lt;img src="../../image.jpg" alt="avatar"/&gt;
+                                       |       &lt;/div&gt;
+                                       |     &lt;/div&gt;
+                                       |     &lt;div class="border-white avatar"&gt;
+                                       |      &lt;div class="w-12"&gt;
+                                       |        &lt;img src="../../image.jpg" alt="avatar"/&gt;
+                                       |       &lt;/div&gt;
+                                       |     &lt;/div&gt;
+                                       |     &lt;div class="border-white avatar"&gt;
+                                       |      &lt;div class="w-12"&gt;
+                                       |        &lt;span class="text-xs font-bold text-title"/&gt; 26+
+                                       |      &lt;/div&gt;
+                                       |     &lt;/div&gt;
+                                       |    &lt;/div&gt;
+                                       |&lt;/div&gt;
+                  div.col-span-6(class="2md:col-span-12") 
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Groups with Counter
+                              p Use the 
+                                 strong .avatar-group
+                                 |  class to create the group of avatars with the counter.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body 
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div(class="flex flex-wrap items-center gap-[0.5rem] 2xl:gap-[0.375rem]")
+                                    div.avatar-group.-space-x-6.justify-center.items-center
+                                       div.avatar.border-white.rounded-none(class='border-[0.125rem]')
+                                          div.w-24
+                                             img(src='../../assets/images/avatar/20.jpg' alt='avatar')
+                                       div.avatar.border-white.rounded-3xl(class='border-[0.125rem]')
+                                          div.w-20
+                                             img(src='../../assets/images/avatar/21.jpg' alt='avatar')
+                                       div.avatar.placeholder.bg-gray-light.border-white(class='border-[0.125rem]')
+                                          div.w-16
+                                             span.text-xs.font-bold.text-title 26+
+
+                                    div.avatar-group.-space-x-6.justify-center.items-center
+                                       div.avatar.border-white(class='border-[0.125rem]')
+                                          div.w-20
+                                             img(src='../../assets/images/avatar/20.jpg' alt='avatar')
+                                       div.avatar.border-white(class='border-[0.125rem]')
+                                          div.w-16
+                                             img(src='../../assets/images/avatar/21.jpg' alt='avatar')
+                                       div.avatar.placeholder.bg-gray-light.border-white(class='border-[0.125rem]')
+                                          div.w-12
+                                             span.text-xs.font-bold.text-title 26+
+
+                                    div.avatar-group.-space-x-6.justify-center
+                                       div.avatar.border-white(class='border-[0.125rem]')
+                                          div.w-12
+                                             img(src='../../assets/images/avatar/20.jpg' alt='avatar')
+                                       div.avatar.border-white(class='border-[0.125rem]')
+                                          div.w-12
+                                             img(src='../../assets/images/avatar/21.jpg' alt='avatar')
+                                       div.avatar.placeholder.bg-gray-light.border-white(class='border-[0.125rem]')
+                                          div.w-12
+                                             span.text-xs.font-bold.text-title 26+
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap items-center gap-[0.5rem] 2xl:gap-[0.375rem]"&gt;
+                                       |    &lt;div class="items-center justify-center avatar-group"&gt;
+                                       |     &lt;div class="border-white rounded-none avatar"&gt;
+                                       |      &lt;div class="w-24"&gt;
+                                       |        &lt;img src="../../image.jpg" alt="avatar"/&gt;
+                                       |       &lt;/div&gt;
+                                       |     &lt;/div&gt;
+                                       |      &lt;div class="border-white avatar rounded-3xl"&gt;
+                                       |      &lt;div class="w-20"&gt;
+                                       |        &lt;img src="../../image.jpg" alt="avatar"/&gt;
+                                       |       &lt;/div&gt;
+                                       |     &lt;/div&gt;
+                                       |      &lt;div class="border-white avatar"&gt;
+                                       |      &lt;div class="w-16"&gt;
+                                       |         &lt;span class="text-xs font-bold text-title"/&gt; 26+
+                                       |       &lt;/div&gt;
+                                       |     &lt;/div&gt; 
+                                       |     &lt;div class="items-center justify-center avatar-group"&gt;
+                                       |     &lt;div class="border-white avatar"&gt;
+                                       |      &lt;div class="w-20"&gt;
+                                       |        &lt;img src="../../image.jpg" alt="avatar"/&gt;
+                                       |       &lt;/div&gt;
+                                       |     &lt;/div&gt;
+                                       |      &lt;div class="border-white avatar"&gt;
+                                       |      &lt;div class="w-16"&gt;
+                                       |        &lt;img src="../../image.jpg" alt="avatar"/&gt;
+                                       |       &lt;/div&gt;
+                                       |     &lt;/div&gt;
+                                       |      &lt;div class="border-white avatar"&gt;
+                                       |      &lt;div class="w-12"&gt;
+                                       |         &lt;span class="text-xs font-bold text-title"/&gt; 26+
+                                       |       &lt;/div&gt;
+                                       |     &lt;/div&gt;
+                                       |     &lt;div class="items-center justify-center avatar-group"&gt;
+                                       |     &lt;div class="border-white avatar"&gt;
+                                       |      &lt;div class="w-12"&gt;
+                                       |        &lt;img src="../../image.jpg" alt="avatar"/&gt;
+                                       |       &lt;/div&gt;
+                                       |     &lt;/div&gt;
+                                       |     &lt;div class="border-white avatar"&gt;
+                                       |      &lt;div class="w-12"&gt;
+                                       |        &lt;img src="../../image.jpg" alt="avatar"/&gt;
+                                       |       &lt;/div&gt;
+                                       |     &lt;/div&gt;
+                                       |     &lt;div class="border-white avatar"&gt;
+                                       |      &lt;div class="w-12"&gt;
+                                       |        &lt;span class="text-xs font-bold text-title"/&gt; 26+
+                                       |       &lt;/div&gt;
+                                       |     &lt;/div&gt;
+                                       |    &lt;/div&gt;
+                                       |&lt;/div&gt;
+                  div.col-span-4(class="2xl:col-span-6 2md:col-span-12") 
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Ping
+                              p  Use the  
+                                 strong .animate-ping 
+                                 |  utility class to indicate important message.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body 
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div(class="flex flex-wrap items-center gap-[0.5rem] 2xl:gap-[0.375rem]")
+                                    div.avatar.relative(class="overflow-visible")
+                                       div.w-14.rounded
+                                          img(class="rounded-full" src="../../assets/images/avatar/20.jpg" alt="avatar")
+                                          div.status-online.animate-ping
+                                    div.avatar.relative(class="overflow-visible")
+                                       div.w-12.rounded 
+                                          img(class="rounded-full" src="../../assets/images/avatar/20.jpg" alt="avatar")
+                                          div.status-online.animate-ping
+                                    div.avatar.relative(class="overflow-visible")
+                                       div.w-11.rounded 
+                                          img(class="rounded-full" src="../../assets/images/avatar/20.jpg" alt="avatar")
+                                          div.status-dnd.animate-ping
+                                    div.avatar.relative(class="overflow-visible")
+                                       div.w-10.rounded 
+                                          img(class="rounded-full" src="../../assets/images/avatar/20.jpg" alt="avatar")
+                                          div.status-offline.animate-ping
+                                    div.avatar.relative(class="overflow-visible")
+                                       div.w-9.rounded
+                                          img(class="rounded-full" src="../../assets/images/avatar/20.jpg" alt="avatar")
+                                          div.status-offline.animate-ping
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap items-center gap-[0.5rem] 2xl:gap-[0.375rem]"&gt;
+                                       |    &lt;div class="avatar"&gt;
+                                       |      &lt;div class="relative overflow-visible rounded w-14"&gt;
+                                       |        &lt;img src="../../image.jpg" alt="avatar"/&gt;
+                                       |       &lt;div class="status-online animate-ping"&gt;&lt;/div&gt;
+                                       |      &lt;/div&gt;
+                                       |    &lt;/div&gt;
+                                       |    &lt;div class="avatar"&gt;
+                                       |      &lt;div class="relative w-12 overflow-visible rounded"&gt;
+                                       |       &lt;img src="../../image.jpg" alt="avatar"/&gt;
+                                       |       &lt;div class="status-online animate-ping"&gt;&lt;/div&gt;
+                                       |      &lt;/div&gt;
+                                       |    &lt;/div&gt;
+                                       |    &lt;div class="avatar"&gt;
+                                       |      &lt;div class="relative overflow-visible rounded w-11"&gt;
+                                       |        &lt;img src="../../image.jpg" alt="avatar"/&gt;
+                                       |       &lt;div class="status-dnd animate-ping"&gt;&lt;/div&gt;
+                                       |      &lt;/div&gt;
+                                       |    &lt;/div&gt; 
+                                       |    &lt;div class="avatar"&gt;
+                                       |      &lt;div class="relative w-10 overflow-visible rounded"&gt;
+                                       |        &lt;img src="../../image.jpg" alt="avatar"/&gt;
+                                       |       &lt;div class="status-offline"&gt;&lt;/div&gt;
+                                       |      &lt;/div&gt;
+                                       |    &lt;/div&gt;
+                                       |    &lt;div class="avatar"&gt;
+                                       |     &lt;div class="relative overflow-visible rounded w-9"&gt;
+                                       |       &lt;img src="../../image.jpg" alt="avatar"/&gt;
+                                       |       &lt;div class="status-offline animate-ping"&gt;&lt;/div&gt;
+                                       |      &lt;/div&gt;
+                                       |    &lt;/div&gt;
+                                       |&lt;/div&gt;
+                  div.col-span-4(class="2xl:col-span-6 2md:col-span-12") 
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Initial
+                              p  Use initial letter as a avatar.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body 
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div(class="flex flex-wrap items-center gap-[0.5rem] 2xl:gap-[0.375rem]")
+                                    div.avatar.inline-flex
+                                       div.w-14.rounded.flex.justify-center.items-center.bg-gray-light
+                                          span.text-3xl B
+                                    div.avatar.inline-flex
+                                       div.w-12.rounded.flex.justify-center.items-center.bg-gray-light
+                                          span.text-2xl A
+                                    div.avatar.inline-flex
+                                       div.w-11.rounded.flex.justify-center.items-center.bg-gray-light
+                                          span.text-xl  C 
+                                    div.avatar.inline-flex
+                                       div.w-10.rounded.flex.justify-center.items-center.bg-gray-light
+                                          span.text-lg  K 
+                                    div.avatar.inline-flex
+                                       div.w-9.rounded.flex.justify-center.items-center.bg-gray-light
+                                          span.text-sm  Y
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap items-center gap-[0.5rem] 2xl:gap-[0.375rem]"&gt;
+                                       |    &lt;div class="inline-flex avatar"&gt;
+                                       |     &lt;div class="flex items-center justify-center rounded w-14 bg-gray-light"&gt;
+                                       |       &lt;span class="text-3xl"&gt; B &lt;/span&gt;
+                                       |      &lt;/div&gt;
+                                       |    &lt;/div&gt;
+                                       |    &lt;div class="inline-flex avatar"&gt;
+                                       |      &lt;div class="flex items-center justify-center w-12 rounded bg-gray-light"&gt;
+                                       |        &lt;span class="text-2xl"&gt; A &lt;/span&gt;
+                                       |      &lt;/div&gt;
+                                       |    &lt;/div&gt;
+                                       |    &lt;div class="inline-flex avatar"&gt;
+                                       |      &lt;div class="flex items-center justify-center rounded w-11 bg-gray-light"&gt;
+                                       |       &lt;span class="text-xl"&gt; C &lt;/span&gt;
+                                       |      &lt;/div&gt;
+                                       |    &lt;/div&gt;
+                                       |    &lt;div class="inline-flex avatar"&gt;
+                                       |      &lt;div class="flex items-center justify-center w-10 rounded bg-gray-light"&gt;
+                                       |        &lt;span class="text-lg"&gt; K &lt;/span&gt;
+                                       |      &lt;/div&gt;
+                                       |    &lt;/div&gt; 
+                                       |    &lt;div class="inline-flex avatar"&gt;
+                                       |      &lt;div class="flex items-center justify-center rounded w-9 bg-gray-light"&gt;
+                                       |        &lt;span class="text-sm"&gt; Y &lt;/span&gt;
+                                       |      &lt;/div&gt;
+                                       |    &lt;/div&gt;
+                                       |&lt;/div&gt;
+                  div.col-span-4(class="2xl:col-span-6 2md:col-span-12") 
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Icon
+                              p  Use icon to make icon avatars.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body 
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div(class="flex flex-wrap items-center gap-[0.5rem] 2xl:gap-[0.375rem]")
+                                    div.avatar
+                                       div
+                                          +SVG_ICON("Heart","w-[3.125rem] h-[3.125rem] stroke-white bg-primary p-2") 
+                                    div.avatar
+                                       div
+                                          +SVG_ICON("Star","w-[3.125rem] h-[3.125rem] stroke-white bg-success p-2") 
+                                    div.avatar
+                                       div
+                                          +SVG_ICON("Check-Circle","w-[3.125rem] h-[3.125rem] stroke-white bg-info p-2") 
+                                    div.avatar
+                                       div
+                                          +SVG_ICON("Chat","w-[3.125rem] h-[3.125rem] stroke-white bg-danger p-2") 
+                                    div.avatar
+                                       div
+                                          +SVG_ICON("Notification","w-[3.125rem] h-[3.125rem] stroke-white bg-warning p-2") 
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap items-center gap-[0.5rem] 2xl:gap-[0.375rem]"&gt;
+                                       |    &lt;div class="avatar"&gt;
+                                       |     &lt;div&gt;
+                                       |       +SVG_ICON("Heart","w-[3.125rem] h-[3.125rem] 
+                                       |       stroke-white bg-primary p-2")
+                                       |      &lt;/div&gt;
+                                       |    &lt;/div&gt;
+                                       |    &lt;div class="avatar"&gt;
+                                       |      &lt;div&gt;
+                                       |      +SVG_ICON("Heart","w-[3.125rem] h-[3.125rem] 
+                                       |       stroke-white bg-success p-2")
+                                       |      &lt;/div&gt;
+                                       |    &lt;/div&gt;
+                                       |    &lt;div class="avatar"&gt;
+                                       |      &lt;div&gt;
+                                       |      +SVG_ICON("Heart","w-[3.125rem] h-[3.125rem] 
+                                       |       stroke-white bg-info p-2")
+                                       |      &lt;/div&gt;
+                                       |    &lt;/div&gt;
+                                       |    &lt;div class="avatar"&gt;
+                                       |      &lt;div&gt;
+                                       |      +SVG_ICON("Heart","w-[3.125rem] h-[3.125rem] 
+                                       |       stroke-white bg-danger p-2")
+                                       |      &lt;/div&gt;
+                                       |    &lt;/div&gt; 
+                                       |    &lt;div class="avatar"&gt;
+                                       |      &lt;div&gt;
+                                       |      +SVG_ICON("Heart","w-[3.125rem] h-[3.125rem] 
+                                       |       stroke-white bg-warning p-2")
+                                       |      &lt;/div&gt;
+                                       |    &lt;/div&gt;
+                                       |&lt;/div&gt;
+            // Page Body End 
+            +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+      include ../../components/customizer
+
+   include ../../layout/footer-files

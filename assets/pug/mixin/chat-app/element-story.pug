@@ -1,0 +1,19 @@
+
+//- ================
+//-  story  
+//- ================
+
+mixin story-data(type,data)
+    ul.flex.flex-col.gap-4 
+        each dataItem in data 
+            li.flex.items-start.justify-between(class="pt-[13px] border-t border-gray-light first:pt-0 first:mt-0 first:border-none")
+                div.flex.items-center.gap-3(class="w-[calc(100%_-_59px)] xl:gap-2")
+                    div.chat-story
+                        div.avatar 
+                            div.w-10.rounded-full(class="xl:w-9")
+                                img(src=`../../assets/images/avatar/${dataItem.image}`, alt=`${dataItem.title}`)
+                    div(class="w-[calc(100%_-_70px)]") 
+                        h4.text-xs.font-medium.truncate.text-title(class="leading-none lg:text-2xs lg:leading-none")=dataItem.title 
+                        span.text-content.truncate.block(class="mt-1")=dataItem.subtitle
+                div.flex.flex-col.items-end.gap-1      
+                    span.text-content(class="text-3xs")=dataItem.storytime

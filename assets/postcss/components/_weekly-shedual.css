@@ -1,0 +1,100 @@
+@layer components {
+  .weekly-schedule {
+    .fc {
+      .fc-timegrid-slot-label-cushion {
+        @apply text-xs font-semibold text-title;
+      }
+      .fc-col-header-cell-cushion {
+        @apply py-[.625rem] px-1 text-xs font-semibold text-content flex items-center flex-col;
+        span {
+          @apply text-title;
+        }
+      }
+    }
+    .fc-header-toolbar {
+      @apply hidden;
+    }
+    .row {
+      @apply hidden;
+    }
+    .fc-theme-standard {
+      td,
+      th {
+        @apply border-dashed border-border-light;
+      }
+    }
+    .fc .fc-scrollgrid-section-header {
+      th {
+        @apply p-0;
+      }
+    }
+    .fc .fc-scrollgrid-section > td {
+      @apply p-0;
+    }
+    .fc {
+      td,
+      th {
+        @apply p-[.625rem];
+      }
+    }
+    fc-scrollgrid-sync-table {
+      @apply first:hidden;
+    }
+    .fc-timegrid-event-harness {
+      > .fc-timegrid-event {
+        @apply min-w-fit w-full;
+      }
+    }
+    .fc-scrollgrid {
+      @apply border-none min-w-[31.25rem] overflow-auto custom-scroll;
+      > tbody {
+        > tr {
+          @apply first:hidden;
+          &:nth-child(2) {
+            @apply hidden;
+          }
+        }
+      }
+    }
+    .fc-timegrid-event-harness {
+      > .fc-timegrid-event {
+        &.common-style {
+          @apply text-title border-none shadow-none rounded-full max-h-[3.5625rem] min-h-[3.5625rem] min-w-[25rem] 2lg:min-w-[17.8125rem] sm:min-w-[15.9375rem];
+          .fc-event-main {
+            @apply p-[.625rem];
+          }
+          .fc-event-main-frame {
+            @apply justify-between flex-row;
+          }
+          .fc-task-box {
+            @apply flex items-center gap-2;
+            .fc-task-text-box {
+              @apply text-content capitalize flex flex-col items-center text-xs font-semibold;
+              .fc-task-text {
+                @apply text-title;
+              }
+            }
+          }
+          .img-wrapper {
+            @apply flex items-center gap-2;
+            img {
+              @apply rounded-full sm:w-[1.875rem] sm:h-[1.875rem] w-[2.1875rem] h-[2.1875rem];
+            }
+          }
+          .fc-event-time {
+            @apply text-title;
+          }
+          .fc-event-title {
+            @apply text-title text-xs font-semibold sm:text-3xs;
+          }
+          .fc-event-subtitle {
+            @apply text-content text-2xs font-semibold sm:text-3xs;
+          }
+          &.success-light {
+            @apply bg-success-light;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+//- ================
+//-  Email Data  
+//- ================
+
+mixin email-data(data)
+    ul.flex.flex-col.gap-4 
+        each dataItem,index in data 
+            li.flex.items-start.justify-between(class="pt-[20px] sm:gap-1 border-t border-gray-light first:pt-0 first:mt-0 first:border-none")
+                div(class="flex items-center gap-3")
+                    if(index===0)
+                    label.checkbox(class="min-w-[18px] h-[18px] sm:hidden cursor-pointer")
+                        input(type='checkbox'  checked=index + 1 == 4 ? true : false)
+                        input(type='checkbox'  checked=index + 1 == 6 ? true : false)
+                        div.checkbox-indicator(class="peer-checked:!bg-primary peer-checked:!border-primary border-content3")
+                            i(data-feather="check")
+                    if(index===0)
+                    label.checkbox(class="w-[18px] h-[18px] sm:hidden cursor-pointer")
+                        i(data-feather="star" class="stroke-content3 w-[18px] h-[18px]")
+                            input(type='checkbox'  checked=index + 1 == 2 ? true : false)
+                            input(type='checkbox'  checked=index + 1 == 4 ? true : false)
+                            input(type='checkbox'  checked=index + 1 == 7 ? true : false)
+                            div.checkbox-indicator(class="star peer-checked:!border-warning border-content3 overflow-hidden")
+                                i(data-feather="star")
+                    div.flex.items-center(class="gap-[9px] cursor-pointer" class="btnEmailRead")
+                        div.avatar.w-10
+                            div.rounded-full
+                                img(src=`../../assets/images/avatar/${dataItem.image}`, alt=`${dataItem.title}`)
+                        div(class="w-[calc(100%_-_40px)]")
+                            h4.text-xs.font-medium.truncate.text-title(class="leading-none whitespace-normal lg:text-2xs line-clamp-1")=dataItem.title 
+                            span.text-content.truncate.block(class="mt-1 whitespace-normal line-clamp-1")=dataItem.subTitle
+                div     
+                    span.text-content(class="text-3xs")=dataItem.time
+

@@ -1,0 +1,96 @@
+/*=====================
+    Todo App CSS
+  ==========================*/
+@layer components {
+    .todo-app {
+        li {
+            &:nth-child(4n + 1) {
+                .line {
+                    @apply bg-primary;
+                }
+
+                .check-icon {
+                    @apply stroke-primary;
+                }
+            }
+
+            &:nth-child(4n + 2) {
+                .line {
+                    @apply bg-secondary;
+                }
+
+                .check-icon {
+                    @apply stroke-secondary;
+                }
+            }
+
+            &:nth-child(4n + 3) {
+                .line {
+                    @apply bg-info;
+                }
+
+                .check-icon {
+                    @apply stroke-info;
+                }
+            }
+
+            &:nth-child(4n + 4) {
+                .line {
+                    @apply bg-warning;
+                }
+
+                .check-icon {
+                    @apply stroke-warning;
+                }
+            }
+        }
+
+        .todo-sublist{
+            li{
+                /* .priority-low{
+                    @apply bg-danger-light capitalize leading-none text-3xs text-danger;
+                }
+                .priority-medium{
+                    @apply bg-warning-light capitalize leading-none text-3xs text-warning;
+                }
+                .priority-high{
+                    @apply bg-primary-light capitalize leading-none text-3xs text-primary;
+                }
+                .status-pending{
+                    @apply bg-secondary-light capitalize leading-none text-3xs text-secondary;
+                }
+                .status-inprogress{
+                    @apply bg-info-light capitalize leading-none text-3xs text-info;
+                }
+                .status-completed{
+                    @apply bg-success-light capitalize leading-none text-3xs text-success;
+                }
+                .status-new{
+                    @apply bg-primary-light capitalize leading-none text-3xs text-primary;
+                } */
+            }
+        }
+    }
+
+    .todo-form{
+        .priority-list{
+            select{
+                option{
+                    
+                }
+            }
+        }
+    }
+    .check-custom {
+        input:checked~.check {
+            svg {
+                @apply opacity-100;
+            }
+        }
+        &.todo-check-show{
+            h5{
+                @apply line-through;
+            }
+        }
+    }
+}

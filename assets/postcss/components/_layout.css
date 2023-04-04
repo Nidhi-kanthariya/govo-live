@@ -1,0 +1,89 @@
+/*=====================
+    Layout CSS
+  ==========================*/
+
+@layer components {
+  main{
+    .page-body{
+      .apexcharts{
+        &-canvas {
+        [dir='rtl'] & {
+          direction: ltr;
+        }
+      }
+      }
+      .common-animate-main{
+        .common-animate{
+          animation-duration: 12000ms;
+        }
+      }
+    }
+    .page-footer{
+      @apply dark:bg-sidebar-dark dark:text-white z-[4];
+    }
+    &.sidebar-close {
+      .page-sidebar{
+        @apply w-[calc(65px_+_(90_-_65)_*_((100vw_-_320px)_/_(1920_-_320)))] transition-all ease-in-out;
+      }
+      .page-header{
+        @apply ml-[4.8125rem] rtl:ml-unset rtl:mr-[4.8125rem] w-[calc(100%_-_77px);];
+      }
+      .page-body{
+        @apply ml-[calc(65px_+_(90_-_65)_*_((100vw_-_320px)_/_(1920_-_320)))] rtl:ml-unset rtl:mr-[calc(65px_+_(90_-_65)_*_((100vw_-_320px)_/_(1920_-_320)))] transition-all duration-500;
+      }
+      .page-footer{
+        @apply ml-[4.8125rem] rtl:ml-unset rtl:mr-[4.8125rem] w-[calc(100%_-_77px)];
+      }
+      &.sidebar-icon {
+        .page-body-wrapper {
+          @apply w-full;
+        }
+        .page-sidebar {
+          nav {
+            ul {
+            .title{
+              @apply hidden;
+            }
+              .sidebar-list {
+                a{
+                  span{
+                    .sidebar-name{
+                      @apply !hidden;
+                    }
+                  }
+                }
+                .sidebar-submenu{
+                  @apply invisible absolute !pl-[47px] pt-5 left-0 top-0 bottom-0 z-[-1] !m-0 translate-x-0 !block h-full w-[250px] transform bg-sidebar-dark opacity-0 transition-all;
+                  li{
+                    &:hover{
+                      a{
+                        @apply !text-white after:bg-white;                      
+                      }
+                    }
+                    &:not(:first-of-type){
+                      @apply mt-3;
+                    }
+                    a{
+                      @apply relative text-content-white;
+                      &:after{                    
+                        @apply content-[""] left-[-18px] absolute top-1/2 h-[2px] w-[0.375rem] translate-y-1/2 transform bg-content2;
+                      }
+                      &.active{
+                        @apply text-white after:bg-white;
+                      }
+                    }
+                  }                
+                }
+                  &:hover{
+                    .sidebar-submenu{
+                    @apply visible opacity-100 transform transition-all translate-x-[30%];
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

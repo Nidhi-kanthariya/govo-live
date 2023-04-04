@@ -1,0 +1,443 @@
+//- sidebar
+-var sidebar = true;
+
+//- feathet
+-var feather= true;
+
+//- customSelect
+-var customSelect= true;
+
+//- customizer
+-var customizer=true;
+
+//- prism
+-var prism=true;
+
+//- Breadcrumbs
+-var pageTitle="Carousel";
+-var breadcrumb=['Ui Kits','Carousel'];
+
+//- json
+include ../../data/all-data
+
+//- mixin
+include ../../mixin/mixin
+
+doctype html
+html(lang='en')  
+   include ../../layout/header-files 
+   body(dir="ltr" class="unique-skin") 
+      main.page-wrapper
+         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+            include ../../layout/header/header     
+            // Sidebar Start 
+            div.page-sidebar.sidebar-dark.unique-sidebar
+               include ../../layout/unique
+            // Sidebar End 
+
+            // Page Body Start 
+            div.page-body
+               div.grid.grid-cols-12.gap-card-gap
+                  div.col-span-6(class="2lg:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold With Arrow
+                              p When you click on the arrow, slider snap the image horizontally.                                           
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.carousel.w-full.overflow-hidden
+                                    #slide1.carousel-item.relative.w-full.box-border.flex.flex-none.snap-start
+                                       img.w-full(class="h-[17.625rem] xl:h-[13.4375rem] 2lg:h-60 sm:h-36 2sm:h-32" src='../../assets/images/carousel/1.jpg' alt="nature")
+                                       div.absolute.flex.justify-between.transform.left-5.right-5.text-white(class='-translate-y-1/2 top-1/2 lg:left-2.5 lg:right-2.5')
+                                          a.btn(href='#slide4') ❮
+                                          a.btn(href='#slide2') ❯
+                                    #slide2.carousel-item.relative.w-full.box-border.flex.flex-none.snap-start
+                                       img.w-full(class="h-[17.625rem] xl:h-[13.4375rem] 2lg:h-60 sm:h-36 2sm:h-32" src='../../assets/images/carousel/2.jpg' alt="butterfly")
+                                       div.absolute.flex.justify-between.transform.left-5.right-5.text-white(class='-translate-y-1/2 top-1/2 lg:left-2.5 lg:right-2.5')
+                                          a.btn(href='#slide1') ❮
+                                          a.btn(href='#slide3') ❯
+                                    #slide3.carousel-item.relative.w-full.box-border.flex.flex-none.snap-start
+                                       img.w-full(class="h-[17.625rem] xl:h-[13.4375rem] 2lg:h-60 sm:h-36 2sm:h-32" src='../../assets/images/carousel/3.jpg' alt="sky view")
+                                       div.absolute.flex.justify-between.transform.left-5.right-5.text-white(class='-translate-y-1/2 top-1/2 lg:left-2.5 lg:right-2.5')
+                                          a.btn(href='#slide2') ❮
+                                          a.btn(href='#slide4') ❯
+                                    #slide4.carousel-item.relative.w-full.box-border.flex.flex-none.snap-start
+                                       img.w-full(class="h-[17.625rem] xl:h-[13.4375rem] 2lg:h-60 sm:h-36 2sm:h-32" src='../../assets/images/carousel/4.jpg' alt="tree")
+                                       div.absolute.flex.justify-between.transform.left-5.right-5.text-white(class='-translate-y-1/2 top-1/2 lg:left-2.5 lg:right-2.5')
+                                          a.btn(href='#slide3') ❮
+                                          a.btn(href='#slide1') ❯
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-6")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")  
+                                    code
+                                       |&lt;div class="w-full overflow-hidden carousel"&gt;
+                                       |    &lt;div class="box-border relative flex flex-none w-full carousel-item snap-start" id="slide1"&gt;
+                                       |       &lt;img class="w-full h-[17.625rem] xl:h-[13.4375rem] 2lg:h-60 sm:h-36 2sm:h-32" src="../../assets/images/carousel/1.jpg" alt="nature"&gt;
+                                       |       &lt;div class="absolute flex justify-between transform left-5 right-5 text-white -translate-y-1/2 top-1/2 lg:left-2.5 lg:right-2.5"&gt;
+                                       |          &lt;a class="btn" href="#slide4"&gt;❮&lt;/a&gt;
+                                       |          &lt;a class="btn" href="#slide2"&gt;❯&lt;/a&gt;
+                                       |       &lt;/div&gt;
+                                       |    &lt;/div&gt;
+                                       |    &lt;div class="box-border relative flex flex-none w-full carousel-item snap-start" id="slide2"&gt;
+                                       |       &lt;img class="w-full h-[17.625rem] xl:h-[13.4375rem] 2lg:h-60 sm:h-36 2sm:h-32" src="../../assets/images/carousel/2.jpg" alt="butterfly"&gt;
+                                       |       &lt;div class="absolute flex justify-between transform left-5 right-5 text-white -translate-y-1/2 top-1/2 lg:left-2.5 lg:right-2.5"&gt;
+                                       |          &lt;a class="btn" href="#slide1"&gt;❮&lt;/a&gt;
+                                       |          &lt;a class="btn" href="#slide3"&gt;❯&lt;/a&gt;
+                                       |       &lt;/div&gt;
+                                       |    &lt;/div&gt;
+                                       |    &lt;div class="box-border relative flex flex-none w-full carousel-item snap-start" id="slide3"&gt;
+                                       |       &lt;img class="w-full h-[17.625rem] xl:h-[13.4375rem] 2lg:h-60 sm:h-36 2sm:h-32" src="../../assets/images/carousel/3.jpg" alt="sky view"&gt;
+                                       |       &lt;div class="absolute flex justify-between transform left-5 right-5 text-white -translate-y-1/2 top-1/2 lg:left-2.5 lg:right-2.5"&gt;
+                                       |          &lt;a class="btn" href="#slide2"&gt;❮&lt;/a&gt;
+                                       |          &lt;a class="btn" href="#slide4"&gt;❯&lt;/a&gt;
+                                       |       &lt;/div&gt;
+                                       |    &lt;/div&gt;
+                                       |    &lt;div class="box-border relative flex flex-none w-full carousel-item snap-start" id="slide4"&gt;
+                                       |       &lt;img class="w-full h-[17.625rem] xl:h-[13.4375rem] 2lg:h-60 sm:h-36 2sm:h-32" src="../../assets/images/carousel/4.jpg" alt="tree"&gt;
+                                       |       &lt;div class="absolute flex justify-between transform left-5 right-5 text-white -translate-y-1/2 top-1/2 lg:left-2.5 lg:right-2.5"&gt;
+                                       |          &lt;a class="btn" href="#slide3"&gt;❮&lt;/a&gt;
+                                       |          &lt;a class="btn" href="#slide1"&gt;❯&lt;/a&gt;
+                                       |       &lt;/div&gt;
+                                       |    &lt;/div&gt;
+                                       |&lt;/div&gt; 
+
+                  div.col-span-6(class="2lg:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold With Buttons
+                              p clicking on the button, slider snap the images.                                              
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.carousel.w-full.overflow-hidden
+                                    div#item1.carousel-item.w-full.box-border.flex.flex-none.snap-start
+                                       img.w-full(class="h-[15.625rem] xl:h-[11.5rem] 2lg:h-60 sm:h-36 2sm:h-32" src='../../assets/images/carousel/3.jpg' alt="SKY VIEW")
+                                    div#item2.carousel-item.w-full.box-border.flex.flex-none.snap-start
+                                       img.w-full(class="h-[15.625rem] xl:h-[11.5rem] 2lg:h-60 sm:h-36 2sm:h-32" src='../../assets/images/carousel/4.jpg' alt="tree")
+                                    div#item3.carousel-item.w-full.box-border.flex.flex-none.snap-start
+                                       img.w-full(class="h-[15.625rem] xl:h-[11.5rem] 2lg:h-60 sm:h-36 2sm:h-32" src='../../assets/images/carousel/1.jpg' alt="nature")
+                                    div#item4.carousel-item.w-full.box-border.flex.flex-none.snap-start
+                                       img.w-full(class="h-[15.625rem] xl:h-[11.5rem] 2lg:h-60 sm:h-36 2sm:h-32" src='../../assets/images/carousel/2.jpg' alt="butterfly")
+                                 div.flex.justify-center.w-full.pt-2.gap-2
+                                    a.btn.btn-xs.bg-primary.text-white(href='#item1') 1
+                                    a.btn.btn-xs.bg-primary.text-white(href='#item2') 2
+                                    a.btn.btn-xs.bg-primary.text-white(href='#item3') 3
+                                    a.btn.btn-xs.bg-primary.text-white(href='#item4') 4
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-6")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")  
+                                    code
+                                       |&lt;div class="w-full overflow-hidden carousel"&gt;
+                                       |    &lt;div class="box-border flex flex-none w-full carousel-item snap-start" id="item1"&gt;
+                                       |        &lt;img class="w-full h-[15.625rem] xl:h-[11.5rem] 2lg:h-60 sm:h-36 2sm:h-32" src="../../assets/images/carousel/3.jpg" alt="SKY VIEW"&gt;
+                                       |    &lt;/div&gt;
+                                       |    &lt;div class="box-border flex flex-none w-full carousel-item snap-start" id="item2"&gt;
+                                       |        &lt;img class="w-full h-[15.625rem] xl:h-[11.5rem] 2lg:h-60 sm:h-36 2sm:h-32" src="../../assets/images/carousel/4.jpg" alt="tree"&gt;
+                                       |    &lt;/div&gt;
+                                       |    &lt;div class="box-border flex flex-none w-full carousel-item snap-start" id="item3"&gt;
+                                       |        &lt;img class="w-full h-[15.625rem] xl:h-[11.5rem] 2lg:h-60 sm:h-36 2sm:h-32" src="../../assets/images/carousel/1.jpg" alt="nature"&gt;
+                                       |    &lt;/div&gt;
+                                       |    &lt;div class="box-border flex flex-none w-full carousel-item snap-start" id="item4"&gt;
+                                       |        &lt;img class="w-full h-[15.625rem] xl:h-[11.5rem] 2lg:h-60 sm:h-36 2sm:h-32" src="../../assets/images/carousel/2.jpg" alt="butterfly"&gt;
+                                       |    &lt;/div&gt;
+                                       |&lt;/div&gt;
+                                       |&lt;div class="flex justify-center w-full gap-2 pt-2"&gt;
+                                       |    &lt;a class="text-white btn btn-xs bg-primary" href="#item1"&gt;1&lt;/a&gt;
+                                       |    &lt;a class="text-white btn btn-xs bg-primary" href="#item2"&gt;2&lt;/a&gt;
+                                       |    &lt;a class="text-white btn btn-xs bg-primary" href="#item3"&gt;3&lt;/a&gt;
+                                       |    &lt;a class="text-white btn btn-xs bg-primary" href="#item4"&gt;4&lt;/a&gt;
+                                       |&lt;/div&gt; 
+
+                  div.col-span-6(class="2lg:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold With Dots
+                              p Clicking on dots, slider snap the image smoothly.                                           
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.carousel.w-full.overflow-hidden
+                                    div#slide-1.carousel-item.w-full.box-border.flex.flex-none.snap-start
+                                       img.w-full(class="h-[17.625rem] xl:h-[13.4375rem] 2lg:h-60 sm:h-36 2sm:h-32" src='../../assets/images/carousel/2.jpg' alt="butterfly")
+                                    div#slide-2.carousel-item.w-full.box-border.flex.flex-none.snap-start
+                                       img.w-full(class="h-[17.625rem] xl:h-[13.4375rem] 2lg:h-60 sm:h-36 2sm:h-32" src='../../assets/images/carousel/1.jpg' alt="nature")
+                                    div#slide-3.carousel-item.w-full.box-border.flex.flex-none.snap-start
+                                       img.w-full(class="h-[17.625rem] xl:h-[13.4375rem] 2lg:h-60 sm:h-36 2sm:h-32" src='../../assets/images/carousel/3.jpg' alt="sky view")
+                                    div#slide-4.carousel-item.w-full.box-border.flex.flex-none.snap-start
+                                       img.w-full(class="h-[17.625rem] xl:h-[13.4375rem] 2lg:h-60 sm:h-36 2sm:h-32" src='../../assets/images/carousel/4.jpg' alt="tree")
+                                 div.flex.justify-center.w-full.pt-2.space-x-3
+                                    a.btn.h-2.w-2.bg-primary.p-0(href='#slide-1')
+                                    a.btn.h-2.w-2.bg-primary.p-0(href='#slide-2')
+                                    a.btn.h-2.w-2.bg-primary.p-0(href='#slide-3')
+                                    a.btn.h-2.w-2.bg-primary.p-0(href='#slide-4')
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-6")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")  
+                                    code
+                                       |&lt;div class="w-full overflow-hidden carousel"&gt;
+                                       |    &lt;div class="box-border flex flex-none w-full carousel-item snap-start" id="slide-1"&gt;
+                                       |        &lt;img class="w-full h-[17.625rem] xl:h-[13.4375rem] 2lg:h-60 sm:h-36 2sm:h-32" src="../../assets/images/carousel/2.jpg" alt="butterfly"&gt;
+                                       |    &lt;/div&gt;
+                                       |    &lt;div class="box-border flex flex-none w-full carousel-item snap-start" id="slide-2"&gt;
+                                       |        &lt;img class="w-full h-[17.625rem] xl:h-[13.4375rem] 2lg:h-60 sm:h-36 2sm:h-32" src="../../assets/images/carousel/1.jpg" alt="nature"&gt;
+                                       |    &lt;/div&gt;
+                                       |    &lt;div class="box-border flex flex-none w-full carousel-item snap-start" id="slide-3"&gt;
+                                       |        &lt;img class="w-full h-[17.625rem] xl:h-[13.4375rem] 2lg:h-60 sm:h-36 2sm:h-32" src="../../assets/images/carousel/3.jpg" alt="sky view"&gt;
+                                       |    &lt;/div&gt;
+                                       |    &lt;div class="box-border flex flex-none w-full carousel-item snap-start" id="slide-4"&gt;
+                                       |        &lt;img class="w-full h-[17.625rem] xl:h-[13.4375rem] 2lg:h-60 sm:h-36 2sm:h-32" src="../../assets/images/carousel/4.jpg" alt="tree"&gt;
+                                       |    &lt;/div&gt;
+                                       |&lt;/div&gt;
+                                       |&lt;div class="flex justify-center w-full gap-2 pt-2"&gt;
+                                       |    &lt;a class="w-2 h-2 p-0 btn bg-primary" href="#slide-1"&gt;&lt;/a&gt;
+                                       |    &lt;a class="w-2 h-2 p-0 btn bg-primary" href="#slide-2"&gt;&lt;/a&gt;
+                                       |    &lt;a class="w-2 h-2 p-0 btn bg-primary" href="#slide-3"&gt;&lt;/a&gt;
+                                       |    &lt;a class="w-2 h-2 p-0 btn bg-primary" href="#slide-4"&gt;&lt;/a&gt;
+                                       |&lt;/div&gt; 
+
+                  div.col-span-6(class="2lg:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Indicator
+                              p click on indicator, slider snap the image.                                           
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.carousel.w-full.overflow-hidden
+                                    div#slider-1.carousel-item.relative.w-full.box-border.flex.flex-none.snap-start
+                                       img.w-full(class="h-[17.625rem] xl:h-[13.4375rem] 2lg:h-60 sm:h-36 2sm:h-32" src='../../assets/images/carousel/4.jpg' alt="tree")
+                                       div.flex.justify-center.absolute.gap-2(class="-translate-x-1/2 left-1/2 bottom-2")
+                                          a.btn.w-6.bg-white.p-0(class="h-[0.125rem]" href='#slider-1')
+                                          a.btn.w-6.bg-white.p-0(class="h-[0.125rem]" href='#slider-2')
+                                          a.btn.w-6.bg-white.p-0(class="h-[0.125rem]" href='#slider-3')
+                                          a.btn.w-6.bg-white.p-0(class="h-[0.125rem]" href='#slider-4')
+                                    div#slider-2.carousel-item.relative.w-full.box-border.flex.flex-none.snap-start
+                                       img.w-full(class="h-[17.625rem] xl:h-[13.4375rem] 2lg:h-60 sm:h-36 2sm:h-32" src='../../assets/images/carousel/1.jpg' alt="nature")
+                                       div.flex.justify-center.absolute.gap-2(class="-translate-x-1/2 left-1/2 bottom-2")
+                                          a.btn.w-6.bg-white.p-0(class="h-[0.125rem]" href='#slider-1')
+                                          a.btn.w-6.bg-white.p-0(class="h-[0.125rem]" href='#slider-2')
+                                          a.btn.w-6.bg-white.p-0(class="h-[0.125rem]" href='#slider-3')
+                                          a.btn.w-6.bg-white.p-0(class="h-[0.125rem]" href='#slider-4')
+                                    div#slider-3.carousel-item.relative.w-full.box-border.flex.flex-none.snap-start
+                                       img.w-full(class="h-[17.625rem] xl:h-[13.4375rem] 2lg:h-60 sm:h-36 2sm:h-32" src='../../assets/images/carousel/3.jpg' alt="sky view")
+                                       div.flex.justify-center.absolute.gap-2(class="-translate-x-1/2 left-1/2 bottom-2")
+                                          a.btn.w-6.bg-white.p-0(class="h-[0.125rem]" href='#slider-1')
+                                          a.btn.w-6.bg-white.p-0(class="h-[0.125rem]" href='#slider-2')
+                                          a.btn.w-6.bg-white.p-0(class="h-[0.125rem]" href='#slider-3')
+                                          a.btn.w-6.bg-white.p-0(class="h-[0.125rem]" href='#slider-4')
+                                    div#slider-4.carousel-item.relative.w-full.box-border.flex.flex-none.snap-start
+                                       img.w-full(class="h-[17.625rem] xl:h-[13.4375rem] 2lg:h-60 sm:h-36 2sm:h-32" src='../../assets/images/carousel/2.jpg' alt="butterfly")
+                                       div.flex.justify-center.absolute.gap-2(class="-translate-x-1/2 left-1/2 bottom-2")
+                                          a.btn.w-6.bg-white.p-0(class="h-[0.125rem]" href='#slider-1')
+                                          a.btn.w-6.bg-white.p-0(class="h-[0.125rem]" href='#slider-2')
+                                          a.btn.w-6.bg-white.p-0(class="h-[0.125rem]" href='#slider-3')
+                                          a.btn.w-6.bg-white.p-0(class="h-[0.125rem]" href='#slider-4')
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-6")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")  
+                                    code
+                                       |&lt;div class="w-full overflow-hidden carousel"&gt;
+                                       |    &lt;div class="box-border flex flex-none w-full carousel-item snap-start" id="slide-1"&gt;
+                                       |        &lt;img class="w-full h-[17.625rem] xl:h-[13.4375rem] 2lg:h-60 sm:h-36 2sm:h-32" src="../../assets/images/carousel/4.jpg" alt="tree"&gt;
+                                       |    &lt;/div&gt;
+                                       |    &lt;div class="box-border flex flex-none w-full carousel-item snap-start" id="slide-2"&gt;
+                                       |        &lt;img class="w-full h-[17.625rem] xl:h-[13.4375rem] 2lg:h-60 sm:h-36 2sm:h-32" src="../../assets/images/carousel/1.jpg" alt="nature"&gt;
+                                       |    &lt;/div&gt;
+                                       |    &lt;div class="box-border flex flex-none w-full carousel-item snap-start" id="slide-3"&gt;
+                                       |        &lt;img class="w-full h-[17.625rem] xl:h-[13.4375rem] 2lg:h-60 sm:h-36 2sm:h-32" src="../../assets/images/carousel/3.jpg" alt="sky view"&gt;
+                                       |    &lt;/div&gt;
+                                       |    &lt;div class="box-border flex flex-none w-full carousel-item snap-start" id="slide-4"&gt;
+                                       |        &lt;img class="w-full h-[17.625rem] xl:h-[13.4375rem] 2lg:h-60 sm:h-36 2sm:h-32" src="../../assets/images/carousel/2.jpg" alt="butterfly"&gt;
+                                       |    &lt;/div&gt;
+                                       |&lt;/div&gt;
+                                       |&lt;div class="flex justify-center w-full gap-2 pt-2"&gt;
+                                       |    &lt;a class="btn w-6 bg-success p-0 h-[0.125rem]" href="#slide-1"&gt;&lt;/a&gt;
+                                       |    &lt;a class="btn w-6 bg-success p-0 h-[0.125rem]" href="#slide-2"&gt;&lt;/a&gt;
+                                       |    &lt;a class="btn w-6 bg-success p-0 h-[0.125rem]" href="#slide-3"&gt;&lt;/a&gt;
+                                       |    &lt;a class="btn w-6 bg-success p-0 h-[0.125rem]" href="#slide-4"&gt;&lt;/a&gt;
+                                       |&lt;/div&gt; 
+
+                  div.col-span-6(class="2lg:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold With Arrow & Indicator
+                              p Click on arrow or indicator, slider snap the image smoothly.                                           
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.carousel.w-full.overflow-hidden
+                                    #slider1.carousel-item.relative.w-full.box-border.flex.flex-none.snap-start
+                                       img.w-full(class="h-[17.625rem] xl:h-[13.4375rem] 2lg:h-60 sm:h-36 2sm:h-32" src='../../assets/images/carousel/3.jpg' alt="sky view")
+                                       div.absolute.flex.justify-between.transform.left-5.right-5.text-white(class='-translate-y-1/2 top-1/2 lg:left-2.5 lg:right-2.5')
+                                          a.btn(href='#slider4') ❮
+                                          a.btn(href='#slider2') ❯
+                                       div.flex.justify-center.absolute.gap-2(class="-translate-x-1/2 left-1/2 bottom-2")
+                                          a.btn.w-6.bg-white.p-0(class="h-[0.125rem]" href='#slider1')
+                                          a.btn.w-6.bg-white.p-0(class="h-[0.125rem]" href='#slider2')
+                                          a.btn.w-6.bg-white.p-0(class="h-[0.125rem]" href='#slider3')
+                                          a.btn.w-6.bg-white.p-0(class="h-[0.125rem]" href='#slider4')
+                                    #slider2.carousel-item.relative.w-full.box-border.flex.flex-none.snap-start
+                                       img.w-full(class="h-[17.625rem] xl:h-[13.4375rem] 2lg:h-60 sm:h-36 2sm:h-32" src='../../assets/images/carousel/2.jpg' alt="butterfly")
+                                       div.absolute.flex.justify-between.transform.left-5.right-5.text-white(class='-translate-y-1/2 top-1/2 lg:left-2.5 lg:right-2.5')
+                                          a.btn(href='#slider1') ❮
+                                          a.btn(href='#slider3') ❯
+                                       div.flex.justify-center.absolute.gap-2(class="-translate-x-1/2 left-1/2 bottom-2")
+                                          a.btn.w-6.bg-white.p-0(class="h-[0.125rem]" href='#slider1')
+                                          a.btn.w-6.bg-white.p-0(class="h-[0.125rem]" href='#slider2')
+                                          a.btn.w-6.bg-white.p-0(class="h-[0.125rem]" href='#slider3')
+                                          a.btn.w-6.bg-white.p-0(class="h-[0.125rem]" href='#slider4')
+                                    #slider3.carousel-item.relative.w-full.box-border.flex.flex-none.snap-start
+                                       img.w-full(class="h-[17.625rem] xl:h-[13.4375rem] 2lg:h-60 sm:h-36 2sm:h-32" src='../../assets/images/carousel/1.jpg' alt="nature")
+                                       div.absolute.flex.justify-between.transform.left-5.right-5.text-white(class='-translate-y-1/2 top-1/2 lg:left-2.5 lg:right-2.5')
+                                          a.btn(href='#slider2') ❮
+                                          a.btn(href='#slider4') ❯
+                                       div.flex.justify-center.absolute.gap-2(class="-translate-x-1/2 left-1/2 bottom-2")
+                                          a.btn.w-6.bg-white.p-0(class="h-[0.125rem]" href='#slider1')
+                                          a.btn.w-6.bg-white.p-0(class="h-[0.125rem]" href='#slider2')
+                                          a.btn.w-6.bg-white.p-0(class="h-[0.125rem]" href='#slider3')
+                                          a.btn.w-6.bg-white.p-0(class="h-[0.125rem]" href='#slider4')
+                                    #slider4.carousel-item.relative.w-full.box-border.flex.flex-none.snap-start
+                                       img.w-full(class="h-[17.625rem] xl:h-[13.4375rem] 2lg:h-60 sm:h-36 2sm:h-32" src='../../assets/images/carousel/4.jpg' alt="tree")
+                                       div.absolute.flex.justify-between.transform.left-5.right-5.text-white(class='-translate-y-1/2 top-1/2 lg:left-2.5 lg:right-2.5')
+                                          a.btn(href='#slider3') ❮
+                                          a.btn(href='#slider1') ❯
+                                       div.flex.justify-center.absolute.gap-2(class="-translate-x-1/2 left-1/2 bottom-2")
+                                          a.btn.w-6.bg-white.p-0(class="h-[0.125rem]" href='#slider1')
+                                          a.btn.w-6.bg-white.p-0(class="h-[0.125rem]" href='#slider2')
+                                          a.btn.w-6.bg-white.p-0(class="h-[0.125rem]" href='#slider3')
+                                          a.btn.w-6.bg-white.p-0(class="h-[0.125rem]" href='#slider4')
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-6")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")  
+                                    code
+                                       |&lt;div class="w-full overflow-hidden carousel"&gt;
+                                       |    &lt;div class="box-border relative flex flex-none w-full carousel-item snap-start" id="slider1"&gt;
+                                       |       &lt;img class="w-full h-[17.625rem] xl:h-[13.4375rem] 2lg:h-60 sm:h-36 2sm:h-32" src="../../assets/images/carousel/3.jpg" alt="sky view"&gt;
+                                       |       &lt;div class="absolute flex justify-between transform left-5 right-5 text-white -translate-y-1/2 top-1/2 lg:left-2.5 lg:right-2.5"&gt;
+                                       |          &lt;a class="btn" href="#slider4"&gt;❮&lt;/a&gt;
+                                       |          &lt;a class="btn" href="#slider2"&gt;❯&lt;/a&gt;
+                                       |       &lt;/div&gt;
+                                       |       &lt;div class="flex justify-center gap-2 -translate-x-1/2 left-1/2 bottom-2"&gt;
+                                       |          &lt;a class="btn w-6 bg-white p-0 h-[0.125rem]" href="#slide-1"&gt;&lt;/a&gt;
+                                       |          &lt;a class="btn w-6 bg-white p-0 h-[0.125rem]" href="#slide-2"&gt;&lt;/a&gt;
+                                       |          &lt;a class="btn w-6 bg-white p-0 h-[0.125rem]" href="#slide-3"&gt;&lt;/a&gt;
+                                       |          &lt;a class="btn w-6 bg-white p-0 h-[0.125rem]" href="#slide-4"&gt;&lt;/a&gt;
+                                       |       &lt;/div&gt;
+                                       |    &lt;/div&gt;
+                                       |    &lt;div class="box-border relative flex flex-none w-full carousel-item snap-start" id="slider2"&gt;
+                                       |       &lt;img class="w-full h-[17.625rem] xl:h-[13.4375rem] 2lg:h-60 sm:h-36 2sm:h-32" src="../../assets/images/carousel/2.jpg" alt="butterfly"&gt;
+                                       |       &lt;div class="absolute flex justify-between transform left-5 right-5 text-white -translate-y-1/2 top-1/2 lg:left-2.5 lg:right-2.5"&gt;
+                                       |          &lt;a class="btn" href="#slider1"&gt;❮&lt;/a&gt;
+                                       |          &lt;a class="btn" href="#slider3"&gt;❯&lt;/a&gt;
+                                       |       &lt;/div&gt;
+                                       |       &lt;div class="flex justify-center gap-2 -translate-x-1/2 left-1/2 bottom-2"&gt;
+                                       |          &lt;a class="btn w-6 bg-white p-0 h-[0.125rem]" href="#slide-1"&gt;&lt;/a&gt;
+                                       |          &lt;a class="btn w-6 bg-white p-0 h-[0.125rem]" href="#slide-2"&gt;&lt;/a&gt;
+                                       |          &lt;a class="btn w-6 bg-white p-0 h-[0.125rem]" href="#slide-3"&gt;&lt;/a&gt;
+                                       |          &lt;a class="btn w-6 bg-white p-0 h-[0.125rem]" href="#slide-4"&gt;&lt;/a&gt;
+                                       |       &lt;/div&gt;
+                                       |    &lt;/div&gt;
+                                       |    &lt;div class="box-border relative flex flex-none w-full carousel-item snap-start" id="slider3"&gt;
+                                       |       &lt;img class="w-full h-[17.625rem] xl:h-[13.4375rem] 2lg:h-60 sm:h-36 2sm:h-32" src="../../assets/images/carousel/1.jpg" alt="nature"&gt;
+                                       |       &lt;div class="absolute flex justify-between transform left-5 right-5 text-white -translate-y-1/2 top-1/2 lg:left-2.5 lg:right-2.5"&gt;
+                                       |          &lt;a class="btn" href="#slider2"&gt;❮&lt;/a&gt;
+                                       |          &lt;a class="btn" href="#slider4"&gt;❯&lt;/a&gt;
+                                       |       &lt;/div&gt;
+                                       |       &lt;div class="flex justify-center gap-2 -translate-x-1/2 left-1/2 bottom-2"&gt;
+                                       |          &lt;a class="btn w-6 bg-white p-0 h-[0.125rem]" href="#slide-1"&gt;&lt;/a&gt;
+                                       |          &lt;a class="btn w-6 bg-white p-0 h-[0.125rem]" href="#slide-2"&gt;&lt;/a&gt;
+                                       |          &lt;a class="btn w-6 bg-white p-0 h-[0.125rem]" href="#slide-3"&gt;&lt;/a&gt;
+                                       |          &lt;a class="btn w-6 bg-white p-0 h-[0.125rem]" href="#slide-4"&gt;&lt;/a&gt;
+                                       |       &lt;/div&gt;
+                                       |    &lt;/div&gt;
+                                       |    &lt;div class="box-border relative flex flex-none w-full carousel-item snap-start" id="slider4"&gt;
+                                       |       &lt;img class="w-full h-[17.625rem] xl:h-[13.4375rem] 2lg:h-60 sm:h-36 2sm:h-32" src="../../assets/images/carousel/4.jpg" alt="tree"&gt;
+                                       |       &lt;div class="absolute flex justify-between transform left-5 right-5 text-white -translate-y-1/2 top-1/2 lg:left-2.5 lg:right-2.5"&gt;
+                                       |          &lt;a class="btn" href="#slider3"&gt;❮&lt;/a&gt;
+                                       |          &lt;a class="btn" href="#slider1"&gt;❯&lt;/a&gt;
+                                       |       &lt;/div&gt;
+                                       |       &lt;div class="flex justify-center gap-2 -translate-x-1/2 left-1/2 bottom-2"&gt;
+                                       |          &lt;a class="btn w-6 bg-white p-0 h-[0.125rem]" href="#slide-1"&gt;&lt;/a&gt;
+                                       |          &lt;a class="btn w-6 bg-white p-0 h-[0.125rem]" href="#slide-2"&gt;&lt;/a&gt;
+                                       |          &lt;a class="btn w-6 bg-white p-0 h-[0.125rem]" href="#slide-3"&gt;&lt;/a&gt;
+                                       |          &lt;a class="btn w-6 bg-white p-0 h-[0.125rem]" href="#slide-4"&gt;&lt;/a&gt;
+                                       |       &lt;/div&gt;
+                                       |    &lt;/div&gt;
+                                       |&lt;/div&gt; 
+
+                  div.col-span-6(class="2lg:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Vertical carousel
+                              p Set carousel vertically using  
+                                 strong .carousel-vertical 
+                                 | class.                 
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.w-60.h-72.carousel.carousel-vertical.carousel-scroll-hide(class="overflow-auto sm:w-52 sm:h-72")
+                                    div.carousel-item.h-full
+                                       img.w-full(src='../../assets/images/carousel/6.jpg' alt="night view")
+                                    div.carousel-item.h-full
+                                       img.w-full(src='../../assets/images/carousel/7.jpg' alt="sunflower")
+                                    div.carousel-item.h-full
+                                       img.w-full(src='../../assets/images/carousel/8.jpg' alt="moon")
+                                    div.carousel-item.h-full
+                                       img.w-full(src='../../assets/images/carousel/9.jpg' alt="forest")
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-6")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")  
+                                    code
+                                       |&lt;div class="w-60 h-72 carousel sm:w-52 sm:h-72"&gt;
+                                       |    &lt;div class="h-full carousel-item"&gt;
+                                       |     &lt;img class="w-full" src="../../assets/images/carousel/6.jpg" alt="night view"&gt;
+                                       |    &lt;/div&gt;
+                                       |    &lt;div class="h-full carousel-item"&gt;
+                                       |     &lt;img class="w-full" src="../../assets/images/carousel/7.jpg" alt="sunflower"&gt;
+                                       |    &lt;/div&gt;
+                                       |    &lt;div class="h-full carousel-item"&gt;
+                                       |     &lt;img class="w-full" src="../../assets/images/carousel/8.jpg" alt="moon"&gt;
+                                       |    &lt;/div&gt;
+                                       |    &lt;div class="h-full carousel-item"&gt;
+                                       |     &lt;img class="w-full" src="../../assets/images/carousel/9.jpg" alt="forest"&gt;
+                                       |    &lt;/div&gt;
+                                       |&lt;/div&gt; 
+
+
+            // Page Body End 
+            +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+
+         include ../../components/customizer
+
+      include ../../layout/footer-files

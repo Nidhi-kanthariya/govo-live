@@ -1,0 +1,16 @@
+//- ========================
+//- bordered table
+//- =======================
+
+table.table.table-bordered
+    thead
+        tr
+            each head in BORDERED_TABLE.header
+                th(class="border border-border-light")=head
+    tbody
+        each bodyData,index in BORDERED_TABLE.body
+            tr
+                td(class="min-w-[.625rem]  rounded border border-border-light")=index+1
+                td(class="min-w-[.625rem] rounded  border border-border-light")=bodyData.name
+                td(class="min-w-[1.25rem] rounded  border border-border-light")=bodyData.job
+                td(class="min-w-[.625rem]  rounded border border-border-light")=bodyData.favoriteColor

@@ -1,0 +1,976 @@
+//- ==========================
+//-  All Tables Json
+//- =========================
+
+
+//- ====== Transaction History Json ====== -//
+- 
+    var TRANSACTION_HISTORY=
+        {
+            header:["Item Name","Date And Time","Amount","invoice no.","Status","payment"],
+            body:[
+                {
+                    image:"1.jpg",
+                    title:"Samsung TV",
+                    subTitle:"Item Sold",
+                    date:"Jan 25, 2023",
+                    time:"08:35:65",
+                    amount:"$251 USD",
+                    invoice:"#px0101",
+                    status:"success", 
+                    payment:"Paypal",
+                    pgres:50,       
+                },
+                {
+                    image:"2.jpg",
+                    title:"Spring Bed",
+                    subTitle:"Bought item",
+                    date:"Feb 20, 2023",
+                    time:"12:35:00",
+                    amount:"$350 USD",
+                    invoice:"#rf304f",
+                    status:"danger", 
+                    payment:"Credit Card",
+                    pgres:70,       
+                },
+                {
+                    image:"3.jpg",
+                    title:"Long Dress",
+                    subTitle:"Bought item",
+                    date:"Feb 25, 2023",
+                    time:"04:39:08",
+                    amount:"$240 USD",
+                    invoice:"#dnj480",
+                    status:"success", 
+                    payment:"Paypal",
+                    pgres:40,       
+                },
+                {
+                    image:"4.jpg",
+                    title:"Phillip Lightbulb",
+                    subTitle:"Item Sold",
+                    date:"March 27, 2023",
+                    time:"08:35:65",
+                    amount:"$200 USD",
+                    invoice:"#g189d0", 
+                    status:"danger", 
+                    payment:"Credit Card",
+                    pgres:60,
+                },
+            ]    
+        };
+
+
+//- ====== User Information Json ====== -//
+- 
+    var USER_INFORMATION=
+        {
+            header:["Name","Email Address","Status","Role","Action",],
+            body:[
+                {
+                    image:"1.jpg",
+                    title:"Dmitriy Groshev", 
+                    subTitle:"United Kingdom",
+                    email:"hello123@dribbble.com",
+                    statusContent:"Invited",
+                    role:"Interface Designer",
+                    status:"success",
+                },
+                {
+                    image:"2.jpg",
+                    title:"Patrick Beverley",
+                    subTitle:"Australia",
+                    email:"beverley.lac@gmail.com",
+                    statusContent:"Active",
+                    role:"Interface Designer",
+                    status:"danger",
+                },
+                {
+                    image:"3.jpg",
+                    title:"Kevin Greem",
+                    subTitle:"United Kingdom",
+                    email:"green4502@gmail.com",
+                    statusContent:"Invited",
+                    role:"Project Manager",
+                    status:"success",
+                },
+                {
+                    image:"4.jpg",
+                    title:"William Barton",
+                    subTitle:"Netherlands",
+                    email:"barton-will@gmail.com",
+                    statusContent:"Active",
+                    role:"Backend Engineer",
+                    status:"danger",
+                },
+            ]    
+        };
+
+//- ====== Open Invoice ====== -//
+-
+    var OPEN_INVOICE=
+        {
+            header:["Name","Date","Amount","Status","Action"],
+            action:["Copy","Send Email","Before Due","Past Due"],
+            body:[
+                {
+                    image:"1.jpg",
+                    name:"Andy Groshev",
+                    date:"25 Jan 2023",
+                    amount:"$2.588.00",
+                    status:"Paid",
+                    statusCode:"success",
+                    active:0,
+                },
+                {
+                    image:"2.jpg",
+                    name:"Patrick Press",
+                    date:"20 Feb 2023",
+                    amount:"$4.800.00",
+                    status:"Past Due",
+                    statusCode:"danger",
+                    active:1,
+                },
+                {
+                    image:"3.jpg",
+                    name:"Kevin Greem",
+                    date:"26 Feb 2023",
+                    amount:"$4.678.00",
+                    status:"Paid",
+                    statusCode:"success",
+                    active:2,
+                },
+                {
+                    image:"4.jpg",
+                    name:"Arocca Barton",
+                    date:"10 March 2023",
+                    amount:"$2.450.00",
+                    status:"Privet",
+                    statusCode:"title",
+                    active:0,
+                },
+
+            ]    
+        };
+
+//- ====== New Followers ====== -//
+-
+    var NEW_FOLLOWERS=
+        {
+            header:["Profile","Posts Like","StatusStatus","Point"],
+            body:[
+                {
+                    image:"2.jpg",
+                    name:"Joshua S. Wood",
+                    subTitle:"joshuaswood@gmail.com",
+                    postLike:"Posts Like 650",
+                    status:"Follow back",
+                    point:99.1,
+                },
+                {
+                    image:"17.jpg",
+                    name:"Michael Backer",
+                    subTitle:"michaejiunior@gmail.com",
+                    postLike:"Posts Like 265",
+                    status:"Follow back",
+                    point:91.2,
+                },
+                {
+                    image:"18.jpg",
+                    name:"Cayla Brister",
+                    subTitle:"caylabristed@gmail.com",
+                    postLike:"Posts Like 595",
+                    status:"Followed",
+                    point:90.5,
+                },
+                {
+                    image:"19.jpg",
+                    name:"Ron Dayley",
+                    subTitle:"rondayley@gmail.com",
+                    postLike:"Posts Like 578",
+                    status:"Follow back",
+                    point:88.8,
+                },
+            ]    
+        }
+
+//- ====== Most Popular Post ====== -//
+-
+    var POPULAR_POST= 
+        {
+            header:["image","Name","Reaction","Post","Views","Likes","Comments"],
+            body:[
+                {
+                    image:"1.jpg",
+                    name:"Andy Groshev",
+                    subTitle:"May 29,2023",
+                    reaction:451,
+                    post:23,
+                    view:345.367,
+                    like:22.367,
+                    comment:1461,
+                },
+                {
+                    image:"2.jpg",
+                    name:"Patrick Press",
+                    subTitle:"May 30,2023",
+                    reaction:200,
+                    post:45,
+                    view:6564.464,
+                    like:51.878,
+                    comment:2656,
+                },
+                {
+                    image:"3.jpg",
+                    name:"Kevin Greem",
+                    subTitle:"Jun 19,2023",
+                    reaction:605,
+                    post:95,
+                    view:565.445,
+                    like:63.656,
+                    comment:4464,
+                },
+                {
+                    image:"4.jpg",
+                    name:"Samual Store",
+                    subTitle:"Feb 22,2023",
+                    reaction:854,
+                    post:12,
+                    view:894.966,
+                    like:35.548,
+                    comment:3565,
+                },
+            ],    
+        }; 
+
+//- ====== Social Breakdown ====== -//
+-
+    var SOCIAL_BREAKDOWN= 
+        {
+            header:["Social Network","Sessions","AVG.session","%New Sessions","Bounce Rate","Pages"],
+            body:[
+                {
+                    image:"linkd2.svg",
+                    name:"Linkedin",
+                    sessions:520,
+                    AVGSession:"00:00:14",
+                    newSessions:13.45,
+                    bounceRate:12.78,
+                    Pages:1.22,
+                },
+                {
+                    image:"insta2.svg",
+                    name:"Instagram",
+                    sessions:456,
+                    AVGSession:"00:00:56",
+                    newSessions:11.21,
+                    bounceRate:65.35,
+                    Pages:5.56,
+                },
+                {
+                    image:"tw2.svg",
+                    name:"Twitter ",
+                    sessions:956,
+                    AVGSession:"00:00:18",
+                    newSessions:36.48,
+                    bounceRate:15.65,
+                    Pages:3.45,
+                },
+                {
+                    image:"wha2.svg",
+                    name:"Whatsapp",
+                    sessions:265,
+                    AVGSession:"00:00:45",
+                    newSessions:95.78,
+                    bounceRate:21.23,
+                    Pages:0.56,
+                },
+                {
+                    image:"fb2.svg",
+                    name:"Facebook",
+                    sessions:789,
+                    AVGSession:"00:00:35",
+                    newSessions:69.23,
+                    bounceRate:23.13,
+                    Pages:1.56,
+                },
+            ],    
+        }; 
+
+
+//- ====== Last Order Table Json ====== -//
+- 
+    var LAST_ORDER=
+        {
+            header:["Name","Order No.","Amount","payment type","Date","Action"],
+            body:[
+                {
+                    image:"2.jpg",
+                    title:"Dmitriy Groshev", 
+                    subTitle:"Switzerland",
+                    orderNo:"#790841",
+                    amount:"2.499",
+                    paymentType:"Credit Card",
+                    date:"1 Oct, 14:43",
+                },
+                {
+                    image:"17.jpg",
+                    title:"Patrick Beverley", 
+                    subTitle:"Switzerland",
+                    orderNo:"#454489",
+                    amount:"2.499",
+                    paymentType:"Paypal",
+                    date:"30 Sep, 23:01",
+                },
+                {
+                    image:"18.jpg",
+                    title:"Kevin Greem", 
+                    subTitle:"Canada",
+                    orderNo:"#594579",
+                    amount:"2.499",
+                    paymentType:"Credit Card",
+                    date:"29 Sep,09:31",
+                },
+                {
+                    image:"19.jpg",
+                    title:"William Barton", 
+                    subTitle:"United States",
+                    orderNo:"#478495",
+                    amount:"2.499",
+                    paymentType:"Paypal",
+                    date:"28 Sep, 04:34",
+                },
+            ]    
+        };
+
+//- ====== Open Invoice ====== -//
+-
+    var PROJECT_SUMMERY=
+        {
+            header:["#","Project name","Team","Project Cost","Project Status","Payment"],
+            body:[
+                {
+                    id:"A908",
+                    name:"Amazon Website",
+                    team:["2","22","23"],
+                    amount:"23,490",
+                    status:"Completed",
+                    statusCode:"success",
+                    payment:"Done",
+                    placeholder:26,
+                },
+                {
+                    id:"R840",
+                    name:"Paytm bank app",
+                    team:["24","2","25"],
+                    amount:"45,459",
+                    status:"In Progress",
+                    statusCode:"danger",
+                    payment:"Pending",
+                    placeholder:6,
+                },
+                {
+                    id:"V890",
+                    name:"Cytrust Dashboard",
+                    team:["26","27"],
+                    amount:"78,748",
+                    status:"Completed",
+                    statusCode:"success",
+                    payment:"Done",
+                },
+                {
+                    id:"K450",
+                    name:"Project Mecha",
+                    team:["28","29","2"],
+                    amount:"98,878",
+                    status:"In Progress",
+                    statusCode:"danger",
+                    payment:"Pending",
+                    placeholder:5,
+                },
+                {
+                    id:"D480",
+                    name:"Dynamic Program",
+                    team:["30","31","32"],
+                    amount:"34,248",
+                    status:"In Progress",
+                    statusCode:"danger",
+                    payment:"Pending",
+                },
+            ]    
+        };
+
+//- ====== Monthly Progress ====== -//
+- 
+    var MONTHLY_PROGRESS=
+        {
+            header:["Lead name","Email address","Phone Number","Company Name","Status"],
+            body:[
+                {
+                    image:"2.jpg",
+                    title:"Carla Packard", 
+                    subTitle:"4 min ago",
+                    email:"Carla4@mxgby.com",
+                    phoneNo:"(236) 300-3749",
+                    compName:"Boring travel",
+                    status:"New Lead",
+                },
+                {
+                    image:"17.jpg",
+                    title:"Andrew Black", 
+                    subTitle:"5 min ago",
+                    email:"and34@msby.com",
+                    phoneNo:"(656) 846-5656",
+                    compName:"Tiny Computers",
+                    status:"Lost Client",
+                },
+                {
+                    image:"18.jpg",
+                    title:"Oliver Dawson", 
+                    subTitle:"10 min ago",
+                    email:"Oliver@onfo.com",
+                    phoneNo:"(965) 985-5869",
+                    compName:"Big Encyclopedias",
+                    status:"Converted",
+                },
+                {
+                    image:"19.jpg",
+                    title:"Robert Lanzel", 
+                    subTitle:"7 min ago",
+                    email:"con24@news.com",
+                    phoneNo:"(984) 849-8545",
+                    compName:"Tiny Computers",
+                    status:"New Lead",
+                },
+            ]    
+        };
+//- ====== User Status ====== -//
+- 
+    var USER_STATUS=
+        {
+            header:["Customer","Country","Popular","Duration"],
+            body:[
+                {
+                    image:"2.jpg",
+                    title:"John Deo", 
+                    subTitle:"14+ Online",
+                    country:"USA",
+                    popular:40,
+                    status:"primary",
+                    duration:"00:00:11",
+                },
+
+                {
+                    image:"17.jpg",
+                    title:"Smith Lovell", 
+                    subTitle:"512+ Online",
+                    country:"Angola",
+                    popular:20,
+                    status:"secondary",
+                    duration:"02:28:49",
+                },
+                {
+                    image:"18.jpg",
+                    title:"Jones Brooks", 
+                    subTitle:"125+ Online",
+                    country:"Cuba",
+                    popular:80,
+                    status:"success",
+                    duration:"00:00:03",
+                },
+                {
+                    image:"19.jpg",
+                    title:"Brown Acum", 
+                    subTitle:"215+ Online",
+                    country:"England",
+                    popular:30,
+                    status:"primary",
+                    duration:"00:00:15",
+                },
+                {
+                    image:"11.jpg",
+                    title:"Evans Mayo", 
+                    subTitle:"138+ Online",
+                    country:"London",
+                    popular:50,
+                    status:"success",
+                    duration:"00:00:09",
+                },
+            ]    
+        };
+
+//- ====== Default-table json ====== -//
+-
+    var DEFAULT_TABLE= 
+        {
+            header:["No","First Name","Last Name","User Id","Color"],
+                body:[
+                {
+                    firstName:"Cy Ganderton",
+                    lastName:"The Bird",
+                    userId:"@mdorton",
+                    favoriteColor:"Blue",     
+                },
+                {
+                    firstName:"Marjy Ferencz",
+                    lastName:"Ottandy",
+                    userId:"@johndeo",
+                    favoriteColor:"Purple",    
+                },
+                {
+                    firstName:"Cy Ganderton",
+                    lastName:"Orton",
+                    userId:"@mdothe",
+                    favoriteColor:"Green",   
+                },
+                {
+                    firstName:"Cy Ganderton",
+                    lastName:"Deo",
+                    userId:"@Thornton",
+                    favoriteColor:"Red",
+                },
+            ]    
+        };
+
+//- ====== Hoverable-table json ====== -//
+- 
+    var HOVERABLE_TABLE=
+        {
+            header:["No","Name","Website","Company","Birthday"],
+                body:[
+                {
+                    name:"Elizabeth J. Chu",
+                    website:"Medzmalls.com",
+                    company:"Shabby Chic",
+                    birthday:"August 17, 1963",
+                },
+                {
+                    name:"Dana A. Gibson",
+                    website:"Viscongroup.com",
+                    company:"Country Club Markets",
+                    birthday:"May 6, 1991",    
+                },
+                {
+                    name:"Ann G. Wilson",
+                    website:"Inarayhutton.com",
+                    company:"Exact Realty",
+                    birthday:"October 20, 1956",   
+                },
+                {
+                    name:"Tanya M. Young",
+                    website:"loyogame.com",
+                    company:"Opti-Tek",
+                    birthday:"April 30, 1944",
+                },
+            ]    
+        };
+
+//- ====== Active-table json ====== -//
+-
+    var ACTIVE_TABLE= 
+        {
+            header:["","User Name","Status","Role","Salary","Start Date"],
+                body:[
+                {
+                    userName:"Wiliand",
+                    statusContent:"Invited",
+                    status:"danger",
+                    role:"Technical Author",
+                    salary:"danger",
+                    salaryContent:"$234,100", 
+                    startDate:"July 18, 2011" ,    
+                },
+                {
+                    userName:"Thablooks",
+                    statusContent:"Active",
+                    status:"success",
+                    role:"Account manager",
+                    salary:"success",
+                    salaryContent:"$356,100",
+                    startDate:"Apr 12, 2014",    
+                },
+                {
+                    userName:"Manyboice",
+                    statusContent:"invited",
+                    status:"danger",
+                    role:"Associate Developer",
+                    salary:"danger", 
+                    salaryContent:"$154,284",
+                    startDate:"January 01, 2016",  
+                },
+                {
+                    userName:"Stooul",
+                    statusContent:"invited",
+                    status:"danger",
+                    role:"Junior Technical Author",
+                    salary:"danger",
+                    salaryContent:"$296,100",
+                    startDate:"January 01, 2016",
+                },
+            ]    
+        };
+
+//- ====== Bordered-table json ====== -//
+-
+    var BORDERED_TABLE=
+        {
+            header:["No","Name","Job","Color"],
+                body:[
+                {
+                    name:"Erik M. Pate",
+                    job:"The Bird",
+                    favoriteColor:"Blue",     
+                },     
+                {
+                    name:"Larry K. Wyatt",
+                    job:"Ottandy",
+                    favoriteColor:"Purple",    
+                },
+                {
+                    name:"Patti J. Cortez",
+                    job:"Orton",
+                    favoriteColor:"Green",    
+                },
+                {
+                    name:"Teena C. Marshall",
+                    job:"Deo",
+                    favoriteColor:"Red",
+                },
+            ]    
+        };
+
+//- ====== Color-table json ====== -//
+-
+    var COLORS_TABLE=
+        {
+            header:["No","Customer","Date","Invoice","Website"],
+                body:[
+                {
+                    customer:"Brian A. Lenz",
+                    date:"Nov 21, 2021",
+                    invoice:"Blue",
+                    website:"Scoreboard.com", 
+                },     
+                {
+                    customer:"Maggie E. Pope",
+                    date:"Nov 15, 2021",
+                    invoice:"Purple",
+                    website:"Miestate.com",    
+                },
+                {
+                    customer:"Jarvis F. Knowles",
+                    date:"Nov 1, 2021", 
+                    invoice:"green",  
+                    website:"Theclick.com",
+                },
+                {
+                    customer:"Jennifer D. Levine",
+                    date:"Nov 9, 2021",
+                    invoice:"Red",
+                    website:"Naturepp.com",
+                },
+                {
+                    customer:"William C. Neilson",
+                    date:"Nov 9, 2021",
+                    invoice:"Yellow",
+                    website:"Naturepp.com",
+                },
+            ]    
+        };
+
+//- ====== Default-table json ====== -//
+-
+    var DEFAULT_VARIANTS=
+        {
+            header:["#","Name","Position","Department"],
+                body:[
+                {
+                    id:"Primary",
+                    name:"James L. Matthews",
+                    position:"Irving's Sporting Goods",
+                    department:"Administrative law judge"
+                },
+                {
+                    id:"Secondary",
+                    name:"Jannie R. Anderson",
+                    position:"Cutting, punching",
+                    department:"Plan Smart Partner",   
+                },
+                {
+                    id:"Info",
+                    name:"David K. Olson",
+                    position:"Life Plan Counselling",
+                    department:"Process metallurgical engineer",  
+                },
+                {
+                    id:"Success",
+                    name:"Daniel M. Cox",
+                    position:"Market Basket",
+                    department:"U.S. Secret Service agent",  
+                },
+                {
+                    id:"Warning",
+                    name:"Pricilla B. Dobbs",
+                    position:"Nedick's",
+                    department:"Bartender",  
+                },
+                {
+                    id:"Danger",
+                    name:"Juanita C. Laufer",
+                    position:"Alpha Beta",
+                    department:"Ticket agent",  
+                },
+                {
+                    id:"Light",
+                    name:"Gertrude Y. Voss",
+                    position:"Giant Open Air",
+                    department:"Data entry clerk",  
+                },
+            ]    
+        };
+
+//- ====== Cart ====== -//
+- 
+    var CART=
+        { 
+            header:["Item Name","Price", "Quantity","Total","Action"],
+            body:[
+                { 
+                    image:"1.jpg",
+                    title:"Samsung TV",
+                    ItemId:"#GS-4567",
+                    subTitle:"$251",
+                    priceDel:"$599",
+                    offer:"22%OFF",
+                    totalPrice:"$502", 
+                    qty:2,
+                },
+                { 
+                    image:"2.jpg",
+                    title:"Spring Bed",
+                    ItemId:"#GS-6567",
+                    subTitle:"$433",
+                    priceDel:"$789",
+                    offer:"45%OFF",
+                    totalPrice:"$1301",
+                    qty:3,
+                },
+                {
+                    image:"3.jpg",
+                    title:"Long Dress",
+                    ItemId:"#GS-9211",
+                    subTitle:"$659",
+                    priceDel:"$999",
+                    offer:"34%OFF",
+                    totalPrice:"$4615",
+                    qty:7,
+                },
+                {
+                    image:"4.jpg",
+                    title:"Phillip Lightbulb",
+                    ItemId:"#GS-5214",
+                    subTitle:"$251",
+                    priceDel:"$699",
+                    offer:"64%OFF",
+                    totalPrice:"$1006",
+                    qty:4,
+                },
+                {
+                    image:"5.jpg",
+                    title:"Ladies Handbags",
+                    ItemId:"#GS-65411",
+                    subTitle:"$254",
+                    priceDel:"$499",
+                    offer:"49%OFF",
+                    totalPrice:"$1526",
+                    qty:6,
+                },
+                {
+                    image:"6.png",
+                    title:"Latest Cosmetics",
+                    ItemId:"#GS-34611",
+                    subTitle:"$422",
+                    priceDel:"$768",
+                    offer:"45%OFF",
+                    totalPrice:"$844",
+                    qty:2,
+                },
+                {
+                    image:"7.png",
+                    title:"Latest Nike shoes",
+                    ItemId:"#GS-64247",
+                    subTitle:"$224",
+                    priceDel:"$899",
+                    offer:"75%OFF",
+                    totalPrice:"$674",
+                    qty:3,
+                },
+                {
+                    image:"8.png",
+                    title:"Apple MacBook Air",
+                    ItemId:"#GS-3452",
+                    subTitle:"$768",
+                    priceDel:"$1200",
+                    offer:"36%OFF", 
+                    totalPrice:"$1536",  
+                    role:"Backend Engineer",
+                    qty:2,
+                }, 
+            ]  
+        };
+
+//- ====== Invoice Table ====== -// 
+-
+    var INVOICE_TABLE=
+        {
+            header:["Item Name", "User Name","Date","Status","Total","Action",],
+            action:["Copy","Send Email","Before Due","Past Due"],
+            body:[
+                {
+                    image:"1.jpg",
+                    title:"Samsung TV",
+                    subTitle:"#GS0204",
+                    userName: "Daniel C. Brown",
+                    date:"25 Nov 2023",
+                    status:"in progress",
+                    total:"$2.588.00",
+                    statusCode:"warning",
+                    active:0,
+                },
+                {
+                    image:"2.jpg",
+                    title:"Spring Bed",
+                    subTitle:"#PX0101",
+                    userName: "Dorene C. McConnell",
+                    date:"20 Nov 2023",
+                    status:"Rejected",
+                    total:"$4.800.00",
+                    statusCode:"danger",
+                    active:1,
+                },
+                {
+                    image:"3.jpg",
+                    title:"Long Dress",
+                    subTitle:"#SP0212",
+                    userName:"Naomi J. Cantu",
+                    date:"12 Nov 2023",
+                    status:"Completed",
+                    total:"$4.678.00",
+                    statusCode:"primary",
+                    active:2,
+                },
+                {
+                    image:"4.jpg",
+                    title:"Phillip Lightbulb",
+                    subTitle:"#HS0642",
+                    userName:"Kristen J. Kang",
+                    date:"10 Oct 2023",
+                    status:"Rejected",
+                    total:"$2.450.00",
+                    statusCode:"danger",
+                    active:0,
+                },
+                { 
+                    image:"5.jpg",
+                    title:"Ladies Handbags",
+                    subTitle:"#LD2054",
+                    userName:"Constance G. Mendez",
+                    date:"10 Oct 2023",
+                    status:"Completed",
+                    total:"$2.450.00",
+                    statusCode:"primary",
+                    active:0,
+                },
+                {
+                    image:"6.png",
+                    title:"Latest Cosmetics",
+                    subTitle:"#HS0876",
+                    userName:"Debora J. Cameron",
+                    date:"2 June 2023",
+                    status:"Rejected",
+                    total:"$2.450.00",
+                    statusCode:"danger",
+                    active:0,
+                },
+                {
+                    image:"7.png",
+                    title:"Latest Nike shoes",
+                    subTitle:"#DS0192",
+                    userName:"Rhonda G. Thomas",
+                    date:"26 January 2023",
+                    status:"in progress",
+                    total:"$2.450.00",
+                    statusCode:"warning",
+                    active:0,
+                },
+                {
+                    image:"8.png",
+                    title:"Apple MacBook Air",
+                    subTitle:"#VC0214",
+                    userName:"Uudith R. Cordell",
+                    date:"11 March 2023",
+                    status:"Completed", 
+                    total:"$2.450.00",
+                    statusCode:"primary",
+                    active:0,
+                },
+            ] 
+        }; 
+
+//- ====== Checkout-table json ====== -//
+-
+    var CHECKOUT_TABLE= 
+        {
+            header:["Product","Product Detail","Price",],
+                body:[
+                {
+                    product:"11.jpg",
+                    productDetail:"Coffee Cup",
+                    subDetail:"$98 * 2",
+                    price:"$190",     
+                },
+                {
+                    product:"13.jpg",
+                    productDetail:"Facewash - For Good skincare",
+                    subDetail:"$75 * 2",
+                    price:"$150",    
+                },
+                {
+                    product:"14.jpg",
+                    productDetail:"Perfume - Great fragrance",
+                    subDetail:"$299",
+                    price:"$299",   
+                },
+                {
+                    product:"16.jpg",
+                    productDetail:"Women's Leather Bags",
+                    subDetail:"$212",
+                    price:"$212",
+                },
+            ]    
+        };
+
+//- ====== Checkout-table json ====== -//
+-
+    var PRODUCT_DETAIL= 
+        {
+            body:[
+            {
+                mainTitle: "Category",
+                subTitle: "Bags",   
+            },
+            { 
+                mainTitle: "Brand",
+                subTitle: "Backy Fashion",   
+            },
+            {
+                mainTitle: "Color",
+                subTitle: "Black",   
+            },
+            {
+                mainTitle: "Material",
+                subTitle: "Leather",   
+            },
+        ]    
+    };
+

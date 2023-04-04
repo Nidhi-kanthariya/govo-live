@@ -1,0 +1,37 @@
+/*=====================
+  Card CSS
+  ==========================*/
+@layer components {
+  .card {
+    @apply bg-white shadow-card p-card-space rounded-card flex flex-col gap-card-space dark:bg-sidebar-dark;
+    &-header {
+      @apply relative;
+      &.header-bottom-border {
+        @apply border-b border-border-light dark:border-border-dark;
+      }
+      &-2 {
+        @apply border-b border-gray-300 flex justify-between items-center;
+      }
+      h3 {
+        @apply text-lg 4xl:text-base font-bold;
+      }
+      p {
+        @apply mt-1;
+        strong {
+          @apply text-red-400;
+        }
+      }
+      .preview-code{
+        @apply flex gap-2 absolute top-0 right-0 sm:top-unset sm:right-unset sm:static sm:mt-1 rtl:left-0 rtl:right-unset;
+      }
+    }
+    &-body {
+      @apply block p-0;
+      p {
+        strong {
+          @apply text-red-400;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,386 @@
+//- sidebar
+-var sidebar = true;
+
+//- feathet
+-var feather= true;
+
+//- customSelect
+-var customSelect= true;
+
+//- customizer
+-var customizer=true;
+
+//- prism
+-var prism=true;
+
+//- Breadcrumbs
+-var pageTitle="Rating";
+-var breadcrumb=['Ui Kits','Rating'];
+
+//- json
+include ../../data/all-data
+
+//- mixin
+include ../../mixin/mixin
+
+doctype html
+html(lang='en')  
+   include ../../layout/header-files 
+   body(dir="ltr" class="unique-skin") 
+      main.page-wrapper
+         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+            include ../../layout/header/header     
+            // Sidebar Start 
+            div.page-sidebar.sidebar-dark.unique-sidebar
+               include ../../layout/unique
+            // Sidebar End
+
+            // Page Body Start 
+            div.page-body
+               div.grid.grid-cols-12.gap-card-gap
+                  div.col-span-4(class="xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Default Rating
+                              p Add rating using 
+                                 strong .rating   
+                                 | & 
+                                 strong .rating-star  
+                                 | class. 
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.gap-2
+                                    div.rating
+                                       input.rating-star.bg-warning(class="peer peer-checked:bg-gray-light" type='radio' name='rating-1')
+                                       input.rating-star.bg-warning(class="peer peer-checked:bg-gray-light" type='radio' name='rating-1' checked='')
+                                       input.rating-star.bg-warning(class="peer peer-checked:bg-gray-light" type='radio' name='rating-1')
+                                       input.rating-star.bg-warning(class="peer peer-checked:bg-gray-light" type='radio' name='rating-1')
+                                       input.rating-star.bg-warning(class="peer peer-checked:bg-gray-light" type='radio' name='rating-1')
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap gap-2"&gt;
+                                       |    &lt;div class="rating"&gt;
+                                       |        &lt;input class="rating-star bg-warning peer peer-checked:bg-gray-light" type="radio" name="rating-1"&gt;
+                                       |        &lt;input class="rating-star bg-warning peer peer-checked:bg-gray-light" type="radio" name="rating-1" checked=""&gt;
+                                       |        &lt;input class="rating-star bg-warning peer peer-checked:bg-gray-light" type="radio" name="rating-1"&gt;
+                                       |        &lt;input class="rating-star bg-warning peer peer-checked:bg-gray-light" type="radio" name="rating-1"&gt;
+                                       |        &lt;input class="rating-star bg-warning peer peer-checked:bg-gray-light" type="radio" name="rating-1"&gt;
+                                       |    &lt;/div&gt; 
+                                       |&lt;/div&gt;
+
+                  div.col-span-4(class="xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Rating
+                              p Set different style rating using 
+                                 strong .rating  
+                                 | & 
+                                 strong .rating-start-2 
+                                 | class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.gap-2
+                                    div.rating
+                                       input.rating-star-2.bg-secondary(class="peer peer-checked:bg-gray-light" type='radio' name='rating-2')
+                                       input.rating-star-2.bg-secondary(class="peer peer-checked:bg-gray-light" type='radio' name='rating-2')
+                                       input.rating-star-2.bg-secondary(class="peer peer-checked:bg-gray-light" type='radio' name='rating-2')
+                                       input.rating-star-2.bg-secondary(class="peer peer-checked:bg-gray-light" type='radio' name='rating-2' checked='')    
+                                       input.rating-star-2.bg-secondary(class="peer peer-checked:bg-gray-light" type='radio' name='rating-2')
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap gap-2"&gt;
+                                       |    &lt;div class="rating"&gt;
+                                       |        &lt;input class="rating-star-2 bg-secondary peer peer-checked:bg-gray-light" type="radio" name="rating-2"&gt;
+                                       |        &lt;input class="rating-star-2 bg-secondary peer peer-checked:bg-gray-light" type="radio" name="rating-2"&gt;
+                                       |        &lt;input class="rating-star-2 bg-secondary peer peer-checked:bg-gray-light" type="radio" name="rating-2"&gt;
+                                       |        &lt;input class="rating-star-2 bg-secondary peer peer-checked:bg-gray-light" type="radio" name="rating-2" checked=""&gt;
+                                       |        &lt;input class="rating-star-2 bg-secondary peer peer-checked:bg-gray-light" type="radio" name="rating-2"&gt;
+                                       |    &lt;/div&gt; 
+                                       |&lt;/div&gt;
+
+                  div.col-span-4(class="xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Rating Colors
+                              p Set different color rating using  
+                                 strong .bg-*  
+                                 | class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.gap-2
+                                    div.rating
+                                       input.rating-star-2.bg-info(class="peer peer-checked:bg-gray-light" type='radio' name='rating-3')
+                                       input.rating-star-2.bg-info(class="peer peer-checked:bg-gray-light" type='radio' name='rating-3')
+                                       input.rating-star-2.bg-info(class="peer peer-checked:bg-gray-light" type='radio' name='rating-3' checked='')
+                                       input.rating-star-2.bg-info(class="peer peer-checked:bg-gray-light" type='radio' name='rating-3')
+                                       input.rating-star-2.bg-info(class="peer peer-checked:bg-gray-light" type='radio' name='rating-3')
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap gap-2"&gt;
+                                       |    &lt;div class="rating"&gt;
+                                       |        &lt;input class="rating-star-2 bg-info peer peer-checked:bg-gray-light" type="radio" name="rating-3"&gt;
+                                       |        &lt;input class="rating-star-2 bg-info peer peer-checked:bg-gray-light" type="radio" name="rating-3"&gt;
+                                       |        &lt;input class="rating-star-2 bg-info peer peer-checked:bg-gray-light" type="radio" name="rating-3" checked=""&gt;
+                                       |        &lt;input class="rating-star-2 bg-info peer peer-checked:bg-gray-light" type="radio" name="rating-3"&gt;
+                                       |        &lt;input class="rating-star-2 bg-info peer peer-checked:bg-gray-light" type="radio" name="rating-3"&gt;
+                                       |    &lt;/div&gt; 
+                                       |&lt;/div&gt;
+
+                  div.col-span-4(class="xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Heart Shape Rating
+                              p Use heart shape rating using 
+                                 strong .rating  
+                                 | & 
+                                 strong .rating-heart  
+                                 | class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.gap-2
+                                    div.rating
+                                       input.rating-heart.bg-danger(class="peer peer-checked:bg-gray-light" type='radio' name='rating-4')
+                                       input.rating-heart.bg-danger(class="peer peer-checked:bg-gray-light" type='radio' name='rating-4')
+                                       input.rating-heart.bg-danger(class="peer peer-checked:bg-gray-light" type='radio' name='rating-4' checked='')
+                                       input.rating-heart.bg-danger(class="peer peer-checked:bg-gray-light" type='radio' name='rating-4')
+                                       input.rating-heart.bg-danger(class="peer peer-checked:bg-gray-light" type='radio' name='rating-4')
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap gap-2"&gt;
+                                       |    &lt;div class="rating"&gt;
+                                       |        &lt;input class="rating-heart bg-danger peer peer-checked:bg-gray-light" type="radio" name="rating-4"&gt;
+                                       |        &lt;input class="rating-heart bg-danger peer peer-checked:bg-gray-light" type="radio" name="rating-4"&gt;
+                                       |        &lt;input class="rating-heart bg-danger peer peer-checked:bg-gray-light" type="radio" name="rating-4" checked=""&gt;
+                                       |        &lt;input class="rating-heart bg-danger peer peer-checked:bg-gray-light" type="radio" name="rating-4"&gt;
+                                       |        &lt;input class="rating-heart bg-danger peer peer-checked:bg-gray-light" type="radio" name="rating-4"&gt;
+                                       |    &lt;/div&gt; 
+                                       |&lt;/div&gt;
+
+                  div.col-span-4(class="xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold With Different Colors
+                              p Use heart shape rating using 
+                                 strong .rating  
+                                 | & 
+                                 strong .rating-heart  
+                                 | class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.gap-2
+                                    div.rating
+                                       input.rating-heart.bg-danger(class="peer peer-checked:bg-gray-light" type='radio' name='rating-5')
+                                       input.rating-heart.bg-secondary(class="peer peer-checked:bg-gray-light" type='radio' name='rating-5')
+                                       input.rating-heart.bg-info(class="peer peer-checked:bg-gray-light" type='radio' name='rating-5')
+                                       input.rating-heart.bg-primary(class="peer peer-checked:bg-gray-light" type='radio' name='rating-5' checked='')
+                                       input.rating-heart.bg-success(class="peer peer-checked:bg-gray-light" type='radio' name='rating-5')
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap gap-2"&gt;
+                                       |    &lt;div class="rating"&gt;
+                                       |        &lt;input class="rating-heart bg-danger peer peer-checked:bg-gray-light" type="radio" name="rating-5"&gt;
+                                       |        &lt;input class="rating-heart bg-secondary peer peer-checked:bg-gray-light" type="radio" name="rating-5"&gt;
+                                       |        &lt;input class="rating-heart bg-info peer peer-checked:bg-gray-light" type="radio" name="rating-5&gt;
+                                       |        &lt;input class="rating-heart bg-primary peer peer-checked:bg-gray-light" type="radio" name="rating-5" checked=""&gt;
+                                       |        &lt;input class="rating-heart bg-success peer peer-checked:bg-gray-light" type="radio" name="rating-5"&gt;
+                                       |    &lt;/div&gt; 
+                                       |&lt;/div&gt;
+
+                  div.col-span-4(class="xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Rating With Text
+                              p Adding texts with rating.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-wrap.gap-2
+                                    div.flex.flex-wrap.gap-2.items-center
+                                       div.rating
+                                          input.rating-star.bg-warning(class="peer peer-checked:bg-gray-light" type='radio' name='rating-6')
+                                          input.rating-star.bg-warning(class="peer peer-checked:bg-gray-light" type='radio' name='rating-6')
+                                          input.rating-star.bg-warning(class="peer peer-checked:bg-gray-light" type='radio' name='rating-6')
+                                          input.rating-star.bg-warning(class="peer peer-checked:bg-gray-light" type='radio' name='rating-6' checked='')  
+                                          input.rating-star.bg-warning(class="peer peer-checked:bg-gray-light" type='radio' name='rating-6')
+                                       p.text-title.font-bold 
+                                          |   4 Out of 5 
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-wrap gap-2"&gt;
+                                       |    &lt;div class="rating"&gt;
+                                       |        &lt;input class="rating-star bg-warning peer peer-checked:bg-gray-light" type="radio" name="rating-6"&gt;
+                                       |        &lt;input class="rating-star bg-warning peer peer-checked:bg-gray-light" type="radio" name="rating-6"&gt;
+                                       |        &lt;input class="rating-star bg-warning peer peer-checked:bg-gray-light" type="radio" name="rating-6"&gt;
+                                       |        &lt;input class="rating-star bg-warning peer peer-checked:bg-gray-light" type="radio" name="rating-6" checked=""&gt;
+                                       |        &lt;input class="rating-star bg-warning peer peer-checked:bg-gray-light" type="radio" name="rating-6"&gt;
+                                       |    &lt;/div&gt; 
+                                       |&lt;/div&gt;
+
+                  div.col-span-4(class="xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Rating Default Sizes
+                              p Set different style with different size rating using 
+                                 strong .rating  
+                                 | & 
+                                 strong .rating-start-2   
+                                 | class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.gap-2
+                                    div.rating
+                                       input.rating-star-2.bg-success(class="peer peer-checked:bg-gray-light" type='radio' name='rating-7')
+                                       input.rating-star-2.bg-success(class="peer peer-checked:bg-gray-light" type='radio' name='rating-7')
+                                       input.rating-star-2.bg-success(class="peer peer-checked:bg-gray-light" type='radio' name='rating-7')
+                                       input.rating-star-2.bg-success(class="peer peer-checked:bg-gray-light" type='radio' name='rating-7' checked='')    
+                                       input.rating-star-2.bg-success(class="peer peer-checked:bg-gray-light" type='radio' name='rating-7')
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-col gap-2"&gt;
+                                       |    &lt;div class="rating"&gt;
+                                       |        &lt;input class="rating-star-2 bg-success peer peer-checked:bg-gray-light" type="radio" name="rating-7"&gt;
+                                       |        &lt;input class="rating-star-2 bg-success peer peer-checked:bg-gray-light" type="radio" name="rating-7"&gt;
+                                       |        &lt;input class="rating-star-2 bg-success peer peer-checked:bg-gray-light" type="radio" name="rating-7"&gt;
+                                       |        &lt;input class="rating-star-2 bg-success peer peer-checked:bg-gray-light" type="radio" name="rating-7" checked=""&gt;
+                                       |        &lt;input class="rating-star-2 bg-success peer peer-checked:bg-gray-light" type="radio" name="rating-7"&gt;
+                                       |    &lt;/div&gt;
+                                       |&lt;/div&gt;
+
+                  div.col-span-4(class="xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Rating Medium Sizes
+                              p Set different style with different size rating using 
+                                 strong .rating  
+                                 | & 
+                                 strong .rating-start-2   
+                                 | class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.gap-2
+                                    div.rating
+                                       input.rating-star-2.w-7.h-7.bg-primary(class="peer peer-checked:bg-gray-light" type='radio' name='rating-8')
+                                       input.rating-star-2.w-7.h-7.bg-primary(class="peer peer-checked:bg-gray-light" type='radio' name='rating-8')
+                                       input.rating-star-2.w-7.h-7.bg-primary(class="peer peer-checked:bg-gray-light" type='radio' name='rating-8')
+                                       input.rating-star-2.w-7.h-7.bg-primary(class="peer peer-checked:bg-gray-light" type='radio' name='rating-8' checked='')    
+                                       input.rating-star-2.w-7.h-7.bg-primary(class="peer peer-checked:bg-gray-light" type='radio' name='rating-8')
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-col gap-2"&gt;
+                                       |    &lt;div class="rating"&gt;
+                                       |        &lt;input class="rating-star-2 w-7 h-7 bg-primary peer peer-checked:bg-gray-light" type="radio" name="rating-8"&gt;
+                                       |        &lt;input class="rating-star-2 w-7 h-7 bg-primary peer peer-checked:bg-gray-light" type="radio" name="rating-8"&gt;
+                                       |        &lt;input class="rating-star-2 w-7 h-7 bg-primary peer peer-checked:bg-gray-light" type="radio" name="rating-8"&gt;
+                                       |        &lt;input class="rating-star-2 w-7 h-7 bg-primary peer peer-checked:bg-gray-light" type="radio" name="rating-8" checked=""&gt;
+                                       |        &lt;input class="rating-star-2 w-7 h-7 bg-primary peer peer-checked:bg-gray-light" type="radio" name="rating-8"&gt;
+                                       |    &lt;/div&gt; 
+                                       |&lt;/div&gt;
+
+                  div.col-span-4(class="xl:col-span-6 2md:col-span-12")
+                     div.card.tabs
+                        div.card-header.pb-2.header-bottom-border
+                           div.flex.flex-col
+                              h3.text-lg.font-bold Large Rating Sizes
+                              p Set different style with different size rating using 
+                                 strong .rating  
+                                 | & 
+                                 strong .rating-start-2   
+                                 | class.
+                              div.preview-code.tab-links
+                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                        div.card-body                                   
+                           div.tabs-content
+                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                                 div.flex.flex-col.gap-2
+                                    div.rating
+                                       input.rating-star-2.w-9.h-9.bg-info(class="peer peer-checked:bg-gray-light" type='radio' name='rating-9')
+                                       input.rating-star-2.w-9.h-9.bg-info(class="peer peer-checked:bg-gray-light" type='radio' name='rating-9')
+                                       input.rating-star-2.w-9.h-9.bg-info(class="peer peer-checked:bg-gray-light" type='radio' name='rating-9')
+                                       input.rating-star-2.w-9.h-9.bg-info(class="peer peer-checked:bg-gray-light" type='radio' name='rating-9' checked='')    
+                                       input.rating-star-2.w-9.h-9.bg-info(class="peer peer-checked:bg-gray-light" type='radio' name='rating-9')
+                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                                 button.btn.copyBtn 
+                                    i(data-feather="clipboard")
+                                 pre(class="overflow-auto language-html custom-scroll")
+                                    code
+                                       |&lt;div class="flex flex-col gap-2"&gt;
+                                       |    &lt;div class="rating"&gt;
+                                       |        &lt;input class="rating-star-2 w-9 h-9 bg-info peer peer-checked:bg-gray-light" type="radio" name="rating-9"&gt;
+                                       |        &lt;input class="rating-star-2 w-9 h-9 bg-info peer peer-checked:bg-gray-light" type="radio" name="rating-9"&gt;
+                                       |        &lt;input class="rating-star-2 w-9 h-9 bg-info peer peer-checked:bg-gray-light" type="radio" name="rating-9"&gt;
+                                       |        &lt;input class="rating-star-2 w-9 h-9 bg-info peer peer-checked:bg-gray-light" type="radio" name="rating-9" checked=""&gt;
+                                       |        &lt;input class="rating-star-2 w-9 h-9 bg-info peer peer-checked:bg-gray-light" type="radio" name="rating-9"&gt;
+                                       |    &lt;/div&gt;
+                                       |&lt;/div&gt;
+
+
+            // Page Body End 
+            +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+
+      include ../../components/customizer
+
+   include ../../layout/footer-files
