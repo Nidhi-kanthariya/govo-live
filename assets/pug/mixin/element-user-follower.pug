@@ -1,112 +1,112 @@
 - 
-    var USER_SUGGESTION = [
-        {
-            image: "14.png",
-            userName: "Tiana Baumbach",
-            userProfile: "Web Designer",
-        },
-        {
-            image: "19.png",
-            userName: "Ally Kshlerin",
-            userProfile: "Fullstack Developer",
-        },
-        {
-            image: "23.png",
-            userName: "Werner Barrows",
-            userProfile: "Fullstack Developer",
-        },
-    ];
+  var USER_SUGGESTION = [
+    {
+      image: "14.png",
+      userName: "Tiana Baumbach",
+      userProfile: "Web Designer",
+    },
+    {
+      image: "19.png",
+      userName: "Ally Kshlerin",
+      userProfile: "Fullstack Developer",
+    },
+    {
+      image: "23.png",
+      userName: "Werner Barrows",
+      userProfile: "Fullstack Developer",
+    },
+  ];
 - 
-    var USER_FRIEND = [
-        {
-            image1: "17.png",
-            userName1: "Gretchen Harvey",
-            userProfile1: "Web Developer",
-        },
-        {
-            image1: "16.png",
-            userName1: "Raegan Corkery",
-            userProfile1: "Fullstack Developer",
-        },
-        {
-            image1: "21.png",
-            userName1: "Josue Smith",
-            userProfile1: "Fullstack Developer",
-        },
-    ];
+  var USER_FRIEND = [
+    {
+      image1: "17.png",
+      userName1: "Gretchen Harvey",
+      userProfile1: "Web Developer",
+    },
+    {
+      image1: "16.png",
+      userName1: "Raegan Corkery",
+      userProfile1: "Fullstack Developer",
+    },
+    {
+      image1: "21.png",
+      userName1: "Josue Smith",
+      userProfile1: "Fullstack Developer",
+    },
+  ];
 - 
-    var USER_FOLLOWER = [
-        {
-            image2: "18.png",
-            userName2: "Abdul Volkman",
-            userProfile2: "Web Developer",
-        },
-        {
-            image2: "15.png",
-            userName2: "Tiana Baumbach",
-            userProfile2: "Web Designer",
-        },
-        {
-            image2: "20.png",
-            userName2: "Patricia Kulas",
-            userProfile2: "Fullstack Developer",
-        },
-    ];
+  var USER_FOLLOWER = [
+    {
+      image2: "18.png",
+      userName2: "Abdul Volkman",
+      userProfile2: "Web Developer",
+    },
+    {
+      image2: "15.png",
+      userName2: "Tiana Baumbach",
+      userProfile2: "Web Designer",
+    },
+    {
+      image2: "20.png",
+      userName2: "Patricia Kulas",
+      userProfile2: "Fullstack Developer",
+    },
+  ];
 
 mixin user_suggestion(data)
-    div.card
-        div.card-header.flex.justify-between.items-center.gap-1
-            h6(class="font-bold") Suggestions
-            label.btn.bg-gray-light.p-1.cursor-pointer(for='suggest-modal') 
-                i(data-feather="plus" class="w-4 h-4 stroke-title") 
-        div.card-body
-            ul.flex.flex-col.gap-3 
-                each item in data 
-                    li.flex.justify-between.items-center.suggest-friend
-                        div.flex.items-center.gap-2.w-full
-                            div.avatar.rounded-full(class="w-10 h-10")
-                                img(src=`../../assets/images/user-app/${item.image}` alt=`${item.title}`)                                                      
-                            div(class="w-[calc(100%_-_52px)]") 
-                                p.text-title(class="text-xs font-semibold")=item.userName
-                                span.text-content3(class="font-semibold text-2xs")=item.userProfile
-                        a(href="javascript:void(0)").btn.btn-primary.btn-outline.p-1.group.suggest-btn
-                            +SVG_ICON("Profile", "w-4 h-4 stroke-primary group-hover:stroke-white") 
+  div.card
+    div.card-header.flex.justify-between.items-center.gap-1
+      h6(class="font-bold dark:text-white") Suggestions
+      label.btn.bg-gray-light.p-1.cursor-pointer(for='suggest-modal' class="dark:bg-sidebar-dark2") 
+        i(data-feather="plus" class="w-4 h-4 stroke-title dark:stroke-white ") 
+    div.card-body
+      ul.flex.flex-col.gap-3
+        each item in data
+          li.flex.justify-between.items-center.suggest-friend
+            div.flex.items-center.gap-2.w-full
+              div.avatar.rounded-full(class="w-10 h-10")
+                img(src=`../../assets/images/user-app/${item.image}` alt=`${item.title}`)                                                      
+              div(class="w-[calc(100%_-_52px)]")
+                p.text-title(class="text-xs font-semibold dark:text-white ")=item.userName
+                span.text-content3(class="font-semibold text-2xs")=item.userProfile
+            a(href="javascript:void(0)" class="dark:bg-sidebar-dark2 ").btn.btn-primary.btn-outline.p-1.group.suggest-btn
+              +SVG_ICON("Profile", "w-4 h-4 stroke-primary group-hover:stroke-white ")
 
 mixin user_friend(data)
-    div.card
-        div.card-header.flex.justify-between.items-center.gap-1 
-            h6(class="font-bold") Friends
-            label.btn.bg-gray-light.p-1.cursor-pointer(for='add-friend-modal') 
-                i(data-feather="plus" class="w-4 h-4 stroke-title")                         
-        div.card-body
-            ul.flex.flex-col.gap-3 
-                each item in data 
-                    li.flex.justify-between.items-center.add-friend
-                        div.flex.items-center.gap-2.w-full
-                            div.avatar.rounded-full(class="w-10 h-10")
-                                img(src=`../../assets/images/user-app/${item.image1}` alt=`${item.title1}`)                                                      
-                            div(class="w-[calc(100%_-_52px)]") 
-                                p.text-title(class="text-xs font-semibold")=item.userName1
-                                span.text-content3(class="font-semibold text-2xs")=item.userProfile1
-                        a(href="javascript:void(0)").add-btn.btn.bg-gray-light.p-2  Add
+  div.card
+    div.card-header.flex.justify-between.items-center.gap-1 
+      h6(class="font-bold dark:text-white") Friends
+      label.btn.bg-gray-light.p-1.cursor-pointer(for='add-friend-modal' class="dark:bg-sidebar-dark2") 
+        i(data-feather="plus" class="w-4 h-4 stroke-title dark:stroke-white")                     
+    div.card-body
+      ul.flex.flex-col.gap-3 
+        each item in data
+          li.flex.justify-between.items-center.add-friend
+            div.flex.items-center.gap-2.w-full
+              div.avatar.rounded-full(class="w-10 h-10")
+                img(src=`../../assets/images/user-app/${item.image1}` alt=`${item.title1}`)                                                      
+              div(class="w-[calc(100%_-_52px)]")
+                p.text-title(class="text-xs font-semibold dark:text-white")=item.userName1
+                span.text-content3(class="font-semibold text-2xs")=item.userProfile1
+            a(href="javascript:void(0)" class="dark:bg-sidebar-dark2 dark:text-white").add-btn.btn.bg-gray-light.p-2  Add
 
 mixin user_follower(data)
-    div.card
-        div.card-header.flex.justify-between.items-center.gap-1 
-            h6(class="font-bold") Followers
-            label.btn.bg-gray-light.p-1.cursor-pointer(for='follow-modal') 
-                i(data-feather="plus" class="w-4 h-4 stroke-title")                        
-        div.card-body
-            ul.flex.flex-col.gap-3 
-                each item in data 
-                    li.flex.justify-between.items-center.follow-friend
-                        div.flex.items-center.gap-2.w-full
-                            div.avatar.rounded-full(class="w-10 h-10")
-                                img(src=`../../assets/images/user-app/${item.image2}` alt=`${item.title2}`)                                                      
-                            div(class="w-[calc(100%_-_52px)]") 
-                                p.text-title(class="text-xs font-semibold")=item.userName2
-                                span.text-content3(class="font-semibold text-2xs")=item.userProfile2
-                        a(href="javascript:void(0)").follow-btn.btn.bg-gray-light.p-2 Follow
+  div.card
+    div.card-header.flex.justify-between.items-center.gap-1 
+      h6(class="font-bold dark:text-white") Followers
+      label.btn.bg-gray-light.p-1.cursor-pointer(for='follow-modal' class="dark:bg-sidebar-dark2") 
+        i(data-feather="plus" class="w-4 h-4 stroke-title dark:stroke-white")                     
+    div.card-body
+      ul.flex.flex-col.gap-3 
+        each item in data 
+          li.flex.justify-between.items-center.follow-friend
+            div.flex.items-center.gap-2.w-full
+              div.avatar.rounded-full(class="w-10 h-10")
+                img(src=`../../assets/images/user-app/${item.image2}` alt=`${item.title2}`)                                                      
+              div(class="w-[calc(100%_-_52px)]")
+                p.text-title(class="text-xs font-semibold dark:text-white")=item.userName2
+                span.text-content3(class="font-semibold text-2xs")=item.userProfile2
+            a(href="javascript:void(0)" class="dark:bg-sidebar-dark2 dark:text-white").follow-btn.btn.bg-gray-light.p-2 Follow
 
 
 

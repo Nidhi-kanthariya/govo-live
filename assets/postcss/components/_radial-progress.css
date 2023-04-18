@@ -21,15 +21,15 @@
         }
 
         &.radial-md {
-            --size: 8rem;
+            --size: 7rem;
         }
 
         &.radial-lg {
-            --size: 10rem;
+            --size: 8rem;
         }
 
         &.radial-xl {
-            --size: 12rem;
+            --size: 9rem;
         }
     }
 

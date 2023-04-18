@@ -7,10 +7,10 @@ mixin notification(data)
       each dataItem,index in data 
          li.flex.items-center.group(class="justify-between gap-3 first:pt-0 last:pb-0 first:border-none py-[16px] xl:py-[12px] border-t border-border-light")  
             div.flex.items-center(class="gap-[10px] flex-[1_1_0]")
-               img(class="rounded-full w-[45px] h-[45px] 3xl:w-[40px] 3xl:h-[40px]" src=`../../assets/images/avatar/${dataItem.image}` alt="avatar" )  
+               img(class="rounded-full  w-[45px] h-[45px] 3xl:w-[40px] 3xl:h-[40px]" src=`../../assets/images/avatar/${dataItem.image}` alt="avatar" )  
                div  
-                  h4.transition-all(class=" text-xs text-title font-semibold line-clamp-2 group-hover:text-primary")= dataItem.title 
-                  div.items-center.gap-2(class="absolute bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-300 transition-all")
+                  h4.transition-all(class="text-xs font-semibold text-title line-clamp-2 group-hover:text-primary")= dataItem.title 
+                  div.items-center.gap-2(class="absolute invisible transition-all duration-300 bg-white opacity-0 group-hover:opacity-100 group-hover:visible")
                      button(class="btn btn-md py-[6px] px-[27px] lg:px-[15px] text-4xs text-white bg-secondary") 
                         | Accpet
                      button(class="btn btn-md  py-[6px] px-[27px] lg:px-[15px] text-4xs text-white bg-primary") 

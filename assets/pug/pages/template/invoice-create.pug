@@ -22,103 +22,103 @@ include ../../mixin/mixin
 
 doctype html
 html(lang='en')
-   include ../../layout/header-files
-   body(dir="ltr" class="unique-skin")
-      main.page-wrapper
-         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
-            include ../../layout/header/header     
-            // Sidebar Start 
-            div.page-sidebar.sidebar-dark.unique-sidebar
-               include ../../layout/unique 
-            // Sidebar End 
+  include ../../layout/header-files
+  body(dir="ltr" class="unique-skin")
+    main.page-wrapper
+      div.page-body-wrapper(class="xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+        include ../../layout/header/header     
+        // Sidebar Start 
+        div.page-sidebar.sidebar-dark.unique-sidebar
+          include ../../layout/unique 
+        // Sidebar End 
 
-            // Page Body Start 
-            div.page-body
-               div.grid.grid-cols-12.gap-card-gap
-                  div.col-span-12
-                     div.card(class="m-auto max-w-5xl invoice-preview overflow-auto custom-scroll") 
-                        div.grid.grid-cols-12.gap-card-gap(class="sm:gap-1")
-                           div.col-span-4(class="lg:col-span-6 sm:col-span-12")
-                              img(src='../../assets/images/logo/logo-dark.png' alt='logo' class="w-20")    
-                              div.mt-4 
-                                 form(class="theme-form m-0")
-                                    label(for="address") Address 
-                                    textarea(placeholder="Enter address" row="3" id="address" class="p-[11px] focus:!border-border-light").w-full.border.border-border-light.rounded-5.text-xs.text-content
-                           div.col-span-4(class="lg:col-span-6 lg:hidden")
-                           div.col-span-4(class="lg:col-span-6 sm:col-span-12")           
-                              div
-                                 form(class="theme-form m-0 flex flex-col gap-2")
-                                    input(type="text" class="font-medium.text-content3" id="register" placeholder="Registration no.." required)
-                                    input(type="email" class="font-medium.text-content3" id="email" placeholder="Email id.." required)
-                                    input(type="number" class="font-medium.text-content3" id="contact" placeholder="Contact no.. " required)
-                        div.divider(class="w-full bg-gray-light")
-                        form(class="theme-form m-0")
-                           div.grid.grid-cols-12.gap-card-gap
-                              div.col-span-3(class="md:col-span-6 sm:col-span-12 min-w-[120px]")
-                                 label(for="number") INVOICE NO
-                                 input(type="text" id="number" placeholder="go157864" required)
-                              div.col-span-3(class="md:col-span-6 sm:col-span-12 min-w-[150px]")
-                                 label(for="date") DATE
-                                 input(type="text" id="date" placeholder="23Feb, 2023 2:45PM " required)
-                              div.col-span-3(class="md:col-span-6 sm:col-span-12 min-w-[150px]")
-                                 label(for="status") PAYMENT STATUS
-                                 select.form-select.block.w-full.px-3.text-xs.font-normal.text-content3.bg-white.bg-clip-padding.bg-no-repeat.border.border-border-light.rounded-5.transition.ease-in-out.m-0(class='min-w-[150px] py-[9px]' id="status" aria-label='Default select example')
-                                    option(selected='') Paid
-                                    option(value='1') Unpaid
-                                    option(value='2') Refund
-                              div.col-span-3(class="md:col-span-6 sm:col-span-12 min-w-[130px]")
-                                 label(for="amount") TOTAL AMOUNT
-                                 input(type="number" id="amount" placeholder="$787.6")
-                        div.divider(class="w-full bg-gray-light")
-                        div.grid.grid-cols-12.gap-card-gap
-                           div.col-span-4(class="lg:col-span-6 sm:col-span-12")
-                              form(class="theme-form m-0 flex flex-col gap-2")
-                                 label(for="address" class="!mb-0") Shipping Address
-                                 input(type="text" id="name" placeholder="Vilma Gerhold" required)
-                                 textarea(placeholder="14300 Gallant Fox Ln, Bowie, Maryland, 20715, US" row="3" id="address" class="p-[11px] focus:!border-border-light").w-full.border.border-border-light.rounded-5.text-xs.text-content
-                                 input(type="number" id="name" placeholder="(301) 464-0110" required)
-                           div.col-span-4(class="lg:hidden")
-                           div.col-span-4(class="lg:col-span-6 sm:col-span-12")
-                              form(class="theme-form m-0 flex flex-col gap-2")
-                                 label(for="address" class="!mb-0") Billing Address
-                                 input(type="text" id="name" placeholder="Vilma Gerhold" required)
-                                 textarea(placeholder="14300 Gallant Fox Ln, Bowie, Maryland, 20715, US" row="3" id="address" class="p-[11px] focus:!border-border-light").w-full.border.border-border-light.rounded-5.text-xs.text-content
-                                 input(type="number" id="name" placeholder="(301) 464-0110" required)
-                        div.flex.items-center.gap-2
-                           label.checkbox.checkbox-sm.cursor-pointer  
-                              input(type='checkbox' class="peer") 
-                              div.checkbox-indicator(class="peer-checked:!bg-primary !border-primary")  
-                                 i(data-feather="check")
-                           p.text-content3 Shipping & Billing address are the same?
-                        div.divider(class="w-full bg-gray-light")
-                        div.invoice-table-detail
-                           div.overflow-auto.custom-scroll 
-                              include ../../components/table/checkout-table     
-                        div.divider(class="w-full bg-gray-light")
-                        div(class="w-[245px] max-w-[300px]")
-                           form(class="theme-form m-0 flex flex-col gap-2")
-                              label(for="address" class="!mb-0") Payment Detail
-                              select.form-select.block.w-full.px-3.text-xs.font-normal.text-content3.bg-white.bg-clip-padding.bg-no-repeat.border.border-border-light.rounded-5.transition.ease-in-out.m-0(class='min-w-[150px] py-[9px]' id="paymentMethod" aria-label='Default select example')
-                                 option(selected='') Payment Method
-                                 option(value='1') Mastercard
-                                 option(value='2') Credit Card
-                                 option(value='3') PayPal
-                                 option(value='4') Visa
-                              input(type="text" id="card-name" placeholder="Vilma Gerhold" required)
-                              input(type="number" id="name" placeholder="xxx xxxx xxxx 7159" required)
-                              input(type="number" id="name" placeholder="$787.6" readonly)
-                        div.divider(class="w-full bg-gray-light")
-                        form(class="theme-form m-0 flex flex-col gap-2")
-                           label(for="notes") Notes
-                           p.font-medium.text-content3(class="!text-left rtl:!text-right") All accounts must be settled within seven days of receiving an invoice. to be paid by check, credit card, or online direct deposit. If the account is not paid within seven days, the agreed-upon quoted fee indicated above will be charged to the credits details provided as confirmation of the task completed.
-                        div.divider(class="w-full bg-gray-light")
-                        div.flex.items-center.gap-2.justify-end
-                           a(href="javascript:window.print()").btn.btn-success.py-1.text-white.text-xs.flex.gap-2.items-center 
-                              | Save
-                           a(href="../../assets/chat-doc/invoice.pdf" Download).btn.btn-secondary.py-1.text-white.text-xs.flex.gap-2.items-center 
-                              | Cancel   
+        // Page Body Start 
+        div.page-body
+          div.grid.grid-cols-12.gap-card-gap
+            div.col-span-12
+              div.card(class="max-w-5xl m-auto overflow-auto invoice-preview custom-scroll") 
+                div.grid.grid-cols-12.gap-card-gap(class="sm:gap-1")
+                  div.col-span-4(class="lg:col-span-6 sm:col-span-12")
+                    img(src='../../assets/images/logo/logo-dark.png' alt='logo' class="w-20")    
+                    div.mt-4 
+                      form(class="m-0 theme-form")
+                        label(for="address") Address  
+                        textarea(placeholder="Enter address" row="3" id="address" class="p-[11px] focus:!border-border-light dark:border-border-dark dark:focus:!border-border-dark").w-full.border.border-border-light.rounded-5.text-xs.text-content
+                  div.col-span-4(class="lg:col-span-6 lg:hidden")
+                  div.col-span-4(class="lg:col-span-6 sm:col-span-12")           
+                    div
+                      form(class="flex flex-col gap-2 m-0 theme-form")
+                        input(type="text" class="font-medium.text-content3" id="register" placeholder="Registration no.." required)
+                        input(type="email" class="font-medium.text-content3" id="email" placeholder="Email id.." required)
+                        input(type="number" class="font-medium.text-content3" id="contact" placeholder="Contact no.. " required)
+                div.divider(class="w-full bg-gray-light dark:bg-sidebar-dark")
+                form(class="m-0 theme-form")
+                  div.grid.grid-cols-12.gap-card-gap
+                    div.col-span-3(class="md:col-span-6 sm:col-span-12 min-w-[120px]")
+                      label(for="number") INVOICE NO
+                      input(type="text" id="number" placeholder="go157864" required)
+                    div.col-span-3(class="md:col-span-6 sm:col-span-12 min-w-[150px]")
+                      label(for="date") DATE
+                      input(type="text" id="date" placeholder="23Feb, 2023 2:45PM " required)
+                    div.col-span-3(class="md:col-span-6 sm:col-span-12 min-w-[150px]")
+                      label(for="status") PAYMENT STATUS
+                      select.form-select.block.w-full.px-3.text-xs.font-normal.text-content3.bg-white.bg-clip-padding.bg-no-repeat.border.border-border-light.rounded-5.transition.ease-in-out.m-0(class='min-w-[150px] py-[9px] dark:border-border-dark dark:bg-sidebar-dark2' id="status" aria-label='Default select example')
+                        option(selected='') Paid 
+                        option(value='1') Unpaid
+                        option(value='2') Refund
+                    div.col-span-3(class="md:col-span-6 sm:col-span-12 min-w-[130px]")
+                      label(for="amount") TOTAL AMOUNT
+                      input(type="number" id="amount" placeholder="$787.6")
+                div.divider(class="w-full bg-gray-light dark:bg-sidebar-dark")
+                div.grid.grid-cols-12.gap-card-gap
+                  div.col-span-4(class="lg:col-span-6 sm:col-span-12")
+                    form(class="flex flex-col gap-2 m-0 theme-form")
+                      label(for="address" class="!mb-1") Shipping Address
+                      input(type="text" id="name" placeholder="Vilma Gerhold" required)
+                      textarea(placeholder="14300 Gallant Fox Ln, Bowie, Maryland, 20715, US" row="3" id="address" class="p-[11px] focus:!border-border-light dark:border-border-dark dark:focus:!border-border-dark").w-full.border.border-border-light.rounded-5.text-xs.text-content
+                      input(type="number" id="name" placeholder="(301) 464-0110" required)
+                  div.col-span-4(class="lg:hidden")
+                  div.col-span-4(class="lg:col-span-6 sm:col-span-12")
+                    form(class="flex flex-col gap-2 m-0 theme-form")
+                      label(for="address" class="!mb-1") Billing Address
+                      input(type="text" id="name" placeholder="Vilma Gerhold" required)
+                      textarea(placeholder="14300 Gallant Fox Ln, Bowie, Maryland, 20715, US" row="3" id="address" class="p-[11px] focus:!border-border-light dark:border-border-dark dark:focus:!border-border-dark").w-full.border.border-border-light.rounded-5.text-xs.text-content
+                      input(type="number" id="name" placeholder="(301) 464-0110" required)
+                div.flex.items-center.gap-2
+                  label.checkbox.checkbox-sm.cursor-pointer
+                    input(type='checkbox' class="peer") 
+                    div.checkbox-indicator(class="peer-checked:!bg-primary !border-primary")  
+                      i(data-feather="check")
+                  p.text-content3 Shipping & Billing address are the same?
+                div.divider(class="w-full bg-gray-light dark:bg-sidebar-dark")
+                div.invoice-table-detail
+                  div.overflow-auto.custom-scroll 
+                    include ../../components/table/checkout-table     
+                div.divider(class="w-full bg-gray-light dark:bg-sidebar-dark")
+                div(class="w-[245px] max-w-[300px]")
+                  form(class="flex flex-col gap-2 m-0 theme-form")
+                    label(for="address" class="!mb-0") Payment Detail
+                    select.form-select.block.w-full.px-3.text-xs.font-normal.text-content3.bg-white.bg-clip-padding.bg-no-repeat.border.border-border-light.rounded-5.transition.ease-in-out.m-0(class='min-w-[150px] py-[9px] dark:bg-sidebar-dark2 dark:border-border-dark' id="paymentMethod" aria-label='Default select example')
+                      option(selected='') Payment Method 
+                      option(value='1') Mastercard 
+                      option(value='2') Credit Card
+                      option(value='3') PayPal
+                      option(value='4') Visa
+                    input(type="text" id="card-name" placeholder="Vilma Gerhold" required)
+                    input(type="number" id="name" placeholder="xxx xxxx xxxx 7159" required)
+                    input(type="number" id="name" placeholder="$787.6")
+                div.divider(class="w-full bg-gray-light dark:bg-sidebar-dark")
+                form(class="flex flex-col gap-2 m-0 theme-form")
+                  label(for="notes") Notes
+                  p.font-medium.text-content3(class="!text-left rtl:!text-right") All accounts must be settled within seven days of receiving an invoice. to be paid by check, credit card, or online direct deposit. If the account is not paid within seven days, the agreed-upon quoted fee indicated above will be charged to the credits details provided as confirmation of the task completed.
+                div.divider(class="w-full bg-gray-light dark:bg-sidebar-dark")
+                div.flex.items-center.gap-2.justify-end
+                  a(href="javascript:window.print()").btn.btn-success.py-1.text-white.text-xs.flex.gap-2.items-center 
+                    | Save
+                  a(href="../../assets/chat-doc/invoice.pdf" Download).btn.btn-secondary.py-1.text-white.text-xs.flex.gap-2.items-center 
+                    | Cancel
 
-            // Page Body End  
-            +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
-         include ../../components/customizer
-   include ../../layout/footer-files
+        // Page Body End  
+        +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+      include ../../components/customizer
+  include ../../layout/footer-files

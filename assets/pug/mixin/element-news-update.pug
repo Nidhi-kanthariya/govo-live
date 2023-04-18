@@ -2,18 +2,18 @@
 //-  News & Update 
 //- =================
 mixin news-update(data, sideType,link) 
-   ul  
-      each dataItem, index in data
-         li.group.flex.items-center.group(class="justify-between gap-3 first:pt-0 last:pb-0 first:border-none py-[16px] 4xl:py-[13px] border-t border-border-light dark:border-border-dark")  
-            div.flex.items-center(class="gap-[10px] flex-[1_1_0]")
-               div.overflow-hidden(class="w-[80px] 3sm:w-[58px] 4xl:w-[75px] 2sm:w-[65px] rounded-5")
-                  img.w-full.h-auto.object-cover(src=`../../assets/images/${dataItem.image}` alt="event")  
-               div(class="flex-1")  
-                  if(link == "link")
-                     a(href=`${dataItem.url}`)
-                        h4.transition-all(class="text-xs font-semibold text-title line-clamp-2 group-hover:text-primary")= dataItem.title 
-                  if(link !== "link")
-                     h4.transition-all(class="text-xs font-semibold text-title line-clamp-2 group-hover:text-primary")= dataItem.title 
-                  span(class="text-2xs 4xl:mt-[3px] font-semibold text-content line-clamp-1 mt-[4px]")= dataItem.subTitle 
-            if (sideType === "badge") 
-               span(class="min-w-fit 3sm:hidden text-4xs  badge bg-gray-light text-title py-[7px] px-[13px]")= dataItem.badge
+  ul  
+    each dataItem, index in data
+      li.group.flex.items-center.group(class="justify-between gap-3 first:pt-0 last:pb-0 first:border-none py-[16px] 4xl:py-[13px] border-t border-border-light dark:border-border-dark")  
+        div.flex.items-center(class="gap-[10px] flex-[1_1_0]")
+          div.overflow-hidden(class="w-[80px] 3sm:w-[58px] 4xl:w-[75px] 2sm:w-[65px] rounded-5")
+            img.w-full.h-auto.object-cover(src=`../../assets/images/${dataItem.image}` alt="event")  
+          div(class="flex-1")
+            if(link == "link")
+              a(href=`${dataItem.url}`)
+                h4.transition-all(class="text-xs font-semibold text-title line-clamp-2 group-hover:text-primary")= dataItem.title 
+            if(link !== "link")
+              h4.transition-all(class="text-xs font-semibold text-title line-clamp-2 group-hover:text-primary")= dataItem.title 
+            span(class="text-2xs 4xl:mt-[3px] font-semibold text-content line-clamp-1 mt-[4px]")= dataItem.subTitle 
+        if (sideType === "badge") 
+          span(class="min-w-fit 3sm:hidden text-4xs  badge bg-gray-light text-title py-[7px] px-[13px]")= dataItem.badge

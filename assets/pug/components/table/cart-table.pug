@@ -3,41 +3,41 @@
 //- ====================
 
 table.table.equal-space.table-action.shopping-bag.cart-main
-    thead 
-        tr 
-            each userHead,index in CART.header
-                if(index===0)
-                    th=  userHead 
-                else 
-                    th=  userHead 
-    tbody
-        each bodyData,index in CART.body
-            tr(class="hover:bg-gray-light cart-item")
-                td(class="min-w-[180px]")
-                    div(class="flex items-center gap-2")
-                        img(class="sm:w-[40px] sm:h-[40px] 5xl:w-[43px] 5xl:h-[43px] w-[45px] h-[45px] rounded-full" src=`../../assets/images/product/${bodyData.image}`, alt=`${bodyData.title}`) 
-                        div
-                            h4(class="text-xs font-semibold text-title")=bodyData.title
-                            span(class="text-[0.813rem] font-medium text-content")=bodyData.ItemId
-                td(class="min-w-[155px]")
-                    div.flex.gap-1.items-center 
-                        span(class="text-lg font-bold text-title")=bodyData.subTitle
-                        del(class="font-bold text-2xs text-content ")=bodyData.priceDel
-                    span(class="text-[0.813rem] font-medium text-secondary")=bodyData.offer
-                td(class="min-w-[100px]")  
-                    +PlusMinus(bodyData.qty)
-                td(class="min-w-[100px] 2md:min-w-[65px]")  
-                    h4(class="text-xs font-semibold text-title")= bodyData.totalPrice
-                td(class="min-w-[100px] 2md:min-w-max")
-                    div.flex.gap-3.items-center.justify-end(class="block 2md:hidden")  
-                        +SVG_ICON("Delete","hover:stroke-primary remove-cart w-[18px] h-[18px] stroke-title cursor-pointer") 
-                        i(data-feather="bookmark" class="w-5 h-5 cursor-pointer stroke-content")
+  thead 
+    tr 
+      each userHead,index in CART.header
+        if(index===0)
+          th=  userHead 
+        else 
+          th=  userHead 
+  tbody
+    each bodyData,index in CART.body
+      tr(class="hover:bg-gray-light dark:hover:bg-sidebar-dark2 cart-item")
+        td(class="min-w-[180px]")
+          div(class="flex items-center gap-2") 
+            img(class="sm:w-[40px] sm:h-[40px] 5xl:w-[43px] 5xl:h-[43px] w-[45px] h-[45px] rounded-full" src=`../../assets/images/product/${bodyData.image}`, alt=`${bodyData.title}`) 
+            div
+              h4(class="text-xs font-semibold text-title")=bodyData.title
+              span(class="text-[0.813rem] font-medium text-content")=bodyData.ItemId
+        td(class="min-w-[155px]")
+          div.flex.gap-1.items-center 
+            span(class="text-lg font-bold text-title")=bodyData.subTitle
+            del(class="font-bold text-2xs text-content ")=bodyData.priceDel
+          span(class="text-[0.813rem] font-medium text-secondary")=bodyData.offer
+        td(class="min-w-[100px]")  
+          +PlusMinus(bodyData.qty)
+        td(class="min-w-[100px] 2md:min-w-[65px]")  
+          h4(class="text-xs font-semibold text-title")= bodyData.totalPrice
+        td(class="min-w-[100px] 2md:min-w-max")
+          div.flex.gap-3.items-center.justify-end(class="block 2md:hidden")  
+            +SVG_ICON("Delete","hover:stroke-primary remove-cart w-[18px] h-[18px] stroke-title cursor-pointer") 
+            i(data-feather="bookmark" class="w-5 h-5 cursor-pointer stroke-content")
 
-                    div.dropdown.dropdown-bottom
-                        i(data-feather="more-vertical" class="hidden w-5 h-5 cursor-pointer stroke-title 2md:block")
-                        div(class="hidden text-left dropdown-menu 2md:block")
-                            ul.flex.flex-col.justify-start.gap-3
-                                li.cursor-pointer    
-                                    +SVG_ICON("Delete","hover:stroke-primary remove-cart w-[18px] h-[18px] stroke-title cursor-pointer") 
-                                li.cursor-pointer
-                                    i(data-feather="bookmark" class="w-5 h-5 cursor-pointer stroke-content")
+          div.dropdown.dropdown-bottom
+            i(data-feather="more-vertical" class="hidden w-5 h-5 cursor-pointer stroke-title 2md:block")
+            div(class="hidden text-left dropdown-menu 2md:block")
+              ul.flex.flex-col.justify-start.gap-3
+                li.cursor-pointer    
+                  +SVG_ICON("Delete","hover:stroke-primary remove-cart w-[18px] h-[18px] stroke-title cursor-pointer") 
+                li.cursor-pointer
+                  i(data-feather="bookmark" class="w-5 h-5 cursor-pointer stroke-content")

@@ -1,8 +1,11 @@
 //- sidebar
 -var sidebar = true;
 
-//- feathet
+//- feather
 -var feather= true;
+
+//- Awesome
+-var fontAwesome= true;
 
 //- customSelect
 -var customSelect= true;
@@ -25,560 +28,829 @@ include ../../mixin/mixin
 
 doctype html
 html(lang='en')  
-   include ../../layout/header-files 
-   body(dir="ltr" class="unique-skin")
-      main.page-wrapper
-         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
-            include ../../layout/header/header     
-            // Sidebar Start 
-            div.page-sidebar.sidebar-dark.unique-sidebar
-               include ../../layout/unique
-            // Sidebar End 
+  include ../../layout/header-files 
+  body(dir="ltr" class="unique-skin")
+    main.page-wrapper
+      div.page-body-wrapper(class="xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+        include ../../layout/header/header     
+        // Sidebar Start 
+        div.page-sidebar.sidebar-dark.unique-sidebar
+          include ../../layout/unique
+        // Sidebar End 
 
-            // Page Body Start 
-            div.page-body
-               div.grid.grid-cols-12.gap-card-gap
-                  div.col-span-6(class="md:col-span-12")
-                     div.card.tabs
-                        div.card-header.pb-2.header-bottom-border
-                           div.flex.flex-col
-                              h3.text-lg.font-bold Tabs
-                              p   Set tabs using 
-                                 strong  .tabs 
-                                 |   class.            
-                              div.preview-code.tab-links
-                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
-                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
-                        div.card-body                                   
-                           div.tabs-content
-                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
-                                 div.flex.flex-wrap.gap-2
-                                    div.w-full.tabs.flex-col
-                                       div.mb-1.tab-links.flex
-                                          button.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Title 1 
-                                          button.tab.tab-lifted(data-tabFilter="2" class="tab-link") Title 2  
-                                       div.tabs-content
-                                          div(data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5")
-                                             p.text-xs.text-gray-500  Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive.
-                                                |   Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive.
-                                          div(data-tabContent="2" class="relative tab-pan fade group first:rounded-tl-none rounded-5")
-                                             p.text-xs.text-gray-500 We use tabs to manage space and to make the website more attractive. Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive.
-                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
-                                 button.btn.copyBtn 
-                                    i(data-feather="clipboard")
-                                 pre(class="overflow-auto language-html custom-scroll")
-                                    code
-                                       |&lt;div class="flex flex-wrap gap-2"&gt;
-                                       |   &lt;div class="w-full .tabs flex-col"&gt;
-                                       |       &lt;div class="flex mb-1 tab-links"&gt;
-                                       |           &lt;button class="tab tab-lifted tab-active tab-link" data-tabFilter="1"&gt; Title 1 &lt;/button&gt;
-                                       |           &lt;button class="tab tab-lifted tab-link" data-tabFilter="2"&gt; Title 2 &lt;/button&gt;
-                                       |       &lt;/div&gt;
-                                       |       &lt;div class="tabs-content"&gt;
-                                       |           &lt;div data-tabContent="1" class="tab-pan fade active show first:rounded-tl -none rounded-5"&gt; 
-                                       |               &lt;p class="text-xs text-gray-500"&gt; Tabs are used ...attractive.&lt;/p&gt;  
-                                       |           &lt;/div&gt;
-                                       |           &lt;div data-tabContent="2" class="relative tab-pan fade group first:rounded-tl-none rounded-5"&gt; 
-                                       |               &lt;p class="text-xs text-gray-500"&gt; We use tabs to ...attractive.&lt;/p&gt;  
-                                       |           &lt;/div&gt;
-                                       |       &lt;/div&gt;
-                                       |   &lt;/div&gt; 
-                                       |&lt;/div&gt;
+        // Page Body Start 
+        div.page-body
+          div.grid.grid-cols-12.gap-card-gap
+            div.col-span-6(class="md:col-span-12")
+              div.card.tabs
+                div.card-header.pb-2.header-bottom-border
+                  div.flex.flex-col
+                    h3(class="dark:text-white").text-lg.font-bold Tabs
+                    p(class="dark:text-content3")  Set tabs using 
+                      strong  .tabs 
+                      |   class.            
+                    div.preview-code.tab-links
+                      button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                      button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                div.card-body                                   
+                  div.tabs-content
+                    div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                      div.flex.flex-wrap.gap-2
+                        div.w-full.tabs.flex-col
+                          div.mb-1.tab-links.flex
+                            button.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Web Designer 
+                            button.tab.tab-lifted(data-tabFilter="2" class="tab-link") UX Designer  
+                          div.tabs-content
+                            div(data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5")
+                              div.flex.flex-wrap.items-center.gap-4 
+                                div.flex.items-center.gap-2  
+                                  div.avatar  
+                                    div.w-10.h-10.rounded-full(class="xl:w-9") 
+                                      img(src='../../assets/images/avatar/25.jpg' alt='avatar')
+                                  div.flex.flex-col.gap-1
+                                    h3.text-xs.font-bold(class="leading-none lg:text-2xs dark:text-white") Angela R. Lear
+                                    span.text-content.text-3xs 239-664-7751 
+                                div.flex.items-center.gap-2  
+                                  div.avatar  
+                                    div.w-10.h-10.rounded-full(class="xl:w-9") 
+                                      img(src='../../assets/images/avatar/15.jpg' alt='avatar')
+                                  div.flex.flex-col.gap-1
+                                    h3.text-xs.font-bold(class="leading-none lg:text-2xs dark:text-white")  Marjorie W. Martin
+                                    span.text-content.text-3xs 440-494-0729
+                                div.flex.items-center.gap-2  
+                                  div.avatar  
+                                    div.w-10.h-10.rounded-full(class="xl:w-9") 
+                                      img(src='../../assets/images/avatar/6.jpg' alt='avatar')
+                                  div.flex.flex-col.gap-1
+                                    h3.text-xs.font-bold(class="leading-none lg:text-2xs dark:text-white") Russell P. Renfrew
+                                    span.text-content.text-3xs 718-740-8438
+                                div.flex.items-center.gap-2
+                                  div.avatar  
+                                    div.w-10.h-10.rounded-full(class="xl:w-9") 
+                                      img(src='../../assets/images/avatar/27.jpg' alt='avatar')
+                                  div.flex.flex-col.gap-1
+                                    h3.text-xs.font-bold(class="leading-none lg:text-2xs dark:text-white") Kevin A. Ek
+                                    span.text-content.text-3xs 218-793-6609
+                                div.flex.items-center.gap-2  
+                                  div.avatar  
+                                    div.w-10.h-10.rounded-full(class="xl:w-9") 
+                                      img(src='../../assets/images/avatar/26.jpg' alt='avatar')
+                                  div.flex.flex-col.gap-1
+                                    h3.text-xs.font-bold(class="leading-none lg:text-2xs dark:text-white") Carolyn A. Sutton
+                                    span.text-content.text-3xs 314-445-1451
+                            div(data-tabContent="2" class="relative tab-pan fade group first:rounded-tl-none rounded-5")
+                              div.flex.flex-wrap.items-center.gap-4 
+                                div.flex.items-center.gap-2  
+                                  div.avatar  
+                                    div.w-10.h-10.rounded-full(class="xl:w-9") 
+                                      img(src='../../assets/images/avatar/31.jpg' alt='avatar')
+                                  div.flex.flex-col.gap-1
+                                    h3.text-xs.font-bold(class="leading-none lg:text-2xs dark:text-white") Emily T. Hooper
+                                    span.text-content.text-3xs 258-664-7751 
+                                div.flex.items-center.gap-2  
+                                  div.avatar  
+                                    div.w-10.h-10.rounded-full(class="xl:w-9") 
+                                      img(src='../../assets/images/avatar/34.jpg' alt='avatar')
+                                  div.flex.flex-col.gap-1
+                                    h3.text-xs.font-bold(class="leading-none lg:text-2xs dark:text-white")  Ann J. Strickland
+                                    span.text-content.text-3xs 440-851-0729
+                                div.flex.items-center.gap-2  
+                                  div.avatar  
+                                    div.w-10.h-10.rounded-full(class="xl:w-9") 
+                                      img(src='../../assets/images/avatar/22.jpg' alt='avatar')
+                                  div.flex.flex-col.gap-1
+                                    h3.text-xs.font-bold(class="leading-none lg:text-2xs dark:text-white") Natasha W. Watson
+                                    span.text-content.text-3xs 698-740-8438
+                                div.flex.items-center.gap-2  
+                                  div.avatar  
+                                    div.w-10.h-10.rounded-full(class="xl:w-9") 
+                                      img(src='../../assets/images/avatar/13.jpg' alt='avatar')
+                                  div.flex.flex-col.gap-1
+                                    h3.text-xs.font-bold(class="leading-none lg:text-2xs dark:text-white") Thomas A. Leroy
+                                    span.text-content.text-3xs 218-793-7845
+                                div.flex.items-center.gap-2  
+                                  div.avatar  
+                                    div.w-10.h-10.rounded-full(class="xl:w-9") 
+                                      img(src='../../assets/images/avatar/8.jpg' alt='avatar')
+                                  div.flex.flex-col.gap-1
+                                    h3.text-xs.font-bold(class="leading-none lg:text-2xs dark:text-white") Mark S. Ward
+                                    span.text-content.text-3xs 314-4874-1451
 
-                  div.col-span-6(class="md:col-span-12")
-                     div.card.tabs
-                        div.card-header.pb-2.header-bottom-border
-                           div.flex.flex-col
-                              h3.text-lg.font-bold rounded Tab 
-                              p   Set tabs with border using  
-                                 strong  .rounded-bg 
-                                 |   class.            
-                              div.preview-code.tab-links
-                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
-                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
-                        div.card-body                                   
-                           div.tabs-content
-                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
-                                 div.flex.flex-wrap.gap-2
-                                    div.w-full.tabs.flex-col
-                                       div.mb-1.tab-links.flex
-                                          button.tab.tab-lifted.rounded-bg(data-tabFilter="1" class="tab-link") Description 1  
-                                          button.tab.tab-lifted.rounded-bg.tab-active(data-tabFilter="2" class="tab-link") Description 2  
-                                       div.tabs-content
-                                          div(data-tabContent="1" class="tab-pan fade group first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
-                                             p.text-xs.text-gray-500  Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive.
-                                                |    Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive.
-                                                |    Tabs are used to navigate and display different content around the website. 
-                                          div(data-tabContent="2" class="tab-pan fade active show relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
-                                             p.text-xs.text-gray-500 We use tabs to manage space and to make the website more attractive. Tabs are used to navigate and display different content around the website.
-                                                |    We use tabs to manage space and to make the website more attractive. abs are used to navigate and display different content around the website. 
-                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
-                                 button.btn.copyBtn 
-                                    i(data-feather="clipboard")
-                                 pre(class="overflow-auto language-html custom-scroll")
-                                    code
-                                       |&lt;div class="flex flex-wrap gap-2"&gt;
-                                       |    &lt;div class="flex-col w-full tabs"&gt;
-                                       |       &lt;div class="flex mb-1 tab-links"&gt;
-                                       |           &lt;button class="tab tab-lifted rounded-bg tab-link" data-tabFilter="1"&gt; Description 1 &lt;/button&gt;
-                                       |           &lt;button class="tab tab-lifted rounded-bg tab-active tab-link" data-tabFilter="2"&gt; Description 2 &lt;/button&gt;
-                                       |       &lt;/div&gt;
-                                       |       &lt;div class="tabs-content"&gt;
-                                       |           &lt;div data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
-                                       |               &lt;p class="text-xs text-gray-500"&gt; Tabs are used ...attractive.&lt;/p&gt;  
-                                       |           &lt;/div&gt;
-                                       |           &lt;div data-tabContent="2" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
-                                       |               &lt;p class="text-xs text-gray-500"&gt; We use tabs to ...attractive.&lt;/p&gt;  
-                                       |           &lt;/div&gt;
-                                       |       &lt;/div&gt;
-                                       |   &lt;/div&gt; 
-                                       |&lt;/div&gt;
+                    div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                      button.btn.copyBtn(class="dark:text-white dark:bg-sidebar-dark dark:hover:bg-sidebar-dark dark:hover:text-white")   
+                        i(data-feather="clipboard")
+                      pre(class="overflow-auto language-html custom-scroll dark:bg-sidebar-dark2")
+                        code(class="dark:bg-sidebar-dark2")
+                          |&lt;div class="flex flex-wrap items-center gap-4"&gt; 
+                          |   &lt;div class="flex items-center gap-2"&gt; 
+                          |     &lt;div class="avatar"&gt; 
+                          |       &lt;div class="w-10 h-10 rounded-full xl:w-9"&gt;
+                          |         &lt;img src="../../assets/images/avatar/25.jpg" alt="avatar"/&gt;&lt;/div&gt;
+                          |       &lt;/div&gt;
+                          |     &lt;div class="flex flex-col gap-1"&gt;
+                          |       &lt;h3 class="text-xs font-bold leading-none lg:text-2xs dark:text-white"&gt;Angela R. Lear&lt;/h3&gt;
+                          |         &lt;span class="text-content text-3xs"&gt;239-664-7751&lt;/span&gt;
+                          |     &lt;/div&gt;  
+                          |   &lt;/div&gt; 
+                          |   &lt;div class="flex items-center gap-2"&gt; 
+                          |     &lt;div class="avatar"&gt; 
+                          |       &lt;div class="w-10 h-10 rounded-full xl:w-9"&gt; &lt;img src="../../assets/images/avatar/15.jpg" alt="avatar"/&gt;&lt;/div&gt;
+                          |     &lt;/div&gt;
+                          |     &lt;div class="flex flex-col gap-1"&gt;
+                          |       &lt;h3 class="text-xs font-bold leading-none lg:text-2xs dark:text-white"&gt; Marjorie W. Martin&lt;/h3&gt;
+                          |         &lt;span class="text-content text-3xs"&gt;440-494-0729&lt;/span&gt;
+                          |     &lt;/div&gt;
+                          |   &lt;/div&gt;
+                          |   &lt;div class="flex items-center gap-2"&gt; 
+                          |     &lt;div class="avatar"&gt; 
+                          |       &lt;div class="w-10 h-10 rounded-full xl:w-9"&gt; &lt;img src="../../assets/images/avatar/6.jpg" alt="avatar"/&gt;&lt;/div&gt;
+                          |     &lt;/div&gt;
+                          |     &lt;div class="flex flex-col gap-1"&gt;
+                          |       &lt;h3 class="text-xs font-bold leading-none lg:text-2xs dark:text-white"&gt;Russell P. Renfrew&lt;/h3&gt;
+                          |       &lt;span class="text-content text-3xs"&gt;718-740-8438&lt;/span&gt;
+                          |     &lt;/div&gt;
+                          |   &lt;/div&gt;
+                          |   &lt;div class="flex items-center gap-2"&gt; 
+                          |     &lt;div class="avatar"&gt; 
+                          |       &lt;div class="w-10 h-10 rounded-full xl:w-9"&gt; &lt;img src="../../assets/images/avatar/27.jpg" alt="avatar"/&gt;&lt;/div&gt;
+                          |     &lt;/div&gt;
+                          |     &lt;div class="flex flex-col gap-1"&gt;
+                          |       &lt;h3 class="text-xs font-bold leading-none lg:text-2xs dark:text-white"&gt;Kevin A. Ek&lt;/h3&gt;
+                          |       &lt;span class="text-content text-3xs"&gt;218-793-6609&lt;/span&gt;
+                          |     &lt;/div&gt;
+                          |   &lt;/div&gt;
+                          |   &lt;div class="flex items-center gap-2"&gt; 
+                          |     &lt;div class="avatar"&gt;  
+                          |       &lt;div class="w-10 h-10 rounded-full xl:w-9"&gt; &lt;img src="../../assets/images/avatar/27.jpg" alt="avatar"/&gt;&lt;/div&gt; 
+                          |     &lt;/div&gt; 
+                          |     &lt;div class="flex flex-col gap-1"&gt; 
+                          |       &lt;h3 class="text-xs font-bold leading-none lg:text-2xs dark:text-white"&gt;Kevin A. Ek&lt;/h3&gt;
+                          |       &lt;span class="text-content text-3xs"&gt;218-793-6609&lt;/span&gt; 
+                          |     &lt;/div&gt;
+                          |  &lt;/div&gt; 
+                          |   &lt;div class="flex items-center gap-2"&gt;  
+                          |     &lt;div class="avatar"&gt;  
+                          |       &lt;div class="w-10 h-10 rounded-full xl:w-9"&gt; &lt;img src="../../assets/images/avatar/26.jpg" alt="avatar"/&gt;&lt;/div&gt; 
+                          |     &lt;/div&gt;  
+                          |     &lt;div class="flex flex-col gap-1"&gt; 
+                          |       &lt;h3 class="text-xs font-bold leading-none lg:text-2xs dark:text-white"&gt;Carolyn A. Sutton&lt;/h3&gt;
+                          |       &lt;span class="text-content text-3xs"&gt;314-445-1451&lt;/span&gt; 
+                          |     &lt;/div&gt;
+                          |   &lt;/div&gt;
+                          |  &lt;div class="flex flex-wrap items-center gap-4"&gt; 
+                          |   &lt;div class="flex items-center gap-2"&gt; 
+                          |     &lt;div class="avatar"&gt; 
+                          |         &lt;div class="w-10 h-10 rounded-full xl:w-9"&gt; &lt;img src="../../assets/images/avatar/31.jpg" alt="avatar"/&gt;&lt;/div&gt;
+                          |     &lt;/div&gt;
+                          |     &lt;div class="flex flex-col gap-1"&gt;
+                          |       &lt;h3 class="text-xs font-bold leading-none lg:text-2xs dark:text-white"&gt;Emily T. Hooper&lt;/h3&gt;
+                          |           &lt;span class="text-content text-3xs"&gt;258-664-7751 &lt;/span&gt;
+                          |       &lt;/div&gt;
+                          |   &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="flex items-center gap-2"&gt; 
+                          |     &lt;div class="avatar"&gt; 
+                          |       &lt;div class="w-10 h-10 rounded-full xl:w-9"&gt; &lt;img src="../../assets/images/avatar/34.jpg" alt="avatar"/&gt;&lt;/div&gt;
+                          |     &lt;/div&gt;
+                          |     &lt;div class="flex flex-col gap-1"&gt;
+                          |       &lt;h3 class="text-xs font-bold leading-none lg:text-2xs dark:text-white"&gt; Ann J. Strickland&lt;/h3&gt;
+                          |       &lt;span class="text-content text-3xs"&gt;440-851-0729&lt;/span&gt;
+                          |     &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="flex items-center gap-2"&gt; 
+                          |   &lt;div class="avatar"&gt; 
+                          |     &lt;div class="w-10 h-10 rounded-full xl:w-9"&gt; &lt;img src="../../assets/images/avatar/22.jpg" alt="avatar"/&gt;&lt;/div&gt;
+                          |   &lt;/div&gt;
+                          |   &lt;div class="flex flex-col gap-1"&gt;
+                          |     &lt;h3 class="text-xs font-bold leading-none lg:text-2xs dark:text-white"&gt;Natasha W. Watson&lt;/h3&gt;
+                          |     &lt;span class="text-content text-3xs"&gt;698-740-8438&lt;/span&gt;
+                          |   &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="flex items-center gap-2"&gt; 
+                          |   &lt;div class="avatar"&gt; 
+                          |     &lt;div class="w-10 h-10 rounded-full xl:w-9"&gt; &lt;img src="../../assets/images/avatar/13.jpg" alt="avatar"/&gt;&lt;/div&gt;
+                          |   &lt;/div&gt;
+                          |   &lt;div class="flex flex-col gap-1"&gt;
+                          |     &lt;h3 class="text-xs font-bold leading-none lg:text-2xs dark:text-white"&gt;Thomas A. Leroy&lt;/h3&gt;
+                          |     &lt;span class="text-content text-3xs"&gt;218-793-7845&lt;/span&gt;
+                          |   &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |   &lt;div class="flex items-center gap-2"&gt; 
+                          |      &lt;div class="avatar"&gt; 
+                          |        &lt;div class="w-10 h-10 rounded-full xl:w-9"&gt; &lt;img src="../../assets/images/avatar/8.jpg" alt="avatar"/&gt;&lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="flex flex-col gap-1"&gt;
+                          |        &lt;h3 class="text-xs font-bold leading-none lg:text-2xs dark:text-white"&gt;Mark S. Ward&lt;/h3&gt;
+                          |        &lt;span class="text-content text-3xs"&gt;314-4874-1451&lt;/span&gt;
+                          |      &lt;/div&gt;
+                          |   &lt;/div&gt;
+                          |&lt;/div&gt;
+            div.col-span-6(class="md:col-span-12")
+              div.card.tabs
+                div.card-header.pb-2.header-bottom-border
+                  div.flex.flex-col
+                    h3(class="dark:text-white").text-lg.font-bold Rounded Tab 
+                    p(class="dark:text-content3") Set tabs with border using 
+                      strong  .rounded-bg 
+                      |   class.            
+                    div.preview-code.tab-links
+                      button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                      button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                div.card-body                                   
+                  div.tabs-content
+                    div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                      div.flex.flex-wrap.gap-2
+                        div.w-full.tabs.flex-col
+                          div.mb-1.tab-links.flex
+                            button.tab.tab-lifted.rounded-bg.tab-active(data-tabFilter="1" class="tab-link") About Us  
+                            button.tab.tab-lifted.rounded-bg(data-tabFilter="2" class="tab-link ") Contact Us
+                          div.tabs-content
+                            div(data-tabContent="1" class="tab-pan fade active show relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                              p.text-xs.text-content3 Creating a website that will be valuable to its audience and be seen by them is the ultimate goal of all web design projects. It is vital to get friends with Google's mechanisms and algorithms in order to do that. A beautiful website serves no purpose if it appears on the tenth page of search results since no one will ever find it that way. Now let's talk about Google's Website Ranking.
+                            div(data-tabContent="2" class="tab-pan fade group first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                              p.text-xs.text-content3 Construct a web page in a professional manner. Completely adaptable and simple Drag-n-Drop Nicepage editor. Change the text and photos, as well as the colors, fonts, header and footer, layout, and other design components.
+                              p(class="dark:text-white").text-title.font-bold Visit Us: 
+                                span.text-content3.text-2xs 4 Marigold Close, Glenmore Park, New South Wales, 2745 Australia- 2745
+                              p(class="dark:text-white").text-title.font-bold Mail Us: 
+                                span.text-content3.text-2xs SamuelMario@armyspy.com
+                              p(class="dark:text-white").text-title.font-bold Contact: 
+                                span.text-content3.text-2xs (02) 4733 6337
+                    div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                      button.btn.copyBtn(class="dark:text-white dark:bg-sidebar-dark dark:hover:bg-sidebar-dark dark:hover:text-white")   
+                        i(data-feather="clipboard")
+                      pre(class="overflow-auto language-html custom-scroll dark:bg-sidebar-dark2")
+                        code(class="dark:bg-sidebar-dark2")
+                          |&lt;div class="flex flex-wrap gap-2"&gt;
+                          |    &lt;div class="flex-col w-full tabs"&gt;
+                          |       &lt;div class="flex mb-1 tab-links"&gt;
+                          |           &lt;button class="tab tab-lifted rounded-bg tab-active tab-link" data-tabFilter="1"&gt; About Us &lt;/button&gt;
+                          |           &lt;button class="tab tab-lifted rounded-bg tab-link" data-tabFilter="2"&gt; Contact Us &lt;/button&gt;
+                          |       &lt;/div&gt;
+                          |       &lt;div class="tabs-content"&gt;
+                          |           &lt;div data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
+                          |               &lt;p class="text-xs text-content3"&gt; Creating a website that...&lt;/p&gt;  
+                          |           &lt;/div&gt;
+                          |           &lt;div data-tabContent="2" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
+                          |               &lt;p class="text-xs text-content3"&gt; Construct a web page...&lt;/p&gt;  
+                          |               &lt;p class="font-bold text-title dark:text-white"&gt; Visit Us:   
+                          |                   &lt;span class="text-content3 text-2xs"&gt;4 Marigold Close, Glenmore Park, New South Wales, 2745 Australia- 2745&lt;/span&gt; 
+                          |               &lt;/p&gt;
+                          |               &lt;p class="font-bold text-title dark:text-white"&gt;  Mail Us:   
+                          |                   &lt;span class="text-content3 text-2xs"&gt; SamuelMario@armyspy.com&lt;/span&gt; 
+                          |               &lt;/p&gt; 
+                          |               &lt;p class="font-bold text-title dark:text-white"&gt; Contact:   
+                          |                   &lt;span class="text-content3 text-2xs"&gt; (02) 4733 6337&lt;/span&gt; 
+                          |               &lt;/p&gt; 
+                          |           &lt;/div&gt;
+                          |       &lt;/div&gt;
+                          |   &lt;/div&gt; 
+                          |&lt;/div&gt;
+            div.col-span-6(class="md:col-span-12")
+              div.card.tabs
+                div.card-header.pb-2.header-bottom-border
+                  div.flex.flex-col
+                    h3(class="dark:text-white").text-lg.font-bold Border Tabs
+                    p(class="dark:text-content3")   Set bordered tabs using 
+                      strong  .tabs-bordered 
+                      |   class.
+                    div.preview-code.tab-links
+                      button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                      button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                div.card-body                                   
+                  div.tabs-content
+                    div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                      div.flex.flex-wrap.gap-2
+                        div.w-full.tabs.flex-col
+                          div.mb-1.tab-links.flex(class="3sm:justify-center")
+                            button.tab.tabs-bordered.warning-border.tab-active(data-tabFilter="1" class="tab-link") Home 
+                            button.tab.tabs-bordered.warning-border(data-tabFilter="2" class="tab-link") Pages
+                            button.tab.tabs-bordered.warning-border(data-tabFilter="3" class="tab-link") Setting
+                          div.tabs-content 
+                            div(data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                              p.text-xs.text-content3  Making a decision was simple.a reasonable cost! Absolutely! Our minds are at ease. My time is now focused on the "Sale" rather than technology. This template also includes the Create Product Builder tool so that you can allow the audience to configure the product themselves before placing the order.
+                            div(data-tabContent="2" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                              p.text-xs.text-content3 Your website is undoubtedly one of the most crucial tools in your arsenal if you operate a business. You might find the following tips useful:
+                              p.flex.gap-2.items-center(class="dark:text-white")
+                                +SVG_ICON("Arrow-Right", "w-4 h-4 stroke-title dark:stroke-white")
+                                |  Navigation
+                              p.flex.gap-2.items-center(class="dark:text-white")
+                                +SVG_ICON("Arrow-Right", "w-4 h-4 stroke-title dark:stroke-white")
+                                |  Visual Design
+                              p.flex.gap-2.items-center(class="dark:text-white")
+                                +SVG_ICON("Arrow-Right", "w-4 h-4 stroke-title dark:stroke-white")
+                                |  Web Friendly
+                              p.flex.gap-2.items-center(class="dark:text-white")
+                                +SVG_ICON("Arrow-Right", "w-4 h-4 stroke-title dark:stroke-white")
+                                |  Conversion
+                            div(data-tabContent="3" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                              p(class="dark:text-white").font-bold Site objective
+                              p.text-xs.text-content3 A website's purpose identifies the main reason for the site's presence in the world, similar to a mission statement. Whether for community organization, service delivery, advocacy, education, etc.
+                              p(class="dark:text-white").font-bold Features 
+                              p.text-xs.text-content3 To create a more cohesive design, it's crucial to determine as many of these in advance as you can.
+                    div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                      button.btn.copyBtn(class="dark:text-white dark:bg-sidebar-dark dark:hover:bg-sidebar-dark dark:hover:text-white")   
+                        i(data-feather="clipboard")
+                      pre(class="overflow-auto language-html custom-scroll dark:bg-sidebar-dark2")
+                        code(class="dark:bg-sidebar-dark2")
+                          |&lt;div class="flex flex-wrap gap-2"&gt;
+                          |   &lt;div class="flex-col w-full tabs"&gt;
+                          |       &lt;div class="flex mb-1 tab-links"&gt;
+                          |           &lt;button class="tab tabs-bordered warning-border tab-active tab-link" data-tabFilter="1"&gt; Home &lt;/button&gt;
+                          |           &lt;button class="tab tabs-bordered warning-border tab-link" data-tabFilter="2"&gt; Pages &lt;/button&gt;
+                          |           &lt;button class="tab tabs-bordered warning-border tab-link" data-tabFilter="3"&gt; Setting &lt;/button&gt;
+                          |       &lt;/div&gt;
+                          |       &lt;div class="tabs-content"&gt;
+                          |           &lt;div data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
+                          |               &lt;p class="text-xs text-content3"&gt;Making a decision was simple...&lt;/p&gt;  
+                          |           &lt;/div&gt;
+                          |           &lt;div data-tabContent="2" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
+                          |               &lt;p class="text-xs text-content3"&gt;Your website is undoubtedly...&lt;/p&gt;                                          
+                          |               &lt;p class="text-xs text-content3"&gt; 
+                          |                 +SVG_ICON("Arrow-Right", "w-4 h-4 stroke-title dark:stroke-white")
+                          |                 Navigation
+                          |               &lt;/p&gt;  
+                          |               &lt;p class="flex items-center gap-2 dark:text-white"&gt; 
+                          |                 +SVG_ICON("Arrow-Right", "w-4 h-4 stroke-title dark:stroke-white")
+                          |                 Visual Design
+                          |               &lt;/p&gt;
+                          |               &lt;p class="flex items-center gap-2 dark:text-white"&gt; 
+                          |                 +SVG_ICON("Arrow-Right", "w-4 h-4 stroke-title dark:stroke-white")
+                          |                 Web Friendly
+                          |               &lt;/p&gt;  
+                          |               &lt;p class="flex items-center gap-2 dark:text-white"&gt; 
+                          |                 +SVG_ICON("Arrow-Right", "w-4 h-4 stroke-title dark:stroke-white")
+                          |                  Conversion
+                          |               &lt;/p&gt; 
+                          |           &lt;/div&gt;
+                          |           &lt;div data-tabContent="3" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
+                          |               &lt;p class="font-bold dark:text-white"&gt; Site objective &lt;/p&gt;  
+                          |               &lt;p class="text-xs text-content3"&gt; A website's purpose...&lt;/p&gt;  
+                          |               &lt;p class="font-bold dark:text-white"&gt; Features&lt;/p&gt;  
+                          |               &lt;p class="text-xs text-content3"&gt; To create a more...&lt;/p&gt;  
+                          |           &lt;/div&gt;
+                          |       &lt;/div&gt;
+                          |   &lt;/div&gt; 
+                          |&lt;/div&gt;
 
-                  div.col-span-6(class="md:col-span-12")
-                     div.card.tabs
-                        div.card-header.pb-2.header-bottom-border
-                           div.flex.flex-col
-                              h3.text-lg.font-bold With Bordered
-                              p   Set bordered tabs using 
-                                 strong  .tabs-bordered 
-                                 |   class.
-                              div.preview-code.tab-links
-                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
-                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
-                        div.card-body                                   
-                           div.tabs-content
-                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
-                                 div.flex.flex-wrap.gap-2
-                                    div.w-full.tabs.flex-col
-                                       div.mb-1.tab-links.flex(class="3sm:justify-center")
-                                          button.tab.tabs-bordered.warning-border.tab-active(data-tabFilter="1" class="tab-link") Title 
-                                          button.tab.tabs-bordered.warning-border(data-tabFilter="2" class="tab-link") Description
-                                          button.tab.tabs-bordered.warning-border(data-tabFilter="3" class="tab-link") Others
-                                       div.tabs-content
-                                          div(data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
-                                             p.text-xs.text-gray-500  Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive.
-                                                |   Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive. 
-                                          div(data-tabContent="2" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
-                                             p.text-xs.text-gray-500 We use tabs to manage space and to make the website more attractive. Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive.
-                                          div(data-tabContent="3" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
-                                             p.text-xs.text-gray-500 Tabs are used to navigate and display different content around the website. abs are used to navigate and display different content around the website.
-                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
-                                 button.btn.copyBtn 
-                                    i(data-feather="clipboard")
-                                 pre(class="overflow-auto language-html custom-scroll")
-                                    code
-                                       |&lt;div class="flex flex-wrap gap-2"&gt;
-                                       |   &lt;div class="flex-col w-full tabs"&gt;
-                                       |       &lt;div class="flex mb-1 tab-links"&gt;
-                                       |           &lt;button class="tab tabs-bordered warning-border tab-active tab-link" data-tabFilter="1"&gt; Title &lt;/button&gt;
-                                       |           &lt;button class="tab tabs-bordered warning-border tab-link" data-tabFilter="2"&gt; Description &lt;/button&gt;
-                                       |           &lt;button class="tab tabs-bordered warning-border tab-link" data-tabFilter="3"&gt; Others &lt;/button&gt;
-                                       |       &lt;/div&gt;
-                                       |       &lt;div class="tabs-content"&gt;
-                                       |           &lt;div data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
-                                       |               &lt;p class="text-xs text-gray-500"&gt; Tabs are used ...attractive.&lt;/p&gt;  
-                                       |           &lt;/div&gt;
-                                       |           &lt;div data-tabContent="2" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
-                                       |               &lt;p class="text-xs text-gray-500"&gt; We use tabs to ...attractive.&lt;/p&gt;  
-                                       |           &lt;/div&gt;
-                                       |           &lt;div data-tabContent="3" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
-                                       |               &lt;p class="text-xs text-gray-500"&gt; Tabs are used to ...websites.&lt;/p&gt;  
-                                       |           &lt;/div&gt;
-                                       |       &lt;/div&gt;
-                                       |   &lt;/div&gt; 
-                                       |&lt;/div&gt;
+            div.col-span-6(class="md:col-span-12")
+              div.card.tabs
+                div.card-header.pb-2.header-bottom-border
+                  div.flex.flex-col
+                    h3(class="dark:text-white").text-lg.font-bold Active Tabs
+                    p(class="dark:text-content3")   Add boxed tabs using 
+                      strong  .tabs-boxed 
+                      |   class.
+                    div.preview-code.tab-links
+                      button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                      button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                div.card-body                                   
+                  div.tabs-content
+                    div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                      div.flex.flex-wrap.gap-2
+                        div.w-full.tabs.flex-col
+                          div.mb-1.tab-links.flex
+                            button.tab.tabs-boxed(data-tabFilter="1" class="tab-link") Home  
+                            button.tab.tabs-boxed.tab-active(data-tabFilter="2" class="tab-link") Profile
+                            button.tab.tabs-boxed(data-tabFilter="3" class="tab-link") Setting
+                          div.tabs-content
+                            div(data-tabContent="1" class="tab-pan fade group first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                              p.text-xs.text-content3 This item is exclusively intended for educational use. Any similarity to actual people, either alive or deceased, is totally coincidental. Where banned, void. Some assembly is necessary. List each check by bank number separately. No batteries are provided.
+                            div(data-tabContent="2" class="tab-pan fade  active show relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                              div.flex.items-center.gap-2  
+                                div.avatar(class="!rounded-none")  
+                                  div(class="w-16") 
+                                    img(src='../../assets/images/avatar/38.jpg' alt='avatar')
+                                div.flex.flex-col.gap-1
+                                  span.text-title.font-bold.text-xs(class="dark:text-white") Name: 
+                                    small.text-content3.text-xs Angela R. Lear
+                                  span.text-title.font-bold.text-xs(class="dark:text-white") Email: 
+                                    small.text-content3.text-xs hello.@gmail.com  
+                                  span.text-title.font-bold.text-xs(class="dark:text-white") Contact: 
+                                    small.text-content3.text-xs 239-664-7751 
+                            div(data-tabContent="3" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                              p.text-xs.text-content3 You could choose to either leave the website or hunt for the search bar in this circumstance. If you want to stay, a good search engine should process your request and direct you to your desired location. Issue is resolved. Although it's not an ideal experience, it can be difficult to avoid for bigger websites because not all material can be linked to from the homepage.
+                    div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                      button.btn.copyBtn(class="dark:text-white dark:bg-sidebar-dark dark:hover:bg-sidebar-dark dark:hover:text-white")   
+                        i(data-feather="clipboard")
+                      pre(class="overflow-auto language-html custom-scroll dark:bg-sidebar-dark2")
+                        code(class="dark:bg-sidebar-dark2")
+                          |&lt;div class="flex flex-wrap gap-2"&gt;
+                          |    &lt;div class="flex-col w-full tabs"&gt;
+                          |       &lt;div class="flex mb-1 tab-links"&gt;
+                          |           &lt;button class="tab tab-boxed tab-active tab-link" data-tabFilter="1"&gt;Home &lt;/button&gt;
+                          |           &lt;button class="tab tab-boxed tab-link" data-tabFilter="2"&gt; Profile &lt;/button&gt;
+                          |           &lt;button class="tab tab-boxed tab-link" data-tabFilter="3"&gt; Setting &lt;/button&gt;
+                          |       &lt;/div&gt;
+                          |       &lt;div class="tabs-content"&gt;
+                          |           &lt;div data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
+                          |               &lt;p class="text-xs text-content3"&gt; Any similarity to actual...&lt;/p&gt;  
+                          |           &lt;/div&gt;
+                          |           &lt;div data-tabContent="2" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
+                          |               &lt;div class="flex flex-col gap-1"&gt;
+                          |                   &lt;span class="font-bold text-title"&gt; Name:
+                          |                       &lt;small class="text-xs text-content3"&gt;Angela R. Lear&lt;/small&gt; 
+                          |                   &lt;/span&gt; 
+                          |                   &lt;span class="font-bold text-title"&gt; Email: 
+                          |                       &lt;small class="text-xs text-content3"&gt;hello.@gmail.com&lt;/small&gt; 
+                          |                   &lt;/span&gt; 
+                          |                   &lt;span class="font-bold text-title"&gt; Contact:
+                          |                       &lt;small class="text-xs text-content3"&gt;239-664-7751&lt;/small&gt; 
+                          |                   &lt;/span&gt; 
+                          |               &lt;/div&gt;  
+                          |           &lt;/div&gt;
+                          |           &lt;div data-tabContent="3" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
+                          |               &lt;p class="text-xs text-content3"&gt; You could choose to...&lt;/p&gt;  
+                          |           &lt;/div&gt;
+                          |       &lt;/div&gt;
+                          |   &lt;/div&gt; 
+                          |&lt;/div&gt;
 
-                  div.col-span-6(class="md:col-span-12")
-                     div.card.tabs
-                        div.card-header.pb-2.header-bottom-border
-                           div.flex.flex-col
-                              h3.text-lg.font-bold With Boxed
-                              p   Add boxed tabs using 
-                                 strong  .tabs-boxed 
-                                 |   class.
-                              div.preview-code.tab-links
-                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
-                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
-                        div.card-body                                   
-                           div.tabs-content
-                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
-                                 div.flex.flex-wrap.gap-2
-                                    div.w-full.tabs.flex-col
-                                       div.mb-1.tab-links.flex
-                                          button.tab.tabs-boxed.tab-active(data-tabFilter="1" class="tab-link") Home  
-                                          button.tab.tabs-boxed(data-tabFilter="2" class="tab-link") Profile
-                                          button.tab.tabs-boxed(data-tabFilter="3" class="tab-link") Contacts
-                                       div.tabs-content
-                                          div(data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
-                                             p.text-xs.text-gray-500  Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive.
-                                                |   Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive. 
-                                          div(data-tabContent="2" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
-                                             p.text-xs.text-gray-500 We use tabs to manage space and to make the website more attractive. Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive.
-                                          div(data-tabContent="3" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
-                                             p.text-xs.text-gray-500 Tabs are used to navigate and display different content around the website. abs are used to navigate and display different content around the website.
-                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
-                                 button.btn.copyBtn 
-                                    i(data-feather="clipboard")
-                                 pre(class="overflow-auto language-html custom-scroll")
-                                    code
-                                       |&lt;div class="flex flex-wrap gap-2"&gt;
-                                       |    &lt;div class="flex-col w-full tabs"&gt;
-                                       |       &lt;div class="flex mb-1 tab-links"&gt;
-                                       |           &lt;button class="tab tab-boxed tab-active tab-link" data-tabFilter="1"&gt;Home &lt;/button&gt;
-                                       |           &lt;button class="tab tab-boxed tab-link" data-tabFilter="2"&gt; Profile &lt;/button&gt;
-                                       |           &lt;button class="tab tab-boxed tab-link" data-tabFilter="3"&gt; Contacts &lt;/button&gt;
-                                       |       &lt;/div&gt;
-                                       |       &lt;div class="tabs-content"&gt;
-                                       |           &lt;div data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
-                                       |               &lt;p class="text-xs text-gray-500"&gt; Tabs are used ...attractive.&lt;/p&gt;  
-                                       |           &lt;/div&gt;
-                                       |           &lt;div data-tabContent="2" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
-                                       |               &lt;p class="text-xs text-gray-500"&gt; We use tabs to ...attractive.&lt;/p&gt;  
-                                       |           &lt;/div&gt;
-                                       |           &lt;div data-tabContent="3" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
-                                       |               &lt;p class="text-xs text-gray-500"&gt; Tabs are used to ...websites.&lt;/p&gt;  
-                                       |           &lt;/div&gt;
-                                       |       &lt;/div&gt;
-                                       |   &lt;/div&gt; 
-                                       |&lt;/div&gt;
+            div.col-span-6(class="2xl:col-span-12")
+              div.card.tabs
+                div.card-header.pb-2.header-bottom-border
+                  div.flex.flex-col
+                    h3(class="dark:text-white").text-lg.font-bold Vertical Tabs
+                    p(class="dark:text-content3")   Add vertical tabs with the help of  
+                      strong  .tab-vertical 
+                      |   class.
+                    div.preview-code.tab-links
+                      button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                      button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                div.card-body                                   
+                  div.tabs-content
+                    div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                      div.flex.flex-wrap.gap-2
+                        div.w-full.flex(class="sm:block").tabs
+                          div.mb-1.flex.flex-col.justify-center.tab-links.flex(class="min-w-[8.125rem]")
+                            button.tab.tabs-vertical(data-tabFilter="1" class="tab-link") Home  
+                            button.tab.tabs-vertical.tab-active(data-tabFilter="2" class="tab-link") Inbox
+                            button.tab.tabs-vertical(data-tabFilter="3" class="tab-link") Contact  
+                          div.tabs-content.w-full
+                            div(data-tabContent="1" class="tab-pan px-[0.9375rem] fade group relative first:rounded-tl-none rounded-5 border-none !pt-2")
+                              p.text-xs.text-content3  The ability for users to swiftly and easily find key sections on your website, such as your blog, product pages, pricing, contact information, and documentation, makes a navigation bar a particularly crucial feature. This increases the likelihood that visitors will stay on your website longer, which can increase page views and lower your bounce rate.This design also includes the Create Product Builder tool so you can allow customers to configure the product themselves before placing an order.
+                            div(data-tabContent="2" class="tab-pan px-[0.9375rem] fade active show first:rounded-tl-none rounded-5 border-none !pt-2")
+                              div.flex.flex-col.gap-3
+                                div.flex.justify-between.gap-2.pb-2.border-b.border-border-light(class="dark:border-b dark:border-border-dark sm:gap-1 sm:flex-col")  
+                                  div.flex.items-center.gap-2  
+                                    div.avatar  
+                                      div.w-10.rounded-full.h-10(class="xl:w-9 xl:h-9") 
+                                        img(src='../../assets/images/avatar/8.jpg' alt='avatar')
+                                    div.flex.flex-col.gap-1
+                                      h3.text-xs.font-bold(class="leading-none lg:text-2xs dark:text-white") Robot Caslin
+                                      span.text-content.text-2xs stroman.rogers@gmail.com
+                                  div.flex.items-center.gap-1(class="sm:pl-[45px]")
+                                    span.text-content3(class="!text-3xs") 8 JAN 11:30PM
+                                    +SVG_ICON("Delete", "w-4 h-4 stroke-danger")
+                                div
+                                  p.text-title.flex.gap-2.items-center.mb-2.font-semibold(class="dark:text-white")
+                                    +SVG_ICON("Star", "w-4 h-4 stroke-title dark:stroke-white")
+                                    |  Compare Costs Find the Best Computer Examiners for Your Problem.
+                                  p.text-content3 As a faster website response has a greater impact on client retention, site speed and design are two of the most crucial ranking elements Google takes into account.
+                            div(data-tabContent="3" class="tab-pan px-[0.9375rem] fade group relative first:rounded-tl-none rounded-5 border-none !pt-2")
+                              div.flex.flex-col.gap-3.form-group 
+                                div.flex.flex-col.gap-1
+                                  label(for="email").font-medium.text-xs.text-primary Email
+                                  input(type="email" placeholder="Enter your email id.." class="p-[11px] dark:text-white dark:bg-sidebar-dark2 dark:border-border-dark").w-full.border.border-border-light.rounded-5.text-xs.text-content
+                                div.flex.flex-col.gap-1 
+                                  label(for="notes").font-medium.text-xs.text-primary Notes
+                                  textarea(placeholder="Enter the address.." row="3" id="notes" class="p-[11px] dark:text-white dark:bg-sidebar-dark2 dark:border-border-dark").w-full.border.border-border-light.rounded-5.text-xs.text-content
+                    div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                      button.btn.copyBtn(class="dark:text-white dark:bg-sidebar-dark dark:hover:bg-sidebar-dark dark:hover:text-white")   
+                        i(data-feather="clipboard") 
+                      pre(class="overflow-auto language-html custom-scroll dark:bg-sidebar-dark2")
+                        code(class="dark:bg-sidebar-dark2") 
+                          |&lt;div class="flex flex-wrap gap-2"&gt;
+                          |    &lt;div class="flex w-full sm:block tabs"&gt;
+                          |       &lt;div class="mb-1 flex flex-col justify-center tab-links min-w-[8.125rem]"&gt;
+                          |           &lt;button class="tab tab-vertical tab-link" data-tabFilter="1"&gt; Home &lt;/button&gt;
+                          |           &lt;button class="tab tab-vertical tab-active tab-link" data-tabFilter="2"&gt; Inbox &lt;/button&gt;
+                          |           &lt;button class="tab tab-vertical tab-link" data-tabFilter="3"&gt; Contact &lt;/button&gt;
+                          |       &lt;/div&gt;
+                          |       &lt;div class="tabs-content"&gt;
+                          |           &lt;div data-tabContent="1" class="tab-pan px-[0.9375rem] fade group relative first:rounded-tl-none rounded-5 border-none !pt-2"&gt; 
+                          |               &lt;p class="text-xs text-content3"&gt; We use tabs to ...attractive.&lt;/p&gt;                           
+                          |           &lt;/div&gt;
+                          |           &lt;div data-tabContent="2" class="tab-pan px-[0.9375rem] fade active show first:rounded-tl-none rounded-5 border-none !pt-2"&gt; 
+                          |               &lt;div class="flex flex-col gap-3"&gt; 
+                          |                   &lt;div class="flex justify-between gap-2 pb-2 border-b border-border-light dark:border-b dark:border-border-dark"&gt; 
+                          |                       &lt;div class="flex items-center gap-2"&gt; 
+                          |                           &lt;div class="avatar"&gt;
+                          |                               &lt;div class="w-10 h-10 rounded-full xl:h-9 xl:w-9"&gt;
+                          |                                   &lt;img src="../../image.jpg" alt="avatar"/&gt;
+                          |                               &lt;/div&gt;
+                          |                           &lt;/div&gt;
+                          |                           &lt;div class="flex flex-col gap-1"&gt;
+                          |                               &lt;h3 class="text-xs font-bold leading-none dark:text-white  lg:text-2xs"&gt;Robot Caslin&lt;/h3&gt;
+                          |                               &lt;span class="text-content text-3xs"&gt;stroman.rogers@gmail.com&lt;/span&gt;
+                          |                           &lt;/div&gt;
+                          |                       &lt;/div&gt;
+                          |                       &lt;div class="flex flex-col gap-1"&gt;
+                          |                           &lt;span class="text-content text-3xs"&gt; 8 JAN 11:30PM&lt;/span&gt;
+                          |                           +SVG_ICON("Delete", "w-4 h-4 stroke-danger")
+                          |                       &lt;/div&gt;
+                          |                   &lt;/div&gt;
+                          |                   &lt;div&gt;
+                          |                       &lt;p class="flex items-center gap-2 mb-2 font-semibold text-title "&gt; 
+                          |                           +SVG_ICON("Star", "w-4 h-4 stroke-title dark:stroke-white")
+                          |                               Compare Costs Find..
+                          |                       &lt;/p&gt;  
+                          |                       &lt;p class="text-content3"&gt; As a faster website...&lt;/p&gt;  
+                          |                   &lt;/div&gt;
+                          |               &lt;/div&gt;
+                          |           &lt;/div&gt;
+                          |           &lt;div data-tabContent="3" class="tab-pan px-[0.9375rem] fade group relative first:rounded-tl-none rounded-5 border-none !pt-2"&gt; 
+                          |               &lt;div class="flex flex-col gap-3 form-group"&gt;
+                          |                   &lt;div class="flex flex-col gap-1"&gt; 
+                          |                       &lt;label for="email" class="text-xs font-medium text-primary"&gt;Email&lt;/label&gt;
+                          |                       &lt;input type="email"  placeholder="Enter your email id.." class="p-[11px]  dark:bg-sidebar-dark2 dark:border-border-dark w-full border border-border-light rounded-5 text-xs text-content"/&gt;
+                          |                   &lt;/div&gt;
+                          |                   &lt;div class="flex flex-col gap-1"&gt; 
+                          |                       &lt;label for="address" class="text-xs font-medium text-primary"&gt;Current Address &lt;/label&gt;
+                          |                       &lt;textarea placeholder="Enter the address.." row="3" id="address" class=" p-[11px] dark:bg-sidebar-dark2 dark:border-border-dark w-full border border-border-light rounded-5 text-xs text-content"&gt;
+                          |                   &lt;/div&gt;
+                          |               &lt;/div&gt;  
+                          |           &lt;/div&gt;
+                          |       &lt;/div&gt;
+                          |    &lt;/div&gt; 
+                          |&lt;/div&gt;
 
-                  div.col-span-6(class="2lg:col-span-12")
-                     div.card.tabs
-                        div.card-header.pb-2.header-bottom-border
-                           div.flex.flex-col
-                              h3.text-lg.font-bold Vertical Tabs
-                              p   Add vertical tabs with the help of  
-                                 strong  .tab-vertical 
-                                 |   class.
-                              div.preview-code.tab-links
-                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
-                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
-                        div.card-body                                   
-                           div.tabs-content
-                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
-                                 div.flex.flex-wrap.gap-2
-                                    div.w-full.flex(class="sm:block").tabs
-                                       div.mb-1.flex.flex-col.justify-center.tab-links.flex(class="min-w-[8.125rem]")
-                                          button.tab.tabs-vertical.tab-active(data-tabFilter="1" class="tab-link") Home  
-                                          button.tab.tabs-vertical(data-tabFilter="2" class="tab-link") Tasks
-                                          button.tab.tabs-vertical(data-tabFilter="3" class="tab-link") Location  
-                                       div.tabs-content
-                                          div(data-tabContent="1" class="tab-pan px-[0.9375rem] fade active show first:rounded-tl-none rounded-5 border-none !pt-2")
-                                             p.text-xs.text-gray-500  Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive.
-                                                |   Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive. 
-                                          div(data-tabContent="2" class="tab-pan px-[0.9375rem] fade group relative first:rounded-tl-none rounded-5 border-none !pt-2")
-                                             p.text-xs.text-gray-500 We use tabs to manage space and to make the website more attractive. Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive.
-                                          div(data-tabContent="3" class="tab-pan px-[0.9375rem] fade group relative first:rounded-tl-none rounded-5 border-none !pt-2")
-                                             p.text-xs.text-gray-500 Tabs are used to navigate and display different content around the website. abs are used to navigate and display different content around the website.
-                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
-                                 button.btn.copyBtn 
-                                    i(data-feather="clipboard")
-                                 pre(class="overflow-auto language-html custom-scroll")
-                                    code
-                                       |&lt;div class="flex flex-wrap gap-2"&gt;
-                                       |    &lt;div class="flex w-full sm:block tabs"&gt;
-                                       |       &lt;div class="mb-1 flex flex-col justify-center tab-links min-w-[8.125rem]"&gt;
-                                       |           &lt;button class="tab tab-vertical tab-active tab-link" data-tabFilter="1"&gt; Home &lt;/button&gt;
-                                       |           &lt;button class="tab tab-vertical tab-link" data-tabFilter="2"&gt; Tasks &lt;/button&gt;
-                                       |           &lt;button class="tab tab-vertical tab-link" data-tabFilter="3"&gt; Location &lt;/button&gt;
-                                       |       &lt;/div&gt;
-                                       |       &lt;div class="tabs-content"&gt;
-                                       |           &lt;div data-tabContent="1" class="tab-pan px-[0.9375rem] fade active show first:rounded-tl-none rounded-5 border-none !pt-2"&gt; 
-                                       |               &lt;p class="text-xs text-gray-500"&gt; Tabs are used ...attractive.&lt;/p&gt;  
-                                       |           &lt;/div&gt;
-                                       |           &lt;div data-tabContent="2" class="tab-pan px-[0.9375rem] fade group relative first:rounded-tl-none rounded-5 border-none !pt-2"&gt; 
-                                       |               &lt;p class="text-xs text-gray-500"&gt; We use tabs to ...attractive.&lt;/p&gt;  
-                                       |           &lt;/div&gt;
-                                       |           &lt;div data-tabContent="3" class="tab-pan px-[0.9375rem] fade group relative first:rounded-tl-none rounded-5 border-none !pt-2"&gt; 
-                                       |               &lt;p class="text-xs text-gray-500"&gt; Tabs are used to ...websites.&lt;/p&gt;  
-                                       |           &lt;/div&gt;
-                                       |       &lt;/div&gt;
-                                       |    &lt;/div&gt; 
-                                       |&lt;/div&gt;
+            div.col-span-6(class="2xl:col-span-12")
+              div.card.tabs
+                div.card-header.pb-2.header-bottom-border
+                  div.flex.flex-col
+                    h3(class="dark:text-white").text-lg.font-bold Vertical Boxed Tabs
+                    p(class="dark:text-content3")   Add vertical Boxed tabs using 
+                      strong  .tab-boxed 
+                      |   class.
+                    div.preview-code.tab-links
+                      button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                      button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                div.card-body                                   
+                  div.tabs-content
+                    div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                      div.flex.flex-wrap.gap-2
+                        div.w-full.flex(class="sm:block").tabs
+                          div.mb-1.flex.flex-col.justify-center.tab-links(class="min-w-[8.125rem]")
+                            button.tab.tabs-boxed.secondary-boxed(data-tabFilter="1" class="tab-link") About Us  
+                            button.tab.tabs-boxed.secondary-boxed.tab-active(data-tabFilter="2" class="tab-link") Contact Us
+                            button.tab.tabs-boxed.secondary-boxed(data-tabFilter="3" class="tab-link") Blog  
+                          div.tabs-content
+                            div(data-tabContent="1" class="tab-pan fade group first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                              p.text-xs.text-content3 Creating a website that will be valuable to its audience and be seen by them is the ultimate goal of all web design projects. It is vital to get friends with Google's mechanisms and algorithms in order to do that. A beautiful website serves no purpose if it appears on the tenth page of search results since no one will ever find it that way. Now let's talk about Google's Website Ranking.
+                            div(data-tabContent="2" class="tab-pan fade active show relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                              p.text-xs.text-content3.mb-1 Construct a web page in a professional manner. Completely adaptable and simple Drag-n-Drop Nicepage editor. Change the text and photos, as well as the colors, fonts, header and footer, layout, and other design components.
+                              p(class="dark:text-white").text-title.font-bold Visit Us: 
+                                span.text-content3.text-2xs 4 Marigold Close, Glenmore Park, New South Wales, 2745 Australia- 2745
+                              p(class="dark:text-white").text-title.font-bold Mail Us: 
+                                span.text-content3.text-2xs SamuelMario@armyspy.com
+                              p(class="dark:text-white").text-title.font-bold Contact: 
+                                span.text-content3.text-2xs (02) 4733 6337
+                            div(data-tabContent="3" class="tab-pan px-[0.9375rem] fade group relative first:rounded-tl-none rounded-5 border-none !pt-2")
+                              div.flex.items-center.gap-2(class="sm:flex-col") 
+                                img(src='../../assets/images/product/6.jpg' alt='bag' class="h-24 min-w-20")
+                                p.text-xs.text-content3 We all need at least one of what I like to refer to as a "grab-and-go" bags since they are cute, tiny, and very useful and because you don't have to worry as much about them when you cram them into a boot camp locker or bury them beneath the produce in your shopping cart.
+                    div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                      button.btn.copyBtn(class="dark:text-white dark:bg-sidebar-dark dark:hover:bg-sidebar-dark dark:hover:text-white")   
+                        i(data-feather="clipboard")
+                      pre(class="overflow-auto language-html custom-scroll dark:bg-sidebar-dark2")
+                        code(class="dark:bg-sidebar-dark2")
+                          |&lt;div class="flex flex-wrap gap-2"&gt;
+                          |   &lt;div class="flex w-full sm:block tabs"&gt;
+                          |       &lt;div class="mb-1 flex flex-col justify-center min-w-[8.125rem] tab-links"&gt;
+                          |           &lt;button class="tab tab-boxed secondary-boxed tab-link" data-tabFilter="1"&gt; About Us &lt;/button&gt;
+                          |           &lt;button class="tab tab-boxed secondary-boxed tab-active tab-link" data-tabFilter="2"&gt; Contact Us &lt;/button&gt;
+                          |           &lt;button class="tab tab-boxed secondary-boxed tab-link" data-tabFilter="3"&gt; Blog &lt;/button&gt;
+                          |       &lt;/div&gt;
+                          |       &lt;div class="tabs-content"&gt;
+                          |           &lt;div data-tabContent="1" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
+                          |               &lt;p class="text-xs text-content3"&gt; Creating a website that...&lt;/p&gt;  
+                          |           &lt;/div&gt;
+                          |           &lt;div data-tabContent="2" class="tab-pan fade active show first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
+                          |               &lt;p class="mb-1 text-xs text-content3"&gt; Construct a web page...&lt;/p&gt;  
+                          |               &lt;p class="font-bold text-title dark:text-dark"&gt; Visit Us:   
+                          |                   &lt;span class="text-content3 text-2xs"&gt;4 Marigold Close, Glenmore Park, New South Wales, 2745 Australia- 2745&lt;/span&gt; 
+                          |               &lt;/p&gt; 
+                          |               &lt;p class="font-bold text-title dark:text-dark"&gt;  Mail Us:   
+                          |                   &lt;span class="text-content3 text-2xs"&gt; SamuelMario@armyspy.com&lt;/span&gt; 
+                          |               &lt;/p&gt; 
+                          |               &lt;p class="font-bold text-title dark:text-dark"&gt; Contact:   
+                          |                   &lt;span class="text-content3 text-2xs"&gt; (02) 4733 6337&lt;/span&gt; 
+                          |               &lt;/p&gt; 
+                          |           &lt;/div&gt;
+                          |           &lt;div data-tabContent="3" class="tab-pan px-[0.9375rem] fade group relative first:rounded-tl-none rounded-5 border-none !pt-2"&gt;
+                          |               &lt;img src='../../assets/images/product/6.jpg' alt='bag' class="h-24 min-w-20"&gt;
+                          |               &lt;p class="text-xs text-content3"&gt; We all need at least...&lt;/p&gt;  
+                          |           &lt;/div&gt;
+                          |       &lt;/div&gt;
+                          |   &lt;/div&gt; 
+                          |&lt;/div&gt;
 
-                  div.col-span-6(class="2lg:col-span-12")
-                     div.card.tabs
-                        div.card-header.pb-2.header-bottom-border
-                           div.flex.flex-col
-                              h3.text-lg.font-bold Vertical Boxed Tabs
-                              p   Add vertical Boxed tabs using 
-                                 strong  .tab-boxed 
-                                 |   class.
-                              div.preview-code.tab-links
-                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
-                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
-                        div.card-body                                   
-                           div.tabs-content
-                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
-                                 div.flex.flex-wrap.gap-2
-                                    div.w-full.flex(class="sm:block").tabs
-                                       div.mb-1.flex.flex-col.justify-center.tab-links(class="min-w-[8.125rem]")
-                                          button.tab.tabs-boxed.secondary-boxed.tab-active(data-tabFilter="1" class="tab-link") Home  
-                                          button.tab.tabs-boxed.secondary-boxed(data-tabFilter="2" class="tab-link") Tasks
-                                          button.tab.tabs-boxed.secondary-boxed(data-tabFilter="3" class="tab-link") Location  
-                                       div.tabs-content
-                                          div(data-tabContent="1" class="tab-pan px-[0.9375rem] fade active show first:rounded-tl-none rounded-5 border-none !pt-2")
-                                             p.text-xs.text-gray-500  Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive.
-                                                |   Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive. 
-                                          div(data-tabContent="2" class="tab-pan px-[0.9375rem] fade group relative first:rounded-tl-none rounded-5 border-none !pt-2")
-                                             p.text-xs.text-gray-500 We use tabs to manage space and to make the website more attractive. Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive.
-                                          div(data-tabContent="3" class="tab-pan px-[0.9375rem] fade group relative first:rounded-tl-none rounded-5 border-none !pt-2")
-                                             p.text-xs.text-gray-500 Tabs are used to navigate and display different content around the website. abs are used to navigate and display different content around the website.
-                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
-                                 button.btn.copyBtn 
-                                    i(data-feather="clipboard")
-                                 pre(class="overflow-auto language-html custom-scroll")
-                                    code
-                                       |&lt;div class="flex flex-wrap gap-2"&gt;
-                                       |   &lt;div class="flex w-full sm:block tabs"&gt;
-                                       |       &lt;div class="mb-1 flex flex-col justify-center min-w-[8.125rem] tab-links"&gt;
-                                       |           &lt;button class="tab tab-boxed secondary-boxed tab-active tab-link" data-tabFilter="1"&gt; Home &lt;/button&gt;
-                                       |           &lt;button class="tab tab-boxed secondary-boxed tab-link" data-tabFilter="2"&gt; Tasks &lt;/button&gt;
-                                       |           &lt;button class="tab tab-boxed secondary-boxed tab-link" data-tabFilter="3"&gt; Location &lt;/button&gt;
-                                       |       &lt;/div&gt;
-                                       |       &lt;div class="tabs-content"&gt;
-                                       |           &lt;div data-tabContent="1" class="tab-pan px-[0.9375rem] fade active show first:rounded-tl-none rounded-5 border-none !pt-2&gt; 
-                                       |               &lt;p class="text-xs text-gray-500"&gt; Tabs are used ...attractive.&lt;/p&gt;  
-                                       |           &lt;/div&gt;
-                                       |           &lt;div data-tabContent="2" class="tab-pan px-[0.9375rem] fade group relative first:rounded-tl-none rounded-5 border-none !pt-2"&gt; 
-                                       |               &lt;p class="text-xs text-gray-500"&gt; We use tabs to ...attractive.&lt;/p&gt;  
-                                       |           &lt;/div&gt;
-                                       |           &lt;div data-tabContent="3" class="tab-pan px-[0.9375rem] fade group relative first:rounded-tl-none rounded-5 border-none !pt-2"&gt; 
-                                       |               &lt;p class="text-xs text-gray-500"&gt; Tabs are used to ...websites.&lt;/p&gt;  
-                                       |           &lt;/div&gt;
-                                       |       &lt;/div&gt;
-                                       |   &lt;/div&gt; 
-                                       |&lt;/div&gt;
-                  div.col-span-6(class="md:col-span-12")
-                     div.card.tabs
-                        div.card-header.pb-2.header-bottom-border
-                           div.flex.flex-col
-                              h3.text-lg.font-bold Centered Tabs
-                              p   Add tabs centered using 
-                                 strong .justify-center 
-                                 |   class. 
-                              div.preview-code.tab-links
-                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
-                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
-                        div.card-body                                   
-                           div.tabs-content
-                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
-                                 div.flex.flex-wrap.gap-2
-                                    div.w-full.tabs.flex-col
-                                       div.mb-1.justify-center.tab-links.flex
-                                          button.tab.tabs-bordered.tab-active(data-tabFilter="1" class="tab-link") Dark  
-                                          button.tab.tabs-bordered(data-tabFilter="2" class="tab-link") Light
-                                          button.tab.tabs-bordered(data-tabFilter="3" class="tab-link") System  
-                                       div.tabs-content
-                                          div(data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
-                                             p.text-xs.text-gray-500  Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive.
-                                                |   Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive. 
-                                          div(data-tabContent="2" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
-                                             p.text-xs.text-gray-500 We use tabs to manage space and to make the website more attractive. Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive.
-                                          div(data-tabContent="3" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
-                                             p.text-xs.text-gray-500 Tabs are used to navigate and display different content around the website. abs are used to navigate and display different content around the website.
-                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
-                                 button.btn.copyBtn 
-                                    i(data-feather="clipboard")
-                                 pre(class="overflow-auto language-html custom-scroll")
-                                    code
-                                       |&lt;div class="flex flex-wrap gap-2"&gt;
-                                       |    &lt;div class="flex-col w-full tabs"&gt;
-                                       |       &lt;div class="flex justify-center mb-1 tab-links"&gt;
-                                       |           &lt;button class="tab tabs-bordered tab-active tab-link" data-tabFilter="1"&gt; Dark &lt;/button&gt;
-                                       |           &lt;button class="tab tabs-bordered tab-link" data-tabFilter="2"&gt; Light &lt;/button&gt;
-                                       |           &lt;button class="tab tabs-bordered tab-link" data-tabFilter="3"&gt; System &lt;/button&gt;
-                                       |       &lt;/div&gt;
-                                       |       &lt;div class="tabs-content"&gt;
-                                       |           &lt;div data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
-                                       |               &lt;p class="text-xs text-gray-500"&gt; Tabs are used ...attractive.&lt;/p&gt;  
-                                       |           &lt;/div&gt;
-                                       |           &lt;div data-tabContent="2" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
-                                       |               &lt;p class="text-xs text-gray-500"&gt; We use tabs to ...attractive.&lt;/p&gt;  
-                                       |           &lt;/div&gt;
-                                       |           &lt;div data-tabContent="3" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
-                                       |               &lt;p class="text-xs text-gray-500"&gt; Tabs are used to ...websites.&lt;/p&gt;  
-                                       |           &lt;/div&gt;
-                                       |       &lt;/div&gt;
-                                       |    &lt;/div&gt; 
-                                       |&lt;/div&gt;
+            div.col-span-6(class="md:col-span-12")
+              div.card.tabs
+                div.card-header.pb-2.header-bottom-border
+                  div.flex.flex-col
+                    h3(class="dark:text-white").text-lg.font-bold Colored Tabs
+                    p(class="dark:text-content3")   Adding background with the help of  
+                      strong  .tabs-bordered-bg 
+                      |   & 
+                      strong  .tabs-bordered 
+                      |   class.
+                    div.preview-code.tab-links
+                      button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                      button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                div.card-body                                   
+                  div.tabs-content
+                    div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                      div.flex.flex-wrap.gap-2
+                        div.w-full.tabs.flex-col
+                          div.mb-1.tab-links.flex(class="3sm:justify-center")
+                            button.tab.tabs-bordered.tabs-bordered-bg.tab-active(data-tabFilter="1" class="tab-link") Users  
+                            button.tab.tabs-bordered.tabs-bordered-bg(data-tabFilter="2" class="tab-link") Description
+                            button.tab.tabs-bordered.tabs-bordered-bg(data-tabFilter="3" class="tab-link") Reviews
+                          div.tabs-content
+                            div(data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                              h3.font-bold.text-sm.mb-3(class="dark:text-white") User Detail:
+                              div.overflow-auto.custom-scroll
+                                table.table.equal-space
+                                  thead
+                                    tr
+                                      th(scope='col' class="dark:text-content3") #
+                                      th(scope='col' class="dark:text-content3") Name
+                                      th(scope='col' class="dark:text-content3") Country
+                                      th(scope='col' class="dark:text-content3") Contact No
+                                  tbody
+                                    tr 
+                                      th(scope='row' class="dark:text-white") 1
+                                      td(class="dark:text-white") Mrunali
+                                      td(class="dark:text-white") India 
+                                      td(class="dark:text-white") 5698741236 
+                                    tr
+                                      th(scope='row' class="dark:text-white") 2
+                                      td(class="dark:text-white") Bright
+                                      td(class="dark:text-white") Thailand
+                                      td(class="dark:text-white") 7800030320  
+                            div(data-tabContent="2" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                              h3.font-bold.text-sm.mb-3(class="dark:text-white") Description:
+                              div.overflow-auto.custom-scroll
+                                table.table.equal-space 
+                                  thead
+                                    tr
+                                      th(scope='col' class="dark:text-content3") Technology 
+                                      th(scope='col' class="dark:text-content3") Interest 
+                                      th(scope='col' class="dark:text-content3") Salary Expected 
+                                  tbody
+                                    tr
+                                      td(class="dark:text-white ") Web Designer
+                                      td(class="dark:text-white") HTML,CSS,JS,SCSS
+                                      td(class="dark:text-white") 45000
+                                    tr
+                                      td(class="dark:text-white") UX Designer
+                                      td(class="dark:text-white") Figma,Photoshop,craft
+                                      td(class="dark:text-white") 20000
+                            div(data-tabContent="3" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                              h3.font-bold.text-sm.mb-3(class="dark:text-white") Reviews:
+                              div.overflow-auto.custom-scroll
+                                table.table.equal-space  
+                                  thead
+                                    tr
+                                      th(scope='col' class="dark:text-content3") #
+                                      th(scope='col' class="dark:text-content3") Name
+                                      th(scope='col' class="dark:text-content3") Country
+                                      th(scope='col' class="dark:text-content3") Rating 
+                                  tbody
+                                    tr
+                                      th(scope='row' class="dark:text-white") 1
+                                      td(class="dark:text-white") Mrunali
+                                      td(class="dark:text-white") India  
+                                      td(class="dark:text-white")
+                                        div.flex.items-center.justify-end(class="gap-[2px]")
+                                          i.fa-solid.fa-star(class="text-warning") 
+                                          i.fa-solid.fa-star(class="text-warning")
+                                          i.fa-solid.fa-star(class="text-warning")
+                                          i.fa-solid.fa-star(class="text-warning")
+                                    tr
+                                      th(scope='row' class="dark:text-white") 3
+                                      td(class="dark:text-white") Bright
+                                      td(class="dark:text-white") Thailand
+                                      td
+                                        div.flex.items-center.justify-end(class="gap-[2px]")
+                                          i.fa-solid.fa-star(class="text-warning")
+                                          i.fa-solid.fa-star(class="text-warning")  
+                                          i.fa-solid.fa-star(class="text-warning")
+                    div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                      button.btn.copyBtn(class="dark:text-white dark:bg-sidebar-dark dark:hover:bg-sidebar-dark dark:hover:text-white")   
+                        i(data-feather="clipboard")
+                      pre(class="overflow-auto language-html custom-scroll dark:bg-sidebar-dark2")
+                        code(class="dark:bg-sidebar-dark2")
+                          |&lt;div class="flex flex-wrap gap-2"&gt;
+                          |   &lt;div class="flex-col w-full tabs"&gt;
+                          |       &lt;div class="flex mb-1 tab-links"&gt;
+                          |           &lt;button class="tab tabs-bordered tabs-bordered-bg tab-active tab-link" data-tabFilter="1"&gt; Users &lt;/button&gt;
+                          |           &lt;button class="tab tabs-bordered tabs-bordered-bg tab-link" data-tabFilter="2"&gt; Reviews &lt;/button&gt;
+                          |       &lt;/div&gt;
+                          |       &lt;div class="tabs-content"&gt;
+                          |           &lt;div data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
+                          |               &lt;p class="text-xs text-content3"&gt; Tabs are used ...attractive.&lt;/p&gt;  
+                          |           &lt;/div&gt;
+                          |           &lt;div data-tabContent="2" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
+                          |               &lt;p class="text-xs text-content3"&gt; We use tabs to ...attractive.&lt;/p&gt;  
+                          |           &lt;/div&gt;
+                          |           &lt;div data-tabContent="3" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
+                          |               &lt;p class="text-xs text-content3"&gt; We use tabs to ...attractive.&lt;/p&gt;  
+                          |           &lt;/div&gt;
+                          |       &lt;/div&gt;
+                          |   &lt;/div&gt; 
+                          |&lt;/div&gt;
 
-                  div.col-span-6(class="md:col-span-12")
-                     div.card.tabs
-                        div.card-header.pb-2.header-bottom-border
-                           div.flex.flex-col
-                              h3.text-lg.font-bold Ended Tabs
-                              p   Set tabs at the end with the help of  
-                                 strong .justify-end 
-                                    |   class.
-                              div.preview-code.tab-links
-                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
-                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
-                        div.card-body                                   
-                           div.tabs-content
-                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
-                                 div.flex.flex-wrap.gap-2
-                                    div.w-full.tabs.flex-col
-                                       div.mb-1.justify-end.tab-links.flex(class="2sm:justify-center")
-                                          button.tab.tabs-boxed.success-boxed.tab-active(data-tabFilter="1" class="tab-link") Product  
-                                          button.tab.tabs-boxed.success-boxed(data-tabFilter="2" class="tab-link") Price
-                                          button.tab.tabs-boxed.success-boxed(data-tabFilter="3" class="tab-link") Offer
-                                       div.tabs-content
-                                          div(data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
-                                             p.text-xs.text-gray-500  Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive.
-                                                |   Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive. 
-                                          div(data-tabContent="2" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
-                                             p.text-xs.text-gray-500 We use tabs to manage space and to make the website more attractive. Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive.
-                                          div(data-tabContent="3" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
-                                             p.text-xs.text-gray-500 Tabs are used to navigate and display different content around the website. abs are used to navigate and display different content around the website.
-                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
-                                 button.btn.copyBtn 
-                                    i(data-feather="clipboard")
-                                 pre(class="overflow-auto language-html custom-scroll")
-                                    code
-                                       |&lt;div class="flex flex-wrap gap-2"&gt;
-                                       |   &lt;div class="flex-col w-full tabs"&gt;
-                                       |       &lt;div class="flex justify-end mb-1 tab-links 2sm:justify-center"&gt;
-                                       |           &lt;button class="tab tab-boxed success-boxed tab-active tab-link" data-tabFilter="1"&gt; Product &lt;/button&gt;
-                                       |           &lt;button class="tab tab-boxed success-boxed tab-link" data-tabFilter="2"&gt; Price &lt;/button&gt;
-                                       |           &lt;button class="tab tab-boxed success-boxed tab-link" data-tabFilter="3"&gt; Offer &lt;/button&gt;
-                                       |       &lt;/div&gt;
-                                       |       &lt;div class="tabs-content"&gt;
-                                       |           &lt;div data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
-                                       |               &lt;p class="text-xs text-gray-500"&gt; Tabs are used ...attractive.&lt;/p&gt;  
-                                       |           &lt;/div&gt;
-                                       |           &lt;div data-tabContent="2" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
-                                       |               &lt;p class="text-xs text-gray-500"&gt; We use tabs to ...attractive.&lt;/p&gt;  
-                                       |           &lt;/div&gt;
-                                       |           &lt;div data-tabContent="3" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
-                                       |               &lt;p class="text-xs text-gray-500"&gt; Tabs are used to ...websites.&lt;/p&gt;  
-                                       |           &lt;/div&gt;
-                                       |       &lt;/div&gt;
-                                       |   &lt;/div&gt; 
-                                       |&lt;/div&gt;
+            div.col-span-6(class="md:col-span-12")
+              div.card.tabs
+                div.card-header.pb-2.header-bottom-border
+                  div.flex.flex-col
+                    h3(class="dark:text-white").text-lg.font-bold Tabs with Icons
+                    p(class="dark:text-content3")   Adding icons inside the tabs with the help of 
+                      strong .tabs 
+                      | class. 
+                    div.preview-code.tab-links
+                      button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                      button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                div.card-body                                   
+                  div.tabs-content
+                    div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                      div.flex.flex-wrap.gap-2
+                        div.w-full.tabs.flex-col
+                          div.mb-1.tab-links.flex(class="3sm:justify-center")
+                            button.tab.tabs-bordered.tabs-bordered-bg.secondary-bg.group(data-tabFilter="1" class="tab-link") 
+                              +SVG_ICON("Home","w-[1.125rem] h-[1.125rem] stroke-title dark:stroke-white group-hover:stroke-secondary")
+                              |   Home
+                            button.tab.tabs-bordered.tabs-bordered-bg.secondary-bg.group(data-tabFilter="2" class="tab-link") 
+                              +SVG_ICON("2-User","w-[1.125rem] h-[1.125rem] stroke-title dark:stroke-white group-hover:stroke-secondary")
+                              |   Profile
+                            button.tab.tabs-bordered.tabs-bordered-bg.secondary-bg.group.tab-active(data-tabFilter="3" class="tab-link") 
+                              +SVG_ICON("Document","w-[1.125rem] h-[1.125rem] stroke-title dark:stroke-white group-hover:stroke-secondary")
+                              |   Contact  
+                          div.tabs-content 
+                            div(data-tabContent="1" class="tab-pan fade group first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                              p.text-xs.text-content3 Not constrained by geographical borders or states. Providing cutting-edge design and website development services for more than 12 years all over India. We offer full-service digital solutions, starting with developing your website or application and ending with timely and efficient renewal of services for domain, web hosting, email hosting, and other internet marketing.
+                            div(data-tabContent="2" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                              div.flex.items-center.gap-2
+                                div.avatar(class="!rounded-none !overflow-visible")  
+                                  div(class="w-16 h-16") 
+                                    img(src='../../assets/images/avatar/21.jpg' alt='avatar')
+                                div.flex.flex-col.gap-1
+                                  span(class="dark:text-white").text-title.font-bold.text-xs Name: 
+                                    small.text-content3.text-xs Flo Bashirian
+                                  span(class="dark:text-white").text-title.font-bold.text-xs Email: 
+                                    small.text-content3.text-xs flob@gmail.com
+                                  span(class="dark:text-white").text-title.font-bold.text-xs Contact: 
+                                    small.text-content3.text-xs 239-664-7751 
+                            div(data-tabContent="3" class="tab-pan fade  active show relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                              div.flex.flex-col.gap-3.form-group
+                                div.flex.flex-col.gap-1
+                                  label(for="email1").font-medium.text-xs.text-primary Email
+                                  input(type="email" id="email1" placeholder="Enter your email id.." class="p-[11px] dark:bg-sidebar-dark2 dark:border-border-dark").w-full.border.border-border-light.rounded-5.text-xs.text-content
+                                div.flex.flex-col.gap-1
+                                  label(for="password").font-medium.text-xs.text-primary Password
+                                  input(type="password" placeholder="Password.." class="p-[11px] dark:bg-sidebar-dark2 dark:border-border-dark").w-full.border.border-border-light.rounded-5.text-xs.text-content
+                    div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                      button.btn.copyBtn(class="dark:text-white dark:bg-sidebar-dark dark:hover:bg-sidebar-dark dark:hover:text-white")   
+                        i(data-feather="clipboard")
+                      pre(class="overflow-auto language-html custom-scroll dark:bg-sidebar-dark2")
+                        code(class="dark:bg-sidebar-dark2")
+                          |&lt;div class="flex flex-wrap gap-2"&gt;
+                          |   &lt;div class="flex-col w-full tabs"&gt;
+                          |       &lt;div class="flex mb-1 tab-links"&gt;
+                          |           &lt;button class="tab tabs-bordered tabs-bordered-bg secondary-bg tab-active tab-link" data-tabFilter="1"&gt;
+                          |               +SVG_ICON("Home","w-[1.125rem] h-[1.125rem] stroke-title") Profile &lt;/button&gt;
+                          |           &lt;button class="tab tabs-bordered tabs-bordered-bg secondary-bg tab-link" data-tabFilter="2"&gt;
+                          |               +SVG_ICON("2-User","w-[1.125rem] h-[1.125rem] stroke-title") Profile &lt;/button&gt;
+                          |           &lt;button class="tab tabs-bordered tabs-bordered-bg secondary-bg tab-link" data-tabFilter="3"&gt;
+                          |               +SVG_ICON("Document","w-[1.125rem] h-[1.125rem] stroke-title") Contact &lt;/button&gt;
+                          |       &lt;/div&gt;
+                          |       &lt;div class="tabs-content"&gt;
+                          |           &lt;div data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
+                          |               &lt;p class="text-xs text-content3"&gt; Tabs are used ...attractive.&lt;/p&gt;  
+                          |           &lt;/div&gt;
+                          |           &lt;div data-tabContent="2" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
+                          |               &lt;p class="text-xs text-content3"&gt; We use tabs to ...attractive.&lt;/p&gt;  
+                          |           &lt;/div&gt;
+                          |           &lt;div data-tabContent="3" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
+                          |               &lt;div class="flex flex-col gap-3 form-group"&gt;
+                          |                   &lt;div class="flex flex-col gap-1"&gt; 
+                          |                       &lt;label for="email" class="text-xs font-medium text-primary "&gt;Email&lt;/label&gt;
+                          |                       &lt;input type="email"  placeholder="Enter your email id.." class="p-[11px] w-full border border-border-light rounded-5 text-xs text-content dark:bg-sidebar-dark2 dark:border-border-dark "/&gt;
+                          |                   &lt;/div&gt;
+                          |                   &lt;div class="flex flex-col gap-1"&gt; 
+                          |                       &lt;label for="password" class="text-xs font-medium text-primary"&gt;Password&lt;/label&gt;
+                          |                       &lt;input type="password"  placeholder="Password.." class="p-[11px] w-full border border-border-light rounded-5 text-xs text-content dark:bg-sidebar-dark2 dark:border-border-dark "/&gt;
+                          |                   &lt;/div&gt; 
+                          |               &lt;/div&gt;  
+                          |           &lt;/div&gt;
+                          |       &lt;/div&gt;
+                          |   &lt;/div&gt; 
+                          |&lt;/div&gt;
 
-                  div.col-span-6(class="md:col-span-12")
-                     div.card.tabs
-                        div.card-header.pb-2.header-bottom-border
-                           div.flex.flex-col
-                              h3.text-lg.font-bold Colored Tabs
-                              p   Adding background with the help of  
-                                 strong  .tabs-bordered-bg 
-                                 |   & 
-                                 strong  .tabs-bordered 
-                                 |   class.
-                              div.preview-code.tab-links
-                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
-                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
-                        div.card-body                                   
-                           div.tabs-content
-                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
-                                 div.flex.flex-wrap.gap-2
-                                    div.w-full.tabs.flex-col
-                                       div.mb-1.tab-links.flex(class="3sm:justify-center")
-                                          button.tab.tabs-bordered.tabs-bordered-bg.tab-active(data-tabFilter="1" class="tab-link") Products  
-                                          button.tab.tabs-bordered.tabs-bordered-bg(data-tabFilter="2" class="tab-link") Reviews
-                                          button.tab.tabs-bordered.tabs-bordered-bg(data-tabFilter="3" class="tab-link") More  
-                                       div.tabs-content
-                                          div(data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
-                                             p.text-xs.text-gray-500  Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive.
-                                                |   Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive. 
-                                                |   Tabs are used to navigate and display different content around the website. 
-                                          div(data-tabContent="2" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
-                                             p.text-xs.text-gray-500 We use tabs to manage space and to make the website more attractive. Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive.
-                                          div(data-tabContent="3" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
-                                             p.text-xs.text-gray-500 Tabs are used to navigate and display different content around the website. abs are used to navigate and display different content around the website.
-                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
-                                 button.btn.copyBtn 
-                                    i(data-feather="clipboard")
-                                 pre(class="overflow-auto language-html custom-scroll")
-                                    code
-                                       |&lt;div class="flex flex-wrap gap-2"&gt;
-                                       |   &lt;div class="flex-col w-full tabs"&gt;
-                                       |       &lt;div class="flex mb-1 tab-links"&gt;
-                                       |           &lt;button class="tab tabs-bordered tabs-bordered-bg tab-active tab-link" data-tabFilter="1"&gt; Products &lt;/button&gt;
-                                       |           &lt;button class="tab tabs-bordered tabs-bordered-bg tab-link" data-tabFilter="2"&gt; Reviews &lt;/button&gt;
-                                       |           &lt;button class="tab tabs-bordered tabs-bordered-bg tab-link" data-tabFilter="3"&gt; More &lt;/button&gt;
-                                       |       &lt;/div&gt;
-                                       |       &lt;div class="tabs-content"&gt;
-                                       |           &lt;div data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
-                                       |               &lt;p class="text-xs text-gray-500"&gt; Tabs are used ...attractive.&lt;/p&gt;  
-                                       |           &lt;/div&gt;
-                                       |           &lt;div data-tabContent="2" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
-                                       |               &lt;p class="text-xs text-gray-500"&gt; We use tabs to ...attractive.&lt;/p&gt;  
-                                       |           &lt;/div&gt;
-                                       |           &lt;div data-tabContent="3" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
-                                       |               &lt;p class="text-xs text-gray-500"&gt; Tabs are used to ...websites.&lt;/p&gt;  
-                                       |           &lt;/div&gt;
-                                       |       &lt;/div&gt;
-                                       |   &lt;/div&gt; 
-                                       |&lt;/div&gt;
-
-                  div.col-span-6(class="md:col-span-12")
-                     div.card.tabs
-                        div.card-header.pb-2.header-bottom-border
-                           div.flex.flex-col
-                              h3.text-lg.font-bold Tabs With Icons
-                              p   Adding icons inside the tabs with the help of 
-                                 strong .tabs 
-                                 | class.
-                              div.preview-code.tab-links
-                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
-                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
-                        div.card-body                                   
-                           div.tabs-content
-                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
-                                 div.flex.flex-wrap.gap-2
-                                    div.w-full.tabs.flex-col
-                                       div.mb-1.tab-links.flex(class="3sm:justify-center")
-                                          button.tab.tabs-bordered.tabs-bordered-bg.secondary-bg.tab-active(data-tabFilter="1" class="tab-link") 
-                                             +SVG_ICON("2-User","w-[1.125rem] h-[1.125rem] stroke-title")
-                                             |   Profile 
-                                          button.tab.tabs-bordered.tabs-bordered-bg.secondary-bg(data-tabFilter="2" class="tab-link") 
-                                             +SVG_ICON("Message","w-[1.125rem] h-[1.125rem] stroke-title")
-                                             |   Message
-                                          button.tab.tabs-bordered.tabs-bordered-bg.secondary-bg(data-tabFilter="3" class="tab-link") 
-                                             +SVG_ICON("Setting","w-[1.125rem] h-[1.125rem] stroke-title")
-                                             |   Setting 
-                                       div.tabs-content
-                                          div(data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
-                                             p.text-xs.text-gray-500  Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive.
-                                                |   Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive. 
-                                          div(data-tabContent="2" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
-                                             p.text-xs.text-gray-500 We use tabs to manage space and to make the website more attractive. Tabs are used to navigate and display different content around the website. We use tabs to manage space and to make the website more attractive.
-                                          div(data-tabContent="3" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
-                                             p.text-xs.text-gray-500 Tabs are used to navigate and display different content around the website. abs are used to navigate and display different content around the website.
-                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
-                                 button.btn.copyBtn 
-                                    i(data-feather="clipboard")
-                                 pre(class="overflow-auto language-html custom-scroll")
-                                    code
-                                       |&lt;div class="flex flex-wrap gap-2"&gt;
-                                       |   &lt;div class="flex-col w-full tabs"&gt;
-                                       |       &lt;div class="flex mb-1 tab-links"&gt;
-                                       |           &lt;button class="tab tabs-bordered tabs-bordered-bg secondary-bg tab-active tab-link" data-tabFilter="1"&gt;
-                                       |               +SVG_ICON("2-User","w-[1.125rem] h-[1.125rem] stroke-title") Profile &lt;/button&gt;
-                                       |           &lt;button class="tab tabs-bordered tabs-bordered-bg secondary-bg tab-link" data-tabFilter="2"&gt;
-                                       |               +SVG_ICON("Message","w-[1.125rem] h-[1.125rem] stroke-title") Message &lt;/button&gt;
-                                       |           &lt;button class="tab tabs-bordered tabs-bordered-bg secondary-bg tab-link" data-tabFilter="3"&gt;
-                                       |               +SVG_ICON("Setting","w-[1.125rem] h-[1.125rem] stroke-title") Setting &lt;/button&gt;
-                                       |       &lt;/div&gt;
-                                       |       &lt;div class="tabs-content"&gt;
-                                       |           &lt;div data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
-                                       |               &lt;p class="text-xs text-gray-500"&gt; Tabs are used ...attractive.&lt;/p&gt;  
-                                       |           &lt;/div&gt;
-                                       |           &lt;div data-tabContent="2" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
-                                       |               &lt;p class="text-xs text-gray-500"&gt; We use tabs to ...attractive.&lt;/p&gt;  
-                                       |           &lt;/div&gt;
-                                       |           &lt;div data-tabContent="3" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
-                                       |               &lt;p class="text-xs text-gray-500"&gt; Tabs are used to ...websites.&lt;/p&gt;  
-                                       |           &lt;/div&gt;
-                                       |       &lt;/div&gt;
-                                       |   &lt;/div&gt; 
-                                       |&lt;/div&gt;
-
-            // Page Body End 
-            +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+        // Page Body End 
+        +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
       include ../../components/customizer
 
-   include ../../layout/footer-files
+  include ../../layout/footer-files

@@ -5,7 +5,7 @@
   .dropdown {
     @apply relative inline-block w-fit;
     .dropdown-menu {
-      @apply dark:bg-sidebar-dark dark:text-white rounded-5 z-[3] min-w-max opacity-0 duration-300 invisible  transition-[opacity,top]  border border-border-light absolute p-[0.9375rem] top-0 right-0 rtl:right-unset rtl:left-0 shadow-lg bg-white w-full;
+      @apply dark:bg-sidebar-dark dark:text-white rounded-5 z-[5] min-w-max opacity-0 duration-300 invisible  transition-[opacity,top]  border border-border-light dark:border-border-dark absolute p-[0.9375rem] top-0 right-0 rtl:right-unset rtl:left-0 shadow-lg bg-white w-full;
       > ul {
         @apply flex flex-col gap-2;
         > li {
@@ -41,7 +41,7 @@
             @apply bottom-[1.5625rem];
           }
         }
-      } 
+      }
     }
     &.show {
       .dropdown-menu {
@@ -49,29 +49,29 @@
       }
     }
 
-    &.dropdown-top{ 
-      .dropdown-menu{
+    &.dropdown-top {
+      .dropdown-menu {
         @apply left-0 top-unset bottom-full;
       }
     }
 
-    &.dropdown-left{
-      .dropdown-menu{
-        @apply right-full top-0 ;
+    &.dropdown-left {
+      .dropdown-menu {
+        @apply right-full top-0 rtl:left-full rtl:right-unset;
       }
     }
-    &.dropdown-right{
-      .dropdown-menu{
-        @apply left-full right-unset top-0;
+    &.dropdown-right {
+      .dropdown-menu {
+        @apply left-full right-unset top-0 rtl:left-unset rtl:right-full;
       }
     }
   }
 
-  .tabs{
-    .dropdown{
-      .dropdown-menu{
+  .tabs {
+    .dropdown {
+      .dropdown-menu {
         @apply p-2;
-        ul{
+        ul {
           @apply gap-0;
         }
       }

@@ -2,99 +2,101 @@
   Countdown CSS
 ==========================*/
 @layer components {
-    .timer {
-        li {
-            @apply w-[3.75rem] sm:!w-[3.0625rem];
+  .timer {
+    li {
+      @apply w-[3.75rem] sm:!w-[3.0625rem];
 
-            span {
-                @apply text-center first:w-full last:w-full;
-            }
+      span {
+        @apply text-center first:w-full last:w-full;
+      }
+    }
+  }
+
+  .countdown {
+    li {
+      @apply flex flex-col justify-center items-center bg-white p-2;
+
+      span {
+        @apply first:font-bold first:text-lg first:sm:text-sm text-title last:text-[.75rem] last:font-normal last:text-primary;
+      }
+    }
+  }
+
+  .countdown-1 {
+    li {
+      @apply relative flex flex-col justify-center items-center p-2 before:top-[35%] after:bottom-[35%];
+
+      &:before,
+      &:after {
+        @apply content-[''] absolute w-[.1875rem] h-[.1875rem] bg-title rounded-full left-[105%] rtl:left-unset rtl:right-[105%];
+      }
+
+      span {
+        @apply first:font-bold first:text-lg first:sm:text-sm text-title last:text-[.75rem] last:font-normal last:text-primary;
+      }
+
+      &:last-of-type {
+        &:before,
+        &:after {
+          @apply hidden;
         }
+      }
+    }
+  }
+
+  .countdown-3 {
+    li {
+      @apply flex justify-center items-center gap-1;
     }
 
-    .countdown {
-        li {
-            @apply flex flex-col justify-center items-center bg-white p-2;
+    span {
+      @apply first:text-end last:text-start first:font-bold first:text-lg first:sm:text-sm text-title last:font-normal last:text-primary last:leading-none last:text-sm;
+    }
+  }
 
-            span {
-                @apply first:font-bold first:text-lg first:sm:text-sm text-title last:text-[.75rem] last:font-normal last:text-primary;
-            }
-        }
+  .countdown-4 {
+    li {
+      @apply flex gap-2 sm:gap-0 items-end w-[4.375rem] sm:!w-[3.25rem];
     }
 
-    .countdown-1 {
-        li {
-            @apply relative flex flex-col justify-center items-center p-2 before:top-[35%] after:bottom-[35%];
+    span {
+      @apply first:text-end last:text-start first:font-bold first:text-lg first:sm:text-sm text-title last:font-normal last:text-primary last:leading-none last:text-[.75rem];
+    }
+  }
 
-            &:before,
-            &:after {
-                @apply content-[''] absolute w-[.1875rem] h-[.1875rem] bg-title rounded-full left-[105%] rtl:left-unset rtl:right-[105%];
-            }
-
-            span {
-                @apply first:font-bold first:text-lg first:sm:text-sm text-title last:text-[.75rem] last:font-normal last:text-primary;
-            }
-
-            &:last-of-type {
-
-                &:before,
-                &:after {
-                    @apply hidden;
-                }
-            }
-        }
+  .countdown-5 {
+    li {
+      @apply flex flex-col gap-2 items-center justify-center;
+      span {
+        /* @apply dark:last; */
+      }
     }
 
-    .countdown-3 {
-        li {
-            @apply flex justify-center items-center gap-1;
-        }
+    span {
+      @apply first:font-bold first:text-xs first:text-white last:p-4 last:sm:p-2 last:text-xl last:sm:text-sm last:font-bold last:shadow-lg last:rounded last:bg-white last:leading-none last:grid last:place-content-center;
+    }
+  }
 
-        span {
-            @apply first:text-end last:text-start first:font-bold first:text-lg first:sm:text-sm text-title last:font-normal last:text-primary last:leading-none last:text-sm;
-        }
+  .countdown-6 {
+    li {
+      @apply flex flex-col items-center justify-center leading-none shadow-lg;
+      span {
+        /* @apply dark:first; */
+      }
     }
 
-    .countdown-4 {
-        li {
-            @apply flex gap-2 sm:gap-0 items-end w-[4.375rem];
-        }
+    span {
+      @apply first:grid first:place-content-center last:font-bold last:text-[.75rem] last:text-white last:bg-primary last:w-full last:p-1 text-center first:leading-none first:text-xl first:sm:text-sm first:font-bold first:bg-white first:p-4 first:sm:p-2 first:w-full;
+    }
+  }
 
-        span {
-            @apply first:text-end last:text-start first:font-bold first:text-lg first:sm:text-sm text-title last:font-normal last:text-primary last:leading-none last:text-[.75rem];
-        }
+  .countdown-7 {
+    li {
+      @apply flex flex-col items-center justify-center bg-primary text-white p-2 sm:p-1 leading-none rounded;
     }
 
-    .countdown-5 {
-        li {
-            @apply flex flex-col gap-2 items-center justify-center;
-        }
-
-        span {
-            @apply first:font-bold first:text-xs first:text-white last:p-4 last:sm:p-2 last:text-xl last:sm:text-sm last:font-bold last:shadow-lg last:rounded last:bg-white last:leading-none;
-
-        }
+    span {
+      @apply last:font-bold last:text-[.75rem] text-center first:text-base first:sm:text-sm first:font-bold;
     }
-
-    .countdown-6 {
-        li {
-            @apply flex flex-col items-center justify-center leading-none shadow-lg;
-        }
-
-        span {
-            @apply last:font-bold last:text-[.75rem] last:text-white last:bg-primary last:w-full last:p-1 text-center first:leading-none first:text-xl first:sm:text-sm first:font-bold first:bg-white first:p-4 first:sm:p-2 first:w-full;
-
-        }
-    }
-
-    .countdown-7 {
-        li {
-            @apply flex flex-col items-center justify-center bg-primary text-white p-2 sm:p-1 leading-none rounded;
-        }
-
-        span {
-            @apply last:font-bold last:text-[.75rem] text-center first:text-base first:sm:text-sm first:font-bold;
-
-        }
-    }
+  }
 }

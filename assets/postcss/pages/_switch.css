@@ -1,0 +1,142 @@
+/*=====================
+  Swap CSS
+  ==========================*/
+@layer components {
+
+    .tgl {
+        @apply hidden;
+        &,
+        &:after,
+        &:before,
+        & *,
+        & *:after,
+        & *:before,
+        &+.tgl-btn {
+            @apply box-border;
+
+            &::selection {
+                @apply bg-none;
+            }
+        }
+
+        +.tgl-btn {
+            @apply outline-0 block w-16 h-6 relative cursor-pointer select-none;
+
+            &:after,
+            &:before {
+                @apply relative block content-[""] w-1/2 h-full;
+            }
+
+            &:after {
+                @apply left-0;
+            }
+
+            &:before {
+                @apply hidden;
+            }
+        }
+
+        &:checked+.tgl-btn:after {
+            @apply left-1/2;
+        }
+    }
+
+    .tgl-skewed {
+        +.tgl-btn {
+            transform: skew(-10deg);
+            backface-visibility: hidden;
+            transition: all .2s ease;
+            @apply overflow-hidden bg-secondary;
+
+            &:after,
+            &:before {
+                transform: skew(10deg);
+                transition: all .2s ease;
+                text-shadow: 0 1px 0 rgba(0, 0, 0, .4);
+                @apply inline-block w-full text-center absolute leading-[1.75em] font-bold text-white;
+            }
+
+            &:after {
+                content: attr(data-tg-on);
+                @apply left-full;
+            }
+
+            &:before {
+                content: attr(data-tg-off);
+                @apply left-0;
+            }
+
+            &:active {
+                @apply bg-secondary;
+
+                &:before {
+                    left: -10%;
+                    @apply left-[-10%];
+                }
+            }
+        }
+
+        &:checked+.tgl-btn {
+            @apply bg-primary;
+            &:before {
+                @apply -left-full;
+
+            }
+
+            &:after {
+                @apply left-0;
+
+            }
+
+            &:active:after {
+                @apply left-[10%];
+            }
+        }
+    }
+
+
+    .tgl-flip {
+        +.tgl-btn {
+            transition: all .2s ease;
+            perspective: 100px;
+            @apply p-[2px];
+
+            &:after,
+            &:before {
+                transition: all .4s ease;
+                backface-visibility: hidden;
+                @apply inline-block w-full text-center absolute leading-[1.5em] font-bold text-white top-0 left-0 rounded-[.25rem];
+            }
+
+            &:after {
+                content: attr(data-tg-on);
+                transform: rotateY(-180deg);
+                @apply bg-warning;
+            }
+
+            &:before {
+                content: attr(data-tg-off);
+                @apply bg-danger;
+            }
+
+            &:active:before {
+                transform: rotateY(-20deg);
+            }
+        }
+
+        &:checked+.tgl-btn {
+            &:before {
+                transform: rotateY(180deg);
+            }
+
+            &:after {
+                transform: rotateY(0);
+                @apply bg-success left-0;
+            }
+
+            &:active:after {
+                transform: rotateY(20deg);
+            }
+        }
+    }
+}

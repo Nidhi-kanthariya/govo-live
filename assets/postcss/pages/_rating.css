@@ -39,7 +39,7 @@
     }
 
     .rating {
-        @apply relative inline-flex;
+        @apply relative inline-flex gap-1;
     }
 
     .rating :where(input) {

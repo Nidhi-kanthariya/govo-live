@@ -1,6 +1,4 @@
 
-
-
 // App Menu 
 ul(class="flex flex-col gap-3") 
    each menuItem in APP_MENU
@@ -8,7 +6,7 @@ ul(class="flex flex-col gap-3")
          a(href=`${menuItem.url}` class="flex items-center gap-2")
             span.flex.items-center.gap-2
                +SVG_ICON(`${menuItem.icon}`,"w-5 h-5 stroke-title")
-               = menuItem.title
+               small(class="text-xs leading-7")= menuItem.title
             if(menuItem.menu)
                +SVG_ICON("Arrow-Right-2","w-4 h-4 stroke-title ml-auto")
          if(menuItem.menu)

@@ -2,181 +2,201 @@
     Chat App CSS
   ==========================*/
 @layer components {
-    .chat-sidebar {
-        @apply md:max-h-[100%] md:shadow-lg md:border md:border-light md:min-w-[17.5rem] md:max-w-[17.5rem] md:z-10 md:bg-white md:transition-all md:fixed md:top-0 md:bottom-0 md:-right-[100%];
+  .chat-sidebar {
+    @apply md:max-h-[100%] md:shadow-lg md:border md:border-light md:min-w-[17.5rem] md:max-w-[17.5rem] md:z-10 md:bg-white md:transition-all md:fixed md:top-0 md:bottom-0 md:-right-[100%];
 
-        &.show {
-            @apply md:right-0;
+    &.show {
+      @apply md:right-0;
+    }
+  }
+
+  .right-sidebar-aside {
+    @apply z-[3] transition-all duration-1000 !max-w-[23.5625rem] absolute 2xl:right-0 2xl:top-0 2xl:bg-white 2xl:w-[17.1875rem] sm:!w-[18.1875rem];
+    width: -webkit-fill-available;
+    &.right-hide-show-sidebar {
+      @apply !right-[-31.25rem];
+    }
+  }
+
+  .left-sidebar-aside {
+    @apply lg:z-[3] transition-all duration-1000 lg:absolute lg:!left-[-31.25rem] lg:top-0 lg:bg-white lg:w-[23.5625rem] sm:w-[18.1875rem];
+
+    &.left-hide-show-sidebar {
+      @apply !left-0;
+    }
+  }
+
+  .chat-main {
+    @apply transition-all duration-1000 z-[2];
+  }
+
+  .right-sidebar-hide-logo-show {
+    @apply hidden;
+
+    &.hide {
+      @apply block;
+    }
+  }
+
+  .left-sidebar-hide-logo-show {
+    &.hide {
+      @apply block;
+    }
+  }
+
+  .left-chat-sidebar {
+    @apply flex lg:!hidden z-[1] transition-all duration-1000 lg:left-0 lg:top-0 lg:absolute lg:bg-white;
+  }
+
+  .left-sidebar-hide-logo-show {
+    .left-sidebar-toggle-btn {
+      @apply lg:block;
+    }
+  }
+
+  .chat-story {
+    .avatar {
+      @apply border-2 border-primary border-dashed;
+    }
+  }
+
+  .recent-online {
+    @apply border-2 border-title;
+  }
+
+  .recent-offline {
+    @apply border-2 border-secondary;
+  }
+
+  .message {
+    @apply flex gap-2 mb-[1.875rem];
+
+    .message-box {
+      .message-content {
+        @apply flex items-start gap-4 sm:relative sm:gap-0;
+
+        .timer {
+          @apply leading-[1.125rem] text-title font-normal text-[.8125rem];
         }
+
+        .sender-receiver-name {
+          @apply leading-[1.1875rem] text-title font-semibold text-xs;
+        }
+
+        .content {
+          p {
+            @apply leading-[1.1875rem] font-semibold text-xs p-[.9375rem] mt-3 w-fit 2md:text-[.75rem] 2md:p-[.75rem];
+          }
+
+          .content-detail {
+            @apply sm:absolute sm:top-0 sm:left-[3.125rem] sm:flex-col sm:gap-0 sm:items-start;
+          }
+        }
+      }
+    }
+  }
+
+  .message-sender {
+    @apply justify-start;
+
+    .message-content {
+      @apply justify-start sm:flex-col;
+
+      .content {
+        p {
+          @apply text-white bg-primary rounded-r-[3.125rem] rounded-tl-none rounded-bl-[3.125rem];
+        }
+      }
+    }
+  }
+
+  .message-receiver {
+    @apply justify-end;
+
+    .message-content {
+      @apply flex-row-reverse justify-end sm:flex-col sm:!items-end;
+
+      .content {
+        @apply flex flex-col justify-end items-end;
+        p {
+          @apply text-content bg-white dark:bg-sidebar-dark rounded-l-[3.125rem] rounded-tr-none rounded-br-[3.125rem];
+        }
+        .content-detail {
+          @apply sm:!items-end sm:!right-[3.125rem] sm:!left-unset;
+        }
+      }
+    }
+  }
+
+  .emoji-picker-insert {
+    input:focus:not([tabindex^='-']) {
+      @apply outline-none;
+    }
+  }
+
+  .emoji-picker-insert {
+    .emoji-btn {
+      @apply relative after:content-[''];
+
+      &:after {
+        @apply absolute top-[50%] -translate-y-1/2 left-full bg-border-light h-7 w-[.0625rem];
+      }
     }
 
-    .right-sidebar-aside {
-        @apply z-[3] transition-all duration-1000 !max-w-[23.5625rem] absolute 2xl:right-0 2xl:top-0 2xl:bg-white 2xl:w-[17.1875rem] sm:!w-[17.1875rem];
-        width: -webkit-fill-available;
-        &.right-hide-show-sidebar {
-            @apply  !right-[-31.25rem]; 
-        }
+    .fg-emoji-container {
+      @apply absolute top-unset bottom-[4.6875rem] rtl:!right-4 rtl:!left-unset !left-4 border border-gray-light dark:border dark:border-border-dark shadow-lg sm:w-[19.6875rem] 2sm:w-[14.375rem] h-[25.9375rem];
     }
+  }
 
+  .video-chat-app {
+    .right-sidebar-aside,
     .left-sidebar-aside {
-        @apply lg:z-[3] transition-all duration-1000 lg:absolute lg:!left-[-31.25rem] lg:top-0 lg:bg-white lg:w-[23.5625rem] sm:w-[17.1875rem];
-
-        &.left-hide-show-sidebar {                      
-            @apply  !left-0;
-        }
+      .chat-sidebar-scroll {
+        @apply lg:h-[55.9375rem] 2lg:h-[55.25rem] md:h-[52.875rem] 2md:h-[39.375rem];
+      }
     }
-
-    .chat-main {
-        @apply transition-all duration-1000 z-[2];
+    .left-sidebar-aside {
+      @apply !bg-white;
     }
+  }
 
-    .right-sidebar-hide-logo-show {
+  .chatting-app {
+    .right-sidebar-aside {
+      .chat-sidebar-scroll {
+        @apply lg:h-[57.5rem] sm:h-[41.875rem];
+      }
+    }
+  }
+
+  .group-videocall {
+    img {
+      @apply object-cover;
+    }
+  }
+  .accept-call-end{
+    .modal, 
+      .modal-overlay{
         @apply hidden;
-
-        &.hide {
-            @apply block;
-        }
+      }
+    &.hide{
+      .modal, 
+      .modal-overlay{
+        @apply hidden;
+      }
     }
-
-    .left-sidebar-hide-logo-show{
-         &.hide {
-            @apply block;
-        }
+    &.show{
+      .modal, 
+      .modal-overlay{
+        @apply block visible;
+      }
     }
-
-
-    .left-chat-sidebar {
-        @apply flex lg:!hidden z-[1] transition-all duration-1000 lg:left-0 lg:top-0 lg:absolute lg:bg-white;
-
+  }
+  .accept-call-start{
+     &.show{
+      .modal, 
+      .modal-overlay{
+        @apply !block visible ;
+      }
     }
-
-    .left-sidebar-hide-logo-show {
-        .left-sidebar-toggle-btn {
-            @apply lg:block;
-        }
-    }
-
-
-    .chat-story {
-        .avatar {
-            @apply border-2 border-primary border-dashed;
-        }
-    }
-
-    .recent-online {
-        @apply border-2 border-title;
-    }
-
-    .recent-offline {
-        @apply border-2 border-secondary;
-    }
-
-    .message {
-        @apply flex gap-2 mb-[1.875rem];
-
-        .message-box {
-            .message-content {
-                @apply flex items-start gap-4 sm:relative sm:gap-0;
-
-                .timer {
-                    @apply leading-[1.125rem] text-title font-normal text-[.8125rem];
-                }
-
-                .sender-receiver-name {
-                    @apply leading-[1.1875rem] text-title font-semibold text-xs;
-                }
-
-                .content {
-                    p {
-                        @apply leading-[1.1875rem] font-semibold text-xs p-[.9375rem] mt-3 w-fit 2md:text-[.75rem] 2md:p-[.75rem];
-                    }
-
-                    .content-detail {
-                        @apply sm:absolute sm:top-0 sm:left-[3.125rem] sm:flex-col sm:gap-0 sm:items-start;
-                    }
-                }
-            }
-        }
-    }
-
-    .message-sender {
-        @apply justify-start;
-
-        .message-content {
-            @apply justify-start sm:flex-col;
-
-            .content {
-                p {
-                    @apply text-white bg-primary rounded-r-[3.125rem] rounded-tl-none rounded-bl-[3.125rem];
-                }
-            }
-        }
-
-    }
-
-    .message-receiver {
-        @apply justify-end;
-
-        .message-content {
-            @apply flex-row-reverse justify-end sm:flex-col sm:!items-end;
-
-            .content {
-                @apply flex flex-col justify-end items-end;
-
-                p {
-                    @apply text-content bg-white rounded-l-[3.125rem] rounded-tr-none rounded-br-[3.125rem];
-                }
-
-                .content-detail {
-                    @apply sm:!items-end sm:!right-[3.125rem] sm:!left-unset;
-                }
-            }
-        }
-    }
-
-    .emoji-picker-insert {
-        input:focus:not([tabindex^='-']) {
-            @apply outline-none;
-        }
-    }
-
-    .emoji-picker-insert {
-        .emoji-btn {
-            @apply relative after:content-[''];
-
-            &:after {
-                @apply absolute top-[50%] -translate-y-1/2 left-full bg-border-light h-7 w-[.0625rem];
-            }
-        }
-
-        .fg-emoji-container {
-            @apply absolute top-unset bottom-[4.6875rem] rtl:!right-4 rtl:!left-unset !left-4 border border-gray-light shadow-lg sm:w-[19.6875rem] 2sm:w-[14.375rem] h-[25.9375rem];
-        }
-    }
-
-    .video-chat-app{
-        .right-sidebar-aside,
-        .left-sidebar-aside{
-            .chat-sidebar-scroll{
-                @apply lg:h-[55.9375rem] 2lg:h-[55.25rem] md:h-[52.875rem] 2md:h-[39.375rem];
-            }
-        }  
-        .left-sidebar-aside{
-            @apply !bg-white;            
-        } 
-    }
-
-    .chatting-app{
-        .right-sidebar-aside{
-            .chat-sidebar-scroll{
-                @apply lg:h-[57.5rem] sm:h-[41.875rem];
-            }
-        }
-    }
-
-    .group-videocall{
-        img{
-            @apply object-cover;
-        }
-    }
+  }
 }

@@ -1,0 +1,17 @@
+//- ========================
+//- Head Table
+//- =======================
+
+table.table.equal-space.head-table
+  thead
+    tr(class="dark:bg-sidebar-dark2")
+      each head in HEAD_TABLE.header
+        th=  head
+  tbody
+    each bodyData,index in HEAD_TABLE.body
+      tr
+        td(class="min-w-[1.25rem]")=index+1
+        td(class="min-w-[8.125rem]")=bodyData.firstName
+        td(class="min-w-[11.125rem]")=bodyData.lastName
+        td(class="min-w-[11.125rem]")=bodyData.userId
+        td(class="min-w-[9.5rem]")=bodyData.position  

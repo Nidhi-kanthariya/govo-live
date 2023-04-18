@@ -60,9 +60,15 @@
 .welcome-card-main{
   &.common-animate-main{
     .bg-img{
-      @apply absolute bottom-0 left-0 right-0 top-0 !block h-full;
-      .welcome-card-animate{
+      @apply !block;
+      .welcome-img{
+        @apply mt-[calc(-16px_+_(-81_-_-16)_*_((100vw_-_1600px)_/_(1920_-_1600)))] w-full 4xl:mt-[calc(-50px+_(-110_-_-50)_*_((100vw_-_1200px)_/_(1920_-_1200)))] 4xl:max-h-[300px] xl:mt-[calc(-36px_+__(-300_-_-36)_*_((100vw_-_991px)_/_(1920_-_991)))] lg:mt-[calc(-90px_+__(-150_-_-90)_*_((100vw_-_768px)_/_(1920_-_768)))] lg:h-[300px] 2md:max-h-[300px] 2md:h-unset;
+      }
+      .common-animate{
         animation-duration: 40000ms;
+      }
+      [dir="rtl"] & {
+        transform: rotateY(180deg);
       }
     }
   }

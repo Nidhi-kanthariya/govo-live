@@ -1,9 +1,9 @@
 mixin icon-box(iconPackage,iconName,type,path,classes,iconStyle)
-    div(class="flex flex-col items-center justify-center gap-4 px-3 py-5 border icon-box rounded-5 border-border-light 3sm:px-2 3sm:py-4 ") 
-        if(iconPackage === "feather")
-            i(data-feather=`${iconName}` class="w-6 h-6")
-        if(iconPackage === "iconly")
-            +SVG_ICON(iconName,"w-6 h-6 stroke-title")    
-        span(class="text-xs font-normal text-center icon-name 3sm:text-3xs text-title")= iconName
-        //- if(iconPackage === "fontAwesome")
-            //- i.fa-`${iconStyle}.fa-${iconName}`
+  div(class="flex flex-col items-center justify-center gap-4 px-3 py-5 border cursor-pointer icon-box rounded-5 border-border-light 3sm:px-2 3sm:py-4 dark:border-border-dark hover:translate-y-[-5px] hover:transition-all hover:ease translate-y-0") 
+    if(iconPackage === "feather")
+      i(data-feather=`${iconName}` class="w-6 h-6")
+    if(iconPackage === "iconly")
+      +SVG_ICON(iconName,"w-6 h-6 stroke-title")    
+    if(iconPackage === "fontAwesome")
+      i(class=`${iconName} w-6 h-6 text-title`)
+    span(class="text-xs font-normal text-center icon-name 3sm:text-3xs text-title dark:text-white")= iconName

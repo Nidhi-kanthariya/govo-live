@@ -10,12 +10,6 @@
 //- customizer 
 -var customizer = true;
 
-//- textEditor
-//- -var textEditor = true;
-
-//- dropzone
-//- -var dropzone = true;
-
 //- filepond
 -var filepond = true;
 
@@ -34,172 +28,172 @@ include ../../mixin/mixin
 
 doctype html
 html(lang='en')
-   include ../../layout/header-files
-   body(dir="ltr" class="unique-skin")
-      main.page-wrapper
-         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
-            include ../../layout/header/header     
-            // Sidebar Start 
-            div.page-sidebar.sidebar-dark.unique-sidebar
-               include ../../layout/unique 
-            // Sidebar End 
+  include ../../layout/header-files
+  body(dir="ltr" class="unique-skin")
+    main.page-wrapper
+      div.page-body-wrapper(class="xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+        include ../../layout/header/header     
+        // Sidebar Start 
+        div.page-sidebar.sidebar-dark.unique-sidebar
+          include ../../layout/unique 
+        // Sidebar End 
 
-            // Page Body Start
-            div.page-body
-               div.grid.grid-cols-12.email-main(class="lg:gap-0 gap-card-gap")
-                  div.col-span-3(class="xl:col-span-4") 
-                     include ../../layout/email-left-sidebar
+        // Page Body Start
+        div.page-body
+          div.grid.grid-cols-12.email-main(class="lg:gap-0 gap-card-gap")
+            div.col-span-3(class="xl:col-span-4") 
+              include ../../layout/email-left-sidebar
 
-                  div.col-span-9(class="xl:col-span-8 lg:col-span-12 email-main-sec")
-                     // Email Start
-                     div.card.email-input-aside(class="emailList")
-                        div(class="flex items-center justify-between pb-3 pl-2 border-b 2xl:p-card-spacing border-border-light 2sm:flex-col-reverse 2sm:gap-4 2sm:items-start ")
-                           div.flex.gap-2.items-center
-                              div.flex.items-center.gap-1 
-                                 label.checkbox(class="w-[18px] h-[18px]")  
-                                    input(type='checkbox' class="peer") 
-                                    div.checkbox-indicator(class="peer-checked:!bg-primary peer-checked:!border-primary !border-content3")  
-                                       i(data-feather="check")
-                                 div.dropdown
-                                    i(data-feather="chevron-down" class="w-4 h-4 stroke-content3")
-                                    div.dropdown-menu(class="!w-fit !top-7 left-0 !p-1")
-                                       ul.flex.flex-col.cursor-pointer(class="!gap-1")
-                                          li(class="px-2 py-1 rounded hover:bg-gray-light") All 
-                                          li(class="px-2 py-1 rounded hover:bg-gray-light") None
-                                          li(class="px-2 py-1 rounded hover:bg-gray-light") Read
-                                          li(class="px-2 py-1 rounded hover:bg-gray-light") Unread
-                                          li(class="px-2 py-1 rounded hover:bg-gray-light") Starred
-                                          li(class="px-2 py-1 rounded hover:bg-gray-light") Unstarred
-                              i(data-feather="rotate-cw" class="w-5 h-5 stroke-title")
-                              div.dropdown.border-l.border-border-light.pl-2(class="rtl:border-r rtl:border-l-0 rtl:pr-2 rtl:pl-unset")
-                                 +SVG_ICON("More-Square", "w-5 h-5 stroke-title")
-                                 div.dropdown-menu(class="!w-fit !top-7 left-0 !p-1")
-                                    ul.flex.flex-col.cursor-pointer(class="!gap-1")
-                                       li(class="px-2 py-1 rounded hover:bg-gray-light") Mark all as read
-                              div.left-sidebar-hide-logo-show(class="hidden lg:block") 
-                                 i(data-feather="filter" class="hidden w-5 h-5 cursor-pointer stroke-title left-sidebar-toggle-btn lg:block")
-                           div.flex.items-center.gap-3(class="sm:gap-1 2sm:flex-row-reverse")
-                              div.text-end(class="2sm:text-start")
-                                 h4.text-xs.font-semibold.text-title(class="leading-none 3sm:text-2xs 3sm:leading-none") Dmitriy Groshev 
-                                 div.flex.items-center.gap-1(class="mt-1")
-                                    span.text-content3.text-2xs alan.Dmitriy@Groshev
-                              div.avatar
-                                 div.w-9.rounded-full
-                                    img(src='../../assets/images/avatar/2.jpg' alt='avatar')
-                        div.py-4.px-2.overflow-auto(class="custom-scroll max-h-639px]")
-                           +email-data(EMAIL_DATA)
-                     // Email End
+            div.col-span-9(class="xl:col-span-8 lg:col-span-12 email-main-sec")
+              // Email Start
+              div.card.email-input-aside(class="emailList")
+                div(class="flex items-center justify-between pb-3 pl-2 border-b 2xl:p-card-spacing border-border-light dark:border-b dark:border-border-dark 2sm:flex-col-reverse 2sm:gap-4 2sm:items-start ")
+                  div.flex.gap-2.items-center
+                    div.flex.items-center.gap-1 
+                      label.checkbox(class="w-[18px] h-[18px]")  
+                        input(type='checkbox' class="peer") 
+                        div.checkbox-indicator(class="peer-checked:!bg-primary peer-checked:!border-primary !border-content3")  
+                          i(data-feather="check")
+                      div.dropdown
+                        i(data-feather="chevron-down" class="w-4 h-4 stroke-content3")
+                        div.dropdown-menu(class="!w-fit !top-7 left-0 !p-1")
+                          ul.flex.flex-col.cursor-pointer(class="!gap-1")
+                            li(class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2") All 
+                            li(class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2") None
+                            li(class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2") Read
+                            li(class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2") Unread
+                            li(class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2") Starred
+                            li(class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2") Unstarred
+                    i(data-feather="rotate-cw" class="w-5 h-5 stroke-title")
+                    div.dropdown.border-l.border-border-light.pl-2(class="rtl:border-r rtl:border-l-0 rtl:pr-2 rtl:pl-unset")
+                      +SVG_ICON("More-Square", "w-5 h-5 stroke-title")
+                      div.dropdown-menu(class="!w-fit !top-7 left-0 !p-1")
+                        ul.flex.flex-col.cursor-pointer(class="!gap-1")
+                          li(class="px-2 py-1 rounded hover:bg-gray-light") Mark all as read
+                    div.left-sidebar-hide-logo-show(class="hidden lg:block") 
+                      i(data-feather="filter" class="hidden w-5 h-5 cursor-pointer stroke-title left-sidebar-toggle-btn lg:block")
+                  div.flex.items-center.gap-3(class="sm:gap-1 2sm:flex-row-reverse")
+                    div.text-end(class="2sm:text-start")
+                      h4.text-xs.font-semibold.text-title(class="leading-none 3sm:text-2xs 3sm:leading-none") Dmitriy Groshev 
+                      div.flex.items-center.gap-1(class="mt-1")
+                        span.text-content3.text-2xs alan.Dmitriy@Groshev
+                    div.avatar
+                      div.w-9.rounded-full.h-9
+                        img(src='../../assets/images/avatar/2.jpg' alt='avatar')
+                div.py-4.px-2.overflow-auto(class="custom-scroll max-h-639px]")
+                  +email-data(EMAIL_DATA)
+              // Email End
 
-                     // Email Read Start
-                     div.card.email-read-aside(class="emailRead") 
-                        div(class="flex items-center justify-between pb-3 border-b border-border-light 2xl:p-card-spacing")
-                           div.flex.items-center.gap-3(class="sm:gap-1")
-                              i(data-feather='arrow-left' class="w-5 h-5 cursor-pointer stroke-title" class="btnEmail")
-                              div.avatar 
-                                 div.w-9.rounded-full
-                                    img(src='../../assets/images/avatar/2.jpg' alt='avatar')
-                              div
-                                 h4.text-xs.font-semibold.text-title(class="leading-none 3sm:text-2xs 3sm:leading-none") Ronald Hoffman 
-                                 div.flex.items-center.gap-1(class="mt-1")
-                                    span.text-content3.text-2xs.truncate errichoffman@gmaiol.com
-                           div.flex.gap-2.items-center
-                              ul.flex.items-center.gap-1.email-read
-                                 li.cursor-pointer(class="block 2md:hidden")
-                                    span.text-content3.text-sm.text-semibold July 23, 2020 06:41
-                                 li.cursor-pointer(class="block 2md:hidden")
-                                    +SVG_ICON("Star", "w-5 h-5 stroke-title")
-                                 li.cursor-pointer(class="block 2md:hidden")
-                                    +SVG_ICON("Delete", "w-5 h-5 stroke-title")
-                              div.left-sidebar-hide-logo-show(class="hidden lg:block sm:hidden") 
-                                 i(data-feather="filter" class="hidden w-5 h-5 cursor-pointer stroke-title left-sidebar-toggle-btn lg:block")
-                              div.dropdown.dropdown-bottom
-                                 i(data-feather="more-vertical" class="hidden w-5 h-5 cursor-pointer stroke-title 2md:block")
-                                 div(class="hidden text-left dropdown-menu 2md:block rtl:left-0 rtl:right-unset")
-                                    ul.flex.flex-col.justify-start.gap-3
-                                       li.cursor-pointer
-                                          +SVG_ICON("Star", "w-5 h-5 stroke-title")
-                                       li.cursor-pointer    
-                                          +SVG_ICON("Delete", "w-5 h-5 stroke-title")
-                                       li.left-sidebar-hide-logo-show(class="hidden sm:block") 
-                                          i(data-feather="filter" class="hidden w-5 h-5 cursor-pointer stroke-title left-sidebar-toggle-btn lg:block")
+              // Email Read Start
+              div.card.email-read-aside(class="emailRead") 
+                div(class="flex items-center justify-between pb-3 border-b border-border-light dark:border-b dark:border-border-dark 2xl:p-card-spacing")
+                  div.flex.items-center.gap-3(class="sm:gap-1")
+                    i(data-feather='arrow-left' class="w-5 h-5 cursor-pointer stroke-title" class="btnEmail")
+                    div.avatar 
+                      div.w-9.rounded-full.h-9
+                        img(src='../../assets/images/avatar/2.jpg' alt='avatar')
+                    div
+                      h4.text-xs.font-semibold.text-title(class="leading-none 3sm:text-2xs 3sm:leading-none") Ronald Hoffman 
+                      div.flex.items-center.gap-1(class="mt-1")
+                        span.text-content3.text-2xs.truncate errichoffman@gmaiol.com
+                  div.flex.gap-2.items-center
+                    ul.flex.items-center.gap-1.email-read
+                      li.cursor-pointer(class="block 2md:hidden")
+                        span.text-content3.text-sm.text-semibold July 23, 2020 06:41
+                      li.cursor-pointer(class="block 2md:hidden")
+                        +SVG_ICON("Star", "w-5 h-5 stroke-title")
+                      li.cursor-pointer(class="block 2md:hidden")
+                        +SVG_ICON("Delete", "w-5 h-5 stroke-title")
+                    div.left-sidebar-hide-logo-show(class="hidden lg:block sm:hidden") 
+                      i(data-feather="filter" class="hidden w-5 h-5 cursor-pointer stroke-title left-sidebar-toggle-btn lg:block")
+                    div.dropdown.dropdown-bottom
+                      i(data-feather="more-vertical" class="hidden w-5 h-5 cursor-pointer stroke-title 2md:block")
+                      div(class="hidden text-left dropdown-menu 2md:block rtl:left-0 rtl:right-unset")
+                        ul.flex.flex-col.justify-start.gap-3
+                          li.cursor-pointer
+                            +SVG_ICON("Star", "w-5 h-5 stroke-title")
+                          li.cursor-pointer    
+                            +SVG_ICON("Delete", "w-5 h-5 stroke-title")
+                          li.left-sidebar-hide-logo-show(class="hidden sm:block") 
+                            i(data-feather="filter" class="hidden w-5 h-5 cursor-pointer stroke-title left-sidebar-toggle-btn lg:block")
 
-                        div.overflow-auto.custom-scroll(class="max-h-639px]")
-                           div.flex.flex-col.gap-4.py-4.border-b.border-border-light.border-dashed
-                              h4.text-content3.font-semibold.leading-7 Hello Malikan! 
-                              p.text-title.font-bold(class="text-[26px] leading-9") Minimalists Photos for Ui/Ux Designers
-                              p.text-sm.text-content3.font-semibold.leading-7 Since You want to be Competitive you want to come up with a material that will make you stand out and recognizable. we all know that competition in the industry is tight so there is a need for every business to come up with excellent prints that will help their companies create a remarkable name.
-                              p.text-sm.text-content3.font-semibold.leading-7 The page also has a number of identity related issues that can be linked on he internet to get connected to people of common Interest and issues.
-                              p.text-sm.text-content3.font-semibold.leading-7 They can be preferred forms such as hobbies, interests and common issues followed by the people in the general. it depends on the background employed by the user of the account. the background conveys many things to the visitors of the page.
-                           div.pt-4.flex.flex-col.gap-4
-                              div.flex.items-center.justify-between(class="sm:items-start sm:gap-2 sm:flex-col")
-                                 div.flex.items-center.gap-1
-                                    i(data-feather='paperclip' class="w-4 h-4 stroke-title")
-                                    span.text-sm.font-semibold.text-content3.uppercase Attachment (60 MB)
-                                 div.flex.items-center.gap-1
-                                    button.btn.btn-light.text-xs.py-2.text-chart-dark View All
-                                    button.btn.btn-light.text-xs.py-2.text-primary Download All
-                              div.flex.gap-4.items-center.flex-wrap
-                                 img(class="max-w-[180px] h-[115px] object-cover" src=`../../assets/images/email-app/1.png` alt=`flower`) 
-                                 img(class="max-w-[180px] h-[115px] object-cover" src=`../../assets/images/email-app/2.png` alt=`emoji`) 
-                                 img(class="max-w-[180px] h-[115px] object-cover" src=`../../assets/images/email-app/3.png` alt=`marble`) 
-                              div
-                                 textarea(placeholder="Type to Reply.." row="3" id="reply" class="py-[11px] pl-[25px] pr-[55px]").bg-gray-light.w-full.rounded-5.text-xs.text-content
-                              div.flex.items-center.gap-4
-                                 button.btn.btn-primary.text-sm.py-2.text-white.rounded-none Reply 
-                                 button.btn.btn-secondary.text-sm.py-2.text-white.rounded-none Forward  
-                     // Email Read End
-
-
-            // Page Body End  
-            +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
-         include ../../components/customizer
-
-         div.modal-main
-            input#modal-16(class="peer" name="modal-16" type='checkbox')
-            label.modal-overlay(class="peer-checked:block" for='modal-16')
-            div.modal.modal-bottom-right(class="invisible w-11/12 max-w-xl transition-all duration-1000 translate-y-0 opacity-0 peer-checked:opacity-100 peer-checked:visible peer-checked:-translate-y-9 !right-[2%]")
-               div.modal-header 
-                  h3 New Message
-                  label(for='modal-16') 
-                     i(data-feather="x" class="w-4 h-4 stroke-title")
-               div.modal-body(class="2sm:!py-2") 
-                  form
-                     div.border-b.border-border-light.py-3.flex.items-center(class="leading-7 2sm:flex-col 2sm:items-start")
-                        div(class="min-w-[70px]")
-                           label(for="toSend" class="min-w-[70px]") To 
-                        span.text-xs.text-content.font-semibold.bg-gray-light.flex.items-center.gap-2.px-4.py-1.rounded-3xl 
-                           |   degose5197@weepm.com
-                           +SVG_ICON("Close-Square", "w-4 h-4 stroke-title alert-del")
-                     div.border-b.border-border-light.py-3.flex.items-center(class="leading-7 2sm:flex-col 2sm:items-start")
-                        div(class="min-w-[70px]")
-                           label(for="toReceive" class="min-w-[70px]") From 
-                        span.text-xs.text-content.font-semibold.bg-primary-light.flex.items-center.gap-2.px-4.py-1.rounded-3xl 
-                           |   degose5197@weepm.com
-                           +SVG_ICON("Close-Square", "w-4 h-4 stroke-title alert-del")
-                     div.border-b.border-border-light.py-3.flex.items-center(class="leading-7 2sm:flex-col 2sm:items-start")
-                        div(class="min-w-[70px]")
-                           label(for="toSend" class="min-w-[70px]") Subject 
-                        input(type="text" class="w-full text-xs font-semibold bg-transparent text-content3" value="Here’s the secret on how we can help raw succeed")
-                     div.py-3.flex.items-center
-                        textarea(placeholder="Message.." row="10" id="reply" class="py-1 pl-[8px] pr-[55px] min-h-max").w-full.rounded-5.text-xs.text-content
-                     div
-                        input(type="file" class="email-dropzone")
-               div.modal-footer
-                  div.flex.items-center.justify-between.gap-2
-                     ul.flex.items-center.gap-3
-                        li.leading-none.border-r.border-border-light.pr-2 
-                           label(for="modal-16")
-                              +SVG_ICON("Delete", "w-6 h-6 stroke-title cursor-pointer")
-                        li.leading-none 
-                           div.dropdown.dropdown-top
-                              i(data-feather="more-vertical" class="w-5 h-5 cursor-pointer stroke-title")
-                              div.dropdown-menu(class="!w-fit !p-1")
-                                 ul.flex.flex-col.cursor-pointer.text-start(class="!gap-1")
-                                    li(class="px-2 py-1 leading-none rounded hover:bg-gray-light") Plain text mode 
-                                    li(class="px-2 py-1 leading-none rounded hover:bg-gray-light") Print
-                                    li(class="px-2 py-1 leading-none rounded hover:bg-gray-light") Check spelling 
-                     div.flex.items-center.gap-3
-                        label(for="modal-16").btn.btn-primary.py-2.px-4.text-white.uppercase Send
+                div.overflow-auto.custom-scroll(class="max-h-639px]")
+                  div.flex.flex-col.gap-4.py-4.border-b.border-border-light.border-dashed(class="dark:border-b dark:border-border-dark")
+                    h4.text-content3.font-semibold.leading-7 Hello Malikan! 
+                    p.text-title.font-bold(class="text-[26px] leading-9") Minimalists Photos for Ui/Ux Designers
+                    p.text-sm.text-content3.font-semibold.leading-7 Since You want to be Competitive you want to come up with a material that will make you stand out and recognizable. we all know that competition in the industry is tight so there is a need for every business to come up with excellent prints that will help their companies create a remarkable name.
+                    p.text-sm.text-content3.font-semibold.leading-7 The page also has a number of identity related issues that can be linked on he internet to get connected to people of common Interest and issues.
+                    p.text-sm.text-content3.font-semibold.leading-7 They can be preferred forms such as hobbies, interests and common issues followed by the people in the general. it depends on the background employed by the user of the account. the background conveys many things to the visitors of the page.
+                  div.pt-4.flex.flex-col.gap-4
+                    div.flex.items-center.justify-between(class="sm:items-start sm:gap-2 sm:flex-col")
+                      div.flex.items-center.gap-1
+                        i(data-feather='paperclip' class="w-4 h-4 stroke-title")
+                        span.text-sm.font-semibold.text-content3.uppercase Attachment (60 MB)
+                      div.flex.items-center.gap-1
+                        button.btn.btn-light.text-xs.py-2.text-chart-dark(class="dark:bg-sidebar-dark2") View All
+                        button.btn.btn-light.text-xs.py-2.text-primary(class="dark:bg-sidebar-dark2") Download All
+                    div.flex.gap-4.items-center.flex-wrap
+                      img(class="max-w-[180px] h-[115px] object-cover" src=`../../assets/images/email-app/1.png` alt=`flower`) 
+                      img(class="max-w-[180px] h-[115px] object-cover" src=`../../assets/images/email-app/2.png` alt=`emoji`) 
+                      img(class="max-w-[180px] h-[115px] object-cover" src=`../../assets/images/email-app/3.png` alt=`marble`) 
+                    div
+                      textarea(placeholder="Type to Reply.." row="3" id="reply" class="py-[11px] pl-[25px] pr-[55px] dark:bg-sidebar-dark2").bg-gray-light.w-full.rounded-5.text-xs.text-content
+                    div.flex.items-center.gap-4
+                      button.btn.btn-primary.text-sm.py-2.text-white.rounded-none Reply 
+                      button.btn.btn-secondary.text-sm.py-2.text-white.rounded-none Forward  
+              // Email Read End
 
 
-   include ../../layout/footer-files
+        // Page Body End  
+        +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+      include ../../components/customizer
+
+    div.modal-main
+      input#modal-16(class="peer" name="modal-16" type='checkbox')
+      label.modal-overlay(class="peer-checked:block" for='modal-16')
+      div.modal.modal-bottom-right(class="invisible dark:bg-sidebar-dark2 w-11/12 max-w-xl transition-all duration-1000 translate-y-0 opacity-0 peer-checked:opacity-100 peer-checked:visible peer-checked:-translate-y-9 !right-[2%]")
+        div.modal-header 
+          h3 New Message
+          label(for='modal-16')
+            i(data-feather="x" class="w-4 h-4 stroke-title")
+        div.modal-body(class="2sm:!py-2") 
+          form
+            div.border-b.border-border-light.py-3.flex.items-center(class="leading-7 dark:border-border-dark dark:border-b 2sm:flex-col 2sm:items-start")
+              div(class="min-w-[70px]")
+                label(for="toSend" class="min-w-[70px]") To 
+              span(class="dark:bg-sidebar-dark2").text-xs.text-content.font-semibold.bg-gray-light.flex.items-center.gap-2.px-4.py-1.rounded-3xl 
+                |   degose5197@weepm.com
+                +SVG_ICON("Close-Square", "w-4 h-4 stroke-title alert-del")
+            div.border-b.border-border-light.py-3.flex.items-center(class="leading-7 dark:border-border-dark dark:border-b 2sm:flex-col 2sm:items-start")
+              div(class="min-w-[70px]")
+                label(for="toReceive" class="min-w-[70px]") From 
+              span.text-xs.text-content.font-semibold.bg-primary-light.flex.items-center.gap-2.px-4.py-1.rounded-3xl 
+                |   degose5197@weepm.com
+                +SVG_ICON("Close-Square", "w-4 h-4 stroke-title alert-del")
+            div.border-b.border-border-light.py-3.flex.items-center(class="leading-7 dark:border-border-dark dark:border-b 2sm:flex-col 2sm:items-start")
+              div(class="min-w-[70px]")
+                label(for="toSend" class="min-w-[70px]") Subject 
+              input(type="text" class="w-full text-xs font-semibold bg-transparent text-content3" value="Here’s the secret on how we can help raw succeed")
+            div.py-3.flex.items-center
+              textarea(placeholder="Message.." row="10" id="reply" class="dark:bg-sidebar-dark2 py-1 pl-[8px] pr-[55px] min-h-max").w-full.rounded-5.text-xs.text-content
+            div(class="dark:bg-sidebar-dark2")
+              input(type="file" class="email-dropzone")
+        div.modal-footer 
+          div.flex.items-center.justify-between.gap-2
+            ul.flex.items-center.gap-3
+              li.leading-none.border-r.border-border-light.pr-2 
+                label(for="modal-16")
+                  +SVG_ICON("Delete", "w-6 h-6 stroke-title cursor-pointer")
+              li.leading-none 
+                div.dropdown.dropdown-top
+                  i(data-feather="more-vertical" class="w-5 h-5 cursor-pointer stroke-title")
+                  div.dropdown-menu(class="!w-fit !p-1")
+                    ul.flex.flex-col.cursor-pointer.text-start(class="!gap-1")
+                      li(class="px-2 py-1 leading-none rounded hover:bg-gray-light") Plain text mode 
+                      li(class="px-2 py-1 leading-none rounded hover:bg-gray-light") Print
+                      li(class="px-2 py-1 leading-none rounded hover:bg-gray-light") Check spelling 
+            div.flex.items-center.gap-3
+              label(for="modal-16").btn.btn-primary.py-2.px-4.text-white.uppercase Send
+
+
+  include ../../layout/footer-files

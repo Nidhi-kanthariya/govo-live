@@ -1,30 +1,29 @@
 
 // Cart Start 
 div.dropdown.shopping-bag 
-   +SVG_ICON("Buy","w-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] stroke-title dark:stroke-white")
-   div.dropdown-menu(class="!min-w-[320px]")
-      div.flex.items-center.justify-between(class="pb-[15px] border-b border-border-light dark:border-border-dark") 
-         h4(class="text-base font-bold text-title")
-            | Cart Items
-            span(class="text-sm font-bold text-content")  (25)
-         button(class="p-2 transition-all duration-300 rounded-full bg-gray-light group hover:bg-primary")
-            +SVG_ICON("Delete","w-[18px] h-[18px] transition-all duration-300 group-hover:stroke-white stroke-title")
-
-      ul(class="flex flex-col max-h-[232px] overflow-auto custom-scroll px-1") 
-         each cartItems in ADD_TO_CART_ITEMS
-            li.cart-item.flex.items-center.gap-3(class="py-3 transition-all duration-300 border-b last:border-b-0 border-border-light dark:border-border-dark rounded-5")
-               a.flex.items-center(href="./product.html" class="gap-[12px]")
-                  div.rounded-full(class="relative ")
-                     img(class="rounded-full min-w-[2.25rem] min-h-[2.25rem] w-full h-auto object-cover" src=`../../assets/images/product/${cartItems.image}` alt=`${cartItems.name}`) 
-                  div
-                     h4(class="text-xs font-semibold line-clamp-1 text-title" )= cartItems.name
-                     p(class="text-xs font-semibold line-clamp-1 text-content ")= cartItems.price
-               div(class="flex items-center gap-2 ml-auto")
-                  +PlusMinus(cartItems.qty)
-                  +SVG_ICON("Delete","remove-cart w-[16px] h-[16px] cursor-pointer transition-all duration-300 hover:stroke-primary stroke-title")
-      div(class="pt-[15px] border-t border-light")
-         div.flex.items-center.justify-between(class="mb-[15px]")
-            h4(class="text-sm font-semibold") Bag Total
-            span(class="text-sm font-semibold") $250.00 
-         a(href="checkout.html" class="block w-full py-2 text-sm font-semibold leading-none text-white btn btn-primary") Proceed to Checkout 
+  +SVG_ICON("Buy","w-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] stroke-title dark:stroke-white")
+  div.dropdown-menu(class="!min-w-[320px]")
+    div.flex.items-center.justify-between(class="pb-[15px] border-b border-border-light dark:border-border-dark") 
+      h4(class="text-base font-bold text-title")
+        | Cart Items
+        span(class="text-sm font-bold text-content") (25) 
+      button(class="p-2 transition-all duration-300 rounded-full bg-gray-light dark:bg-sidebar-dark2 group hover:bg-primary dark:hover:bg-primary")
+        +SVG_ICON("Delete","w-[18px] h-[18px] transition-all duration-300 group-hover:stroke-white stroke-title")
+    ul(class="flex flex-col max-h-[232px] overflow-auto custom-scroll px-1")
+      each cartItems in ADD_TO_CART_ITEMS
+        li.cart-item.flex.items-center.gap-3(class="py-3 transition-all duration-300 border-b last:border-b-0 border-border-light dark:border-border-dark rounded-5")
+          a.flex.items-center(href="./product.html" class="gap-[12px]")
+            div.rounded-full(class="relative ")
+              img(class="rounded-full min-w-[2.25rem] min-h-[2.25rem] w-full h-auto object-cover" src=`../../assets/images/product/${cartItems.image}` alt=`${cartItems.name}`) 
+            div
+              h4(class="text-xs font-semibold line-clamp-1 text-title" )= cartItems.name
+              p(class="text-xs font-semibold line-clamp-1 text-content ")= cartItems.price
+          div(class="flex items-center gap-2 ml-auto")
+            +PlusMinus(cartItems.qty)
+            +SVG_ICON("Delete","remove-cart w-[16px] h-[16px] cursor-pointer transition-all duration-300 hover:stroke-primary stroke-title")
+    div(class="pt-[15px] border-t border-light dark:border-border-dark dark:border-t")
+      div.flex.items-center.justify-between(class="mb-[15px]") 
+        h4(class="text-sm font-semibold") Bag Total 
+        span(class="text-sm font-semibold") $250.00 
+      a(href="checkout.html" class="block w-full py-2 text-sm font-semibold leading-none text-white btn btn-primary") Proceed to Checkout 
 // Cart Start 

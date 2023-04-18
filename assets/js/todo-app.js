@@ -15,13 +15,6 @@ leftSidebarHeaderToggle?.addEventListener('click', function (e) {
   leftSidebarHeaderToggle.classList.toggle('hide');
 });
 
-// Input Checked js 
-const todoCheck = document.querySelectorAll('.todo-check');
-const checkCustom = document.querySelectorAll('.check-custom');
-todoCheck?.addEventListener('click', function (e) {
-  checkCustom.classList.toggle('todo-check-show');
-})
-
 // Todo Form modal Js 
 const todoForm = document.querySelector('.todo-form');
 todoForm.addEventListener('submit', function (e) {

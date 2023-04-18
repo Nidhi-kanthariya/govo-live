@@ -3,24 +3,24 @@
 
 
 div.flex.items-stretch.w-full.emoji-picker-insert
-    button.bg-white.emoji-btn.second-btn(class="px-3 text-2xl 3sm:leading-none 3sm:text-xs") &#128515;
-    input.text-sm.two(class="sm:text-xs sm:leading-[1.5] 3sm:leading-[14px] w-full max-w-full h-[50px] px-3" placeholder="Your Message" rows="1" name='')
-    div.chat-setting.flex.gap-2.items-center.bg-white
-        div.dropdown.dropdown-left.dropdown-top.group   
-            i(data-feather="paperclip" class="w-6 h-6 cursor-pointer stroke-title")
-            div(class="dropdown-menu text-left rtl:!right-0 group-hover:!-top-[110px] !-top-[110px] !bottom-[45px]")
-                ul.flex.flex-col.justify-start.gap-3
-                    li.cursor-pointer.transition-all(class='flex items-center gap-2 text-title hover:text-primary')
-                        i(data-feather="image" class="w-4 h-4 stroke-title")
-                        span.whitespace-nowrap  Image
-                    li.cursor-pointer.transition-all(class='flex items-center gap-2 text-title hover:text-primary')
-                        i(data-feather="file-text" class="w-4 h-4 stroke-title")
-                        span.whitespace-nowrap Document
-                    li.cursor-pointer.transition-all(class='flex items-center gap-2 text-title hover:text-primary')
-                        i(data-feather="video" class="w-4 h-4 stroke-title")
-                        span.whitespace-nowrap  Video 
-        +SVG_ICON("Voice-2","w-8 h-8 stroke-title cursor-pointer")
-        button.bg-primary(class="w-[70px] h-[50px] flex justify-center items-center")
-            +SVG_ICON("Send","w-8 h-8 stroke-white cursor-pointer p-1")
+  button.bg-white.emoji-btn.second-btn(class="px-3 text-2xl sm:px-2 3sm:leading-none 3sm:text-xs dark:bg-sidebar-dark") &#128515;
+  input.text-sm.two(class="sm:text-xs sm:leading-[1.5] 3sm:leading-[14px] w-full max-w-full h-[50px] sm:h-[40px] px-3 dark:bg-sidebar-dark" placeholder="Your Message" rows="1" name='')
+  div.chat-setting.flex.gap-2.items-center.bg-white(class="dark:bg-sidebar-dark")
+    div.dropdown.dropdown-left.dropdown-top.group
+      i(data-feather="paperclip" class="w-6 h-6 cursor-pointer stroke-title")
+      div(class="dropdown-menu text-left rtl:!right-0 group-hover:!-top-[110px] !-top-[110px] !bottom-[45px]")
+        ul.flex.flex-col.justify-start.gap-3
+          li.cursor-pointer.transition-all(class='flex items-center gap-2 text-title hover:text-primary')
+            i(data-feather="image" class="w-4 h-4 stroke-title")
+            span.whitespace-nowrap  Image
+          li.cursor-pointer.transition-all(class='flex items-center gap-2 text-title hover:text-primary')
+            i(data-feather="file-text" class="w-4 h-4 stroke-title")
+            span.whitespace-nowrap Document
+          li.cursor-pointer.transition-all(class='flex items-center gap-2 text-title hover:text-primary')
+            i(data-feather="video" class="w-4 h-4 stroke-title")
+            span.whitespace-nowrap  Video
+    +SVG_ICON("Voice-2","w-8 h-8 stroke-title cursor-pointer")
+    button.bg-primary(class="w-[70px] h-[50px] sm:h-[40px] flex justify-center items-center")
+      +SVG_ICON("Send","w-8 h-8 stroke-white cursor-pointer p-1")
 
 // chat main footer end

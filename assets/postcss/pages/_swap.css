@@ -2,42 +2,40 @@
   Swap CSS
   ==========================*/
 @layer components {
-
-    .swap {
-        @apply relative inline-grid place-content-center cursor-pointer select-none;
-        &.swap-rotate{
-            .swap-off{
-                @apply rotate-0;
-            }
-            .swap-on{
-                @apply rotate-180; 
-            }
-        }
+  .swap {
+    @apply relative inline-grid place-content-center cursor-pointer select-none;
+    &.swap-rotate {
+      .swap-off {
+        @apply rotate-0 dark:invert;
+      }
+      .swap-on {
+        @apply rotate-180 dark:invert;
+      }
     }
+  }
+  .swap > * {
+    @apply col-start-1 row-start-1 transition-transform;
+  }
 
-    .swap>* {
-        @apply col-start-1 row-start-1 transition-transform;
-    }
+  .swap input {
+    @apply appearance-none;
+  }
 
-    .swap input {
-        @apply appearance-none;
-    }
+  .swap .swap-on,
+  .swap .swap-indeterminate,
+  .swap input:indeterminate ~ .swap-on {
+    @apply opacity-0;
+  }
 
-    .swap .swap-on,
-    .swap .swap-indeterminate,
-    .swap input:indeterminate~.swap-on {
-        @apply opacity-0;
-    }
+  .swap input:checked ~ .swap-off,
+  .swap.swap-active .swap-off,
+  .swap input:indeterminate ~ .swap-off {
+    @apply opacity-0;
+  }
 
-    .swap input:checked~.swap-off,
-    .swap.swap-active .swap-off,
-    .swap input:indeterminate~.swap-off {
-        @apply opacity-0;
-    }
-
-    .swap input:checked~.swap-on,
-    .swap-active .swap-on,
-    .swap input:indeterminate~.swap-indeterminate {
-        @apply opacity-100;
-    }
+  .swap input:checked ~ .swap-on,
+  .swap-active .swap-on,
+  .swap input:indeterminate ~ .swap-indeterminate {
+    @apply opacity-100;
+  }
 }

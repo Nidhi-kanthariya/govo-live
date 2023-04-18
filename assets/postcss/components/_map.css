@@ -3,7 +3,7 @@
   ==========================*/
 @layer components {
   .data-map {
-    @apply h-[31.25rem] w-full 4xl:h-[20rem] lg:h-[25rem] sm:h-[15.625rem];
+    @apply h-[31.25rem] w-full 4xl:h-[20rem] lg:h-[25rem] sm:h-[15.625rem] relative;
   }
   .data-map-glob {
     @apply h-[40.625rem] w-full  2md:h-[20.25rem];
@@ -12,7 +12,7 @@
     }
   }
   .map-js-height {
-    @apply h-[31.25rem] 2xl:h-[21.875rem]  sm:h-[16.25rem] z-[1];
+    @apply h-[31.25rem] 2xl:h-[21.875rem]  sm:h-[16.25rem] z-[1] relative;
     .leaflet-control-container {
       .leaflet-top {
         .leaflet-control-zoom {

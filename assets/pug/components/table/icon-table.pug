@@ -1,0 +1,21 @@
+//- ========================
+//- Icon Table
+//- =======================
+
+table.table.equal-space
+    thead 
+        tr 
+            each head in ICON_TABLE.header
+                th=  head
+    tbody
+        each bodyData,index in ICON_TABLE.body
+            tr
+                td(class="min-w-[1.25rem]")=index+1
+                td(class="min-w-[7.125rem]")
+                    div.flex.gap-1.items-center 
+                        i(data-feather=`${bodyData.icon}`, class=`w-4 h-4 stroke-${bodyData.iconColor}`)
+                        p(class=`text-${bodyData.iconColor}`)=bodyData.status
+                //- td(class="min-w-[8.125rem]")=bodyData.status
+                td(class="min-w-[14.125rem]")=bodyData.signal
+                td(class="min-w-[6.125rem]")=bodyData.security
+                td(class="min-w-[8.125rem]")=bodyData.teamLeader  

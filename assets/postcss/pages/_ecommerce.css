@@ -35,9 +35,9 @@
   }
 
   .shop-sidebar {
-    @apply sm:w-[16.875rem] xl:opacity-0 xl:invisible xl:absolute xl:left-[-19.375rem] xl:top-0 xl:transition-all xl:z-[4] xl:duration-1000 xl:translate-x-[-19.375rem] xl:ease-in-out;
+    @apply sm:w-[17.875rem] xl:opacity-0 xl:invisible xl:absolute xl:left-[-19.375rem] xl:top-0 xl:transition-all xl:z-[4] xl:duration-1000 xl:translate-x-[-19.375rem] xl:ease-in-out;
     &.show {
-      @apply opacity-100 visible absolute top-0 left-0 z-[4] transition-all duration-1000 translate-x-0 ease-in-out;
+      @apply opacity-100 visible absolute top-0 left-0 z-[7] transition-all duration-1000 translate-x-0 ease-in-out;
     }
   }
 
@@ -63,7 +63,7 @@
   .invoice-preview {
     form {
       label {
-        @apply mb-2 text-content3 font-semibold text-xs inline-block;
+        @apply mb-2 text-content3 font-bold text-xs inline-block;
       }
       input,
       textarea {
@@ -71,6 +71,9 @@
       }
       a {
         @apply text-white;
+      }
+      select {
+        @apply appearance-none;
       }
     }
     table {
@@ -85,10 +88,34 @@
       }
     }
   }
+  .checkout-detail {
+    .table {
+      tbody {
+        tr {
+          &:last-child {
+            td {
+              @apply !pb-0;
+            }
+          }
+        }
+      }
+    }
+  }
   .invoice-preview {
     form {
       label {
         @apply text-title text-xs font-bold uppercase;
+      }
+    }
+    .table {
+      tbody {
+        tr {
+          &:last-child {
+            td {
+              @apply pb-0;
+            }
+          }
+        }
       }
     }
   }
@@ -161,7 +188,7 @@
           thead {
             tr {
               th {
-                @apply bg-body py-3;
+                @apply bg-body py-3 dark:bg-sidebar-dark2;
               }
             }
           }
@@ -180,7 +207,7 @@
         thead {
           tr {
             th {
-              @apply bg-body py-3;
+              @apply bg-body py-3 dark:bg-sidebar-dark2;
             }
           }
         }

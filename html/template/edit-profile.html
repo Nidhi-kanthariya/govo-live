@@ -24,11 +24,11 @@
   </head>
   <body class="unique-skin" dir="ltr">
     <main class="page-wrapper">
-      <div class="page-body-wrapper 2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300">
+      <div class="page-body-wrapper xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300">
         <!-- Page Header start-->
-        <header class="sticky top-0 z-[4]">
+        <header class="fixed top-0 z-[6] xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto">
           <div class="page-header w-full transition-all bg-white shadow-header dark:bg-sidebar-dark">
-            <div class="py-[11px] sm:py-[17px] flex items-center xl:relative justify-between px-body-space">
+            <div class="py-[11px] flex items-center xl:relative justify-between px-body-space">
               <div class="left-header flex items-center gap-2">
                 <button class="sidebar-toggle hide"> 
                   <svg class="w-6 4xl:w-5 h-6 4xl:h-5 stroke-title"> 
@@ -38,7 +38,7 @@
                 <h1 class="flex items-center gap-1 text-lg font-extrabold leading-none sm:hidden 4xl:text-base">Edit Profile</h1>
               </div>
               <div class="right-header flex items-center flex-1 sm:gap-[calc(7px_+_(14_-_7)_*_((100vw_-_320px)_/_(1920_-_320)))] gap-[calc(16px_+_(20_-_16)_*_((100vw_-_320px)_/_(1920_-_320)))]  justify-end">
-                <div class="search-box-wrapper transition-all duration-300 max-w-[40%] xl:scale-0 xl:opacity-0 xl:invisible xl:px-body-space xl:max-w-full w-full xl:z-[5] flex-1 xl:absolute xl:left-0">
+                <div class="search-box-wrapper transition-all duration-300 max-w-[40%] 2xl:scale-0 2xl:opacity-0 2xl:invisible 2xl:px-body-space 2xl:max-w-full w-full 2xl:z-[5] flex-1 2xl:absolute 2xl:left-0">
                   <!-- Search Start -->
                   <div class="search-box relative">
                     <input class="bg-gray-light dark:bg-sidebar-dark2 rounded-5 w-full py-[11px] pl-[25px] pr-[55px] rtl:pr-[25px] rtl:pl-[55px] text-xs font-semibold text-title" placeholder="Type to Search..." type="search">
@@ -50,7 +50,7 @@
                 </div>
                 <div class="icon-menu">
                   <ul class="flex items center"> 
-                    <li class="cursor-pointer hidden xl:flex items-center justify-center px-[calc(7px_+_(14_-_7)_*_((100vw_-_320px)_/_(1920_-_320)))] first:pl-0 last:pr-0  last:border-r-none border-r border-border-light dark:border-border-dark rtl:border-l rtl:border-r-0">
+                    <li class="cursor-pointer hidden 2xl:flex items-center justify-center px-[calc(7px_+_(14_-_7)_*_((100vw_-_320px)_/_(1920_-_320)))] first:pl-0 last:pr-0  last:border-r-none border-r border-border-light dark:border-border-dark rtl:border-l rtl:border-r-0">
                       <button class="search-show">
                         <svg class="w-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] stroke-title dark:stroke-white"> 
                           <use href="../../assets/svg/sprite.svg#Search"> </use>
@@ -69,18 +69,20 @@
                           <div class="flex items-center justify-between pb-[15px] border-b border-border-light"> 
                             <h4 class="text-base font-bold text-title">Notification</h4>
                             <button class="font-medium text-primary text-3xs">
-                               Mark All As Read </button>
+                               Mark All As Read</button>
                           </div>
-                          <div class="search-box relative mt-4">
-                            <input class="bg-gray-light border border-border-light w-full py-[8px] pl-[15px] pr-[30px] rounded-5 text-xs font-medium text-title" placeholder="Type to Search..." type="search">
+                          <div class="search-box relative mt-4"> 
+                            <input class="bg-gray-light border dark:bg-sidebar-dark2 dark:border-border-dark border-border-light w-full py-[8px] pl-[15px] pr-[30px] rounded-5 text-xs font-medium text-title" placeholder="Type to Search..." type="search">
                             <svg class="w-4 h-4 stroke-title top-1/2 -translate-y-1/2 right-[15px] absolute"> 
                               <use href="../../assets/svg/sprite.svg#Search"> </use>
                             </svg>
                           </div>
                           <ul class="mt-4 flex flex-col max-h-[232px] overflow-auto custom-scroll"> 
-                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 border-border-light hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./chat.html">
-                                <div class="rounded-full relative "><img class="rounded-full w-9 min-w-[2.25rem] min-h-[2.25rem] h-auto object-cover" src="../../assets/images/avatar/2.jpg" alt="Dmitriy Groshev">
-                                  <div class="indicator absolute border-[2px] border-white top-[-2px] right-[-2px] w-3 h-3 rounded-full bg-success"></div>
+                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 dark:hover:bg-sidebar-dark2 border-border-light hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./chat.html">
+                                <div class="indicator"><span class="chat-status status-online"></span>
+                                  <div class="avatar">
+                                    <div class="w-10 rounded-full h-10 xl:w-9 xl:h-9"><img src="../../assets/images/avatar/2.jpg" alt="Dmitriy Groshev"></div>
+                                  </div>
                                 </div>
                                 <div>
                                   <h4 class="text-xs font-semibold line-clamp-1 text-title">Dmitriy Groshev</h4>
@@ -89,20 +91,24 @@
                               <div class="flex flex-col items-end gap-1 ml-auto"><span class="font-normal text-3xs text-content">17:12</span><span class="leading-none p-1 badge bg-primary rounded-full text-3xs flex items-center justify-center min-w-[22px] min-h-[22px]">3</span>
                               </div>
                             </li>
-                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 border-border-light hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./chat.html">
-                                <div class="rounded-full relative "><img class="rounded-full w-9 min-w-[2.25rem] min-h-[2.25rem] h-auto object-cover" src="../../assets/images/avatar/3.jpg" alt="Sufiya Elija">
-                                  <div class="indicator absolute border-[2px] border-white top-[-2px] right-[-2px] w-3 h-3 rounded-full bg-danger"></div>
+                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 dark:hover:bg-sidebar-dark2 border-border-light hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./chat.html">
+                                <div class="indicator"><span class="chat-status status-offline"></span>
+                                  <div class="avatar">
+                                    <div class="w-10 rounded-full h-10 xl:w-9 xl:h-9"><img src="../../assets/images/avatar/3.jpg" alt="Sufiya Elija"></div>
+                                  </div>
                                 </div>
                                 <div>
                                   <h4 class="text-xs font-semibold line-clamp-1 text-title">Sufiya Elija</h4>
                                   <p class="text-xs font-semibold line-clamp-1 text-content">I need job, Please help me.</p>
                                 </div></a>
-                              <div class="flex flex-col items-end gap-1 ml-auto"><span class="font-normal text-3xs text-content">Fri</span>
+                              <div class="flex flex-col items-end gap-1 ml-auto"><span class="font-normal text-3xs text-content">Fri</span><span class="leading-none p-1 badge bg-primary rounded-full text-3xs flex items-center justify-center min-w-[22px] min-h-[22px]">32</span>
                               </div>
                             </li>
-                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 border-border-light hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./chat.html">
-                                <div class="rounded-full relative "><img class="rounded-full w-9 min-w-[2.25rem] min-h-[2.25rem] h-auto object-cover" src="../../assets/images/avatar/5.jpg" alt="Janis Evans">
-                                  <div class="indicator absolute border-[2px] border-white top-[-2px] right-[-2px] w-3 h-3 rounded-full bg-success"></div>
+                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 dark:hover:bg-sidebar-dark2 border-border-light hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./chat.html">
+                                <div class="indicator"><span class="chat-status status-online"></span>
+                                  <div class="avatar">
+                                    <div class="w-10 rounded-full h-10 xl:w-9 xl:h-9"><img src="../../assets/images/avatar/5.jpg" alt="Janis Evans"></div>
+                                  </div>
                                 </div>
                                 <div>
                                   <h4 class="text-xs font-semibold line-clamp-1 text-title">Janis Evans</h4>
@@ -111,9 +117,11 @@
                               <div class="flex flex-col items-end gap-1 ml-auto"><span class="font-normal text-3xs text-content">8:22</span><span class="leading-none p-1 badge bg-primary rounded-full text-3xs flex items-center justify-center min-w-[22px] min-h-[22px]">12</span>
                               </div>
                             </li>
-                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 border-border-light hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./chat.html">
-                                <div class="rounded-full relative "><img class="rounded-full w-9 min-w-[2.25rem] min-h-[2.25rem] h-auto object-cover" src="../../assets/images/avatar/4.jpg" alt="Mukrani Pabelo">
-                                  <div class="indicator absolute border-[2px] border-white top-[-2px] right-[-2px] w-3 h-3 rounded-full bg-success"></div>
+                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 dark:hover:bg-sidebar-dark2 border-border-light hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./chat.html">
+                                <div class="indicator"><span class="chat-status status-online"></span>
+                                  <div class="avatar">
+                                    <div class="w-10 rounded-full h-10 xl:w-9 xl:h-9"><img src="../../assets/images/avatar/4.jpg" alt="Mukrani Pabelo"></div>
+                                  </div>
                                 </div>
                                 <div>
                                   <h4 class="text-xs font-semibold line-clamp-1 text-title">Mukrani Pabelo</h4>
@@ -122,20 +130,24 @@
                               <div class="flex flex-col items-end gap-1 ml-auto"><span class="font-normal text-3xs text-content">03:14</span><span class="leading-none p-1 badge bg-primary rounded-full text-3xs flex items-center justify-center min-w-[22px] min-h-[22px]">10</span>
                               </div>
                             </li>
-                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 border-border-light hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./chat.html">
-                                <div class="rounded-full relative "><img class="rounded-full w-9 min-w-[2.25rem] min-h-[2.25rem] h-auto object-cover" src="../../assets/images/avatar/2.jpg" alt="Josephin Water">
-                                  <div class="indicator absolute border-[2px] border-white top-[-2px] right-[-2px] w-3 h-3 rounded-full bg-danger"></div>
+                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 dark:hover:bg-sidebar-dark2 border-border-light hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./chat.html">
+                                <div class="indicator"><span class="chat-status status-offline"></span>
+                                  <div class="avatar">
+                                    <div class="w-10 rounded-full h-10 xl:w-9 xl:h-9"><img src="../../assets/images/avatar/2.jpg" alt="Josephin Water"></div>
+                                  </div>
                                 </div>
                                 <div>
                                   <h4 class="text-xs font-semibold line-clamp-1 text-title">Josephin Water</h4>
                                   <p class="text-xs font-semibold line-clamp-1 text-content">You’ve got some kind of a stom...</p>
                                 </div></a>
-                              <div class="flex flex-col items-end gap-1 ml-auto"><span class="font-normal text-3xs text-content">Thu</span>
+                              <div class="flex flex-col items-end gap-1 ml-auto"><span class="font-normal text-3xs text-content">Thu</span><span class="leading-none p-1 badge bg-primary rounded-full text-3xs flex items-center justify-center min-w-[22px] min-h-[22px]">2</span>
                               </div>
                             </li>
-                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 border-border-light hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./chat.html">
-                                <div class="rounded-full relative "><img class="rounded-full w-9 min-w-[2.25rem] min-h-[2.25rem] h-auto object-cover" src="../../assets/images/avatar/5.jpg" alt="Janis Evans">
-                                  <div class="indicator absolute border-[2px] border-white top-[-2px] right-[-2px] w-3 h-3 rounded-full bg-success"></div>
+                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 dark:hover:bg-sidebar-dark2 border-border-light hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./chat.html">
+                                <div class="indicator"><span class="chat-status status-online"></span>
+                                  <div class="avatar">
+                                    <div class="w-10 rounded-full h-10 xl:w-9 xl:h-9"><img src="../../assets/images/avatar/5.jpg" alt="Janis Evans"></div>
+                                  </div>
                                 </div>
                                 <div>
                                   <h4 class="text-xs font-semibold line-clamp-1 text-title">Janis Evans</h4>
@@ -144,15 +156,17 @@
                               <div class="flex flex-col items-end gap-1 ml-auto"><span class="font-normal text-3xs text-content">8:22</span><span class="leading-none p-1 badge bg-primary rounded-full text-3xs flex items-center justify-center min-w-[22px] min-h-[22px]">12</span>
                               </div>
                             </li>
-                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 border-border-light hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./chat.html">
-                                <div class="rounded-full relative "><img class="rounded-full w-9 min-w-[2.25rem] min-h-[2.25rem] h-auto object-cover" src="../../assets/images/avatar/3.jpg" alt="Sufiya Elija">
-                                  <div class="indicator absolute border-[2px] border-white top-[-2px] right-[-2px] w-3 h-3 rounded-full bg-danger"></div>
+                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 dark:hover:bg-sidebar-dark2 border-border-light hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./chat.html">
+                                <div class="indicator"><span class="chat-status status-offline"></span>
+                                  <div class="avatar">
+                                    <div class="w-10 rounded-full h-10 xl:w-9 xl:h-9"><img src="../../assets/images/avatar/3.jpg" alt="Sufiya Elija"></div>
+                                  </div>
                                 </div>
                                 <div>
                                   <h4 class="text-xs font-semibold line-clamp-1 text-title">Sufiya Elija</h4>
                                   <p class="text-xs font-semibold line-clamp-1 text-content">I need job, Please help me.</p>
                                 </div></a>
-                              <div class="flex flex-col items-end gap-1 ml-auto"><span class="font-normal text-3xs text-content">Fri</span>
+                              <div class="flex flex-col items-end gap-1 ml-auto"><span class="font-normal text-3xs text-content">Fri</span><span class="leading-none p-1 badge bg-primary rounded-full text-3xs flex items-center justify-center min-w-[22px] min-h-[22px]">32</span>
                               </div>
                             </li>
                           </ul>
@@ -181,63 +195,63 @@
                             <div class="badge leading-none p-1 badge bg-primary rounded-full text-3xs flex items-center justify-center min-w-[22px] min-h-[22px]">25</div>
                           </div>
                           <ul class="mt-[15px] flex flex-col max-h-[232px] overflow-auto custom-scroll"> 
-                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 border-border-light dark:border-border-dark hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./message.html">
+                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 border-border-light dark:border-border-dark hover:bg-gray-light dark:hover:bg-sidebar-dark2 rounded-5"><a class="flex items-center gap-[12px]" href="./message.html">
                                 <div class="rounded-full relative shadow-lg bg-success flex items-center justify-center rounded-full p-2">
                                   <svg class="w-5 h-5 stroke-white"> 
                                     <use href="../../assets/svg/sprite.svg#Chat"> </use>
                                   </svg>
                                 </div>
-                                <div>
+                                <div> 
                                   <h4 class="text-xs font-semibold line-clamp-1 text-title">New Review Receive</h4>
                                   <p class="text-xs font-semibold line-clamp-1 text-content">15 min ago</p>
                                 </div></a></li>
-                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 border-border-light dark:border-border-dark hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./message.html">
+                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 border-border-light dark:border-border-dark hover:bg-gray-light dark:hover:bg-sidebar-dark2 rounded-5"><a class="flex items-center gap-[12px]" href="./message.html">
                                 <div class="rounded-full relative shadow-lg bg-danger flex items-center justify-center rounded-full p-2">
                                   <svg class="w-5 h-5 stroke-white"> 
                                     <use href="../../assets/svg/sprite.svg#Scan"> </use>
                                   </svg>
                                 </div>
-                                <div>
+                                <div> 
                                   <h4 class="text-xs font-semibold line-clamp-1 text-title">Transaction $250 Success</h4>
                                   <p class="text-xs font-semibold line-clamp-1 text-content">2 hours ago</p>
                                 </div></a></li>
-                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 border-border-light dark:border-border-dark hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./message.html">
+                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 border-border-light dark:border-border-dark hover:bg-gray-light dark:hover:bg-sidebar-dark2 rounded-5"><a class="flex items-center gap-[12px]" href="./message.html">
                                 <div class="rounded-full relative shadow-lg bg-warning flex items-center justify-center rounded-full p-2">
                                   <svg class="w-5 h-5 stroke-white"> 
                                     <use href="../../assets/svg/sprite.svg#Buy"> </use>
                                   </svg>
                                 </div>
-                                <div>
+                                <div> 
                                   <h4 class="text-xs font-semibold line-clamp-1 text-title">Order Place Success</h4>
                                   <p class="text-xs font-semibold line-clamp-1 text-content">2 week ago</p>
                                 </div></a></li>
-                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 border-border-light dark:border-border-dark hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./message.html">
+                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 border-border-light dark:border-border-dark hover:bg-gray-light dark:hover:bg-sidebar-dark2 rounded-5"><a class="flex items-center gap-[12px]" href="./message.html">
                                 <div class="rounded-full relative shadow-lg bg-info flex items-center justify-center rounded-full p-2">
                                   <svg class="w-5 h-5 stroke-white"> 
                                     <use href="../../assets/svg/sprite.svg#Lock"> </use>
                                   </svg>
                                 </div>
-                                <div>
+                                <div> 
                                   <h4 class="text-xs font-semibold line-clamp-1 text-title">Netflix Subscription Expires</h4>
                                   <p class="text-xs font-semibold line-clamp-1 text-content">4 days ago</p>
                                 </div></a></li>
-                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 border-border-light dark:border-border-dark hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./message.html">
+                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 border-border-light dark:border-border-dark hover:bg-gray-light dark:hover:bg-sidebar-dark2 rounded-5"><a class="flex items-center gap-[12px]" href="./message.html">
                                 <div class="rounded-full relative shadow-lg bg-danger flex items-center justify-center rounded-full p-2">
                                   <svg class="w-5 h-5 stroke-white"> 
                                     <use href="../../assets/svg/sprite.svg#Discount"> </use>
                                   </svg>
                                 </div>
-                                <div>
+                                <div> 
                                   <h4 class="text-xs font-semibold line-clamp-1 text-title">Congratulations You Won $2500</h4>
                                   <p class="text-xs font-semibold line-clamp-1 text-content">12 days ago</p>
                                 </div></a></li>
-                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 border-border-light dark:border-border-dark hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./message.html">
+                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 border-border-light dark:border-border-dark hover:bg-gray-light dark:hover:bg-sidebar-dark2 rounded-5"><a class="flex items-center gap-[12px]" href="./message.html">
                                 <div class="rounded-full relative shadow-lg bg-success flex items-center justify-center rounded-full p-2">
                                   <svg class="w-5 h-5 stroke-white"> 
                                     <use href="../../assets/svg/sprite.svg#Upload"> </use>
                                   </svg>
                                 </div>
-                                <div>
+                                <div> 
                                   <h4 class="text-xs font-semibold line-clamp-1 text-title">Latest Updates On You Phone</h4>
                                   <p class="text-xs font-semibold line-clamp-1 text-content">25 days ago</p>
                                 </div></a></li>
@@ -254,14 +268,14 @@
                         </svg>
                         <div class="dropdown-menu !min-w-[320px]">
                           <div class="flex items-center justify-between pb-[15px] border-b border-border-light dark:border-border-dark"> 
-                            <h4 class="text-base font-bold text-title">Cart Items<span class="text-sm font-bold text-content"> (25)</span></h4>
-                            <button class="p-2 transition-all duration-300 rounded-full bg-gray-light group hover:bg-primary">
+                            <h4 class="text-base font-bold text-title">Cart Items<span class="text-sm font-bold text-content">(25) </span></h4>
+                            <button class="p-2 transition-all duration-300 rounded-full bg-gray-light dark:bg-sidebar-dark2 group hover:bg-primary dark:hover:bg-primary">
                               <svg class="w-[18px] h-[18px] transition-all duration-300 group-hover:stroke-white stroke-title"> 
                                 <use href="../../assets/svg/sprite.svg#Delete"> </use>
                               </svg>
                             </button>
                           </div>
-                          <ul class="flex flex-col max-h-[232px] overflow-auto custom-scroll px-1"> 
+                          <ul class="flex flex-col max-h-[232px] overflow-auto custom-scroll px-1">
                             <li class="cart-item flex items-center gap-3 py-3 transition-all duration-300 border-b last:border-b-0 border-border-light dark:border-border-dark rounded-5"><a class="flex items-center gap-[12px]" href="./product.html">
                                 <div class="rounded-full relative "><img class="rounded-full min-w-[2.25rem] min-h-[2.25rem] w-full h-auto object-cover" src="../../assets/images/product/1.jpg" alt="Flower Pot"></div>
                                 <div>
@@ -338,9 +352,9 @@
                               </div>
                             </li>
                           </ul>
-                          <div class="pt-[15px] border-t border-light">
-                            <div class="flex items-center justify-between mb-[15px]">
-                              <h4 class="text-sm font-semibold">Bag Total</h4><span class="text-sm font-semibold">$250.00 </span>
+                          <div class="pt-[15px] border-t border-light dark:border-border-dark dark:border-t">
+                            <div class="flex items-center justify-between mb-[15px]"> 
+                              <h4 class="text-sm font-semibold">Bag Total </h4><span class="text-sm font-semibold">$250.00 </span>
                             </div><a class="block w-full py-2 text-sm font-semibold leading-none text-white btn btn-primary" href="checkout.html">Proceed to Checkout </a>
                           </div>
                         </div>
@@ -355,10 +369,10 @@
                   </ul>
                 </div>
                 <ul class="profile-box flex items-center">
-                  <li class="cursor-pointer pr-[11px] rtl:pr-unset rtl:pl-[11px] rtl:last:pl-0 rtl:last:pr-unset last:pr-0 sm:pr-0 sm:border-none last:border-none rtl:border-l rtl:border-r-0 border-r border-border-2 flex items-center"> 
+                  <li class="cursor-pointer pr-[11px] rtl:pr-unset rtl:pl-[11px] rtl:last:pl-0 rtl:last:pr-unset last:pr-0 sm:pr-0 sm:border-none last:border-none rtl:border-l rtl:border-r-0 border-r border-border-2 dark:border-border-dark  dark:border-r flex items-center"> 
                     <!-- Language Start -->
                     <div class="language-select dropdown group">
-                      <button class="flex items-center max-w-[87px] min-w-[87px] gap-[11px]" id="language-select"><img class="w-[35px] h-auto" src="../../assets/images/flag/en.svg" alt="flag"><span class="flex items-center gap-1 text-lg font-bold 4xl:text-base dark:text-white">En</span>
+                      <button class="flex items-center max-w-[87px] min-w-[87px] md:min-w-[47px] gap-[11px]" id="language-select"><img class="w-[35px] sm:w-[30px] h-auto" src="../../assets/images/flag/en.svg" alt="flag"><span class="flex items-center gap-1 text-lg font-bold 4xl:text-base dark:text-white md:hidden">En</span>
                         <svg class="w-[6px] h-[4px] stroke-title group-hover:rotate-180 duration-300 transition-all dark:stroke-white"> 
                           <use href="../../assets/svg/sprite.svg#Fill-Arrow"> </use>
                         </svg>
@@ -376,11 +390,11 @@
                     </div>
                     <!-- Language End -->
                   </li>
-                  <li class="cursor-pointer flex- pl-[11px] rtl:pr-[11px] rtl:pl-unset rtl:first:pr-0 first:pl-0 flex items-center sm:hidden ">
+                  <li class="cursor-pointer flex- pl-[11px] rtl:pr-[11px] rtl:pl-unset rtl:first:pr-0 first:pl-0 flex items-center">
                     <!-- Profile Start -->
                     <div class="dropdown"> 
                       <div class="flex items-center gap-[10px] cursor-pointer"> 
-                        <div><img class="w-[calc(35px_+_(40_-_35)_*_((100vw_-_320px)_/_(1920_-_320)))] h-auto rounded-full" src="../../assets/images/avatar/1.jpg" alt="avatar"></div>
+                        <div><img class="w-[calc(35px_+_(40_-_35)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(35px_+_(40_-_35)_*_((100vw_-_320px)_/_(1920_-_320)))] rounded-full" src="../../assets/images/avatar/1.jpg" alt="avatar"></div>
                         <div class="md:hidden">
                           <h4 class="text-xs font-bold dark:text-white"> Helen Walter</h4><span class="flex items-center gap-1 font-semibold text-3xs text-content">Admin
                             <svg class="w-[6px] h-[4px]  dark:stroke-white"> 
@@ -419,100 +433,33 @@
               </div>
             </div>
             <!-- Sub Header Start -->
-            <div class="md:hidden py-[14px] border-t border-border-light px-body-space dark:border-border-dark"> 
-              <div class="relative flex items-center justify-between"> 
-                <ul class="flex items-center 2md:shadow-lg 2md:border 2md:border-border-light 2md:z-[5] 2md:p-4 2md:absolute 2md:top-[38px] 2md:rounded-5 2md:left-0 2md:items-start 2md:bg-white 2md:flex-col gap-[calc(8px_+_(31_-_8)_*_((100vw_-_320px)_/_(1920_-_320)))]"> 
+            <div class="py-[14px] border-t border-border-light px-body-space dark:border-border-dark"> 
+              <div class="relative flex items-center justify-between lg:justify-start">
+                <ul class="flex items-center lg:hidden 2md:shadow-lg 2md:border 2md:border-border-light 2md:z-[5] 2md:p-4 2md:absolute 2md:top-[38px] 2md:rounded-5 2md:left-0 2md:items-start 2md:bg-white 2md:flex-col gap-[calc(8px_+_(31_-_8)_*_((100vw_-_320px)_/_(1920_-_320)))]"> 
                   <li class="dropdown on-hover-show cursor-pointer pb-[6px] transition-all relative group before:bg-primary before:absolute before:-translate-x-1/2 before:bottom-0 before:left-1/2 before:w-full before:h-[2px]"> <span class="text-xs font-bold transition-all text-primary">General</span>
-                    <div class="dropdown-menu !min-w-[890px] lg:!min-w-[660px] !left-0 !right-unset !p-0"> 
+                    <div class="dropdown-menu !min-w-[320px] !left-0 !right-unset !p-0"> 
                       <!-- General menu-->
                       <div class="grid grid-cols-12 gap-2">
-                        <div class="col-span-8">
-                          <ul class="columns-2 gap-[10px] p-[15px]"> 
-                            <li class="p-2 rounded-5 transition-all duration-300 hover:bg-gray-light"><a class="flex items-center gap-2" href="index.html"> 
+                        <div class="col-span-12">
+                          <ul class="gap-[10px] p-[15px]"> 
+                            <li class="p-2 transition-all duration-300 rounded-5 hover:bg-gray-light"><a class="flex items-center gap-2" href="index.html"> 
                                 <div class="p-2 rounded-5  border border-primary">
                                   <svg class="w-5 h-5 stroke-primary"> 
                                     <use href="../../assets/svg/sprite.svg#Home"> </use>
                                   </svg>
                                 </div>
                                 <div>
-                                  <h4 class="text-xs font-semibold text-title capitalize line-clamp-1">Unique Dashboard</h4><span class="text-xs font-medium text-content line-clamp-1">Over view of all</span>
+                                  <h4 class="text-xs font-semibold capitalize text-title line-clamp-1">Unique Dashboard</h4><span class="text-xs font-medium text-content line-clamp-1">Over view of all</span>
                                 </div></a></li>
-                            <li class="p-2 rounded-5 transition-all duration-300 hover:bg-gray-light"><a class="flex items-center gap-2" href="friendly.html"> 
+                            <li class="p-2 transition-all duration-300 rounded-5 hover:bg-gray-light"><a class="flex items-center gap-2" href="index.html"> 
                                 <div class="p-2 rounded-5  border border-primary">
                                   <svg class="w-5 h-5 stroke-primary"> 
-                                    <use href="../../assets/svg/sprite.svg#3-User"> </use>
+                                    <use href="../../assets/svg/sprite.svg#Home"> </use>
                                   </svg>
                                 </div>
                                 <div>
-                                  <h4 class="text-xs font-semibold text-title capitalize line-clamp-1">Friendly Dashboard</h4><span class="text-xs font-medium text-content line-clamp-1">Social connectivity</span>
+                                  <h4 class="text-xs font-semibold capitalize text-title line-clamp-1">Unique Dashboard</h4><span class="text-xs font-medium text-content line-clamp-1">Over view of all</span>
                                 </div></a></li>
-                            <li class="p-2 rounded-5 transition-all duration-300 hover:bg-gray-light"><a class="flex items-center gap-2" href="minimal.html"> 
-                                <div class="p-2 rounded-5  border border-primary">
-                                  <svg class="w-5 h-5 stroke-primary"> 
-                                    <use href="../../assets/svg/sprite.svg#Ticket"> </use>
-                                  </svg>
-                                </div>
-                                <div>
-                                  <h4 class="text-xs font-semibold text-title capitalize line-clamp-1">Minimal Dashboard</h4><span class="text-xs font-medium text-content line-clamp-1">Minimal over view </span>
-                                </div></a></li>
-                            <li class="p-2 rounded-5 transition-all duration-300 hover:bg-gray-light"><a class="flex items-center gap-2" href="material.html"> 
-                                <div class="p-2 rounded-5  border border-primary">
-                                  <svg class="w-5 h-5 stroke-primary"> 
-                                    <use href="../../assets/svg/sprite.svg#Calendar"> </use>
-                                  </svg>
-                                </div>
-                                <div>
-                                  <h4 class="text-xs font-semibold text-title capitalize line-clamp-1">Material Dashboard</h4><span class="text-xs font-medium text-content line-clamp-1">Material design</span>
-                                </div></a></li>
-                            <li class="p-2 rounded-5 transition-all duration-300 hover:bg-gray-light"><a class="flex items-center gap-2" href="shopping-place.html"> 
-                                <div class="p-2 rounded-5  border border-primary">
-                                  <svg class="w-5 h-5 stroke-primary"> 
-                                    <use href="../../assets/svg/sprite.svg#Bag"> </use>
-                                  </svg>
-                                </div>
-                                <div>
-                                  <h4 class="text-xs font-semibold text-title capitalize line-clamp-1">Shopping Place Dashboard</h4><span class="text-xs font-medium text-content line-clamp-1">Ecommerce shop place</span>
-                                </div></a></li>
-                            <li class="p-2 rounded-5 transition-all duration-300 hover:bg-gray-light"><a class="flex items-center gap-2" href="retro.html"> 
-                                <div class="p-2 rounded-5  border border-primary">
-                                  <svg class="w-5 h-5 stroke-primary"> 
-                                    <use href="../../assets/svg/sprite.svg#Activity"> </use>
-                                  </svg>
-                                </div>
-                                <div>
-                                  <h4 class="text-xs font-semibold text-title capitalize line-clamp-1">Retro Dashboard</h4><span class="text-xs font-medium text-content line-clamp-1">Monochrome mode eye friendly</span>
-                                </div></a></li>
-                            <li class="p-2 rounded-5 transition-all duration-300 hover:bg-gray-light"><a class="flex items-center gap-2" href="crypto.html"> 
-                                <div class="p-2 rounded-5  border border-primary">
-                                  <svg class="w-5 h-5 stroke-primary"> 
-                                    <use href="../../assets/svg/sprite.svg#Graph"> </use>
-                                  </svg>
-                                </div>
-                                <div>
-                                  <h4 class="text-xs font-semibold text-title capitalize line-clamp-1">Crypto Dashboard</h4><span class="text-xs font-medium text-content line-clamp-1">Crypto curacy analysis</span>
-                                </div></a></li>
-                            <li class="p-2 rounded-5 transition-all duration-300 hover:bg-gray-light"><a class="flex items-center gap-2" href="advanced.html"> 
-                                <div class="p-2 rounded-5  border border-primary">
-                                  <svg class="w-5 h-5 stroke-primary"> 
-                                    <use href="../../assets/svg/sprite.svg#Upload"> </use>
-                                  </svg>
-                                </div>
-                                <div>
-                                  <h4 class="text-xs font-semibold text-title capitalize line-clamp-1">Advanced Dashboard</h4><span class="text-xs font-medium text-content line-clamp-1">Mordent analysis</span>
-                                </div></a></li>
-                          </ul>
-                        </div>
-                        <div class="col-span-4 bg-gray-light p-[15px]">
-                          <h4 class="text-base font-semibold text-title mb-3">More Dashboard                     </h4>
-                          <ul class="flex flex-col gap-2">
-                            <li><a href="reports.html"><span class="transition-all duration-300 hover:text-primary text-xs font-semibold text-title capitalize">
-                                    Reports Dashboard</span></a></li>
-                            <li><a href="support.html"><span class="transition-all duration-300 hover:text-primary text-xs font-semibold text-title capitalize">
-                                    Support Dashboard</span></a></li>
-                            <li><a href="elegance.html"> <span class="transition-all duration-300 hover:text-primary text-xs font-semibold text-title capitalize">
-                                      Elegance Dashboard</span></a></li>
-                            <li><a href="project.html"><span class="transition-all duration-300 hover:text-primary text-xs font-semibold text-title capitalize">
-                                      Project Dashboard </span></a></li>
                           </ul>
                         </div>
                       </div>
@@ -521,142 +468,79 @@
                   <li class="dropdown on-hover-show cursor-pointer pb-[6px] transition-all duration-300 relative group before:bg-primary before:absolute before:-translate-x-1/2 before:bottom-0 before:left-1/2 hover:before:w-full before:h-[2px] before:w-0 "> <span class="text-xs font-bold transition-all duration-300 text-content group-hover:text-primary">Components</span>
                     <div class="dropdown-menu !min-w-[220px] !left-0 !right-unset"> 
                       <!-- Componant menu-->
-                      <ul class="flex flex-col gap-3"> 
-                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2 justify-between" href="javascript:void(0)"><span class="flex items-center gap-2">
+                      <ul class="flex flex-col gap-4"> 
+                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center justify-between gap-2" href="javascript:void(0)"><span class="flex items-center gap-2">
                               <svg class="w-5 h-5 stroke-title"> 
                                 <use href="../../assets/svg/sprite.svg#Folder"> </use>
-                              </svg>Ui Kits</span>
+                              </svg><small class="text-xs leading-7">Ui Kits</small></span>
                             <svg class="w-4 h-4 stroke-title ml-auto"> 
                               <use href="../../assets/svg/sprite.svg#Arrow-Right-2"> </use>
                             </svg></a>
                           <div class="dropdown-menu dropdown-sub-menu">
                             <ul class="flex flex-col gap-2"> 
-                              <li><a href="typography.html">Typography</a></li>
-                              <li><a href="avatar.html">Avatar</a></li>
-                              <li><a href="buttons.html">Buttons</a></li>
-                              <li><a href="badge.html">Badges</a></li>
-                              <li><a href="progress.html">Progress</a></li>
-                              <li><a href="modal.html">Modal</a></li>
-                              <li><a href="alert.html">Alert</a></li>
-                              <li><a href="dropdown.html">Dropdown</a></li>
-                              <li><a href="collapse.html">Collapse</a></li>
-                              <li><a href="tooltip.html">Tooltip</a></li>
-                              <li><a href="divider.html">Divider</a></li>
+                              <li><a href="./alert.html">Alert</a></li>
+                              <li><a href="./avatars.html">Avatars</a></li>
+                              <li><a href="./badge.html">Badge</a></li>
+                              <li><a href="./button.html">Button</a></li>
+                              <li><a href="./collapse.html">Collapse</a></li>
+                              <li><a href="./divider.html">Divider</a></li>
+                              <li><a href="./dropdown.html">Dropdown</a></li>
+                              <li><a href="./modal.html">Modal</a></li>
+                              <li><a href="./progress.html">Progress</a></li>
+                              <li><a href="./tooltip.html">Tooltip</a></li>
+                              <li><a href="./typography.html">Typography</a></li>
                             </ul>
                           </div>
                         </li>
-                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2 justify-between" href="javascript:void(0)"><span class="flex items-center gap-2">
+                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center justify-between gap-2" href="javascript:void(0)"><span class="flex items-center gap-2">
                               <svg class="w-5 h-5 stroke-title"> 
                                 <use href="../../assets/svg/sprite.svg#Ticket-Star"> </use>
-                              </svg>Bonus Ui</span>
+                              </svg><small class="text-xs leading-7">Bonus Ui</small></span>
                             <svg class="w-4 h-4 stroke-title ml-auto"> 
                               <use href="../../assets/svg/sprite.svg#Arrow-Right-2"> </use>
                             </svg></a>
                           <div class="dropdown-menu dropdown-sub-menu">
                             <ul class="flex flex-col gap-2"> 
-                              <li><a href="breadcrumb.html">Breadcrumbs</a></li>
-                              <li><a href="pagination.html">Pagination</a></li>
-                              <li><a href="carousel.html">Carousel</a></li>
-                              <li><a href="countdown.html">Countdown</a></li>
-                              <li><a href="radial-progress.html">Radial progress</a></li>
-                              <li><a href="swap.html">Swap</a></li>
-                              <li><a href="indicator.html">Indicator</a></li>
-                              <li><a href="mask.html">Mask</a></li>
-                              <li><a href="stack.html">Stack</a></li>
-                              <li><a href="toast.html">Toast</a></li>
-                              <li><a href="steps.html">Steps</a></li>
-                              <li><a href="tabs.html">Tabs</a></li>
-                              <li><a href="rating.html">Rating</a></li>
+                              <li><a href="./breadcrumb.html">Breadcrumb</a></li>
+                              <li><a href="./carousel.html">Carousel</a></li>
+                              <li><a href="./countdown.html">Countdown</a></li>
+                              <li><a href="./indicator.html">Indicator</a></li>
+                              <li><a href="./mask.html">Mask</a></li>
+                              <li><a href="./pagination.html">Pagination</a></li>
+                              <li><a href="./radial-progress.html">Radial Progress</a></li>
+                              <li><a href="./rating.html">Rating</a></li>
+                              <li><a href="./stack.html">Stack</a></li>
+                              <li><a href="./steps.html">Steps</a></li>
+                              <li><a href="./swap.html">Swap</a></li>
+                              <li><a href="./swiper-slider.html">Swiper Slider</a></li>
+                              <li><a href="./tabs.html">Tabs</a></li>
                             </ul>
                           </div>
                         </li>
-                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2 justify-between" href="javascript:void(0)"><span class="flex items-center gap-2">
-                              <svg class="w-5 h-5 stroke-title"> 
-                                <use href="../../assets/svg/sprite.svg#Plus"> </use>
-                              </svg>Form Components</span>
-                            <svg class="w-4 h-4 stroke-title ml-auto"> 
-                              <use href="../../assets/svg/sprite.svg#Arrow-Right-2"> </use>
-                            </svg></a>
-                          <div class="dropdown-menu dropdown-sub-menu">
-                            <ul class="flex flex-col gap-2"> 
-                              <li><a href="input-textarea.html">Input and Textarea</a></li>
-                              <li><a href="checkbox-radio.html">Checkbox and Radio</a></li>
-                              <li><a href="select.html">Select</a></li>
-                              <li><a href="switch.html">Switch</a></li>
-                              <li><a href="range.html">Range</a></li>
-                              <li><a href="input-group.html">Input Group </a></li>
-                            </ul>
-                          </div>
-                        </li>
-                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2 justify-between" href="javascript:void(0)"><span class="flex items-center gap-2">
-                              <svg class="w-5 h-5 stroke-title"> 
-                                <use href="../../assets/svg/sprite.svg#Edit-Square"> </use>
-                              </svg>Builders</span>
-                            <svg class="w-4 h-4 stroke-title ml-auto"> 
-                              <use href="../../assets/svg/sprite.svg#Arrow-Right-2"> </use>
-                            </svg></a>
-                          <div class="dropdown-menu dropdown-sub-menu">
-                            <ul class="flex flex-col gap-2"> 
-                              <li><a href="form-builder1.html">Form Builder 1</a></li>
-                              <li><a href="form-builder2.html">Form Builder 2</a></li>
-                              <li><a href="form-builder2.html">Form Builder 2</a></li>
-                              <li><a href="form-builder3.html">Form Builder 3</a></li>
-                            </ul>
-                          </div>
-                        </li>
-                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2 justify-between" href="javascript:void(0)"><span class="flex items-center gap-2">
-                              <svg class="w-5 h-5 stroke-title"> 
-                                <use href="../../assets/svg/sprite.svg#Scan"> </use>
-                              </svg>Animation</span>
-                            <svg class="w-4 h-4 stroke-title ml-auto"> 
-                              <use href="../../assets/svg/sprite.svg#Arrow-Right-2"> </use>
-                            </svg></a>
-                          <div class="dropdown-menu dropdown-sub-menu">
-                            <ul class="flex flex-col gap-2"> 
-                              <li><a href="animate.html">Animate</a></li>
-                              <li><a href="scroll-reveal.html">Scroll Reveal</a></li>
-                              <li><a href="aos.html">AOS animation</a></li>
-                              <li><a href="tilt.html">Tilt Animation</a></li>
-                            </ul>
-                          </div>
-                        </li>
-                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2 justify-between" href="javascript:void(0)"><span class="flex items-center gap-2">
+                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center justify-between gap-2" href="javascript:void(0)"><span class="flex items-center gap-2">
                               <svg class="w-5 h-5 stroke-title"> 
                                 <use href="../../assets/svg/sprite.svg#Danger-Circle"> </use>
-                              </svg>Icons</span>
+                              </svg><small class="text-xs leading-7">Icons</small></span>
                             <svg class="w-4 h-4 stroke-title ml-auto"> 
                               <use href="../../assets/svg/sprite.svg#Arrow-Right-2"> </use>
                             </svg></a>
                           <div class="dropdown-menu dropdown-sub-menu">
                             <ul class="flex flex-col gap-2"> 
-                              <li><a href="fontawesome-icon.html">Fontawesome Icon</a></li>
-                              <li><a href="iconly-icon.html">Iconly Icons</a></li>
-                              <li><a href="feather.html">Feather Icons</a></li>
-                              <li><a href="thimify-icon.html">Thimify Icon</a></li>
-                              <li><a href="whether-icon.html">Whether Icon</a></li>
+                              <li><a href="./feather.html">Feather</a></li>
+                              <li><a href="./fontawesome.html">Font Awesome</a></li>
+                              <li><a href="./iconly.html">Iconly</a></li>
                             </ul>
                           </div>
                         </li>
-                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2 justify-between" href="javascript:void(0)"><span class="flex items-center gap-2">
+                        <li class="w-full "><a class="flex items-center justify-between gap-2" href="apex-chart.html"><span class="flex items-center gap-2">
                               <svg class="w-5 h-5 stroke-title"> 
                                 <use href="../../assets/svg/sprite.svg#Chart"> </use>
-                              </svg>Chart</span>
-                            <svg class="w-4 h-4 stroke-title ml-auto"> 
-                              <use href="../../assets/svg/sprite.svg#Arrow-Right-2"> </use>
-                            </svg></a>
-                          <div class="dropdown-menu dropdown-sub-menu">
-                            <ul class="flex flex-col gap-2"> 
-                              <li><a href="apex-chart.html">Apex Chart</a></li>
-                              <li><a href="echarts.html">Echarts</a></li>
-                              <li><a href="google-chart.html">Google Chart</a></li>
-                              <li><a href="sparkline-chart.html">Sparkline Chart</a></li>
-                              <li><a href="flot-chart.html">Flot Chart</a></li>
-                              <li><a href="knob-chart.html">Knob Chart</a></li>
-                              <li><a href="morris-chart.html">Morris Chart</a></li>
-                              <li><a href="chatjs-chart.html">Chatjs Chart</a></li>
-                              <li><a href="peity-chart.html">Peity Chart</a></li>
-                            </ul>
-                          </div>
+                              </svg><small class="text-xs leading-7">Apex Chart</small></span></a>
+                        </li>
+                        <li class="w-full "><a class="flex items-center justify-between gap-2" href="wow-animation.html"><span class="flex items-center gap-2">
+                              <svg class="w-5 h-5 stroke-title"> 
+                                <use href="../../assets/svg/sprite.svg#Scan"> </use>
+                              </svg><small class="text-xs leading-7">Wow Animation</small></span></a>
                         </li>
                       </ul>
                     </div>
@@ -667,169 +551,176 @@
                       <ul class="flex flex-col gap-3"> 
                         <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2" href="javascript:void(0)"><span class="flex items-center gap-2">
                               <svg class="w-5 h-5 stroke-title"> 
-                                <use href="../../assets/svg/sprite.svg#Message"> </use>
-                              </svg>Email App</span>
+                                <use href="../../assets/svg/sprite.svg#Chat"> </use>
+                              </svg><small class="text-xs leading-7">Chat</small></span>
                             <svg class="w-4 h-4 stroke-title ml-auto"> 
                               <use href="../../assets/svg/sprite.svg#Arrow-Right-2"> </use>
                             </svg></a>
                           <div class="dropdown-menu dropdown-sub-menu">
                             <ul class="flex flex-col gap-2"> 
-                              <li><a href="email.html">Email</a></li>
-                              <li><a href="email-read.html">Email Read</a></li>
-                              <li><a href="email-compose.html">Email Compose</a></li>
+                              <li><a href="chat-app.html">Chat App</a></li>
+                              <li><a href="video-app.html">Video App</a></li>
                             </ul>
                           </div>
                         </li>
+                        <li class="w-full "><a class="flex items-center gap-2" href="calendar.html"><span class="flex items-center gap-2">
+                              <svg class="w-5 h-5 stroke-title"> 
+                                <use href="../../assets/svg/sprite.svg#Calendar"> </use>
+                              </svg><small class="text-xs leading-7">Calendar</small></span></a>
+                        </li>
                         <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2" href="javascript:void(0)"><span class="flex items-center gap-2">
                               <svg class="w-5 h-5 stroke-title"> 
-                                <use href="../../assets/svg/sprite.svg#Buy"> </use>
-                              </svg>Ecommerce</span>
+                                <use href="../../assets/svg/sprite.svg#Bag"> </use>
+                              </svg><small class="text-xs leading-7">Ecommerce</small></span>
                             <svg class="w-4 h-4 stroke-title ml-auto"> 
                               <use href="../../assets/svg/sprite.svg#Arrow-Right-2"> </use>
                             </svg></a>
                           <div class="dropdown-menu dropdown-sub-menu">
                             <ul class="flex flex-col gap-2"> 
-                              <li><a href="shop.html">Shop</a></li>
-                              <li><a href="product.html">Product</a></li>
+                              <li><a href="add-product.html">Add Product</a></li>
                               <li><a href="cart.html">Cart</a></li>
                               <li><a href="checkout.html">Checkout</a></li>
                               <li><a href="invoice.html">Invoice</a></li>
                               <li><a href="invoice-preview.html">Invoice Preview</a></li>
+                              <li><a href="invoice-create.html">Invoice Create</a></li>
+                              <li><a href="product.html">Product</a></li>
+                              <li><a href="shop.html">Shop</a></li>
                               <li><a href="wishlist.html">Wishlist</a></li>
                             </ul>
                           </div>
                         </li>
+                        <li class="w-full "><a class="flex items-center gap-2" href="email.html"><span class="flex items-center gap-2">
+                              <svg class="w-5 h-5 stroke-title"> 
+                                <use href="../../assets/svg/sprite.svg#Message"> </use>
+                              </svg><small class="text-xs leading-7">Email</small></span></a>
+                        </li>
+                        <li class="w-full "><a class="flex items-center gap-2" href="kanban-board.html"><span class="flex items-center gap-2">
+                              <svg class="w-5 h-5 stroke-title"> 
+                                <use href="../../assets/svg/sprite.svg#Paper"> </use>
+                              </svg><small class="text-xs leading-7">Kanban Board</small></span></a>
+                        </li>
+                        <li class="w-full "><a class="flex items-center gap-2" href="todo.html"><span class="flex items-center gap-2">
+                              <svg class="w-5 h-5 stroke-title"> 
+                                <use href="../../assets/svg/sprite.svg#Time-Circle"> </use>
+                              </svg><small class="text-xs leading-7">Todo</small></span></a>
+                        </li>
                         <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2" href="javascript:void(0)"><span class="flex items-center gap-2">
                               <svg class="w-5 h-5 stroke-title"> 
-                                <use href="../../assets/svg/sprite.svg#Paper-Plus"> </use>
-                              </svg>Project</span>
+                                <use href="../../assets/svg/sprite.svg#2-User"> </use>
+                              </svg><small class="text-xs leading-7">User</small></span>
                             <svg class="w-4 h-4 stroke-title ml-auto"> 
                               <use href="../../assets/svg/sprite.svg#Arrow-Right-2"> </use>
                             </svg></a>
                           <div class="dropdown-menu dropdown-sub-menu">
                             <ul class="flex flex-col gap-2"> 
-                              <li><a href="project-list.html">Project List</a></li>
-                              <li><a href="project-create.html">Project Create</a></li>
-                              <li><a href="target.html">Target</a></li>
-                              <li><a href="budget.html">Budget</a></li>
-                              <li><a href="user.html">User</a></li>
-                              <li><a href="activity.html">Activity</a></li>
+                              <li><a href="user-card.html">User Cards</a></li>
+                              <li><a href="user-profile.html">User Profile</a></li>
                             </ul>
                           </div>
                         </li>
-                        <li class="w-full "><a class="flex items-center gap-2" href="chat-app.html"><span class="flex items-center gap-2">
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="dropdown on-hover-show cursor-pointer pb-[6px] transition-all duration-300 relative group before:bg-primary before:absolute before:-translate-x-1/2 before:bottom-0 before:left-1/2 hover:before:w-full before:h-[2px] before:w-0 "> <span class="text-xs font-bold transition-all duration-300 text-content group-hover:text-primary">Forms & Table</span>
+                    <div class="dropdown-menu !min-w-[190px] !left-0 !right-unset"> 
+                      <!-- App Menu -->
+                      <ul class="flex flex-col gap-3"> 
+                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2" href="javascript:void(0)"><span class="flex items-center gap-2">
                               <svg class="w-5 h-5 stroke-title"> 
-                                <use href="../../assets/svg/sprite.svg#Chat"> </use>
-                              </svg>Chat App</span></a>
+                                <use href="../../assets/svg/sprite.svg#Paper"> </use>
+                              </svg><small class="text-xs leading-7">Forms</small></span>
+                            <svg class="w-4 h-4 stroke-title ml-auto"> 
+                              <use href="../../assets/svg/sprite.svg#Arrow-Right-2"> </use>
+                            </svg></a>
+                          <div class="dropdown-menu dropdown-sub-menu">
+                            <ul class="flex flex-col gap-2"> 
+                              <li><a href="./checkbox-radio.html">Checkbox &amp; Radio</a></li>
+                              <li><a href="./form-validation.html">Form Validation</a></li>
+                              <li><a href="./input-textarea.html">Input &amp; Textarea</a></li>
+                              <li><a href="./select.html">Select</a></li>
+                              <li><a href="./switch.html">Switch</a></li>
+                            </ul>
+                          </div>
                         </li>
-                        <li class="w-full "><a class="flex items-center gap-2" href="tasks.html"><span class="flex items-center gap-2">
+                        <li class="w-full "><a class="flex items-center gap-2" href="table.html"><span class="flex items-center gap-2">
                               <svg class="w-5 h-5 stroke-title"> 
-                                <use href="../../assets/svg/sprite.svg#Check-Circle"> </use>
-                              </svg>Tasks</span></a>
-                        </li>
-                        <li class="w-full "><a class="flex items-center gap-2" href="social-App.html"><span class="flex items-center gap-2">
-                              <svg class="w-5 h-5 stroke-title"> 
-                                <use href="../../assets/svg/sprite.svg#3-User"> </use>
-                              </svg>Social App</span></a>
-                        </li>
-                        <li class="w-full "><a class="flex items-center gap-2" href="social-App.html"><span class="flex items-center gap-2">
-                              <svg class="w-5 h-5 stroke-title"> 
-                                <use href="../../assets/svg/sprite.svg#Check-List"> </use>
-                              </svg>Todo App</span></a>
-                        </li>
-                        <li class="w-full "><a class="flex items-center gap-2" href="to-do-app.html"><span class="flex items-center gap-2">
-                              <svg class="w-5 h-5 stroke-title"> 
-                                <use href="../../assets/svg/sprite.svg#Video"> </use>
-                              </svg>Video Chat</span></a>
+                                <use href="../../assets/svg/sprite.svg#Graph"> </use>
+                              </svg><small class="text-xs leading-7">Tables</small></span></a>
                         </li>
                       </ul>
                     </div>
                   </li>
                   <li class="dropdown on-hover-show cursor-pointer pb-[6px] transition-all duration-300 relative group before:bg-primary before:absolute before:-translate-x-1/2 before:bottom-0 before:left-1/2 hover:before:w-full before:h-[2px] before:w-0 "> <span class="text-xs font-bold transition-all duration-300 text-content group-hover:text-primary">Pages</span>
                     <div class="dropdown-menu !min-w-[190px] !left-0 !right-unset"> 
-                      <!-- App Menu -->
+                      <!-- Page Menu -->
                       <ul class="flex flex-col gap-3"> 
                         <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2" href="javascript:void(0)"><span class="flex items-center gap-2">
                               <svg class="w-5 h-5 stroke-title"> 
-                                <use href="../../assets/svg/sprite.svg#Message"> </use>
-                              </svg>Email App</span>
+                                <use href="../../assets/svg/sprite.svg#Folder"> </use>
+                              </svg><small class="text-xs leading-7">Other Pages</small></span>
                             <svg class="w-4 h-4 stroke-title ml-auto"> 
                               <use href="../../assets/svg/sprite.svg#Arrow-Right-2"> </use>
                             </svg></a>
                           <div class="dropdown-menu dropdown-sub-menu">
                             <ul class="flex flex-col gap-2"> 
-                              <li><a href="email.html">Email</a></li>
-                              <li><a href="email-read.html">Email Read</a></li>
-                              <li><a href="email-compose.html">Email Compose</a></li>
+                              <li><a href="./coming-soon.html">Coming Soon</a></li>
+                              <li><a href="./error.html">Error</a></li>
+                              <li><a href="./forgot-password.html">Forgot Password</a></li>
+                              <li><a href="./login.html">Login</a></li>
+                              <li><a href="./otp.html">Otp</a></li>
+                              <li><a href="./register.html">Register</a></li>
+                              <li><a href="./reset-password.html">Reset Password</a></li>
                             </ul>
                           </div>
                         </li>
-                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2" href="javascript:void(0)"><span class="flex items-center gap-2">
+                        <li class="w-full "><a class="flex items-center gap-2" href="sample-page.html"><span class="flex items-center gap-2">
                               <svg class="w-5 h-5 stroke-title"> 
-                                <use href="../../assets/svg/sprite.svg#Buy"> </use>
-                              </svg>Ecommerce</span>
-                            <svg class="w-4 h-4 stroke-title ml-auto"> 
-                              <use href="../../assets/svg/sprite.svg#Arrow-Right-2"> </use>
-                            </svg></a>
-                          <div class="dropdown-menu dropdown-sub-menu">
-                            <ul class="flex flex-col gap-2"> 
-                              <li><a href="shop.html">Shop</a></li>
-                              <li><a href="product.html">Product</a></li>
-                              <li><a href="cart.html">Cart</a></li>
-                              <li><a href="checkout.html">Checkout</a></li>
-                              <li><a href="invoice.html">Invoice</a></li>
-                              <li><a href="invoice-preview.html">Invoice Preview</a></li>
-                              <li><a href="wishlist.html">Wishlist</a></li>
-                            </ul>
-                          </div>
-                        </li>
-                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2" href="javascript:void(0)"><span class="flex items-center gap-2">
-                              <svg class="w-5 h-5 stroke-title"> 
-                                <use href="../../assets/svg/sprite.svg#Paper-Plus"> </use>
-                              </svg>Project</span>
-                            <svg class="w-4 h-4 stroke-title ml-auto"> 
-                              <use href="../../assets/svg/sprite.svg#Arrow-Right-2"> </use>
-                            </svg></a>
-                          <div class="dropdown-menu dropdown-sub-menu">
-                            <ul class="flex flex-col gap-2"> 
-                              <li><a href="project-list.html">Project List</a></li>
-                              <li><a href="project-create.html">Project Create</a></li>
-                              <li><a href="target.html">Target</a></li>
-                              <li><a href="budget.html">Budget</a></li>
-                              <li><a href="user.html">User</a></li>
-                              <li><a href="activity.html">Activity</a></li>
-                            </ul>
-                          </div>
-                        </li>
-                        <li class="w-full "><a class="flex items-center gap-2" href="chat-app.html"><span class="flex items-center gap-2">
-                              <svg class="w-5 h-5 stroke-title"> 
-                                <use href="../../assets/svg/sprite.svg#Chat"> </use>
-                              </svg>Chat App</span></a>
-                        </li>
-                        <li class="w-full "><a class="flex items-center gap-2" href="tasks.html"><span class="flex items-center gap-2">
-                              <svg class="w-5 h-5 stroke-title"> 
-                                <use href="../../assets/svg/sprite.svg#Check-Circle"> </use>
-                              </svg>Tasks</span></a>
-                        </li>
-                        <li class="w-full "><a class="flex items-center gap-2" href="social-App.html"><span class="flex items-center gap-2">
-                              <svg class="w-5 h-5 stroke-title"> 
-                                <use href="../../assets/svg/sprite.svg#3-User"> </use>
-                              </svg>Social App</span></a>
-                        </li>
-                        <li class="w-full "><a class="flex items-center gap-2" href="social-App.html"><span class="flex items-center gap-2">
-                              <svg class="w-5 h-5 stroke-title"> 
-                                <use href="../../assets/svg/sprite.svg#Check-List"> </use>
-                              </svg>Todo App</span></a>
-                        </li>
-                        <li class="w-full "><a class="flex items-center gap-2" href="to-do-app.html"><span class="flex items-center gap-2">
-                              <svg class="w-5 h-5 stroke-title"> 
-                                <use href="../../assets/svg/sprite.svg#Video"> </use>
-                              </svg>Video Chat</span></a>
+                                <use href="../../assets/svg/sprite.svg#Paper"> </use>
+                              </svg><small class="text-xs leading-7">Sample Page</small></span></a>
                         </li>
                       </ul>
                     </div>
                   </li>
-                  <li class="dropdown on-hover-show cursor-pointer pb-[6px] transition-all duration-300 relative group before:bg-primary before:absolute before:-translate-x-1/2 before:bottom-0 before:left-1/2 hover:before:w-full before:h-[2px] before:w-0 "> <span class="text-xs font-bold transition-all duration-300 text-content group-hover:text-primary">Miscellaneous</span></li>
+                  <li class="dropdown on-hover-show cursor-pointer pb-[6px] transition-all duration-300 relative group before:bg-primary before:absolute before:-translate-x-1/2 before:bottom-0 before:left-1/2 hover:before:w-full before:h-[2px] before:w-0 "> <span class="text-xs font-bold transition-all duration-300 text-content group-hover:text-primary">Miscellaneous</span>
+                    <div class="dropdown-menu !min-w-[190px] !left-0 !right-unset"> 
+                      <!-- Miscellaneous Menu -->
+                      <ul class="flex flex-col gap-3"> 
+                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2" href="javascript:void(0)"><span class="flex items-center gap-2">
+                              <svg class="w-5 h-5 stroke-title"> 
+                                <use href="../../assets/svg/sprite.svg#Folder"> </use>
+                              </svg><small class="leading-7 text-xs">Blog</small></span>
+                            <svg class="w-4 h-4 stroke-title ml-auto"> 
+                              <use href="../../assets/svg/sprite.svg#Arrow-Right-2"> </use>
+                            </svg></a>
+                          <div class="dropdown-menu dropdown-sub-menu">
+                            <ul class="flex flex-col gap-2"> 
+                              <li><a href="./blog-grid.html">Blog Grid</a></li>
+                              <li><a href="./blog-detail.html">Blog Detail</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="w-full "><a class="flex items-center gap-2" href="knowledgebase.html"><span class="flex items-center gap-2">
+                              <svg class="w-5 h-5 stroke-title"> 
+                                <use href="../../assets/svg/sprite.svg#Scan"> </use>
+                              </svg><small class="leading-7 text-xs">Knowledgebase</small></span></a>
+                        </li>
+                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2" href="javascript:void(0)"><span class="flex items-center gap-2">
+                              <svg class="w-5 h-5 stroke-title"> 
+                                <use href="../../assets/svg/sprite.svg#Location"> </use>
+                              </svg><small class="leading-7 text-xs">Map</small></span>
+                            <svg class="w-4 h-4 stroke-title ml-auto"> 
+                              <use href="../../assets/svg/sprite.svg#Arrow-Right-2"> </use>
+                            </svg></a>
+                          <div class="dropdown-menu dropdown-sub-menu">
+                            <ul class="flex flex-col gap-2"> 
+                              <li><a href="./maps-js.html">Maps Js</a></li>
+                              <li><a href="./data-map.html">Data Map</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
                 </ul>
                 <div class="flex items-center gap-[14px]">
                   <!-- Breadcrumbs Start -->
@@ -848,8 +739,8 @@
                     </nav>
                   </div>
                   <!-- Breadcrumbs End -->
-                  <div class="custom-select select-style-1 lg:hidden">
-                    <select>
+                  <div class="custom-select select-style-1 lg:hidden dark:text-title">
+                    <select class="dark:text-title">
                       <option selected value="">Last 7 Days </option>
                       <option value="">Last 2 Weeks </option>
                       <option value="">Last 1 Month </option>
@@ -866,7 +757,7 @@
         <!-- Sidebar Start -->
         <div class="page-sidebar sidebar-dark unique-sidebar">
           <aside class="sidebar"> 
-            <div class="logo-wrapper"><a href="index.html"> <img class="w-full" src="../../assets/images/logo/logo.png" alt="logo"></a>
+            <div class="logo-wrapper"><a href="index.html"> <img class="w-full full-sidebar" src="../../assets/images/logo/logo.png" alt="logo"><img class="w-full icon-sidebar" src="../../assets/images/logo/logo-sort-1.png" alt="logo"></a>
               <button class="sidebar-btn">
                 <svg class="w-6 h-6"> 
                   <use href="../../assets/svg/sprite.svg#Category"> </use>
@@ -874,7 +765,7 @@
               </button>
             </div>
             <div class="search-wrapper">
-              <div class="search-box">
+              <div class="search-box"> 
                 <input class="search" placeholder="Search" type="search">
                 <svg class="w-5 h-5"> 
                   <use href="../../assets/svg/sprite.svg#Search"> </use>
@@ -882,9 +773,9 @@
               </div>
             </div>
             <nav class="sidebar-main"> 
-              <ul class="sidebar-links custom-scroll">
+              <ul class="sidebar-links custom-scroll"> 
                 <li class="title">General</li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#Home"> </use>
                       </svg><span class="sidebar-name">Dashboards</span></span>
@@ -895,12 +786,12 @@
                     <li> <a href="./index.html">Unique</a></li>
                   </ul>
                 </li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="./widgets.html"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="./widgets.html"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#Graph"> </use>
                       </svg><span class="sidebar-name">Widgets</span></span></a>
                 </li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#Document"> </use>
                       </svg><span class="sidebar-name">Page layout</span></span>
@@ -914,7 +805,7 @@
                   </ul>
                 </li>
                 <li class="title">Components</li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#Folder"> </use>
                       </svg><span class="sidebar-name">Ui Kits</span></span>
@@ -935,7 +826,7 @@
                     <li> <a href="./typography.html">Typography</a></li>
                   </ul>
                 </li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#Ticket-Star"> </use>
                       </svg><span class="sidebar-name">Bonus Ui</span></span>
@@ -958,7 +849,7 @@
                     <li> <a href="./tabs.html">Tabs</a></li>
                   </ul>
                 </li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#Info-Square"> </use>
                       </svg><span class="sidebar-name">Icons</span></span>
@@ -971,18 +862,18 @@
                     <li> <a href="./iconly.html">Iconly</a></li>
                   </ul>
                 </li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="apex-chart.html"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="apex-chart.html"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#Chart"> </use>
                       </svg><span class="sidebar-name">Apex Chart</span></span></a>
                 </li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="wow-animation.html"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="wow-animation.html"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#Video"> </use>
                       </svg><span class="sidebar-name">Wow Animation</span></span></a>
                 </li>
                 <li class="title">Applications</li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#Chat"> </use>
                       </svg><span class="sidebar-name">Chat</span></span>
@@ -994,12 +885,12 @@
                     <li> <a href="video-app.html">Video App</a></li>
                   </ul>
                 </li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="calendar.html"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="calendar.html"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#Calendar"> </use>
                       </svg><span class="sidebar-name">Calendar</span></span></a>
                 </li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#Bag"> </use>
                       </svg><span class="sidebar-name">Ecommerce</span></span>
@@ -1018,22 +909,22 @@
                     <li> <a href="wishlist.html">Wishlist</a></li>
                   </ul>
                 </li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="email.html"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="email.html"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#Message"> </use>
                       </svg><span class="sidebar-name">Email</span></span></a>
                 </li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="kanban-board.html"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="kanban-board.html"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#Paper"> </use>
                       </svg><span class="sidebar-name">Kanban Board</span></span></a>
                 </li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="todo.html"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="todo.html"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#Time-Circle"> </use>
                       </svg><span class="sidebar-name">Todo</span></span></a>
                 </li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#2-User"> </use>
                       </svg><span class="sidebar-name">User</span></span>
@@ -1046,7 +937,7 @@
                   </ul>
                 </li>
                 <li class="title">Forms &amp; Table</li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#Paper"> </use>
                       </svg><span class="sidebar-name">Forms</span></span>
@@ -1061,13 +952,13 @@
                     <li> <a href="./switch.html">Switch</a></li>
                   </ul>
                 </li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="table.html"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="table.html"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#Graph"> </use>
                       </svg><span class="sidebar-name">Tables</span></span></a>
                 </li>
                 <li class="title">Pages</li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#Folder"> </use>
                       </svg><span class="sidebar-name">Other Pages</span></span>
@@ -1084,13 +975,13 @@
                     <li> <a href="./reset-password.html">Reset Password</a></li>
                   </ul>
                 </li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="sample-page.html"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="sample-page.html"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#Paper"> </use>
                       </svg><span class="sidebar-name">Sample Page</span></span></a>
                 </li>
                 <li class="title">Miscellaneous</li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#Folder"> </use>
                       </svg><span class="sidebar-name">Blog</span></span>
@@ -1102,12 +993,12 @@
                     <li> <a href="./blog-detail.html">Blog Detail</a></li>
                   </ul>
                 </li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="knowledgebase.html"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="knowledgebase.html"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#Scan"> </use>
                       </svg><span class="sidebar-name">Knowledgebase</span></span></a>
                 </li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#Location"> </use>
                       </svg><span class="sidebar-name">Map</span></span>
@@ -1140,23 +1031,23 @@
                       <div class="card-body"> 
                         <div class="user-detail flex flex-col gap-4 items-center">
                           <div class="flex items-center gap-5 2sm:gap-2">
-                            <div class="avatar rounded-full w-20 2sm:w-16 2sm:h-16 h-20 p-[2px] bg-white"><img class="rounded-full" src="../../assets/images/avatar/38.jpg" alt="girl in yellow jacket"></div>
+                            <div class="avatar rounded-full w-20 2sm:w-16 2sm:h-16 h-20 p-[2px] bg-white dark:bg-sidebar-dark2"><img class="rounded-full" src="../../assets/images/avatar/38.jpg" alt="girl in yellow jacket"></div>
                           </div>
                           <div class="flex flex-col gap-2">
                             <div class="text-center"> 
-                              <p class="text-content-title font-semibold text-base">Emayila Sidorshina</p>
-                              <p class="text-content-title font-semibold text-sm">Freelancer</p>
+                              <p class="text-content-title font-semibold text-base dark:text-white">Emayila Sidorshina</p>
+                              <p class="text-content-title font-semibold text-sm dark:text-content">Freelancer</p>
                             </div>
                           </div>
                           <div class="flex items-center gap-6">
-                            <div class="text-center"> 
-                              <p class="text-content-title font-semibold text-xs">359 </p><span class="text-content-title font-medium">Posts</span>
+                            <div class="text-center">
+                              <p class="dark:text-content text-content-title font-semibold text-xs">359 </p><span class="dark:text-content text-content-title font-medium">Posts</span>
                             </div>
                             <div class="text-center"> 
-                              <p class="text-content-title font-semibold text-xs">4.5K </p><span class="text-content-title font-medium">Followers</span>
+                              <p class="dark:text-content text-content-title font-semibold text-xs">4.5K </p><span class="dark:text-content text-content-title font-medium">Followers</span>
                             </div>
                             <div class="text-center"> 
-                              <p class="text-content-title font-semibold text-xs">2.487 </p><span class="text-content-title font-medium">Following       </span>
+                              <p class="dark:text-content text-content-title font-semibold text-xs">2.487 </p><span class="dark:text-content text-content-title font-medium">Following       </span>
                             </div>
                           </div>
                         </div>
@@ -1170,16 +1061,16 @@
                       </div>
                       <div class="card-body flex flex-col gap-3 checkout-detail">
                         <form class="social flex flex-col gap-1 theme-form m-0">
-                          <div class="flex items-center gap-4"><span class="bg-gray-light rounded-full btn !text-facebook"><i class="fa-brands fa-facebook-f w-4 h-4"></i></span>
-                            <input class="!py-2" type="text" id="firstName" value="emayila567" required>
+                          <div class="flex items-center gap-4"><span class="bg-gray-light dark:bg-sidebar-dark2 rounded-full btn !text-facebook"><i class="fa-brands fa-facebook-f w-4 h-4"></i></span>
+                            <input class="dark:border-border-dark !py-2" type="text" id="firstName" value="emayila567" required>
                           </div>
-                          <div class="flex items-center gap-4"><span class="bg-gray-light rounded-full btn !text-linkedin"><i class="fa-brands fa-linkedin-in w-4 h-4"></i></span>
-                            <input class="!py-2" type="text" id="firstName" value="emayilasidorshina21" required>
+                          <div class="flex items-center gap-4"><span class="bg-gray-light dark:bg-sidebar-dark2 rounded-full btn !text-linkedin"><i class="fa-brands fa-linkedin-in w-4 h-4"></i></span>
+                            <input class="dark:border-border-dark !py-2" type="text" id="firstName" value="emayilasidorshina21" required>
                           </div>
-                          <div class="flex items-center gap-4"><span class="bg-gray-light rounded-full btn !text-twitter"><i class="fa-brands fa-twitter w-4 h-4"></i></span>
-                            <input class="!py-2" type="text" id="firstName" value="Emayila_Sidorshina" required>
+                          <div class="flex items-center gap-4"><span class="bg-gray-light dark:bg-sidebar-dark2 rounded-full btn !text-twitter"><i class="fa-brands fa-twitter w-4 h-4"></i></span>
+                            <input class="dark:border-border-dark !py-2" type="text" id="firstName" value="Emayila_Sidorshina" required>
                           </div>
-                          <div class="flex items-center gap-4"><span class="bg-gray-light rounded-full btn instagram !text-instagram">
+                          <div class="flex items-center gap-4"><span class="bg-gray-light dark:bg-sidebar-dark2 rounded-full btn instagram !text-instagram">
                               <svg width="0" height="0">
                                 <radialgradient id="rg" r="150%" cx="30%" cy="107%">
                                   <stop stop-color="#fdf497" offset="0"></stop>
@@ -1189,10 +1080,10 @@
                                   <stop stop-color="#285AEB" offset="0.9"></stop>
                                 </radialgradient>
                               </svg><i class="fa-brands fa-instagram w-4 h-4"></i></span>
-                            <input class="!py-2" type="text" id="firstName" value="emayila_sidorshina_21" required>
+                            <input class="dark:border-border-dark !py-2" type="text" id="firstName" value="emayila_sidorshina_21" required>
                           </div>
-                          <div class="flex items-center gap-4"><span class="bg-gray-light rounded-full btn !text-danger"><i class="fa-solid fa-rss w-4 h-4"></i></span>
-                            <input class="!py-2" type="text" id="firstName" value="Sidorshinaemayila12" required>
+                          <div class="flex items-center gap-4"><span class="bg-gray-light dark:bg-sidebar-dark2 rounded-full btn !text-danger"><i class="fa-solid fa-rss w-4 h-4"></i></span>
+                            <input class="dark:border-border-dark !py-2" type="text" id="firstName" value="Sidorshinaemayila12" required>
                           </div>
                         </form>
                       </div>
@@ -1203,51 +1094,51 @@
               <div class="col-span-9 4xl:col-span-8 lg:col-span-12 w-full tabs flex flex-col"> 
                 <div class="card gap-1">
                   <div class="card-header flex items-center">
-                    <div class="tab-links flex items-center justify-start w-full 2md:w-full border-b border-border-light md:flex-col">
-                      <button class="tab tabs-bordered user-tab flex items-center justify-center tab-active text-content3 !flex-row !gap-2 tab-link md:w-full" data-tabFilter="1"><i class="fa-solid fa-user w-4 h-4 stroke-title-content3"></i>Personal Detail  </button>
+                    <div class="tab-links flex items-center justify-start w-full 2md:w-full border-b border-border-light dark:border-b dark:border-border-dark md:flex-col">
+                      <button class="tab tabs-bordered user-tab flex items-center justify-center tab-active text-content3 !flex-row !gap-2 tab-link md:w-full" data-tabFilter="1"><i class="fa-solid fa-user w-4 h-4 stroke-title-content3"></i>Personal Detail</button>
                       <button class="tab tabs-bordered user-tab flex items-center justify-center text-content3 !flex-row !gap-2 tab-link md:w-full" data-tabFilter="2"><i class="fa-solid fa-gear w-4 h-4 stroke-title-content3"></i>Setting</button>
-                      <button class="tab tabs-bordered user-tab flex items-center justify-center text-content3 !flex-row !gap-2 tab-link md:w-full" data-tabFilter="3"><i class="fa-solid fa-briefcase w-4 h-4 stroke-title-content3"></i>Experience </button>
-                      <button class="tab tabs-bordered user-tab flex items-center justify-center text-content3 !flex-row !gap-2 tab-link md:w-full" data-tabFilter="4"><i class="fa-solid fa-scroll w-4 h-4 stroke-title-content3"></i>Privacy Policy </button>
+                      <button class="tab tabs-bordered user-tab flex items-center justify-center text-content3 !flex-row !gap-2 tab-link md:w-full" data-tabFilter="3"><i class="fa-solid fa-briefcase w-4 h-4 stroke-title-content3"></i>Experience</button>
+                      <button class="tab tabs-bordered user-tab flex items-center justify-center text-content3 !flex-row !gap-2 tab-link md:w-full" data-tabFilter="4"><i class="fa-solid fa-scroll w-4 h-4 stroke-title-content3"></i>Privacy Policy</button>
                     </div>
                   </div>
-                  <div class="card-body"> 
+                  <div class="card-body">
                     <div class="tabs-content checkout-detail">
                       <div class="tab-pan  fade active show first:rounded-tl-none rounded-5 border-none !px-1 !pb-0" data-tabContent="1">
                         <form class="theme-form flex flex-col gap-4 m-0">
                           <div class="grid grid-cols-12 gap-5">
                             <div class="col-span-6 sm:col-span-12">
                               <label for="firstName">First Name</label>
-                              <input type="text" id="firstName" value="Emayila" required>
+                              <input class="dark:border-border-dark" type="text" id="firstName" value="Emayila" required>
                             </div>
                             <div class="col-span-6 sm:col-span-12">
                               <label for="lastName">Last Name</label>
-                              <input type="text" id="lastName" value="Emayila" required>
+                              <input class="dark:border-border-dark" type="text" id="lastName" value="Emayila" required>
                             </div>
                           </div>
                           <div class="grid grid-cols-12 gap-5">
                             <div class="col-span-6 sm:col-span-12">
                               <label for="number">Contact No</label>
-                              <input class="rounded" type="Number" id="number" value="7738478982" maxlength="10" pattern="d{10}" required>
+                              <input class="dark:border-border-dark rounded" type="Number" id="number" value="7738478982" maxlength="10" pattern="d{10}" required>
                             </div>
                             <div class="col-span-6 sm:col-span-12">
                               <label for="email">Email</label>
-                              <input type="email" id="email" value="emayiladosidorshina@gmail.com" required>
+                              <input class="dark:border-border-dark" type="email" id="email" value="emayiladosidorshina@gmail.com" required>
                             </div>
                           </div>
                           <div class="grid grid-cols-12 gap-5">
                             <div class="col-span-6 sm:col-span-12">
                               <label for="designation">Designation</label>
-                              <input type="text" id="designation" value="Fullstack Developer" required>
+                              <input class="dark:border-border-dark" type="text" id="designation" value="Fullstack Developer" required>
                             </div>
                             <div class="col-span-6 sm:col-span-12">
                               <label for="website">Website</label>
-                              <input type="text" id="website" value="www.govo.com" required>
+                              <input class="dark:border-border-dark" type="text" id="website" value="www.govo.com" required>
                             </div>
                           </div>
                           <div class="grid grid-cols-12 gap-5">
                             <div class="col-span-4 2md:col-span-6 sm:col-span-12">
                               <label for="country">Country</label>
-                              <select class="form-select block w-full px-3 text-xs font-normal text-content3 bg-white bg-clip-padding bg-no-repeat border border-border-light rounded-5 transition ease-in-out m-0 min-w-[150px] py-[9px]" id="country" aria-label="Default select example">
+                              <select class="form-select block w-full px-3 text-xs font-normal text-content3 bg-white bg-clip-padding bg-no-repeat border border-border-light rounded-5 transition ease-in-out m-0 dark:border-border-dark dark:bg-sidebar-dark dark:border min-w-[150px] py-[9px]" id="country" aria-label="Default select example">
                                 <option selected="">Australia </option>
                                 <option value="1">India</option>
                                 <option value="2">South Korea</option>
@@ -1259,35 +1150,35 @@
                             </div>
                             <div class="col-span-4 2md:col-span-6 sm:col-span-12">
                               <label for="state">State</label>
-                              <input type="text" id="state" value="New South Wales" required>
+                              <input class="dark:border-border-dark" type="text" id="state" value="New South Wales" required>
                             </div>
                             <div class="col-span-4 2md:col-span-12">
                               <label for="postcode">Postcode</label>
-                              <input type="text" id="postcode" value="2179" required>
+                              <input class="dark:border-border-dark" type="text" id="postcode" value="2179" required>
                             </div>
                           </div>
-                          <div> 
-                            <label for="otherNotes">Other Notes </label>
-                            <textarea class="p-[11px] focus:!border-border-light w-full border border-border-light rounded-5 text-xs text-content" placeholder="Enter your address.." row="3" id="otherNotes"></textarea>
+                          <div>
+                            <label for="otherNotes">Other Notes</label>
+                            <textarea class="p-[11px] focus:!border-border-light dark:border dark:border-border-dark w-full border border-border-light rounded-5 text-xs text-content" placeholder="Enter your address.." row="3" id="otherNotes"></textarea>
                           </div>
                           <div class="flex justify-end items-center gap-3"><a class="btn bg-secondary text-xs text-white flex items-center gap-2 !w-fit justify-center !m-0 py-2" href="javascript:void(0)" type="button">Update</a><a class="btn btn-primary text-xs text-white flex items-center gap-2 !w-fit justify-center !m-0 py-2" href="javascript:void(0)" type="button">Cancel</a></div>
                         </form>
                       </div>
                       <div class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0" data-tabContent="2">
                         <form class="theme-form flex flex-col gap-4 m-0 mb-2">                       
-                          <h6 class="font-bold">Change Password </h6>
+                          <h6 class="text-white font-bold">Change Password </h6>
                           <div class="grid grid-cols-12 gap-5">
                             <div class="col-span-4 2md:col-span-12">
                               <label for="oldpassword">Old Password* </label>
-                              <input type="password" id="oldpassword" value="1587845" required>
+                              <input class="dark:border-border-dark dark:border" type="password" id="oldpassword" value="1587845" required>
                             </div>
                             <div class="col-span-4 2md:col-span-12">
                               <label for="newpassword">New Password* </label>
-                              <input type="password" id="newpassword" value="1587845" required>
+                              <input class="dark:border-border-dark dark:border" type="password" id="newpassword" value="1587845" required>
                             </div>
                             <div class="col-span-4 2md:col-span-12">
                               <label for="confirmpassword">Confirm Password* </label>
-                              <input type="password" id="confirmpassword" value="1587845" required>
+                              <input class="dark:border-border-dark dark:border" type="password" id="confirmpassword" value="1587845" required>
                             </div>
                           </div>
                           <div class="!mb-0"><a class="!text-primary text-xs" href="javascript:void(0)">Forgot Password?</a></div>
@@ -1295,52 +1186,52 @@
                         </form>
                         <form class="theme-form flex flex-col gap-4 m-0 mb-2">   
                           <div>
-                            <h6 class="font-bold">Verification code</h6><span class="!mb-0 mt-2 !text-start">We have sent the code verification to your email address</span>
+                            <h6 class="dark:text-white font-bold">Verification code</h6><span class="!mb-0 mt-2 !text-start">We have sent the code verification to your email address</span>
                           </div><span class="mt-0 edit flex items-center gap-2 text-xs !text-primary">User2211@gmail.com <a href="javascript:void(0)"> <i class="w-5 h-5 stroke-primary" data-feather="edit-3"></i></a></span>
                           <div class="flex items-center gap-2">
-                            <input class="text-center input-otp " placeholder="0" type="tel" required oninput="digitValidate(this)" onkeyup="tabChange(1)" maxlength="1">
-                            <input class="text-center input-otp " placeholder="0" type="tel" required oninput="digitValidate(this)" onkeyup="tabChange(2)" maxlength="1">
-                            <input class="text-center input-otp " placeholder="0" type="tel" required oninput="digitValidate(this)" onkeyup="tabChange(3)" maxlength="1">
-                            <input class="text-center input-otp " placeholder="0" type="tel" required oninput="digitValidate(this)" onkeyup="tabChange(4)" maxlength="1">
+                            <input class="text-center input-otp dark:bg-sidebar-dark2 dark:border-border-dark" placeholder="0" type="tel" required oninput="digitValidate(this)" onkeyup="tabChange(1)" maxlength="1">
+                            <input class="text-center input-otp dark:bg-sidebar-dark2 dark:border-border-dark" placeholder="0" type="tel" required oninput="digitValidate(this)" onkeyup="tabChange(2)" maxlength="1">
+                            <input class="text-center input-otp dark:bg-sidebar-dark2 dark:border-border-dark" placeholder="0" type="tel" required oninput="digitValidate(this)" onkeyup="tabChange(3)" maxlength="1">
+                            <input class="text-center input-otp dark:bg-sidebar-dark2 dark:border-border-dark" placeholder="0" type="tel" required oninput="digitValidate(this)" onkeyup="tabChange(4)" maxlength="1">
                           </div>
-                          <div class="flex justify-end items-center"> <a class="btn bg-primary text-xs text-white flex items-center gap-2 !w-fit justify-center py-2 !m-0" href="javascript:void(0)" type="button">Submit</a></div>
+                          <div class="flex justify-end items-center"><a class="btn bg-primary text-xs text-white flex items-center gap-2 !w-fit justify-center py-2 !m-0" href="javascript:void(0)" type="button">Submit</a></div>
                         </form>
-                        <div class="mb-2"> 
-                          <h6 class="font-bold mb-2">Login History </h6>
-                          <div class="flex gap-3 items-center justify-between border-b border-border-light last:border-none pb-3 last:pb-0 pt-3 first:pt-0"> 
+                        <div class="mb-2">
+                          <h6 class="dark:text-white font-bold mb-2">Login History </h6>
+                          <div class="flex gap-3 items-center justify-between border-b border-border-light dark:border-b dark:border-border-dark last:border-none pb-3 last:pb-0 pt-3 first:pt-0"> 
                             <div class="flex items-center gap-4"> <i class="fa-brands fa-windows w-5 h-5 text-primary"></i>
                               <div> 
-                                <p class="text-title text-xs"> Chrome on Windows</p><span class="text-content3 text-xs">Dubai, 20 Jan 2023 23:07</span>
+                                <p class="text-white text-title text-xs"> Chrome on Windows</p><span class="text-content3 text-xs">Dubai, 20 Jan 2023 23:07</span>
                               </div>
                             </div>
                             <div> 
                               <p class="text-content3 text-xs">Logout</p>
                             </div>
                           </div>
-                          <div class="flex gap-3 items-center justify-between border-b border-border-light last:border-none pb-3 last:pb-0 pt-3 first:pt-0"> 
-                            <div class="flex items-center gap-4"> <i class="fa-brands fa-apple w-5 h-5 text-title"></i>
-                              <div> 
-                                <p class="text-title text-xs"> Chrome on MacOS</p><span class="text-content3 text-xs"> Australia, 16 Jan 2023 15:07</span>
+                          <div class="flex gap-3 items-center justify-between border-b border-border-light dark:border-b dark:border-border-dark last:border-none pb-3 last:pb-0 pt-3 first:pt-0"> 
+                            <div class="flex items-center gap-4"><i class="fa-brands fa-apple w-5 h-5 text-title dark:text-primary"></i>
+                              <div>
+                                <p class="text-white text-title text-xs"> Chrome on MacOS</p><span class="text-content3 text-xs"> Australia, 16 Jan 2023 15:07</span>
                               </div>
                             </div>
-                            <div> 
+                            <div>
                               <p class="text-content3 text-xs">Logout</p>
                             </div>
                           </div>
-                          <div class="flex gap-3 items-center justify-between border-b border-border-light last:border-none pb-3 last:pb-0 pt-3 first:pt-0"> 
+                          <div class="flex gap-3 items-center justify-between border-b border-border-light dark:border-b dark:border-border-dark last:border-none pb-3 last:pb-0 pt-3 first:pt-0"> 
                             <div class="flex items-center gap-4"> <i class="fa-solid fa-mobile-screen w-5 h-5 text-secondary"></i>
                               <div> 
-                                <p class="text-title text-xs"> Chrome on iPhone</p><span class="text-content3 text-xs"> India, 12 Jan 2023 17:07</span>
+                                <p class="text-white text-title text-xs"> Chrome on iPhone</p><span class="text-content3 text-xs"> India, 12 Jan 2023 17:07</span>
                               </div>
                             </div>
                             <div> 
                               <p class="text-content3 text-xs">Logout</p>
                             </div>
                           </div>
-                          <div class="flex gap-3 items-center justify-between border-b border-border-light last:border-none pb-3 last:pb-0 pt-3 first:pt-0"> 
+                          <div class="flex gap-3 items-center justify-between border-b border-border-light dark:border-b dark:border-border-dark last:border-none pb-3 last:pb-0 pt-3 first:pt-0"> 
                             <div class="flex items-center gap-4"> <i class="fa-solid fa-robot w-5 h-5 text-success"></i>
                               <div> 
-                                <p class="text-title text-xs">Chrome on Android</p><span class="text-content3 text-xs"> Switzerland, 10 Jan 2023 13:07</span>
+                                <p class="text-white text-title text-xs">Chrome on Android</p><span class="text-content3 text-xs"> Switzerland, 10 Jan 2023 13:07</span>
                               </div>
                             </div>
                             <div> 
@@ -1354,22 +1245,22 @@
                           <div class="flex flex-col gap-4 m-0" id="newForm">
                             <div class="flex flex-col gap-4 m-0" id="1">
                               <div> 
-                                <h6 class="font-bold">Job Detail</h6>
+                                <h6 class="dark:text-white font-bold">Job Detail</h6>
                               </div>
                               <div>
                                 <label for="jobtitle">Job Title</label>
-                                <input type="text" id="jobtitle" placeholder="Enter your first name" required>
+                                <input class="dark:border-border-dark" type="text" id="jobtitle" placeholder="Enter your first name" required>
                               </div>
                               <div class="grid grid-cols-12 gap-5">
                                 <div class="col-span-6 4xl:col-span-5 xl:col-span-4 2md:col-span-12">
                                   <label for="companyName">Company Name</label>
-                                  <input type="text" id="companyName" placeholder="Enter your first name" required>
+                                  <input class="dark:border-border-dark" type="text" id="companyName" placeholder="Enter your first name" required>
                                 </div>
                                 <div class="col-span-6 4xl:col-span-7 xl:col-span-8 2md:col-span-12">
                                   <label for="companyName">Experience Year</label>
                                   <div class="grid grid-cols-12">
                                     <div class="col-span-5">
-                                      <select class="form-select block w-full px-3 text-xs font-normal text-content3 bg-white bg-clip-padding bg-no-repeat border border-border-light rounded-5 transition ease-in-out m-0 min-w-[150px] py-[9px] 2md:min-w-fit" id="sortby" aria-label="Default select example">
+                                      <select class="form-select block w-full px-3 text-xs font-normal text-content3 bg-white bg-clip-padding bg-no-repeat border border-border-light rounded-5 transition ease-in-out m-0 dark:border-border-dark dark:bg-sidebar-dark2 min-w-[150px] py-[9px] 2md:min-w-fit" id="sortby" aria-label="Default select example">
                                         <option selected="">2017</option>
                                         <option value="1">2018</option>
                                         <option value="2">2019</option>
@@ -1380,7 +1271,7 @@
                                     </div>
                                     <div class="col-auto flex items-center justify-center">to </div>
                                     <div class="col-span-5">
-                                      <select class="form-select block w-full px-3 text-xs font-normal text-content3 bg-white bg-clip-padding bg-no-repeat border border-border-light rounded-5 transition ease-in-out m-0 min-w-[150px] py-[9px] 2md:min-w-fit" id="sortby" aria-label="Default select example">
+                                      <select class="form-select block w-full px-3 text-xs font-normal text-content3 bg-white bg-clip-padding bg-no-repeat border border-border-light rounded-5 transition ease-in-out m-0 dark:border-border-dark dark:bg-sidebar-dark2 min-w-[150px] py-[9px] 2md:min-w-fit" id="sortby" aria-label="Default select example">
                                         <option selected="">2017</option>
                                         <option value="1">2018</option>
                                         <option value="2">2019</option>
@@ -1394,7 +1285,7 @@
                               </div>
                               <div>
                                 <label for="address">Job Description </label>
-                                <textarea class="p-[11px] focus:!border-border-light w-full border border-border-light rounded-5 text-xs text-content" placeholder="Enter your address.." row="3" id="address">  </textarea>
+                                <textarea class="dark:border-border-dark p-[11px] focus:!border-border-light w-full border border-border-light rounded-5 text-xs text-content" placeholder="Enter your address.." row="3" id="address">  </textarea>
                               </div>
                               <div class="text-end"><a class="btn btn-primary text-xs text-white !w-fit !m-0 py-2" href="javascript:deleteEl(1)" type="button">Delete </a></div>
                             </div>
@@ -1405,15 +1296,15 @@
                       </div>
                       <div class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0" data-tabContent="4">
                         <div class="flex flex-col gap-4">
-                          <div class="border-b border-border-light border-dashed last:border-none pb-5 last:pb-0"> 
-                            <h6 class="font-bold mb-[2px]">Password Manager</h6>
-                            <div class="flex items-base justify-between gap-2 border-b border-border-light last:border-none pb-4 pt-4 first:pt-0 last:pb-0"><span class="font-medium text-[15px]">Offer to save passwords</span>
+                          <div class="border-b border-border-light border-dashed last:border-none pb-5 last:pb-0 dark:border-border-dark"> 
+                            <h6 class="font-bold mb-[2px] dark:text-white">Password Manager</h6>
+                            <div class="flex items-base justify-between gap-2 border-b border-border-light dark:border-b dark:border-border-dark last:border-none pb-4 pt-4 first:pt-0 last:pb-0"><span class="font-medium text-[15px] dark:text-content3">Offer to save passwords</span>
                               <label class="inline-flex relative items-center cursor-pointer">
                                 <input class="sr-only peer" type="checkbox"><span class="w-7 h-4 bg-content rounded-full peer peer-focus:outline-none peer-checked:after:translate-x-full peer-checked:after:content-white after:content-[''] after:absolute after:top-[3px] after:left-[2px] after:bg-white after:border-gray-light after:border after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-primary"></span>
                               </label>
                             </div>
-                            <div class="border-b border-border-light last:border-none pb-4 pt-4 first:pt-0 last:pb-0"><span class="font-medium text-[15px]">Auto Sign-in</span>
-                              <div class="flex items-base justify-between gap-2"> 
+                            <div class="border-b border-border-light dark:border-b dark:border-border-dark last:border-none pb-4 pt-4 first:pt-0 last:pb-0"><span class="font-medium text-[15px] dark:text-content3">Auto Sign-in</span>
+                              <div class="flex items-base justify-between gap-2">
                                 <p class="text-content3 text-2xs">Use saved credentials to log in automatically to websites and applications. If it's disabled, you'll always be prompted for confirmation before logging in to a website or app. </p>
                                 <label class="inline-flex relative items-base cursor-pointer">
                                   <input class="sr-only peer" type="checkbox" checked><span class="w-7 h-4 bg-content rounded-full peer peer-focus:outline-none peer-checked:after:translate-x-full peer-checked:after:content-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-light after:border after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-primary"></span>
@@ -1421,9 +1312,9 @@
                               </div>
                             </div>
                           </div>
-                          <div class="border-b border-border-light border-dashed last:border-none pb-5 last:pb-0"> 
-                            <h6 class="font-bold mb-[2px]">Payment Method</h6>
-                            <div class="border-b border-border-light last:border-none pb-4 pt-4 first:pt-0 last:pb-0"><span class="font-medium text-[15px]">Save and fill payment methods</span>
+                          <div class="border-b border-border-light dark:border-b dark:border-border-dark border-dashed last:border-none pb-5 last:pb-0 "> 
+                            <h6 class="font-bold mb-[2px] dark:text-white">Payment Method</h6>
+                            <div class="border-b border-border-light last:border-none pb-4 pt-4 first:pt-0 last:pb-0 dark:border-b dark:border-border-dark"><span class="font-medium text-[15px] dark:text-content3">Save and fill payment methods</span>
                               <div class="flex items-base justify-between gap-2"> 
                                 <p class="text-content3 text-2xs">Utilizes your saved payment methods to complete payment forms </p>
                                 <label class="inline-flex relative items-base cursor-pointer">
@@ -1431,16 +1322,16 @@
                                 </label>
                               </div>
                             </div>
-                            <div class="flex items-base justify-between gap-2 border-b border-border-light last:border-none pb-4 pt-4 first:pt-0 last:pb-0"><span class="font-medium text-[15px]">Allow sites to check if you have payment methods saved</span>
+                            <div class="flex items-base justify-between gap-2 border-b dark:border-b dark:border-border-dark border-border-light last:border-none pb-4 pt-4 first:pt-0 last:pb-0"><span class="font-medium text-[15px] dark:text-content3">Allow sites to check if you have payment methods saved</span>
                               <label class="inline-flex relative items-base cursor-pointer">
                                 <input class="sr-only peer" type="checkbox"><span class="w-7 h-4 bg-content rounded-full peer peer-focus:outline-none peer-checked:after:translate-x-full peer-checked:after:content-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-light after:border after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-primary"></span>
                               </label>
                             </div>
                           </div>
-                          <div class="border-b border-border-light border-dashed last:border-none pb-5 last:pb-0"> 
-                            <h6 class="font-bold mb-[2px]">Addresses</h6>
-                            <div class="border-b border-border-light last:border-none pb-4 pt-4 first:pt-0 last:pb-0"><span class="font-medium text-[15px]">Save and fill addresses</span>
-                              <div class="flex items-base justify-between gap-2"> 
+                          <div class="border-b border-border-light dark:border-b dark:border-border-dark border-dashed last:border-none pb-5 last:pb-0 "> 
+                            <h6 class="font-bold mb-[2px] dark:text-white">Addresses</h6>
+                            <div class="border-b border-border-light last:border-none pb-4 pt-4 first:pt-0 last:pb-0 dark:border-b dark:border-border-dark"><span class="font-medium text-[15px] dark:text-content3">Save and fill addresses</span>
+                              <div class="flex items-base justify-between gap-2">
                                 <p class="text-content3 text-2xs">Includes details such contact details, email addresses, and delivery addresses.</p>
                                 <label class="inline-flex relative items-base cursor-pointer">
                                   <input class="sr-only peer" type="checkbox"><span class="w-7 h-4 bg-content rounded-full peer peer-focus:outline-none peer-checked:after:translate-x-full peer-checked:after:content-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-light after:border after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-primary"></span>
@@ -1448,75 +1339,75 @@
                               </div>
                             </div>
                           </div>
-                          <div class="border-b border-border-light border-dashed last:border-none pb-5 last:pb-0"> 
-                            <h6 class="font-bold mb-[2px]">Safe Browsing</h6>
-                            <div class="border-b border-border-light last:border-none pb-4 pt-4 first:pt-0 last:pb-0">
+                          <div class="border-b border-border-light dark:border-b dark:border-border-dark border-dashed last:border-none pb-5 last:pb-0 "> 
+                            <h6 class="font-bold mb-[2px] dark:text-white">Safe Browsing</h6>
+                            <div class="border-b border-border-light dark:border-b dark:border-border-dark last:border-none pb-4 pt-4 first:pt-0 last:pb-0">
                               <div class="radio-button radio-md primary !gap-4">
                                 <input id="security1" type="radio" name="security">
                                 <div class="check min-w-[1.15rem] !h-[1.15rem] before:!w-3 before:!h-3"></div>
                                 <label class="text-xs cursor-pointer text-[15px] font-medium" for="security1"> 
-                                  <p class="font-medium text-xs">Enhanced protection   </p>
+                                  <p class="font-medium text-xs dark:text-content3">Enhanced protection   </p>
                                   <p class="text-content3 text-2xs">Faster, more proactive defense against malicious downloads, extensions, and websites. Warns you about password breaches. Needs surfing data to be provided to Google.                                                          </p>
                                 </label>
                               </div>
                             </div>
-                            <div class="border-b border-border-light last:border-none pb-4 pt-4 first:pt-0 last:pb-0">
+                            <div class="border-b border-border-light dark:border-b dark:border-border-dark last:border-none pb-4 pt-4 first:pt-0 last:pb-0">
                               <div class="radio-button radio-md primary !gap-4">
                                 <input id="security2" type="radio" name="security" checked>
                                 <div class="check min-w-[1.15rem] !h-[1.15rem] before:!w-3 before:!h-3"></div>
                                 <label class="text-xs cursor-pointer text-[15px] font-medium" for="security2"> 
-                                  <p class="font-medium text-xs">Standard protection </p>
+                                  <p class="font-medium text-xs dark:text-content3">Standard protection </p>
                                   <p class="text-content3 text-2xs">Standard protection against websites, downloads and extensions that are known to be dangerous</p>
                                 </label>
                               </div>
                             </div>
-                            <div class="border-b border-border-light last:border-none pb-4 pt-4 first:pt-0 last:pb-0">
+                            <div class="border-b border-border-light dark:border-b dark:border-border-dark last:border-none pb-4 pt-4 first:pt-0 last:pb-0">
                               <div class="radio-button radio-md primary !gap-4">
                                 <input id="security2" type="radio" name="security">
                                 <div class="check min-w-[1.15rem] !h-[1.15rem] before:!w-3 before:!h-3"></div>
                                 <label class="text-xs cursor-pointer text-[15px] font-medium" for="security2"> 
-                                  <p class="font-medium text-xs">No protection (not recommended) </p>
+                                  <p class="font-medium text-xs dark:text-content3">No protection (not recommended) </p>
                                   <p class="text-content3 text-2xs">Does not protect you against dangerous websites, downloads and extensions. Other Google services, such as Gmail and Search, will still provide Safe Browsing protection for you, if it is available.</p>
                                 </label>
                               </div>
                             </div>
                           </div>
-                          <div class="border-b border-border-light border-dashed last:border-none pb-5 last:pb-0"> 
-                            <h6 class="font-bold mb-[2px]">Notifications</h6>
+                          <div class="border-b border-border-light dark:border-b dark:border-border-dark border-dashed last:border-none pb-5 last:pb-0 ">
+                            <h6 class="font-bold mb-[2px] dark:text-white">Notifications</h6>
                             <p class="text-content3 text-2xs">Sites automatically follow this setting when you visit them</p>
-                            <div class="border-b border-border-light last:border-none pb-4 pt-4 first:pt-0 last:pb-0">
+                            <div class="border-b border-border-light dark:border-b dark:border-border-dark last:border-none pb-4 pt-4 first:pt-0 last:pb-0">
                               <div class="radio-button radio-md primary !gap-4">
                                 <input id="notify1" type="radio" name="notify" checked>
                                 <div class="check min-w-[1.15rem] !h-[1.15rem] before:!w-3 before:!h-3"></div>
                                 <label class="text-xs cursor-pointer text-[15px] font-medium" for="notify1"> 
-                                  <div class="flex gap-2 items-center"> <i class="w-4 h-4 stroke-title" data-feather="bell"></i>
-                                    <p class="font-medium text-xs">Sites can ask to send notifications  </p>
+                                  <div class="flex gap-2 items-center"><i class="w-4 h-4 stroke-title" data-feather="bell"></i>
+                                    <p class="font-medium text-xs dark:text-content3">Sites can ask to send notifications  </p>
                                   </div>
                                 </label>
                               </div>
                             </div>
-                            <div class="border-b border-border-light last:border-none pb-4 pt-4 first:pt-0 last:pb-0">
+                            <div class="border-b border-border-light dark:border-b dark:border-border-dark last:border-none pb-4 pt-4 first:pt-0 last:pb-0">
                               <div class="radio-button radio-md primary !gap-4">
                                 <input id="notify2" type="radio" name="notify">
                                 <div class="check min-w-[1.15rem] !h-[1.15rem] before:!w-3 before:!h-3"></div>
                                 <label class="text-xs cursor-pointer text-[15px] font-medium" for="notify2"> 
                                   <div class="flex gap-2 items-center"> <i class="w-4 h-4 stroke-title" data-feather="bell"></i>
                                     <div> 
-                                      <p class="font-medium text-xs">Use quieter messaging </p>
+                                      <p class="font-medium text-xs dark:text-content3">Use quieter messaging </p>
                                       <p class="text-content3 text-2xs">Sites are blocked from interrupting you when they ask to send notifications</p>
                                     </div>
                                   </div>
                                 </label>
                               </div>
                             </div>
-                            <div class="border-b border-border-light last:border-none pb-4 pt-4 first:pt-0 last:pb-0">
+                            <div class="border-b border-border-light dark:border-b dark:border-border-dark last:border-none pb-4 pt-4 first:pt-0 last:pb-0">
                               <div class="radio-button radio-md primary !gap-4">
                                 <input id="notify3" type="radio" name="notify">
                                 <div class="check min-w-[1.15rem] !h-[1.15rem] before:!w-3 before:!h-3"></div>
                                 <label class="text-xs cursor-pointer text-[15px] font-medium" for="notify3"> 
                                   <div class="flex gap-2 items-center"> <i class="w-4 h-4 stroke-title" data-feather="bell-off"></i>
                                     <div>
-                                      <p class="font-medium text-xs">Don't allow sites to send notifications </p>
+                                      <p class="font-medium text-xs dark:text-content3">Don't allow sites to send notifications </p>
                                       <p class="text-content3 text-2xs">Features that need notifications won't work</p>
                                     </div>
                                   </div>
@@ -1534,7 +1425,7 @@
           </div>
         </div>
         <!-- Page Body End  -->
-        <div class="page-footer fixed bottom-0 2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300 sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap"> 
+        <div class="page-footer 3sm:!px-[10px] fixed bottom-0 xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300 sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap"> 
           <p class="text-xs font-semibold text-center text-content">Copyright 2023 © Govo theme by pixelstrap</p>
           <div class="flex items-center gap-2"> 
             <p class="text-xs font-semibold text-center text-content">Hand crafted & made with</p><i class="stroke-danger h-[18px] w-[18px] fill-danger" data-feather="heart"></i>
@@ -1542,14 +1433,14 @@
         </div>
       </div>
       <!-- Customizer-->
-      <div class="bg-white customizer-sidebar dark:bg-sidebar-dark2">
+      <div class="bg-white customizer-sidebar dark:bg-sidebar-dark2 dark:border-border-dark">
         <div class="flex rtl:flex items-center text-title bg-primary justify-between  p-[15px] shadow-md"> <span class="text-base font-semibold text-white">Customizer</span>
           <button class="customizer-close"> <i class="w-4 h-4 stroke-white" data-feather="x"></i></button>
         </div>
         <div class="py-[4px] dark:bg-mode-200">
           <div class="px-[15px] py-7  h-[calc(100vh_-_139px)] overflow-auto ">
-            <ul class="flex flex-col gap-7 mode-event">  
-              <li>
+            <ul class="flex flex-col gap-7 mode-event">
+              <li> 
                 <div>
                   <h5 class="leading-none text-dark text-sm font-semibold">Template Mode</h5><span class="leading-none text-content text-xs font-medium">Choose template mode dark & light</span>
                 </div>
@@ -1601,7 +1492,7 @@
                 </div>
               </li>
               <li>
-                <div class="flex items-center justify-between"> <span class="text-sm font-semobold text-title">Monochrome Mode</span>
+                <div class="flex items-center justify-between"> <span class="text-sm font-semobold text-title">Monochrome Mode </span>
                   <label class="inline-flex relative items-center cursor-pointer">
                     <input class="sr-only peer monochrome toggle toggle-primary" name="monochrome" type="checkbox" id="monochrome"><span class="w-7 h-4 bg-content rounded-full peer peer-focus:outline-none peer-checked:after:translate-x-full peer-checked:after:content-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-light after:border after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-primary"></span>
                   </label>
@@ -1610,8 +1501,8 @@
             </ul>
           </div>
         </div>
-        <div class="flex items-center gap-2 p-[15px] border-t border-light dark:bg-primaryLight"> 
-          <button class="btn btn-ghost flex-1 reset-customizer">Reset  </button>
+        <div class="flex items-center gap-2 p-[15px] border-t border-light dark:bg-primaryLight dark:border-t dark:border-border-dark"> 
+          <button class="btn btn-ghost flex-1 reset-customizer dark:bg-sidebar-dark">Reset  </button>
           <button class="btn btn-primary text-white flex-1">Buy Now</button>
         </div>
       </div>

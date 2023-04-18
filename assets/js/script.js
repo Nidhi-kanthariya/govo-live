@@ -403,6 +403,53 @@ suggest?.forEach((el) => {
 });
 
 
+/*=====================
+Fill svg js
+==========================*/
 
+const postMedia = document.querySelector('.post-media');
+const postLike = document.querySelectorAll('.post-like');
+const wishLike = document.querySelectorAll('.wish-like');
+const postDisLike = document.querySelectorAll('.post-dislike');
+postLike?.forEach((el) => {
+  el.addEventListener('click', function () {
+    this.closest('.post-media')?.classList.add('post-liked');
+    this.closest('.post-media')?.classList.remove('post-disliked');
+  });
+});
+postDisLike?.forEach((el) => {
+  el.addEventListener('click', function () {
+    this.closest('.post-media')?.classList.add('post-disliked');
+    this.closest('.post-media')?.classList.remove('post-liked');
+  });
+});
+wishLike?.forEach((el) => {
+  el.addEventListener('click', function () {
+    this.closest('.post-media')?.classList.toggle('wish-liked');
+  });
+});
 
+const acceptCallEnd = document.querySelector('.accept-call-end');
+const acceptCallStart = document.querySelector('.accept-call-start');
+const CallStartBtn = document.getElementsByClassName('call-start-btn');
+const CallStartShow = document.querySelector('.call-start-show');
+const CallEnd = document.querySelector('.call-end');
 
+CallEnd?.addEventListener('click', function () {
+  this.closest('.accept-call-end')?.classList.add('hide');
+  this.closest('.accept-call-end')?.classList.remove('show');
+  acceptCallStart?.classList.remove('show');
+  CallStartShow?.classList.remove('show');
+});
+
+CallStartShow?.addEventListener('click', function () {
+  acceptCallStart?.classList.remove('show');
+  acceptCallEnd.classList.add('show');
+});
+
+for (var i = 0; i < CallStartBtn.length; i++) {
+  CallStartBtn[i]?.addEventListener('click', function (e) {
+    acceptCallEnd.classList.remove('hide');
+    acceptCallStart.classList.add('show');
+  });
+}

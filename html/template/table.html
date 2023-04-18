@@ -24,21 +24,21 @@
   </head>
   <body class="unique-skin" dir="ltr"> 
     <main class="page-wrapper">
-      <div class="page-body-wrapper 2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300">
+      <div class="page-body-wrapper xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300">
         <!-- Page Header start-->
-        <header class="sticky top-0 z-[4]">
+        <header class="fixed top-0 z-[6] xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto">
           <div class="page-header w-full transition-all bg-white shadow-header dark:bg-sidebar-dark">
-            <div class="py-[11px] sm:py-[17px] flex items-center xl:relative justify-between px-body-space">
+            <div class="py-[11px] flex items-center xl:relative justify-between px-body-space">
               <div class="left-header flex items-center gap-2">
                 <button class="sidebar-toggle hide"> 
                   <svg class="w-6 4xl:w-5 h-6 4xl:h-5 stroke-title"> 
                     <use href="../../assets/svg/sprite.svg#Category"> </use>
                   </svg>
                 </button>
-                <h1 class="flex items-center gap-1 text-lg font-extrabold leading-none sm:hidden 4xl:text-base">Button</h1>
+                <h1 class="flex items-center gap-1 text-lg font-extrabold leading-none sm:hidden 4xl:text-base">Tables</h1>
               </div>
               <div class="right-header flex items-center flex-1 sm:gap-[calc(7px_+_(14_-_7)_*_((100vw_-_320px)_/_(1920_-_320)))] gap-[calc(16px_+_(20_-_16)_*_((100vw_-_320px)_/_(1920_-_320)))]  justify-end">
-                <div class="search-box-wrapper transition-all duration-300 max-w-[40%] xl:scale-0 xl:opacity-0 xl:invisible xl:px-body-space xl:max-w-full w-full xl:z-[5] flex-1 xl:absolute xl:left-0">
+                <div class="search-box-wrapper transition-all duration-300 max-w-[40%] 2xl:scale-0 2xl:opacity-0 2xl:invisible 2xl:px-body-space 2xl:max-w-full w-full 2xl:z-[5] flex-1 2xl:absolute 2xl:left-0">
                   <!-- Search Start -->
                   <div class="search-box relative">
                     <input class="bg-gray-light dark:bg-sidebar-dark2 rounded-5 w-full py-[11px] pl-[25px] pr-[55px] rtl:pr-[25px] rtl:pl-[55px] text-xs font-semibold text-title" placeholder="Type to Search..." type="search">
@@ -50,7 +50,7 @@
                 </div>
                 <div class="icon-menu">
                   <ul class="flex items center"> 
-                    <li class="cursor-pointer hidden xl:flex items-center justify-center px-[calc(7px_+_(14_-_7)_*_((100vw_-_320px)_/_(1920_-_320)))] first:pl-0 last:pr-0  last:border-r-none border-r border-border-light dark:border-border-dark rtl:border-l rtl:border-r-0">
+                    <li class="cursor-pointer hidden 2xl:flex items-center justify-center px-[calc(7px_+_(14_-_7)_*_((100vw_-_320px)_/_(1920_-_320)))] first:pl-0 last:pr-0  last:border-r-none border-r border-border-light dark:border-border-dark rtl:border-l rtl:border-r-0">
                       <button class="search-show">
                         <svg class="w-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] stroke-title dark:stroke-white"> 
                           <use href="../../assets/svg/sprite.svg#Search"> </use>
@@ -69,18 +69,20 @@
                           <div class="flex items-center justify-between pb-[15px] border-b border-border-light"> 
                             <h4 class="text-base font-bold text-title">Notification</h4>
                             <button class="font-medium text-primary text-3xs">
-                               Mark All As Read </button>
+                               Mark All As Read</button>
                           </div>
-                          <div class="search-box relative mt-4">
-                            <input class="bg-gray-light border border-border-light w-full py-[8px] pl-[15px] pr-[30px] rounded-5 text-xs font-medium text-title" placeholder="Type to Search..." type="search">
+                          <div class="search-box relative mt-4"> 
+                            <input class="bg-gray-light border dark:bg-sidebar-dark2 dark:border-border-dark border-border-light w-full py-[8px] pl-[15px] pr-[30px] rounded-5 text-xs font-medium text-title" placeholder="Type to Search..." type="search">
                             <svg class="w-4 h-4 stroke-title top-1/2 -translate-y-1/2 right-[15px] absolute"> 
                               <use href="../../assets/svg/sprite.svg#Search"> </use>
                             </svg>
                           </div>
                           <ul class="mt-4 flex flex-col max-h-[232px] overflow-auto custom-scroll"> 
-                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 border-border-light hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./chat.html">
-                                <div class="rounded-full relative "><img class="rounded-full w-9 min-w-[2.25rem] min-h-[2.25rem] h-auto object-cover" src="../../assets/images/avatar/2.jpg" alt="Dmitriy Groshev">
-                                  <div class="indicator absolute border-[2px] border-white top-[-2px] right-[-2px] w-3 h-3 rounded-full bg-success"></div>
+                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 dark:hover:bg-sidebar-dark2 border-border-light hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./chat.html">
+                                <div class="indicator"><span class="chat-status status-online"></span>
+                                  <div class="avatar">
+                                    <div class="w-10 rounded-full h-10 xl:w-9 xl:h-9"><img src="../../assets/images/avatar/2.jpg" alt="Dmitriy Groshev"></div>
+                                  </div>
                                 </div>
                                 <div>
                                   <h4 class="text-xs font-semibold line-clamp-1 text-title">Dmitriy Groshev</h4>
@@ -89,20 +91,24 @@
                               <div class="flex flex-col items-end gap-1 ml-auto"><span class="font-normal text-3xs text-content">17:12</span><span class="leading-none p-1 badge bg-primary rounded-full text-3xs flex items-center justify-center min-w-[22px] min-h-[22px]">3</span>
                               </div>
                             </li>
-                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 border-border-light hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./chat.html">
-                                <div class="rounded-full relative "><img class="rounded-full w-9 min-w-[2.25rem] min-h-[2.25rem] h-auto object-cover" src="../../assets/images/avatar/3.jpg" alt="Sufiya Elija">
-                                  <div class="indicator absolute border-[2px] border-white top-[-2px] right-[-2px] w-3 h-3 rounded-full bg-danger"></div>
+                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 dark:hover:bg-sidebar-dark2 border-border-light hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./chat.html">
+                                <div class="indicator"><span class="chat-status status-offline"></span>
+                                  <div class="avatar">
+                                    <div class="w-10 rounded-full h-10 xl:w-9 xl:h-9"><img src="../../assets/images/avatar/3.jpg" alt="Sufiya Elija"></div>
+                                  </div>
                                 </div>
                                 <div>
                                   <h4 class="text-xs font-semibold line-clamp-1 text-title">Sufiya Elija</h4>
                                   <p class="text-xs font-semibold line-clamp-1 text-content">I need job, Please help me.</p>
                                 </div></a>
-                              <div class="flex flex-col items-end gap-1 ml-auto"><span class="font-normal text-3xs text-content">Fri</span>
+                              <div class="flex flex-col items-end gap-1 ml-auto"><span class="font-normal text-3xs text-content">Fri</span><span class="leading-none p-1 badge bg-primary rounded-full text-3xs flex items-center justify-center min-w-[22px] min-h-[22px]">32</span>
                               </div>
                             </li>
-                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 border-border-light hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./chat.html">
-                                <div class="rounded-full relative "><img class="rounded-full w-9 min-w-[2.25rem] min-h-[2.25rem] h-auto object-cover" src="../../assets/images/avatar/5.jpg" alt="Janis Evans">
-                                  <div class="indicator absolute border-[2px] border-white top-[-2px] right-[-2px] w-3 h-3 rounded-full bg-success"></div>
+                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 dark:hover:bg-sidebar-dark2 border-border-light hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./chat.html">
+                                <div class="indicator"><span class="chat-status status-online"></span>
+                                  <div class="avatar">
+                                    <div class="w-10 rounded-full h-10 xl:w-9 xl:h-9"><img src="../../assets/images/avatar/5.jpg" alt="Janis Evans"></div>
+                                  </div>
                                 </div>
                                 <div>
                                   <h4 class="text-xs font-semibold line-clamp-1 text-title">Janis Evans</h4>
@@ -111,9 +117,11 @@
                               <div class="flex flex-col items-end gap-1 ml-auto"><span class="font-normal text-3xs text-content">8:22</span><span class="leading-none p-1 badge bg-primary rounded-full text-3xs flex items-center justify-center min-w-[22px] min-h-[22px]">12</span>
                               </div>
                             </li>
-                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 border-border-light hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./chat.html">
-                                <div class="rounded-full relative "><img class="rounded-full w-9 min-w-[2.25rem] min-h-[2.25rem] h-auto object-cover" src="../../assets/images/avatar/4.jpg" alt="Mukrani Pabelo">
-                                  <div class="indicator absolute border-[2px] border-white top-[-2px] right-[-2px] w-3 h-3 rounded-full bg-success"></div>
+                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 dark:hover:bg-sidebar-dark2 border-border-light hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./chat.html">
+                                <div class="indicator"><span class="chat-status status-online"></span>
+                                  <div class="avatar">
+                                    <div class="w-10 rounded-full h-10 xl:w-9 xl:h-9"><img src="../../assets/images/avatar/4.jpg" alt="Mukrani Pabelo"></div>
+                                  </div>
                                 </div>
                                 <div>
                                   <h4 class="text-xs font-semibold line-clamp-1 text-title">Mukrani Pabelo</h4>
@@ -122,20 +130,24 @@
                               <div class="flex flex-col items-end gap-1 ml-auto"><span class="font-normal text-3xs text-content">03:14</span><span class="leading-none p-1 badge bg-primary rounded-full text-3xs flex items-center justify-center min-w-[22px] min-h-[22px]">10</span>
                               </div>
                             </li>
-                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 border-border-light hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./chat.html">
-                                <div class="rounded-full relative "><img class="rounded-full w-9 min-w-[2.25rem] min-h-[2.25rem] h-auto object-cover" src="../../assets/images/avatar/2.jpg" alt="Josephin Water">
-                                  <div class="indicator absolute border-[2px] border-white top-[-2px] right-[-2px] w-3 h-3 rounded-full bg-danger"></div>
+                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 dark:hover:bg-sidebar-dark2 border-border-light hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./chat.html">
+                                <div class="indicator"><span class="chat-status status-offline"></span>
+                                  <div class="avatar">
+                                    <div class="w-10 rounded-full h-10 xl:w-9 xl:h-9"><img src="../../assets/images/avatar/2.jpg" alt="Josephin Water"></div>
+                                  </div>
                                 </div>
                                 <div>
                                   <h4 class="text-xs font-semibold line-clamp-1 text-title">Josephin Water</h4>
                                   <p class="text-xs font-semibold line-clamp-1 text-content">You’ve got some kind of a stom...</p>
                                 </div></a>
-                              <div class="flex flex-col items-end gap-1 ml-auto"><span class="font-normal text-3xs text-content">Thu</span>
+                              <div class="flex flex-col items-end gap-1 ml-auto"><span class="font-normal text-3xs text-content">Thu</span><span class="leading-none p-1 badge bg-primary rounded-full text-3xs flex items-center justify-center min-w-[22px] min-h-[22px]">2</span>
                               </div>
                             </li>
-                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 border-border-light hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./chat.html">
-                                <div class="rounded-full relative "><img class="rounded-full w-9 min-w-[2.25rem] min-h-[2.25rem] h-auto object-cover" src="../../assets/images/avatar/5.jpg" alt="Janis Evans">
-                                  <div class="indicator absolute border-[2px] border-white top-[-2px] right-[-2px] w-3 h-3 rounded-full bg-success"></div>
+                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 dark:hover:bg-sidebar-dark2 border-border-light hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./chat.html">
+                                <div class="indicator"><span class="chat-status status-online"></span>
+                                  <div class="avatar">
+                                    <div class="w-10 rounded-full h-10 xl:w-9 xl:h-9"><img src="../../assets/images/avatar/5.jpg" alt="Janis Evans"></div>
+                                  </div>
                                 </div>
                                 <div>
                                   <h4 class="text-xs font-semibold line-clamp-1 text-title">Janis Evans</h4>
@@ -144,15 +156,17 @@
                               <div class="flex flex-col items-end gap-1 ml-auto"><span class="font-normal text-3xs text-content">8:22</span><span class="leading-none p-1 badge bg-primary rounded-full text-3xs flex items-center justify-center min-w-[22px] min-h-[22px]">12</span>
                               </div>
                             </li>
-                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 border-border-light hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./chat.html">
-                                <div class="rounded-full relative "><img class="rounded-full w-9 min-w-[2.25rem] min-h-[2.25rem] h-auto object-cover" src="../../assets/images/avatar/3.jpg" alt="Sufiya Elija">
-                                  <div class="indicator absolute border-[2px] border-white top-[-2px] right-[-2px] w-3 h-3 rounded-full bg-danger"></div>
+                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 dark:hover:bg-sidebar-dark2 border-border-light hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./chat.html">
+                                <div class="indicator"><span class="chat-status status-offline"></span>
+                                  <div class="avatar">
+                                    <div class="w-10 rounded-full h-10 xl:w-9 xl:h-9"><img src="../../assets/images/avatar/3.jpg" alt="Sufiya Elija"></div>
+                                  </div>
                                 </div>
                                 <div>
                                   <h4 class="text-xs font-semibold line-clamp-1 text-title">Sufiya Elija</h4>
                                   <p class="text-xs font-semibold line-clamp-1 text-content">I need job, Please help me.</p>
                                 </div></a>
-                              <div class="flex flex-col items-end gap-1 ml-auto"><span class="font-normal text-3xs text-content">Fri</span>
+                              <div class="flex flex-col items-end gap-1 ml-auto"><span class="font-normal text-3xs text-content">Fri</span><span class="leading-none p-1 badge bg-primary rounded-full text-3xs flex items-center justify-center min-w-[22px] min-h-[22px]">32</span>
                               </div>
                             </li>
                           </ul>
@@ -181,63 +195,63 @@
                             <div class="badge leading-none p-1 badge bg-primary rounded-full text-3xs flex items-center justify-center min-w-[22px] min-h-[22px]">25</div>
                           </div>
                           <ul class="mt-[15px] flex flex-col max-h-[232px] overflow-auto custom-scroll"> 
-                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 border-border-light dark:border-border-dark hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./message.html">
+                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 border-border-light dark:border-border-dark hover:bg-gray-light dark:hover:bg-sidebar-dark2 rounded-5"><a class="flex items-center gap-[12px]" href="./message.html">
                                 <div class="rounded-full relative shadow-lg bg-success flex items-center justify-center rounded-full p-2">
                                   <svg class="w-5 h-5 stroke-white"> 
                                     <use href="../../assets/svg/sprite.svg#Chat"> </use>
                                   </svg>
                                 </div>
-                                <div>
+                                <div> 
                                   <h4 class="text-xs font-semibold line-clamp-1 text-title">New Review Receive</h4>
                                   <p class="text-xs font-semibold line-clamp-1 text-content">15 min ago</p>
                                 </div></a></li>
-                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 border-border-light dark:border-border-dark hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./message.html">
+                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 border-border-light dark:border-border-dark hover:bg-gray-light dark:hover:bg-sidebar-dark2 rounded-5"><a class="flex items-center gap-[12px]" href="./message.html">
                                 <div class="rounded-full relative shadow-lg bg-danger flex items-center justify-center rounded-full p-2">
                                   <svg class="w-5 h-5 stroke-white"> 
                                     <use href="../../assets/svg/sprite.svg#Scan"> </use>
                                   </svg>
                                 </div>
-                                <div>
+                                <div> 
                                   <h4 class="text-xs font-semibold line-clamp-1 text-title">Transaction $250 Success</h4>
                                   <p class="text-xs font-semibold line-clamp-1 text-content">2 hours ago</p>
                                 </div></a></li>
-                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 border-border-light dark:border-border-dark hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./message.html">
+                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 border-border-light dark:border-border-dark hover:bg-gray-light dark:hover:bg-sidebar-dark2 rounded-5"><a class="flex items-center gap-[12px]" href="./message.html">
                                 <div class="rounded-full relative shadow-lg bg-warning flex items-center justify-center rounded-full p-2">
                                   <svg class="w-5 h-5 stroke-white"> 
                                     <use href="../../assets/svg/sprite.svg#Buy"> </use>
                                   </svg>
                                 </div>
-                                <div>
+                                <div> 
                                   <h4 class="text-xs font-semibold line-clamp-1 text-title">Order Place Success</h4>
                                   <p class="text-xs font-semibold line-clamp-1 text-content">2 week ago</p>
                                 </div></a></li>
-                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 border-border-light dark:border-border-dark hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./message.html">
+                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 border-border-light dark:border-border-dark hover:bg-gray-light dark:hover:bg-sidebar-dark2 rounded-5"><a class="flex items-center gap-[12px]" href="./message.html">
                                 <div class="rounded-full relative shadow-lg bg-info flex items-center justify-center rounded-full p-2">
                                   <svg class="w-5 h-5 stroke-white"> 
                                     <use href="../../assets/svg/sprite.svg#Lock"> </use>
                                   </svg>
                                 </div>
-                                <div>
+                                <div> 
                                   <h4 class="text-xs font-semibold line-clamp-1 text-title">Netflix Subscription Expires</h4>
                                   <p class="text-xs font-semibold line-clamp-1 text-content">4 days ago</p>
                                 </div></a></li>
-                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 border-border-light dark:border-border-dark hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./message.html">
+                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 border-border-light dark:border-border-dark hover:bg-gray-light dark:hover:bg-sidebar-dark2 rounded-5"><a class="flex items-center gap-[12px]" href="./message.html">
                                 <div class="rounded-full relative shadow-lg bg-danger flex items-center justify-center rounded-full p-2">
                                   <svg class="w-5 h-5 stroke-white"> 
                                     <use href="../../assets/svg/sprite.svg#Discount"> </use>
                                   </svg>
                                 </div>
-                                <div>
+                                <div> 
                                   <h4 class="text-xs font-semibold line-clamp-1 text-title">Congratulations You Won $2500</h4>
                                   <p class="text-xs font-semibold line-clamp-1 text-content">12 days ago</p>
                                 </div></a></li>
-                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 border-border-light dark:border-border-dark hover:bg-gray-light rounded-5"><a class="flex items-center gap-[12px]" href="./message.html">
+                            <li class="flex items-center gap-3 px-2 py-3 transition-all duration-300 border-b last:border-b-0 border-border-light dark:border-border-dark hover:bg-gray-light dark:hover:bg-sidebar-dark2 rounded-5"><a class="flex items-center gap-[12px]" href="./message.html">
                                 <div class="rounded-full relative shadow-lg bg-success flex items-center justify-center rounded-full p-2">
                                   <svg class="w-5 h-5 stroke-white"> 
                                     <use href="../../assets/svg/sprite.svg#Upload"> </use>
                                   </svg>
                                 </div>
-                                <div>
+                                <div> 
                                   <h4 class="text-xs font-semibold line-clamp-1 text-title">Latest Updates On You Phone</h4>
                                   <p class="text-xs font-semibold line-clamp-1 text-content">25 days ago</p>
                                 </div></a></li>
@@ -254,14 +268,14 @@
                         </svg>
                         <div class="dropdown-menu !min-w-[320px]">
                           <div class="flex items-center justify-between pb-[15px] border-b border-border-light dark:border-border-dark"> 
-                            <h4 class="text-base font-bold text-title">Cart Items<span class="text-sm font-bold text-content"> (25)</span></h4>
-                            <button class="p-2 transition-all duration-300 rounded-full bg-gray-light group hover:bg-primary">
+                            <h4 class="text-base font-bold text-title">Cart Items<span class="text-sm font-bold text-content">(25) </span></h4>
+                            <button class="p-2 transition-all duration-300 rounded-full bg-gray-light dark:bg-sidebar-dark2 group hover:bg-primary dark:hover:bg-primary">
                               <svg class="w-[18px] h-[18px] transition-all duration-300 group-hover:stroke-white stroke-title"> 
                                 <use href="../../assets/svg/sprite.svg#Delete"> </use>
                               </svg>
                             </button>
                           </div>
-                          <ul class="flex flex-col max-h-[232px] overflow-auto custom-scroll px-1"> 
+                          <ul class="flex flex-col max-h-[232px] overflow-auto custom-scroll px-1">
                             <li class="cart-item flex items-center gap-3 py-3 transition-all duration-300 border-b last:border-b-0 border-border-light dark:border-border-dark rounded-5"><a class="flex items-center gap-[12px]" href="./product.html">
                                 <div class="rounded-full relative "><img class="rounded-full min-w-[2.25rem] min-h-[2.25rem] w-full h-auto object-cover" src="../../assets/images/product/1.jpg" alt="Flower Pot"></div>
                                 <div>
@@ -338,9 +352,9 @@
                               </div>
                             </li>
                           </ul>
-                          <div class="pt-[15px] border-t border-light">
-                            <div class="flex items-center justify-between mb-[15px]">
-                              <h4 class="text-sm font-semibold">Bag Total</h4><span class="text-sm font-semibold">$250.00 </span>
+                          <div class="pt-[15px] border-t border-light dark:border-border-dark dark:border-t">
+                            <div class="flex items-center justify-between mb-[15px]"> 
+                              <h4 class="text-sm font-semibold">Bag Total </h4><span class="text-sm font-semibold">$250.00 </span>
                             </div><a class="block w-full py-2 text-sm font-semibold leading-none text-white btn btn-primary" href="checkout.html">Proceed to Checkout </a>
                           </div>
                         </div>
@@ -355,10 +369,10 @@
                   </ul>
                 </div>
                 <ul class="profile-box flex items-center">
-                  <li class="cursor-pointer pr-[11px] rtl:pr-unset rtl:pl-[11px] rtl:last:pl-0 rtl:last:pr-unset last:pr-0 sm:pr-0 sm:border-none last:border-none rtl:border-l rtl:border-r-0 border-r border-border-2 flex items-center"> 
+                  <li class="cursor-pointer pr-[11px] rtl:pr-unset rtl:pl-[11px] rtl:last:pl-0 rtl:last:pr-unset last:pr-0 sm:pr-0 sm:border-none last:border-none rtl:border-l rtl:border-r-0 border-r border-border-2 dark:border-border-dark  dark:border-r flex items-center"> 
                     <!-- Language Start -->
                     <div class="language-select dropdown group">
-                      <button class="flex items-center max-w-[87px] min-w-[87px] gap-[11px]" id="language-select"><img class="w-[35px] h-auto" src="../../assets/images/flag/en.svg" alt="flag"><span class="flex items-center gap-1 text-lg font-bold 4xl:text-base dark:text-white">En</span>
+                      <button class="flex items-center max-w-[87px] min-w-[87px] md:min-w-[47px] gap-[11px]" id="language-select"><img class="w-[35px] sm:w-[30px] h-auto" src="../../assets/images/flag/en.svg" alt="flag"><span class="flex items-center gap-1 text-lg font-bold 4xl:text-base dark:text-white md:hidden">En</span>
                         <svg class="w-[6px] h-[4px] stroke-title group-hover:rotate-180 duration-300 transition-all dark:stroke-white"> 
                           <use href="../../assets/svg/sprite.svg#Fill-Arrow"> </use>
                         </svg>
@@ -376,11 +390,11 @@
                     </div>
                     <!-- Language End -->
                   </li>
-                  <li class="cursor-pointer flex- pl-[11px] rtl:pr-[11px] rtl:pl-unset rtl:first:pr-0 first:pl-0 flex items-center sm:hidden ">
+                  <li class="cursor-pointer flex- pl-[11px] rtl:pr-[11px] rtl:pl-unset rtl:first:pr-0 first:pl-0 flex items-center">
                     <!-- Profile Start -->
                     <div class="dropdown"> 
                       <div class="flex items-center gap-[10px] cursor-pointer"> 
-                        <div><img class="w-[calc(35px_+_(40_-_35)_*_((100vw_-_320px)_/_(1920_-_320)))] h-auto rounded-full" src="../../assets/images/avatar/1.jpg" alt="avatar"></div>
+                        <div><img class="w-[calc(35px_+_(40_-_35)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(35px_+_(40_-_35)_*_((100vw_-_320px)_/_(1920_-_320)))] rounded-full" src="../../assets/images/avatar/1.jpg" alt="avatar"></div>
                         <div class="md:hidden">
                           <h4 class="text-xs font-bold dark:text-white"> Helen Walter</h4><span class="flex items-center gap-1 font-semibold text-3xs text-content">Admin
                             <svg class="w-[6px] h-[4px]  dark:stroke-white"> 
@@ -419,100 +433,33 @@
               </div>
             </div>
             <!-- Sub Header Start -->
-            <div class="md:hidden py-[14px] border-t border-border-light px-body-space dark:border-border-dark"> 
-              <div class="relative flex items-center justify-between"> 
-                <ul class="flex items-center 2md:shadow-lg 2md:border 2md:border-border-light 2md:z-[5] 2md:p-4 2md:absolute 2md:top-[38px] 2md:rounded-5 2md:left-0 2md:items-start 2md:bg-white 2md:flex-col gap-[calc(8px_+_(31_-_8)_*_((100vw_-_320px)_/_(1920_-_320)))]"> 
+            <div class="py-[14px] border-t border-border-light px-body-space dark:border-border-dark"> 
+              <div class="relative flex items-center justify-between lg:justify-start">
+                <ul class="flex items-center lg:hidden 2md:shadow-lg 2md:border 2md:border-border-light 2md:z-[5] 2md:p-4 2md:absolute 2md:top-[38px] 2md:rounded-5 2md:left-0 2md:items-start 2md:bg-white 2md:flex-col gap-[calc(8px_+_(31_-_8)_*_((100vw_-_320px)_/_(1920_-_320)))]"> 
                   <li class="dropdown on-hover-show cursor-pointer pb-[6px] transition-all relative group before:bg-primary before:absolute before:-translate-x-1/2 before:bottom-0 before:left-1/2 before:w-full before:h-[2px]"> <span class="text-xs font-bold transition-all text-primary">General</span>
-                    <div class="dropdown-menu !min-w-[890px] lg:!min-w-[660px] !left-0 !right-unset !p-0"> 
+                    <div class="dropdown-menu !min-w-[320px] !left-0 !right-unset !p-0"> 
                       <!-- General menu-->
                       <div class="grid grid-cols-12 gap-2">
-                        <div class="col-span-8">
-                          <ul class="columns-2 gap-[10px] p-[15px]"> 
-                            <li class="p-2 rounded-5 transition-all duration-300 hover:bg-gray-light"><a class="flex items-center gap-2" href="index.html"> 
+                        <div class="col-span-12">
+                          <ul class="gap-[10px] p-[15px]"> 
+                            <li class="p-2 transition-all duration-300 rounded-5 hover:bg-gray-light"><a class="flex items-center gap-2" href="index.html"> 
                                 <div class="p-2 rounded-5  border border-primary">
                                   <svg class="w-5 h-5 stroke-primary"> 
                                     <use href="../../assets/svg/sprite.svg#Home"> </use>
                                   </svg>
                                 </div>
                                 <div>
-                                  <h4 class="text-xs font-semibold text-title capitalize line-clamp-1">Unique Dashboard</h4><span class="text-xs font-medium text-content line-clamp-1">Over view of all</span>
+                                  <h4 class="text-xs font-semibold capitalize text-title line-clamp-1">Unique Dashboard</h4><span class="text-xs font-medium text-content line-clamp-1">Over view of all</span>
                                 </div></a></li>
-                            <li class="p-2 rounded-5 transition-all duration-300 hover:bg-gray-light"><a class="flex items-center gap-2" href="friendly.html"> 
+                            <li class="p-2 transition-all duration-300 rounded-5 hover:bg-gray-light"><a class="flex items-center gap-2" href="index.html"> 
                                 <div class="p-2 rounded-5  border border-primary">
                                   <svg class="w-5 h-5 stroke-primary"> 
-                                    <use href="../../assets/svg/sprite.svg#3-User"> </use>
+                                    <use href="../../assets/svg/sprite.svg#Home"> </use>
                                   </svg>
                                 </div>
                                 <div>
-                                  <h4 class="text-xs font-semibold text-title capitalize line-clamp-1">Friendly Dashboard</h4><span class="text-xs font-medium text-content line-clamp-1">Social connectivity</span>
+                                  <h4 class="text-xs font-semibold capitalize text-title line-clamp-1">Unique Dashboard</h4><span class="text-xs font-medium text-content line-clamp-1">Over view of all</span>
                                 </div></a></li>
-                            <li class="p-2 rounded-5 transition-all duration-300 hover:bg-gray-light"><a class="flex items-center gap-2" href="minimal.html"> 
-                                <div class="p-2 rounded-5  border border-primary">
-                                  <svg class="w-5 h-5 stroke-primary"> 
-                                    <use href="../../assets/svg/sprite.svg#Ticket"> </use>
-                                  </svg>
-                                </div>
-                                <div>
-                                  <h4 class="text-xs font-semibold text-title capitalize line-clamp-1">Minimal Dashboard</h4><span class="text-xs font-medium text-content line-clamp-1">Minimal over view </span>
-                                </div></a></li>
-                            <li class="p-2 rounded-5 transition-all duration-300 hover:bg-gray-light"><a class="flex items-center gap-2" href="material.html"> 
-                                <div class="p-2 rounded-5  border border-primary">
-                                  <svg class="w-5 h-5 stroke-primary"> 
-                                    <use href="../../assets/svg/sprite.svg#Calendar"> </use>
-                                  </svg>
-                                </div>
-                                <div>
-                                  <h4 class="text-xs font-semibold text-title capitalize line-clamp-1">Material Dashboard</h4><span class="text-xs font-medium text-content line-clamp-1">Material design</span>
-                                </div></a></li>
-                            <li class="p-2 rounded-5 transition-all duration-300 hover:bg-gray-light"><a class="flex items-center gap-2" href="shopping-place.html"> 
-                                <div class="p-2 rounded-5  border border-primary">
-                                  <svg class="w-5 h-5 stroke-primary"> 
-                                    <use href="../../assets/svg/sprite.svg#Bag"> </use>
-                                  </svg>
-                                </div>
-                                <div>
-                                  <h4 class="text-xs font-semibold text-title capitalize line-clamp-1">Shopping Place Dashboard</h4><span class="text-xs font-medium text-content line-clamp-1">Ecommerce shop place</span>
-                                </div></a></li>
-                            <li class="p-2 rounded-5 transition-all duration-300 hover:bg-gray-light"><a class="flex items-center gap-2" href="retro.html"> 
-                                <div class="p-2 rounded-5  border border-primary">
-                                  <svg class="w-5 h-5 stroke-primary"> 
-                                    <use href="../../assets/svg/sprite.svg#Activity"> </use>
-                                  </svg>
-                                </div>
-                                <div>
-                                  <h4 class="text-xs font-semibold text-title capitalize line-clamp-1">Retro Dashboard</h4><span class="text-xs font-medium text-content line-clamp-1">Monochrome mode eye friendly</span>
-                                </div></a></li>
-                            <li class="p-2 rounded-5 transition-all duration-300 hover:bg-gray-light"><a class="flex items-center gap-2" href="crypto.html"> 
-                                <div class="p-2 rounded-5  border border-primary">
-                                  <svg class="w-5 h-5 stroke-primary"> 
-                                    <use href="../../assets/svg/sprite.svg#Graph"> </use>
-                                  </svg>
-                                </div>
-                                <div>
-                                  <h4 class="text-xs font-semibold text-title capitalize line-clamp-1">Crypto Dashboard</h4><span class="text-xs font-medium text-content line-clamp-1">Crypto curacy analysis</span>
-                                </div></a></li>
-                            <li class="p-2 rounded-5 transition-all duration-300 hover:bg-gray-light"><a class="flex items-center gap-2" href="advanced.html"> 
-                                <div class="p-2 rounded-5  border border-primary">
-                                  <svg class="w-5 h-5 stroke-primary"> 
-                                    <use href="../../assets/svg/sprite.svg#Upload"> </use>
-                                  </svg>
-                                </div>
-                                <div>
-                                  <h4 class="text-xs font-semibold text-title capitalize line-clamp-1">Advanced Dashboard</h4><span class="text-xs font-medium text-content line-clamp-1">Mordent analysis</span>
-                                </div></a></li>
-                          </ul>
-                        </div>
-                        <div class="col-span-4 bg-gray-light p-[15px]">
-                          <h4 class="text-base font-semibold text-title mb-3">More Dashboard                     </h4>
-                          <ul class="flex flex-col gap-2">
-                            <li><a href="reports.html"><span class="transition-all duration-300 hover:text-primary text-xs font-semibold text-title capitalize">
-                                    Reports Dashboard</span></a></li>
-                            <li><a href="support.html"><span class="transition-all duration-300 hover:text-primary text-xs font-semibold text-title capitalize">
-                                    Support Dashboard</span></a></li>
-                            <li><a href="elegance.html"> <span class="transition-all duration-300 hover:text-primary text-xs font-semibold text-title capitalize">
-                                      Elegance Dashboard</span></a></li>
-                            <li><a href="project.html"><span class="transition-all duration-300 hover:text-primary text-xs font-semibold text-title capitalize">
-                                      Project Dashboard </span></a></li>
                           </ul>
                         </div>
                       </div>
@@ -521,142 +468,79 @@
                   <li class="dropdown on-hover-show cursor-pointer pb-[6px] transition-all duration-300 relative group before:bg-primary before:absolute before:-translate-x-1/2 before:bottom-0 before:left-1/2 hover:before:w-full before:h-[2px] before:w-0 "> <span class="text-xs font-bold transition-all duration-300 text-content group-hover:text-primary">Components</span>
                     <div class="dropdown-menu !min-w-[220px] !left-0 !right-unset"> 
                       <!-- Componant menu-->
-                      <ul class="flex flex-col gap-3"> 
-                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2 justify-between" href="javascript:void(0)"><span class="flex items-center gap-2">
+                      <ul class="flex flex-col gap-4"> 
+                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center justify-between gap-2" href="javascript:void(0)"><span class="flex items-center gap-2">
                               <svg class="w-5 h-5 stroke-title"> 
                                 <use href="../../assets/svg/sprite.svg#Folder"> </use>
-                              </svg>Ui Kits</span>
+                              </svg><small class="text-xs leading-7">Ui Kits</small></span>
                             <svg class="w-4 h-4 stroke-title ml-auto"> 
                               <use href="../../assets/svg/sprite.svg#Arrow-Right-2"> </use>
                             </svg></a>
                           <div class="dropdown-menu dropdown-sub-menu">
                             <ul class="flex flex-col gap-2"> 
-                              <li><a href="typography.html">Typography</a></li>
-                              <li><a href="avatar.html">Avatar</a></li>
-                              <li><a href="buttons.html">Buttons</a></li>
-                              <li><a href="badge.html">Badges</a></li>
-                              <li><a href="progress.html">Progress</a></li>
-                              <li><a href="modal.html">Modal</a></li>
-                              <li><a href="alert.html">Alert</a></li>
-                              <li><a href="dropdown.html">Dropdown</a></li>
-                              <li><a href="collapse.html">Collapse</a></li>
-                              <li><a href="tooltip.html">Tooltip</a></li>
-                              <li><a href="divider.html">Divider</a></li>
+                              <li><a href="./alert.html">Alert</a></li>
+                              <li><a href="./avatars.html">Avatars</a></li>
+                              <li><a href="./badge.html">Badge</a></li>
+                              <li><a href="./button.html">Button</a></li>
+                              <li><a href="./collapse.html">Collapse</a></li>
+                              <li><a href="./divider.html">Divider</a></li>
+                              <li><a href="./dropdown.html">Dropdown</a></li>
+                              <li><a href="./modal.html">Modal</a></li>
+                              <li><a href="./progress.html">Progress</a></li>
+                              <li><a href="./tooltip.html">Tooltip</a></li>
+                              <li><a href="./typography.html">Typography</a></li>
                             </ul>
                           </div>
                         </li>
-                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2 justify-between" href="javascript:void(0)"><span class="flex items-center gap-2">
+                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center justify-between gap-2" href="javascript:void(0)"><span class="flex items-center gap-2">
                               <svg class="w-5 h-5 stroke-title"> 
                                 <use href="../../assets/svg/sprite.svg#Ticket-Star"> </use>
-                              </svg>Bonus Ui</span>
+                              </svg><small class="text-xs leading-7">Bonus Ui</small></span>
                             <svg class="w-4 h-4 stroke-title ml-auto"> 
                               <use href="../../assets/svg/sprite.svg#Arrow-Right-2"> </use>
                             </svg></a>
                           <div class="dropdown-menu dropdown-sub-menu">
                             <ul class="flex flex-col gap-2"> 
-                              <li><a href="breadcrumb.html">Breadcrumbs</a></li>
-                              <li><a href="pagination.html">Pagination</a></li>
-                              <li><a href="carousel.html">Carousel</a></li>
-                              <li><a href="countdown.html">Countdown</a></li>
-                              <li><a href="radial-progress.html">Radial progress</a></li>
-                              <li><a href="swap.html">Swap</a></li>
-                              <li><a href="indicator.html">Indicator</a></li>
-                              <li><a href="mask.html">Mask</a></li>
-                              <li><a href="stack.html">Stack</a></li>
-                              <li><a href="toast.html">Toast</a></li>
-                              <li><a href="steps.html">Steps</a></li>
-                              <li><a href="tabs.html">Tabs</a></li>
-                              <li><a href="rating.html">Rating</a></li>
+                              <li><a href="./breadcrumb.html">Breadcrumb</a></li>
+                              <li><a href="./carousel.html">Carousel</a></li>
+                              <li><a href="./countdown.html">Countdown</a></li>
+                              <li><a href="./indicator.html">Indicator</a></li>
+                              <li><a href="./mask.html">Mask</a></li>
+                              <li><a href="./pagination.html">Pagination</a></li>
+                              <li><a href="./radial-progress.html">Radial Progress</a></li>
+                              <li><a href="./rating.html">Rating</a></li>
+                              <li><a href="./stack.html">Stack</a></li>
+                              <li><a href="./steps.html">Steps</a></li>
+                              <li><a href="./swap.html">Swap</a></li>
+                              <li><a href="./swiper-slider.html">Swiper Slider</a></li>
+                              <li><a href="./tabs.html">Tabs</a></li>
                             </ul>
                           </div>
                         </li>
-                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2 justify-between" href="javascript:void(0)"><span class="flex items-center gap-2">
-                              <svg class="w-5 h-5 stroke-title"> 
-                                <use href="../../assets/svg/sprite.svg#Plus"> </use>
-                              </svg>Form Components</span>
-                            <svg class="w-4 h-4 stroke-title ml-auto"> 
-                              <use href="../../assets/svg/sprite.svg#Arrow-Right-2"> </use>
-                            </svg></a>
-                          <div class="dropdown-menu dropdown-sub-menu">
-                            <ul class="flex flex-col gap-2"> 
-                              <li><a href="input-textarea.html">Input and Textarea</a></li>
-                              <li><a href="checkbox-radio.html">Checkbox and Radio</a></li>
-                              <li><a href="select.html">Select</a></li>
-                              <li><a href="switch.html">Switch</a></li>
-                              <li><a href="range.html">Range</a></li>
-                              <li><a href="input-group.html">Input Group </a></li>
-                            </ul>
-                          </div>
-                        </li>
-                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2 justify-between" href="javascript:void(0)"><span class="flex items-center gap-2">
-                              <svg class="w-5 h-5 stroke-title"> 
-                                <use href="../../assets/svg/sprite.svg#Edit-Square"> </use>
-                              </svg>Builders</span>
-                            <svg class="w-4 h-4 stroke-title ml-auto"> 
-                              <use href="../../assets/svg/sprite.svg#Arrow-Right-2"> </use>
-                            </svg></a>
-                          <div class="dropdown-menu dropdown-sub-menu">
-                            <ul class="flex flex-col gap-2"> 
-                              <li><a href="form-builder1.html">Form Builder 1</a></li>
-                              <li><a href="form-builder2.html">Form Builder 2</a></li>
-                              <li><a href="form-builder2.html">Form Builder 2</a></li>
-                              <li><a href="form-builder3.html">Form Builder 3</a></li>
-                            </ul>
-                          </div>
-                        </li>
-                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2 justify-between" href="javascript:void(0)"><span class="flex items-center gap-2">
-                              <svg class="w-5 h-5 stroke-title"> 
-                                <use href="../../assets/svg/sprite.svg#Scan"> </use>
-                              </svg>Animation</span>
-                            <svg class="w-4 h-4 stroke-title ml-auto"> 
-                              <use href="../../assets/svg/sprite.svg#Arrow-Right-2"> </use>
-                            </svg></a>
-                          <div class="dropdown-menu dropdown-sub-menu">
-                            <ul class="flex flex-col gap-2"> 
-                              <li><a href="animate.html">Animate</a></li>
-                              <li><a href="scroll-reveal.html">Scroll Reveal</a></li>
-                              <li><a href="aos.html">AOS animation</a></li>
-                              <li><a href="tilt.html">Tilt Animation</a></li>
-                            </ul>
-                          </div>
-                        </li>
-                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2 justify-between" href="javascript:void(0)"><span class="flex items-center gap-2">
+                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center justify-between gap-2" href="javascript:void(0)"><span class="flex items-center gap-2">
                               <svg class="w-5 h-5 stroke-title"> 
                                 <use href="../../assets/svg/sprite.svg#Danger-Circle"> </use>
-                              </svg>Icons</span>
+                              </svg><small class="text-xs leading-7">Icons</small></span>
                             <svg class="w-4 h-4 stroke-title ml-auto"> 
                               <use href="../../assets/svg/sprite.svg#Arrow-Right-2"> </use>
                             </svg></a>
                           <div class="dropdown-menu dropdown-sub-menu">
                             <ul class="flex flex-col gap-2"> 
-                              <li><a href="fontawesome-icon.html">Fontawesome Icon</a></li>
-                              <li><a href="iconly-icon.html">Iconly Icons</a></li>
-                              <li><a href="feather.html">Feather Icons</a></li>
-                              <li><a href="thimify-icon.html">Thimify Icon</a></li>
-                              <li><a href="whether-icon.html">Whether Icon</a></li>
+                              <li><a href="./feather.html">Feather</a></li>
+                              <li><a href="./fontawesome.html">Font Awesome</a></li>
+                              <li><a href="./iconly.html">Iconly</a></li>
                             </ul>
                           </div>
                         </li>
-                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2 justify-between" href="javascript:void(0)"><span class="flex items-center gap-2">
+                        <li class="w-full "><a class="flex items-center justify-between gap-2" href="apex-chart.html"><span class="flex items-center gap-2">
                               <svg class="w-5 h-5 stroke-title"> 
                                 <use href="../../assets/svg/sprite.svg#Chart"> </use>
-                              </svg>Chart</span>
-                            <svg class="w-4 h-4 stroke-title ml-auto"> 
-                              <use href="../../assets/svg/sprite.svg#Arrow-Right-2"> </use>
-                            </svg></a>
-                          <div class="dropdown-menu dropdown-sub-menu">
-                            <ul class="flex flex-col gap-2"> 
-                              <li><a href="apex-chart.html">Apex Chart</a></li>
-                              <li><a href="echarts.html">Echarts</a></li>
-                              <li><a href="google-chart.html">Google Chart</a></li>
-                              <li><a href="sparkline-chart.html">Sparkline Chart</a></li>
-                              <li><a href="flot-chart.html">Flot Chart</a></li>
-                              <li><a href="knob-chart.html">Knob Chart</a></li>
-                              <li><a href="morris-chart.html">Morris Chart</a></li>
-                              <li><a href="chatjs-chart.html">Chatjs Chart</a></li>
-                              <li><a href="peity-chart.html">Peity Chart</a></li>
-                            </ul>
-                          </div>
+                              </svg><small class="text-xs leading-7">Apex Chart</small></span></a>
+                        </li>
+                        <li class="w-full "><a class="flex items-center justify-between gap-2" href="wow-animation.html"><span class="flex items-center gap-2">
+                              <svg class="w-5 h-5 stroke-title"> 
+                                <use href="../../assets/svg/sprite.svg#Scan"> </use>
+                              </svg><small class="text-xs leading-7">Wow Animation</small></span></a>
                         </li>
                       </ul>
                     </div>
@@ -667,169 +551,176 @@
                       <ul class="flex flex-col gap-3"> 
                         <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2" href="javascript:void(0)"><span class="flex items-center gap-2">
                               <svg class="w-5 h-5 stroke-title"> 
-                                <use href="../../assets/svg/sprite.svg#Message"> </use>
-                              </svg>Email App</span>
+                                <use href="../../assets/svg/sprite.svg#Chat"> </use>
+                              </svg><small class="text-xs leading-7">Chat</small></span>
                             <svg class="w-4 h-4 stroke-title ml-auto"> 
                               <use href="../../assets/svg/sprite.svg#Arrow-Right-2"> </use>
                             </svg></a>
                           <div class="dropdown-menu dropdown-sub-menu">
                             <ul class="flex flex-col gap-2"> 
-                              <li><a href="email.html">Email</a></li>
-                              <li><a href="email-read.html">Email Read</a></li>
-                              <li><a href="email-compose.html">Email Compose</a></li>
+                              <li><a href="chat-app.html">Chat App</a></li>
+                              <li><a href="video-app.html">Video App</a></li>
                             </ul>
                           </div>
                         </li>
+                        <li class="w-full "><a class="flex items-center gap-2" href="calendar.html"><span class="flex items-center gap-2">
+                              <svg class="w-5 h-5 stroke-title"> 
+                                <use href="../../assets/svg/sprite.svg#Calendar"> </use>
+                              </svg><small class="text-xs leading-7">Calendar</small></span></a>
+                        </li>
                         <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2" href="javascript:void(0)"><span class="flex items-center gap-2">
                               <svg class="w-5 h-5 stroke-title"> 
-                                <use href="../../assets/svg/sprite.svg#Buy"> </use>
-                              </svg>Ecommerce</span>
+                                <use href="../../assets/svg/sprite.svg#Bag"> </use>
+                              </svg><small class="text-xs leading-7">Ecommerce</small></span>
                             <svg class="w-4 h-4 stroke-title ml-auto"> 
                               <use href="../../assets/svg/sprite.svg#Arrow-Right-2"> </use>
                             </svg></a>
                           <div class="dropdown-menu dropdown-sub-menu">
                             <ul class="flex flex-col gap-2"> 
-                              <li><a href="shop.html">Shop</a></li>
-                              <li><a href="product.html">Product</a></li>
+                              <li><a href="add-product.html">Add Product</a></li>
                               <li><a href="cart.html">Cart</a></li>
                               <li><a href="checkout.html">Checkout</a></li>
                               <li><a href="invoice.html">Invoice</a></li>
                               <li><a href="invoice-preview.html">Invoice Preview</a></li>
+                              <li><a href="invoice-create.html">Invoice Create</a></li>
+                              <li><a href="product.html">Product</a></li>
+                              <li><a href="shop.html">Shop</a></li>
                               <li><a href="wishlist.html">Wishlist</a></li>
                             </ul>
                           </div>
                         </li>
+                        <li class="w-full "><a class="flex items-center gap-2" href="email.html"><span class="flex items-center gap-2">
+                              <svg class="w-5 h-5 stroke-title"> 
+                                <use href="../../assets/svg/sprite.svg#Message"> </use>
+                              </svg><small class="text-xs leading-7">Email</small></span></a>
+                        </li>
+                        <li class="w-full "><a class="flex items-center gap-2" href="kanban-board.html"><span class="flex items-center gap-2">
+                              <svg class="w-5 h-5 stroke-title"> 
+                                <use href="../../assets/svg/sprite.svg#Paper"> </use>
+                              </svg><small class="text-xs leading-7">Kanban Board</small></span></a>
+                        </li>
+                        <li class="w-full "><a class="flex items-center gap-2" href="todo.html"><span class="flex items-center gap-2">
+                              <svg class="w-5 h-5 stroke-title"> 
+                                <use href="../../assets/svg/sprite.svg#Time-Circle"> </use>
+                              </svg><small class="text-xs leading-7">Todo</small></span></a>
+                        </li>
                         <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2" href="javascript:void(0)"><span class="flex items-center gap-2">
                               <svg class="w-5 h-5 stroke-title"> 
-                                <use href="../../assets/svg/sprite.svg#Paper-Plus"> </use>
-                              </svg>Project</span>
+                                <use href="../../assets/svg/sprite.svg#2-User"> </use>
+                              </svg><small class="text-xs leading-7">User</small></span>
                             <svg class="w-4 h-4 stroke-title ml-auto"> 
                               <use href="../../assets/svg/sprite.svg#Arrow-Right-2"> </use>
                             </svg></a>
                           <div class="dropdown-menu dropdown-sub-menu">
                             <ul class="flex flex-col gap-2"> 
-                              <li><a href="project-list.html">Project List</a></li>
-                              <li><a href="project-create.html">Project Create</a></li>
-                              <li><a href="target.html">Target</a></li>
-                              <li><a href="budget.html">Budget</a></li>
-                              <li><a href="user.html">User</a></li>
-                              <li><a href="activity.html">Activity</a></li>
+                              <li><a href="user-card.html">User Cards</a></li>
+                              <li><a href="user-profile.html">User Profile</a></li>
                             </ul>
                           </div>
                         </li>
-                        <li class="w-full "><a class="flex items-center gap-2" href="chat-app.html"><span class="flex items-center gap-2">
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="dropdown on-hover-show cursor-pointer pb-[6px] transition-all duration-300 relative group before:bg-primary before:absolute before:-translate-x-1/2 before:bottom-0 before:left-1/2 hover:before:w-full before:h-[2px] before:w-0 "> <span class="text-xs font-bold transition-all duration-300 text-content group-hover:text-primary">Forms & Table</span>
+                    <div class="dropdown-menu !min-w-[190px] !left-0 !right-unset"> 
+                      <!-- App Menu -->
+                      <ul class="flex flex-col gap-3"> 
+                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2" href="javascript:void(0)"><span class="flex items-center gap-2">
                               <svg class="w-5 h-5 stroke-title"> 
-                                <use href="../../assets/svg/sprite.svg#Chat"> </use>
-                              </svg>Chat App</span></a>
+                                <use href="../../assets/svg/sprite.svg#Paper"> </use>
+                              </svg><small class="text-xs leading-7">Forms</small></span>
+                            <svg class="w-4 h-4 stroke-title ml-auto"> 
+                              <use href="../../assets/svg/sprite.svg#Arrow-Right-2"> </use>
+                            </svg></a>
+                          <div class="dropdown-menu dropdown-sub-menu">
+                            <ul class="flex flex-col gap-2"> 
+                              <li><a href="./checkbox-radio.html">Checkbox &amp; Radio</a></li>
+                              <li><a href="./form-validation.html">Form Validation</a></li>
+                              <li><a href="./input-textarea.html">Input &amp; Textarea</a></li>
+                              <li><a href="./select.html">Select</a></li>
+                              <li><a href="./switch.html">Switch</a></li>
+                            </ul>
+                          </div>
                         </li>
-                        <li class="w-full "><a class="flex items-center gap-2" href="tasks.html"><span class="flex items-center gap-2">
+                        <li class="w-full "><a class="flex items-center gap-2" href="table.html"><span class="flex items-center gap-2">
                               <svg class="w-5 h-5 stroke-title"> 
-                                <use href="../../assets/svg/sprite.svg#Check-Circle"> </use>
-                              </svg>Tasks</span></a>
-                        </li>
-                        <li class="w-full "><a class="flex items-center gap-2" href="social-App.html"><span class="flex items-center gap-2">
-                              <svg class="w-5 h-5 stroke-title"> 
-                                <use href="../../assets/svg/sprite.svg#3-User"> </use>
-                              </svg>Social App</span></a>
-                        </li>
-                        <li class="w-full "><a class="flex items-center gap-2" href="social-App.html"><span class="flex items-center gap-2">
-                              <svg class="w-5 h-5 stroke-title"> 
-                                <use href="../../assets/svg/sprite.svg#Check-List"> </use>
-                              </svg>Todo App</span></a>
-                        </li>
-                        <li class="w-full "><a class="flex items-center gap-2" href="to-do-app.html"><span class="flex items-center gap-2">
-                              <svg class="w-5 h-5 stroke-title"> 
-                                <use href="../../assets/svg/sprite.svg#Video"> </use>
-                              </svg>Video Chat</span></a>
+                                <use href="../../assets/svg/sprite.svg#Graph"> </use>
+                              </svg><small class="text-xs leading-7">Tables</small></span></a>
                         </li>
                       </ul>
                     </div>
                   </li>
                   <li class="dropdown on-hover-show cursor-pointer pb-[6px] transition-all duration-300 relative group before:bg-primary before:absolute before:-translate-x-1/2 before:bottom-0 before:left-1/2 hover:before:w-full before:h-[2px] before:w-0 "> <span class="text-xs font-bold transition-all duration-300 text-content group-hover:text-primary">Pages</span>
                     <div class="dropdown-menu !min-w-[190px] !left-0 !right-unset"> 
-                      <!-- App Menu -->
+                      <!-- Page Menu -->
                       <ul class="flex flex-col gap-3"> 
                         <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2" href="javascript:void(0)"><span class="flex items-center gap-2">
                               <svg class="w-5 h-5 stroke-title"> 
-                                <use href="../../assets/svg/sprite.svg#Message"> </use>
-                              </svg>Email App</span>
+                                <use href="../../assets/svg/sprite.svg#Folder"> </use>
+                              </svg><small class="text-xs leading-7">Other Pages</small></span>
                             <svg class="w-4 h-4 stroke-title ml-auto"> 
                               <use href="../../assets/svg/sprite.svg#Arrow-Right-2"> </use>
                             </svg></a>
                           <div class="dropdown-menu dropdown-sub-menu">
                             <ul class="flex flex-col gap-2"> 
-                              <li><a href="email.html">Email</a></li>
-                              <li><a href="email-read.html">Email Read</a></li>
-                              <li><a href="email-compose.html">Email Compose</a></li>
+                              <li><a href="./coming-soon.html">Coming Soon</a></li>
+                              <li><a href="./error.html">Error</a></li>
+                              <li><a href="./forgot-password.html">Forgot Password</a></li>
+                              <li><a href="./login.html">Login</a></li>
+                              <li><a href="./otp.html">Otp</a></li>
+                              <li><a href="./register.html">Register</a></li>
+                              <li><a href="./reset-password.html">Reset Password</a></li>
                             </ul>
                           </div>
                         </li>
-                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2" href="javascript:void(0)"><span class="flex items-center gap-2">
+                        <li class="w-full "><a class="flex items-center gap-2" href="sample-page.html"><span class="flex items-center gap-2">
                               <svg class="w-5 h-5 stroke-title"> 
-                                <use href="../../assets/svg/sprite.svg#Buy"> </use>
-                              </svg>Ecommerce</span>
-                            <svg class="w-4 h-4 stroke-title ml-auto"> 
-                              <use href="../../assets/svg/sprite.svg#Arrow-Right-2"> </use>
-                            </svg></a>
-                          <div class="dropdown-menu dropdown-sub-menu">
-                            <ul class="flex flex-col gap-2"> 
-                              <li><a href="shop.html">Shop</a></li>
-                              <li><a href="product.html">Product</a></li>
-                              <li><a href="cart.html">Cart</a></li>
-                              <li><a href="checkout.html">Checkout</a></li>
-                              <li><a href="invoice.html">Invoice</a></li>
-                              <li><a href="invoice-preview.html">Invoice Preview</a></li>
-                              <li><a href="wishlist.html">Wishlist</a></li>
-                            </ul>
-                          </div>
-                        </li>
-                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2" href="javascript:void(0)"><span class="flex items-center gap-2">
-                              <svg class="w-5 h-5 stroke-title"> 
-                                <use href="../../assets/svg/sprite.svg#Paper-Plus"> </use>
-                              </svg>Project</span>
-                            <svg class="w-4 h-4 stroke-title ml-auto"> 
-                              <use href="../../assets/svg/sprite.svg#Arrow-Right-2"> </use>
-                            </svg></a>
-                          <div class="dropdown-menu dropdown-sub-menu">
-                            <ul class="flex flex-col gap-2"> 
-                              <li><a href="project-list.html">Project List</a></li>
-                              <li><a href="project-create.html">Project Create</a></li>
-                              <li><a href="target.html">Target</a></li>
-                              <li><a href="budget.html">Budget</a></li>
-                              <li><a href="user.html">User</a></li>
-                              <li><a href="activity.html">Activity</a></li>
-                            </ul>
-                          </div>
-                        </li>
-                        <li class="w-full "><a class="flex items-center gap-2" href="chat-app.html"><span class="flex items-center gap-2">
-                              <svg class="w-5 h-5 stroke-title"> 
-                                <use href="../../assets/svg/sprite.svg#Chat"> </use>
-                              </svg>Chat App</span></a>
-                        </li>
-                        <li class="w-full "><a class="flex items-center gap-2" href="tasks.html"><span class="flex items-center gap-2">
-                              <svg class="w-5 h-5 stroke-title"> 
-                                <use href="../../assets/svg/sprite.svg#Check-Circle"> </use>
-                              </svg>Tasks</span></a>
-                        </li>
-                        <li class="w-full "><a class="flex items-center gap-2" href="social-App.html"><span class="flex items-center gap-2">
-                              <svg class="w-5 h-5 stroke-title"> 
-                                <use href="../../assets/svg/sprite.svg#3-User"> </use>
-                              </svg>Social App</span></a>
-                        </li>
-                        <li class="w-full "><a class="flex items-center gap-2" href="social-App.html"><span class="flex items-center gap-2">
-                              <svg class="w-5 h-5 stroke-title"> 
-                                <use href="../../assets/svg/sprite.svg#Check-List"> </use>
-                              </svg>Todo App</span></a>
-                        </li>
-                        <li class="w-full "><a class="flex items-center gap-2" href="to-do-app.html"><span class="flex items-center gap-2">
-                              <svg class="w-5 h-5 stroke-title"> 
-                                <use href="../../assets/svg/sprite.svg#Video"> </use>
-                              </svg>Video Chat</span></a>
+                                <use href="../../assets/svg/sprite.svg#Paper"> </use>
+                              </svg><small class="text-xs leading-7">Sample Page</small></span></a>
                         </li>
                       </ul>
                     </div>
                   </li>
-                  <li class="dropdown on-hover-show cursor-pointer pb-[6px] transition-all duration-300 relative group before:bg-primary before:absolute before:-translate-x-1/2 before:bottom-0 before:left-1/2 hover:before:w-full before:h-[2px] before:w-0 "> <span class="text-xs font-bold transition-all duration-300 text-content group-hover:text-primary">Miscellaneous</span></li>
+                  <li class="dropdown on-hover-show cursor-pointer pb-[6px] transition-all duration-300 relative group before:bg-primary before:absolute before:-translate-x-1/2 before:bottom-0 before:left-1/2 hover:before:w-full before:h-[2px] before:w-0 "> <span class="text-xs font-bold transition-all duration-300 text-content group-hover:text-primary">Miscellaneous</span>
+                    <div class="dropdown-menu !min-w-[190px] !left-0 !right-unset"> 
+                      <!-- Miscellaneous Menu -->
+                      <ul class="flex flex-col gap-3"> 
+                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2" href="javascript:void(0)"><span class="flex items-center gap-2">
+                              <svg class="w-5 h-5 stroke-title"> 
+                                <use href="../../assets/svg/sprite.svg#Folder"> </use>
+                              </svg><small class="leading-7 text-xs">Blog</small></span>
+                            <svg class="w-4 h-4 stroke-title ml-auto"> 
+                              <use href="../../assets/svg/sprite.svg#Arrow-Right-2"> </use>
+                            </svg></a>
+                          <div class="dropdown-menu dropdown-sub-menu">
+                            <ul class="flex flex-col gap-2"> 
+                              <li><a href="./blog-grid.html">Blog Grid</a></li>
+                              <li><a href="./blog-detail.html">Blog Detail</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="w-full "><a class="flex items-center gap-2" href="knowledgebase.html"><span class="flex items-center gap-2">
+                              <svg class="w-5 h-5 stroke-title"> 
+                                <use href="../../assets/svg/sprite.svg#Scan"> </use>
+                              </svg><small class="leading-7 text-xs">Knowledgebase</small></span></a>
+                        </li>
+                        <li class="w-full dropdown on-hover-show group"><a class="flex items-center gap-2" href="javascript:void(0)"><span class="flex items-center gap-2">
+                              <svg class="w-5 h-5 stroke-title"> 
+                                <use href="../../assets/svg/sprite.svg#Location"> </use>
+                              </svg><small class="leading-7 text-xs">Map</small></span>
+                            <svg class="w-4 h-4 stroke-title ml-auto"> 
+                              <use href="../../assets/svg/sprite.svg#Arrow-Right-2"> </use>
+                            </svg></a>
+                          <div class="dropdown-menu dropdown-sub-menu">
+                            <ul class="flex flex-col gap-2"> 
+                              <li><a href="./maps-js.html">Maps Js</a></li>
+                              <li><a href="./data-map.html">Data Map</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
                 </ul>
                 <div class="flex items-center gap-[14px]">
                   <!-- Breadcrumbs Start -->
@@ -843,13 +734,13 @@
                         <li class="px-2"> <span>/</span></li>
                         <li class="breadcrumb-items capitalize">Ui Kits</li>
                         <li class="px-2"> <span>/</span></li>
-                        <li class="breadcrumb-items capitalize active">Button</li>
+                        <li class="breadcrumb-items capitalize active">Tables</li>
                       </ol>
                     </nav>
                   </div>
                   <!-- Breadcrumbs End -->
-                  <div class="custom-select select-style-1 lg:hidden">
-                    <select>
+                  <div class="custom-select select-style-1 lg:hidden dark:text-title">
+                    <select class="dark:text-title">
                       <option selected value="">Last 7 Days </option>
                       <option value="">Last 2 Weeks </option>
                       <option value="">Last 1 Month </option>
@@ -866,7 +757,7 @@
         <!-- Sidebar Start -->
         <div class="page-sidebar sidebar-dark unique-sidebar">
           <aside class="sidebar"> 
-            <div class="logo-wrapper"><a href="index.html"> <img class="w-full" src="../../assets/images/logo/logo.png" alt="logo"></a>
+            <div class="logo-wrapper"><a href="index.html"> <img class="w-full full-sidebar" src="../../assets/images/logo/logo.png" alt="logo"><img class="w-full icon-sidebar" src="../../assets/images/logo/logo-sort-1.png" alt="logo"></a>
               <button class="sidebar-btn">
                 <svg class="w-6 h-6"> 
                   <use href="../../assets/svg/sprite.svg#Category"> </use>
@@ -874,7 +765,7 @@
               </button>
             </div>
             <div class="search-wrapper">
-              <div class="search-box">
+              <div class="search-box"> 
                 <input class="search" placeholder="Search" type="search">
                 <svg class="w-5 h-5"> 
                   <use href="../../assets/svg/sprite.svg#Search"> </use>
@@ -882,9 +773,9 @@
               </div>
             </div>
             <nav class="sidebar-main"> 
-              <ul class="sidebar-links custom-scroll">
+              <ul class="sidebar-links custom-scroll"> 
                 <li class="title">General</li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#Home"> </use>
                       </svg><span class="sidebar-name">Dashboards</span></span>
@@ -895,12 +786,12 @@
                     <li> <a href="./index.html">Unique</a></li>
                   </ul>
                 </li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="./widgets.html"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="./widgets.html"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#Graph"> </use>
                       </svg><span class="sidebar-name">Widgets</span></span></a>
                 </li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#Document"> </use>
                       </svg><span class="sidebar-name">Page layout</span></span>
@@ -914,7 +805,7 @@
                   </ul>
                 </li>
                 <li class="title">Components</li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#Folder"> </use>
                       </svg><span class="sidebar-name">Ui Kits</span></span>
@@ -935,7 +826,7 @@
                     <li> <a href="./typography.html">Typography</a></li>
                   </ul>
                 </li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#Ticket-Star"> </use>
                       </svg><span class="sidebar-name">Bonus Ui</span></span>
@@ -958,7 +849,7 @@
                     <li> <a href="./tabs.html">Tabs</a></li>
                   </ul>
                 </li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#Info-Square"> </use>
                       </svg><span class="sidebar-name">Icons</span></span>
@@ -971,18 +862,18 @@
                     <li> <a href="./iconly.html">Iconly</a></li>
                   </ul>
                 </li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="apex-chart.html"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="apex-chart.html"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#Chart"> </use>
                       </svg><span class="sidebar-name">Apex Chart</span></span></a>
                 </li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="wow-animation.html"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="wow-animation.html"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#Video"> </use>
                       </svg><span class="sidebar-name">Wow Animation</span></span></a>
                 </li>
                 <li class="title">Applications</li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#Chat"> </use>
                       </svg><span class="sidebar-name">Chat</span></span>
@@ -994,12 +885,12 @@
                     <li> <a href="video-app.html">Video App</a></li>
                   </ul>
                 </li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="calendar.html"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="calendar.html"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#Calendar"> </use>
                       </svg><span class="sidebar-name">Calendar</span></span></a>
                 </li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#Bag"> </use>
                       </svg><span class="sidebar-name">Ecommerce</span></span>
@@ -1018,22 +909,22 @@
                     <li> <a href="wishlist.html">Wishlist</a></li>
                   </ul>
                 </li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="email.html"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="email.html"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#Message"> </use>
                       </svg><span class="sidebar-name">Email</span></span></a>
                 </li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="kanban-board.html"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="kanban-board.html"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#Paper"> </use>
                       </svg><span class="sidebar-name">Kanban Board</span></span></a>
                 </li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="todo.html"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="todo.html"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#Time-Circle"> </use>
                       </svg><span class="sidebar-name">Todo</span></span></a>
                 </li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#2-User"> </use>
                       </svg><span class="sidebar-name">User</span></span>
@@ -1046,7 +937,7 @@
                   </ul>
                 </li>
                 <li class="title">Forms &amp; Table</li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#Paper"> </use>
                       </svg><span class="sidebar-name">Forms</span></span>
@@ -1061,13 +952,13 @@
                     <li> <a href="./switch.html">Switch</a></li>
                   </ul>
                 </li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="table.html"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="table.html"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#Graph"> </use>
                       </svg><span class="sidebar-name">Tables</span></span></a>
                 </li>
                 <li class="title">Pages</li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#Folder"> </use>
                       </svg><span class="sidebar-name">Other Pages</span></span>
@@ -1084,13 +975,13 @@
                     <li> <a href="./reset-password.html">Reset Password</a></li>
                   </ul>
                 </li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="sample-page.html"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="sample-page.html"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#Paper"> </use>
                       </svg><span class="sidebar-name">Sample Page</span></span></a>
                 </li>
                 <li class="title">Miscellaneous</li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#Folder"> </use>
                       </svg><span class="sidebar-name">Blog</span></span>
@@ -1102,12 +993,12 @@
                     <li> <a href="./blog-detail.html">Blog Detail</a></li>
                   </ul>
                 </li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="knowledgebase.html"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="knowledgebase.html"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#Scan"> </use>
                       </svg><span class="sidebar-name">Knowledgebase</span></span></a>
                 </li>
-                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
+                <li class="sidebar-list"> <a class="sidebar-link sidebar-title" href="javascript:void(0)"><span> 
                       <svg> 
                         <use href="../../assets/svg/sprite.svg#Location"> </use>
                       </svg><span class="sidebar-name">Map</span></span>
@@ -1123,15 +1014,15 @@
             </nav>
           </aside>
         </div>
-        <!-- Sidebar End -->
-        <!-- Page Body Start -->
+        <!-- Sidebar End-->
+        <!-- Page Body Start-->
         <div class="page-body">
-          <div class="grid grid-cols-12 gap-card-gap">
+          <div class="grid grid-cols-12 gap-card-gap table-main">
             <div class="col-span-6 lg:col-span-12">
               <div class="card"> 
                 <div class="card-header border-b-0">
                   <div class="flex flex-col">
-                    <h3 class="text-lg font-medium">Default</h3>
+                    <h3 class="text-lg font-medium">Basic Table</h3>
                   </div>
                 </div>
                 <div class="card-body">
@@ -1143,37 +1034,107 @@
                           <th>First Name</th>
                           <th>Last Name</th>
                           <th>User Id</th>
-                          <th>Color</th>
+                          <th>Position</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
                           <td class="min-w-[1.25rem]">1</td>
-                          <td class="min-w-[11.125rem]">Cy Ganderton</td>
-                          <td class="min-w-[11.125rem]">The Bird</td>
-                          <td class="min-w-[11.125rem]">@mdorton</td>
-                          <td class="min-w-[.625rem]">Blue</td>
+                          <td class="min-w-[8.125rem]">Cordia</td>
+                          <td class="min-w-[11.125rem]">Gulgowski</td>
+                          <td class="min-w-[11.125rem]">CordiaGulgowski@twitter</td>
+                          <td class="min-w-[9.125rem]">Accountant</td>
                         </tr>
                         <tr>
                           <td class="min-w-[1.25rem]">2</td>
-                          <td class="min-w-[11.125rem]">Marjy Ferencz</td>
-                          <td class="min-w-[11.125rem]">Ottandy</td>
-                          <td class="min-w-[11.125rem]">@johndeo</td>
-                          <td class="min-w-[.625rem]">Purple</td>
+                          <td class="min-w-[8.125rem]">Reginald</td>
+                          <td class="min-w-[11.125rem]">Stanton</td>
+                          <td class="min-w-[11.125rem]">ReginaldStanton@twitter</td>
+                          <td class="min-w-[9.125rem]">Software Engineer</td>
                         </tr>
                         <tr>
                           <td class="min-w-[1.25rem]">3</td>
-                          <td class="min-w-[11.125rem]">Cy Ganderton</td>
-                          <td class="min-w-[11.125rem]">Orton</td>
-                          <td class="min-w-[11.125rem]">@mdothe</td>
-                          <td class="min-w-[.625rem]">Green</td>
+                          <td class="min-w-[8.125rem]">Prof. Kevin</td>
+                          <td class="min-w-[11.125rem]">Rutherford</td>
+                          <td class="min-w-[11.125rem]">KevinRutherford@twitter</td>
+                          <td class="min-w-[9.125rem]">Pre-sale Support</td>
                         </tr>
                         <tr>
                           <td class="min-w-[1.25rem]">4</td>
-                          <td class="min-w-[11.125rem]">Cy Ganderton</td>
-                          <td class="min-w-[11.125rem]">Deo</td>
-                          <td class="min-w-[11.125rem]">@Thornton</td>
-                          <td class="min-w-[.625rem]">Red</td>
+                          <td class="min-w-[8.125rem]">Mrs. Eda</td>
+                          <td class="min-w-[11.125rem]">McCullough </td>
+                          <td class="min-w-[11.125rem]">EdaMcCullough @twitter</td>
+                          <td class="min-w-[9.125rem]">Senior Developer</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-span-6 lg:col-span-12">
+              <div class="card">
+                <div class="card-header border-b-0">
+                  <div class="flex flex-col">
+                    <h3 class="text-lg font-medium">Icons Table</h3>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="overflow-auto custom-scroll">  
+                    <table class="table equal-space">
+                      <thead> 
+                        <tr> 
+                          <th>Id</th>
+                          <th>Status</th>
+                          <th>Signal Name</th>
+                          <th>Security</th>
+                          <th>Team Leader</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="min-w-[1.25rem]">1</td>
+                          <td class="min-w-[7.125rem]">
+                            <div class="flex gap-1 items-center"> <i class="w-4 h-4 stroke-success" data-feather="alert-triangle"></i>
+                              <p class="text-success">No Signal</p>
+                            </div>
+                          </td>
+                          <td class="min-w-[14.125rem]">Astrid: NE Shared managed</td>
+                          <td class="min-w-[6.125rem]">Medium</td>
+                          <td class="min-w-[8.125rem]">Chase Nguyen</td>
+                        </tr>
+                        <tr>
+                          <td class="min-w-[1.25rem]">2</td>
+                          <td class="min-w-[7.125rem]">
+                            <div class="flex gap-1 items-center"> <i class="w-4 h-4 stroke-primary" data-feather="alert-circle"></i>
+                              <p class="text-primary">Online</p>
+                            </div>
+                          </td>
+                          <td class="min-w-[14.125rem]">Phoenix: prod shared lyra-lists</td>
+                          <td class="min-w-[6.125rem]">Minor</td>
+                          <td class="min-w-[8.125rem]">Jeremy Lake</td>
+                        </tr>
+                        <tr>
+                          <td class="min-w-[1.25rem]">3</td>
+                          <td class="min-w-[7.125rem]">
+                            <div class="flex gap-1 items-center"> <i class="w-4 h-4 stroke-danger" data-feather="alert-triangle"></i>
+                              <p class="text-danger">Offline</p>
+                            </div>
+                          </td>
+                          <td class="min-w-[14.125rem]">Cosmo: prod shared ares</td>
+                          <td class="min-w-[6.125rem]">Huge</td>
+                          <td class="min-w-[8.125rem]">Brie Furman</td>
+                        </tr>
+                        <tr>
+                          <td class="min-w-[1.25rem]">4</td>
+                          <td class="min-w-[7.125rem]">
+                            <div class="flex gap-1 items-center"> <i class="w-4 h-4 stroke-secondary" data-feather="check-circle"></i>
+                              <p class="text-secondary">Online</p>
+                            </div>
+                          </td>
+                          <td class="min-w-[14.125rem]">Astrid: NE Shared managed</td>
+                          <td class="min-w-[6.125rem]">Medium</td>
+                          <td class="min-w-[8.125rem]">Diane Okuma</td>
                         </tr>
                       </tbody>
                     </table>
@@ -1190,26 +1151,19 @@
                 </div>
                 <div class="card-body"> 
                   <div class="overflow-auto custom-scroll">  
-                    <table class="table equal-space">
+                    <table class="table equal-space active-table">
                       <thead> 
                         <tr>
-                          <th>
-                            <div class="flex items-center gap-2">
-                              <label class="checkbox w-[15px] h-[15px]">
-                                <input type="checkbox peer">
-                                <div class="checkbox-indicator bg-white peer-checked:bg-primary"><i data-feather="check"></i></div>
-                              </label>
-                            </div>
-                          </th>
+                          <th>#</th>
                           <th>User Name</th>
                           <th>Status</th>
                           <th>Role</th>
                           <th>Salary</th>
-                          <th>Start Date</th>
+                          <th>Team Leader</th>
                         </tr>
                       </thead>
                       <tbody>
-                        <tr class="hover:bg-gray-light">
+                        <tr class="hover:bg-gray-light dark:hover:bg-sidebar-dark2">
                           <td class="min-w-[20px]">
                             <div class="flex items-center gap-2">
                               <label class="checkbox w-[15px] h-[15px]">
@@ -1218,23 +1172,23 @@
                               </label>
                             </div>
                           </td>
-                          <td class="min-w-[50px]">
+                          <td class="min-w-[100px]">
                             <h4 class="text-xs font-semibold text-title">Wiliand</h4>
                           </td>
-                          <td class="min-w-[50px]"> 
+                          <td class="min-w-[100px]"> 
                             <h4 class="text-xs font-semibold text-danger">Invited</h4>
                           </td>
-                          <td class="min-w-[50px]">
+                          <td class="min-w-[11rem]">
                             <h4 class="text-xs font-semibold text-title">Technical Author</h4>
                           </td>
-                          <td class="min-w-[10px]">
+                          <td class="min-w-[30px]">
                             <h4 class="text-xs font-semibold text-undefined">$234,100</h4>
                           </td>
-                          <td class="min-w-[20px]">
-                            <h4 class="text-xs font-semibold text-title">July 18, 2011</h4>
+                          <td class="min-w-[120px]">
+                            <h4 class="text-xs font-semibold text-title">Jeremy Lake</h4>
                           </td>
                         </tr>
-                        <tr class="hover:bg-gray-light">
+                        <tr class="hover:bg-gray-light dark:hover:bg-sidebar-dark2">
                           <td class="min-w-[20px]">
                             <div class="flex items-center gap-2">
                               <label class="checkbox w-[15px] h-[15px]">
@@ -1243,23 +1197,23 @@
                               </label>
                             </div>
                           </td>
-                          <td class="min-w-[50px]">
+                          <td class="min-w-[100px]">
                             <h4 class="text-xs font-semibold text-title">Thablooks</h4>
                           </td>
-                          <td class="min-w-[50px]"> 
+                          <td class="min-w-[100px]"> 
                             <h4 class="text-xs font-semibold text-success">Active</h4>
                           </td>
-                          <td class="min-w-[50px]">
+                          <td class="min-w-[11rem]">
                             <h4 class="text-xs font-semibold text-title">Account manager</h4>
                           </td>
-                          <td class="min-w-[10px]">
+                          <td class="min-w-[30px]">
                             <h4 class="text-xs font-semibold text-undefined">$356,100</h4>
                           </td>
-                          <td class="min-w-[20px]">
-                            <h4 class="text-xs font-semibold text-title">Apr 12, 2014</h4>
+                          <td class="min-w-[120px]">
+                            <h4 class="text-xs font-semibold text-title">Meryl Streep</h4>
                           </td>
                         </tr>
-                        <tr class="hover:bg-gray-light">
+                        <tr class="hover:bg-gray-light dark:hover:bg-sidebar-dark2">
                           <td class="min-w-[20px]">
                             <div class="flex items-center gap-2">
                               <label class="checkbox w-[15px] h-[15px]">
@@ -1268,23 +1222,23 @@
                               </label>
                             </div>
                           </td>
-                          <td class="min-w-[50px]">
+                          <td class="min-w-[100px]">
                             <h4 class="text-xs font-semibold text-title">Manyboice</h4>
                           </td>
-                          <td class="min-w-[50px]"> 
+                          <td class="min-w-[100px]"> 
                             <h4 class="text-xs font-semibold text-danger">invited</h4>
                           </td>
-                          <td class="min-w-[50px]">
+                          <td class="min-w-[11rem]">
                             <h4 class="text-xs font-semibold text-title">Associate Developer</h4>
                           </td>
-                          <td class="min-w-[10px]">
+                          <td class="min-w-[30px]">
                             <h4 class="text-xs font-semibold text-undefined">$154,284</h4>
                           </td>
-                          <td class="min-w-[20px]">
-                            <h4 class="text-xs font-semibold text-title">January 01, 2016</h4>
+                          <td class="min-w-[120px]">
+                            <h4 class="text-xs font-semibold text-title">Stiphen Deo</h4>
                           </td>
                         </tr>
-                        <tr class="hover:bg-gray-light">
+                        <tr class="hover:bg-gray-light dark:hover:bg-sidebar-dark2">
                           <td class="min-w-[20px]">
                             <div class="flex items-center gap-2">
                               <label class="checkbox w-[15px] h-[15px]">
@@ -1293,20 +1247,20 @@
                               </label>
                             </div>
                           </td>
-                          <td class="min-w-[50px]">
+                          <td class="min-w-[100px]">
                             <h4 class="text-xs font-semibold text-title">Stooul</h4>
                           </td>
-                          <td class="min-w-[50px]"> 
+                          <td class="min-w-[100px]"> 
                             <h4 class="text-xs font-semibold text-danger">invited</h4>
                           </td>
-                          <td class="min-w-[50px]">
+                          <td class="min-w-[11rem]">
                             <h4 class="text-xs font-semibold text-title">Junior Technical Author</h4>
                           </td>
-                          <td class="min-w-[10px]">
+                          <td class="min-w-[30px]">
                             <h4 class="text-xs font-semibold text-undefined">$296,100</h4>
                           </td>
-                          <td class="min-w-[20px]">
-                            <h4 class="text-xs font-semibold text-title">January 01, 2016</h4>
+                          <td class="min-w-[120px]">
+                            <h4 class="text-xs font-semibold text-title">Diane Okuma</h4>
                           </td>
                         </tr>
                       </tbody>
@@ -1319,7 +1273,7 @@
               <div class="card">
                 <div class="card-header border-b-0">
                   <div class="flex flex-col">
-                    <h3 class="text-lg font-medium">Hoverable</h3>
+                    <h3 class="text-lg font-medium">Hoverable </h3>
                   </div>
                 </div>
                 <div class="card-body">
@@ -1331,7 +1285,7 @@
                           <th>Name</th>
                           <th>Website</th>
                           <th>Company</th>
-                          <th>Birthday</th>
+                          <th>Country</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -1339,29 +1293,29 @@
                           <td class="min-w-[1.25rem]">1</td>
                           <td class="min-w-[8.125rem]">Elizabeth J. Chu</td>
                           <td class="min-w-[8.125rem]">Medzmalls.com</td>
-                          <td class="min-w-[8.125rem]">Shabby Chic</td>
-                          <td class="min-w-[8.625rem]">August 17, 1963</td>
+                          <td class="min-w-[10.125rem]">Shabby Chic</td>
+                          <td class="min-w-[3.625rem]">IND</td>
                         </tr>
                         <tr class="hover:bg-primary-light hover:text-title">
                           <td class="min-w-[1.25rem]">2</td>
                           <td class="min-w-[8.125rem]">Dana A. Gibson</td>
                           <td class="min-w-[8.125rem]">Viscongroup.com</td>
-                          <td class="min-w-[8.125rem]">Country Club Markets</td>
-                          <td class="min-w-[8.625rem]">May 6, 1991</td>
+                          <td class="min-w-[10.125rem]">Country Club Markets</td>
+                          <td class="min-w-[3.625rem]">US</td>
                         </tr>
                         <tr class="hover:bg-primary-light hover:text-title">
                           <td class="min-w-[1.25rem]">3</td>
                           <td class="min-w-[8.125rem]">Ann G. Wilson</td>
                           <td class="min-w-[8.125rem]">Inarayhutton.com</td>
-                          <td class="min-w-[8.125rem]">Exact Realty</td>
-                          <td class="min-w-[8.625rem]">October 20, 1956</td>
+                          <td class="min-w-[10.125rem]">Exact Realty</td>
+                          <td class="min-w-[3.625rem]">UK</td>
                         </tr>
                         <tr class="hover:bg-primary-light hover:text-title">
                           <td class="min-w-[1.25rem]">4</td>
                           <td class="min-w-[8.125rem]">Tanya M. Young</td>
                           <td class="min-w-[8.125rem]">loyogame.com</td>
-                          <td class="min-w-[8.125rem]">Opti-Tek</td>
-                          <td class="min-w-[8.625rem]">April 30, 1944</td>
+                          <td class="min-w-[10.125rem]">Opti-Tek</td>
+                          <td class="min-w-[3.625rem]">IRN</td>
                         </tr>
                       </tbody>
                     </table>
@@ -1373,44 +1327,103 @@
               <div class="card">
                 <div class="card-header border-b-0">
                   <div class="flex flex-col">
-                    <h3 class="text-lg font-medium">Bordered</h3>
+                    <h3 class="text-lg font-medium">Head Option</h3>
                   </div>
                 </div>
                 <div class="card-body">
                   <div class="overflow-auto custom-scroll">  
-                    <table class="table table-bordered">
+                    <table class="table equal-space head-table">
                       <thead>
-                        <tr>
-                          <th class="border border-border-light">No</th>
-                          <th class="border border-border-light">Name</th>
-                          <th class="border border-border-light">Job</th>
-                          <th class="border border-border-light">Color</th>
+                        <tr class="dark:bg-sidebar-dark2">
+                          <th>No</th>
+                          <th>First Name</th>
+                          <th>Last Name</th>
+                          <th>User Id</th>
+                          <th>Position</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td class="min-w-[.625rem]  rounded border border-border-light">1</td>
-                          <td class="min-w-[.625rem] rounded  border border-border-light">Erik M. Pate</td>
-                          <td class="min-w-[1.25rem] rounded  border border-border-light">The Bird</td>
-                          <td class="min-w-[.625rem]  rounded border border-border-light">Blue</td>
+                          <td class="min-w-[1.25rem]">1</td>
+                          <td class="min-w-[8.125rem]">Cordia</td>
+                          <td class="min-w-[11.125rem]">Gulgowski</td>
+                          <td class="min-w-[11.125rem]">CordiaGulgowski@twitter</td>
+                          <td class="min-w-[9.5rem]">Accountant</td>
                         </tr>
                         <tr>
-                          <td class="min-w-[.625rem]  rounded border border-border-light">2</td>
-                          <td class="min-w-[.625rem] rounded  border border-border-light">Larry K. Wyatt</td>
-                          <td class="min-w-[1.25rem] rounded  border border-border-light">Ottandy</td>
-                          <td class="min-w-[.625rem]  rounded border border-border-light">Purple</td>
+                          <td class="min-w-[1.25rem]">2</td>
+                          <td class="min-w-[8.125rem]">Reginald</td>
+                          <td class="min-w-[11.125rem]">Stanton</td>
+                          <td class="min-w-[11.125rem]">ReginaldStanton@twitter</td>
+                          <td class="min-w-[9.5rem]">Software Engineer</td>
                         </tr>
                         <tr>
-                          <td class="min-w-[.625rem]  rounded border border-border-light">3</td>
-                          <td class="min-w-[.625rem] rounded  border border-border-light">Patti J. Cortez</td>
-                          <td class="min-w-[1.25rem] rounded  border border-border-light">Orton</td>
-                          <td class="min-w-[.625rem]  rounded border border-border-light">Green</td>
+                          <td class="min-w-[1.25rem]">3</td>
+                          <td class="min-w-[8.125rem]">Prof. Kevin</td>
+                          <td class="min-w-[11.125rem]">Rutherford</td>
+                          <td class="min-w-[11.125rem]">KevinRutherford@twitter</td>
+                          <td class="min-w-[9.5rem]">Pre-sale Support</td>
                         </tr>
                         <tr>
-                          <td class="min-w-[.625rem]  rounded border border-border-light">4</td>
-                          <td class="min-w-[.625rem] rounded  border border-border-light">Teena C. Marshall</td>
-                          <td class="min-w-[1.25rem] rounded  border border-border-light">Deo</td>
-                          <td class="min-w-[.625rem]  rounded border border-border-light">Red</td>
+                          <td class="min-w-[1.25rem]">4</td>
+                          <td class="min-w-[8.125rem]">Mrs. Eda</td>
+                          <td class="min-w-[11.125rem]">McCullough </td>
+                          <td class="min-w-[11.125rem]">EdaMcCullough @twitter</td>
+                          <td class="min-w-[9.5rem]">Senior Developer</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-span-6 lg:col-span-12"> 
+              <div class="card"> 
+                <div class="card-header border-b-0">
+                  <div class="flex flex-col">
+                    <h3 class="text-lg font-medium">Bordered</h3>
+                  </div>
+                </div>
+                <div class="card-body"> 
+                  <div class="overflow-auto custom-scroll">  
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th class="border border-dashed border-border-light dark:border-border-dark">No</th>
+                          <th class="border border-dashed border-border-light dark:border-border-dark">Dessert</th>
+                          <th class="border border-dashed border-border-light dark:border-border-dark">Calories</th>
+                          <th class="border border-dashed border-border-light dark:border-border-dark">Fat</th>
+                          <th class="border border-dashed border-border-light dark:border-border-dark">Price</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="min-w-[.625rem]  rounded border-2 border-dashed border-border-light dark:border-border-dark">1</td>
+                          <td class="min-w-[.625rem] rounded border-2 border-dashed border-border-light dark:border-border-dark">KitKat</td>
+                          <td class="min-w-[1.25rem] rounded border-2 border-dashed border-border-light dark:border-border-dark">518</td>
+                          <td class="min-w-[.625rem]  rounded border-2 border-dashed border-border-light dark:border-border-dark">26</td>
+                          <td class="min-w-[.625rem]  rounded border-2 border-dashed border-border-light dark:border-border-dark">20</td>
+                        </tr>
+                        <tr>
+                          <td class="min-w-[.625rem]  rounded border-2 border-dashed border-border-light dark:border-border-dark">2</td>
+                          <td class="min-w-[.625rem] rounded border-2 border-dashed border-border-light dark:border-border-dark">Donut</td>
+                          <td class="min-w-[1.25rem] rounded border-2 border-dashed border-border-light dark:border-border-dark">425</td>
+                          <td class="min-w-[.625rem]  rounded border-2 border-dashed border-border-light dark:border-border-dark">25</td>
+                          <td class="min-w-[.625rem]  rounded border-2 border-dashed border-border-light dark:border-border-dark">80</td>
+                        </tr>
+                        <tr>
+                          <td class="min-w-[.625rem]  rounded border-2 border-dashed border-border-light dark:border-border-dark">3</td>
+                          <td class="min-w-[.625rem] rounded border-2 border-dashed border-border-light dark:border-border-dark">Eclair</td>
+                          <td class="min-w-[1.25rem] rounded border-2 border-dashed border-border-light dark:border-border-dark">245</td>
+                          <td class="min-w-[.625rem]  rounded border-2 border-dashed border-border-light dark:border-border-dark">16</td>
+                          <td class="min-w-[.625rem]  rounded border-2 border-dashed border-border-light dark:border-border-dark">10</td>
+                        </tr>
+                        <tr>
+                          <td class="min-w-[.625rem]  rounded border-2 border-dashed border-border-light dark:border-border-dark">4</td>
+                          <td class="min-w-[.625rem] rounded border-2 border-dashed border-border-light dark:border-border-dark">Cookies</td>
+                          <td class="min-w-[1.25rem] rounded border-2 border-dashed border-border-light dark:border-border-dark">75</td>
+                          <td class="min-w-[.625rem]  rounded border-2 border-dashed border-border-light dark:border-border-dark">4.5</td>
+                          <td class="min-w-[.625rem]  rounded border-2 border-dashed border-border-light dark:border-border-dark">20</td>
                         </tr>
                       </tbody>
                     </table>
@@ -1431,47 +1444,47 @@
                       <thead> 
                         <tr>
                           <th>No</th>
-                          <th>Customer</th>
+                          <th>Employee Name</th>
                           <th>Date</th>
-                          <th>Invoice</th>
-                          <th>Website</th>
+                          <th>Status</th>
+                          <th>Performance</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
                           <td class="min-w-[.625rem]">1</td>
-                          <td class="min-w-[.625rem]">Brian A. Lenz</td>
-                          <td class="min-w-[1.25rem]">Nov 21, 2021</td>
-                          <td class="min-w-[.625rem]">Blue</td>
-                          <td class="min-w-[.625rem]">Scoreboard.com</td>
+                          <td class="min-w-[13rem]">Brian A. Lenz</td>
+                          <td class="min-w-[11rem]">Nov 21, 2021</td>
+                          <td class="min-w-[9rem]">On leave</td>
+                          <td class="min-w-[.625rem]">29/30</td>
                         </tr>
                         <tr>
                           <td class="min-w-[.625rem]">2</td>
-                          <td class="min-w-[.625rem]">Maggie E. Pope</td>
-                          <td class="min-w-[1.25rem]">Nov 15, 2021</td>
-                          <td class="min-w-[.625rem]">Purple</td>
-                          <td class="min-w-[.625rem]">Miestate.com</td>
+                          <td class="min-w-[13rem]">Maggie E. Pope</td>
+                          <td class="min-w-[11rem]">Nov 15, 2021</td>
+                          <td class="min-w-[9rem]">Present</td>
+                          <td class="min-w-[.625rem]">27/30</td>
                         </tr>
                         <tr>
                           <td class="min-w-[.625rem]">3</td>
-                          <td class="min-w-[.625rem]">Jarvis F. Knowles</td>
-                          <td class="min-w-[1.25rem]">Nov 1, 2021</td>
-                          <td class="min-w-[.625rem]">green</td>
-                          <td class="min-w-[.625rem]">Theclick.com</td>
+                          <td class="min-w-[13rem]">Jarvis F. Knowles</td>
+                          <td class="min-w-[11rem]">Nov 1, 2021</td>
+                          <td class="min-w-[9rem]">On leave</td>
+                          <td class="min-w-[.625rem]">26/30</td>
                         </tr>
                         <tr>
                           <td class="min-w-[.625rem]">4</td>
-                          <td class="min-w-[.625rem]">Jennifer D. Levine</td>
-                          <td class="min-w-[1.25rem]">Nov 9, 2021</td>
-                          <td class="min-w-[.625rem]">Red</td>
-                          <td class="min-w-[.625rem]">Naturepp.com</td>
+                          <td class="min-w-[13rem]">Jennifer D. Levine</td>
+                          <td class="min-w-[11rem]">Nov 9, 2021</td>
+                          <td class="min-w-[9rem]">On leave</td>
+                          <td class="min-w-[.625rem]">29/30</td>
                         </tr>
                         <tr>
                           <td class="min-w-[.625rem]">5</td>
-                          <td class="min-w-[.625rem]">William C. Neilson</td>
-                          <td class="min-w-[1.25rem]">Nov 9, 2021</td>
-                          <td class="min-w-[.625rem]">Yellow</td>
-                          <td class="min-w-[.625rem]">Naturepp.com</td>
+                          <td class="min-w-[13rem]">William C. Neilson</td>
+                          <td class="min-w-[11rem]">Nov 9, 2021</td>
+                          <td class="min-w-[9rem]">Present</td>
+                          <td class="min-w-[.625rem]">28/30</td>
                         </tr>
                       </tbody>
                     </table>
@@ -1499,16 +1512,16 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
+                        <tr class="group">
                           <td class="min-w-[11.125rem]"> <a class="flex items-center gap-[.5625rem]" href="./invoice.html"><img class="2sm:w-[2.375rem] 2sm:h-[2.375rem] w-10 h-10 rounded-full" src="../../assets/images/avatar/1.jpg" alt="Andy Groshev">
                               <div>
-                                <h4 class="text-xs font-semibold text-title">Andy Groshev</h4>
+                                <h4 class="text-xs font-semibold text-title group-hover:text-primary">Andy Groshev</h4>
                               </div></a></td>
                           <td class="min-w-[7.5rem]"> 
-                            <h4 class="text-xs font-semibold text-content">25 Jan 2023</h4>
+                            <h4 class="text-xs font-semibold text-content group-hover:text-primary">25 Jan 2023</h4>
                           </td>
                           <td class="min-w-[6.25rem]"> 
-                            <h4 class="text-xs font-semibold text-title">$2.588.00</h4>
+                            <h4 class="text-xs font-semibold text-title group-hover:text-primary">$2.588.00</h4>
                           </td>
                           <td class="min-w-[5.3125rem]"> 
                             <h4 class="text-xs font-semibold capitalize text-success">Paid</h4>
@@ -1524,16 +1537,16 @@
                             </div>
                           </td>
                         </tr>
-                        <tr>
+                        <tr class="group">
                           <td class="min-w-[11.125rem]"> <a class="flex items-center gap-[.5625rem]" href="./invoice.html"><img class="2sm:w-[2.375rem] 2sm:h-[2.375rem] w-10 h-10 rounded-full" src="../../assets/images/avatar/2.jpg" alt="Patrick Press">
                               <div>
-                                <h4 class="text-xs font-semibold text-title">Patrick Press</h4>
+                                <h4 class="text-xs font-semibold text-title group-hover:text-primary">Patrick Press</h4>
                               </div></a></td>
                           <td class="min-w-[7.5rem]"> 
-                            <h4 class="text-xs font-semibold text-content">20 Feb 2023</h4>
+                            <h4 class="text-xs font-semibold text-content group-hover:text-primary">20 Feb 2023</h4>
                           </td>
                           <td class="min-w-[6.25rem]"> 
-                            <h4 class="text-xs font-semibold text-title">$4.800.00</h4>
+                            <h4 class="text-xs font-semibold text-title group-hover:text-primary">$4.800.00</h4>
                           </td>
                           <td class="min-w-[5.3125rem]"> 
                             <h4 class="text-xs font-semibold capitalize text-danger">Past Due</h4>
@@ -1549,16 +1562,16 @@
                             </div>
                           </td>
                         </tr>
-                        <tr>
+                        <tr class="group">
                           <td class="min-w-[11.125rem]"> <a class="flex items-center gap-[.5625rem]" href="./invoice.html"><img class="2sm:w-[2.375rem] 2sm:h-[2.375rem] w-10 h-10 rounded-full" src="../../assets/images/avatar/3.jpg" alt="Kevin Greem">
                               <div>
-                                <h4 class="text-xs font-semibold text-title">Kevin Greem</h4>
+                                <h4 class="text-xs font-semibold text-title group-hover:text-primary">Kevin Greem</h4>
                               </div></a></td>
                           <td class="min-w-[7.5rem]"> 
-                            <h4 class="text-xs font-semibold text-content">26 Feb 2023</h4>
+                            <h4 class="text-xs font-semibold text-content group-hover:text-primary">26 Feb 2023</h4>
                           </td>
                           <td class="min-w-[6.25rem]"> 
-                            <h4 class="text-xs font-semibold text-title">$4.678.00</h4>
+                            <h4 class="text-xs font-semibold text-title group-hover:text-primary">$4.678.00</h4>
                           </td>
                           <td class="min-w-[5.3125rem]"> 
                             <h4 class="text-xs font-semibold capitalize text-success">Paid</h4>
@@ -1574,16 +1587,16 @@
                             </div>
                           </td>
                         </tr>
-                        <tr>
+                        <tr class="group">
                           <td class="min-w-[11.125rem]"> <a class="flex items-center gap-[.5625rem]" href="./invoice.html"><img class="2sm:w-[2.375rem] 2sm:h-[2.375rem] w-10 h-10 rounded-full" src="../../assets/images/avatar/4.jpg" alt="Arocca Barton">
                               <div>
-                                <h4 class="text-xs font-semibold text-title">Arocca Barton</h4>
+                                <h4 class="text-xs font-semibold text-title group-hover:text-primary">Arocca Barton</h4>
                               </div></a></td>
                           <td class="min-w-[7.5rem]"> 
-                            <h4 class="text-xs font-semibold text-content">10 March 2023</h4>
+                            <h4 class="text-xs font-semibold text-content group-hover:text-primary">10 March 2023</h4>
                           </td>
                           <td class="min-w-[6.25rem]"> 
-                            <h4 class="text-xs font-semibold text-title">$2.450.00</h4>
+                            <h4 class="text-xs font-semibold text-title group-hover:text-primary">$2.450.00</h4>
                           </td>
                           <td class="min-w-[5.3125rem]"> 
                             <h4 class="text-xs font-semibold capitalize text-title">Privet</h4>
@@ -1626,11 +1639,11 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
+                        <tr class="group">
                           <td class="min-w-[11.125rem]"> 
                             <div class="flex items-center gap-[.5625rem]"><img class="w-10 h-10 rounded-full" src="../../assets/images/product/1.jpg" alt="Samsung TV">
                               <div>
-                                <h4 class="text-xs font-semibold text-title">Samsung TV</h4><span class="block mt-1 font-semibold text-2xs text-content">Item Sold</span>
+                                <h4 class="text-xs font-semibold text-title group-hover:text-primary">Samsung TV</h4><span class="block mt-1 font-semibold text-2xs text-content">Item Sold</span>
                               </div>
                             </div>
                           </td>
@@ -1654,11 +1667,11 @@
                             <h4 class="text-xs font-semibold text-title">Paypal</h4>
                           </td>
                         </tr>
-                        <tr>
+                        <tr class="group">
                           <td class="min-w-[11.125rem]"> 
                             <div class="flex items-center gap-[.5625rem]"><img class="w-10 h-10 rounded-full" src="../../assets/images/product/2.jpg" alt="Spring Bed">
                               <div>
-                                <h4 class="text-xs font-semibold text-title">Spring Bed</h4><span class="block mt-1 font-semibold text-2xs text-content">Bought item</span>
+                                <h4 class="text-xs font-semibold text-title group-hover:text-primary">Spring Bed</h4><span class="block mt-1 font-semibold text-2xs text-content">Bought item</span>
                               </div>
                             </div>
                           </td>
@@ -1682,11 +1695,11 @@
                             <h4 class="text-xs font-semibold text-title">Credit Card</h4>
                           </td>
                         </tr>
-                        <tr>
+                        <tr class="group">
                           <td class="min-w-[11.125rem]"> 
                             <div class="flex items-center gap-[.5625rem]"><img class="w-10 h-10 rounded-full" src="../../assets/images/product/3.jpg" alt="Long Dress">
                               <div>
-                                <h4 class="text-xs font-semibold text-title">Long Dress</h4><span class="block mt-1 font-semibold text-2xs text-content">Bought item</span>
+                                <h4 class="text-xs font-semibold text-title group-hover:text-primary">Long Dress</h4><span class="block mt-1 font-semibold text-2xs text-content">Bought item</span>
                               </div>
                             </div>
                           </td>
@@ -1710,11 +1723,11 @@
                             <h4 class="text-xs font-semibold text-title">Paypal</h4>
                           </td>
                         </tr>
-                        <tr>
+                        <tr class="group">
                           <td class="min-w-[11.125rem]"> 
                             <div class="flex items-center gap-[.5625rem]"><img class="w-10 h-10 rounded-full" src="../../assets/images/product/4.jpg" alt="Phillip Lightbulb">
                               <div>
-                                <h4 class="text-xs font-semibold text-title">Phillip Lightbulb</h4><span class="block mt-1 font-semibold text-2xs text-content">Item Sold</span>
+                                <h4 class="text-xs font-semibold text-title group-hover:text-primary">Phillip Lightbulb</h4><span class="block mt-1 font-semibold text-2xs text-content">Item Sold</span>
                               </div>
                             </div>
                           </td>
@@ -1753,7 +1766,7 @@
                 </div>
                 <div class="card-body">
                   <div class="overflow-auto custom-scroll">  
-                    <table class="table table-bordered table-variant">
+                    <table class="table table-bordered table-variant ">
                       <thead> 
                         <tr> 
                           <th>#</th>
@@ -1765,45 +1778,45 @@
                       <tbody>
                         <tr>
                           <td class="min-w-[11.125rem]">Primary</td>
-                          <td class="min-w-[11.125rem]">James L. Matthews</td>
-                          <td class="min-w-[11.125rem]">Irving's Sporting Goods</td>
-                          <td class="min-w-[.625rem]">Administrative law judge</td>
+                          <td class="min-w-[13.5rem]">James L. Matthews</td>
+                          <td class="min-w-[15rem]">Irving's Sporting Goods</td>
+                          <td class="min-w-[18.25rem]">Administrative law judge</td>
                         </tr>
                         <tr>
                           <td class="min-w-[11.125rem]">Secondary</td>
-                          <td class="min-w-[11.125rem]">Jannie R. Anderson</td>
-                          <td class="min-w-[11.125rem]">Cutting, punching</td>
-                          <td class="min-w-[.625rem]">Plan Smart Partner</td>
+                          <td class="min-w-[13.5rem]">Jannie R. Anderson</td>
+                          <td class="min-w-[15rem]">Cutting, punching</td>
+                          <td class="min-w-[18.25rem]">Plan Smart Partner</td>
                         </tr>
                         <tr>
                           <td class="min-w-[11.125rem]">Info</td>
-                          <td class="min-w-[11.125rem]">David K. Olson</td>
-                          <td class="min-w-[11.125rem]">Life Plan Counselling</td>
-                          <td class="min-w-[.625rem]">Process metallurgical engineer</td>
+                          <td class="min-w-[13.5rem]">David K. Olson</td>
+                          <td class="min-w-[15rem]">Life Plan Counselling</td>
+                          <td class="min-w-[18.25rem]">Process metallurgical engineer</td>
                         </tr>
                         <tr>
                           <td class="min-w-[11.125rem]">Success</td>
-                          <td class="min-w-[11.125rem]">Daniel M. Cox</td>
-                          <td class="min-w-[11.125rem]">Market Basket</td>
-                          <td class="min-w-[.625rem]">U.S. Secret Service agent</td>
+                          <td class="min-w-[13.5rem]">Daniel M. Cox</td>
+                          <td class="min-w-[15rem]">Market Basket</td>
+                          <td class="min-w-[18.25rem]">U.S. Secret Service agent</td>
                         </tr>
                         <tr>
                           <td class="min-w-[11.125rem]">Warning</td>
-                          <td class="min-w-[11.125rem]">Pricilla B. Dobbs</td>
-                          <td class="min-w-[11.125rem]">Nedick's</td>
-                          <td class="min-w-[.625rem]">Bartender</td>
+                          <td class="min-w-[13.5rem]">Pricilla B. Dobbs</td>
+                          <td class="min-w-[15rem]">Nedick's</td>
+                          <td class="min-w-[18.25rem]">Bartender</td>
                         </tr>
                         <tr>
                           <td class="min-w-[11.125rem]">Danger</td>
-                          <td class="min-w-[11.125rem]">Juanita C. Laufer</td>
-                          <td class="min-w-[11.125rem]">Alpha Beta</td>
-                          <td class="min-w-[.625rem]">Ticket agent</td>
+                          <td class="min-w-[13.5rem]">Juanita C. Laufer</td>
+                          <td class="min-w-[15rem]">Alpha Beta</td>
+                          <td class="min-w-[18.25rem]">Ticket agent</td>
                         </tr>
                         <tr>
                           <td class="min-w-[11.125rem]">Light</td>
-                          <td class="min-w-[11.125rem]">Gertrude Y. Voss</td>
-                          <td class="min-w-[11.125rem]">Giant Open Air</td>
-                          <td class="min-w-[.625rem]">Data entry clerk</td>
+                          <td class="min-w-[13.5rem]">Gertrude Y. Voss</td>
+                          <td class="min-w-[15rem]">Giant Open Air</td>
+                          <td class="min-w-[18.25rem]">Data entry clerk</td>
                         </tr>
                       </tbody>
                     </table>
@@ -1814,7 +1827,7 @@
           </div>
         </div>
         <!-- Page Body End -->
-        <div class="page-footer fixed bottom-0 2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300 sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap"> 
+        <div class="page-footer 3sm:!px-[10px] fixed bottom-0 xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300 sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap"> 
           <p class="text-xs font-semibold text-center text-content">Copyright 2023 © Govo theme by pixelstrap</p>
           <div class="flex items-center gap-2"> 
             <p class="text-xs font-semibold text-center text-content">Hand crafted & made with</p><i class="stroke-danger h-[18px] w-[18px] fill-danger" data-feather="heart"></i>
@@ -1823,14 +1836,14 @@
       </div>
     </main>
     <!-- Customizer-->
-    <div class="bg-white customizer-sidebar dark:bg-sidebar-dark2">
+    <div class="bg-white customizer-sidebar dark:bg-sidebar-dark2 dark:border-border-dark">
       <div class="flex rtl:flex items-center text-title bg-primary justify-between  p-[15px] shadow-md"> <span class="text-base font-semibold text-white">Customizer</span>
         <button class="customizer-close"> <i class="w-4 h-4 stroke-white" data-feather="x"></i></button>
       </div>
       <div class="py-[4px] dark:bg-mode-200">
         <div class="px-[15px] py-7  h-[calc(100vh_-_139px)] overflow-auto ">
-          <ul class="flex flex-col gap-7 mode-event">  
-            <li>
+          <ul class="flex flex-col gap-7 mode-event">
+            <li> 
               <div>
                 <h5 class="leading-none text-dark text-sm font-semibold">Template Mode</h5><span class="leading-none text-content text-xs font-medium">Choose template mode dark & light</span>
               </div>
@@ -1882,7 +1895,7 @@
               </div>
             </li>
             <li>
-              <div class="flex items-center justify-between"> <span class="text-sm font-semobold text-title">Monochrome Mode</span>
+              <div class="flex items-center justify-between"> <span class="text-sm font-semobold text-title">Monochrome Mode </span>
                 <label class="inline-flex relative items-center cursor-pointer">
                   <input class="sr-only peer monochrome toggle toggle-primary" name="monochrome" type="checkbox" id="monochrome"><span class="w-7 h-4 bg-content rounded-full peer peer-focus:outline-none peer-checked:after:translate-x-full peer-checked:after:content-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-light after:border after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-primary"></span>
                 </label>
@@ -1891,8 +1904,8 @@
           </ul>
         </div>
       </div>
-      <div class="flex items-center gap-2 p-[15px] border-t border-light dark:bg-primaryLight"> 
-        <button class="btn btn-ghost flex-1 reset-customizer">Reset  </button>
+      <div class="flex items-center gap-2 p-[15px] border-t border-light dark:bg-primaryLight dark:border-t dark:border-border-dark"> 
+        <button class="btn btn-ghost flex-1 reset-customizer dark:bg-sidebar-dark">Reset  </button>
         <button class="btn btn-primary text-white flex-1">Buy Now</button>
       </div>
     </div>

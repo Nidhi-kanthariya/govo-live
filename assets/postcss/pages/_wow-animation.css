@@ -4,6 +4,25 @@
 
 @layer components {
   .circle {
-    @apply inline-block w-[6.25rem] 2xl:w-[4.375rem] h-[6.25rem] 2xl:h-[4.375rem] rounded-full bg-gradient-to-l from-primary to-primary-extralight shadow-md opacity-100;
+    @apply inline-block w-[6.25rem] 2xl:w-[4.375rem] h-[6.25rem] 2xl:h-[4.375rem] rounded-full bg-gradient-to-l shadow-md opacity-100;
+
+    &.primary-circle {
+      @apply bg-gradient-to-l from-primary to-primary-extralight;
+    }
+    &.secondary-circle {
+      @apply bg-gradient-to-l from-secondary to-secondary-extralight;
+    }
+    &.info-circle {
+      @apply bg-gradient-to-l from-info to-info-light;
+    }
+    &.success-circle {
+      @apply bg-gradient-to-l from-success to-success-light;
+    }
+    &.warning-circle {
+      @apply bg-gradient-to-l from-warning to-warning-light;
+    }
+    &.danger-circle {
+      @apply bg-gradient-to-l from-danger to-danger-light;
+    }
   }
-} 
+}

@@ -31,283 +31,285 @@ include ../../mixin/mixin
 
 doctype html
 html(lang='en')
-   include ../../layout/header-files
-   body(dir="ltr" class="unique-skin")
-      main.page-wrapper
-         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
-            include ../../layout/header/header     
-            // Sidebar Start 
-            div.page-sidebar.sidebar-dark.unique-sidebar
-               include ../../layout/unique 
-            // Sidebar End 
+  include ../../layout/header-files
+  body(dir="ltr" class="unique-skin")
+    main.page-wrapper
+      div.page-body-wrapper(class="xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+        include ../../layout/header/header     
+        // Sidebar Start 
+        div.page-sidebar.sidebar-dark.unique-sidebar
+          include ../../layout/unique 
+        // Sidebar End 
 
-            // Page Body Start
-            div.page-body 
-               div.grid.grid-cols-12.gap-4.card.checkout-detail 
-                  div.col-span-8(class="flex flex-col w-full pr-4 border-r lg:col-span-12 tabs lg:border-b lg:border-l-0 lg:border-r-0 lg:pb-4 rtl:lg:border-l-0 lg:px-0 lg:pr-0 rtl:lg:pl-0 border-border-light rtl:border-l rtl:border-r-0 rtl:pl-4 rtl:pr-unset")
-                     div.mb-1.tab-links.flex.items-center(class="2md:flex-col")
-                        button.tab.product-tab.w-full.items-center.text-sm.tab-active(data-tabFilter="1" class="tab-link") 
-                           i.fa-solid.fa-user
-                           | Billing  
-                        button.tab.product-tab.w-full.items-center.text-sm(data-tabFilter="2" class="tab-link")
-                           i.fa-solid.fa-truck-fast
-                           | Shipping
-                        button.tab.product-tab.w-full.items-center.text-sm(data-tabFilter="3" class="tab-link")
-                           i.fa-solid.fa-money-bill
-                           | Payment  
-                        button.tab.product-tab.w-full.items-center.text-sm(data-tabFilter="4" class="tab-link")
-                           i.fa-solid.fa-circle-check
-                           | Finish  
-                     div.tabs-content
-                        div(data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
-                           div
-                              h5.text-title.font-semibold.mb-2 Billing Information 
-                              p.text-content3.mb-5  Fill up the following information 
-                              form(action="index.html" class="flex flex-col gap-4 m-0 theme-form")
-                                 div.grid.grid-cols-12.gap-5
-                                    div.col-span-6(class="sm:col-span-12")
-                                       label(for="firstName") First Name
-                                       input(type="text" id="firstName" placeholder="Enter your first name" required)
-                                    div.col-span-6(class="sm:col-span-12")
-                                       label(for="lastName") Last Name
-                                       input(type="text" id="lastName" placeholder="Enter your last name" required)
-                                 div.grid.grid-cols-12.gap-5
-                                    div.col-span-6(class="sm:col-span-12")
-                                       label(for="number") Contact No
-                                       input(type="Number" id="number" placeholder="Enter your contact no" maxlength="10" pattern="\d{10}" class="rounded"  required)
-                                    div.col-span-6(class="sm:col-span-12")
-                                       label(for="email") Email
-                                       input(type="email" id="email" placeholder="Enter your email id" required)
-                                 div 
-                                    label(for="address") Address 
-                                    textarea(placeholder="Enter your address.." row="3" id="address" class="p-[11px] focus:!border-border-light").w-full.border.border-border-light.rounded-5.text-xs.text-content
-                                 div.grid.grid-cols-12.gap-5
-                                    div.col-span-4(class="2md:col-span-6 sm:col-span-12")
-                                       label(for="country") Country
-                                       select.form-select.block.w-full.px-3.text-xs.font-normal.text-content3.bg-white.bg-clip-padding.bg-no-repeat.border.border-border-light.rounded-5.transition.ease-in-out.m-0(class='min-w-[150px] py-[9px]' id="sortby" aria-label='Default select example')
-                                          option(selected='') Select Country
-                                          option(value='1') India
-                                          option(value='2') South Korea
-                                          option(value='3') Canada
-                                          option(value='4') USA
-                                          option(value='5') UAE
-                                          option(value='6') UK
-                                    div.col-span-4(class="2md:col-span-6 sm:col-span-12")
-                                       label(for="state") State
-                                       input(type="text" id="state" placeholder="Enter your state" required)
-                                    div.col-span-4(class="2md:col-span-12")
-                                       label(for="postcode") Postcode
-                                       input(type="text" id="postcode" placeholder="Enter your postcode" required)
-                                 div.flex.items-center.gap-2
-                                    label.checkbox.checkbox-sm.cursor-pointer(class="!mb-0 cursor-pointer")  
-                                       input(type='checkbox' class="peer") 
-                                       div.checkbox-indicator(class="peer-checked:!bg-primary !border-primary")  
-                                          i(data-feather="check")
-                                    p(class="!my-0") Remember me for next time
-                                 div 
-                                    label(for="otherNotes") Other Notes 
-                                    textarea(placeholder="Enter your address.." row="3" id="otherNotes" class="p-[11px] focus:!border-border-light").w-full.border.border-border-light.rounded-5.text-xs.text-content
-                                 div.flex.justify-between.items-center(class="sm:flex-col sm:gap-3")
-                                    a(href="cart.html").btn.bg-secondary.text-xs.text-white.flex.items-center.gap-2(class="py-2 !w-fit sm:!w-full justify-center !m-0" type='button') 
-                                       i(data-feather="arrow-left" class="w-4 h-4 stroke-white")
-                                       |  Return to Shopping Cart
-                                    a(href="javascript:void(0)").btn.btn-primary.text-xs.text-white.flex.items-center.gap-2(class="py-2 !w-fit sm:!w-full justify-center !m-0" type='button') 
-                                       |  Proceed to Next
-                                       i(data-feather="truck" class="w-4 h-4 stroke-white")
-                        div(data-tabContent="2" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
-                           div
-                              h5.text-title.font-semibold.mb-2 Shipping Information 
-                              p.text-content3.mb-5 Fill up the following information to send you the order
-                              div.flex.justify-between.gap-2.items-center.mb-5 
-                                 h6.text-title.font-medium Saved Address
-                                 label.btn.bg-gray-light.p-1(for='modal-edit') 
-                                    i(data-feather="plus" class="w-4 h-4 stroke-content3")
-                              div.grid.grid-cols-12.gap-card-gap.mb-5 
-                                 div.col-span-4(class="xl:col-span-6 2md:col-span-12")
-                                    div.border.border-border-light.p-4 
-                                       div.flex.justify-between.gap-2.items-center.mb-4 
-                                          div.flex.items-center.gap-2
-                                             div.radio-button.radio-sm.primary
-                                                input#home(type='radio' name='address')
-                                                div.check
-                                                label(for='home' class="text-xs cursor-pointer") Home 
-                                          div.flex.items-center.gap-2
-                                             label(for='modal-edit') 
-                                                +SVG_ICON("Edit-Square", "w-4 h-4 stroke-title cursor-pointer") 
-                                             label(for='modal-delete') 
-                                                +SVG_ICON("Delete", "w-4 h-4 stroke-title cursor-pointer") 
-                                       div.flex.flex-col.gap-2 
-                                          h6.text-title.font-bold Filomena Green 
-                                          p.text-content3.text-xs 
-                                             span.font-semibold Address: 
-                                             | 	2211 Fruitville Rd, Sarasota, Florida, US 34237
-                                          p.text-content3.text-xs 
-                                             span.font-semibold Contact: 
-                                             | 	(941) 321-5643
-                                 div.col-span-4(class="xl:col-span-6 2md:col-span-12")
-                                    div.border.border-border-light.p-4 
-                                       div.flex.justify-between.gap-2.items-center.mb-4 
-                                          div.radio-button.radio-sm.primary
-                                             input#work(type='radio' name='address')
-                                             div.check
-                                             label(for='work' class="text-xs cursor-pointer") Work
-                                          div.flex.items-center.gap-2 
-                                             label(for='modal-edit') 
-                                                +SVG_ICON("Edit-Square", "w-4 h-4 stroke-title cursor-pointer") 
-                                             label(for='modal-delete') 
-                                                +SVG_ICON("Delete", "w-4 h-4 stroke-title cursor-pointer") 
-                                       div.flex.flex-col.gap-2 
-                                          h6.text-title.font-bold 	Ms. Ila Runte DDS
-                                          p.text-content3.text-xs 
-                                             span.font-semibold Address: 
-                                             | 	1531 E 23rd St S, Independence, Mississippi, US 64055
-                                          p.text-content3.text-xs 
-                                             span.font-semibold Contact: 
-                                             | 	(816) 252-4500                                        
-                              h6.text-title.font-medium.mb-5 Shipping Method 
-                              div.grid.grid-cols-12.gap-card-gap.mb-5 
-                                 div.col-span-6(class="2md:col-span-12")
-                                    div.border.border-border-light.p-4
-                                       div.radio-button.radio-sm.primary
-                                          input#free(type='radio' name='payment')
-                                          div.check
-                                          label(for='free' class="text-xs cursor-pointer") Standard Delivery - Free 
-                                       p.pl-6.text-content3.text-xs Estimated 5-7 days shipping
-                                 div.col-span-6(class="2md:col-span-12")
-                                    div.border.border-border-light.p-4 
-                                       div.flex.items-center.gap-2.mb-1
-                                          div.radio-button.radio-sm.primary
-                                             input#standard(type='radio' name='payment')
-                                             div.check
-                                             label(for='standard' class="text-xs cursor-pointer") Express Delivery - $24 
-                                       p.pl-6.text-content3.text-xs Estimated 1-2 days shipping
-                              div.flex.justify-between.items-center(class="sm:flex-col sm:gap-3")
-                                 a(href="cart.html").btn.bg-secondary.text-xs.text-white.flex.items-center.gap-2(class="py-2 !w-fit sm:!w-full justify-center !m-0" type='button') 
-                                    i(data-feather="arrow-left" class="w-4 h-4 stroke-white")
-                                    |  Return to Shopping Cart
-                                 a(href="javascript:void(0)").btn.btn-primary.text-xs.text-white.flex.items-center.gap-2(class="py-2 !w-fit sm:!w-full justify-center !m-0" type='button') 
-                                    |  Proceed to Next
-                                    i(data-feather="truck" class="w-4 h-4 stroke-white")
-                        div(data-tabContent="3" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
-                           div
-                              h5.text-title.font-semibold.mb-2 Payment Information 
-                              p.text-content3.mb-5 Fill up the following information to send you the order
-                              div.border.border-border-light.p-4.mb-5 
-                                 div.flex.gap-2.items-center.justify-between(class="2sm:flex-col 2sm:items-start")
-                                    div
-                                       div.flex.items-center.gap-2.mb-1
-                                          div.radio-button.radio-sm.primary
-                                             input#paypal(type='radio' name='payment-method')
-                                             div.check
-                                             label(for='paypal' class="text-xs cursor-pointer") PayPal
-                                       p.pl-6.text-content3.text-xs You will be taken to the PayPal website to finish your transaction safely
-                                    img(class="h-[30px]" src="../../assets/images/ecommerce/paypal.png" alt="PayPal" class="2sm:pl-6 rtl:2sm:pl-unset rtl:2sm:pr-6")
-                              div.border.border-border-light.p-4.mb-5 
-                                 div.flex.gap-2.items-center.justify-between.mb-5(class="2sm:flex-col 2sm:items-start")
-                                    div
-                                       div.flex.items-center.gap-2.mb-1
-                                          div.radio-button.radio-sm.primary
-                                             input#credit(type='radio' name='payment-method')
-                                             div.check
-                                             label(for='credit' class="text-xs cursor-pointer") Credit Card
-                                       p.pl-6.text-content3.text-xs Transferring money securely through your bank account. Mastercard, Visa, Discover, and Stripe are all accepted
-                                    img(class="h-[30px]" src="../../assets/images/ecommerce/credit-card.png" alt="credit card" class="2sm:pl-6 rtl:2sm:pl-unset rtl:2sm:pr-6")
-                                 form(action="index.html" class="flex flex-col gap-4 m-0 theme-form")
-                                    div
-                                       label(for="cardholder") Card holder
-                                       input(type="text" id="cardholder" placeholder="Enter card holder name" required)
-                                    div
-                                       label(for="cardholder") Card Number
-                                       input(type="number" id="cardholder" placeholder="Enter card number" required)
-                                    div.grid.grid-cols-12.gap-5
-                                       div.col-span-6(class="sm:col-span-12")
-                                          label(for="expirydate") Expiry Date
-                                          input(type="number" id="expirydate" placeholder="MM/YY" required)
-                                       div.col-span-6(class="sm:col-span-12")
-                                          label(for="cvv") CVV
-                                          input(type="number" id="cvv" placeholder="Enter your last name" required)                                            
-                              div.border.border-border-light.p-4.mb-5 
-                                 div.flex.gap-2.items-center.justify-between(class="2sm:flex-col 2sm:items-start")
-                                    div
-                                       div.flex.items-center.gap-2.mb-1
-                                          div.radio-button.radio-sm.primary
-                                             input#cod(type='radio' name='payment-method')
-                                             div.check
-                                             label(for='cod' class="text-xs cursor-pointer") Cash On Delivery
-                                       p.pl-6.text-content3.text-xs After your order is delivered, make a cash payment
-                                    img(class="h-[30px]" src="../../assets/images/ecommerce/cash-on-delivery.png" alt="cash on delivery" class="2sm:pl-6 rtl:2sm:pl-unset rtl:2sm:pr-6")
-                              div.flex.justify-between.items-center(class="sm:flex-col sm:gap-3")
-                                 a(href="cart.html").btn.bg-secondary.text-xs.text-white.flex.items-center.gap-2(class="py-2 !w-fit sm:!w-full justify-center !m-0" type='button') 
-                                    i(data-feather="arrow-left" class="w-4 h-4 stroke-white")
-                                    |  Return to Shopping Cart
-                                 a(href="javascript:void(0)").btn.btn-primary.text-xs.text-white.flex.items-center.gap-2(class="py-2 !w-fit sm:!w-full justify-center !m-0" type='button') 
-                                    |  Proceed to Next
-                                    i(data-feather="truck" class="w-4 h-4 stroke-white")
-                        div(data-tabContent="4" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
-                           div.flex.flex-col.gap-2
-                              img(class="mx-auto" src="../../assets/images/ecommerce/pop-new-year.gif" alt="order confirmed" class="w-56")
-                              h3.text-title.text-lg.font-bold.text-center Thank you! Your order is confirmed. 
-                              p.text-content.text-xs.font-semibold.text-center An email with your order's specifics will be sent to you as order confirmation.
-                              p.text-dark.font-bold.text-base.text-center Order ID: 
-                                 a(href="javascript:void(0)" class="!text-dark").underline.text-base NV1430
-
-                  div.col-span-4(class="w-full lg:col-span-12")
-                     div.flex.flex-col.gap-2 
-                        h5.text-title.font-semibold.mb-2 Current Cart
-                        div.overflow-auto.custom-scroll  
-                           include ../../components/table/checkout-table
-
-
-            // Page Body End  
-            +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
-         include ../../components/customizer 
-
-         //- Edit Info
-         div.modal-main
-            input#modal-edit(class="peer" name="modal-edit" type='checkbox')
-            label.modal-overlay(class="peer-checked:block" for='modal-edit')
-            div.modal.modal-center(class="w-10/12 max-w-md peer-checked:opacity-100 peer-checked:visible")
-               div.modal-header 
-                  h3.text-title.font-semibold.text-sm Information 
-                  label(for="modal-edit") 
-                     i(data-feather="x" class="w-4 h-4 stroke-content3")
-               div.modal-body.checkout-detail
-                  form.theme-form.flex.flex-col.gap-3(class="!m-0")
-                     div
-                        label(for="name") Name
-                        input(type="text" id="name" placeholder="Enter your name" required)                                                
-                     div 
+        // Page Body Start
+        div.page-body  
+          div.grid.grid-cols-12.gap-4.card.checkout-detail 
+            div.col-span-8(class="flex flex-col w-full pr-4 border-r lg:col-span-12 tabs lg:border-b lg:border-l-0 lg:border-r-0 lg:pb-4 rtl:lg:border-l-0 lg:px-0 lg:pr-0 rtl:lg:pl-0 border-border-light dark:border-border-dark rtl:border-l rtl:border-r-0 rtl:pl-4 rtl:pr-unset")
+              div.mb-1.tab-links.flex.items-center(class="2md:flex-col")
+                button.tab.product-tab.w-full.items-center.text-sm.tab-active(data-tabFilter="1" class="tab-link") 
+                  i.fa-solid.fa-user
+                  | Billing  
+                button.tab.product-tab.w-full.items-center.text-sm(data-tabFilter="2" class="tab-link")
+                  i.fa-solid.fa-truck-fast
+                  | Shipping
+                button.tab.product-tab.w-full.items-center.text-sm(data-tabFilter="3" class="tab-link")
+                  i.fa-solid.fa-money-bill
+                  | Payment  
+                button.tab.product-tab.w-full.items-center.text-sm(data-tabFilter="4" class="tab-link")
+                  i.fa-solid.fa-circle-check
+                  | Finish
+              div.tabs-content
+                div(data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                  div
+                    h5.text-title.font-semibold.mb-2(class="dark:text-white")(class="dark:text-white") Billing Information 
+                    p.text-content3.mb-5  Fill up the following information 
+                    form(action="index.html" class="flex flex-col gap-4 m-0 theme-form")
+                      div.grid.grid-cols-12.gap-5
+                        div.col-span-6(class="sm:col-span-12")
+                          label(for="firstName") First Name
+                          input(type="text" id="firstName" placeholder="Enter your first name" required)
+                        div.col-span-6(class="sm:col-span-12")
+                          label(for="lastName") Last Name
+                          input(type="text" id="lastName" placeholder="Enter your last name" required)
+                      div.grid.grid-cols-12.gap-5
+                        div.col-span-6(class="sm:col-span-12")
+                          label(for="number") Contact No 
+                          input(type="Number" id="number" placeholder="Enter your contact no" maxlength="10" pattern="\d{10}" class="rounded"  required)
+                        div.col-span-6(class="sm:col-span-12")
+                          label(for="email") Email
+                          input(type="email" id="email" placeholder="Enter your email id" required)
+                      div 
                         label(for="address") Address 
-                        textarea(placeholder="Enter your address.." row="3" id="address" class="p-[11px] focus:!border-border-light").w-full.border.border-border-light.rounded-5.text-xs.text-content
-                     div 
-                        label(for="country") Address Type
-                        select.form-select.block.w-full.px-3.text-xs.font-normal.text-content3.bg-white.bg-clip-padding.bg-no-repeat.border.border-border-light.rounded-5.transition.ease-in-out.m-0(class='min-w-[150px] py-[9px]' id="sortby" aria-label='Default select example')
-                           option(selected='') Home 
-                           option(value='1') Office
-                     div 
-                        label(for="number") Contact No
-                        input(type="Number" id="number" placeholder="Enter your contact no" maxlength="10" pattern="\d{10}" class="rounded"  required)
-               div.modal-footer(class="flex justify-end gap-3")
-                  label(for="modal-edit").inline-block.btn.bg-gray-light.p-3.text-title Close
-                  label(for="modal-edit").inline-block.btn.btn-primary.p-3.text-white Save  
+                        textarea(placeholder="Enter your address.." row="3" id="address" class="p-[11px] focus:!border-border-light dark:border-border-dark dark:focus:!border-border-dark ").w-full.border.border-border-light.rounded-5.text-xs.text-content
+                      div.grid.grid-cols-12.gap-5
+                        div.col-span-4(class="2md:col-span-6 sm:col-span-12")
+                          label(for="country") Country
+                          select.form-select.block.w-full.px-3.text-xs.font-normal.text-content3.bg-white.bg-clip-padding.bg-no-repeat.border.border-border-light.rounded-5.transition.ease-in-out.m-0(class='min-w-[150px] py-[9px] dark:border-border-dark dark:bg-sidebar-dark2' id="sortby" aria-label='Default select example')
+                            option(selected='') Select Country
+                            option(value='1') India 
+                            option(value='2') South Korea
+                            option(value='3') Canada
+                            option(value='4') USA
+                            option(value='5') UAE
+                            option(value='6') UK
+                        div.col-span-4(class="2md:col-span-6 sm:col-span-12")
+                          label(for="state") State
+                          input(type="text" id="state" placeholder="Enter your state" required)
+                        div.col-span-4(class="2md:col-span-12")
+                          label(for="postcode") Postcode
+                          input(type="text" id="postcode" placeholder="Enter your postcode" required)
+                      div.flex.items-center.gap-2
+                        label.checkbox.checkbox-sm.cursor-pointer(class="!mb-0 cursor-pointer")  
+                          input(type='checkbox' class="peer") 
+                          div.checkbox-indicator(class="peer-checked:!bg-primary !border-primary")  
+                            i(data-feather="check")
+                        p(class="!my-0") Remember me for next time
+                      div 
+                        label(for="otherNotes") Other Notes 
+                        textarea(placeholder="Enter your address.." row="3" id="otherNotes" class="p-[11px] focus:!border-border-light dark:focus:!border-border-dark  dark:border-border-dark").w-full.border.border-border-light.rounded-5.text-xs.text-content
+                      div.flex.justify-between.items-center(class="sm:flex-col sm:gap-3")
+                        a(href="cart.html").btn.bg-secondary.text-xs.text-white.flex.items-center.gap-2(class="py-2 !w-fit sm:!w-full justify-center !m-0" type='button') 
+                          i(data-feather="arrow-left" class="w-4 h-4 stroke-white")
+                          |  Return to Shopping Cart 
+                        a(href="javascript:void(0)").btn.btn-primary.text-xs.text-white.flex.items-center.gap-2(class="py-2 !w-fit sm:!w-full justify-center !m-0" type='button') 
+                          |  Proceed to Next
+                          i(data-feather="truck" class="w-4 h-4 stroke-white")
+                div(data-tabContent="2" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                  div
+                    h5.text-title.font-semibold.mb-2(class="dark:text-white") Shipping Information 
+                    p.text-content3.mb-5 Fill up the following information to send you the order
+                    div.flex.justify-between.gap-2.items-center.mb-5 
+                      h6.text-title.font-medium(class="dark:text-white") Saved Address 
+                      label.btn.bg-gray-light.p-1(for='modal-edit' class="dark:bg-sidebar-dark2") 
+                        i(data-feather="plus" class="w-4 h-4 stroke-content3 dark:stroke-white")
+                    div.grid.grid-cols-12.gap-card-gap.mb-5
+                      div.col-span-4(class="5xl:col-span-6 2md:col-span-12")
+                        div.border.border-border-light.p-4(class="dark:border-border-dark")
+                          div.radio-button.radio-sm.primary(class="items-start")
+                            input#home(type='radio' name='address')
+                            div.check(class="min-w-[1rem]")
+                            label(for='home' class="w-full text-xs cursor-pointer") 
+                              div.flex.gap-2.justify-between
+                                span(class="dark:text-content3") Home 
+                                div.flex.items-center.gap-2
+                                  label(for='modal-edit') 
+                                    +SVG_ICON("Edit-Square", "w-4 h-4 stroke-title cursor-pointer dark:stroke-white") 
+                                  label(for='modal-delete') 
+                                    +SVG_ICON("Delete", "w-4 h-4 stroke-title cursor-pointer dark:stroke-white") 
+                              div.flex.flex-col.gap-2 
+                                h6.text-title.font-bold(class="dark:text-white") Filomena Green 
+                                p.text-content3.text-xs
+                                  span.font-semibold Address: 
+                                  | 	2211 Fruitville Rd, Sarasota, Florida, US 34237
+                                p.text-content3.text-xs
+                                  span.font-semibold Contact:
+                                  | 	(941) 321-5643
+                      div.col-span-4(class="5xl:col-span-6 2md:col-span-12")
+                        div.border.border-border-light.p-4(class="dark:border-border-dark") 
+                          div.radio-button.radio-sm.primary(class="items-start")
+                            input#work(type='radio' name='address')
+                            div.check(class="min-w-[1rem]") 
+                            label(for='work' class="w-full text-xs cursor-pointer") 
+                              div.flex.gap-2.justify-between
+                                span(class="dark:text-content3") Work 
+                                div.flex.items-center.gap-2 
+                                  label(for='modal-edit') 
+                                    +SVG_ICON("Edit-Square", "w-4 h-4 stroke-title cursor-pointer dark:stroke-white") 
+                                  label(for='modal-delete')
+                                    +SVG_ICON("Delete", "w-4 h-4 stroke-title cursor-pointer dark:stroke-white") 
+                              div.flex.flex-col.gap-2
+                                h6.text-title.font-bold(class="dark:text-white") 	Ms. Ila Runte DDS
+                                p.text-content3.text-xs 
+                                  span.font-semibold Address: 
+                                  | 	1531 E 23rd St S, Independence, Mississippi, US 64055
+                                p.text-content3.text-xs 
+                                  span.font-semibold Contact: 
+                                  | 	(816) 252-4500                                        
+                    h6.text-title.font-medium(class="dark:text-white").mb-5 Shipping Method 
+                    div.grid.grid-cols-12.gap-card-gap.mb-5 
+                      div.col-span-6(class="2md:col-span-12")
+                        div.border.border-border-light.p-4(class="dark:border-border-dark")
+                          div.radio-button.radio-sm.primary(class="items-start")
+                            input#free(type='radio' name='payment')
+                            div.check(class="min-w-[1rem]")
+                            label(for='free' class="w-full text-xs cursor-pointer") 
+                              span(class="dark:text-white") Standard Delivery - Free 
+                              p.text-content3.text-xs Estimated 5-7 days shipping
+                      div.col-span-6(class="2md:col-span-12")
+                        div.border.border-border-light.p-4(class="dark:border-border-dark") 
+                          div.flex.items-center.gap-2.mb-1 
+                            div.radio-button.radio-sm.primary(class="items-start w-full")
+                              input#standard(type='radio' name='payment')
+                              div.check(class="min-w-[1rem]")
+                              label(for='standard' class="w-full text-xs cursor-pointer") 
+                                span(class="dark:text-white") Express Delivery - $24 
+                                p.text-content3.text-xs Estimated 1-2 days shipping
+                    div.flex.justify-between.items-center(class="sm:flex-col sm:gap-3")
+                      a(href="cart.html").btn.bg-secondary.text-xs.text-white.flex.items-center.gap-2(class="py-2 !w-fit sm:!w-full justify-center !m-0" type='button') 
+                        i(data-feather="arrow-left" class="w-4 h-4 stroke-white")
+                        |  Return to Shopping Cart
+                      a(href="javascript:void(0)").btn.btn-primary.text-xs.text-white.flex.items-center.gap-2(class="py-2 !w-fit sm:!w-full justify-center !m-0" type='button') 
+                        |  Proceed to Next
+                        i(data-feather="truck" class="w-4 h-4 stroke-white")
+                div(data-tabContent="3" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                  div
+                    h5.text-title.font-semibold.mb-2(class="dark:text-white") Payment Information 
+                    p.text-content3.mb-5 Fill up the following information to send you the order
+                    div.border.border-border-light.p-4(class="dark:border-border-dark").mb-5 
+                      div.radio-button.radio-sm.primary(class="items-start")
+                        input#paypal(type='radio' name='payment-method')
+                        div.check(class="min-w-[1rem]")
+                        label(for='paypal' class="w-full text-xs cursor-pointer")
+                          div.flex.justify-between.gap-1(class="sm:flex-col sm:items-start")
+                            div
+                              span(class="dark:text-white") PayPal
+                              p.text-content3.text-xs You will be taken to the PayPal website to finish your transaction safely
+                            img(class="h-[30px]" src="../../assets/images/ecommerce/paypal.png" alt="PayPal" class="rtl:2sm:pl-unset rtl:2sm:pr-6")
+                    div.border.border-border-light.p-4(class="dark:border-border-dark").mb-5 
+                      div.radio-button.radio-sm.primary(class="items-start")
+                        input#credit(type='radio' name='payment-method')
+                        div.check(class="min-w-[1rem]")
+                        label(for='credit' class="w-full text-xs cursor-pointer")
+                          div.flex.flex-col.gap-4
+                            div.flex.justify-between.gap-1(class="sm:flex-col sm:items-start") 
+                              div
+                                span(class="dark:text-white") Credit Card
+                                p.text-content3.text-xs Transferring money securely through your bank account. Mastercard, Visa, Discover, and Stripe are all accepted
+                              img(class="h-[30px]" src="../../assets/images/ecommerce/credit-card.png" alt="credit card" class="rtl:2sm:pl-unset rtl:2sm:pr-6")
+                      form(action="index.html" class="flex flex-col gap-4 m-0 !mt-4 !ml-5 sm:!ml-0 theme-form")
+                        div
+                          label(for="cardholder") Card Holder
+                          input(type="text" id="cardholder" placeholder="Enter card holder name" required)
+                        div
+                          label(for="cardholder") Card Number
+                          input(type="number" id="cardholder" placeholder="Enter card number" required)
+                        div.grid.grid-cols-12.gap-5
+                          div.col-span-6(class="sm:col-span-12")
+                            label(for="expirydate") Expiry Date
+                            input(type="number" id="expirydate" placeholder="MM/YY" required)
+                          div.col-span-6(class="sm:col-span-12")
+                            label(for="cvv") CVV
+                            input(type="number" id="cvv" placeholder="Enter your last name" required)                                            
+                    div.border.border-border-light.p-4(class="dark:border-border-dark").mb-5 
+                      div.radio-button.radio-sm.primary(class="items-start")
+                        input#cod(type='radio' name='payment-method')
+                        div.check(class="min-w-[1rem]")
+                        label(for='cod' class="w-full text-xs cursor-pointer") 
+                          div.flex.justify-between.gap-1(class="sm:flex-col sm:items-start") 
+                            div 
+                              span(class="dark:text-white") Cash On Delivery
+                              p.text-content3.text-xs After your order is delivered, make a cash payment
+                            img(class="h-[30px]" src="../../assets/images/ecommerce/cash-on-delivery.png" alt="cash on delivery" class="rtl:2sm:pl-unset rtl:2sm:pr-6")
+                    div.flex.justify-between.items-center(class="sm:flex-col sm:gap-3")
+                      a(href="cart.html").btn.bg-secondary.text-xs.text-white.flex.items-center.gap-2(class="py-2 !w-fit sm:!w-full justify-center !m-0" type='button') 
+                        i(data-feather="arrow-left" class="w-4 h-4 stroke-white")
+                        |  Return to Shopping Cart
+                      a(href="javascript:void(0)").btn.btn-primary.text-xs.text-white.flex.items-center.gap-2(class="py-2 !w-fit sm:!w-full justify-center !m-0" type='button') 
+                        |  Proceed to Next
+                        i(data-feather="truck" class="w-4 h-4 stroke-white")
+                div(data-tabContent="4" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                  div.flex.flex-col.gap-2 
+                    img(class="mx-auto" src="../../assets/images/ecommerce/pop-new-year.gif" alt="order confirmed" class="w-56")
+                    h3(class="dark:text-white").text-title.text-lg.font-bold.text-center Thank you! Your order is confirmed. 
+                    p.text-content.text-xs.font-semibold.text-center An email with your order's specifics will be sent to you as order confirmation.
+                    p.text-dark.font-bold.text-base.text-center Order ID: 
+                      a(href="javascript:void(0)" class="!text-dark ").underline.text-base NV1430
+            div.col-span-4(class="w-full lg:col-span-12")   
+              div.flex.flex-col.gap-2
+                h5(class="dark:text-white").text-title.font-semibold.mb-2 Current Cart
+                div.overflow-auto.custom-scroll
+                  include ../../components/table/checkout-table 
 
-         //- Delete Info
-         div.modal-main
-            input#modal-delete(class="peer" name="modal-delete" type='checkbox')
-            label.modal-overlay(class="peer-checked:block" for='modal-delete')
-            div.modal.modal-center(class="w-10/12 max-w-md peer-checked:opacity-100 peer-checked:visible")
-               div.modal-body.text-center
-                  label(for="modal-delete" class="flex justify-end") 
-                     i(data-feather="x" class="w-4 h-4 stroke-content3")
-                  div.modal-img
-                     img(class="" src="../../assets/images/ecommerce/delete.gif" alt="delete gif" class="w-28")
-                  h3.text-lg.font-bold.mb-2 Are you sure?
-                  p.mb-3 Delete this address only if you are certain you want to.
-               div.modal-footer.flex.justify-end.gap-3
-                  label(for="modal-delete").inline-block.btn.bg-gray-light.p-3.text-title Close
-                  label(for="modal-delete").inline-block.btn.btn-danger.p-3.text-white Yes, Sure!
+        // Page Body End  
+        +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+      include ../../components/customizer 
 
-   include ../../layout/footer-files
+      //- Edit Info
+      div.modal-main
+        input#modal-edit(class="peer" name="modal-edit" type='checkbox')
+        label.modal-overlay(class="peer-checked:block" for='modal-edit')
+        div.modal.modal-center(class="w-10/12 max-w-md peer-checked:opacity-100 peer-checked:visible")
+          div.modal-header 
+            h3.text-title.font-semibold.text-sm Information 
+            label(for="modal-edit") 
+              i(data-feather="x" class="w-4 h-4 stroke-content3")
+          div.modal-body.checkout-detail
+            form.theme-form.flex.flex-col.gap-3(class="!m-0")
+              div
+                label(for="name") Name
+                input(type="text" id="name" placeholder="Enter your name" required)                                                
+              div 
+                label(for="address") Address 
+                textarea(placeholder="Enter your address" row="3" id="address" class="p-[11px] focus:!border-border-light").w-full.border.border-border-light.rounded-5.text-xs.text-content
+              div 
+                label(for="country") Address Type
+                select.form-select.block.w-full.px-3.text-xs.font-normal.text-content3.bg-white.bg-clip-padding.bg-no-repeat.border.border-border-light.rounded-5.transition.ease-in-out.m-0(class='min-w-[150px] py-[9px]' id="sortby" aria-label='Default select example')
+                  option(selected='') Home 
+                  option(value='1') Office
+              div 
+                label(for="number") Contact No
+                input(type="Number" id="number" placeholder="Enter your contact no" maxlength="10" pattern="\d{10}" class="rounded"  required)
+          div.modal-footer(class="flex justify-end gap-3")
+            label(for="modal-edit").inline-block.btn.bg-gray-light.p-3.text-title Close
+            label(for="modal-edit").inline-block.btn.btn-primary.p-3.text-white Save   
+
+      //- Delete Info
+      div.modal-main
+        input#modal-delete(class="peer" name="modal-delete" type='checkbox')
+        label.modal-overlay(class="peer-checked:block" for='modal-delete')
+        div.modal.modal-center(class="w-10/12 max-w-md peer-checked:opacity-100 peer-checked:visible")
+          div.modal-body.text-center
+            label(for="modal-delete" class="flex justify-end") 
+              i(data-feather="x" class="w-4 h-4 stroke-content3") 
+            div.modal-img
+              img(class="" src="../../assets/images/ecommerce/delete.gif" alt="delete gif" class="w-28")
+            h3.text-lg.font-bold.mb-2 Are you sure?
+            p.mb-3 Delete this address only if you are certain you want to. 
+          div.modal-footer.flex.justify-end.gap-3
+            label(for="modal-delete").inline-block.btn.bg-gray-light.p-3.text-title Close
+            label(for="modal-delete").inline-block.btn.btn-danger.p-3.text-white Yes, Sure!
+
+  include ../../layout/footer-files
 
 
 

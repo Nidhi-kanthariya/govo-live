@@ -1,7 +1,7 @@
 //- sidebar
 -var sidebar = true;
 
-//- feathet
+//- feather
 -var feather= true;
 
 //- fontawesome
@@ -31,332 +31,331 @@ include ../../mixin/mixin
 
 doctype html
 html(lang='en')  
-   include ../../layout/header-files 
-   body(dir="ltr" class="unique-skin") 
-      main.page-wrapper
-         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
-            include ../../layout/header/header     
-            // Sidebar Start 
-            div.page-sidebar.sidebar-dark.unique-sidebar
-               include ../../layout/unique
-            // Sidebar End 
+  include ../../layout/header-files 
+  body(dir="ltr" class="unique-skin") 
+    main.page-wrapper
+      div.page-body-wrapper(class="xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+        include ../../layout/header/header     
+        // Sidebar Start 
+        div.page-sidebar.sidebar-dark.unique-sidebar
+          include ../../layout/unique
+        // Sidebar End 
 
-            // Page Body Start 
-            div.page-body
-               div.grid.grid-cols-12.gap-card-gap
-                  div.col-span-6(class="md:col-span-12")
-                     div.card.tabs
-                        div.card-header.pb-2.header-bottom-border
-                           div.flex.flex-col
-                              h3.text-lg.font-bold Basic Form
-                              p To set the basic form add  
-                                 strong .theme-form  
-                                 | class.
-                              div.preview-code.tab-links
-                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
-                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
-                        div.card-body                                   
-                           div.tabs-content
-                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
-                                 div.checkout-detail     
-                                    form.theme-form(class="flex flex-col gap-4 !m-0")
-                                       div
-                                          label(for='email1') Email
-                                          input(type='email' id="email1" placeholder='Enter your email id..' required='')
-                                       div
-                                          label(for='password1') Password
-                                          input(type='password' id='password1' required='' placeholder="Enter your password..")
-                                       div.flex.justify-end.items-center
-                                          button.btn.btn-primary.text-white.text-xs.font-semibold(type='submit' class="py-2 !m-0 !w-fit") Submit
+        // Page Body Start 
+        div.page-body
+          div.grid.grid-cols-12.gap-card-gap
+            div.col-span-6(class="md:col-span-12")
+              div.card.tabs
+                div.card-header.pb-2.header-bottom-border
+                  div.flex.flex-col
+                    h3.text-lg.font-bold Basic Form
+                    p To set the basic form add  
+                      strong .theme-form  
+                      | class.
+                    div.preview-code.tab-links
+                      button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                      button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                div.card-body                                   
+                  div.tabs-content
+                    div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                      div.checkout-detail     
+                        form.theme-form(class="flex flex-col gap-4 !m-0")
+                          div
+                            label(for='email1') Email
+                            input(type='email' id="email1" placeholder='Enter your email id' required='')
+                          div
+                            label(for='password1') Password
+                            input(type='password' id='password1' required='' placeholder="Enter your password")
+                          div.flex.justify-end.items-center
+                            button.btn.btn-primary.text-white.text-xs.font-semibold(type='submit' class="py-2 !m-0 !w-fit") Submit
 
-                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
-                                 button.btn.copyBtn 
-                                    i(data-feather="clipboard")
-                                 pre(class="overflow-auto language-html custom-scroll")
-                                    code
-                                       |&lt;div class="checkout-detail"&gt;
-                                       |   &lt;form class="theme-form flex flex-col gap-4 !m-0"&gt;
-                                       |      &lt;div&gt;
-                                       |          &lt;label for="email1&gt;Email&lt;/label&gt; 
-                                       |          &lt;input type="email" id="email1" placeholder='Enter your email id..' required=''&gt;&lt;/input&gt; 
-                                       |      &lt;/div&gt;
-                                       |      &lt;div&gt;
-                                       |          &lt;label for="password1&gt;Password&lt;/label&gt; 
-                                       |          &lt;input type="password" id="password1" placeholder='Enter your password..' required=''&gt;&lt;/input&gt; 
-                                       |      &lt;/div&gt;
-                                       |      &lt;div class="flex items-center justify-end"&gt;
-                                       |          &lt;button class="btn btn-primary text-white text-sm font-semibold py-2 !m-0 !w-fit" type="submit"&gt;Submit&lt;/button&gt; 
-                                       |      &lt;/div&gt;
-                                       |    &lt;/form&gt;
-                                       |&lt;/div&gt;
+                    div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                      button.btn.copyBtn(class="dark:text-white dark:bg-sidebar-dark dark:hover:bg-sidebar-dark dark:hover:text-white")
+                        i(data-feather="clipboard")
+                      pre(class="overflow-auto language-html custom-scroll dark:bg-sidebar-dark2")
+                        code(class="dark:bg-sidebar-dark2")
+                          |&lt;div class="checkout-detail"&gt;
+                          |   &lt;form class="theme-form flex flex-col gap-4 !m-0"&gt;
+                          |      &lt;div&gt;
+                          |          &lt;label for="email1&gt;Email&lt;/label&gt; 
+                          |          &lt;input type="email" id="email1" placeholder='Enter your email id' required=''&gt;&lt;/input&gt; 
+                          |      &lt;/div&gt;
+                          |      &lt;div&gt;
+                          |          &lt;label for="password1&gt;Password&lt;/label&gt; 
+                          |          &lt;input type="password" id="password1" placeholder='Enter your password' required=''&gt;&lt;/input&gt; 
+                          |      &lt;/div&gt;
+                          |      &lt;div class="flex items-center justify-end"&gt;
+                          |          &lt;button class="btn btn-primary text-white text-sm font-semibold py-2 !m-0 !w-fit" type="submit"&gt;Submit&lt;/button&gt; 
+                          |      &lt;/div&gt;
+                          |    &lt;/form&gt;
+                          |&lt;/div&gt;
 
-                  div.col-span-6(class="md:col-span-12")
-                     div.card.tabs
-                        div.card-header.pb-2.header-bottom-border
-                           div.flex.flex-col
-                              h3.text-lg.font-bold Floating Form
-                              p To add floating form use   
-                                 strong form  
-                                 | class.
-                              div.preview-code.tab-links
-                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
-                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
-                        div.card-body                                   
-                           div.tabs-content
-                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
-                                 div     
-                                    form(class="flex flex-col gap-4 !m-0")
-                                       div.relative.z-0.w-full.mt-7.group
-                                          input#floating_email.block.px-0.w-full.text-xs.text-content3.bg-transparent.border-0.border-b-2.border-border-light.appearance-none.peer(type='email' name='floating_email' class='py-2.5 dark:text-white dark:border-border-light dark:focus:border-primary focus:outline-none focus:ring-0 focus:border-primary' placeholder=' ' required='')
-                                          label.absolute.font-semibold.text-xs.text-content3.duration-300.transform.-translate-y-9.top-3.-z-10(for='floating_email' class='peer-focus:font-medium dark:text-content3 origin-[0] peer-focus:left-0 rtl:peer-focus:left-unset rtl:peer-focus:right-0 peer-focus:text-primary peer-focus:dark:text-content3 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:-translate-y-9') Email
-                                       div.relative.z-0.w-full.mt-7.group
-                                          input#floating_password.block.px-0.w-full.text-xs.text-content3.bg-transparent.border-0.border-b-2.border-border-light.appearance-none.peer(type='password' name='floating_password' class='py-2.5 dark:text-white dark:border-border-light dark:focus:border-primary focus:outline-none focus:ring-0 focus:border-primary' placeholder=' ' required='')
-                                          label.absolute.font-semibold.text-xs.text-content3.duration-300.transform.-translate-y-9.top-3.-z-10(for='floating_password' class='peer-focus:font-medium dark:text-content3 origin-[0] peer-focus:left-0 rtl:peer-focus:left-unset rtl:peer-focus:right-0 peer-focus:text-primary peer-focus:dark:text-content3 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:-translate-y-9') Password
-                                       div.flex.justify-end.items-center
-                                          button.btn.btn-primary.text-white.text-xs.font-semibold(type='submit' class="py-2 !m-0 !w-fit") Submit
+            div.col-span-6(class="md:col-span-12")
+              div.card.tabs
+                div.card-header.pb-2.header-bottom-border
+                  div.flex.flex-col
+                    h3.text-lg.font-bold Floating Form
+                    p To add floating form use   
+                      strong form  
+                      | class.
+                    div.preview-code.tab-links
+                      button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                      button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                div.card-body                                   
+                  div.tabs-content
+                    div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                      div     
+                        form(class="flex flex-col gap-4 !m-0")
+                          div.relative.z-0.w-full.mt-7.group
+                            input#floating_email.block.px-0.w-full.text-xs.text-content3.bg-transparent.border-0.border-b-2.border-border-light.appearance-none.peer(type='email' name='floating_email' class='py-2.5 dark:text-white dark:border-border-dark  dark:focus:border-primary focus:outline-none focus:ring-0 focus:border-primary' placeholder=' ' required='')
+                            label.absolute.font-semibold.text-xs.text-content3.duration-300.transform.-translate-y-9.top-3.-z-10(for='floating_email' class='peer-focus:font-medium dark:text-content3 origin-[0] peer-focus:left-0 rtl:peer-focus:left-unset rtl:peer-focus:right-0 peer-focus:text-primary peer-focus:dark:text-content3 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:-translate-y-9') Email
+                          div.relative.z-0.w-full.mt-7.group 
+                            input#floating_password.block.px-0.w-full.text-xs.text-content3.bg-transparent.border-0.border-b-2.border-border-light.appearance-none.peer(type='password' name='floating_password' class='py-2.5 dark:text-white dark:border-border-dark  dark:focus:border-primary focus:outline-none focus:ring-0 focus:border-primary' placeholder=' ' required='')
+                            label.absolute.font-semibold.text-xs.text-content3.duration-300.transform.-translate-y-9.top-3.-z-10(for='floating_password' class='peer-focus:font-medium dark:text-content3 origin-[0] peer-focus:left-0 rtl:peer-focus:left-unset rtl:peer-focus:right-0 peer-focus:text-primary peer-focus:dark:text-content3 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:-translate-y-9') Password
+                          div.flex.justify-end.items-center
+                            button.btn.btn-primary.text-white.text-xs.font-semibold(type='submit' class="py-2 !m-0 !w-fit") Submit
+                    div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                      button.btn.copyBtn(class="dark:text-white dark:bg-sidebar-dark dark:hover:bg-sidebar-dark dark:hover:text-white")
+                        i(data-feather="clipboard")
+                      pre(class="overflow-auto language-html custom-scroll dark:bg-sidebar-dark2")
+                        code(class="dark:bg-sidebar-dark2")
+                          |&lt;div&gt;
+                          |   &lt;form class="flex flex-col gap-4 !m-0"&gt;
+                          |      &lt;div class="relative z-0 w-full mt-7 group"&gt;
+                          |          &lt;input type="email" id="#floating_email" required='' class="block w-full px-0 text-xs bg-transparent border-0 border-b-2 appearance-none dark:border-b-2 text-content3 border-border-light peer"&gt;&lt;/input&gt; 
+                          |          &lt;label for="floating_email" class="absolute text-xs duration-300 transform -translate-y-9  text-content3 top-3 -z-10 peer-focus:font-medium dark:text-content3 origin-[0] peer-focus:left-0 rtl:peer-focus:left-unset rtl:peer-focus:right-0 peer-focus:text-primary peer-focus:dark:text-content3 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:-translate-y-9"&gt;Email&lt;/label&gt; 
+                          |      &lt;/div&gt;
+                          |      &lt;div class="relative z-0 w-full mt-7 group"&gt;
+                          |          &lt;input type="password" id="#floating_password" required='' class="block w-full px-0 text-xs bg-transparent border-0 border-b-2 appearance-none dark:border-b-2 text-content3 border-border-light peer"&gt;&lt;/input&gt; 
+                          |          &lt;label for="floating_password" class="absolute text-xs duration-300 transform -translate-y-9  text-content3 top-3 -z-10 peer-focus:font-medium dark:text-content3 origin-[0] peer-focus:left-0 rtl:peer-focus:left-unset rtl:peer-focus:right-0 peer-focus:text-primary peer-focus:dark:text-content3 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:-translate-y-9"&gt;Password&lt;/label&gt; 
+                          |      &lt;/div&gt;                                                    
+                          |      &lt;div class="flex items-center justify-end"&gt;
+                          |          &lt;button class="btn btn-primary text-white text-sm font-semibold py-2 !m-0 !w-fit" type="submit"&gt;Submit&lt;/button&gt; 
+                          |      &lt;/div&gt;
+                          |    &lt;/form&gt;
+                          |&lt;/div&gt;
 
-                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
-                                 button.btn.copyBtn 
-                                    i(data-feather="clipboard")
-                                 pre(class="overflow-auto language-html custom-scroll")
-                                    code
-                                       |&lt;div&gt;
-                                       |   &lt;form class="flex flex-col gap-4 !m-0"&gt;
-                                       |      &lt;div class="relative z-0 w-full mt-7 group"&gt;
-                                       |          &lt;input type="email" id="#floating_email" required='' class="block w-full px-0 text-xs bg-transparent border-0 border-b-2 appearance-none text-content3 border-border-light peer"&gt;&lt;/input&gt; 
-                                       |          &lt;label for="floating_email" class="absolute text-xs duration-300 transform -translate-y-9  text-content3 top-3 -z-10 peer-focus:font-medium dark:text-content3 origin-[0] peer-focus:left-0 rtl:peer-focus:left-unset rtl:peer-focus:right-0 peer-focus:text-primary peer-focus:dark:text-content3 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:-translate-y-9"&gt;Email&lt;/label&gt; 
-                                       |      &lt;/div&gt;
-                                       |      &lt;div class="relative z-0 w-full mt-7 group"&gt;
-                                       |          &lt;input type="password" id="#floating_password" required='' class="block w-full px-0 text-xs bg-transparent border-0 border-b-2 appearance-none text-content3 border-border-light peer"&gt;&lt;/input&gt; 
-                                       |          &lt;label for="floating_password" class="absolute text-xs duration-300 transform -translate-y-9  text-content3 top-3 -z-10 peer-focus:font-medium dark:text-content3 origin-[0] peer-focus:left-0 rtl:peer-focus:left-unset rtl:peer-focus:right-0 peer-focus:text-primary peer-focus:dark:text-content3 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:-translate-y-9"&gt;Password&lt;/label&gt; 
-                                       |      &lt;/div&gt;                                                    
-                                       |      &lt;div class="flex items-center justify-end"&gt;
-                                       |          &lt;button class="btn btn-primary text-white text-sm font-semibold py-2 !m-0 !w-fit" type="submit"&gt;Submit&lt;/button&gt; 
-                                       |      &lt;/div&gt;
-                                       |    &lt;/form&gt;
-                                       |&lt;/div&gt;
+            div.col-span-6(class="md:col-span-12")
+              div.card.tabs
+                div.card-header.pb-2.header-bottom-border
+                  div.flex.flex-col
+                    h3.text-lg.font-bold Custom Validation
+                    p To set the custom validation form add  
+                      strong #form-validation  
+                      | id.
+                    div.preview-code.tab-links
+                      button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                      button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                div.card-body                                   
+                  div.tabs-content
+                    div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                      div.checkout-detail    
+                        form#form-validation.theme-form(class="flex flex-col gap-4 !m-0")
+                          div
+                            label(for='username') Name
+                            input#username(type='text' placeholder='Enter your name')
+                            small Error Message
+                          div
+                            label(for='email') Email
+                            input#email(type='email' placeholder='Enter email id')
+                            small Error Message
+                          div
+                            label(for='password') Password 
+                            input#password(type='password' placeholder='Enter your password')
+                            small Error Message
+                          div.flex.justify-end.items-center
+                            button.btn.btn-primary.text-white.text-xs.font-semibold(type='submit' class="py-2 !m-0 !w-fit") Submit
 
-                  div.col-span-6(class="md:col-span-12")
-                     div.card.tabs
-                        div.card-header.pb-2.header-bottom-border
-                           div.flex.flex-col
-                              h3.text-lg.font-bold Custom Validation
-                              p To set the custom validation form add  
-                                 strong #form-validation  
-                                 | id.
-                              div.preview-code.tab-links
-                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
-                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
-                        div.card-body                                   
-                           div.tabs-content
-                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
-                                 div.checkout-detail    
-                                    form#form-validation.theme-form(class="flex flex-col gap-4 !m-0")
-                                       div
-                                          label(for='username') Name
-                                          input#username(type='text' placeholder='Enter your name..')
-                                          small Error Message
-                                       div
-                                          label(for='email') Email
-                                          input#email(type='email' placeholder='Enter email id..')
-                                          small Error Message
-                                       div
-                                          label(for='password') Password 
-                                          input#password(type='password' placeholder='Enter your password..')
-                                          small Error Message
-                                       div.flex.justify-end.items-center
-                                          button.btn.btn-primary.text-white.text-xs.font-semibold(type='submit' class="py-2 !m-0 !w-fit") Submit
+                    div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                      button.btn.copyBtn(class="dark:text-white dark:bg-sidebar-dark dark:hover:bg-sidebar-dark dark:hover:text-white")
+                        i(data-feather="clipboard")
+                      pre(class="overflow-auto language-html custom-scroll dark:bg-sidebar-dark2")
+                        code(class="dark:bg-sidebar-dark2")
+                          |&lt;div class="checkout-detail"&gt;
+                          |   &lt;form class="flex flex-col gap-4 !m-0 theme-form" id="form-validation"&gt;
+                          |      &lt;div&gt;
+                          |          &lt;label for="username"&gt;Name&lt;/label&gt; 
+                          |          &lt;input type="text" id="username" required='' placeholder='Enter your name'&gt;&lt;/input&gt;
+                          |          &lt;small&gt;Error Message&lt;/small&gt; 
+                          |      &lt;/div&gt;
+                          |      &lt;div&gt;
+                          |          &lt;label for="email"&gt;Email&lt;/label&gt; 
+                          |          &lt;input type="email" id="email" required='' placeholder='Enter email id&gt;&lt;/input&gt; 
+                          |          &lt;small&gt;Error Message&lt;/small&gt; 
+                          |      &lt;/div&gt;
+                          |      &lt;div&gt;
+                          |          &lt;label for="password"&gt;Password&lt;/label&gt; 
+                          |          &lt;input type="password" id="password" required='' placeholder='Enter your password&gt;&lt;/input&gt; 
+                          |          &lt;small&gt;Error Message&lt;/small&gt; 
+                          |      &lt;/div&gt;
+                          |      &lt;div class="flex items-center justify-end"&gt;
+                          |          &lt;button class="btn btn-primary text-white text-xs font-semibold py-2 !m-0 !w-fit" type="submit"&gt;Submit&lt;/button&gt; 
+                          |      &lt;/div&gt;
+                          |    &lt;/form&gt;
+                          |&lt;/div&gt;
 
-                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
-                                 button.btn.copyBtn 
-                                    i(data-feather="clipboard")
-                                 pre(class="overflow-auto language-html custom-scroll")
-                                    code
-                                       |&lt;div class="checkout-detail"&gt;
-                                       |   &lt;form class="flex flex-col gap-4 !m-0 theme-form" id="form-validation"&gt;
-                                       |      &lt;div&gt;
-                                       |          &lt;label for="username"&gt;Name&lt;/label&gt; 
-                                       |          &lt;input type="text" id="username" required='' placeholder='Enter your name..'&gt;&lt;/input&gt;
-                                       |          &lt;small&gt;Error Message&lt;/small&gt; 
-                                       |      &lt;/div&gt;
-                                       |      &lt;div&gt;
-                                       |          &lt;label for="email"&gt;Email&lt;/label&gt; 
-                                       |          &lt;input type="email" id="email" required='' placeholder='Enter email id..&gt;&lt;/input&gt; 
-                                       |          &lt;small&gt;Error Message&lt;/small&gt; 
-                                       |      &lt;/div&gt;
-                                       |      &lt;div&gt;
-                                       |          &lt;label for="password"&gt;Password&lt;/label&gt; 
-                                       |          &lt;input type="password" id="password" required='' placeholder='Enter your password..&gt;&lt;/input&gt; 
-                                       |          &lt;small&gt;Error Message&lt;/small&gt; 
-                                       |      &lt;/div&gt;
-                                       |      &lt;div class="flex items-center justify-end"&gt;
-                                       |          &lt;button class="btn btn-primary text-white text-xs font-semibold py-2 !m-0 !w-fit" type="submit"&gt;Submit&lt;/button&gt; 
-                                       |      &lt;/div&gt;
-                                       |    &lt;/form&gt;
-                                       |&lt;/div&gt;
+            div.col-span-6(class="md:col-span-12")
+              div.card.tabs
+                div.card-header.pb-2.header-bottom-border
+                  div.flex.flex-col
+                    h3.text-lg.font-bold Steps Form
+                    p To set the Steps form adding  
+                      strong .validation-bar  
+                      | class.
+                    div.preview-code.tab-links
+                      button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                      button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                div.card-body                                   
+                  div.tabs-content
+                    div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                      div.checkout-detail 
+                        div.validation-bar.flex.select-none.mb-2
+                          div.step.text-center.w-full
+                            p.font-medium.text-xs.text-title.mb-2 Name 
+                            div.bullet
+                              span 1
+                            div.check 
+                              i(data-feather="check" class="w-4 h-4")
+                          div.step.text-center.w-full
+                            p.font-medium.text-xs.text-title.mb-2 Login Detail
+                            div.bullet
+                              span 2
+                            div.check 
+                              i(data-feather="check" class="w-4 h-4")
+                          div.step.text-center.w-full
+                            p.font-medium.text-xs.text-title.mb-2 Submit
+                            div.bullet
+                              span 3
+                            div.check 
+                              i(data-feather="check" class="w-4 h-4")
+                        div.form-outer.w-full.overflow-hidden
+                          form(action='#' class="theme-form flex !m-0")
+                            div.page.slide-page(class="flex flex-col gap-3")
+                              h6.text-title.font-semibold Basic Info:
+                              div
+                                label(for="firstName") First Name
+                                input(type="text" id="firstName" placeholder="Enter your first name" required)
+                              div
+                                label(for="lastName") Last Name
+                                input(type="text" id="lastName" placeholder="Enter your last name" required)
+                              div.flex.justify-end.items-center
+                                button.text-xs.btn.btn-primary.text-white.py-2.firstNext.next(class="!w-fit !m-0") Next
+                            div.page(class="flex flex-col gap-3")
+                              h6.text-title.font-semibold Contact Details:
+                              div
+                                label(for="email") Email
+                                input(type="email" id="email" placeholder="Enter your email id" required)
+                              div
+                                label(for="contact") Contact
+                                input(type="number" id="contact" placeholder="Enter your contact" required)
 
-                  div.col-span-6(class="md:col-span-12")
-                     div.card.tabs
-                        div.card-header.pb-2.header-bottom-border
-                           div.flex.flex-col
-                              h3.text-lg.font-bold Steps Form
-                              p To set the Steps form adding  
-                                 strong .validation-bar  
-                                 | class.
-                              div.preview-code.tab-links
-                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
-                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
-                        div.card-body                                   
-                           div.tabs-content
-                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
-                                 div.checkout-detail 
-                                    div.validation-bar.flex.select-none.mb-2
-                                       div.step.text-center.w-full
-                                          p.font-medium.text-xs.text-title.mb-2 Name 
-                                          div.bullet
-                                             span 1
-                                          div.check 
-                                             i(data-feather="check" class="w-4 h-4")
-                                       div.step.text-center.w-full
-                                          p.font-medium.text-xs.text-title.mb-2 Login Detail
-                                          div.bullet
-                                             span 2
-                                          div.check 
-                                             i(data-feather="check" class="w-4 h-4")
-                                       div.step.text-center.w-full
-                                          p.font-medium.text-xs.text-title.mb-2 Submit
-                                          div.bullet
-                                             span 3
-                                          div.check 
-                                             i(data-feather="check" class="w-4 h-4")
-                                    div.form-outer.w-full.overflow-hidden
-                                       form(action='#' class="theme-form flex !m-0")
-                                          div.page.slide-page(class="flex flex-col gap-3")
-                                             h6.text-title.font-semibold Basic Info:
-                                             div
-                                                label(for="firstName") First Name
-                                                input(type="text" id="firstName" placeholder="Enter your first name.." required)
-                                             div
-                                                label(for="lastName") Last Name
-                                                input(type="text" id="lastName" placeholder="Enter your last name.." required)
-                                             div.flex.justify-end.items-center
-                                                button.text-xs.btn.btn-primary.text-white.py-2.firstNext.next(class="!w-fit !m-0") Next
+                              div.btns.flex.justify-end.items-center.gap-3
+                                button.text-xs.btn.btn-secondary.text-white.py-2.prev-1.prev(class="!w-fit !m-0") Previous
+                                button.text-xs.btn.btn-primary.text-white.py-2.next-1.next(class="!w-fit !m-0") Next
+                            div.page(class="flex flex-col gap-3")
+                              h6.text-title.font-semibold Login Details:
+                              div
+                                label(for="name") Username 
+                                input(type="text" id="name" placeholder="Enter your username" required)
+                              div
+                                label(for="password1") Password
+                                input(type="password" id="password1" placeholder="Enter your password" required)
 
-                                          div.page(class="flex flex-col gap-3")
-                                             h6.text-title.font-semibold Contact Details:
-                                             div
-                                                label(for="email") Email
-                                                input(type="email" id="email" placeholder="Enter your email id.." required)
-                                             div
-                                                label(for="contact") Contact
-                                                input(type="number" id="contact" placeholder="Enter your contact.." required)
+                              div.btns.flex.justify-end.items-center.gap-3
+                                button.text-xs.btn.btn-secondary.text-white.py-2.prev-2.prev(class="!w-fit !m-0") Previous
+                                button.text-xs.btn.btn-primary.text-white.py-2.submit(class="!w-fit !m-0") Submit
 
-                                             div.btns.flex.justify-end.items-center.gap-3
-                                                button.text-xs.btn.btn-secondary.text-white.py-2.prev-1.prev(class="!w-fit !m-0") Previous
-                                                button.text-xs.btn.btn-primary.text-white.py-2.next-1.next(class="!w-fit !m-0") Next
-                                          div.page(class="flex flex-col gap-3")
-                                             h6.text-title.font-semibold Login Details:
-                                             div
-                                                label(for="name") Username 
-                                                input(type="text" id="name" placeholder="Enter your username.." required)
-                                             div
-                                                label(for="password1") Password
-                                                input(type="password" id="password1" placeholder="Enter your password.." required)
-
-                                             div.btns.flex.justify-end.items-center.gap-3
-                                                button.text-xs.btn.btn-secondary.text-white.py-2.prev-2.prev(class="!w-fit !m-0") Previous
-                                                button.text-xs.btn.btn-primary.text-white.py-2.submit(class="!w-fit !m-0") Submit
-
-                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
-                                 button.btn.copyBtn 
-                                    i(data-feather="clipboard")
-                                 pre(class="overflow-auto language-html custom-scroll")
-                                    code
-                                       |&lt;div class="checkout-detail"&gt;
-                                       |   &lt;div class="flex mb-2 select-none validation-bar"&gt;
-                                       |      &lt;div class="w-full text-center step"&gt;
-                                       |           &lt;p class="mb-2 text-xs font-medium text-title"&gt;Name&lt;/p&gt;
-                                       |           &lt;div class="bullet"&gt;
-                                       |               &lt;span&gt;1&lt;/span&gt;
-                                       |           &lt;/div&gt;
-                                       |           &lt;div class="check"&gt;
-                                       |               &lt;i  data-feather="check" class="w-4 h-4"&gt;&lt;/i&gt;
-                                       |           &lt;/div&gt;
-                                       |      &lt;/div&gt;
-                                       |      &lt;div class="w-full text-center step"&gt;
-                                       |           &lt;p class="mb-2 text-xs font-medium text-title"&gt;Name&lt;/p&gt;
-                                       |           &lt;div class="bullet"&gt;
-                                       |               &lt;span&gt;2&lt;/span&gt;
-                                       |           &lt;/div&gt;
-                                       |           &lt;div class="check"&gt;
-                                       |               &lt;i  data-feather="check" class="w-4 h-4"&gt;&lt;/i&gt;
-                                       |           &lt;/div&gt;
-                                       |      &lt;/div&gt;
-                                       |      &lt;div class="w-full text-center step"&gt;
-                                       |           &lt;p class="mb-2 text-xs font-medium text-title"&gt;Name&lt;/p&gt;
-                                       |           &lt;div class="bullet"&gt;
-                                       |               &lt;span&gt;3&lt;/span&gt;
-                                       |           &lt;/div&gt;
-                                       |           &lt;div class="check"&gt;
-                                       |               &lt;i  data-feather="check" class="w-4 h-4"&gt;&lt;/i&gt;
-                                       |           &lt;/div&gt;
-                                       |      &lt;/div&gt;
-                                       |    &lt;/div&gt;
-                                       |    &lt;div class="w-full overflow-hidden form-outer"&gt;
-                                       |       &lt;form action='#' class="theme-form flex !m-0"&gt;
-                                       |           &lt;div class="flex flex-col gap-3 page slide-page"&gt;
-                                       |               &lt;h6 class="font-semibold text-title"&gt;Basic Info:&lt;/h6&gt;
-                                       |               &lt;div&gt;
-                                       |                   &lt;label for="firstName"&gt;First Name&lt;/label&gt;
-                                       |                   &lt;input type="text" id="firstName" placeholder="Enter your first name.." required&gt;First Name&lt;/input&gt;
-                                       |               &lt;/div&gt;
-                                       |               &lt;div&gt;
-                                       |                   &lt;label for="lastName"&gt;Last Name&lt;/label&gt;
-                                       |                   &lt;input type="text" id="lastName" placeholder="Enter your first name.." required&gt;First Name&lt;/input&gt;
-                                       |               &lt;/div&gt;
-                                       |               &lt;div class="flex items-center justify-end"&gt;
-                                       |                   &lt;button class="text-xs btn btn-primary text-white py-2 firstNext next !w-fit !m-0"&gt;Next&lt;/button&gt;
-                                       |               &lt;/div&gt;
-                                       |           &lt;/div&gt;
-                                       |           &lt;div class="flex flex-col gap-3 page"&gt;
-                                       |               &lt;h6 class="font-semibold text-title"&gt;Basic Info:&lt;/h6&gt;
-                                       |               &lt;div&gt;
-                                       |                   &lt;label for="email"&gt;Email&lt;/label&gt;
-                                       |                   &lt;input type="email" id="email" placeholder="Enter your first name.." required&gt;First Name&lt;/input&gt;
-                                       |               &lt;/div&gt;
-                                       |               &lt;div&gt;
-                                       |                   &lt;label for="contact"&gt;Contact&lt;/label&gt;
-                                       |                   &lt;input type="number" id="contact" placeholder="Enter your first name.." required&gt;First Name&lt;/input&gt;
-                                       |               &lt;/div&gt;
-                                       |               &lt;div class="flex items-center justify-end"&gt;
-                                       |                   &lt;button class="text-xs btn btn-primary text-white py-2 prev-1 prev !w-fit !m-0"&gt;Previous&lt;/button&gt;
-                                       |                   &lt;button class="text-xs btn btn-secondary text-white py-2 next-1 next !w-fit !m-0"&gt;Next&lt;/button&gt;
-                                       |               &lt;/div&gt;
-                                       |           &lt;/div&gt;
-                                       |           &lt;div class="flex flex-col gap-3 page"&gt;
-                                       |               &lt;h6 class="font-semibold text-title"&gt;Basic Info:&lt;/h6&gt;
-                                       |               &lt;div&gt;
-                                       |                   &lt;label for="name"&gt;Username&lt;/label&gt;
-                                       |                   &lt;input type="text" id="name" placeholder="Enter your first name.." required&gt;First Name&lt;/input&gt;
-                                       |               &lt;/div&gt;
-                                       |               &lt;div&gt;
-                                       |                   &lt;label for="password1"&gt;Password&lt;/label&gt;
-                                       |                   &lt;input type="password" id="password1" placeholder="Enter your first name.." required&gt;First Name&lt;/input&gt;
-                                       |               &lt;/div&gt;
-                                       |               &lt;div class="flex items-center justify-end"&gt;
-                                       |                   &lt;button class="text-xs btn btn-primary text-white py-2 prev-2 prev !w-fit !m-0"&gt;Previous&lt;/button&gt;
-                                       |                   &lt;button class="text-xs btn btn-primary text-white py-2 submit !w-fit !m-0"&gt;Submit&lt;/button&gt;
-                                       |               &lt;/div&gt;
-                                       |           &lt;/div&gt;                                                    |       &lt;/form&gt;
-                                       |    &lt;/div&gt;
-                                       |&lt;/div&gt;
-
+                    div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                      button.btn.copyBtn(class="dark:text-white dark:bg-sidebar-dark dark:hover:bg-sidebar-dark dark:hover:text-white")
+                        i(data-feather="clipboard")
+                      pre(class="overflow-auto language-html custom-scroll dark:bg-sidebar-dark2")
+                        code(class="dark:bg-sidebar-dark2")
+                          |&lt;div class="checkout-detail"&gt;
+                          |   &lt;div class="flex mb-2 select-none validation-bar"&gt;
+                          |      &lt;div class="w-full text-center step"&gt;
+                          |           &lt;p class="mb-2 text-xs font-medium text-title"&gt;Name&lt;/p&gt;
+                          |           &lt;div class="bullet"&gt;
+                          |               &lt;span&gt;1&lt;/span&gt;
+                          |           &lt;/div&gt;
+                          |           &lt;div class="check"&gt;
+                          |               &lt;i  data-feather="check" class="w-4 h-4"&gt;&lt;/i&gt;
+                          |           &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="w-full text-center step"&gt;
+                          |           &lt;p class="mb-2 text-xs font-medium text-title"&gt;Name&lt;/p&gt;
+                          |           &lt;div class="bullet"&gt;
+                          |               &lt;span&gt;2&lt;/span&gt;
+                          |           &lt;/div&gt;
+                          |           &lt;div class="check"&gt;
+                          |               &lt;i  data-feather="check" class="w-4 h-4"&gt;&lt;/i&gt;
+                          |           &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="w-full text-center step"&gt;
+                          |           &lt;p class="mb-2 text-xs font-medium text-title"&gt;Name&lt;/p&gt;
+                          |           &lt;div class="bullet"&gt;
+                          |               &lt;span&gt;3&lt;/span&gt;
+                          |           &lt;/div&gt;
+                          |           &lt;div class="check"&gt;
+                          |               &lt;i  data-feather="check" class="w-4 h-4"&gt;&lt;/i&gt;
+                          |           &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;div class="w-full overflow-hidden form-outer"&gt;
+                          |       &lt;form action='#' class="theme-form flex !m-0"&gt;
+                          |           &lt;div class="flex flex-col gap-3 page slide-page"&gt;
+                          |               &lt;h6 class="font-semibold text-title"&gt;Basic Info:&lt;/h6&gt;
+                          |               &lt;div&gt;
+                          |                   &lt;label for="firstName"&gt;First Name&lt;/label&gt;
+                          |                   &lt;input type="text" id="firstName" placeholder="Enter your first name" required&gt;First Name&lt;/input&gt;
+                          |               &lt;/div&gt;
+                          |               &lt;div&gt;
+                          |                   &lt;label for="lastName"&gt;Last Name&lt;/label&gt;
+                          |                   &lt;input type="text" id="lastName" placeholder="Enter your first name" required&gt;First Name&lt;/input&gt;
+                          |               &lt;/div&gt;
+                          |               &lt;div class="flex items-center justify-end"&gt;
+                          |                   &lt;button class="text-xs btn btn-primary text-white py-2 firstNext next !w-fit !m-0"&gt;Next&lt;/button&gt;
+                          |               &lt;/div&gt;
+                          |           &lt;/div&gt;
+                          |           &lt;div class="flex flex-col gap-3 page"&gt;
+                          |               &lt;h6 class="font-semibold text-title"&gt;Basic Info:&lt;/h6&gt;
+                          |               &lt;div&gt;
+                          |                   &lt;label for="email"&gt;Email&lt;/label&gt;
+                          |                   &lt;input type="email" id="email" placeholder="Enter your first name" required&gt;First Name&lt;/input&gt;
+                          |               &lt;/div&gt;
+                          |               &lt;div&gt;
+                          |                   &lt;label for="contact"&gt;Contact&lt;/label&gt;
+                          |                   &lt;input type="number" id="contact" placeholder="Enter your first name" required&gt;First Name&lt;/input&gt;
+                          |               &lt;/div&gt;
+                          |               &lt;div class="flex items-center justify-end"&gt;
+                          |                   &lt;button class="text-xs btn btn-primary text-white py-2 prev-1 prev !w-fit !m-0"&gt;Previous&lt;/button&gt;
+                          |                   &lt;button class="text-xs btn btn-secondary text-white py-2 next-1 next !w-fit !m-0"&gt;Next&lt;/button&gt;
+                          |               &lt;/div&gt;
+                          |           &lt;/div&gt;
+                          |           &lt;div class="flex flex-col gap-3 page"&gt;
+                          |               &lt;h6 class="font-semibold text-title"&gt;Basic Info:&lt;/h6&gt;
+                          |               &lt;div&gt;
+                          |                   &lt;label for="name"&gt;Username&lt;/label&gt;
+                          |                   &lt;input type="text" id="name" placeholder="Enter your first name" required&gt;First Name&lt;/input&gt;
+                          |               &lt;/div&gt;
+                          |               &lt;div&gt;
+                          |                   &lt;label for="password1"&gt;Password&lt;/label&gt;
+                          |                   &lt;input type="password" id="password1" placeholder="Enter your first name" required&gt;First Name&lt;/input&gt;
+                          |               &lt;/div&gt;
+                          |               &lt;div class="flex items-center justify-end"&gt;
+                          |                   &lt;button class="text-xs btn btn-primary text-white py-2 prev-2 prev !w-fit !m-0"&gt;Previous&lt;/button&gt;
+                          |                   &lt;button class="text-xs btn btn-primary text-white py-2 submit !w-fit !m-0"&gt;Submit&lt;/button&gt;
+                          |               &lt;/div&gt;
+                          |           &lt;/div&gt;                                                    |       
+                          |       &lt;/form&gt;
+                          |    &lt;/div&gt;
+                          |&lt;/div&gt;
 
 
 
-            // Page Body End 
-            +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
 
-         include ../../components/customizer
+        // Page Body End 
+        +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
 
-      include ../../layout/footer-files
+      include ../../components/customizer
+
+    include ../../layout/footer-files

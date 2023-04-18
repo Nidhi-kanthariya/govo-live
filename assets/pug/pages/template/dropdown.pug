@@ -1,7 +1,7 @@
 //- sidebar
 -var sidebar = true;
 
-//- feathet
+//- feather
 -var feather= true;
 
 //- customSelect
@@ -25,632 +25,631 @@ include ../../mixin/mixin
 
 doctype html
 html(lang='en')  
-   include ../../layout/header-files 
-   body(dir="ltr" class="unique-skin")
-      main.page-wrapper
-         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
-            include ../../layout/header/header     
-            // Sidebar Start 
-            div.page-sidebar.sidebar-dark.unique-sidebar
-               include ../../layout/unique
-            // Sidebar End 
+  include ../../layout/header-files 
+  body(dir="ltr" class="unique-skin")
+    main.page-wrapper
+      div.page-body-wrapper(class="xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+        include ../../layout/header/header     
+        // Sidebar Start 
+        div.page-sidebar.sidebar-dark.unique-sidebar
+          include ../../layout/unique
+        // Sidebar End 
 
-            // Page Body Start 
-            div.page-body
-               div.grid.grid-cols-12.gap-card-gap
-                  div.col-span-6(class="2md:col-span-12")
-                     div.card.tabs
-                        div.card-header.pb-2.header-bottom-border
-                           div.flex.flex-col
-                              h3.text-lg.font-bold Dropdown
-                              p   Add dropdown using 
-                                 strong .dropdown 
-                                 |   class.                                    
-                              div.preview-code.tab-links  
-                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
-                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
-                        div.card-body                                   
-                           div.tabs-content
-                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
-                                 div.flex.flex-wrap.gap-2(class="2md:justify-center")
-                                    div.dropdown
-                                       button.btn.btn-primary.text-white Primary 
-                                       div.dropdown-menu(class="!w-fit !top-11 left-0")
-                                          ul.flex.flex-col.cursor-pointer 
-                                             li(class="px-2 py-1 rounded hover:bg-gray-light") Dashboard 
-                                             li(class="px-2 py-1 rounded hover:bg-gray-light") Settings
-                                    div.dropdown
-                                       button.btn.btn-secondary.text-white Secondary 
-                                       div.dropdown-menu(class="!w-fit !top-11 left-0")
-                                          ul.flex.flex-col.cursor-pointer 
-                                             li(class="px-2 py-1 rounded hover:bg-gray-light") Ui Kits 
-                                             li(class="px-2 py-1 rounded hover:bg-gray-light") Alert
-                                    div.dropdown
-                                       button.btn.btn-info.text-white Info 
-                                       div.dropdown-menu(class="!w-fit !top-11 left-0")
-                                          ul.flex.flex-col.cursor-pointer 
-                                             li(class="px-2 py-1 rounded hover:bg-gray-light") Ui Kits 
-                                             li(class="px-2 py-1 rounded hover:bg-gray-light") Avatar
-                                    div.dropdown
-                                       button.btn.btn-success.text-white Success 
-                                       div.dropdown-menu(class="!w-fit !top-11 left-0")
-                                          ul.flex.flex-col.cursor-pointer 
-                                             li(class="px-2 py-1 rounded hover:bg-gray-light") Ui Kits 
-                                             li(class="px-2 py-1 rounded hover:bg-gray-light") Badge
-                                    div.dropdown
-                                       button.btn.btn-warning.text-white Warning 
-                                       div.dropdown-menu(class="!w-fit !top-11 left-0")
-                                          ul.flex.flex-col.cursor-pointer 
-                                             li(class="px-2 py-1 rounded hover:bg-gray-light") Ui Kits 
-                                             li(class="px-2 py-1 rounded hover:bg-gray-light") Button
-                                    div.dropdown
-                                       button.btn.btn-danger.text-white Danger 
-                                       div.dropdown-menu(class="!w-fit !top-11 left-0")
-                                          ul.flex.flex-col.cursor-pointer 
-                                             li(class="px-2 py-1 rounded hover:bg-gray-light") Ui Kits 
-                                             li(class="px-2 py-1 rounded hover:bg-gray-light") Collapse
-                                    div.dropdown
-                                       button.btn.btn-light.text-title Light 
-                                       div.dropdown-menu(class="!w-fit !top-11 left-0")
-                                          ul.flex.flex-col.cursor-pointer 
-                                             li(class="px-2 py-1 rounded hover:bg-gray-light") Ui Kits 
-                                             li(class="px-2 py-1 rounded hover:bg-gray-light") Divider
-                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
-                                 button.btn.copyBtn 
-                                    i(data-feather="clipboard")
-                                 pre(class="overflow-auto language-html custom-scroll")
-                                    code
-                                       |&lt;div class="flex flex-wrap gap-2 2md:justify-center"&gt;
-                                       |    &lt;div class="dropdown"&gt;
-                                       |     &lt;button class="text-white btn btn-primary"&gt; Primary &lt;/button&gt;
-                                       |     &lt;div class="dropdown-menu !w-fit !top-11 left-0"&gt; 
-                                       |       &lt;ul class="flex flex-col cursor-pointer"&gt;
-                                       |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light"&gt; Dashboard &lt;/li&gt;
-                                       |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light"&gt; Settings &lt;/li&gt; 
-                                       |       &lt;/ul&gt;                                    
-                                       |     &lt;/div&gt;
-                                       |    &lt;/div&gt; 
-                                       |    &lt;div class="dropdown"&gt;
-                                       |     &lt;button class="text-white btn btn-secondary"&gt; Secondary &lt;/button&gt;
-                                       |     &lt;div class="dropdown-menu !w-fit !top-11 left-0"&gt; 
-                                       |       &lt;ul class="flex flex-col cursor-pointer"&gt;
-                                       |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light"&gt; Ui Kits &lt;/li&gt;
-                                       |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light"&gt; Alert &lt;/li&gt; 
-                                       |       &lt;/ul&gt;                                    
-                                       |     &lt;/div&gt;
-                                       |    &lt;/div&gt; 
-                                       |    &lt;div class="dropdown"&gt;
-                                       |     &lt;button class="text-white btn btn-info"&gt; Info &lt;/button&gt;
-                                       |     &lt;div class="dropdown-menu !w-fit !top-11 left-0"&gt; 
-                                       |       &lt;ul class="flex flex-col cursor-pointer"&gt;
-                                       |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light"&gt; Ui Kits &lt;/li&gt;
-                                       |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light"&gt; Avatars &lt;/li&gt; 
-                                       |       &lt;/ul&gt;                                    
-                                       |     &lt;/div&gt;
-                                       |    &lt;/div&gt; 
-                                       |    &lt;div class="dropdown"&gt;
-                                       |     &lt;button class="text-white btn btn-success"&gt; Success &lt;/button&gt;
-                                       |     &lt;div class="dropdown-menu !w-fit !top-11 left-0"&gt; 
-                                       |       &lt;ul class="flex flex-col cursor-pointer"&gt;
-                                       |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light"&gt; Ui Kits &lt;/li&gt;
-                                       |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light"&gt; Badge &lt;/li&gt; 
-                                       |       &lt;/ul&gt;                                    
-                                       |     &lt;/div&gt;
-                                       |    &lt;/div&gt; 
-                                       |    &lt;div class="dropdown"&gt;
-                                       |     &lt;button class="text-white btn btn-warning"&gt; Warning &lt;/button&gt;
-                                       |     &lt;div class="dropdown-menu !w-fit !top-11 left-0"&gt; 
-                                       |       &lt;ul class="flex flex-col cursor-pointer"&gt;
-                                       |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light"&gt; Ui Kits &lt;/li&gt;
-                                       |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light"&gt; Button &lt;/li&gt; 
-                                       |       &lt;/ul&gt;                                    
-                                       |     &lt;/div&gt;
-                                       |    &lt;/div&gt; 
-                                       |    &lt;div class="dropdown"&gt;
-                                       |     &lt;button class="text-white btn btn-dander"&gt; Danger &lt;/button&gt;
-                                       |     &lt;div class="dropdown-menu !w-fit !top-11 left-0"&gt; 
-                                       |       &lt;ul class="flex flex-col cursor-pointer"&gt;
-                                       |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light"&gt; Ui Kits &lt;/li&gt;
-                                       |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light"&gt; Collapse &lt;/li&gt; 
-                                       |       &lt;/ul&gt;                                    
-                                       |     &lt;/div&gt;
-                                       |    &lt;/div&gt; 
-                                       |    &lt;div class="dropdown"&gt;
-                                       |     &lt;button class="btn btn-light text-title"&gt; Light &lt;/button&gt;
-                                       |     &lt;div class="dropdown-menu !w-fit !top-11 left-0"&gt; 
-                                       |       &lt;ul class="flex flex-col cursor-pointer"&gt;
-                                       |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light"&gt; Ui Kits &lt;/li&gt;
-                                       |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light"&gt; Divider &lt;/li&gt;
-                                       |       &lt;/ul&gt;                                    
-                                       |     &lt;/div&gt;
-                                       |    &lt;/div&gt; 
-                                       |&lt;/div&gt;
-                  div.col-span-6(class="2md:col-span-12")
-                     div.card.tabs
-                        div.card-header.pb-2.header-bottom-border
-                           div.flex.flex-col
-                              h3.text-lg.font-bold Hover Effect
-                              p   Set hover effect inside dropdown-menu using 
-                                 strong .hover  
-                                 |   class.
-                              div.preview-code.tab-links
-                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
-                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
-                        div.card-body                                   
-                           div.tabs-content
-                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
-                                 div.flex.flex-wrap.gap-2(class="2md:justify-center")
-                                    div.dropdown.on-hover-show
-                                       button.btn.btn-warning.text-white Hover
-                                       div.dropdown-menu(class="!w-36 left-0 !top-10")
-                                          ul.flex.flex-col.cursor-pointer(class="!gap-1")
-                                             li(class="px-2 py-1 hover:bg-gray-light") Contacts 
-                                             li(class="px-2 py-1 hover:bg-gray-light") Chat
-                                    div.dropdown.on-hover-show
-                                       button.btn.btn-primary.text-white.flex.items-center.gap-2 Hover Me 
-                                          +SVG_ICON("Arrow-Down-2","w-[0.9rem] h-[0.9rem] stroke-white")
-                                       div.dropdown-menu(class="!w-36 left-0 !top-11")
-                                          ul.flex.flex-col.cursor-pointer(class="!gap-1")
-                                             li(class="px-2 py-1 transition-all hover:bg-gray-light") Video 
-                                             li(class="px-2 py-1 transition-all hover:bg-gray-light") Songs
-                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
-                                 button.btn.copyBtn 
-                                    i(data-feather="clipboard")
-                                 pre(class="overflow-auto language-html custom-scroll")
-                                    code
-                                       |&lt;div class="flex flex-wrap gap-2 2md:justify-center"&gt;
-                                       |    &lt;div class="dropdown on-hover-show"&gt;
-                                       |     &lt;button class="text-white btn btn-warning"&gt; Hover Me &lt;/button&gt;
-                                       |     &lt;div class="dropdown-menu !w-36 left-0 !top-11"&gt; 
-                                       |       &lt;ul class="flex flex-col cursor-pointer !gap-1"&gt;
-                                       |         &lt;li class="px-2 py-1 hover:bg-gray-light"&gt; Contacts &lt;/li&gt;
-                                       |         &lt;li class="px-2 py-1 hover:bg-gray-light"&gt; Chat &lt;/li&gt; 
-                                       |       &lt;/ul&gt;
-                                       |     &lt;/div&gt; 
-                                       |    &lt;/div&gt;
-                                       |    &lt;div class="dropdown on-hover-show"&gt;
-                                       |     &lt;button class="text-white btn btn-primary"&gt; Hover Inside &lt;/button&gt;
-                                       |     &lt;div class="dropdown-menu !w-36 left-0 !top-11"&gt; 
-                                       |       &lt;ul class="flex flex-col cursor-pointer !gap-1"&gt;
-                                       |         &lt;li class="px-2 py-1 transition-all hover:bg-gray-light"&gt; Contacts &lt;/li&gt;
-                                       |         &lt;li class="px-2 py-1 transition-all hover:bg-gray-light"&gt; Chat &lt;/li&gt; 
-                                       |       &lt;/ul&gt;
-                                       |     &lt;/div&gt; 
-                                       |    &lt;/div&gt;
-                                       |&lt;/div&gt;
-                  div.col-span-6(class="2md:col-span-12")
-                     div.card.tabs
-                        div.card-header.pb-2.header-bottom-border
-                           div.flex.flex-col
-                              h3.text-lg.font-bold Justify Content
-                              p   Set dropdown-menu content justify using  
-                                 strong .text-*  
-                                 |   class.
-                              div.preview-code.tab-links
-                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
-                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
-                        div.card-body                                   
-                           div.tabs-content
-                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
-                                 div.flex.flex-wrap.gap-2(class="2md:justify-center")
-                                    div.dropdown
-                                       button.btn.btn-success.text-white Text Left 
-                                       div.dropdown-menu(class="!w-36 !top-11 left-0")
-                                          ul.flex.flex-col.text-start.cursor-pointer 
-                                             li(class="px-2 py-1 rounded hover:bg-gray-light") Dashboard 
-                                             li(class="px-2 py-1 rounded hover:bg-gray-light") Settings
-                                    div.dropdown
-                                       button.btn.btn-secondary.text-white Text Center  
-                                       div.dropdown-menu(class="!w-36 !top-11 left-0")
-                                          ul.flex.flex-col.text-center.cursor-pointer 
-                                             li(class="px-2 py-1 rounded hover:bg-gray-light") Earning 
-                                             li(class="px-2 py-1 rounded hover:bg-gray-light") Settings
-                                    div.dropdown
-                                       button.btn.btn-warning.text-white Text Right 
-                                       div.dropdown-menu(class="!w-36 !top-11 left-0 2sm:right-0 2sm:left-unset")
-                                          ul.flex.flex-col.text-end.cursor-pointer 
-                                             li(class="px-2 py-1 rounded hover:bg-gray-light") Learning 
-                                             li(class="px-2 py-1 rounded hover:bg-gray-light") Settings
-                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
-                                 button.btn.copyBtn 
-                                    i(data-feather="clipboard")
-                                 pre(class="overflow-auto language-html custom-scroll")
-                                    code
-                                       |&lt;div class="flex flex-wrap gap-2 2md:justify-center"&gt;
-                                       |    &lt;div class="dropdown"&gt;
-                                       |     &lt;button class="text-white btn btn-Success"&gt; Text Left &lt;/button&gt;
-                                       |     &lt;div class="dropdown-menu !w-36 !top-11 left-0"&gt; 
-                                       |       &lt;ul class="flex flex-col cursor-pointer text-start"&gt;
-                                       |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light"&gt; Dashboard &lt;/li&gt;
-                                       |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light"&gt; Settings &lt;/li&gt; 
-                                       |       &lt;/ul&gt;                                    
-                                       |     &lt;/div&gt;
-                                       |    &lt;/div&gt;
-                                       |    &lt;div class="dropdown"&gt;
-                                       |     &lt;button class="text-white btn btn-secondary"&gt; Text Center &lt;/button&gt;
-                                       |     &lt;div class="dropdown-menu !w-36 !top-11 left-0"&gt; 
-                                       |       &lt;ul class="flex flex-col text-center cursor-pointer"&gt;
-                                       |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light"&gt; Earning &lt;/li&gt;
-                                       |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light"&gt; Settings &lt;/li&gt; 
-                                       |       &lt;/ul&gt;                                    
-                                       |     &lt;/div&gt;
-                                       |    &lt;/div&gt;
-                                       |    &lt;div class="dropdown"&gt;
-                                       |     &lt;button class="text-white btn btn-warning"&gt; Text Right &lt;/button&gt;
-                                       |     &lt;div class="dropdown-menu !w-36 !top-11 left-0 2sm:right-0 2sm:left-unset"&gt; 
-                                       |       &lt;ul class="flex flex-col cursor-pointer text-end"&gt;
-                                       |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light"&gt; Learning &lt;/li&gt;
-                                       |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light"&gt; Settings &lt;/li&gt; 
-                                       |       &lt;/ul&gt;                                    
-                                       |     &lt;/div&gt;
-                                       |    &lt;/div&gt; 
-                                       |&lt;/div&gt;
-                  div.col-span-6(class="2md:col-span-12")
-                     div.card.tabs
-                        div.card-header.pb-2.header-bottom-border
-                           div.flex.flex-col
-                              h3.text-lg.font-bold Alignment
-                              p   Add dropdown-menu alignment using 
-                                 strong .dropdown-*
-                                 |   class.
-                              div.preview-code.tab-links
-                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
-                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
-                        div.card-body                                   
-                           div.tabs-content
-                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
-                                 div.flex.flex-wrap.gap-2(class="2md:justify-center")
-                                    div.dropdown.dropdown-right
-                                       button.btn.btn-info.text-white Align Right 
-                                       div.dropdown-menu(class="!w-36 2md:!w-fit")
-                                          ul.flex.flex-col.gap-1.cursor-pointer 
-                                             li(class="px-2 py-1 rounded hover:bg-gray-light") Home 
-                                             li(class="px-2 py-1 rounded hover:bg-gray-light") Tasks
-                                    div.dropdown.dropdown-top
-                                       button.btn.btn-danger.text-white Align Top
-                                       div.dropdown-menu(class="!w-36 2md:!w-fit")
-                                          ul.flex.flex-col.gap-1.cursor-pointer 
-                                             li(class="px-2 py-1 rounded hover:bg-gray-light") Notifications 
-                                             li(class="px-2 py-1 rounded hover:bg-gray-light") Messages
-                                    div.dropdown
-                                       button.btn.btn-primary.text-white Align Bottom 
-                                       div.dropdown-menu(class="!w-36 2md:!w-fit !top-11 left-0")
-                                          ul.flex.flex-col.cursor-pointer 
-                                             li(class="px-2 py-1 rounded hover:bg-gray-light") Dashboard 
-                                             li(class="px-2 py-1 rounded hover:bg-gray-light") Settings                                                
-                                    div.dropdown.dropdown-left
-                                       button.btn.btn-success.text-white Align Left 
-                                       div.dropdown-menu(class="!w-36 2md:!w-fit")
-                                          ul.flex.flex-col.gap-1.cursor-pointer 
-                                             li(class="px-2 py-1 rounded hover:bg-gray-light") Profile 
-                                             li(class="px-2 py-1 rounded hover:bg-gray-light") Chat
-                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
-                                 button.btn.copyBtn 
-                                    i(data-feather="clipboard")
-                                 pre(class="overflow-auto language-html custom-scroll")
-                                    code
-                                       |&lt;div class="flex flex-wrap gap-2 2md:justify-center"&gt;
-                                       |    &lt;div class="dropdown dropdown-right"&gt;
-                                       |     &lt;button class="text-white btn btn-info"&gt; Align Right &lt;/button&gt;
-                                       |     &lt;div class="dropdown-menu !w-36 2md:!w-fit"&gt; 
-                                       |       &lt;ul class="flex flex-col gap-1 cursor-pointer"&gt;
-                                       |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light"&gt; Home &lt;/li&gt;
-                                       |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light"&gt; Tasks &lt;/li&gt; 
-                                       |       &lt;/ul&gt;                                    
-                                       |     &lt;/div&gt;
-                                       |    &lt;/div&gt; 
-                                       |    &lt;div class="dropdown dropdown-top"&gt;
-                                       |     &lt;button class="text-white btn btn-danger"&gt; Align Top &lt;/button&gt;
-                                       |     &lt;div class="dropdown-menu !w-36 2md:!w-fit"&gt; 
-                                       |       &lt;ul class="flex flex-col gap-1 cursor-pointer"&gt;
-                                       |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light"&gt; Notifications &lt;/li&gt;
-                                       |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light"&gt; Messages &lt;/li&gt; 
-                                       |       &lt;/ul&gt;                                    
-                                       |     &lt;/div&gt;
-                                       |    &lt;/div&gt; 
-                                       |    &lt;div class="dropdown"&gt;
-                                       |     &lt;button class="text-white btn btn-primary"&gt; Align Bottom &lt;/button&gt;
-                                       |     &lt;div class="dropdown-menu !w-36 2md:!w-fit !top-11 left-0"&gt; 
-                                       |       &lt;ul class="flex flex-col gap-1 cursor-pointer"&gt;
-                                       |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light"&gt; Dashboard &lt;/li&gt;
-                                       |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light"&gt; Setting &lt;/li&gt; 
-                                       |       &lt;/ul&gt;                                    
-                                       |     &lt;/div&gt;
-                                       |    &lt;/div&gt; 
-                                       |    &lt;div class="dropdown dropdown-left"&gt;
-                                       |     &lt;button class="text-white btn btn-success"&gt; Align Left &lt;/button&gt;
-                                       |     &lt;div class="dropdown-menu !w-36 2md:!w-fit"&gt; 
-                                       |       &lt;ul class="flex flex-col gap-1 cursor-pointer"&gt;
-                                       |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light"&gt; Profile &lt;/li&gt;
-                                       |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light"&gt; Chat &lt;/li&gt; 
-                                       |       &lt;/ul&gt;                                    
-                                       |     &lt;/div&gt;
-                                       |    &lt;/div&gt; 
-                                       |&lt;/div&gt;
-                  div.col-span-4(class="xl:col-span-6 2md:col-span-12")
-                     div.card.tabs
-                        div.card-header.pb-2.header-bottom-border
-                           div.flex.flex-col
-                              h3.text-lg.font-bold With Divider
-                              p   Set dropdown-menu with the divider.
-                              div.preview-code.tab-links
-                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
-                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
-                        div.card-body                                   
-                           div.tabs-content
-                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
-                                 div.flex.flex-wrap.gap-2(class="2md:justify-center")
-                                    div.dropdown
-                                       button.btn.btn-info.text-white Divider 
-                                       div.dropdown-menu(class="!w-36 left-0 !top-11")
-                                          div.border-b.border-border-light
-                                             ul.flex.flex-col.gap-1.cursor-pointer 
-                                                li(class="px-2 py-1 rounded hover:bg-gray-light") Contacts 
-                                                li(class="px-2 py-1 rounded hover:bg-gray-light") Chat
-                                          div.mt-1
-                                             a(href="javascript:void(0)" class="px-2 py-1 rounded hover:bg-gray-light") Separated Link
-                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
-                                 button.btn.copyBtn 
-                                    i(data-feather="clipboard")
-                                 pre(class="overflow-auto language-html custom-scroll")
-                                    code
-                                       |&lt;div class="flex flex-wrap gap-2 2md:justify-center"&gt;
-                                       |    &lt;div class="dropdown"&gt;
-                                       |     &lt;button class="text-white btn btn-primary"&gt; Divider &lt;/button&gt;
-                                       |     &lt;div class="dropdown-menu !w-36 left-0 !top-11"&gt; 
-                                       |       &lt;div class="border-b border-border-light"&gt;
-                                       |         &lt;ul class="flex flex-col gap-1 cursor-pointer"&gt;
-                                       |           &lt;li class="px-2 py-1 rounded hover:bg-gray-light"&gt; Contacts &lt;/li&gt;
-                                       |           &lt;li class="px-2 py-1 rounded hover:bg-gray-light"&gt; Chat &lt;/li&gt; 
-                                       |         &lt;/ul&gt;               
-                                       |       &lt;/div&gt;
-                                       |       &lt;div&gt; &lt;a href="javascript:void(0)" class="p-1 rounded hover:bg-gray-light"&gt;Separated Link&lt;/a&gt;&lt;/div&gt;
-                                       |     &lt;/div&gt; 
-                                       |    &lt;/div&gt;
-                                       |&lt;/div&gt;
-                  div.col-span-4(class="xl:col-span-6 2md:col-span-12")
-                     div.card.tabs
-                        div.card-header.pb-2.header-bottom-border
-                           div.flex.flex-col
-                              h3.text-lg.font-bold Colored
-                              p   Set different colored for dropdown-menu.
-                              div.preview-code.tab-links
-                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
-                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
-                        div.card-body                                   
-                           div.tabs-content
-                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
-                                 div.flex.flex-wrap.gap-2(class="2md:justify-center")
-                                    div.dropdown
-                                       button.btn.btn-primary.text-white Primary Colored
-                                       div.dropdown-menu(class="!w-36 left-0 !top-11 !bg-primary text-white")
-                                          div
-                                             ul.flex.flex-col.cursor-pointer(class="!gap-1") 
-                                                li Contacts 
-                                                li Chat
-                                                li About us
-                                    div.dropdown
-                                       button.btn.btn-secondary.text-white Secondary Colored
-                                       div.dropdown-menu(class="!w-36 left-0 !top-11 !bg-secondary text-white")
-                                          div
-                                             ul.flex.flex-col.cursor-pointer(class="!gap-1") 
-                                                li Contacts 
-                                                li Chat
-                                                li About us
-                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
-                                 button.btn.copyBtn 
-                                    i(data-feather="clipboard")
-                                 pre(class="overflow-auto language-html custom-scroll")
-                                    code
-                                       |&lt;div class="flex flex-wrap gap-2 2md:justify-center"&gt;
-                                       |    &lt;div class="dropdown"&gt;
-                                       |     &lt;button class="text-white btn btn-primary"&gt; Primary Colored &lt;/button&gt;
-                                       |     &lt;div class="dropdown-menu !w-36 left-0 !top-11 !bg-border-light text-white"&gt; 
-                                       |       &lt;div&gt;
-                                       |         &lt;ul class="flex flex-col cursor-pointer !gap-1"&gt;
-                                       |           &lt;li&gt; Contacts &lt;/li&gt;
-                                       |           &lt;li&gt; Chat &lt;/li&gt; 
-                                       |           &lt;li&gt; About us &lt;/li&gt; 
-                                       |         &lt;/ul&gt;               
-                                       |       &lt;/div&gt;
-                                       |     &lt;/div&gt; 
-                                       |    &lt;/div&gt;
-                                       |    &lt;div class="dropdown"&gt;
-                                       |     &lt;button class="text-white btn btn-secondary"&gt; Secondary Colored &lt;/button&gt;
-                                       |     &lt;div class="dropdown-menu !w-36 left-0 !top-11 !bg-border-light text-white"&gt; 
-                                       |       &lt;div&gt;
-                                       |         &lt;ul class="flex flex-col cursor-pointer !gap-1"&gt;
-                                       |           &lt;li&gt; Contacts &lt;/li&gt;
-                                       |           &lt;li&gt; Chat &lt;/li&gt; 
-                                       |           &lt;li&gt; About us &lt;/li&gt; 
-                                       |         &lt;/ul&gt;               
-                                       |       &lt;/div&gt;
-                                       |     &lt;/div&gt; 
-                                       |    &lt;/div&gt;
-                                       |&lt;/div&gt;
-                  div.col-span-4(class="xl:col-span-6 2md:col-span-12")
-                     div.card.tabs
-                        div.card-header.pb-2.header-bottom-border
-                           div.flex.flex-col
-                              h3.text-lg.font-bold Heading Dropdown
-                              p   Main heading and any sub-content in dropdown.
-                              div.preview-code.tab-links
-                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
-                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
-                        div.card-body                                   
-                           div.tabs-content
-                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
-                                 div.flex.flex-wrap.gap-2(class="2md:justify-center")
-                                    div.dropdown
-                                       button.btn.btn-warning.text-white Heading 
-                                       div.dropdown-menu(class="!w-36 left-0 !top-11")
-                                          div.border-b.border-border-light
-                                             h3.text-sm.font-bold.text-title.mb-1 Dropdown List
-                                          div.mt-1
-                                             ul.flex.flex-col.cursor-pointer(class="!gap-1")
-                                                li(class="px-2 py-1 transition-all hover:bg-gray-light") Click on 
-                                                li(class="px-2 py-1 transition-all hover:bg-gray-light") Hover on
-                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
-                                 button.btn.copyBtn 
-                                    i(data-feather="clipboard")
-                                 pre(class="overflow-auto language-html custom-scroll")
-                                    code
-                                       |&lt;div class="flex flex-wrap gap-2 2md:justify-center"&gt;
-                                       |    &lt;div class="dropdown"&gt;
-                                       |     &lt;button class="text-white btn btn-info"&gt; Heading &lt;/button&gt;
-                                       |     &lt;div class="dropdown-menu !w-36 left-0 !top-11"&gt; 
-                                       |       &lt;div class="border-b border-border-light"&gt;
-                                       |         &lt;h3 class="mb-1 text-sm font-bold text-title"&gt; Dropdown List &lt;/h3&gt;
-                                       |       &lt;/div&gt;
-                                       |       &lt;div class="mt-1"&gt;
-                                       |         &lt;ul class="flex flex-col cursor-pointer !gap-1"&gt;
-                                       |           &lt;li class="transition-all hover:bg-gray-light hover:px-2 hover:py-1"&gt; Click on &lt;/li&gt;
-                                       |           &lt;li class="transition-all hover:bg-gray-light hover:px-2 hover:py-1"&gt; Hover on &lt;/li&gt; 
-                                       |         &lt;/ul&gt;               
-                                       |       &lt;/div&gt;
-                                       |     &lt;/div&gt; 
-                                       |    &lt;/div&gt;
-                                       |&lt;/div&gt;
-                  div.col-span-4(class="xl:col-span-6 2md:col-span-12")
-                     div.card.tabs
-                        div.card-header.pb-2.header-bottom-border
-                           div.flex.flex-col
-                              h3.text-lg.font-bold Helper Card
-                              p   Adding card for dropdown.
-                              div.preview-code.tab-links
-                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
-                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
-                        div.card-body                                   
-                           div.tabs-content
-                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
-                                 div.flex.flex-wrap.gap-2(class="2md:justify-center")
-                                    div.dropdown
-                                       button.btn.btn-danger.text-white Helper card
-                                       div.dropdown-menu.card(class="!w-36 left-0 !top-11 rounded !bg-danger 2md:left-[-74%]")
-                                          div.card-body.text-white
-                                             h3.text-lg.font-bold.mb-1 Learn More!
-                                                p.font-normal Here, you can learn more and more
-                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
-                                 button.btn.copyBtn 
-                                    i(data-feather="clipboard")
-                                 pre(class="overflow-auto language-html custom-scroll")
-                                    code
-                                       |&lt;div class="flex flex-wrap gap-2 2md:justify-center"&gt;
-                                       |    &lt;div class="dropdown"&gt;
-                                       |     &lt;button class="text-white btn btn-danger"&gt; Helper card &lt;/button&gt;
-                                       |     &lt;div class="dropdown-menu card !w-36 left-0 !top-11 rounded !bg-danger 2md:left-[-74%]"&gt; 
-                                       |       &lt;div class="text-white card-body"&gt;
-                                       |         &lt;h3 class="mb-1 text-lg font-bold"&gt; Learn More! &lt;/h3&gt; 
-                                       |           &lt;p class="font-medium"&gt; Here, you can learn more and more &lt;/p&gt;             
-                                       |       &lt;/div&gt;
-                                       |     &lt;/div&gt; 
-                                       |    &lt;/div&gt;
-                                       |&lt;/div&gt;
-                  div.col-span-4(class="xl:col-span-6 2md:col-span-12")
-                     div.card.tabs
-                        div.card-header.pb-2.header-bottom-border
-                           div.flex.flex-col
-                              h3.text-lg.font-bold With Input Type 
-                              p   Set input types inside dropdown
-                              div.preview-code.tab-links
-                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
-                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
-                        div.card-body                                   
-                           div.tabs-content
-                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
-                                 div.flex.flex-wrap.gap-2(class="2md:justify-center")
-                                    div.dropdown
-                                       button.btn.btn-success.text-white Inputs 
-                                       div.dropdown-menu(class="!w-36 left-0 !top-11")
-                                          ul(class="!gap-1")
-                                             li 
-                                                div.flex.items-center.gap-2.primary
-                                                   div.relative
-                                                      input#radio.peer.absolute.opacity-0.z-10(type='radio')
-                                                      div.w-5.h-5.border.border-primary.relative(class='peer-checked:block top-[0rem] rounded-full')
-                                                      div.bg-transparent.w-3.h-3.rounded-full.absolute(class='peer-checked:bg-primary peer-checked:left[0.25rem] peer-checked:top[0.25rem] left-[0.25rem] top-[0.25rem]')
-                                                   p.m-0 Default Radio
-                                             li 
-                                                div.flex.items-center.gap-2
-                                                   label.checkbox(class="w-[1.25rem] h-[1.25rem]")   
-                                                      input(type='checkbox' class="peer") 
-                                                      div.checkbox-indicator(class="peer-checked:!bg-primary !border-primary")  
-                                                         i(data-feather="check")
-                                                   p.m-0 Default Checkbox
-                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
-                                 button.btn.copyBtn 
-                                    i(data-feather="clipboard")
-                                 pre(class="overflow-auto language-html custom-scroll")
-                                    code
-                                       |&lt;div class="flex flex-wrap gap-2 2md:justify-center"&gt;
-                                       |    &lt;div class="dropdown"&gt;
-                                       |     &lt;button class="text-white btn btn-success"&gt; Inputs &lt;/button&gt;
-                                       |     &lt;div class="dropdown-menu !w-36 left-0 !top-11"&gt;
-                                       |       &lt;ul class="!gap-1"&gt;
-                                       |         &lt;li&gt;
-                                       |           &lt;div class="flex items-center gap-2 primary"&gt;
-                                       |             &lt;div class="relative"&gt;
-                                       |               &lt;input type="radio" class="absolute opacity-0 peer" id="radio"&gt;
-                                       |               &lt;div class="w-5 h-5 border border-primary relative peer-checked:block top-[0rem] rounded-full"&gt;&lt;/div&gt;
-                                       |               &lt;div class="bg-transparent w-3 h-3 rounded-full absolute peer-checked:bg-primary peer-checked:left[0.25rem] peer-checked:top[0.25rem] left-[0.25rem] top-[0.25rem]"&gt;&lt;/div&gt;
-                                       |               &lt;p&gt; Default Radio &lt;/p&gt;
-                                       |             &lt;/div&gt;
-                                       |           &lt;/div&gt;
-                                       |         &lt;/li&gt;
-                                       |         &lt;li&gt;
-                                       |           &lt;div class="flex items-center gap-2"&gt;
-                                       |             &lt;label class="checkbox w-[1.25rem] h-[1.25rem]&gt;&lt;/label&gt;
-                                       |               &lt;input type="checkbox" class="peer"&gt;
-                                       |               &lt;div class="checkbox-indicator peer-checked:!bg-primary !border-primary"&gt;&lt;/div&gt;
-                                       |                   &lt;i data-feather="check"&gt;&lt;/i&gt;
-                                       |             &lt;p&gt; Default Checkbox &lt;/p&gt;
-                                       |           &lt;/div&gt;
-                                       |         &lt;/li&gt;
-                                       |       &lt;/ul&gt;
-                                       |     &lt;/div&gt; 
-                                       |    &lt;/div&gt;
-                                       |&lt;/div&gt;
-                  div.col-span-4(class="xl:col-span-6 2md:col-span-12")
-                     div.card.tabs
-                        div.card-header.pb-2.header-bottom-border
-                           div.flex.flex-col
-                              h3.text-lg.font-bold With Icon 
-                              p   Add icons with dropdown
-                              div.preview-code.tab-links
-                                 button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
-                                 button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
-                        div.card-body                                   
-                           div.tabs-content
-                              div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
-                                 div.flex.flex-wrap.gap-2(class="2md:justify-center")
-                                    div.dropdown
-                                       button.btn.btn-info.text-white.flex.gap-1.items-center Home
-                                          +SVG_ICON("Arrow-Down-2","w-[1.25rem] h-[1.0625rem] stroke-white")
-                                       div.dropdown-menu(class="!w-36 !top-11 left-0")
-                                          ul.flex.flex-col.cursor-pointer 
-                                             li(class="px-2 py-1 rounded hover:bg-gray-light") Dashboard 
-                                             li(class="px-2 py-1 rounded hover:bg-gray-light") Settings
-                              div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
-                                 button.btn.copyBtn 
-                                    i(data-feather="clipboard")
-                                 pre(class="overflow-auto language-html custom-scroll")
-                                    code
-                                       |&lt;div class="flex flex-wrap gap-2 2md:justify-center"&gt;
-                                       |    &lt;div class="dropdown"&gt;
-                                       |     &lt;button class="text-white btn btn-primary"&gt; Home &lt;/button&gt;
-                                       |         +SVG_ICON("Arrow-Down-2","w-[1.25rem] h-[1.0625rem] stroke-white")
-                                       |     &lt;div class="dropdown-menu !w-36 !top-11 left-0"&gt; 
-                                       |       &lt;ul class="flex flex-col cursor-pointer"&gt;
-                                       |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light"&gt; Dashboard &lt;/li&gt;
-                                       |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light"&gt; Settings &lt;/li&gt; 
-                                       |       &lt;/ul&gt;                                    
-                                       |     &lt;/div&gt;
-                                       |    &lt;/div&gt; 
-                                       |&lt;/div&gt;
+        // Page Body Start 
+        div.page-body
+          div.grid.grid-cols-12.gap-card-gap
+            div.col-span-6(class="2md:col-span-12")
+              div.card.tabs
+                div.card-header.pb-2.header-bottom-border
+                  div.flex.flex-col
+                    h3.text-lg.font-bold Dropdown
+                    p   Add dropdown using 
+                      strong .dropdown
+                      |   class.         
+                    div.preview-code.tab-links 
+                      button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                      button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                div.card-body                      
+                  div.tabs-content
+                    div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                      div.flex.flex-wrap.gap-2
+                        div.dropdown
+                          button.btn.btn-primary.text-white Primary 
+                          div.dropdown-menu(class="!w-fit !top-11 left-0 rtl:left-unset rtl:!right-0 ")
+                            ul.flex.flex-col.cursor-pointer
+                              li(class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2") Dashboard 
+                              li(class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2") Settings
+                        div.dropdown
+                          button.btn.btn-secondary.text-white Secondary
+                          div.dropdown-menu(class="!w-fit !top-11 left-0 rtl:left-unset rtl:!right-0")
+                            ul.flex.flex-col.cursor-pointer 
+                              li(class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2") Ui Kits 
+                              li(class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2") Alert
+                        div.dropdown
+                          button.btn.btn-info.text-white Info 
+                          div.dropdown-menu(class="!w-fit !top-11 left-0 rtl:left-unset rtl:!right-0")
+                            ul.flex.flex-col.cursor-pointer 
+                              li(class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2") Ui Kits 
+                              li(class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2") Avatar
+                        div.dropdown
+                          button.btn.btn-success.text-white Success 
+                          div.dropdown-menu(class="!w-fit !top-11 left-0 rtl:left-unset rtl:!right-0")
+                            ul.flex.flex-col.cursor-pointer 
+                              li(class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2") Ui Kits 
+                              li(class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2") Badge
+                        div.dropdown
+                          button.btn.btn-warning.text-white Warning 
+                          div.dropdown-menu(class="!w-fit !top-11 left-0 rtl:left-unset rtl:!right-0")
+                            ul.flex.flex-col.cursor-pointer 
+                              li(class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2") Ui Kits 
+                              li(class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2") Button
+                        div.dropdown
+                          button.btn.btn-danger.text-white Danger 
+                          div.dropdown-menu(class="!w-fit !top-11 left-0 rtl:left-unset rtl:!right-0")
+                            ul.flex.flex-col.cursor-pointer 
+                              li(class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2") Ui Kits 
+                              li(class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2") Collapse
+                        div.dropdown
+                          button.btn.btn-light.text-title Light 
+                          div.dropdown-menu(class="!w-fit !top-11 left-0 rtl:left-unset rtl:!right-0")
+                            ul.flex.flex-col.cursor-pointer 
+                              li(class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2") Ui Kits 
+                              li(class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2") Divider
+                    div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                      button.btn.copyBtn(class="dark:text-white dark:bg-sidebar-dark dark:hover:bg-sidebar-dark dark:hover:text-white")
+                        i(data-feather="clipboard")
+                      pre(class="overflow-auto language-html custom-scroll dark:bg-sidebar-dark2")
+                        code(class="dark:bg-sidebar-dark2")
+                          |&lt;div class="flex flex-wrap gap-2"&gt;
+                          |    &lt;div class="dropdown"&gt;
+                          |     &lt;button class="text-white btn btn-primary"&gt; Primary &lt;/button&gt;
+                          |     &lt;div class="dropdown-menu !w-fit !top-11 left-0 rtl:left-unset rtl:!right-0"&gt; 
+                          |       &lt;ul class="flex flex-col cursor-pointer"&gt;
+                          |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2"&gt; Dashboard &lt;/li&gt;
+                          |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2"&gt; Settings &lt;/li&gt; 
+                          |       &lt;/ul&gt;                                    
+                          |     &lt;/div&gt;
+                          |    &lt;/div&gt; 
+                          |    &lt;div class="dropdown"&gt;
+                          |     &lt;button class="text-white btn btn-secondary"&gt; Secondary &lt;/button&gt;
+                          |     &lt;div class="dropdown-menu !w-fit !top-11 left-0 rtl:left-unset rtl:!right-0"&gt; 
+                          |       &lt;ul class="flex flex-col cursor-pointer"&gt;
+                          |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2"&gt; Ui Kits &lt;/li&gt;
+                          |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2"&gt; Alert &lt;/li&gt; 
+                          |       &lt;/ul&gt;                                    
+                          |     &lt;/div&gt;
+                          |    &lt;/div&gt; 
+                          |    &lt;div class="dropdown"&gt;
+                          |     &lt;button class="text-white btn btn-info"&gt; Info &lt;/button&gt;
+                          |     &lt;div class="dropdown-menu !w-fit !top-11 left-0 rtl:left-unset rtl:!right-0"&gt; 
+                          |       &lt;ul class="flex flex-col cursor-pointer"&gt;
+                          |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2"&gt; Ui Kits &lt;/li&gt;
+                          |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2"&gt; Avatars &lt;/li&gt; 
+                          |       &lt;/ul&gt;                                    
+                          |     &lt;/div&gt;
+                          |    &lt;/div&gt; 
+                          |    &lt;div class="dropdown"&gt;
+                          |     &lt;button class="text-white btn btn-success"&gt; Success &lt;/button&gt;
+                          |     &lt;div class="dropdown-menu !w-fit !top-11 left-0 rtl:left-unset rtl:!right-0"&gt; 
+                          |       &lt;ul class="flex flex-col cursor-pointer"&gt;
+                          |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2"&gt; Ui Kits &lt;/li&gt;
+                          |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2"&gt; Badge &lt;/li&gt; 
+                          |       &lt;/ul&gt;                                    
+                          |     &lt;/div&gt;
+                          |    &lt;/div&gt; 
+                          |    &lt;div class="dropdown"&gt;
+                          |     &lt;button class="text-white btn btn-warning"&gt; Warning &lt;/button&gt;
+                          |     &lt;div class="dropdown-menu !w-fit !top-11 left-0 rtl:left-unset rtl:!right-0"&gt; 
+                          |       &lt;ul class="flex flex-col cursor-pointer"&gt;
+                          |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2"&gt; Ui Kits &lt;/li&gt;
+                          |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2"&gt; Button &lt;/li&gt; 
+                          |       &lt;/ul&gt;                                    
+                          |     &lt;/div&gt;
+                          |    &lt;/div&gt; 
+                          |    &lt;div class="dropdown"&gt;
+                          |     &lt;button class="text-white btn btn-dander"&gt; Danger &lt;/button&gt;
+                          |     &lt;div class="dropdown-menu !w-fit !top-11 left-0 rtl:left-unset rtl:!right-0"&gt; 
+                          |       &lt;ul class="flex flex-col cursor-pointer"&gt;
+                          |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2"&gt; Ui Kits &lt;/li&gt;
+                          |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2"&gt; Collapse &lt;/li&gt; 
+                          |       &lt;/ul&gt;                                    
+                          |     &lt;/div&gt;
+                          |    &lt;/div&gt; 
+                          |    &lt;div class="dropdown"&gt;
+                          |     &lt;button class="btn btn-light text-title"&gt; Light &lt;/button&gt;
+                          |     &lt;div class="dropdown-menu !w-fit !top-11 left-0 rtl:left-unset rtl:!right-0"&gt; 
+                          |       &lt;ul class="flex flex-col cursor-pointer"&gt;
+                          |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2"&gt; Ui Kits &lt;/li&gt;
+                          |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2"&gt; Divider &lt;/li&gt;
+                          |       &lt;/ul&gt;                                    
+                          |     &lt;/div&gt;
+                          |    &lt;/div&gt; 
+                          |&lt;/div&gt;
+            div.col-span-6(class="2md:col-span-12")
+              div.card.tabs
+                div.card-header.pb-2.header-bottom-border
+                  div.flex.flex-col
+                    h3.text-lg.font-bold Hover Effect
+                    p   Set hover effect inside dropdown-menu using 
+                      strong .hover  
+                      |   class.
+                    div.preview-code.tab-links
+                      button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                      button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                div.card-body                                   
+                  div.tabs-content
+                    div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                      div.flex.flex-wrap.gap-2
+                        div.dropdown.on-hover-show
+                          button.btn.btn-warning.text-white Hover
+                          div.dropdown-menu(class="!w-36 left-0 !top-11 rtl:left-unset rtl:!right-0")
+                            ul.flex.flex-col.cursor-pointer(class="!gap-1")
+                              li(class="px-2 py-1 hover:bg-gray-light dark:hover:bg-sidebar-dark2") Contacts 
+                              li(class="px-2 py-1 hover:bg-gray-light dark:hover:bg-sidebar-dark2") Chat
+                        div.dropdown.on-hover-show
+                          button.btn.btn-primary.text-white.flex.items-center.gap-2 Hover Me 
+                            +SVG_ICON("Arrow-Down-2","w-[0.9rem] h-[0.9rem] stroke-white")
+                          div.dropdown-menu(class="!w-36 left-0 !top-11 rtl:left-unset rtl:!right-0")
+                            ul.flex.flex-col.cursor-pointer(class="!gap-1")
+                              li(class="px-2 py-1 transition-all hover:bg-gray-light dark:hover:bg-sidebar-dark2") Video 
+                              li(class="px-2 py-1 transition-all hover:bg-gray-light dark:hover:bg-sidebar-dark2") Songs
+                    div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                      button.btn.copyBtn(class="dark:text-white dark:bg-sidebar-dark dark:hover:bg-sidebar-dark dark:hover:text-white")
+                        i(data-feather="clipboard")
+                      pre(class="overflow-auto language-html custom-scroll dark:bg-sidebar-dark2")
+                        code(class="dark:bg-sidebar-dark2")
+                          |&lt;div class="flex flex-wrap gap-2"&gt;
+                          |    &lt;div class="dropdown on-hover-show"&gt;
+                          |     &lt;button class="text-white btn btn-warning"&gt; Hover Me &lt;/button&gt;
+                          |     &lt;div class="dropdown-menu !w-36 left-0 !top-11 rtl:left-unset rtl:!right-0"&gt; 
+                          |       &lt;ul class="flex flex-col cursor-pointer !gap-1"&gt;
+                          |         &lt;li class="px-2 py-1 hover:bg-gray-light dark:hover:bg-sidebar-dark2"&gt; Contacts &lt;/li&gt;
+                          |         &lt;li class="px-2 py-1 hover:bg-gray-light dark:hover:bg-sidebar-dark2"&gt; Chat &lt;/li&gt; 
+                          |       &lt;/ul&gt;
+                          |     &lt;/div&gt; 
+                          |    &lt;/div&gt;
+                          |    &lt;div class="dropdown on-hover-show"&gt;
+                          |     &lt;button class="text-white btn btn-primary"&gt; Hover Inside &lt;/button&gt;
+                          |     &lt;div class="dropdown-menu !w-36 left-0 !top-11 rtl:left-unset rtl:!right-0"&gt; 
+                          |       &lt;ul class="flex flex-col cursor-pointer !gap-1"&gt;
+                          |         &lt;li class="px-2 py-1 transition-all hover:bg-gray-light dark:hover:bg-sidebar-dark2"&gt; Contacts &lt;/li&gt;
+                          |         &lt;li class="px-2 py-1 transition-all hover:bg-gray-light dark:hover:bg-sidebar-dark2"&gt; Chat &lt;/li&gt; 
+                          |       &lt;/ul&gt;
+                          |     &lt;/div&gt; 
+                          |    &lt;/div&gt;
+                          |&lt;/div&gt;
+            div.col-span-6(class="2md:col-span-12")
+              div.card.tabs
+                div.card-header.pb-2.header-bottom-border
+                  div.flex.flex-col
+                    h3.text-lg.font-bold Justify Content
+                    p   Set dropdown-menu content justify using  
+                      strong .text-*  
+                      |   class.
+                    div.preview-code.tab-links
+                      button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                      button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                div.card-body
+                  div.tabs-content
+                    div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                      div.flex.flex-wrap.gap-2
+                        div.dropdown
+                          button.btn.btn-success.text-white Text Left 
+                          div.dropdown-menu(class="!w-36 !top-11 left-0 rtl:left-unset rtl:!right-0")
+                            ul.flex.flex-col.text-start.cursor-pointer 
+                              li(class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2") Dashboard 
+                              li(class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2") Settings
+                        div.dropdown
+                          button.btn.btn-secondary.text-white Text Center  
+                          div.dropdown-menu(class="!w-36 !top-11 left-0 rtl:left-unset rtl:!right-0")
+                            ul.flex.flex-col.text-center.cursor-pointer 
+                              li(class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2") Earning 
+                              li(class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2") Settings
+                        div.dropdown
+                          button.btn.btn-warning.text-white Text Right 
+                          div.dropdown-menu(class="!w-36 !top-11 left-0 rtl:left-unset rtl:!right-0")
+                            ul.flex.flex-col.text-end.cursor-pointer 
+                              li(class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2") Learning 
+                              li(class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2") Settings
+                    div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                      button.btn.copyBtn(class="dark:text-white dark:bg-sidebar-dark dark:hover:bg-sidebar-dark dark:hover:text-white")
+                        i(data-feather="clipboard")
+                      pre(class="overflow-auto language-html custom-scroll dark:bg-sidebar-dark2")
+                        code(class="dark:bg-sidebar-dark2")
+                          |&lt;div class="flex flex-wrap gap-2"&gt;
+                          |    &lt;div class="dropdown"&gt;
+                          |     &lt;button class="text-white btn btn-Success"&gt; Text Left &lt;/button&gt;
+                          |     &lt;div class="dropdown-menu !w-36 !top-11 left-0 rtl:left-unset rtl:!right-0"&gt; 
+                          |       &lt;ul class="flex flex-col cursor-pointer text-start"&gt;
+                          |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2"&gt; Dashboard &lt;/li&gt;
+                          |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2"&gt; Settings &lt;/li&gt; 
+                          |       &lt;/ul&gt;                                    
+                          |     &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;div class="dropdown"&gt;
+                          |     &lt;button class="text-white btn btn-secondary"&gt; Text Center &lt;/button&gt;
+                          |     &lt;div class="dropdown-menu !w-36 !top-11 left-0 rtl:left-unset rtl:!right-0"&gt; 
+                          |       &lt;ul class="flex flex-col text-center cursor-pointer"&gt;
+                          |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2"&gt; Earning &lt;/li&gt;
+                          |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2"&gt; Settings &lt;/li&gt; 
+                          |       &lt;/ul&gt;                                    
+                          |     &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;div class="dropdown"&gt;
+                          |     &lt;button class="text-white btn btn-warning"&gt; Text Right &lt;/button&gt;
+                          |     &lt;div class="dropdown-menu !w-36 !top-11 left-0 rtl:left-unset rtl:!right-0"&gt; 
+                          |       &lt;ul class="flex flex-col cursor-pointer text-end"&gt;
+                          |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2"&gt; Learning &lt;/li&gt;
+                          |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2"&gt; Settings &lt;/li&gt; 
+                          |       &lt;/ul&gt;                                    
+                          |     &lt;/div&gt;
+                          |    &lt;/div&gt; 
+                          |&lt;/div&gt;
+            div.col-span-6(class="2md:col-span-12")
+              div.card.tabs
+                div.card-header.pb-2.header-bottom-border
+                  div.flex.flex-col
+                    h3.text-lg.font-bold Alignment
+                    p   Add dropdown-menu alignment using 
+                      strong .dropdown-*
+                      |   class.
+                    div.preview-code.tab-links
+                      button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                      button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                div.card-body                                   
+                  div.tabs-content
+                    div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                      div.flex.flex-wrap.gap-2
+                        div.dropdown.dropdown-right
+                          button.btn.btn-info.text-white Align Right 
+                          div.dropdown-menu(class="!w-36 2md:!w-fit")
+                            ul.flex.flex-col.gap-1.cursor-pointer 
+                              li(class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2") Home 
+                              li(class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2") Tasks
+                        div.dropdown.dropdown-top
+                          button.btn.btn-danger.text-white Align Top
+                          div.dropdown-menu(class="!w-36 2md:!w-fit")
+                            ul.flex.flex-col.gap-1.cursor-pointer 
+                              li(class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2") Notifications 
+                              li(class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2") Messages
+                        div.dropdown
+                          button.btn.btn-primary.text-white Align Bottom 
+                          div.dropdown-menu(class="!w-36 2md:!w-fit !top-11 left-0")
+                            ul.flex.flex-col.cursor-pointer 
+                              li(class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2") Dashboard 
+                              li(class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2") Settings                                                
+                        div.dropdown.dropdown-left
+                          button.btn.btn-success.text-white Align Left 
+                          div.dropdown-menu(class="!w-36 2md:!w-fit")
+                            ul.flex.flex-col.gap-1.cursor-pointer 
+                              li(class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2") Profile 
+                              li(class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2") Chat
+                    div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                      button.btn.copyBtn(class="dark:text-white dark:bg-sidebar-dark dark:hover:bg-sidebar-dark dark:hover:text-white")
+                        i(data-feather="clipboard")
+                      pre(class="overflow-auto language-html custom-scroll dark:bg-sidebar-dark2")
+                        code(class="dark:bg-sidebar-dark2")
+                          |&lt;div class="flex flex-wrap gap-2"&gt;
+                          |    &lt;div class="dropdown dropdown-right"&gt;
+                          |     &lt;button class="text-white btn btn-info"&gt; Align Right &lt;/button&gt;
+                          |     &lt;div class="dropdown-menu !w-36 2md:!w-fit"&gt; 
+                          |       &lt;ul class="flex flex-col gap-1 cursor-pointer"&gt;
+                          |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2"&gt; Home &lt;/li&gt;
+                          |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2"&gt; Tasks &lt;/li&gt; 
+                          |       &lt;/ul&gt;                                    
+                          |     &lt;/div&gt;
+                          |    &lt;/div&gt; 
+                          |    &lt;div class="dropdown dropdown-top"&gt;
+                          |     &lt;button class="text-white btn btn-danger"&gt; Align Top &lt;/button&gt;
+                          |     &lt;div class="dropdown-menu !w-36 2md:!w-fit"&gt; 
+                          |       &lt;ul class="flex flex-col gap-1 cursor-pointer"&gt;
+                          |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2"&gt; Notifications &lt;/li&gt;
+                          |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2"&gt; Messages &lt;/li&gt; 
+                          |       &lt;/ul&gt;                                    
+                          |     &lt;/div&gt;
+                          |    &lt;/div&gt; 
+                          |    &lt;div class="dropdown"&gt;
+                          |     &lt;button class="text-white btn btn-primary"&gt; Align Bottom &lt;/button&gt;
+                          |     &lt;div class="dropdown-menu !w-36 2md:!w-fit !top-11 left-0"&gt; 
+                          |       &lt;ul class="flex flex-col gap-1 cursor-pointer"&gt;
+                          |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2"&gt; Dashboard &lt;/li&gt;
+                          |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2"&gt; Setting &lt;/li&gt; 
+                          |       &lt;/ul&gt;                                    
+                          |     &lt;/div&gt;
+                          |    &lt;/div&gt; 
+                          |    &lt;div class="dropdown dropdown-left"&gt;
+                          |     &lt;button class="text-white btn btn-success"&gt; Align Left &lt;/button&gt;
+                          |     &lt;div class="dropdown-menu !w-36 2md:!w-fit"&gt; 
+                          |       &lt;ul class="flex flex-col gap-1 cursor-pointer"&gt;
+                          |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2"&gt; Profile &lt;/li&gt;
+                          |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2"&gt; Chat &lt;/li&gt; 
+                          |       &lt;/ul&gt;                                    
+                          |     &lt;/div&gt;
+                          |    &lt;/div&gt; 
+                          |&lt;/div&gt;
+            div.col-span-4(class="xl:col-span-6 2md:col-span-12")
+              div.card.tabs
+                div.card-header.pb-2.header-bottom-border
+                  div.flex.flex-col
+                    h3.text-lg.font-bold With Divider
+                    p   Set dropdown-menu with the divider.
+                    div.preview-code.tab-links
+                      button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                      button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                div.card-body                                   
+                  div.tabs-content
+                    div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                      div.flex.flex-wrap.gap-2
+                        div.dropdown
+                          button.btn.btn-info.text-white Divider 
+                          div.dropdown-menu(class="!w-36 left-0 !top-11 rtl:left-unset rtl:!right-0")
+                            div.border-b.border-border-light(class="dark:border-b dark:border-border-dark")
+                              ul.flex.flex-col.gap-1.cursor-pointer
+                                li(class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2") Contacts 
+                                li(class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2") Chat
+                            div.mt-1
+                              a(href="javascript:void(0)" class="px-2 py-1 rounded") Separated Link
+                    div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                      button.btn.copyBtn(class="dark:text-white dark:bg-sidebar-dark dark:hover:bg-sidebar-dark dark:hover:text-white")
+                        i(data-feather="clipboard")
+                      pre(class="overflow-auto language-html custom-scroll dark:bg-sidebar-dark2")
+                        code(class="dark:bg-sidebar-dark2")
+                          |&lt;div class="flex flex-wrap gap-2"&gt;
+                          |    &lt;div class="dropdown"&gt;
+                          |     &lt;button class="text-white btn btn-primary"&gt; Divider &lt;/button&gt;
+                          |     &lt;div class="dropdown-menu !w-36 left-0 !top-11 rtl:left-unset rtl:!right-0"&gt; 
+                          |       &lt;div class="border-b border-border-light dark:border-b dark:border-border-dark"&gt;
+                          |         &lt;ul class="flex flex-col gap-1 cursor-pointer"&gt;
+                          |           &lt;li class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2"&gt; Contacts &lt;/li&gt;
+                          |           &lt;li class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2"&gt; Chat &lt;/li&gt; 
+                          |         &lt;/ul&gt;               
+                          |       &lt;/div&gt;
+                          |       &lt;div&gt; &lt;a href="javascript:void(0)" class="p-1 rounded hover:bg-gray-light"&gt;Separated Link&lt;/a&gt;&lt;/div&gt;
+                          |     &lt;/div&gt; 
+                          |    &lt;/div&gt;
+                          |&lt;/div&gt;
+            div.col-span-4(class="xl:col-span-6 2md:col-span-12")
+              div.card.tabs
+                div.card-header.pb-2.header-bottom-border
+                  div.flex.flex-col
+                    h3.text-lg.font-bold Colored
+                    p   Set different colored for dropdown-menu.
+                    div.preview-code.tab-links
+                      button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                      button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                div.card-body                                   
+                  div.tabs-content
+                    div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                      div.flex.flex-wrap.gap-2
+                        div.dropdown
+                          button.btn.btn-primary.text-white Primary Colored
+                          div.dropdown-menu(class="!w-36 left-0 !top-11 rtl:left-unset rtl:!right-0 !bg-primary text-white")
+                            div
+                              ul.flex.flex-col.cursor-pointer(class="!gap-1") 
+                                li Contacts 
+                                li Chat
+                                li About us
+                        div.dropdown
+                          button.btn.btn-secondary.text-white Secondary Colored
+                          div.dropdown-menu(class="!w-36 left-0 !top-11 rtl:left-unset rtl:!right-0 !bg-secondary text-white")
+                            div
+                              ul.flex.flex-col.cursor-pointer(class="!gap-1") 
+                                li Contacts 
+                                li Chat
+                                li About us
+                    div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                      button.btn.copyBtn(class="dark:text-white dark:bg-sidebar-dark dark:hover:bg-sidebar-dark dark:hover:text-white")
+                        i(data-feather="clipboard")
+                      pre(class="overflow-auto language-html custom-scroll dark:bg-sidebar-dark2")
+                        code(class="dark:bg-sidebar-dark2")
+                          |&lt;div class="flex flex-wrap gap-2"&gt;
+                          |    &lt;div class="dropdown"&gt;
+                          |     &lt;button class="text-white btn btn-primary"&gt; Primary Colored &lt;/button&gt;
+                          |     &lt;div class="dropdown-menu !w-36 left-0 !top-11 rtl:left-unset rtl:!right-0 !bg-border-light text-white"&gt; 
+                          |       &lt;div&gt;
+                          |         &lt;ul class="flex flex-col cursor-pointer !gap-1"&gt;
+                          |           &lt;li&gt; Contacts &lt;/li&gt;
+                          |           &lt;li&gt; Chat &lt;/li&gt; 
+                          |           &lt;li&gt; About us &lt;/li&gt; 
+                          |         &lt;/ul&gt;               
+                          |       &lt;/div&gt;
+                          |     &lt;/div&gt; 
+                          |    &lt;/div&gt;
+                          |    &lt;div class="dropdown"&gt;
+                          |     &lt;button class="text-white btn btn-secondary"&gt; Secondary Colored &lt;/button&gt;
+                          |     &lt;div class="dropdown-menu !w-36 left-0 !top-11 rtl:left-unset rtl:!right-0 !bg-border-light text-white"&gt; 
+                          |       &lt;div&gt;
+                          |         &lt;ul class="flex flex-col cursor-pointer !gap-1"&gt;
+                          |           &lt;li&gt; Contacts &lt;/li&gt;
+                          |           &lt;li&gt; Chat &lt;/li&gt; 
+                          |           &lt;li&gt; About us &lt;/li&gt; 
+                          |         &lt;/ul&gt;               
+                          |       &lt;/div&gt;
+                          |     &lt;/div&gt; 
+                          |    &lt;/div&gt;
+                          |&lt;/div&gt;
+            div.col-span-4(class="xl:col-span-6 2md:col-span-12")
+              div.card.tabs
+                div.card-header.pb-2.header-bottom-border
+                  div.flex.flex-col
+                    h3.text-lg.font-bold Heading Dropdown
+                    p   Main heading and any sub-content in dropdown.
+                    div.preview-code.tab-links
+                      button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                      button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                div.card-body                                   
+                  div.tabs-content
+                    div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                      div.flex.flex-wrap.gap-2
+                        div.dropdown
+                          button.btn.btn-warning.text-white Heading 
+                          div.dropdown-menu(class="!w-36 left-0 !top-11 rtl:left-unset rtl:!right-0")
+                            div.border-b.border-border-light(class="dark:border-b dark:border-border-dark")
+                              h3.text-sm.font-bold.text-title.mb-1 Dropdown List
+                            div.mt-1
+                              ul.flex.flex-col.cursor-pointer(class="!gap-1")
+                                li(class="px-2 py-1 transition-all hover:bg-gray-light dark:hover:bg-sidebar-dark2") Click on 
+                                li(class="px-2 py-1 transition-all hover:bg-gray-light dark:hover:bg-sidebar-dark2") Hover on
+                    div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                      button.btn.copyBtn(class="dark:text-white dark:bg-sidebar-dark dark:hover:bg-sidebar-dark dark:hover:text-white")
+                        i(data-feather="clipboard")
+                      pre(class="overflow-auto language-html custom-scroll dark:bg-sidebar-dark2")
+                        code(class="dark:bg-sidebar-dark2")
+                          |&lt;div class="flex flex-wrap gap-2"&gt;
+                          |    &lt;div class="dropdown"&gt;
+                          |     &lt;button class="text-white btn btn-info"&gt; Heading &lt;/button&gt;
+                          |     &lt;div class="dropdown-menu !w-36 left-0 !top-11 rtl:left-unset rtl:!right-0"&gt; 
+                          |       &lt;div class="border-b border-border-light dark:border-b dark:border-border-dark "&gt;
+                          |         &lt;h3 class="mb-1 text-sm font-bold text-title"&gt; Dropdown List &lt;/h3&gt;
+                          |       &lt;/div&gt;
+                          |       &lt;div class="mt-1"&gt;
+                          |         &lt;ul class="flex flex-col cursor-pointer !gap-1"&gt;
+                          |           &lt;li class="transition-all hover:bg-gray-light hover:px-2 hover:py-1 dark:hover:bg-sidebar-dark2"&gt; Click on &lt;/li&gt;
+                          |           &lt;li class="transition-all hover:bg-gray-light hover:px-2 hover:py-1 dark:hover:bg-sidebar-dark2"&gt; Hover on &lt;/li&gt; 
+                          |         &lt;/ul&gt;               
+                          |       &lt;/div&gt;
+                          |     &lt;/div&gt; 
+                          |    &lt;/div&gt;
+                          |&lt;/div&gt;
+            div.col-span-4(class="xl:col-span-6 2md:col-span-12")
+              div.card.tabs
+                div.card-header.pb-2.header-bottom-border
+                  div.flex.flex-col
+                    h3.text-lg.font-bold Helper Card
+                    p   Adding card for dropdown.
+                    div.preview-code.tab-links
+                      button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                      button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                div.card-body                                   
+                  div.tabs-content
+                    div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                      div.flex.flex-wrap.gap-2
+                        div.dropdown
+                          button.btn.btn-danger.text-white Helper card
+                          div.dropdown-menu.card(class="!w-36 left-0 !top-11 rtl:left-unset rtl:!right-0 rounded !bg-danger")
+                            div.card-body.text-white
+                              h3.text-lg.font-bold.mb-1 Learn More!
+                                p.font-normal Here, you can learn more and more
+                    div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                      button.btn.copyBtn(class="dark:text-white dark:bg-sidebar-dark dark:hover:bg-sidebar-dark dark:hover:text-white")
+                        i(data-feather="clipboard")
+                      pre(class="overflow-auto language-html custom-scroll dark:bg-sidebar-dark2")
+                        code(class="dark:bg-sidebar-dark2")
+                          |&lt;div class="flex flex-wrap gap-2"&gt;
+                          |    &lt;div class="dropdown"&gt;
+                          |     &lt;button class="text-white btn btn-danger"&gt; Helper card &lt;/button&gt;
+                          |     &lt;div class="dropdown-menu card !w-36 left-0 !top-11 rtl:left-unset rtl:!right-0 rounded !bg-danger"&gt; 
+                          |       &lt;div class="text-white card-body"&gt;
+                          |         &lt;h3 class="mb-1 text-lg font-bold"&gt; Learn More! &lt;/h3&gt; 
+                          |           &lt;p class="font-medium"&gt; Here, you can learn more and more &lt;/p&gt;             
+                          |       &lt;/div&gt;
+                          |     &lt;/div&gt; 
+                          |    &lt;/div&gt;
+                          |&lt;/div&gt;
+            div.col-span-4(class="xl:col-span-6 2md:col-span-12")
+              div.card.tabs
+                div.card-header.pb-2.header-bottom-border
+                  div.flex.flex-col
+                    h3.text-lg.font-bold With Input Type 
+                    p   Set input types inside dropdown
+                    div.preview-code.tab-links
+                      button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                      button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                div.card-body                                   
+                  div.tabs-content
+                    div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                      div.flex.flex-wrap.gap-2
+                        div.dropdown
+                          button.btn.btn-success.text-white Inputs 
+                          div.dropdown-menu(class="!w-36 left-0 !top-11 rtl:left-unset rtl:!right-0")
+                            ul(class="!gap-1")
+                              li 
+                                div.flex.items-center.gap-2.primary
+                                  div.relative
+                                    input#radio.peer.absolute.opacity-0.z-10.cursor-pointer(type='radio')
+                                    div.w-4.h-4.border.border-primary.relative(class='peer-checked:block top-[0rem] rounded-full')
+                                    div.bg-transparent.w-2.h-2.rounded-full.absolute(class='peer-checked:bg-primary peer-checked:left[0.25rem] peer-checked:top[0.25rem] left-[0.25rem] top-[0.25rem]')
+                                  p.m-0 Default Radio
+                              li 
+                                div.flex.items-center.gap-2
+                                  label.checkbox(class="w-4 h-4 cursor-pointer")   
+                                    input(type='checkbox' class="peer") 
+                                    div.checkbox-indicator(class="peer-checked:!bg-primary !border-primary")  
+                                      i(data-feather="check")
+                                  p.m-0 Default Checkbox
+                    div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                      button.btn.copyBtn(class="dark:text-white dark:bg-sidebar-dark dark:hover:bg-sidebar-dark dark:hover:text-white")
+                        i(data-feather="clipboard")
+                      pre(class="overflow-auto language-html custom-scroll dark:bg-sidebar-dark2")
+                        code(class="dark:bg-sidebar-dark2")
+                          |&lt;div class="flex flex-wrap gap-2"&gt;
+                          |    &lt;div class="dropdown"&gt;
+                          |     &lt;button class="text-white btn btn-success"&gt; Inputs &lt;/button&gt;
+                          |     &lt;div class="dropdown-menu !w-36 left-0 !top-11 rtl:left-unset rtl:!right-0"&gt;
+                          |       &lt;ul class="!gap-1"&gt;
+                          |         &lt;li&gt;
+                          |           &lt;div class="flex items-center gap-2 primary"&gt;
+                          |             &lt;div class="relative"&gt;
+                          |               &lt;input type="radio" class="absolute opacity-0 cursor-pointer peer" id="radio"&gt;
+                          |               &lt;div class="w-4 h-4 border border-primary relative peer-checked:block top-[0rem] rounded-full"&gt;&lt;/div&gt;
+                          |               &lt;div class="bg-transparent w-2 h-2 rounded-full absolute peer-checked:bg-primary peer-checked:left[0.25rem] peer-checked:top[0.25rem] left-[0.25rem] top-[0.25rem]"&gt;&lt;/div&gt;
+                          |               &lt;p&gt; Default Radio &lt;/p&gt;
+                          |             &lt;/div&gt;
+                          |           &lt;/div&gt;
+                          |         &lt;/li&gt;
+                          |         &lt;li&gt;
+                          |           &lt;div class="flex items-center gap-2"&gt;
+                          |             &lt;label class="checkbox w-4 h-4 cursor-pointer&gt;&lt;/label&gt;
+                          |               &lt;input type="checkbox" class="peer"&gt;
+                          |               &lt;div class="checkbox-indicator peer-checked:!bg-primary !border-primary"&gt;&lt;/div&gt;
+                          |                   &lt;i data-feather="check"&gt;&lt;/i&gt;
+                          |             &lt;p&gt; Default Checkbox &lt;/p&gt;
+                          |           &lt;/div&gt;
+                          |         &lt;/li&gt;
+                          |       &lt;/ul&gt;
+                          |     &lt;/div&gt; 
+                          |    &lt;/div&gt;
+                          |&lt;/div&gt;
+            div.col-span-4(class="xl:col-span-6 2md:col-span-12")
+              div.card.tabs
+                div.card-header.pb-2.header-bottom-border
+                  div.flex.flex-col
+                    h3.text-lg.font-bold With Icon 
+                    p   Add icons with dropdown
+                    div.preview-code.tab-links
+                      button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
+                      button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
+                div.card-body                                   
+                  div.tabs-content
+                    div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
+                      div.flex.flex-wrap.gap-2
+                        div.dropdown
+                          button.btn.btn-info.text-white.flex.gap-1.items-center Home
+                            +SVG_ICON("Arrow-Down-2","w-[1.25rem] h-[1.0625rem] stroke-white")
+                          div.dropdown-menu(class="!w-36 !top-11 left-0 rtl:left-unset rtl:!right-0")
+                            ul.flex.flex-col.cursor-pointer 
+                              li(class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2") Dashboard 
+                              li(class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2") Settings
+                    div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
+                      button.btn.copyBtn(class="dark:text-white dark:bg-sidebar-dark dark:hover:bg-sidebar-dark dark:hover:text-white")
+                        i(data-feather="clipboard")
+                      pre(class="overflow-auto language-html custom-scroll dark:bg-sidebar-dark2")
+                        code(class="dark:bg-sidebar-dark2")
+                          |&lt;div class="flex flex-wrap gap-2"&gt;
+                          |    &lt;div class="dropdown"&gt;
+                          |     &lt;button class="text-white btn btn-primary"&gt; Home &lt;/button&gt;
+                          |         +SVG_ICON("Arrow-Down-2","w-[1.25rem] h-[1.0625rem] stroke-white")
+                          |     &lt;div class="dropdown-menu !w-36 !top-11 left-0 rtl:left-unset rtl:!right-0"&gt;
+                          |       &lt;ul class="flex flex-col cursor-pointer"&gt;
+                          |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2"&gt; Dashboard &lt;/li&gt;
+                          |         &lt;li class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2"&gt; Settings &lt;/li&gt; 
+                          |       &lt;/ul&gt;                                    
+                          |     &lt;/div&gt;
+                          |    &lt;/div&gt; 
+                          |&lt;/div&gt;
 
-
-            // Page Body End 
-            +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+        // Page Body End 
+        +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
       include ../../components/customizer
 
-   include ../../layout/footer-files
+  include ../../layout/footer-files

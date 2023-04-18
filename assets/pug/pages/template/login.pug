@@ -14,18 +14,18 @@ html(lang='en')
     body(dir="ltr" class="unique-skin")
         main.page-wrapper
             // Page Body Start
-            div.page-body(class="h-[100vh]")
+            div.page-body(class="h-[100vh] !mt-0")
                 div(class="!flex items-center justify-center h-full p-[.9375rem] common-animate-main").ratio_asos
                     img(class="bg-img" src="../../assets/images/dotsbg.jpg")
                     div(class=" grid grid-cols-12 gap-0 mx-auto w-full max-w-[70%] xl:max-w-[50%] md:max-w-[70%] sm:max-w-[80%] 2sm:max-w-[100%] xl:flex xl:justify-center")
-                        div(class="relative col-span-5 bg-white 2xl:col-span-6 z-1 xl:col-span-12 rounded-xl max-w-[29.375rem] min-w-[18.75rem] h-max")
+                        div(class="relative col-span-5 bg-white 2xl:col-span-6 z-1 xl:col-span-12 rounded-xl max-w-[29.375rem] min-w-[18.75rem] sm:min-w-[22.75rem] 2sm:min-w-[18.75rem] h-max")
                             form.theme-form.flex.flex-col.gap-3(class="!m-0 p-8 2sm:p-4" action="index.html")
-                                h3 Log in to account
+                                h3 Govo Account
                                 p Enter your email id and password for log in to your account
                                 div
-                                    input(type="email" placeholder="Enter your id.." required)
+                                    input(type="email" placeholder="Enter your id" required)
                                 div.relative
-                                    input(type='password' id="password" name='password' required='' placeholder="Enter your Password..")
+                                    input(type='password' id="password" name='password' required='' placeholder="Enter your Password")
                                     div.password-icon
                                         i(data-feather="eye" class="w-4 h-4 stroke-title right-[25px] rtl:right-unset top-1/2 rtl:left-[25px] absolute -translate-y-1/2 ").showHidePassword 
                                         i(data-feather="eye-off" class="w-4 h-4 stroke-title right-[25px] rtl:right-unset top-1/2 rtl:left-[25px] absolute -translate-y-1/2 ").showHidePassword 

@@ -1,39 +1,45 @@
 
 // chat main header start
 
-div.border-b.border-gray-light.pb-4.flex.items-center.justify-between
-    div 
-        div.flex.items-center.gap-3(sm:gap-1) 
-            div.avatar
-                div.w-10.rounded-full(class="xl:w-9")
-                    img(src='../../assets/images/avatar/2.jpg' alt='avatar')
-            div
-                h4.text-sm.font-semibold.text-title(class="leading-none 3sm:text-2xs 3sm:leading-none") Dmitriy Groshev 
-                div.flex.items-center.gap-1(class="mt-1")
-                    span.text-content Last seen today 15:24 
-    div.flex.items-center(class="justify-end gap-6 lg:gap-4 sm:gap-1") 
-        label(for='voice-call-modal') 
-            +SVG_ICON("Calling","w-5 h-5 stroke-title cursor-pointer hover:stroke-primary lg:hidden block")
-        label(for='video-call-modal')
-            +SVG_ICON("Video","w-5 h-5 stroke-title cursor-pointer hover:stroke-primary lg:hidden block")
-        div.dropdown.dropdown-bottom.group
-            +SVG_ICON("Setting","w-5 h-5 stroke-title cursor-pointer hover:stroke-primary")
-            div(class="hidden text-left dropdown-menu lg:block rtl:left-0 rtl:right-unset")
-                ul.flex.flex-col.justify-start.gap-3
-                    li.cursor-pointer(class='flex items-center gap-2 text-title hover:text-primary')
-                        label(for='voice-call-modal' class="flex items-center gap-2") 
-                            +SVG_ICON("Calling","w-5 h-5 stroke-title cursor-pointer hover:stroke-primary")
-                            span.whitespace-nowrap  Voice Call
-                    li.cursor-pointer(class='flex items-center gap-2 text-title hover:text-primary')
-                        label(for='video-call-modal' class="flex items-center gap-2")
-                            +SVG_ICON("Video","w-5 h-5 stroke-title cursor-pointer hover:stroke-primary")
-                            span.whitespace-nowrap Video Call
-        span.left-sidebar-hide-logo-show(class="hidden lg:block")
-            +SVG_ICON("Chat","w-5 h-5 stroke-title cursor-pointer hover:stroke-primary  left-sidebar-toggle-btn lg:block hidden")
-        span.right-sidebar-hide-logo-show
-            i(data-feather="chevrons-left" class="w-5 h-5 cursor-pointer stroke-title hover:stroke-primary right-sidebar-toggle-btn")
+div.border-b.border-gray-light.pb-4.flex.items-center.justify-between(class="dark:border-b dark:border-border-dark")
+  div 
+    div.flex.items-center.gap-3(sm:gap-1)
+      div.indicator
+        span.chat-status(class=`status-offline`)
+        div.avatar 
+          div.w-10.rounded-full.h-10(class="overflow-hidden xl:h-9 xl:w-9")
+            img(src='../../assets/images/avatar/2.jpg' alt='avatar')
+      div
+        h4.text-sm.font-semibold.text-title(class="leading-none 3sm:text-2xs 3sm:leading-none line-clamp-1 min-w-[100px]") Dmitriy Groshev 
+        div.flex.items-center.gap-1(class="mt-1")
+          span.text-content Today 15:24 
+  div.flex.items-center(class="justify-end gap-6 lg:gap-4 sm:gap-1") 
+    //- span(class="call-start-btn")
+    label(for='voice-call-modal') 
+      +SVG_ICON("Calling","w-5 h-5 stroke-title cursor-pointer hover:stroke-primary lg:hidden block call-start-btn")
+    label(for='video-call-modal')
+      +SVG_ICON("Video","w-5 h-5 stroke-title cursor-pointer hover:stroke-primary lg:hidden block")
+    div.dropdown.dropdown-bottom.group
+      +SVG_ICON("Setting","w-5 h-5 stroke-title cursor-pointer hover:stroke-primary")
+      div(class="hidden text-left dropdown-menu lg:block rtl:left-0 rtl:right-unset")
+        ul.flex.flex-col.justify-start.gap-3
+          li.cursor-pointer(class='flex items-center gap-2 text-title hover:text-primary')
+            label(for='voice-call-modal' class="flex items-center gap-2") 
+              +SVG_ICON("Calling","w-5 h-5 stroke-title cursor-pointer hover:stroke-primary")
+              span.whitespace-nowrap  Voice Call
+          li.cursor-pointer(class='flex items-center gap-2 text-title hover:text-primary')
+            label(for='video-call-modal' class="flex items-center gap-2")
+              +SVG_ICON("Video","w-5 h-5 stroke-title cursor-pointer hover:stroke-primary")
+              span.whitespace-nowrap Video Call
+    span.left-sidebar-hide-logo-show(class="hidden lg:block")
+      +SVG_ICON("Chat","w-5 h-5 stroke-title cursor-pointer hover:stroke-primary  left-sidebar-toggle-btn lg:block hidden")
+    span.right-sidebar-hide-logo-show
+      //- i(data-feather="chevrons-left" class="w-5 h-5 cursor-pointer stroke-title hover:stroke-primary right-sidebar-toggle-btn")
+      +SVG_ICON("Arrow-Left-Square","w-5 h-5 cursor-pointer stroke-title hover:stroke-primary right-sidebar-toggle-btn")
 
 // chat main header end
+
+
 
 
 

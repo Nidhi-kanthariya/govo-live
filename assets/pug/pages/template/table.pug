@@ -1,7 +1,7 @@
 //- sidebar
 -var sidebar = true;
 
-//- feathet
+//- feather
 -var feather= true;
 
 //- customSelect
@@ -14,8 +14,8 @@
 -var prism=true;
 
 //- Breadcrumbs
--var pageTitle="Button";
--var breadcrumb=['Ui Kits','Button'];
+-var pageTitle="Tables";
+-var breadcrumb=['Ui Kits','Tables'];
 
 //- json
 include ../../data/all-data
@@ -25,96 +25,110 @@ include ../../mixin/mixin
 
 doctype html
 html(lang='en')  
-   include ../../layout/header-files 
-   body(dir="ltr" class="unique-skin") 
-      main.page-wrapper
-         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
-            include ../../layout/header/header     
-            // Sidebar Start 
-            div.page-sidebar.sidebar-dark.unique-sidebar
-               include ../../layout/unique
-            // Sidebar End 
+  include ../../layout/header-files 
+  body(dir="ltr" class="unique-skin") 
+    main.page-wrapper
+      div.page-body-wrapper(class="xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+        include ../../layout/header/header     
+        // Sidebar Start 
+        div.page-sidebar.sidebar-dark.unique-sidebar
+          include ../../layout/unique
+        // Sidebar End
 
-            // Page Body Start 
-            div.page-body
-               div.grid.grid-cols-12.gap-card-gap
-                  div.col-span-6(class="lg:col-span-12")
-                     div.card  
-                        div.card-header.border-b-0
-                           div.flex.flex-col
-                              h3.text-lg.font-medium Default
-                        div.card-body
-                           div.overflow-auto.custom-scroll  
-                              include ../../components/table/default-table
+        // Page Body Start
+        div.page-body
+          div.grid.grid-cols-12.gap-card-gap.table-main
+            div.col-span-6(class="lg:col-span-12")
+              div.card  
+                div.card-header.border-b-0
+                  div.flex.flex-col
+                    h3.text-lg.font-medium Basic Table
+                div.card-body
+                  div.overflow-auto.custom-scroll  
+                    include ../../components/table/default-table
+            div.col-span-6(class="lg:col-span-12")
+              div.card
+                div.card-header.border-b-0
+                  div.flex.flex-col
+                    h3.text-lg.font-medium Icons Table
+                div.card-body
+                  div.overflow-auto.custom-scroll   
+                    include ../../components/table/icon-table
 
-                  div.col-span-6(class="lg:col-span-12")
-                     div.card
-                        div.card-header.border-b-0
-                           div.flex.flex-col
-                              h3.text-lg.font-medium Active 
-                        div.card-body 
-                           div.overflow-auto.custom-scroll   
-                              include ../../components/table/active-table
+            div.col-span-6(class="lg:col-span-12")
+              div.card
+                div.card-header.border-b-0
+                  div.flex.flex-col
+                    h3.text-lg.font-medium Active 
+                div.card-body 
+                  div.overflow-auto.custom-scroll   
+                    include ../../components/table/active-table
 
-                  div.col-span-6(class="lg:col-span-12")
-                     div.card
-                        div.card-header.border-b-0
-                           div.flex.flex-col
-                              h3.text-lg.font-medium Hoverable
-                        div.card-body
-                           div.overflow-auto.custom-scroll   
-                              include ../../components/table/hoverable-table
+            div.col-span-6(class="lg:col-span-12")
+              div.card
+                div.card-header.border-b-0
+                  div.flex.flex-col
+                    h3.text-lg.font-medium Hoverable 
+                div.card-body
+                  div.overflow-auto.custom-scroll   
+                    include ../../components/table/hoverable-table
 
-                  div.col-span-6(class="lg:col-span-12")
-                     div.card
-                        div.card-header.border-b-0
-                           div.flex.flex-col
-                              h3.text-lg.font-medium Bordered
-                        div.card-body
-                           div.overflow-auto.custom-scroll   
-                              include ../../components/table/bordered-table
+            div.col-span-6(class="lg:col-span-12")
+              div.card
+                div.card-header.border-b-0
+                  div.flex.flex-col
+                    h3.text-lg.font-medium Head Option
+                div.card-body
+                  div.overflow-auto.custom-scroll   
+                    include ../../components/table/head-table
 
-                  div.col-span-12
-                     div.card
-                        div.card-header.border-b-0
-                           div.flex.flex-col
-                              h3.text-lg.font-medium Striped Rows
-                        div.card-body
-                           div.overflow-auto.custom-scroll   
-                              include ../../components/table/colors-table
+            div.col-span-6(class="lg:col-span-12") 
+              div.card 
+                div.card-header.border-b-0
+                  div.flex.flex-col
+                    h3.text-lg.font-medium Bordered
+                div.card-body 
+                  div.overflow-auto.custom-scroll   
+                    include ../../components/table/bordered-table
 
-                  div.col-span-6(class="lg:col-span-12")
-                     div.card
-                        div.card-header.border-b-0
-                           div.flex.flex-col
-                              h3.text-lg.font-medium User Information
-                        div.card-body
-                           div.overflow-auto.custom-scroll
-                              include ../../components/table/open-invoice
+            div.col-span-12
+              div.card
+                div.card-header.border-b-0
+                  div.flex.flex-col
+                    h3.text-lg.font-medium Striped Rows
+                div.card-body
+                  div.overflow-auto.custom-scroll   
+                    include ../../components/table/colors-table
 
-                  div.col-span-6(class="lg:col-span-12")
-                     div.card 
-                        div.card-header.border-b-0
-                           div.flex.flex-col 
-                              h3.text-lg.font-medium Transaction History 
-                        div.card-body
-                           div.overflow-auto.custom-scroll
-                              include ../../components/table/transaction-history
+            div.col-span-6(class="lg:col-span-12")
+              div.card
+                div.card-header.border-b-0
+                  div.flex.flex-col
+                    h3.text-lg.font-medium User Information
+                div.card-body
+                  div.overflow-auto.custom-scroll
+                    include ../../components/table/open-invoice
 
-                  div.col-span-12
-                     div.card
-                        div.card-header.border-b-0
-                           div.flex.flex-col
-                              h3.text-lg.font-medium Colored Rows 
-                        div.card-body
-                           div.overflow-auto.custom-scroll   
-                              include ../../components/table/default-variants
+            div.col-span-6(class="lg:col-span-12")
+              div.card 
+                div.card-header.border-b-0
+                  div.flex.flex-col 
+                    h3.text-lg.font-medium Transaction History 
+                div.card-body
+                  div.overflow-auto.custom-scroll
+                    include ../../components/table/transaction-history
 
+            div.col-span-12
+              div.card
+                div.card-header.border-b-0
+                  div.flex.flex-col
+                    h3.text-lg.font-medium Colored Rows 
+                div.card-body
+                  div.overflow-auto.custom-scroll   
+                    include ../../components/table/default-variants
 
+        // Page Body End 
+        +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+    include ../../components/customizer
 
-
-            // Page Body End 
-            +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
-      include ../../components/customizer
-
-   include ../../layout/footer-files
+  include ../../layout/footer-files

@@ -5,16 +5,17 @@
 @layer components {
   main{
     .page-body{
-      .apexcharts{
-        &-canvas {
-        [dir='rtl'] & {
-          direction: ltr;
+      @apply lg:mt-[calc(125px_+_(90_-_125)_*_((100vw_-_320px)_/_(1920_-_320)))] mt-[7.5rem] md:mt-[6.875rem];
+        .apexcharts{
+          &-canvas {
+          [dir='rtl'] & {
+            direction: ltr;
+          }
         }
-      }
       }
       .common-animate-main{
         .common-animate{
-          animation-duration: 12000ms;
+          animation-duration: 12000ms !important;
         }
       }
     }
@@ -37,6 +38,9 @@
       &.sidebar-icon {
         .page-body-wrapper {
           @apply w-full;
+          header{
+            @apply w-full;
+          }
         }
         .page-sidebar {
           nav {
@@ -81,6 +85,39 @@
                 }
               }
             }
+          }
+          .logo-wrapper{
+            @apply justify-center;
+            a{
+              .full-sidebar{
+                @apply hidden;
+              }
+              .icon-sidebar{
+                @apply block !w-8;
+              }
+            }
+            .sidebar-btn{
+              @apply hidden;
+            }
+          }
+          .search-wrapper {
+            .search-box {
+              .search{
+                @apply pl-7;
+              }
+            }
+          }
+        }
+      }
+    }
+    .page-sidebar{
+      .logo-wrapper{
+        a{
+          .full-sidebar{
+            @apply block;
+          }
+          .icon-sidebar{
+            @apply hidden;
           }
         }
       }

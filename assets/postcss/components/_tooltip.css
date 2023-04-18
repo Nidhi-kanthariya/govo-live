@@ -21,7 +21,7 @@
 
   [data-tw-tooltip]::after {
     content: attr(data-tw-tooltip);
-    @apply font-sans min-w-min max-w-xs whitespace-nowrap p-2 border-primary bg-white text-title shadow-md rounded;
+    @apply font-sans min-w-min max-w-xs whitespace-nowrap p-2 border-primary bg-white  dark:bg-sidebar-dark2  text-title shadow-md rounded;
   }
 
   /* Make the tooltips respond to hover */
@@ -39,7 +39,7 @@
   /* FLOW: TOP */
   [data-tw-tooltip]:not([data-flow])::before,
   [data-tw-tooltip][data-flow^='top']::before {
-    @apply left-[50%] bottom-full border-b-0 border-t-gray-400;
+    @apply left-[50%] bottom-full border-b-0 border-t-gray-400 dark:border-t-sidebar-dark2;
   }
 
   [data-tw-tooltip]:not([data-flow])::after,
@@ -49,7 +49,7 @@
 
   /* FLOW: BOTTOM */
   [data-tw-tooltip][data-flow^='bottom']::before {
-    @apply left-[50%] top-full border-t-0 border-b-gray-400;
+    @apply left-[50%] top-full border-t-0 border-b-gray-400 dark:border-b-sidebar-dark2;
   }
 
   [data-tw-tooltip][data-flow^='bottom']::after {
@@ -58,7 +58,7 @@
 
   /* FLOW: LEFT */
   [data-tw-tooltip][data-flow^='left']::before {
-    @apply top-[41%] border-r-0 border-l-gray-400 left-[calc(0em-.3125rem)];
+    @apply top-[41%] border-r-0 border-l-gray-400 left-[calc(0em-.3125rem)] dark:border-l-sidebar-dark2;
   }
 
   [data-tw-tooltip][data-flow^='left']::after {
@@ -67,7 +67,7 @@
 
   /* FLOW: RIGHT */
   [data-tw-tooltip][data-flow^='right']::before {
-    @apply top-[41%] border-l-0 border-r-gray-400 right-[calc(0em-.3125rem)];
+    @apply top-[41%] border-l-0 border-r-gray-400 dark:border-r-sidebar-dark2 right-[calc(0em-.3125rem)];
   }
 
   [data-tw-tooltip][data-flow^='right']::after {

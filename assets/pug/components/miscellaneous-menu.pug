@@ -1,0 +1,16 @@
+// Miscellaneous Menu 
+ul(class="flex flex-col gap-3") 
+   each miscellMenu in MISCELLANEOUS_LIST
+      li(class=`w-full ${miscellMenu.menu ? "dropdown on-hover-show group" : ""}`)
+         a(href=`${miscellMenu.url}` class="flex items-center gap-2")
+            span.flex.items-center.gap-2
+               +SVG_ICON(`${miscellMenu.icon}`,"w-5 h-5 stroke-title")
+               small(class="leading-7 text-xs")= miscellMenu.title
+            if(miscellMenu.menu)
+               +SVG_ICON("Arrow-Right-2","w-4 h-4 stroke-title ml-auto")
+         if(miscellMenu.menu)
+            div.dropdown-menu(class="dropdown-sub-menu")
+               ul(class="flex flex-col gap-2") 
+                  each subMenuItem in miscellMenu.menu
+                     li
+                        a(href=`${subMenuItem.url}`)= subMenuItem.title

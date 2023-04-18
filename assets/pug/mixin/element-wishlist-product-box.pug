@@ -1,111 +1,111 @@
 - 
-    var WISHLIST_PRODUCT_BOX = [
-        {
-            image: "ecommerce/2.jpg",
-            productName: "Latest Headphone",
-            price: "$520",
-            deletePrice: "$650",
-            delivery:"Free delivery by Govo",
-            discount:"(20% Off)",
-            rating:"540 Ratings",
-            rate: "3.9"
-        },
-        {
-            image: "ecommerce/3.jpg",
-            productName: "Running Shoes",
-            price: "$75",
-            deletePrice: "$150",
-            delivery:"Free delivery by Govo",
-            discount:"(50% Off)",
-            rating:"70 Ratings",
-            rate: "4.6",
-            label: "50% off"
-        },
-        {
-            image: "ecommerce/6.jpg",
-            productName: "Apple AirPods",
-            price: "$162",
-            deletePrice: "$200",
-            delivery:"Free delivery by Govo",
-            discount:"(19% Off)",
-            rating:"125 Ratings",
-            rate: "4.5"
-        },
-        {
-            image: "ecommerce/8.jpg",
-            productName: "Gucci Sling Bag",
-            price: "$105",
-            deletePrice: "$138",
-            delivery:"Free delivery by Govo",
-            discount:"(15% Off)",
-            rating:"150 Ratings",
-            rate: "2.5"
-        },
-        {
-            image: "ecommerce/10.jpg",
-            productName: "Three Seater Sofa Cum Bed",
-            price: "$299",
-            deletePrice: "$399",
-            delivery:"Free delivery by Govo",
-            discount:"(15% Off)",
-            rating:"150 Ratings",
-            rate: "4.7"
-        },
-        {
-            image: "ecommerce/13.jpg",
-            productName: "Face Wash - For Good Skincare",
-            price: "$75",
-            deletePrice: "$100",
-            delivery:"Free delivery by Govo",
-            discount:"(25% Off)",
-            rating:"150 Ratings",
-            rate: "4.9",
-            label: "25% off"
-        },
-        {
-            image: "ecommerce/15.jpg",
-            productName: "Sun Glasses - Eye Protection, Regular Usage",
-            price: "$98",
-            deletePrice: "$110",
-            delivery:"Free delivery by Govo",
-            discount:"(15% Off)",
-            rating:"150 Ratings",
-            rate: "3.6"
-        },
-        {
-            image: "ecommerce/16.jpg",
-            productName: "Women's Leather Bags",
-            price: "$212",
-            deletePrice: "$250",
-            delivery:"Free delivery by Govo",
-            discount:"(15% Off)",
-            rating:"150 Ratings",
-            rate: "4.5"
-        },
-    ];
+  var WISHLIST_PRODUCT_BOX = [
+    {
+      image: "ecommerce/2.jpg",
+      productName: "Latest Headphone",
+      price: "$520",
+      deletePrice: "$650",
+      delivery:"Free delivery by Govo",
+      discount:"(20% Off)",
+      rating:"540 Ratings",
+      rate: "3.9"
+    },
+    {
+      image: "ecommerce/3.jpg",
+      productName: "Running Shoes",
+      price: "$75",
+      deletePrice: "$150",
+      delivery:"Free delivery by Govo",
+      discount:"(50% Off)",
+      rating:"70 Ratings",
+      rate: "4.6",
+      label: "50% off"
+    },
+    {
+      image: "ecommerce/6.jpg",
+      productName: "Apple AirPods",
+      price: "$162",
+      deletePrice: "$200",
+      delivery:"Free delivery by Govo",
+      discount:"(19% Off)",
+      rating:"125 Ratings",
+      rate: "4.5"
+    },
+    {
+      image: "ecommerce/8.jpg",
+      productName: "Gucci Sling Bag",
+      price: "$105",
+      deletePrice: "$138",
+      delivery:"Free delivery by Govo",
+      discount:"(15% Off)",
+      rating:"150 Ratings",
+      rate: "2.5"
+    },
+    {
+      image: "ecommerce/10.jpg",
+      productName: "Three Seater Sofa Cum Bed",
+      price: "$299",
+      deletePrice: "$399",
+      delivery:"Free delivery by Govo",
+      discount:"(15% Off)",
+      rating:"150 Ratings",
+      rate: "4.7"
+    },
+    {
+      image: "ecommerce/13.jpg",
+      productName: "Face Wash - For Good Skincare",
+      price: "$75",
+      deletePrice: "$100",
+      delivery:"Free delivery by Govo",
+      discount:"(25% Off)",
+      rating:"150 Ratings",
+      rate: "4.9",
+      label: "25% off"
+    },
+    {
+      image: "ecommerce/15.jpg",
+      productName: "Sun Glasses - Eye Protection, Regular Usage",
+      price: "$98",
+      deletePrice: "$110",
+      delivery:"Free delivery by Govo",
+      discount:"(15% Off)",
+      rating:"150 Ratings",
+      rate: "3.6"
+    },
+    {
+      image: "ecommerce/16.jpg",
+      productName: "Women's Leather Bags",
+      price: "$212",
+      deletePrice: "$250",
+      delivery:"Free delivery by Govo",
+      discount:"(15% Off)",
+      rating:"150 Ratings",
+      rate: "4.5"
+    },
+  ];
 
 mixin wishlist-product(data)
-    .card.p-3(class="group wishlist-box") 
-        .card-body
-            .relative
-                if (data.label)
-                    span.badge.bg-secondary.badge-xs.absolute.font-bold(class="top-3 right-3.5 rounded-[3px] text-2xs")= data.label
-                div(class="absolute top-0 left-0 p-3 cursor-pointer scale-0 group-hover:scale-100  hover:transition-all hover:ease-in-out")
-                    i(data-feather="x" class="p-1 bg-white stroke-title rounded-full  delete-button")
-                a(href="product.html")
-                    img(src=`../../assets/images/${data.image}` class="rounded-[4px] w-full" alt="product image")
-            div.pt-2 
-                a(href="product.html" class="flex flex-col gap-[0.3rem]")     
-                    h4.font-bold.text-sm.text-title.line-clamp-1= data.productName
-                    div.flex.items-center(class="pt-0.5 gap-1")
-                            span.text-lg.font-bold.text-primary= data.price
-                            del.text-content3.text-sm= data.deletePrice 
-                            small.text-danger.font-sm=data.discount 
-                    div.flex.items-center.gap-1
-                        div.flex.items-center.gap-1.bg-warning.py-1.px-2.rounded-5.max-w-max
-                            i(data-feather="star" class="w-[0.8rem] h-[0.8rem] stroke-white fill-white")
-                            span(class="font-semibold leading-none text-white text-2xs mt-[3px]")= data.rate
-                        span.text-content3.text-xs=data.rating                    
-                    p.text-title.text-2xs.mt-2=data.delivery 
-            div.pt-2.flex.justify-end
-                a(href="cart.html").btn.btn-outline.btn-secondary.text-white.py-1.px-2.text-3xs Add To Cart
+  .card.p-3(class="group wishlist-box") 
+    .card-body
+      .relative
+        if (data.label)
+          span.badge.bg-secondary.badge-xs.absolute.font-bold(class="top-3 right-3.5 rounded-[3px] text-2xs")= data.label
+        div(class="absolute top-0 left-0 p-3 cursor-pointer scale-0 group-hover:scale-100  hover:transition-all hover:ease-in-out")
+          i(data-feather="x" class="p-1 bg-white stroke-title dark:bg-sidebar-dark2  dark:stroke-white rounded-full  delete-button")
+        a(href="product.html")
+          img(src=`../../assets/images/${data.image}` class="rounded-[4px] w-full" alt="product image")
+      div.pt-2 
+        a(href="product.html" class="flex flex-col gap-[0.3rem]")
+          h4.font-bold.text-sm.text-title.line-clamp-1= data.productName
+          div.flex.items-center(class="pt-0.5 gap-1")
+            span.text-lg.font-bold.text-primary= data.price
+            del.text-content3.text-sm= data.deletePrice  
+            small.text-danger.font-sm=data.discount  
+          div.flex.items-center.gap-1 
+            div.flex.items-center.gap-1.bg-warning.py-1.px-2.rounded-5.max-w-max
+              i(data-feather="star" class="w-[0.8rem] h-[0.8rem] stroke-white fill-white")
+              span(class="font-semibold leading-none text-white text-2xs mt-[3px]")= data.rate
+            span.text-content3.text-xs=data.rating           
+          p.text-title.text-2xs.mt-2=data.delivery
+      div.pt-2.flex.justify-end 
+        a(href="cart.html" class="dark:bg-sidebar-dark2").btn.btn-outline.btn-secondary.text-white.py-1.px-2.text-3xs Add To Cart

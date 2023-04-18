@@ -303,10 +303,9 @@ const advancedareachart = {
     },
     markers: {
         size: 7,
-        colors: '#fff',
+        colors: 'var(--body)',
         strokeColors: 'rgba(var(--secondary), 1)',
         strokeWidth: 3,
-
         hover: {
             size: 9,
             strokeWidth: 20,
@@ -677,7 +676,7 @@ const splineAreaChart1 = {
     },
     markers: {
         size: 5,
-        colors: '#fff',
+        colors: 'var(--body)',
         strokeColors: 'rgba(var(--secondary), 1)',
         strokeWidth: 2,
     },
@@ -719,7 +718,7 @@ const splineAreaChart2 = {
     },
     markers: {
         size: 5,
-        colors: '#fff',
+        colors: 'var(--body)',
         strokeColors: 'rgba(var(--primary), 1)',
         strokeWidth: 2,
     },
@@ -1004,8 +1003,7 @@ const linechart = {
     legend: {
         show: false,
     },
-    responsive: [{
-        },
+    responsive: [{},
         {
             breakpoint: 675,
             options: {
@@ -1114,6 +1112,11 @@ const bubblechart = {
     fill: {
         type: 'gradient',
     },
+    tooltip: {
+        marker: {
+            show: true,
+        },
+    },
 
     xaxis: {
         tickAmount: 12,
@@ -1181,7 +1184,6 @@ const bubblechart = {
 
 const bubblechartEl = new ApexCharts(document.querySelector('#bubblechart'), bubblechart);
 bubblechartEl.render();
-
 
 /*=======/ CandleStick Chart /=======*/
 const candlestickchart = {
@@ -1464,7 +1466,7 @@ const candlestickchart = {
         },
     },
     grid: {
-        borderColor: 'var(--light)',
+        borderColor: 'var( --border-light)',
     },
     colors: ['#000000'],
     responsive: [{
@@ -1553,7 +1555,7 @@ const groupbarchart = {
     stroke: {
         show: true,
         width: 1,
-        colors: ['#fff'],
+        colors: ['var(--border-light)'],
     },
     tooltip: {
         shared: true,
@@ -1662,35 +1664,35 @@ const radialchart = {
     labels: ['Apples', 'Oranges', 'Bananas', 'Berries'],
     colors: ['rgba(var(--primary),1)', 'rgba(var(--secondary), 1)', 'var(--success)', 'var(--warning)'],
     responsive: [{
-        breakpoint: 675,
-        options: {
-            chart: {
-                height: 280,
-            },
-        },
-    },
-    {
-        breakpoint: 425,
-        options: {
-            chart: {
-                height: 260,
-            },
-            plotOptions: {
-                radar: {
-                    size: 50,
+            breakpoint: 675,
+            options: {
+                chart: {
+                    height: 280,
                 },
             },
         },
-    },
-    {
-        breakpoint: 375,
-        options: {
-            chart: {
-                height: 220,
+        {
+            breakpoint: 425,
+            options: {
+                chart: {
+                    height: 260,
+                },
+                plotOptions: {
+                    radar: {
+                        size: 50,
+                    },
+                },
             },
         },
-    },
-],
+        {
+            breakpoint: 375,
+            options: {
+                chart: {
+                    height: 220,
+                },
+            },
+        },
+    ],
 };
 
 const radialchartEl = new ApexCharts(document.querySelector('#radialchart'), radialchart);
@@ -1773,17 +1775,16 @@ const boxplotchart = {
             return '<ul class="boxChartTooltip">' + '<li><b>Price</b>: ' + dataY + '</li>' + '<li><b>Date</b>: ' + dataX + '</li>' + '</ul>';
         },
     },
-
     grid: {
-        borderColor: 'var(--light)',
+        borderColor: 'var(--border-light)',
         padding: {
             top: -20,
             right: -20,
-            bottom: -10,
+            bottom: 10,
         },
     },
-
     xaxis: {
+        type: 'datetime',
         labels: {
             style: {
                 ...fontCommon,
@@ -1837,7 +1838,7 @@ const boxplotchart = {
                 xaxis: {
                     labels: {
                         show: true,
-                        rotate: -30,
+                        // rotate: -30,
                         rotateAlways: true,
                         minHeight: 48,
                     },
@@ -1911,8 +1912,6 @@ if (boxplotchartEl) {
 }
 
 /*=======/Polar Area Chart/=======*/
-
-
 const polarareachart = {
     series: [20, 28, 21, 17, 15, 18, 24],
     chart: {
@@ -1920,50 +1919,49 @@ const polarareachart = {
         height: 300,
     },
     stroke: {
-        colors: ['#fff']
+        colors: ['var(--border-light)']
     },
     colors: ['#33BFBF', '#FF6150', '#b52af6', '#63d5be', '#feb858', '#f1523d', '#d8ecff'],
     fill: {
         opacity: 0.8
     },
-    responsive: [
-        {
-        breakpoint: 1880,
-        options: {
-            chart: {
-                height: 300,
-            },
-        }
-    },
-    {
-        breakpoint: 675,
-        options: {
-            chart: {
-                height: 280,
-            },
-        }
-    },
-    {
-        breakpoint: 480,
-        options: {
-            chart: {
-                height:260,
-            },
-            legend: {
-                position: 'bottom'
+    responsive: [{
+            breakpoint: 1880,
+            options: {
+                chart: {
+                    height: 300,
+                },
             }
-        }
-    },
-    {
-        breakpoint: 1880,
-        options: {
-            chart: {
-                height: 220,
-            },
-        }
-    },
-    
-],
+        },
+        {
+            breakpoint: 675,
+            options: {
+                chart: {
+                    height: 280,
+                },
+            }
+        },
+        {
+            breakpoint: 480,
+            options: {
+                chart: {
+                    height: 260,
+                },
+                legend: {
+                    position: 'bottom'
+                }
+            }
+        },
+        {
+            breakpoint: 1880,
+            options: {
+                chart: {
+                    height: 220,
+                },
+            }
+        },
+
+    ],
 };
 
 const polarareachartEl = new ApexCharts(document.querySelector("#polarareachart"), polarareachart);
@@ -2010,7 +2008,7 @@ const barchart = {
             padding: 4,
             opacity: 0.9,
             borderWidth: 1,
-            borderColor: '#fff',
+            borderColor: 'var(--border-light)',
         },
         offsetX: 21,
         offsetY: -6,
@@ -2152,8 +2150,8 @@ const radalchart = {
     colors: ['#FF6150'],
     markers: {
         size: 4,
-        colors: ['#fff'],
-        strokeColor: '#FF6150',
+        colors: ['var(--body)'],
+        strokeColor: 'var(--border-light)',
         strokeWidth: 2,
     },
     tooltip: {
@@ -2191,46 +2189,46 @@ const radalchart = {
     },
 
     responsive: [{
-        breakpoint: 675,
-        options: {
-            chart: {
-                height: 280,
+            breakpoint: 675,
+            options: {
+                chart: {
+                    height: 280,
+                },
+                plotOptions: {
+                    radar: {
+                        size: 100,
+                    },
+                },
             },
-            plotOptions: {
-            radar: {
-                size: 100,
-            },
-    },
+
         },
-        
-    },
-    {
-        breakpoint: 425,
-        options: {
-            chart: {
-                height: 260,
-            },
-            plotOptions: {
-                radar: {
-                    size: 70,
+        {
+            breakpoint: 425,
+            options: {
+                chart: {
+                    height: 260,
+                },
+                plotOptions: {
+                    radar: {
+                        size: 70,
+                    },
                 },
             },
         },
-    },
-    {
-        breakpoint: 375,
-        options: {
-            chart: {
-                height: 220,
-            },
-            plotOptions: {
-                radar: {
-                    size: 50,
+        {
+            breakpoint: 375,
+            options: {
+                chart: {
+                    height: 220,
+                },
+                plotOptions: {
+                    radar: {
+                        size: 50,
+                    },
                 },
             },
         },
-    },
-],
+    ],
 };
 
 const radalchartEl = new ApexCharts(document.querySelector('#radalchart'), radalchart);
@@ -2273,11 +2271,11 @@ const linedatalabelchart = {
 
     grid: {
         borderColor: 'var(--border-light)',
-        padding:{
-            left:30,
+        padding: {
+            left: 30,
         },
         row: {
-            colors: ['#f5f6f9', 'transparent'],
+            colors: ['var(--body)', 'transparent'],
             opacity: 0.5
         },
     },
@@ -2289,7 +2287,8 @@ const linedatalabelchart = {
     },
     yaxis: {
         title: {
-            text: 'Temperature'
+            text: 'Temperature',
+            fill: ['var(--title)']
         },
         min: 5,
         max: 40
@@ -2526,7 +2525,7 @@ const rangeareachart = {
     },
     stroke: {
         curve: 'straight',
-        width: [0, 0, 2, 2]
+        width: [0, 0, 2, 2],
     },
     legend: {
         show: true,
@@ -2538,7 +2537,6 @@ const rangeareachart = {
             sizeOffset: 5
         }
     },
-
     responsive: [{
             breakpoint: 675,
             options: {

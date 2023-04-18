@@ -102,16 +102,20 @@ const sidebarHeaderToggle = document.querySelector('.sidebar-toggle');
 const sidebarBtn = document.querySelector('.sidebar-btn');
 const sidebar = document.querySelector('.unique-sidebar');
 const pageBodyWrapper = document.querySelector('.page-body-wrapper');
+const headerMain = document.querySelector('header');
 const headerLogoShowOptions = document.querySelector('.sidebar-hide-logo-show');
 sidebarBtn?.addEventListener('click', function (e) {
   sidebar.classList.toggle('hide-show-sidebar');
   sidebarHeaderToggle.classList.toggle('hide');
   headerLogoShowOptions?.classList.toggle('hide');
   pageBodyWrapper.classList.toggle('!w-full');
+  headerMain.classList.toggle('!w-full');
 });
 sidebarHeaderToggle?.addEventListener('click', function (e) {
   sidebar.classList.toggle('hide-show-sidebar');
   sidebarHeaderToggle.classList.toggle('hide');
   this.closest('.sidebar-hide-logo-show')?.classList.toggle('hide');
   pageBodyWrapper.classList.toggle('!w-full');
+  headerMain.classList.toggle('!w-full');
+
 });

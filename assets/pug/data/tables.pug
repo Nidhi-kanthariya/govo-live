@@ -503,64 +503,140 @@
 -
     var DEFAULT_TABLE= 
         {
-            header:["No","First Name","Last Name","User Id","Color"],
+            header:["No","First Name","Last Name","User Id","Position"],
                 body:[
                 {
-                    firstName:"Cy Ganderton",
-                    lastName:"The Bird",
-                    userId:"@mdorton",
-                    favoriteColor:"Blue",     
+                    firstName:"Cordia",
+                    lastName:"Gulgowski",
+                    userId:"CordiaGulgowski@twitter",
+                    position:"Accountant",     
                 },
                 {
-                    firstName:"Marjy Ferencz",
-                    lastName:"Ottandy",
-                    userId:"@johndeo",
-                    favoriteColor:"Purple",    
+                    firstName:"Reginald",
+                    lastName:"Stanton",
+                    userId:"ReginaldStanton@twitter",
+                    position:"Software Engineer",    
                 },
                 {
-                    firstName:"Cy Ganderton",
-                    lastName:"Orton",
-                    userId:"@mdothe",
-                    favoriteColor:"Green",   
+                    firstName:"Prof. Kevin",
+                    lastName:"Rutherford",
+                    userId:"KevinRutherford@twitter",
+                    position:"Pre-sale Support",   
                 },
                 {
-                    firstName:"Cy Ganderton",
-                    lastName:"Deo",
-                    userId:"@Thornton",
-                    favoriteColor:"Red",
+                    firstName:"Mrs. Eda",
+                    lastName:"McCullough ",
+                    userId:"EdaMcCullough @twitter",
+                    position:"Senior Developer",
                 },
             ]    
         };
+
+//- ====== Default-table json ====== -//
+-
+    var HEAD_TABLE= 
+        {
+            header:["No","First Name","Last Name","User Id","Position"],
+                body:[
+                {
+                    firstName:"Cordia",
+                    lastName:"Gulgowski",
+                    userId:"CordiaGulgowski@twitter",
+                    position:"Accountant",     
+                },
+                {
+                    firstName:"Reginald",
+                    lastName:"Stanton",
+                    userId:"ReginaldStanton@twitter",
+                    position:"Software Engineer",    
+                },
+                {
+                    firstName:"Prof. Kevin",
+                    lastName:"Rutherford",
+                    userId:"KevinRutherford@twitter",
+                    position:"Pre-sale Support",   
+                },
+                {
+                    firstName:"Mrs. Eda",
+                    lastName:"McCullough ",
+                    userId:"EdaMcCullough @twitter",
+                    position:"Senior Developer",
+                },
+            ]    
+        };
+
+//- ====== Default-table json ====== -//
+-
+    var ICON_TABLE= 
+        {
+            header:["Id","Status","Signal Name","Security","Team Leader"],
+                body:[
+                {
+                    icon:"alert-triangle",
+                    status:"No Signal",
+                    iconColor:"success",
+                    signal:"Astrid: NE Shared managed",
+                    security:"Medium",
+                    teamLeader:"Chase Nguyen",     
+                },
+                {
+                    icon:"alert-circle",
+                    status:"Online",
+                    iconColor:"primary",
+                    signal:"Phoenix: prod shared lyra-lists",
+                    security:"Minor",
+                    teamLeader:"Jeremy Lake",    
+                },
+                {
+                    icon:"alert-triangle",
+                    status:"Offline",
+                    iconColor:"danger",
+                    signal:"Cosmo: prod shared ares",
+                    security:"Huge",
+                    teamLeader:"Brie Furman",   
+                },
+                {
+                    icon:"check-circle",
+                    status:"Online",
+                    iconColor:"secondary",
+                    signal:"Astrid: NE Shared managed",
+                    security:"Medium",
+                    teamLeader:"Diane Okuma",
+                },
+            ]    
+        };
+
+
 
 //- ====== Hoverable-table json ====== -//
 - 
     var HOVERABLE_TABLE=
         {
-            header:["No","Name","Website","Company","Birthday"],
+            header:["No","Name","Website","Company","Country"],
                 body:[
                 {
                     name:"Elizabeth J. Chu",
                     website:"Medzmalls.com",
                     company:"Shabby Chic",
-                    birthday:"August 17, 1963",
+                    country:"IND",
                 },
                 {
                     name:"Dana A. Gibson",
                     website:"Viscongroup.com",
                     company:"Country Club Markets",
-                    birthday:"May 6, 1991",    
+                    country:"US",    
                 },
                 {
                     name:"Ann G. Wilson",
                     website:"Inarayhutton.com",
                     company:"Exact Realty",
-                    birthday:"October 20, 1956",   
+                    country:"UK",   
                 },
                 {
                     name:"Tanya M. Young",
                     website:"loyogame.com",
                     company:"Opti-Tek",
-                    birthday:"April 30, 1944",
+                    country:"IRN",
                 },
             ]    
         };
@@ -569,7 +645,7 @@
 -
     var ACTIVE_TABLE= 
         {
-            header:["","User Name","Status","Role","Salary","Start Date"],
+            header:["#","User Name","Status","Role","Salary","Team Leader"],
                 body:[
                 {
                     userName:"Wiliand",
@@ -578,7 +654,7 @@
                     role:"Technical Author",
                     salary:"danger",
                     salaryContent:"$234,100", 
-                    startDate:"July 18, 2011" ,    
+                    teamLeader:"Jeremy Lake" ,    
                 },
                 {
                     userName:"Thablooks",
@@ -587,7 +663,7 @@
                     role:"Account manager",
                     salary:"success",
                     salaryContent:"$356,100",
-                    startDate:"Apr 12, 2014",    
+                    teamLeader:"Meryl Streep",    
                 },
                 {
                     userName:"Manyboice",
@@ -596,7 +672,7 @@
                     role:"Associate Developer",
                     salary:"danger", 
                     salaryContent:"$154,284",
-                    startDate:"January 01, 2016",  
+                    teamLeader:"Stiphen Deo",  
                 },
                 {
                     userName:"Stooul",
@@ -605,7 +681,7 @@
                     role:"Junior Technical Author",
                     salary:"danger",
                     salaryContent:"$296,100",
-                    startDate:"January 01, 2016",
+                    teamLeader:"Diane Okuma",
                 },
             ]    
         };
@@ -614,27 +690,31 @@
 -
     var BORDERED_TABLE=
         {
-            header:["No","Name","Job","Color"],
+            header:["No","Dessert","Calories","Fat", "Price"],
                 body:[
                 {
-                    name:"Erik M. Pate",
-                    job:"The Bird",
-                    favoriteColor:"Blue",     
+                    dessert:"KitKat",
+                    calories:"518",
+                    fat:"26",     
+                    price:"20"
                 },     
                 {
-                    name:"Larry K. Wyatt",
-                    job:"Ottandy",
-                    favoriteColor:"Purple",    
+                    dessert:"Donut",
+                    calories:"425",
+                    fat:"25",    
+                    price:"80"
                 },
                 {
-                    name:"Patti J. Cortez",
-                    job:"Orton",
-                    favoriteColor:"Green",    
+                    dessert:"Eclair",
+                    calories:"245",
+                    fat:"16",    
+                    price:"10"
                 },
                 {
-                    name:"Teena C. Marshall",
-                    job:"Deo",
-                    favoriteColor:"Red",
+                    dessert:"Cookies",
+                    calories:"75",
+                    fat:"4.5",
+                    price:"20"
                 },
             ]    
         };
@@ -643,37 +723,37 @@
 -
     var COLORS_TABLE=
         {
-            header:["No","Customer","Date","Invoice","Website"],
+            header:["No","Employee Name","Date","Status","Performance"],
                 body:[
                 {
-                    customer:"Brian A. Lenz",
+                    employee:"Brian A. Lenz",
                     date:"Nov 21, 2021",
-                    invoice:"Blue",
-                    website:"Scoreboard.com", 
+                    status:"On leave",
+                    performance:"29/30", 
                 },     
                 {
-                    customer:"Maggie E. Pope",
+                    employee:"Maggie E. Pope",
                     date:"Nov 15, 2021",
-                    invoice:"Purple",
-                    website:"Miestate.com",    
+                    status:"Present",
+                    performance:"27/30",    
                 },
                 {
-                    customer:"Jarvis F. Knowles",
+                    employee:"Jarvis F. Knowles",
                     date:"Nov 1, 2021", 
-                    invoice:"green",  
-                    website:"Theclick.com",
+                    status:"On leave",  
+                    performance:"26/30",
                 },
                 {
-                    customer:"Jennifer D. Levine",
+                    employee:"Jennifer D. Levine",
                     date:"Nov 9, 2021",
-                    invoice:"Red",
-                    website:"Naturepp.com",
+                    status:"On leave",
+                    performance:"29/30",
                 },
                 {
-                    customer:"William C. Neilson",
+                    employee:"William C. Neilson",
                     date:"Nov 9, 2021",
-                    invoice:"Yellow",
-                    website:"Naturepp.com",
+                    status:"Present",
+                    performance:"28/30",
                 },
             ]    
         };

@@ -4,31 +4,31 @@
 //- =====================
 
 mixin setting-btn(dropdownData)
-   div.dropdown.on-hover-show
-      button(class="flex rounded-full items-center justify-center p-[5px] bg-gray-light") 
-         +SVG_ICON("Setting","w-[18px] h-[18px] stroke-title")   
-      div.dropdown-menu
-         ul
-            each option in dropdownData 
-               li
-                  a(href="javascript:void(0)")= option 
+  div.dropdown.on-hover-show
+    button(class="flex rounded-full items-center justify-center p-[5px] bg-gray-light dark:bg-sidebar-dark2") 
+      +SVG_ICON("Setting","w-[18px] h-[18px] stroke-title")   
+    div.dropdown-menu
+      ul
+        each option in dropdownData 
+          li
+            a(href="javascript:void(0)")= option 
 
 mixin card-header(title,type,dropdownData,subTitle)
-   div.flex.justify-between.w-full(class=`flex-wrap gap-2 ${subTitle ? "items-start" :"items-center"}`)
-      if(subTitle)
-         div
-            h3(class="text-lg font-bold text-title leading-none")= title
-            h4(class="text-base 4xl:text-xs text-content font-normal")= subTitle
-      else    
-         h3(class="text-lg font-bold text-title leading-none")= title
-      if(type === "select")
-         div.custom-select.select-style-1 
-            select(class="capitalize")
-               each option in dropdownData
-                  option= option  
-      if(type === "setting")
-         +setting-btn(dropdownData) 
-      if(type === "btn-group")
-         div.flex
-            each data, index in dropdownData
-               button.py-2.px-3.text-3xs.font-semibold.rounded-none(class=`${dropdownData.length - 1 === index ? "text-white bg-primary" : "text-title bg-gray-light"} hover:bg-primary hover:text-white focus:text-white focus:bg-primary`)= data
+  div.flex.justify-between.w-full(class=`flex-wrap gap-2 ${subTitle ? "items-start" :"items-center"}`)
+    if(subTitle)
+      div
+        h3(class="text-lg font-bold text-title leading-none")= title
+        h4(class="text-base 4xl:text-xs text-content font-normal")= subTitle
+    else    
+      h3(class="text-lg font-bold text-title leading-none")= title
+    if(type === "select")
+      div.custom-select.select-style-1 
+        select(class="capitalize")
+          each option in dropdownData
+            option= option  
+    if(type === "setting")
+      +setting-btn(dropdownData) 
+    if(type === "btn-group") 
+      div.flex
+        each data, index in dropdownData
+          button.py-2.px-3.text-3xs.font-semibold.rounded-none(class=`${dropdownData.length - 1 === index ? "text-white bg-primary" : "text-title bg-gray-light dark:bg-sidebar-dark2 dark:border-border-dark "} hover:bg-primary hover:text-white dark:hover:bg-primary  dark:focus:bg-primary focus:text-white focus:bg-primary `)= data

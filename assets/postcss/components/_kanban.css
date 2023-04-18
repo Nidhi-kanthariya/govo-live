@@ -4,9 +4,9 @@
     .kanban-container {
       @apply block !w-auto min-w-[866px] lg:-mx-[15px];
       .kanban-board {
-        @apply mb-8 transition-all tracking-[0.5px]  rounded-5 !w-[calc(100%_/_3_-_30px)] overflow-hidden;
+        @apply mb-[0.9375rem] transition-all tracking-[0.5px]  rounded-5 !w-[calc(100%_/_3_-_30px)] overflow-hidden;
         .kanban-board-header {
-          @apply h-auto w-auto leading-none bg-primary-light border-b border-light text-content;
+          @apply h-auto w-auto leading-none bg-primary-light border-b border-light text-content mb-0;
           .kanban-title-board {
             @apply 2xl:text-[15px]  text-sm;
           }
@@ -26,11 +26,6 @@
         footer {
           @apply m-0 p-0;
         }
-      }
-    }
-
-    &.kanab-1 {
-      .kanban-container {
       }
     }
 

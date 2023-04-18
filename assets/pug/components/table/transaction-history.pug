@@ -8,12 +8,12 @@ table.table
             th=  head
    tbody
       each bodyData in TRANSACTION_HISTORY.body
-         tr
+         tr(class="group")
             td(class="min-w-[11.125rem]") 
                div.flex.items-center(class="gap-[.5625rem]")
                   img(class="w-10 h-10 rounded-full" src=`../../assets/images/product/${bodyData.image}`, alt=`${bodyData.title}`) 
                   div
-                     h4(class="text-xs font-semibold text-title")=bodyData.title
+                     h4(class="text-xs font-semibold text-title group-hover:text-primary")=bodyData.title
                      span(class="block mt-1 font-semibold text-2xs text-content")=bodyData.subTitle  
 
             td(class="min-w-[7.5rem]") 

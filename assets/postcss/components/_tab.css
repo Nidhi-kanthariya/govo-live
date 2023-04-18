@@ -16,7 +16,7 @@
       @apply rounded-3xl py-[0.3rem] px-[0.5rem];
 
       &.tab-active {
-        @apply bg-info text-white;
+        @apply bg-info dark:bg-info text-white;
       }
     }
   }
@@ -27,7 +27,7 @@
     .tab {
       @apply flex flex-col gap-1 justify-center items-center;
       &.tabs-bordered {
-        @apply transition-all border-b border-border-light py-2 px-3;
+        @apply transition-all border-b border-border-light dark:border-border-dark dark:border-b py-2 px-3;
 
         &.tab-active {
           @apply border-b-2 border-primary text-primary;
@@ -72,7 +72,7 @@
       }
 
       &.tabs-vertical {
-        @apply transition-all border-r border-border-light p-2 sm:border-r-0 sm:border-b;
+        @apply transition-all border-r border-border-light dark:border-border-dark dark:border-r p-2 sm:border-r-0 sm:border-b;
 
         &.tab-active {
           @apply border-r-2 border-primary text-primary sm:border-r-0 sm:border-b-2;
@@ -80,7 +80,7 @@
       }
 
       &.product-tab {
-        @apply bg-primary-light border-none text-title items-center flex gap-2 flex-row p-4;
+        @apply bg-primary-light border-none text-title items-center flex gap-2 flex-row p-4 dark:text-white;
         svg {
           @apply p-2 bg-primary rounded-full text-white w-4 h-4;
         }

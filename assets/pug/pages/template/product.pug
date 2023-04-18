@@ -31,159 +31,159 @@ include ../../mixin/mixin
 
 doctype html
 html(lang='en')
-   include ../../layout/header-files
-   body(dir="ltr" class="unique-skin")
-      main.page-wrapper
-         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
-            include ../../layout/header/header     
-            // Sidebar Start 
-            div.page-sidebar.sidebar-dark.unique-sidebar
-               include ../../layout/unique 
-            // Sidebar End 
+  include ../../layout/header-files
+  body(dir="ltr" class="unique-skin")
+    main.page-wrapper
+      div.page-body-wrapper(class="xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+        include ../../layout/header/header     
+        // Sidebar Start 
+        div.page-sidebar.sidebar-dark.unique-sidebar
+          include ../../layout/unique 
+        // Sidebar End 
 
-            // Page Body Start
-            div.page-body 
-               div.grid.grid-cols-12.card.product-detail.relative.gap-card-gap 
-                  div.col-span-4(class="xl:col-span-5 md:col-span-12")
-                     div.product-slider.sticky.top-0
-                        div.swiper.productImgNav
-                           div.swiper-wrapper
-                              div.swiper-slide
-                                 img(src="../../assets/images/ecommerce/22.jpg" alt="product")
-                              div.swiper-slide
-                                 img(src="../../assets/images/ecommerce/23.jpg" alt="product")
-                              div.swiper-slide
-                                 img(src="../../assets/images/ecommerce/24.jpg" alt="product")
-                              div.swiper-slide
-                                 img(src="../../assets/images/ecommerce/25.jpg" alt="product")
-                              div.swiper-slide
-                                 img(src="../../assets/images/ecommerce/26.jpg" alt="product")
-                           div.swiper-button-next(class="text-primary")
-                           div.swiper-button-prev(class="text-primary")
-                        div.swiper.productImg( class="mt-4 md:mt-3")
-                           div.swiper-wrapper
-                              div.swiper-slide
-                                 img(src="../../assets/images/ecommerce/22.jpg" alt="product")
-                              div.swiper-slide
-                                 img(src="../../assets/images/ecommerce/23.jpg" alt="product")
-                              div.swiper-slide
-                                 img(src="../../assets/images/ecommerce/24.jpg" alt="product")
-                              div.swiper-slide
-                                 img(src="../../assets/images/ecommerce/25.jpg" alt="product")
-                              div.swiper-slide
-                                 img(src="../../assets/images/ecommerce/26.jpg" alt="product")
-                  div.col-span-8(class="xl:col-span-7 md:col-span-12")
-                     div 
-                        div.flex.items-center.gap-2.justify-between
-                           h3.leading-none(class="font-semibold 3xl:flex 3xl:justify-between 3xl:items-center text-title mb-3") Women's Latest Bags Collections
-                           a(href="add-product.html" class="btn bg-gray-light p-2")
-                              i(data-feather="plus" class="w-4 h-4 stroke-title")
-                        div.flex.items-center.gap-3.mb-3.flex-wrap
-                           span.text-content3.text-xs.leading-none(class="border-r border-border-light rtl:border-r-0 rtl:border-l rtl:pr-unset rtl:pl-3 pr-3") #15704 
-                           p.text-title.text-xs.leading-none.font-semibold(class="border-r border-border-light rtl:border-r-0 rtl:border-l rtl:pr-unset rtl:pl-3 pr-3") 
-                              span.text-content3.text-xs.leading-none Seller: 
-                              | Backy Fashion              
-                           p.text-title.text-xs.leading-none.font-semibold
-                              span.text-content3.text-xs.leading-none Available: 
-                              | In Stock
-                        div.flex.items-center.gap-2.mb-4
-                           div.flex.items-center.gap-0
-                              i(data-feather="star" class="w-4 h-4 fill-warning stroke-transparent")
-                              i(data-feather="star" class="w-4 h-4 fill-warning stroke-transparent")
-                              i(data-feather="star" class="w-4 h-4 fill-warning stroke-transparent")
-                              i(data-feather="star" class="w-4 h-4 fill-warning stroke-transparent")
-                              i(data-feather="star" class="w-4 h-4 fill-content stroke-transparent")
-                           label(for="4above").text-content3.text-xs.font-semibold 1059 ratings
-                        h4(class="font-semibold text-title lg:text-lg my-2") $500 
-                           del(class="text-danger") $350 
-                        div.divider.w-full.my-4(class="before:!bg-border-light after:!bg-border-light 2lg:my-3")
-                        div.grid.grid-cols-12.gap-card-gap.items-center 
-                           div.col-span-6(class="lg:col-span-12 md:col-span-6 sm:col-span-12")
-                              div.flex.items-center.gap-3
-                                 label.text-title.text-sm.font-medium(for="size") Sizes   
-                                 ul.flex.items-center.gap-2
-                                    li.border.border-border-light.rounded-full.text-title.leading-none.w-8.h-8.flex.items-center.justify-center(class="hover:bg-gray-extralight") S 
-                                    li.btn-active.text-title.leading-none.w-8.h-8.flex.items-center.justify-center.border.border-border-light.bg-gray-extralight.rounded-full(class="hover:bg-gray-extralight") M
-                                    li.border.border-border-light.rounded-full.text-title.leading-none.w-8.h-8.flex.items-center.justify-center(class="hover:bg-gray-extralight") L
-                                    li.border.border-border-light.rounded-full.text-title.leading-none.w-8.h-8.flex.items-center.justify-center(class="hover:bg-gray-extralight") XL
-                           div.col-span-6(class="lg:col-span-12 md:col-span-6 sm:col-span-12")
-                              div.flex.items-center.gap-3
-                                 label.text-title.text-sm.font-medium(for="color") Color
-                                 ul(class="flex flex-wrap gap-2 items-center" id="color")
-                                    li(class="w-6 h-6 bg-light rounded-full cursor-pointer")
-                                    li(class="w-6 h-6 bg-black rounded-full cursor-pointer")
-                                    li(class="w-6 h-6 bg-warning rounded-full cursor-pointer")
-                                    li(class="w-6 h-6 bg-danger rounded-full cursor-pointer")
-                                    li(class="w-6 h-6 bg-info rounded-full cursor-pointer")
-                        div.divider.w-full.my-4(class="before:!bg-border-light after:!bg-border-light 2lg:my-3")      
-                        div
-                           h6.text-title.font-medium Description: 
-                           p.text-content3.text-sm.mt-2.line-clamp-2 A bag that holds your entire universe! A tote bag is a shoulder bag with parallel handles that might have side panels or not. The exterior is beige and has one main compartment, three total pockets, and a zippered clasp. I use excellent, cruelty-free materials.
-                        div.divider.w-full.my-4(class="before:!bg-border-light after:!bg-border-light 2lg:my-3")
-                        div 
-                           h6.text-title.font-medium Product Description:
-                           div.w-full.tabs.flex-col.mt-2
-                              div.tab-links.flex.items-center(class="mb-[1px]")
-                                 button.tab.tabs-bordered.danger-border.text-xs.tab-active(data-tabFilter="1" class="tab-link") Specification 
-                                 button.tab.tabs-bordered.danger-border.text-xs(data-tabFilter="2" class="tab-link") Detail
-                                 button.tab.tabs-bordered.danger-border.text-xs(data-tabFilter="3" class="tab-link") Review
-                              div.tabs-content
-                                 div(data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5 border border-border-light !p-4")
-                                    div.overflow-auto.custom-scroll  
-                                       include ../../components/table/product-detail-table
-                                 div(data-tabContent="2" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border border-border-light !p-4")
-                                    p.text-base.text-title.font-semibold.mb-3 Backy Fashion Women's Leather Bags
-                                    p.text-content3.text-sm A bag that holds your entire universe! A tote bag is a shoulder bag with parallel handles that might have side panels or not. The exterior is beige and has one main compartment, three total pockets, and a zippered clasp. I use excellent, cruelty-free materials.
-                                    ul(class="list-disc mt-3 pl-5") 
-                                       li.text-xs.font-medium.text-content3 Main zip compartment
-                                       li.text-xs.font-medium.text-content3 3 total number of pocket
-                                       li.text-xs.font-medium.text-content3 Made in India 
-                                       li.text-xs.font-medium.text-content3 Leading fashion brand since 30 years
-                                       li.text-xs.font-medium.text-content3 6 months warranty
-                                 div(data-tabContent="3" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border border-border-light !p-4")
-                                    div.flex.flex-col.gap-0
-                                       div.flex.flex-col.gap-3.p-3(class="first:border-b first:border-border-light first:border-dashed last:border-none")
-                                          div.flex.items-center.justify-between.gap-2
-                                             div.flex.items-center.gap-0
-                                                i(data-feather="star" class="w-4 h-4 fill-warning stroke-transparent")
-                                                i(data-feather="star" class="w-4 h-4 fill-warning stroke-transparent")
-                                                i(data-feather="star" class="w-4 h-4 fill-warning stroke-transparent")
-                                                i(data-feather="star" class="w-4 h-4 fill-warning stroke-transparent")
-                                                i(data-feather="star" class="w-4 h-4 fill-content stroke-transparent")
-                                             span.text-xs.text-content3.font-medium 06 Feb, 2023 
-                                          div.text-content3.text-sm.flex.flex-col.gap-2
-                                             p Excellent for the price, the product quality and appearance are fantastic.
-                                          div.flex.items-center.gap-2
-                                             img(class="w-10 h-10 rounded-full" src="../../assets/images/avatar/2.jpg" alt="") 
-                                             div
-                                                h4(class="text-xs font-semibold text-title") Kitten
-                                                span(class="block mt-1 font-semibold text-2xs text-content") California, US
-                                       div.flex.flex-col.gap-3.p-3(class="first:border-b first:border-border-light first:border-dashed last:border-none")
-                                          div.flex.items-center.justify-between.gap-2
-                                             div.flex.items-center.gap-0
-                                                i(data-feather="star" class="w-4 h-4 fill-warning stroke-transparent")
-                                                i(data-feather="star" class="w-4 h-4 fill-warning stroke-transparent")
-                                                i(data-feather="star" class="w-4 h-4 fill-warning stroke-transparent")
-                                                i(data-feather="star" class="w-4 h-4 fill-warning stroke-transparent")
-                                                i(data-feather="star" class="w-4 h-4 fill-warning stroke-transparent")
-                                             span.text-xs.text-content3.font-medium 24 Jan, 2023 
-                                          div.text-content3.text-sm.flex.flex-col.gap-2
-                                             p Good product, I am so happy.
-                                          div.flex.items-center.gap-2
-                                             img(class="w-10 h-10 rounded-full" src="../../assets/images/avatar/4.jpg" alt="") 
-                                             div
-                                                h4(class="text-xs font-semibold text-title") Mary John
-                                                span(class="block mt-1 font-semibold text-2xs text-content") British Columbia, Canada
-                        div.flex.flex-wrap.gap-2.items-center.capitalize(class="2lg:gap-1 mt-3") 
-                           a(href="cart.html").btn.btn-primary.text-white.text-sm(class="lg:px-2 lg:text-xs py-2") Add to cart         
-                           a(href="wishlist.html").btn.btn-secondary.text-white.text-sm(class="lg:px-2 lg:text-xs py-2") Add to wishlist         
-                           a(href="checkout.html").btn.btn-warning.text-white.text-sm(class="lg:px-2 lg:text-xs py-2") Buy it now   
+        // Page Body Start
+        div.page-body 
+          div.grid.grid-cols-12.card.product-detail.relative.gap-card-gap 
+            div.col-span-4(class="xl:col-span-5 md:col-span-12")
+              div.product-slider.sticky.top-0
+                div.swiper.productImgNav
+                  div.swiper-wrapper 
+                    div.swiper-slide
+                      img(src="../../assets/images/ecommerce/22.jpg" alt="product")
+                    div.swiper-slide
+                      img(src="../../assets/images/ecommerce/23.jpg" alt="product")
+                    div.swiper-slide
+                      img(src="../../assets/images/ecommerce/24.jpg" alt="product")
+                    div.swiper-slide
+                      img(src="../../assets/images/ecommerce/25.jpg" alt="product")
+                    div.swiper-slide
+                      img(src="../../assets/images/ecommerce/26.jpg" alt="product")
+                  div.swiper-button-next(class="text-primary")
+                  div.swiper-button-prev(class="text-primary")
+                div.swiper.productImg( class="mt-4 md:mt-3")
+                  div.swiper-wrapper
+                    div.swiper-slide
+                      img(src="../../assets/images/ecommerce/22.jpg" alt="product")
+                    div.swiper-slide
+                      img(src="../../assets/images/ecommerce/23.jpg" alt="product")
+                    div.swiper-slide
+                      img(src="../../assets/images/ecommerce/24.jpg" alt="product")
+                    div.swiper-slide
+                      img(src="../../assets/images/ecommerce/25.jpg" alt="product")
+                    div.swiper-slide
+                      img(src="../../assets/images/ecommerce/26.jpg" alt="product")
+            div.col-span-8(class="xl:col-span-7 md:col-span-12")
+              div 
+                div.flex.items-center.gap-2.justify-between
+                  h3.leading-none(class="mb-3 font-semibold 3xl:flex 3xl:justify-between 3xl:items-center text-title sm:text-base") Women's Latest Bags Collections
+                  a(href="add-product.html" class="p-2 btn hover:dark:bg-sidebar-dark2 hover:bg-gray-light")
+                    i(data-feather="plus" class="w-4 h-4 scale-100 stroke-title")
+                div.flex.items-center.gap-3.mb-3.flex-wrap
+                  span.text-content3.text-xs.leading-none(class="pr-3 border-r border-border-light rtl:border-r-0 rtl:border-l rtl:pr-unset rtl:pl-3") #15704 
+                  p.text-title.text-xs.leading-none.font-semibold(class="pr-3 border-r border-border-light rtl:border-r-0 rtl:border-l rtl:pr-unset rtl:pl-3") 
+                    span.text-content3.text-xs.leading-none Seller: 
+                    | Backy Fashion
+                  p.text-title.text-xs.leading-none.font-semibold
+                    span.text-content3.text-xs.leading-none Available: 
+                    | In Stock
+                div.flex.items-center.gap-2.mb-4
+                  div.flex.items-center.gap-0
+                    i(data-feather="star" class="w-4 h-4 fill-warning stroke-transparent")
+                    i(data-feather="star" class="w-4 h-4 fill-warning stroke-transparent")
+                    i(data-feather="star" class="w-4 h-4 fill-warning stroke-transparent")
+                    i(data-feather="star" class="w-4 h-4 fill-warning stroke-transparent")
+                    i(data-feather="star" class="w-4 h-4 fill-content stroke-transparent")
+                  label(for="4above").text-content3.text-xs.font-semibold 1059 ratings
+                h4(class="my-2 font-semibold text-title lg:text-lg") $500 
+                  del(class="text-danger") $350 
+                div(class="divider my-4 w-full bg-gray-light dark:bg-sidebar-dark 2lg:my-3")
+                div.grid.grid-cols-12.gap-card-gap.items-center
+                  div.col-span-6(class="lg:col-span-12 md:col-span-6 sm:col-span-12")
+                    div.flex.items-center.gap-3
+                      label.text-title.text-sm.font-medium(for="size") Sizes   
+                      ul.flex.items-center.gap-2 
+                        li.border.border-border-light.rounded-full.text-title.leading-none.w-8.h-8.flex.items-center.justify-center(class="hover:bg-gray-extralight dark:border-border-dark dark:hover:bg-sidebar-dark2") S 
+                        li.btn-active.text-title.leading-none.w-8.h-8.flex.items-center.justify-center.border.border-border-light.bg-gray-extralight.rounded-full(class="hover:bg-gray-extralight dark:border-border-dark dark:hover:bg-sidebar-dark2 dark:bg-sidebar-dark2") M
+                        li.border.border-border-light.rounded-full.text-title.leading-none.w-8.h-8.flex.items-center.justify-center(class="hover:bg-gray-extralight dark:border-border-dark dark:hover:bg-sidebar-dark2") L
+                        li.border.border-border-light.rounded-full.text-title.leading-none.w-8.h-8.flex.items-center.justify-center(class="hover:bg-gray-extralight dark:border-border-dark dark:hover:bg-sidebar-dark2") XL
+                  div.col-span-6(class="lg:col-span-12 md:col-span-6 sm:col-span-12")
+                    div.flex.items-center.gap-3 
+                      label.text-title.text-sm.font-medium(for="color") Color
+                      ul(class="flex flex-wrap items-center gap-2" id="color")
+                        li(class="w-6 h-6 rounded-full cursor-pointer bg-light")
+                        li(class="w-6 h-6 bg-black rounded-full cursor-pointer")
+                        li(class="w-6 h-6 rounded-full cursor-pointer bg-warning")
+                        li(class="w-6 h-6 rounded-full cursor-pointer bg-danger")
+                        li(class="w-6 h-6 rounded-full cursor-pointer bg-info") 
+                div(class="divider my-4 w-full bg-gray-light dark:bg-sidebar-dark 2lg:my-3")      
+                div
+                  h6.text-title.font-medium Description: 
+                  p.text-content3.text-sm.mt-2.line-clamp-2 A bag that holds your entire universe! A tote bag is a shoulder bag with parallel handles that might have side panels or not. The exterior is beige and has one main compartment, three total pockets, and a zippered clasp. I use excellent, cruelty-free materials.
+                div(class="divider my-4 w-full bg-gray-light dark:bg-sidebar-dark 2lg:my-3")
+                div  
+                  h6.text-title.font-medium Product Description:
+                  div.w-full.tabs.flex-col.mt-2
+                    div.tab-links.flex.items-center(class="mb-[1px]")
+                      button.tab.tabs-bordered.danger-border.text-xs.tab-active(data-tabFilter="1" class="tab-link") Specification 
+                      button.tab.tabs-bordered.danger-border.text-xs(data-tabFilter="2" class="tab-link") Detail
+                      button.tab.tabs-bordered.danger-border.text-xs(data-tabFilter="3" class="tab-link") Review
+                    div.tabs-content
+                      div(data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5 border border-border-light dark:border-border-dark !p-4")
+                        div.overflow-auto.custom-scroll  
+                          include ../../components/table/product-detail-table
+                      div(data-tabContent="2" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border border-border-light dark:border-border-dark !p-4")
+                        p.text-base.text-title.font-semibold.mb-3 Backy Fashion Women's Leather Bags
+                        p.text-content3.text-sm A bag that holds your entire universe! A tote bag is a shoulder bag with parallel handles that might have side panels or not. The exterior is beige and has one main compartment, three total pockets, and a zippered clasp. I use excellent, cruelty-free materials.
+                        ul(class="pl-5 mt-3 list-disc") 
+                          li.text-xs.font-medium.text-content3 Main zip compartment
+                          li.text-xs.font-medium.text-content3 3 total number of pocket
+                          li.text-xs.font-medium.text-content3 Made in India 
+                          li.text-xs.font-medium.text-content3 Leading fashion brand since 30 years
+                          li.text-xs.font-medium.text-content3 6 months warranty
+                      div(data-tabContent="3" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border border-border-light dark:border-border-dark !p-4")
+                        div.flex.flex-col.gap-0
+                          div.flex.flex-col.gap-3.p-3(class="first:border-b last:pb-0 first:border-border-light dark:border-border-dark first:border-dashed last:border-none")
+                            div.flex.items-center.justify-between.gap-2
+                              div.flex.items-center.gap-0
+                                i(data-feather="star" class="w-4 h-4 fill-warning stroke-transparent")
+                                i(data-feather="star" class="w-4 h-4 fill-warning stroke-transparent")
+                                i(data-feather="star" class="w-4 h-4 fill-warning stroke-transparent")
+                                i(data-feather="star" class="w-4 h-4 fill-warning stroke-transparent")
+                                i(data-feather="star" class="w-4 h-4 fill-content stroke-transparent")
+                              span.text-xs.text-content3.font-medium 06 Feb, 2023 
+                            div.text-content3.text-sm.flex.flex-col.gap-2
+                              p Excellent for the price, the product quality and appearance are fantastic.
+                            div.flex.items-center.gap-2
+                              img(class="w-10 h-10 rounded-full" src="../../assets/images/avatar/2.jpg" alt="") 
+                              div
+                                h4(class="text-xs font-semibold text-title") Kitten
+                                span(class="block mt-1 font-semibold text-2xs text-content") California, US
+                          div.flex.flex-col.gap-3.p-3(class="first:border-b last:pb-0 first:border-border-light dark:border-border-dark first:border-dashed last:border-none")
+                            div.flex.items-center.justify-between.gap-2
+                              div.flex.items-center.gap-0
+                                i(data-feather="star" class="w-4 h-4 fill-warning stroke-transparent")
+                                i(data-feather="star" class="w-4 h-4 fill-warning stroke-transparent")
+                                i(data-feather="star" class="w-4 h-4 fill-warning stroke-transparent")
+                                i(data-feather="star" class="w-4 h-4 fill-warning stroke-transparent")
+                                i(data-feather="star" class="w-4 h-4 fill-warning stroke-transparent")
+                              span.text-xs.text-content3.font-medium 24 Jan, 2023 
+                            div.text-content3.text-sm.flex.flex-col.gap-2
+                              p Good product, I am so happy.
+                            div.flex.items-center.gap-2
+                              img(class="w-10 h-10 rounded-full" src="../../assets/images/avatar/4.jpg" alt="") 
+                              div
+                                h4(class="text-xs font-semibold text-title") Mary John
+                                span(class="block mt-1 font-semibold text-2xs text-content") British Columbia, Canada
+                div.flex.flex-wrap.gap-2.items-center.capitalize(class="mt-3 2lg:gap-1") 
+                  a(href="cart.html").btn.btn-primary.text-white.text-sm(class="py-2 lg:px-2 lg:text-xs") Add to cart         
+                  a(href="wishlist.html").btn.btn-secondary.text-white.text-sm(class="py-2 lg:px-2 lg:text-xs") Add to wishlist         
+                  a(href="checkout.html").btn.btn-warning.text-white.text-sm(class="py-2 lg:px-2 lg:text-xs") Buy it now   
 
 
-            // Page Body End  
-            +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
-         include ../../components/customizer 
-   include ../../layout/footer-files
+        // Page Body End  
+        +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+      include ../../components/customizer 
+  include ../../layout/footer-files
 
 
 

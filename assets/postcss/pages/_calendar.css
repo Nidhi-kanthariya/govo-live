@@ -2,115 +2,170 @@
     Calendar CSS
  ==========================*/
 @layer components {
-    .calander-main {
-        @apply h-full;
-        .calander-sidebar{
-            @apply left-unset w-[14.375rem] mb-7 lg:w-full;
-        }
-        
-        .calander-body{
-            @apply rtl:pl-unset rtl:pr-[15.5625rem] lg:pr-0;
-            .fc {
-                @apply h-full;
-                .fc-button-primary, 
-                .fc-button-primary:hover,
-                .fc-button-primary:focus{
-                    @apply bg-transparent border-0 shadow-none;
-                }
-                .fc-daygrid-day{
-                    &.fc-day-today, 
-                    &.fc-day-past{
-                        @apply bg-transparent;
-                    }
-                }
-            
-                .fc-header-toolbar{
-                    @apply border-b border-border-light pb-4;
-                    .fc-toolbar-chunk{
-                        .fc-button-group{
-                            &:first-child{
-                                .fc-button-primary{
-                                @apply bg-none border-none text-title; 
-                                
-                                span{
-                                    @apply border-2 border-gray-light rounded-full p-3 grid place-content-center text-lg;
-                                }
-                            }
-                            }
-                        }
-                        .fc-today-button{
-                            @apply bg-primary text-white border-none rounded-none capitalize opacity-100;
-                        }
-                        .fc-button-group{
-                            &:last-child{
-                                .fc-button-primary{
-                                    @apply capitalize border rounded-none border-solid border-gray-light text-xs text-title;
-                                    &.fc-button-active{
-                                        @apply bg-gray-light;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
+  .calander-main {
+    @apply h-full;
 
-                .fc-view-harness{
-                    .fc-daygrid{
-                        table{
-                            &.fc-scrollgrid{
-                                thead{
-                                    tr{
-                                        th{
-                                            .fc-scroller-harness{
-                                                table{
-                                                    thead{
-                                                        tr{
-                                                            th{
-                                                                &.fc-col-header-cell{
-                                                                    .fc-scrollgrid-sync-inner{
-                                                                        @apply p-2 sm:p-0;
-                                                                    }
-                                                                }
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-
-                                    }
-                                }
-
-                                tbody{                                    
-                                    .fc-daygrid-body-unbalanced{
-                                        .fc-daygrid-day{
-                                            &.fc-day-today{
-                                                .fc-daygrid-day-frame{
-                                                    .fc-daygrid-day-events{
-                                                        @apply bg-primary-light border-r-4 border-primary text-primary;                                                        
-                                                    }
-                                                }
-                                            }
-                                            .fc-daygrid-day-events{
-                                                .fc-h-event {
-                                                    @apply bg-danger-light border-none;
-                                                    .fc-event-main{
-                                                        @apply border-r-4 border-secondary border-solid;
-                                                        .fc-event-main-frame{
-                                                            @apply bg-secondary-extralight text-secondary border-none;
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        
+    .calander-sidebar {
+      @apply left-unset w-[14.375rem] mb-7 lg:w-full;
     }
+
+    .calander-body {
+      @apply rtl:pl-unset rtl:pr-[15.5625rem] lg:pr-0;
+
+      .fc {
+        @apply h-full;
+
+        &.fc-theme-standard {
+          td,
+          th {
+            @apply dark:border-border-dark;
+          }
+          .fc-scrollgrid {
+            @apply dark:border-border-dark;
+          }
+          .fc-list {
+            @apply dark:border-border-dark;
+          }
+        }
+        .fc-list-empty {
+          @apply dark:bg-sidebar-dark2;
+        }
+        .fc-button-primary,
+        .fc-button-primary:hover,
+        .fc-button-primary:focus {
+          @apply bg-transparent border-0 shadow-none;
+        }
+        .fc-daygrid-day {
+          @apply dark:border-border-dark;
+
+          &.fc-day-today,
+          &.fc-day-past {
+            @apply bg-transparent;
+          }
+        }
+
+        .fc-header-toolbar {
+          @apply border-b border-border-light dark:border-border-dark dark:border-b pb-4;
+
+          .fc-toolbar-chunk {
+            .fc-button-group {
+              &:first-child {
+                .fc-button-primary {
+                  @apply bg-none border-none text-title;
+
+                  span {
+                    @apply border-2 border-gray-light dark:border-border-dark rounded-full p-3 grid place-content-center text-lg;
+                  }
+                }
+              }
+            }
+
+            .fc-today-button {
+              @apply bg-primary text-white dark:text-dark border-none rounded-none capitalize opacity-100;
+            }
+
+            .fc-button-group {
+              &:last-child {
+                .fc-button-primary {
+                  @apply capitalize border rounded-none border-solid border-gray-light dark:border-border-dark text-xs text-title;
+
+                  &.fc-button-active {
+                    @apply bg-gray-light dark:bg-sidebar-dark2;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .fc-view-harness {
+          .fc-daygrid {
+            table {
+              &.fc-scrollgrid {
+                @apply dark:border-border-dark dark:border;
+                thead {
+                  tr {
+                    th {
+                      .fc-scroller-harness {
+                        table {
+                          thead {
+                            tr {
+                              th {
+                                &.fc-col-header-cell {
+                                  @apply dark:border-border-dark;
+
+                                  .fc-scrollgrid-sync-inner {
+                                    @apply p-2 sm:p-0 dark:border-border-dark;
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+
+                tbody {
+                  .fc-daygrid-body-unbalanced {
+                    .fc-daygrid-day {
+                      @apply dark:border-border-dark dark:border-solid;
+
+                      &.fc-day-today {
+                        .fc-daygrid-day-frame {
+                          @apply dark:border-border-dark dark:border-solid;
+
+                          .fc-daygrid-day-events {
+                            @apply bg-transparent border-0;
+                          }
+                        }
+                      }
+
+                      .fc-daygrid-day-events {
+                        .fc-h-event {
+                          @apply bg-secondary-extralight border-none;
+
+                          .fc-event-main {
+                            @apply border-r-4 border-secondary border-solid;
+
+                            .fc-event-main-frame {
+                              @apply bg-secondary-extralight text-secondary border-none;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .fc-timegrid-axis-cushion{
+          @apply capitalize;
+        }
+        .fc-timegrid-slot-lane, .fc-timegrid-slot-minor{
+          @apply bg-white;
+        }
+        .fc-toolbar{
+          @apply 2md:!flex 2md:flex-wrap 2md:items-center 2md:gap-3 
+        }
+        .fc-col-header-cell-cushion{
+          @apply 2md:!whitespace-normal 2md:text-3xs 2md:p-0;
+        }
+      }
+    }
+    .fc-v-event{
+      @apply bg-secondary-extralight border-l-0 border-t-0 border-b-0 border-r-4 border-secondary;
+      .fc-event-main{
+        @apply text-secondary;
+      }
+    }
+    .fc-direction-ltr {
+      .fc-timegrid-slot-label-frame{
+        @apply uppercase;
+      }
+    }
+  }
 }

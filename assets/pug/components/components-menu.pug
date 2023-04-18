@@ -1,13 +1,13 @@
 
 
 // Componant menu
-ul(class="flex flex-col gap-3") 
+ul(class="flex flex-col gap-4") 
    each menuItem in COMPONENT_MENU
       li(class=`w-full ${menuItem.menu ? "dropdown on-hover-show group" : ""}`)
-         a(href=`${menuItem.url}` class="flex items-center gap-2 justify-between")
+         a(href=`${menuItem.url}` class="flex items-center justify-between gap-2")
             span.flex.items-center.gap-2
                +SVG_ICON(`${menuItem.icon}`,"w-5 h-5 stroke-title")
-               = menuItem.title
+               small(class="text-xs leading-7")= menuItem.title
 
             if(menuItem.menu)
                +SVG_ICON("Arrow-Right-2","w-4 h-4 stroke-title ml-auto")

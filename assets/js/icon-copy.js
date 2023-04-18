@@ -7,6 +7,7 @@ iconWrapper.addEventListener('click', function (event) {
   const iconName = iconBox.querySelector('.icon-name').textContent;
   const featherPage = event.target.closest('.feather-event');
   const iconlyNotBulk = event.target.closest('.icon-not-bulk-event');
+  const fontAwesomePage = event.target.closest('.fontawesome-event');
   const iconlyBulk = event.target.closest('.icon-bulk-event');
   const iconEl = iconBox.querySelector("i[class*='iconly-']");
   const iconBulkEl = iconBox.querySelector("span[class*='iconlyBulk-']");
@@ -14,10 +15,17 @@ iconWrapper.addEventListener('click', function (event) {
   const preCodeBulk = iconBulkCode?.replaceAll('<', '&lt;').replaceAll('>', '&gt;');
   const iconClass = iconEl?.classList.contains('icli') ? 'icli' : iconEl?.classList.contains('icbo') ? 'icbo' : '';
 
+  const fontAwesomeHtml = `<div class=" flex items-center justify-center rounded-5"> <i class="${iconName}"></i></div>
+              <div class="relative bg-white2-light copyParent  rounded-5 ">
+                 <button class="btn copyBtn border-border-light !top-4 !right-[10px] dark:text-white dark:bg-sidebar-dark dark:hover:bg-sidebar-dark dark:hover:text-white"> <i data-feather="clipboard"></i></button>
+                  <pre class="language-html !whitespace-pre-wrap custom-scroll overflow-auto dark:bg-sidebar-dark2"> <code>&lt;i class="${iconName}"&gt;&lt;/i&gt; </code></pre>
+               </div>
+            </div> `;
+
   const featherHtml = `<div class=" flex items-center justify-center rounded-5"> <i class="w-7 h-7 stroke-title" data-feather=${iconName}></i></div>
               <div class="relative bg-white2-light copyParent  rounded-5 ">
-                 <button class="btn copyBtn border-border-light !top-4 !right-[10px]"> <i data-feather="clipboard"></i></button>
-                  <pre class="language-html !whitespace-pre-wrap custom-scroll overflow-auto"> <code>&lt;i data-feather="${iconName}"&gt;&lt;/i&gt; </code></pre>
+                 <button class="btn copyBtn border-border-light !top-4 !right-[10px] dark:text-white dark:bg-sidebar-dark dark:hover:bg-sidebar-dark dark:hover:text-white"> <i data-feather="clipboard"></i></button>
+                  <pre class="language-html !whitespace-pre-wrap custom-scroll overflow-auto dark:bg-sidebar-dark2"> <code>&lt;i data-feather="${iconName}"&gt;&lt;/i&gt; </code></pre>
                </div>
             </div> `;
 
@@ -29,8 +37,8 @@ iconWrapper.addEventListener('click', function (event) {
               
              </div>
               <div class="relative bg-white2-light copyParent w-full overflow-auto rounded-5">
-                 <button class="btn copyBtn border-border-light !top-4 ! !right-[10px]"> <i data-feather="clipboard"></i></button>
-                  <pre class="language-html !whitespace-pre-wrap custom-scroll overflow-auto"><code>&lt;svg class="w-6 h-6 stroke-title"&gt;
+                 <button class="btn copyBtn border-border-light !top-4 ! !right-[10px]  dark:text-white dark:bg-sidebar-dark dark:hover:bg-sidebar-dark dark:hover:text-white"> <i data-feather="clipboard"></i></button>
+                  <pre class="language-html !whitespace-pre-wrap custom-scroll overflow-auto  dark:bg-sidebar-dark2"><code>&lt;svg class="w-6 h-6 stroke-title"&gt;
   &lt;use href="../../assets/images/icons/sprite.svg#${iconName}" &gt;&lt;/use&gt;
 &lt;/svg&gt;</code></pre>
                </div>
@@ -39,8 +47,8 @@ iconWrapper.addEventListener('click', function (event) {
   const iconlyBulkHtml = `
             <div class="p-3 flex items-center justify-center rounded-5 border border-border-light"> ${iconBulkCode}</div>
               <div class="w-full overflow-auto relative bg-white2-light p-[16px] copyParent  rounded-5 border border-border-light">
-                 <button class="btn copyBtn border-border-light !top-4 !right-[10px]"> <i data-feather="clipboard"></i></button>
-                  <pre class="language-html !whitespace-pre-wrap custom-scroll overflow-auto"> <code>${preCodeBulk}</code></pre>
+                 <button class="btn copyBtn border-border-light !top-4 !right-[10px]  dark:text-white dark:bg-sidebar-dark dark:hover:bg-sidebar-dark dark:hover:text-white "> <i data-feather="clipboard"></i></button>
+                  <pre class="language-html !whitespace-pre-wrap custom-scroll overflow-auto  dark:bg-sidebar-dark2"> <code>${preCodeBulk}</code></pre>
                </div>
             </div> 
         `;
@@ -48,13 +56,14 @@ iconWrapper.addEventListener('click', function (event) {
   const html = `<div class="copy-box-wrapper z-10 fixed inset-0 flex items-center justify-center">
          <a class="fixed overlay-close inset-0 z-10 bg-black opacity-25" href="javascript:void(0)"></a>
           <div class="icon-modal z-20 relative group max-w-[50%] lg:max-w-[80%] sm:max-w-[90%]">
-            <div class="shadow-2xl bg-white dark:bg-mode-300 flex flex-col rounded-5 items-center gap-3  p-5 relative">
-            <span class="close-btn border-border-light absolute -top-3 -right-3 rtl:left-[-10px] rtl:right-unset flex items-center justify-center p-1 border shadow-md  rounded-full bg-white dark:bg-mode-200 ">
+            <div class="shadow-2xl bg-white dark:bg-mode-300 flex flex-col rounded-5 items-center gap-3  p-5 relative dark:bg-sidebar-dark">
+            <span class="close-btn border-border-light absolute -top-3 -right-3 rtl:left-[-10px] rtl:right-unset flex items-center justify-center p-1 border shadow-md  rounded-full bg-white dark:bg-mode-200 dark:bg-sidebar-dark">
                <i data-feather="x" class="stroke-title w-4 h-4"></i>
             </span>
             ${featherPage ? featherHtml : ''}
             ${iconlyNotBulk ? iconlyHtml : ''} 
             ${iconlyBulk ? iconlyBulkHtml : ''}  
+            ${fontAwesomePage ? fontAwesomeHtml : ''}  
           </div>
         </div>`;
 

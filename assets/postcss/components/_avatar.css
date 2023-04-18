@@ -17,21 +17,21 @@
   .status-offline{
     @apply bg-danger absolute h-[10%] w-[10%] rounded-full bottom-[12%] right-[7%];
     &.chat-status{
-      @apply h-[20%] w-[20%] top-1 right-0;
+      @apply h-[20%] w-[20%] bottom-1 right-0;
     }
   }
   
   .status-online{
     @apply bg-primary absolute h-[10%] w-[10%] rounded-full bottom-[12%] right-[7%];
     &.chat-status{
-      @apply h-[20%] w-[20%] top-1 right-0;
+      @apply h-[20%] w-[20%] bottom-1 right-0;
     } 
   }
 
   .status-dnd{
     @apply bg-warning absolute h-[10%] w-[10%] rounded-full bottom-[12%] right-[7%];
     &.chat-status{
-      @apply h-[20%] w-[20%] top-1 right-0;
+      @apply h-[20%] w-[20%] bottom-1 right-0;
     }
   }
     .-space-x-6 {

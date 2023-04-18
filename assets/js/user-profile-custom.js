@@ -46,7 +46,7 @@ function new_form() {
                             </div>
                             <div>
                               <label for="address">Job Description </label>
-                              <textarea class="p-[11px] focus:!border-border-light w-full border border-border-light rounded-5 text-xs text-content" placeholder="Enter your address.." row="3" id="address">  </textarea>
+                              <textarea class="dark:border-border-dark p-[11px] focus:!border-border-light w-full border border-border-light rounded-5 text-xs text-content" placeholder="Enter your address.." row="3" id="address">  </textarea>
                             </div>
                             <div class="text-end"><a class="btn btn-primary text-xs text-white !w-fit !m-0 py-2" href="javascript:deleteEl('mainForm'+${count})" type="button">Delete </a></div>
                           </div>`

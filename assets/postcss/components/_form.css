@@ -19,10 +19,10 @@
     }
 
     input {
-      @apply bg-gray-light rounded-5 w-full py-[0.6875rem] pl-[1.5625rem] pr-[3.4375rem] text-xs font-semibold text-title;
+      @apply bg-gray-light rounded-5 w-full py-[0.6875rem] pl-[1.5625rem] pr-[3.4375rem] text-xs font-semibold text-title dark:border-border-dark;
     }
 
-    input[type="checkbox"] {
+    input[type='checkbox'] {
       @apply h-[0.8125rem] w-[0.8125rem];
     }
 
@@ -68,15 +68,15 @@
         @apply mb-1 block text-xs;
       }
 
-      input[type="Email"] {
+      input[type='Email'] {
         @apply focus:border focus:border-primary border-border-light border bg-white w-full;
       }
 
-      input[type="Date"] {
+      input[type='Date'] {
         @apply focus:border focus:border-primary border-border-light border bg-white w-full;
       }
 
-      input[type="password"] {
+      input[type='password'] {
         @apply focus:border focus:border-primary border-border-light border bg-white w-full;
       }
     }
@@ -140,7 +140,6 @@
         }
       }
     }
-
   }
 
   .ops-svg {
@@ -210,7 +209,7 @@
     .page {
       width: calc(100% / var(--stepNumber));
       transition: margin-left 0.3s ease-in-out;
-      
+
       input.invalid-input {
         @apply border border-danger;
       }
@@ -228,7 +227,7 @@
     }
 
     .bullet {
-      @apply h-6 bg-white w-6 border-2 transition-all ease-linear border-title inline-block rounded-full relative text-xs font-medium;
+      @apply h-6 bg-white w-6 border-2 dark:bg-sidebar-dark2 dark:border-border-dark transition-all ease-linear border-title inline-block rounded-full relative text-xs font-medium;
 
       &.active {
         @apply border border-primary bg-primary;
@@ -236,8 +235,8 @@
         span {
           @apply hidden;
         }
-         &:after{
-          @apply bg-primary;
+        &:after {
+          @apply bg-primary dark:bg-primary;
         }
       }
 
@@ -245,9 +244,8 @@
         @apply text-xs leading-[1.2];
       }
 
-      
       &:after {
-        @apply absolute content-[""] left-full rtl:left-unset rtl:right-full bottom-1/2  h-[.125rem] w-[calc(57px_+_(227_-_57)_*_((100vw_-_320px)_/_(1920_-_320)))] md:w-[calc(65px_+_(581_-_65)_*_((100vw_-_320px)_/_(1920_-_320)))] 2xl:w-[calc(54px_+_(250_-_54)_*_((100vw_-_320px)_/_(1920_-_320)))] rtl:w-[calc(57px_+_(227_-_57)_*_((100vw_-_320px)_/_(1920_-_320)))] rtl:md:w-[calc(65px_+_(581_-_65)_*_((100vw_-_320px)_/_(1920_-_320)))] rtl:2xl:w-[calc(54px_+_(250_-_54)_*_((100vw_-_320px)_/_(1920_-_320)))] bg-title;
+        @apply absolute content-[""] dark:bg-border-dark dark:left-full rtl:left-unset rtl:right-full bottom-1/2  h-[.125rem] w-[calc(57px_+_(227_-_57)_*_((100vw_-_320px)_/_(1920_-_320)))] md:w-[calc(65px_+_(581_-_65)_*_((100vw_-_320px)_/_(1920_-_320)))] 2xl:w-[calc(54px_+_(250_-_54)_*_((100vw_-_320px)_/_(1920_-_320)))] rtl:w-[calc(57px_+_(227_-_57)_*_((100vw_-_320px)_/_(1920_-_320)))] rtl:md:w-[calc(65px_+_(581_-_65)_*_((100vw_-_320px)_/_(1920_-_320)))] rtl:2xl:w-[calc(54px_+_(250_-_54)_*_((100vw_-_320px)_/_(1920_-_320)))] bg-title;
       }
     }
     &:last-child {

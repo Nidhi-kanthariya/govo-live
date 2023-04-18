@@ -1,8 +1,17 @@
 
 // Page Menu 
-ul.flex.gap-3.flex-col 
+ul(class="flex flex-col gap-3") 
    each pagesMenu in PAGES_LIST
-      li 
-         a(href=`${pagesMenu.url}` class="capitalize flex items-center gap-2 text-sm font-medium") 
-            +SVG_ICON(`${pagesMenu.icon}`,"w-5 h-5 stroke-title")    
-            = pagesMenu.title
+      li(class=`w-full ${pagesMenu.menu ? "dropdown on-hover-show group" : ""}`)
+         a(href=`${pagesMenu.url}` class="flex items-center gap-2")
+            span.flex.items-center.gap-2
+               +SVG_ICON(`${pagesMenu.icon}`,"w-5 h-5 stroke-title")
+               small(class="text-xs leading-7")= pagesMenu.title
+            if(pagesMenu.menu)
+               +SVG_ICON("Arrow-Right-2","w-4 h-4 stroke-title ml-auto")
+         if(pagesMenu.menu)
+            div.dropdown-menu(class="dropdown-sub-menu")
+               ul(class="flex flex-col gap-2") 
+                  each subMenuItem in pagesMenu.menu
+                     li
+                        a(href=`${subMenuItem.url}`)= subMenuItem.title

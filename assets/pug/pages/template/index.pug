@@ -11,12 +11,12 @@
 -var customizer=true;
 
 //- apex-chart
--var apexChart=true;
+-var apexChart=true; 
 -var uniqueApex=true;
 
-//- Breadcrumbs
+//- Breadcrumbs 
 -var pageTitle="Unique Dashboard";
--var breadcrumb=['dashboard','unique'];
+-var breadcrumb=['dashboard','unique']; 
 
 //- all JSON  
 include ../../data/all-data
@@ -26,111 +26,110 @@ include ../../mixin/mixin
 
 doctype html
 html(lang='en')
-   include ../../layout/header-files
-   body(dir="ltr" class="unique-skin")
-      main.page-wrapper
-         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
-            include ../../layout/header/header     
-            // Sidebar Start 
-            div.page-sidebar.sidebar-dark.unique-sidebar
-               include ../../layout/unique
-            // Sidebar End 
+  include ../../layout/header-files
+  body(dir="ltr" class="unique-skin")
+    main.page-wrapper
+      div.page-body-wrapper(class="xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+        include ../../layout/header/header     
+        // Sidebar Start 
+        div.page-sidebar.sidebar-dark.unique-sidebar
+          include ../../layout/unique
+        // Sidebar End 
 
-            // Page Body Start
-            div.page-body
-               div.grid.grid-cols-12.gap-card-gap
-                  div.col-span-3.ratio_109(class="4xl:col-span-4 lg:col-span-6 lg:-order-2 2md:col-span-12")
-                     include ../../components/welcome-card  
-                  div.col-span-6(class="4xl:col-span-8 lg:col-span-12 lg:-order-1")
-                     div.card
-                        div.card-header.transaction-history 
-                           +card-header("Transaction History","select", HISTORY_DROPDOWN)
-                        div.card-body  
-                           div.overflow-auto.custom-scroll
-                              include ../../components/table/transaction-history
-                  div.col-span-3(class="4xl:col-span-4 lg:col-span-12")
-                     div.grid.grid-cols-2.gap-card-gap  
-                        div.col-span-2(class="lg:col-span-1 2md:col-span-2")
-                           div.card 
-                              div.card-body
-                                 +widget1(REVENUE_WIDGET)
-                        div.col-span-2(class="lg:col-span-1 2md:col-span-2")
-                           div.card
-                              div.card-header
-                                 +card-header("Earnings","setting", HISTORY_DROPDOWN)
-                              div.card-body
-                                 +widget2(EARNINGS_WIDGET) 
-                  div.col-span-6(class="4xl:col-span-8 lg:col-span-12 lg:-order-1")
-                     div.card
-                        div.card-header
-                           +card-header("User Information","setting", SHORTING_DROPDOWN)
-                        div.card-body
-                           div.overflow-auto.custom-scroll  
-                              include ../../components/table/user-information
-                  div.col-span-3(class="4xl:col-span-4 lg:col-span-12") 
-                     div.grid.grid-cols-2.gap-card-gap
-                        div.col-span-2(class="lg:col-span-1 2md:col-span-2")
-                           div.card
-                              div.card-header
-                                 +card-header("Inventory Cost","setting", HISTORY_DROPDOWN)
-                              div.card-body 
-                                 +product-list(INVENTORY_CARD)
-                        div.col-span-2(class="lg:col-span-1 2md:col-span-2")
-                           div.card
-                              div.card-header
-                                 +card-header("Advertising","setting", HISTORY_DROPDOWN)
-                              div.card-body 
-                                 +product-list(ADVERTISE_CARD)
-                  div.col-span-3(class="4xl:col-span-4 lg:col-span-6 lg:-order-1 2md:col-span-12")
-                     div.card 
-                        div.card-header
-                           +card-header("Audit log","setting", HISTORY_DROPDOWN)
-                        div.card-body
-                           +audit-car(AUDIT_LOG) 
-                  div.col-span-3(class="4xl:col-span-4 lg:-order-2 lg:col-span-6 2md:col-span-12")
-                     div.card 
-                        div.card-header
-                           +card-header("News & Update")
-                        div.card-body  
-                           +image-card(NEWS_UPDATE,"badge","link")
+        // Page Body Start
+        div.page-body
+          div.grid.grid-cols-12.gap-card-gap
+            div.col-span-3.ratio_109(class="4xl:col-span-4 lg:col-span-6 lg:-order-2 2md:col-span-12")
+              include ../../components/welcome-card  
+            div.col-span-6(class="4xl:col-span-8 lg:col-span-12 lg:-order-1")
+              div.card
+                div.card-header.transaction-history 
+                  +card-header("Transaction History","select", HISTORY_DROPDOWN)
+                div.card-body  
+                  div.overflow-auto.custom-scroll
+                    include ../../components/table/transaction-history
+            div.col-span-3(class="4xl:col-span-4 lg:col-span-12")
+              div.grid.grid-cols-2.gap-card-gap  
+                div.col-span-2(class="lg:col-span-1 2md:col-span-2")
+                  div.card 
+                    div.card-body
+                      +widget1(REVENUE_WIDGET)
+                div.col-span-2(class="lg:col-span-1 2md:col-span-2")
+                  div.card 
+                    div.card-header
+                      +card-header("Earnings","setting", HISTORY_DROPDOWN)
+                    div.card-body
+                      +widget2(EARNINGS_WIDGET) 
+            div.col-span-6(class="4xl:col-span-8 lg:col-span-12 lg:-order-1")
+              div.card
+                div.card-header
+                  +card-header("User Information","setting", SHORTING_DROPDOWN)
+                div.card-body
+                  div.overflow-auto.custom-scroll  
+                    include ../../components/table/user-information
+            div.col-span-3(class="4xl:col-span-4 lg:col-span-12") 
+              div.grid.grid-cols-2.gap-card-gap
+                div.col-span-2(class="lg:col-span-1 2md:col-span-2")
+                  div.card
+                    div.card-header
+                      +card-header("Inventory Cost","setting", HISTORY_DROPDOWN)
+                    div.card-body
+                      +product-list(INVENTORY_CARD)
+                div.col-span-2(class="lg:col-span-1 2md:col-span-2")
+                  div.card
+                    div.card-header
+                      +card-header("Advertising","setting", HISTORY_DROPDOWN)
+                    div.card-body
+                      +product-list(ADVERTISE_CARD)
+            div.col-span-3(class="4xl:col-span-4 lg:col-span-6 lg:-order-1 2md:col-span-12")
+              div.card
+                div.card-header
+                  +card-header("Audit log","setting", HISTORY_DROPDOWN)
+                div.card-body
+                  +audit-car(AUDIT_LOG)
+            div.col-span-3(class="4xl:col-span-4 lg:-order-2 lg:col-span-6 2md:col-span-12")
+              div.card 
+                div.card-header
+                  +card-header("News & Update")
+                div.card-body  
+                  +image-card(NEWS_UPDATE,"badge","link")
+            div.col-span-9(class="4xl:col-span-8 lg:col-span-12")
+              div.card 
+                div.card-header
+                  +card-header("Users Positions","btn-group",FILTER)
+                div.card-body 
+                  div.grid.grid-cols-12 
+                    div.col-span-2(class="xl:col-span-3 2md:col-span-12") 
+                      ul(class="flex flex-col gap-[14px] 2md:gap-[8px] 2md:flex-row 2md:flex-wrap")
+                        each item in USERS_POSITIONS
+                          li 
+                            button.flex.items-center.gap-2(class="justify-start w-full text-xs font-semibold 2md:py-[7px] 2md:px-[7px] py-[9px] px-4 bg-gray-light dark:bg-sidebar-dark2")
+                              span(class=`w-[10px] bg-${item.status} h-[10px] rounded-[2px]`)
+                              span(class="text-xs font-semibold text-left line-clamp-1 ")= item.title
+                    div.col-span-10(class="xl:col-span-9 2md:col-span-12") 
+                      div#userPosition.custom-data-label.apex-custom-text(class="2md:-mt-[12px] ml-[-40px] 2md:ml-0")
+            div.col-span-3(class="4xl:col-span-4 lg:col-span-12")  
+              div.card 
+                div.card-header 
+                  +card-header("Sell Overview","setting", HISTORY_DROPDOWN)
+                div.card-body
+                  div#SellOverview.apex-custom-tooltip.apex-tooltip-style1(class="mb-[-15px]")
+            div.col-span-6(class="4xl:col-span-8 lg:col-span-12")
+              div.card
+                div.card-header
+                  +card-header("Open Invoices","setting", HISTORY_DROPDOWN)
+                div.card-body
+                  div.overflow-auto.custom-scroll 
+                    include ../../components/table/open-invoice
+            div.col-span-3(class="4xl:col-span-4 lg:col-span-6 lg:-order-1 2md:col-span-12")
+              div.card 
+                div.card-header
+                  +card-header("Notification","setting", HISTORY_DROPDOWN)
+                div.card-body 
+                  +image-card-rounded(NOTIFICATION_CARD,"badge","link")
 
-                  div.col-span-9(class="4xl:col-span-8 lg:col-span-12")
-                     div.card 
-                        div.card-header
-                           +card-header("Users Positions","btn-group",FILTER)
-                        div.card-body
-                           div.grid.grid-cols-12 
-                              div.col-span-2(class="xl:col-span-3 2md:col-span-12")
-                                 ul(class="flex flex-col gap-[14px] 2md:gap-[8px] 2md:flex-row 2md:flex-wrap")
-                                    each item in USERS_POSITIONS
-                                       li
-                                          button.flex.items-center.gap-2(class="justify-start w-full text-xs font-semibold 2md:py-[7px] 2md:px-[7px] py-[9px] px-4 bg-gray-light")
-                                             span(class=`w-[10px] bg-${item.status} h-[10px] rounded-[2px]`)
-                                             span(class="text-xs font-semibold text-left line-clamp-1")= item.title 
-                              div.col-span-10(class="xl:col-span-9 2md:col-span-12")
-                                 div#userPosition.custom-data-label.apex-custom-text(class="2md:-mt-[12px] ml-[-40px] 2md:ml-0")
-                  div.col-span-3(class="4xl:col-span-4 lg:col-span-12")
-                     div.card  
-                        div.card-header
-                           +card-header("Sell Overview","setting", HISTORY_DROPDOWN)
-                        div.card-body
-                           div#SellOverview.apex-custom-tooltip.apex-tooltip-style1(class="mb-[-15px]")
-                  div.col-span-6(class="4xl:col-span-8 lg:col-span-12")
-                     div.card
-                        div.card-header
-                           +card-header("Open Invoices","setting", HISTORY_DROPDOWN)
-                        div.card-body
-                           div.overflow-auto.custom-scroll  
-                              include ../../components/table/open-invoice
-                  div.col-span-3(class="4xl:col-span-4 lg:col-span-6 lg:-order-1 2md:col-span-12")
-                     div.card 
-                        div.card-header
-                           +card-header("Notification","setting", HISTORY_DROPDOWN)
-                        div.card-body
-                           +image-card-rounded(NOTIFICATION_CARD,"badge","link")
+        // Page Body End 
+        +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+      include ../../components/customizer
 
-            // Page Body End 
-            +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
-         include ../../components/customizer
-
-   include ../../layout/footer-files
+  include ../../layout/footer-files

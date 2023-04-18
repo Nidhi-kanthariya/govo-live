@@ -54,17 +54,17 @@
   }
   .custom-scroll {
     &::-webkit-scrollbar {
-      @apply w-[0.25rem] h-[0.25rem];
+      @apply w-[4px] h-[4px];
     }
     &::-webkit-scrollbar-track {
       @apply bg-gray-200;
     }
     &::-webkit-scrollbar-thumb {
-      @apply bg-gray-300  rounded-[0.625px] border border-gray-400  h-[0.3125rem];
+      @apply bg-gray-300  rounded-[.0391rem] border border-gray-400  h-[5px];
     }
   }
   .customizer-sidebar {
-    @apply duration-300 z-10 transition-all fixed min-w-[17.5rem] max-w-[17.5rem]  h-screen -right-full top-0 bottom-0 bg-white border-l border-light;
+    @apply duration-300 z-10 transition-all fixed min-w-[280px] max-w-[280px]  h-screen -right-full top-0 bottom-0 bg-white border-l border-light;
     &.show {
       @apply right-0 rtl:left-0 rtl:right-unset;
     }
@@ -77,11 +77,11 @@
   .custom-data-label {
     .apexcharts-datalabels {
       rect {
-        filter: drop-shadow(0 0.25rem 0.25rem rgb(0 0 0 / 0.2));
-        @apply w-[1.5625rem] h-[1.5625rem] stroke-[0.1875rem] stroke-white;
+        filter: drop-shadow(0 4px 4px rgb(0 0 0 / 0.2));
+        @apply w-[25px] h-[25px] stroke-[3px] stroke-white;
       }
       text {
-        @apply translate-x-[0.125rem] translate-y-[0.25rem];
+        @apply translate-x-[2px] translate-y-[4px];
       }
       .apexcharts-data-labels {
         &:nth-child(4n + 1) {
@@ -111,7 +111,118 @@
     .apexcharts-plot-series {
       .apexcharts-series {
         path {
-          clip-path: inset(5% 5% 5% 0% round 0.5rem) !important;
+          clip-path: inset(5% 5% 5% 0% round 8px) !important;
+        }
+      }
+    }
+  }
+
+
+  /* Custom scroll */
+  .page-sidebar{
+    &.sidebar-dark {
+
+      .custom-scroll {
+        &::-webkit-scrollbar {
+          @apply w-[.25rem] h-[.25rem];
+        }
+        &::-webkit-scrollbar-track {
+          @apply bg-sidebar-dark2;
+        }
+        &::-webkit-scrollbar-thumb {
+          @apply bg-sidebar-dark h-[.3125rem];
+        }
+      }
+    }
+  }
+
+  .post-media{
+    &.post-liked, &.wish-liked{
+      .post-like, .wish-like{
+        @apply fill-danger stroke-danger;
+        animation: liked 0.1s ease-in-out;
+      }
+    }
+    /* &.wish-liked{
+      .wish-like{
+        @apply fill-danger stroke-danger;
+        animation: liked 0.1s ease-in-out;
+      }
+    } */
+    &.post-disliked{
+      .post-dislike{
+        @apply fill-border-dark stroke-border-dark;
+        animation: liked 0.1s ease-in-out;
+      }
+    }
+  }
+  @keyframes liked{
+    00%{
+      transform: scale(0);
+    }
+    45%{
+      transform: scale(0.7);
+    }
+    100%{
+      transform: scale(1);
+    }
+  }
+
+  .svg-shake{
+    &:hover{
+      .strong-hover-shake{
+        animation: tada 1.5s ease infinite;
+      }
+    }
+  }
+
+  @keyframes tada {
+    0% {
+      transform: scaleX(1);
+    }
+    10% {
+        transform: scale3d(0.9, 0.9, 0.9) rotate(-3deg);
+    }
+    20% {
+        transform: scale3d(0.9, 0.9, 0.9) rotate(-3deg);
+    }
+    30% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate(3deg);
+    }
+    50% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate(3deg);
+    }
+    70% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate(3deg);
+    }
+    90% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate(3deg);
+    }
+    40% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate(-3deg);
+    }
+    60% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate(-3deg);
+    }
+    80% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate(-3deg);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+  }
+  
+  html[class='dark'] {
+    &.fontawesome-i2svg-complete{
+      &.fontawesome-i2svg-active{
+        .fontawesome-event{
+          .icon-box{
+            @apply !text-white;
+            svg,
+            span{
+              @apply !text-white;
+            }
+          }
         }
       }
     }

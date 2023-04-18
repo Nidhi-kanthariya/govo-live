@@ -22,56 +22,56 @@ include ../../mixin/mixin
 
 doctype html
 html(lang='en')
-   include ../../layout/header-files
-   body(dir="ltr" class="unique-skin")
-      main.page-wrapper
-         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
-            include ../../layout/header/header     
-            // Sidebar Start 
-            div.page-sidebar.sidebar-dark.unique-sidebar
-               include ../../layout/unique 
-            // Sidebar End 
+  include ../../layout/header-files
+  body(dir="ltr" class="unique-skin")
+    main.page-wrapper
+      div.page-body-wrapper(class="xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+        include ../../layout/header/header     
+        // Sidebar Start 
+        div.page-sidebar.sidebar-dark.unique-sidebar
+          include ../../layout/unique 
+        // Sidebar End 
 
-            // Page Body Start 
-            div.page-body
-               div.grid.grid-cols-12.gap-card-gap
-                  div.col-span-12
-                     div.card 
-                        div.card-header.pb-4
-                           div.flex.gap-2.justify-between(class="items-center 3sm:flex-col") 
-                              div.flex.item-center.gap-2 
-                                 div.dropdown
-                                    button.btn.border.border-border-light.flex.gap-1.text-content.items-center Action
-                                       +SVG_ICON("Arrow-Down-2","w-[20px] h-[20px] stroke-content")
-                                    div.dropdown-menu(class="!w-36 !top-11 left-0 !p-2")
-                                       ul.flex.flex-col.cursor-pointer(class="!gap-0")
-                                          li(class="px-2 py-1 rounded hover:bg-gray-light") Select All
-                                          li(class="px-2 py-1 rounded hover:bg-gray-light") Edit
-                                          li(class="px-2 py-1 rounded hover:bg-gray-light") Move to trash
-                              div.flex.items-center(class="m-0")
-                                 input(type='Search' placeholder='Search' class="py-[11px] px-[25px]").border.rounded.w-full.text-xs.text-Gray-darker.rounded-tr-none.rounded-br-none(class="rounded-br-5 rtl:rounded-bl-none rounded-tr-5 rtl:rounded-tl-none") 
-                                 button.bg-primary.text-white.rounded.border-none.p-3.rounded-tl-none.rounded-bl-none(class="rtl:rounded-bl-5 rtl:rounded-br-none rtl:rounded-tr-none rtl:rounded-tl-5")
-                                    +SVG_ICON("Search","w-[20px] h-[20px] stroke-white") 
-                        div.card-body 
-                           div.overflow-auto.custom-scroll
-                              include ../../components/table/invoice-table 
-                        div.card-footer
-                           div.flex.justify-between.items-center.flex-wrap(class="sm:flex-col")
-                              div.flex.items-center
-                                 button.btn.border.border-border-light.rounded-none.flex.items-center.gap-2(class="hover:bg-primary group hover:text-white") 
-                                    +SVG_ICON("Arrow-Left-2" ,"w-4 h-4 stroke-title group-hover:stroke-white") 
-                                    span(class="sm:hidden") Preview  
-                                 button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-primary hover:text-white") 1
-                                 button.btn.btn-active.text-white.border.border-border-light.bg-primary.rounded-none(class="hover:bg-primary hover:text-white") 2
-                                 button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-primary hover:text-white") 3
-                                 button.btn.border.border-border-light.rounded-none.flex.items-center.gap-2(class="hover:bg-primary group hover:text-white") 
-                                    span(class="sm:hidden") Next
-                                    +SVG_ICON("Arrow-Right-2" ,"w-4 h-4 stroke-title group-hover:stroke-white") 
-                              div(class="sm:mt-3")
-                                 img(src="../../assets/images/ecommerce/paypal2.png" alt="paypal-img")
+        // Page Body Start 
+        div.page-body
+          div.grid.grid-cols-12.gap-card-gap
+            div.col-span-12
+              div.card 
+                div.card-header.pb-4
+                  div.flex.gap-2.justify-between(class="items-center 3sm:flex-col 3sm:items-end") 
+                    div.flex.item-center.gap-2 
+                      div.dropdown
+                        button.btn.border.border-border-light.flex.gap-1.text-content.items-center(class="!p-[0.7rem] dark:border-border-dark") Action
+                          +SVG_ICON("Arrow-Down-2","w-[20px] h-[20px] stroke-content")
+                        div.dropdown-menu(class="!w-36 !top-11 left-0 !p-2")
+                          ul.flex.flex-col.cursor-pointer(class="!gap-0")
+                            li(class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2") Select All
+                            li(class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2") Edit
+                            li(class="px-2 py-1 rounded hover:bg-gray-light dark:hover:bg-sidebar-dark2") Move to trash
+                    div.flex.items-center(class="m-0")
+                      input(type='Search' placeholder='Search' class="py-[11px] px-[25px] dark:bg-sidebar-dark2 dark:border-border-dark dark:text-white rounded-br-5 rtl:rounded-bl-none rounded-tr-5 rtl:rounded-tl-none").border.rounded.w-full.text-xs.text-Gray-darker.rounded-tr-none.rounded-br-none 
+                      button.bg-primary.text-white.rounded.border-none.p-3.rounded-tl-none.rounded-bl-none(class="rtl:rounded-bl-5 rtl:rounded-br-none rtl:rounded-tr-none rtl:rounded-tl-5")
+                        +SVG_ICON("Search","w-[20px] h-[20px] stroke-white") 
+                div.card-body
+                  div.overflow-auto.custom-scroll
+                    include ../../components/table/invoice-table 
+                div.card-footer
+                  div.flex.justify-between.items-center.flex-wrap(class="sm:flex-col sm:items-end")
+                    div.flex.items-center 
+                      button.btn.border.border-border-light.rounded-none.flex.items-center.gap-2(class="hover:bg-primary dark:border-border-dark group hover:text-white") 
+                        +SVG_ICON("Arrow-Left-2" ,"w-4 h-4 stroke-title group-hover:stroke-white") 
+                        span(class="sm:hidden") Preview
+                      button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-primary dark:border-border-dark hover:text-white") 1
+                      button.btn.btn-active.text-white.border.border-border-light.bg-primary.rounded-none(class="hover:bg-primary dark:border-border-dark hover:text-white") 2
+                      button.btn.border.border-border-light.rounded-none.text-title(class="hover:bg-primary dark:border-border-dark hover:text-white") 3
+                      button.btn.border.border-border-light.rounded-none.flex.items-center.gap-2(class="hover:bg-primary dark:border-border-dark group hover:text-white") 
+                        span(class="sm:hidden") Next
+                        +SVG_ICON("Arrow-Right-2" ,"w-4 h-4 stroke-title group-hover:stroke-white") 
+                    div(class="sm:mt-3")
+                      img(src="../../assets/images/ecommerce/paypal2.png" alt="paypal-img")
 
 
-            // Page Body End  
-            +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
-         include ../../components/customizer
-   include ../../layout/footer-files
+        // Page Body End  
+        +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+      include ../../components/customizer
+  include ../../layout/footer-files

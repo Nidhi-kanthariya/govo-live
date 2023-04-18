@@ -276,7 +276,7 @@ bubble_map.bubbles(
   [
     {
       name: 'Not a bomb, but centered on Brazil',
-      radius: 23,
+      radius: 25,
       centered: 'BRA',
       country: 'USA',
       yeild: 0,
@@ -295,7 +295,7 @@ bubble_map.bubbles(
     },
     {
       name: 'Castle Bravo',
-      radius: 25,
+      radius: 11,
       yeild: 15000,
       country: 'USA',
       significance: 'First dry fusion fuel "staged" thermonuclear weapon; a serious nuclear fallout accident occurred',
@@ -380,7 +380,7 @@ var defaultOptions = {
   height: null, //if not null, datamaps will grab the height of 'element'
   width: null, //if not null, datamaps will grab the width of 'element'
   responsive: false, //if true, call `resize()` on the map object when it should adjust it's size
-  done: function () {}, //callback when the map is done drawing
+  done: function () { }, //callback when the map is done drawing
   fills: {
     defaultFill: '#ABDDA4', //the keys in this object map to the "fillKey" of [data] or [bubbles]
   },

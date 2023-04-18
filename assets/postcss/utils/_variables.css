@@ -51,14 +51,30 @@
   --instagram3: #285aeb;
 }
 
-html[class="dark"] {
+html[class='dark'] {
   --White: #1f2f3e;
   --black: #fff;
   --light: #44588f;
   --dark: #d8ecff;
-  --title: #ffffff
+  --title: #fff;
+  --border-light: #2c4050;
+  --apex-tooltip: #17232e;
+  --body: #00232e;
 }
-
+html[class='dark'] {
+  .apexcharts-tooltip {
+    &.apexcharts-theme-light {
+      background: var(--apex-tooltip);
+      border: var(--border-light);
+      box-shadow: none;
+      .apexcharts-tooltip-title {
+        background: var(--apex-tooltip);
+        color: var(--black);
+        border-bottom-color: var(--border-light);
+      }
+    }
+  }
+}
 /* Unique Skin */
 .unique-skin {
   --primary: 51, 191, 191; /*#33BFBF*/

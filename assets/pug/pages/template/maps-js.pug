@@ -28,7 +28,7 @@ html(lang='en')
    include ../../layout/header-files
    body(dir="ltr" class="unique-skin")
       main.page-wrapper
-         div.page-body-wrapper(class="2xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+         div.page-body-wrapper(class="xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
             include ../../layout/header/header     
             // Sidebar Start 
             div.page-sidebar.sidebar-dark.unique-sidebar
@@ -41,7 +41,7 @@ html(lang='en')
                   div(class="col-span-6 lg:col-span-12") 
                      div.card
                         div.card-header.pb-4.header-bottom-border
-                           +card-header("At A Specified Location") 
+                           +card-header("At a Specified Location") 
                         div.card-body
                            div.map-js-height#weathermap  
                   div(class="col-span-6 lg:col-span-12") 
