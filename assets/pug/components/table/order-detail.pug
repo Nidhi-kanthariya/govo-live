@@ -1,0 +1,45 @@
+//- ====================
+//-  User Information
+//- ====================
+table.table 
+    thead 
+        tr 
+            each userHead in ORDER_DETAIL.header
+                th=  userHead
+
+    tbody.user-info
+        each bodyData,index in ORDER_DETAIL.body
+            tr.user-item(class="group")
+                td(class="min-w-[210px]") 
+                    div(class="flex items-center gap-2")
+                        label.checkbox(class="w-[15px] h-[15px]")
+                            input(type='checkbox'  checked=index + 1 == 2 ? true : false)
+                            div.checkbox-indicator
+                                i(data-feather="check")
+                        div.flex.items-center(class="gap-[9px]")
+                            img(class="sm:w-[40px] sm:h-[40px] 5xl:w-[43px] 5xl:h-[43px] w-[45px] h-[45px] rounded-full" src=`../../assets/images/avatar/${bodyData.image}`, alt=`${bodyData.title}`) 
+                            a(href="javascript:void(0)")
+                                h4(class="text-xs font-semibold text-title group-hover:text-primary")=bodyData.title
+                                span(class="block mt-1 font-semibold text-2xs text-content")=bodyData.subTitle
+                td(class="min-w-[120px]")
+                    h4(class=`text-xs font-semibold text-title`)= bodyData.order
+                td(class="min-w-[75px]") 
+                    h4(class=`text-xs font-semibold text-title`)= bodyData.date
+                td(class="min-w-[140px]") 
+                    h4(class="text-xs font-semibold text-title")= bodyData.pricing
+                td(class="min-w-[140px]") 
+                    h4(class=`text-xs font-semibold text-${bodyData.statusColor}`)= bodyData.status
+                td(class="min-w-[75px]") 
+                    h4(class=`text-xs font-semibold text-title`)= bodyData.payment
+                td(class="min-w-[50px] text-right") 
+                    div.dropdown.on-hover-show(class=`inline-flex justify-end ${USER_INFORMATION.body.length === index + 1 ? "top-open" : ""}`)
+                        button(class="group") 
+                            +SVG_ICON("Dote-h","w-[18px] h-[18px] stroke-title")   
+                        div.dropdown-menu(class=`!right-0 !left-unset `)
+                            ul
+                                li.group 
+                                    a(href="javascript:void(0)")
+                                        +SVG_ICON("Edit-Square","group-hover:stroke-primary w-[18px] h-[18px] stroke-title")   
+                                li.group 
+                                    a(href="javascript:void(0)")
+                                        +SVG_ICON("Delete","group-hover:stroke-primary remove-user w-[18px] h-[18px] stroke-title")   

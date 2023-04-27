@@ -4,27 +4,27 @@ div(class="py-[14px] border-t border-border-light px-body-space dark:border-bord
     ul.flex.items-center(class="lg:hidden 2md:shadow-lg 2md:border 2md:border-border-light 2md:z-[5] 2md:p-4 2md:absolute 2md:top-[38px] 2md:rounded-5 2md:left-0 2md:items-start 2md:bg-white 2md:flex-col gap-[calc(8px_+_(31_-_8)_*_((100vw_-_320px)_/_(1920_-_320)))]") 
       li(class="dropdown on-hover-show cursor-pointer pb-[6px] transition-all relative group before:bg-primary before:absolute before:-translate-x-1/2 before:bottom-0 before:left-1/2 before:w-full before:h-[2px]") 
         span(class="text-xs font-bold transition-all text-primary") General
-        div.dropdown-menu(class="!min-w-[320px] !left-0 !right-unset !p-0") 
-          include ../../components/general-menu
+        div.dropdown-menu(class="!min-w-[320px] !left-0 !right-unset !p-0  rtl:!left-unset rtl:!right-0") 
+          include ../../components/general-menu 
       li(class="dropdown on-hover-show cursor-pointer pb-[6px] transition-all duration-300 relative group before:bg-primary before:absolute before:-translate-x-1/2 before:bottom-0 before:left-1/2 hover:before:w-full before:h-[2px] before:w-0 ") 
-        span(class="text-xs font-bold transition-all duration-300 text-content group-hover:text-primary") Components
-        div.dropdown-menu(class="!min-w-[220px] !left-0 !right-unset") 
-          include ../../components/components-menu
+        span(class="text-xs font-bold transition-all duration-300 text-content group-hover:text-primary") Components 
+        div.dropdown-menu(class="!min-w-[220px] !left-0 !right-unset rtl:!left-unset rtl:!right-[4.625rem] ") 
+          include ../../components/components-menu 
       li(class="dropdown on-hover-show cursor-pointer pb-[6px] transition-all duration-300 relative group before:bg-primary before:absolute before:-translate-x-1/2 before:bottom-0 before:left-1/2 hover:before:w-full before:h-[2px] before:w-0 ") 
         span(class="text-xs font-bold transition-all duration-300 text-content group-hover:text-primary") Applications
-        div.dropdown-menu(class="!min-w-[190px] !left-0 !right-unset") 
+        div.dropdown-menu(class="!min-w-[190px] !left-0 !right-unset rtl:!left-unset rtl:!right-0")
           include ../../components/app-menu 
       li(class="dropdown on-hover-show cursor-pointer pb-[6px] transition-all duration-300 relative group before:bg-primary before:absolute before:-translate-x-1/2 before:bottom-0 before:left-1/2 hover:before:w-full before:h-[2px] before:w-0 ") 
         span(class="text-xs font-bold transition-all duration-300 text-content group-hover:text-primary") Forms & Table
-        div.dropdown-menu(class="!min-w-[190px] !left-0 !right-unset") 
+        div.dropdown-menu(class="!min-w-[190px] !left-0 !right-unset rtl:!left-unset rtl:!right-0")  
           include ../../components/form-table-menu 
       li(class="dropdown on-hover-show cursor-pointer pb-[6px] transition-all duration-300 relative group before:bg-primary before:absolute before:-translate-x-1/2 before:bottom-0 before:left-1/2 hover:before:w-full before:h-[2px] before:w-0 ") 
-        span(class="text-xs font-bold transition-all duration-300 text-content group-hover:text-primary") Pages
-        div.dropdown-menu(class="!min-w-[190px] !left-0 !right-unset") 
-          include ../../components/pages-menu 
+        span(class="text-xs font-bold transition-all duration-300 text-content group-hover:text-primary") Pages 
+        div.dropdown-menu(class="!min-w-[190px] !left-0 !right-unset rtl:!left-unset rtl:!right-0") 
+          include ../../components/pages-menu  
       li(class="dropdown on-hover-show cursor-pointer pb-[6px] transition-all duration-300 relative group before:bg-primary before:absolute before:-translate-x-1/2 before:bottom-0 before:left-1/2 hover:before:w-full before:h-[2px] before:w-0 ") 
         span(class="text-xs font-bold transition-all duration-300 text-content group-hover:text-primary") Miscellaneous
-        div.dropdown-menu(class="!min-w-[190px] !left-0 !right-unset") 
+        div.dropdown-menu(class="!min-w-[190px] !left-0 !right-unset rtl:!left-unset rtl:!right-0")
           include ../../components/miscellaneous-menu 
     div.flex.items-center(class="gap-[14px]")
       // Breadcrumbs Start 

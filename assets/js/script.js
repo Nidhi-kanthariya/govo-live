@@ -1,6 +1,43 @@
-// Hex Code Convert To Rgba Number ///
-'use strict';
 
+/*! -----------------------------------------------------------------------------------
+
+    Template Name: Govo Admin
+    Template URI: http://admin.pixelstrap.com/govo/theme
+    Description: This is Admin theme
+    Author: Pixelstrap
+    Author URI: https://themeforest.net/user/pixelstrap
+
+-----------------------------------------------------------------------------------
+
+        01. Hex Code Convert To Rgba Number Js
+        02. Search Js
+        03. Language Select Js
+        04. Header Drop Down Toggle
+        05. Plus Minus Item Js 
+        06. Cart Item Remove js
+        07. Tabs Js
+        08. Copy Js
+        09. Collapse Js
+        10. Countdown Js
+        11. Todo List Edit Delete Js 
+        12. Password Show hide js
+        13. Close alert js 
+        14. Wishlist Remove js
+        15. List-item Remove js
+        16. Following js
+        17. Add Friends js
+        18. suggestion js
+        19. Fill svg js
+        20. Accept voice call js
+        21. Blog sidebar js
+
+ --------------------------------------------------------------------------------- */
+
+/*========================
+  1. Hex Code Convert To Rgba Number Js
+ ==============================*/
+
+'use strict';
 window.addEventListener('load', () => {
   const bgImg = document.querySelectorAll('.bg-img');
   for (i = 0; i < bgImg.length; i++) {
@@ -32,24 +69,13 @@ window.addEventListener('load', () => {
     bgImgEl.parentNode.classList.add('bg-size');
     const bgSrc = bgImgEl.src;
     bgImgEl.style.display = 'none';
-    // bgImgEl.parentNode.setAttribute(
-    //   'style',
-    //   `
-    //     background-image: url(${bgSrc});
-    //     background-size:cover;
-    //     background-position: center;
-    //     background-repeat: no-repeat;
-    //     display: block;
-    //     `,
-    // );
   }
 });
 
 /*========================
-    Search Js
+  2. Search Js
  ==============================*/
 
-//  xl:scale-0 xl:opacity-0 xl:invisible
 const searchShow = document.querySelector('.search-show');
 const searchClose = document.querySelector('.search-close');
 const searchBoxWrapper = document.querySelector('.search-box-wrapper');
@@ -59,9 +85,11 @@ searchShow?.addEventListener('click', function () {
 searchClose?.addEventListener('click', function () {
   searchBoxWrapper.classList.add('xl:scale-0', 'xl:opacity-0', 'xl:invisible');
 });
+
 /*========================
-    Language Select Js
+  3. Language Select Js
  ==============================*/
+
 const languageSelect = document.querySelector('.language-select');
 const languageSelectBtn = document.getElementById('language-select');
 const languageList = document.querySelector('.language-menu');
@@ -75,14 +103,14 @@ languageList?.addEventListener('click', function (e) {
 });
 
 /*=====================
-    Header Drop Down Toggle
+  4. Header Drop Down Toggle
 ==========================*/
 const headerDropdownMenu = document.querySelectorAll('.dropdown');
 document.body.addEventListener('click', function (event) {
   const dropdownEl = event.target.closest('.dropdown');
   const visible = dropdownEl?.closest('.dropdown')?.classList.contains('show');
   const dropdownMenuElement = event.target.closest('.dropdown-menu');
-  headerDropdownMenu.forEach((item) => {
+  headerDropdownMenu.forEach((item) => { 
     if (!dropdownMenuElement) {
       item.classList.remove('show');
     }
@@ -92,22 +120,8 @@ document.body.addEventListener('click', function (event) {
   if (!visible && !dropdownEl.classList.contains('on-hover-show')) dropdownEl?.classList.add('show');
 });
 
-// const customizerSidebar = document.querySelector('.customizer-sidebar');
-// const customizerBtn = document.querySelector('.customizer-btn');
-// const customizerCloseBtn = document.querySelector('.customizer-close');
-
-// /// Customizer Sidebar Show ///
-// customizerBtn?.addEventListener('click', function () {
-//   customizerSidebar.classList.add('show');
-// });
-
-// /// Customizer Sidebar Hide ///
-// customizerCloseBtn?.addEventListener('click', function () {
-//   customizerSidebar.classList.remove('show');
-// });
-
 /*=====================
-    Plus Minus Item Js 
+  5. Plus Minus Item Js 
 ==========================*/
 const plusMinus = document.querySelectorAll('.plus-minus ');
 plusMinus.forEach((element) => {
@@ -128,7 +142,7 @@ plusMinus.forEach((element) => {
 });
 
 /*=====================
-    Cart Item Remove js
+  6. Cart Item Remove js
 ==========================*/
 const cartBagProduct = document.querySelector('.shopping-bag');
 const cartRemoveBtn = cartBagProduct?.querySelectorAll('.remove-cart');
@@ -139,7 +153,7 @@ cartRemoveBtn?.forEach((el) => {
 });
 
 /*=====================
-    Tabs Js
+  7. Tabs Js
 ==========================*/
 const tabs = document.querySelectorAll('.tabs');
 tabs?.forEach((tab) => {
@@ -173,7 +187,7 @@ tabs?.forEach((tab) => {
 });
 
 /*=====================
-    Copy Js
+  8. Copy Js
 ==========================*/
 
 // Copy Function
@@ -199,7 +213,7 @@ copyBtn?.forEach((copyBtn) => {
 });
 
 /*=====================
-    Collapse Js
+  9. Collapse Js
 ==========================*/
 
 var accItem = document.getElementsByClassName('accordionItem');
@@ -218,7 +232,7 @@ function toggleItem() {
 }
 
 /*=====================
-    Countdown Js
+  10. Countdown Js
 ==========================*/
 
 window.addEventListener('load', () => {
@@ -257,7 +271,7 @@ window.addEventListener('load', () => {
 });
 
 /*=====================
-  Todo List Edit Delete Js 
+  11. Todo List Edit Delete Js 
   ==========================*/
 const todoList = document.querySelectorAll('.todo-list');
 todoList?.forEach((el) => {
@@ -284,9 +298,8 @@ todoList?.forEach((el) => {
   });
 });
 
-
 /*==============================
-  Password Show hide js 
+  12. Password Show hide js 
 =====================================*/
 const showHideBtn = document.querySelectorAll('.showHidePassword');
 console.log(showHideBtn)
@@ -306,7 +319,7 @@ for (let i = 0; i < showHideBtn.length; ++i) {
 }
 
 /*=====================
-Password hide/show js
+  12. Password hide/show js
 ==========================*/
 
 // const eye = document.querySelector(".feather-eye");
@@ -327,7 +340,7 @@ Password hide/show js
 
 
 /*=====================
- Close alert js
+ 13. Close alert js
 ==========================*/
 
 var alert_del = document.querySelectorAll('.alert-del');
@@ -338,7 +351,7 @@ alert_del.forEach((x) =>
 );
 
 /*=====================
-13. Wishlist Remove js
+ 14. Wishlist Remove js
 ==========================*/
 const wishlistProduct = document.querySelectorAll('.wishlist-box');
 wishlistProduct?.forEach((el) => {
@@ -349,7 +362,7 @@ wishlistProduct?.forEach((el) => {
 });
 
 /*=====================
-13. List-item Remove js
+  15. List-item Remove js
 ==========================*/
 const invoiceBox = document.querySelector('.invoice , .cart-main, .user-info');
 const invoiceRemove = invoiceBox?.querySelectorAll('.remove-invoice , .remove-cart, .remove-user');
@@ -360,7 +373,7 @@ invoiceRemove?.forEach((el) => {
 });
 
 /*=====================
-Following js
+ 16. Following js
 ==========================*/
 
 const followFriend = document.querySelectorAll('.follow-friend');
@@ -372,9 +385,8 @@ followFriend?.forEach((el) => {
   });
 });
 
-
 /*=====================
-Add Friends js
+ 17. Add Friends js
 ==========================*/
 
 const addFriend = document.querySelectorAll('.add-friend');
@@ -388,7 +400,7 @@ addFriend?.forEach((el) => {
 });
 
 /*=====================
-suggestion js
+ 18. suggestion js
 ==========================*/
 
 const suggest = document.querySelectorAll('.suggest-friend');
@@ -402,9 +414,8 @@ suggest?.forEach((el) => {
   });
 });
 
-
 /*=====================
-Fill svg js
+ 19. Fill svg js
 ==========================*/
 
 const postMedia = document.querySelector('.post-media');
@@ -428,6 +439,10 @@ wishLike?.forEach((el) => {
     this.closest('.post-media')?.classList.toggle('wish-liked');
   });
 });
+
+/*=====================
+ 20. Accept voice call js
+==========================*/
 
 const acceptCallEnd = document.querySelector('.accept-call-end');
 const acceptCallStart = document.querySelector('.accept-call-start');
@@ -453,3 +468,18 @@ for (var i = 0; i < CallStartBtn.length; i++) {
     acceptCallStart.classList.add('show');
   });
 }
+
+
+/*=====================
+ 21. Blog sidebar js
+==========================*/
+
+const blogSidebarToggle = document.querySelector('.blog-toggle');
+const blogSidebar = document.querySelector('.blog-sidebar');
+const blogCloseBtn = document.querySelector('.blog-close-sidebar');
+blogSidebarToggle?.addEventListener('click', function () {
+  blogSidebar.classList.toggle('show');
+});
+blogCloseBtn?.addEventListener('click', function () {
+  blogSidebar.classList.remove('show');
+});

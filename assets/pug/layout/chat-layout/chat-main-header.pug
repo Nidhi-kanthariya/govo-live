@@ -14,7 +14,6 @@ div.border-b.border-gray-light.pb-4.flex.items-center.justify-between(class="dar
         div.flex.items-center.gap-1(class="mt-1")
           span.text-content Today 15:24 
   div.flex.items-center(class="justify-end gap-6 lg:gap-4 sm:gap-1") 
-    //- span(class="call-start-btn")
     label(for='voice-call-modal') 
       +SVG_ICON("Calling","w-5 h-5 stroke-title cursor-pointer hover:stroke-primary lg:hidden block call-start-btn")
     label(for='video-call-modal')
@@ -33,8 +32,7 @@ div.border-b.border-gray-light.pb-4.flex.items-center.justify-between(class="dar
               span.whitespace-nowrap Video Call
     span.left-sidebar-hide-logo-show(class="hidden lg:block")
       +SVG_ICON("Chat","w-5 h-5 stroke-title cursor-pointer hover:stroke-primary  left-sidebar-toggle-btn lg:block hidden")
-    span.right-sidebar-hide-logo-show
-      //- i(data-feather="chevrons-left" class="w-5 h-5 cursor-pointer stroke-title hover:stroke-primary right-sidebar-toggle-btn")
+    span.right-sidebar-hide-logo-show 
       +SVG_ICON("Arrow-Left-Square","w-5 h-5 cursor-pointer stroke-title hover:stroke-primary right-sidebar-toggle-btn")
 
 // chat main header end

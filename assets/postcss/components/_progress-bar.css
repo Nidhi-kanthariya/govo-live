@@ -1,5 +1,5 @@
 /*=====================
-    Progress Bar CSS
+  3.20  Progress Bar Css
   ==========================*/
 @layer components {
     .progress-bar {
@@ -11,7 +11,7 @@
 
     &.multi-bar {
       div {
-        @apply first:rounded-r-none last:rounded-l-none;
+        @apply first:rounded-r-none last:rounded-l-none rtl:first:rounded-r  rtl:first:rounded-l-none rtl:last:rounded-r-none rtl:last:rounded-l;
       }
     }
 

@@ -1,6 +1,7 @@
 /*=====================
-    Indicator CSS
+  3.14  Indicator Css
  ==========================*/
+ 
 @layer components {
   .indicator {
     @apply relative max-w-fit;

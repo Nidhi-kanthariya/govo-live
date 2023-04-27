@@ -1,0 +1,463 @@
+//- sidebar
+-var sidebar = true;
+
+//- feather
+-var feather= true;
+
+//- fontAwesome 
+-var fontAwesome = true;
+
+//- custom select
+-var customSelect= true;
+
+//- customizer 
+-var customizer=true;
+
+//- Breadcrumbs 
+-var pageTitle="File Structure";
+-var breadcrumb=['File Structure']; 
+
+//- all JSON  
+include ../../data/all-data
+
+//- all mixin
+include ../../mixin/mixin
+
+doctype html
+html(lang='en')  
+    include components/header-files 
+    body(dir="ltr" class="unique-skin") 
+        main.page-wrapper
+            div.page-body-wrapper(class="xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+                header.fixed.top-0(class="z-[6] xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto")
+                    div.page-header(class="w-full transition-all bg-white shadow-header dark:bg-sidebar-dark")
+                        include components/header  
+                        div(class="py-[14px] border-t border-border-light px-body-space dark:border-border-dark") 
+                            div.relative.flex.items-center.justify-end(class="lg:justify-start")
+                                div.flex.items-center(class="gap-[14px]")
+                                    // Breadcrumbs Start 
+                                    +breadcrumb(['File Structure'])
+                                    // Breadcrumbs End 
+                                    div.custom-select.select-style-1(class="lg:hidden dark:text-title")
+                                        select(class="dark:text-title")
+                                            option(selected value="") Last 7 Days 
+                                            option(value="") Last 2 Weeks 
+                                            option(value="") Last 1 Month 
+                                            option(value="") Last 3 Month    
+                // Sidebar Start 
+                div.page-sidebar.sidebar-dark.unique-sidebar
+                    include components/unique
+                // Sidebar End 
+
+                // Page Body Start
+                div.page-body
+                    div.grid.grid-cols-12.gap-card-gap 
+                        div.card.col-span-12         
+                            div.card-header.pb-2.header-bottom-border
+                                h3.text-lg.font-bold File Structure
+                                p Here you can write subtitle here
+                            div.card-body 
+                                div(class="tree-container")
+                                    div 
+                                        ul(class="mb-0")
+                                            li(class="p-0")   
+                                                a(class="block text-xl font-bold tree-head")
+                                                    | GOVO
+                                            li
+                                                div(class="relative tree-content")
+                                                    div.block.hed-folder
+                                                        a(class="flex text-primary")
+                                                            i(data-feather='folder' class="w-5 mr-2")
+                                                            | html
+                                                    ul(class="relative second-list")
+                                                        li(class="relative sec-line")     
+                                                            a(class="flex text-primary")
+                                                                i(data-feather='folder' class="w-5 mr-2")
+                                                                | document
+                                                        li(class="relative sec-line")     
+                                                            a(class="flex text-primary")
+                                                                i(data-feather='folder' class="w-5 mr-2") 
+                                                                | starter_kit
+                                                        li(class="relative sec-line")     
+                                                            a(class="flex text-primary")
+                                                                i(data-feather='folder' class="w-5 mr-2")
+                                                                | template        
+                                            li
+                                                div(class="relative tree-content")
+                                                    div.hed-folder.relative
+                                                        div.block.hed-folder
+                                                            a(class="flex text-primary")
+                                                                i(data-feather='folder' class="w-5 mr-2")
+                                                                | assets  
+                                                        ul(class="relative second-list")
+                                                            li(class="relative sec-line")     
+                                                                a(class="flex text-primary")
+                                                                    i(data-feather='folder' class="w-5 mr-2") 
+                                                                    | css 
+
+                                                                ul(class="relative tree-content")
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex font-gray-500")
+                                                                            i(data-feather='file' class="w-5 mr-2")
+                                                                            | style.css 
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex text-primary")
+                                                                            i(data-feather='folder' class="w-5 mr-2")
+                                                                            | vendors 
+
+                                                            li(class="relative sec-line")     
+                                                                a(class="flex text-primary")
+                                                                    i(data-feather='folder' class="w-5 mr-2") 
+                                                                    | fonts 
+
+                                                                ul(class="relative tree-content")
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex text-primary")
+                                                                            i(data-feather='folder' class="w-5 mr-2")
+                                                                            | font-awesome
+
+                                                            li(class="relative sec-line")     
+                                                                a(class="flex text-primary")
+                                                                    i(data-feather='folder' class="w-5 mr-2") 
+                                                                    | images
+
+                                                            li(class="relative sec-line")     
+                                                                a(class="flex text-primary")
+                                                                    i(data-feather='folder' class="w-5 mr-2") 
+                                                                    | js
+
+                                                                ul(class="relative tree-content")
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex text-primary")
+                                                                            i(data-feather='folder' class="w-5 mr-2")
+                                                                            | apexchart
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex text-primary")
+                                                                            i(data-feather='folder' class="w-5 mr-2")
+                                                                            | calendar 
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex text-primary")
+                                                                            i(data-feather='folder' class="w-5 mr-2")
+                                                                            | chartjs 
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex text-primary")
+                                                                            i(data-feather='folder' class="w-5 mr-2")
+                                                                            | chat-app
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex text-primary")
+                                                                            i(data-feather='folder' class="w-5 mr-2")
+                                                                            | ecommerce-app 
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex text-primary")
+                                                                            i(data-feather='folder' class="w-5 mr-2")
+                                                                            | swiper-slider
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex font-gray-500")
+                                                                            i(data-feather='file' class="w-5 mr-2")
+                                                                            | email-app
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex font-gray-500")
+                                                                            i(data-feather='file' class="w-5 mr-2")
+                                                                            | emoji-picker 
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex font-gray-500")
+                                                                            i(data-feather='file' class="w-5 mr-2")
+                                                                            | filepond 
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex font-gray-500")
+                                                                            i(data-feather='file' class="w-5 mr-2")
+                                                                            | fontawesome 
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex font-gray-500")
+                                                                            i(data-feather='file' class="w-5 mr-2")
+                                                                            | map 
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex font-gray-500")
+                                                                            i(data-feather='file' class="w-5 mr-2")
+                                                                            | photoswipe 
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex font-gray-500")
+                                                                            i(data-feather='file' class="w-5 mr-2")
+                                                                            | swiper-slider
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex font-gray-500")
+                                                                            i(data-feather='file' class="w-5 mr-2")
+                                                                            | todo 
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex font-gray-500")
+                                                                            i(data-feather='file' class="w-5 mr-2")
+                                                                            | custom-select.js 
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex font-gray-500")
+                                                                            i(data-feather='file' class="w-5 mr-2")
+                                                                            | customizer.js 
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex font-gray-500")
+                                                                            i(data-feather='file' class="w-5 mr-2")
+                                                                            | dark-layout.js 
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex font-gray-500")
+                                                                            i(data-feather='file' class="w-5 mr-2")
+                                                                            | dropzone.js 
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex font-gray-500")
+                                                                            i(data-feather='file' class="w-5 mr-2")
+                                                                            | feather-custom.js 
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex font-gray-500")
+                                                                            i(data-feather='file' class="w-5 mr-2")
+                                                                            | feather.min.js
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex font-gray-500")
+                                                                            i(data-feather='file' class="w-5 mr-2")
+                                                                            | fullcalender-custom.js 
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex font-gray-500")
+                                                                            i(data-feather='file' class="w-5 mr-2")
+                                                                            | fullcalender.js 
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex font-gray-500")
+                                                                            i(data-feather='file' class="w-5 mr-2")
+                                                                            | grid-list-view.js 
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex font-gray-500")
+                                                                            i(data-feather='file' class="w-5 mr-2")
+                                                                            | icon-copy.js 
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex font-gray-500")
+                                                                            i(data-feather='file' class="w-5 mr-2")
+                                                                            | jkanban-custom.js
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex font-gray-500")
+                                                                            i(data-feather='file' class="w-5 mr-2")
+                                                                            | jkanban.min.js 
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex font-gray-500")
+                                                                            i(data-feather='file' class="w-5 mr-2")
+                                                                            | macy.js
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex font-gray-500")
+                                                                            i(data-feather='file' class="w-5 mr-2")
+                                                                            | macy.min.js 
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex font-gray-500")
+                                                                            i(data-feather='file' class="w-5 mr-2")
+                                                                            | otp.js 
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex font-gray-500")
+                                                                            i(data-feather='file' class="w-5 mr-2")
+                                                                            | prism.js 
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex font-gray-500")
+                                                                            i(data-feather='file' class="w-5 mr-2")
+                                                                            | script.js 
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex font-gray-500")
+                                                                            i(data-feather='file' class="w-5 mr-2")
+                                                                            | sidebar.js
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex font-gray-500")
+                                                                            i(data-feather='file' class="w-5 mr-2")
+                                                                            | text-editor.js
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex font-gray-500")
+                                                                            i(data-feather='file' class="w-5 mr-2")
+                                                                            | todo-app.js 
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex font-gray-500")
+                                                                            i(data-feather='file' class="w-5 mr-2")
+                                                                            | user-profile-custom.js
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex font-gray-500")
+                                                                            i(data-feather='file' class="w-5 mr-2")
+                                                                            | validation.init.js 
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex font-gray-500")
+                                                                            i(data-feather='file' class="w-5 mr-2")
+                                                                            | vector-map-custom.js 
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex font-gray-500")
+                                                                            i(data-feather='file' class="w-5 mr-2")
+                                                                            | vectormap.js 
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex font-gray-500")
+                                                                            i(data-feather='file' class="w-5 mr-2")
+                                                                            | wow-custom.js 
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex font-gray-500")
+                                                                            i(data-feather='file' class="w-5 mr-2")
+                                                                            | wow.js
+
+                                                            li(class="relative sec-line")     
+                                                                a(class="flex text-primary")
+                                                                    i(data-feather='folder' class="w-5 mr-2") 
+                                                                    | postcss
+
+                                                                ul(class="relative tree-content")
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex text-primary")
+                                                                            i(data-feather='folder' class="w-5 mr-2")
+                                                                            | base
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex text-primary")
+                                                                            i(data-feather='folder' class="w-5 mr-2")
+                                                                            | components 
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex text-primary")
+                                                                            i(data-feather='folder' class="w-5 mr-2")
+                                                                            | layout
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex text-primary")
+                                                                            i(data-feather='folder' class="w-5 mr-2")
+                                                                            | pages
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex text-primary")
+                                                                            i(data-feather='folder' class="w-5 mr-2")
+                                                                            | utils
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex font-gray-500")
+                                                                            i(data-feather='file' class="w-5 mr-2")
+                                                                            | style.css
+
+                                                            li(class="relative sec-line")     
+                                                                a(class="flex text-primary")
+                                                                    i(data-feather='folder' class="w-5 mr-2") 
+                                                                    | pug
+
+                                                                ul(class="relative four-content")
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex text-primary")
+                                                                            i(data-feather='folder' class="w-5 mr-2")
+                                                                            | components 
+
+                                                                        ul(class="relative five-content")
+                                                                            li.block.hed-4-folder
+                                                                                a(class="flex text-primary")
+                                                                                    i(data-feather='folder' class="w-5 mr-2")
+                                                                                    | table 
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex text-primary")
+                                                                            i(data-feather='folder' class="w-5 mr-2")
+                                                                            | data 
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex text-primary")
+                                                                            i(data-feather='folder' class="w-5 mr-2")
+                                                                            | layout 
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex text-primary")
+                                                                            i(data-feather='folder' class="w-5 mr-2")
+                                                                            | mixin 
+
+                                                                    li.block.hed-2-folder
+                                                                        a(class="flex text-primary")
+                                                                            i(data-feather='folder' class="w-5 mr-2")
+                                                                            | pages 
+
+                                                                        ul(class="relative five-content")
+                                                                            li.block.hed-4-folder
+                                                                                a(class="flex text-primary")
+                                                                                    i(data-feather='folder' class="w-5 mr-2")
+                                                                                    | document 
+
+                                                                            li.block.hed-4-folder
+                                                                                a(class="flex text-primary")
+                                                                                    i(data-feather='folder' class="w-5 mr-2")
+                                                                                    | starter_kit 
+
+                                                                            li.block.hed-4-folder
+                                                                                a(class="flex text-primary")
+                                                                                    i(data-feather='folder' class="w-5 mr-2")
+                                                                                    | template
+
+                                            div(class="relative tree-content")
+                                                div.block.hed-folder
+                                                    a(class="flex text-primary")
+                                                        i(data-feather='folder' class="w-5 mr-2")
+                                                        | node_modules
+
+                                            div(class="relative tree-content")
+                                                div.block.hed-folder
+                                                    a(class="flex font-gray-500")
+                                                        i(data-feather='file' class="w-5 mr-2")
+                                                        | gulpfile.js
+
+                                            div(class="relative tree-content")
+                                                div.block.hed-folder
+                                                    a(class="flex font-gray-500")
+                                                        i(data-feather='file' class="w-5 mr-2")
+                                                        | package-lock.json 
+
+                                            div(class="relative tree-content")
+                                                div.block.hed-folder
+                                                    a(class="flex font-gray-500")
+                                                        i(data-feather='file' class="w-5 mr-2")
+                                                        | package.json
+
+                                            div(class="relative tree-content")
+                                                div.block.hed-folder
+                                                    a(class="flex font-gray-500")
+                                                        i(data-feather='file' class="w-5 mr-2")
+                                                        | postcss.config.js 
+
+                                            div(class="relative tree-content")
+                                                div.block.hed-folder
+                                                    a(class="flex font-gray-500")
+                                                        i(data-feather='file' class="w-5 mr-2")
+                                                        | tailwind.config.js
+
+                // Page Body End 
+                div(class=`page-footer 3sm:!px-[10px] fixed bottom-0 xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300 sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap`) 
+                    p(class="text-xs font-semibold text-center text-content") Copyright 2023 © Govo theme by pixelstrap
+                    div.flex.items-center.gap-2 
+                        p(class="text-xs font-semibold text-center text-content") Hand crafted & made with
+                        i.fa-solid.fa-heart(class="stroke-danger h-[18px] w-[18px] text-danger")
+            include components/customizer
+
+        include components/footer-files

@@ -5,7 +5,6 @@ const fontCommon = {
   fontFamily: '"Nunito Sans", sans-serif',
   fontWeight: 600,
 };
-
 // mini Tool tip
 const toolTipMini = {
   enabled: true,

@@ -33,25 +33,25 @@ html(lang='en')
         // Sidebar End 
 
         // Page Body Start
-        div.page-body
+        div.page-body 
           div.grid.grid-cols-12.gap-card-gap
             div.col-span-12
-              div.relative
+              div.relative 
                 img(src="../../assets/images/svg/liness.svg" alt="lines" class="w-full rounded-5 min-h-[100px] max-h-[300px] object-cover drop-shadow-md")
                 div.absolute(class="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[40%] lg:max-w-[75%] xl:max-w-[50%]")
-                  h3(class="mb-4 text-[33px] font-extrabold text-title lg:text-lg dark:text-black") How Can I help you?
-                  div.search-box.relative
+                  h3(class="mb-4 text-[33px] font-extrabold text-title lg:text-lg dark:text-black rtl:flex rtl:justify-end rtl:items-center ") How Can I help you ? 
+                  div.search-box.relative 
                     input(class="border-border-light dark:border-border-dark dark:bg-sidebar-dark2 border rounded-5 w-full py-[11px] pl-[25px] pr-[55px] md:py-[5px] text-xs font-semibold text-title" placeholder="Type to Search..." type="search")       
-                    +SVG_ICON("Search","xl:hidden w-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] stroke-title top-1/2 -translate-y-1/2 right-[25px] absolute")
-                  div.relative
+                    +SVG_ICON("Search","xl:hidden w-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] stroke-title dark:stroke-white top-1/2 -translate-y-1/2 right-[25px] absolute ") 
+                  div.relative 
                     img(src="../../assets/images/svg/fiend.svg" alt="search-image" class="absolute bottom-[-63px] left-[94%] 6xl:w-[25%] lg:bottom-[-48px] 6xl:bottom-[-55px] xl:bottom-[-55px] w-[20%] xl:hidden")
-          div.grid.grid-cols-12.gap-card-gap.mt-6
+          div.grid.grid-cols-12.gap-card-gap.mt-6 
             div.col-span-3(class="4xl:col-span-4 lg:col-span-6 sm:col-span-12")
               div.card.p-0(class="hover:translate-y-[-5px] duration-500 hover:transition-all transition-all")
                 div.card-image
                   div.flex.justify-center.items-center
                     img(src="../../assets/images/knowledgebase/1.jpg" class="object-contain w-full min-h-full" alt="3D women")
-                div.card-body.flex.flex-col.gap-3.p-4.pt-0
+                div.card-body.flex.flex-col.gap-3.p-4.pt-0 
                   div.flex.justify-between
                     div.flex.gap-2.items-center.post-media
                       i(data-feather="heart" class="h-5 cursor-pointer stroke-content wish-like")
@@ -59,12 +59,12 @@ html(lang='en')
                       i(data-feather="send" class="h-5 cursor-pointer stroke-content")  
                     div
                       i(data-feather="bookmark" class="h-5 cursor-pointer stroke-content")
-                  div.divider.w-full
-                  div.flex.justify-between
+                  div.divider.w-full 
+                  div.flex.justify-between 
                     a(href="blog-grid.html" class="flex items-center gap-1")
-                      p.text-content(class="text-xs") Liked by  
-                      span.text-primary(class="text-xs") Yen and 242 Others  
-                    div.avatar-group.-space-x-4(class="2md:hidden sm:flex 2sm:hidden")
+                      p.text-content(class="text-xs") Liked by 
+                      span.text-primary(class="text-xs") Yen and 242 Others
+                    div.avatar-group.-space-x-4(class="2md:hidden sm:flex 2sm:hidden rtl:-space-x-6")
                       div.avatar.border-white(class='border-2 dark:border-border-dark hover:translate-y-[-5px] hover:ease hover:transition-all transition-all translate-y-0')
                         div.w-6.h-6
                           img(src='../../assets/images/avatar/15.jpg' alt='avatar')
@@ -98,7 +98,7 @@ html(lang='en')
                     a(href="blog-grid.html" class="flex items-center gap-1")
                       p.text-content(class="text-xs") Liked by  
                       span.text-primary(class="text-xs") Wilt and 126 Others  
-                    div.avatar-group.-space-x-4(class="2md:hidden sm:flex 2sm:hidden")
+                    div.avatar-group.-space-x-4(class="2md:hidden sm:flex 2sm:hidden rtl:-space-x-6")
                       div.avatar.border-white(class='border-2 dark:border-border-dark hover:translate-y-[-5px] hover:ease hover:transition-all transition-all translate-y-0')
                         div.w-6.h-6
                           img(src='../../assets/images/avatar/15.jpg' alt='avatar')
@@ -132,7 +132,7 @@ html(lang='en')
                     a(href="blog-grid.html" class="flex items-center gap-1")
                       p.text-content(class="text-xs") Liked by  
                       span.text-primary(class="text-xs") Bran and 186 Others  
-                    div.avatar-group.-space-x-4(class="2md:hidden sm:flex 2sm:hidden")
+                    div.avatar-group.-space-x-4(class="2md:hidden sm:flex 2sm:hidden rtl:-space-x-6")
                       div.avatar.border-white(class='border-2 dark:border-border-dark hover:translate-y-[-5px] hover:ease hover:transition-all transition-all translate-y-0')
                         div.w-6.h-6
                           img(src='../../assets/images/avatar/22.jpg' alt='avatar')
@@ -166,7 +166,7 @@ html(lang='en')
                     a(href="blog-grid.html" class="flex items-center gap-1")
                       p.text-content(class="text-xs") Liked by  
                       span.text-primary(class="text-xs") Dou and 96 Others  
-                    div.avatar-group.-space-x-4(class="2md:hidden sm:flex 2sm:hidden")
+                    div.avatar-group.-space-x-4(class="2md:hidden sm:flex 2sm:hidden rtl:-space-x-6")
                       div.avatar.border-white(class='border-2 dark:border-border-dark hover:translate-y-[-5px] hover:ease hover:transition-all transition-all translate-y-0')
                         div.w-6.h-6
                           img(src='../../assets/images/avatar/15.jpg' alt='avatar')
@@ -200,7 +200,7 @@ html(lang='en')
                     a(href="blog-grid.html" class="flex items-center gap-1")
                       p.text-content(class="text-xs") Liked by  
                       span.text-primary(class="text-xs") Bets and 154 Others 
-                    div.avatar-group.-space-x-4(class="2md:hidden sm:flex 2sm:hidden")
+                    div.avatar-group.-space-x-4(class="2md:hidden sm:flex 2sm:hidden rtl:-space-x-6")
                       div.avatar.border-white(class='border-2 dark:border-border-dark hover:translate-y-[-5px] hover:ease hover:transition-all transition-all translate-y-0')
                         div.w-6.h-6
                           img(src='../../assets/images/avatar/1.jpg' alt='avatar')
@@ -234,7 +234,7 @@ html(lang='en')
                     a(href="blog-grid.html" class="flex items-center gap-1")
                       p.text-content(class="text-xs") Liked by  
                       span.text-primary(class="text-xs") Robed and 198 Others 
-                    div.avatar-group.-space-x-4(class="2md:hidden sm:flex 2sm:hidden")
+                    div.avatar-group.-space-x-4(class="2md:hidden sm:flex 2sm:hidden rtl:-space-x-6")
                       div.avatar.border-white(class='border-2 dark:border-border-dark hover:translate-y-[-5px] hover:ease hover:transition-all transition-all translate-y-0')
                         div.w-6.h-6
                           img(src='../../assets/images/avatar/5.jpg' alt='avatar')
@@ -268,7 +268,7 @@ html(lang='en')
                     a(href="blog-grid.html" class="flex items-center gap-1")
                       p.text-content(class="text-xs") Liked by  
                       span.text-primary(class="text-xs") Virga and 126 Others 
-                    div.avatar-group.-space-x-4(class="2md:hidden sm:flex 2sm:hidden")
+                    div.avatar-group.-space-x-4(class="2md:hidden sm:flex 2sm:hidden rtl:-space-x-6")
                       div.avatar.border-white(class='border-2 dark:border-border-dark hover:translate-y-[-5px] hover:ease hover:transition-all transition-all translate-y-0')
                         div.w-6.h-6
                           img(src='../../assets/images/avatar/11.jpg' alt='avatar')
@@ -300,9 +300,9 @@ html(lang='en')
                   div.divider.w-full
                   div.flex.justify-between
                     a(href="blog-grid.html" class="flex items-center gap-1")
-                      p.text-content(class="text-xs") Liked by  
-                      span.text-primary(class="text-xs") Brent and 126 Others
-                    div.avatar-group.-space-x-4(class="2md:hidden sm:flex 2sm:hidden")
+                      p.text-content(class="text-xs") Liked by 
+                      span.text-primary(class="text-xs") Brent and 126 Others 
+                    div.avatar-group.-space-x-4(class="2md:hidden sm:flex 2sm:hidden rtl:-space-x-6")
                       div.avatar.border-white(class='border-2 dark:border-border-dark hover:translate-y-[-5px] hover:ease hover:transition-all transition-all translate-y-0')
                         div.w-6.h-6
                           img(src='../../assets/images/avatar/10.jpg' alt='avatar')

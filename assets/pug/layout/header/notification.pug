@@ -11,13 +11,13 @@ div.dropdown
       button(class="font-medium text-primary text-3xs") 
         | Mark All As Read
     div.search-box.relative.mt-4 
-      input(class="bg-gray-light border dark:bg-sidebar-dark2 dark:border-border-dark border-border-light w-full py-[8px] pl-[15px] pr-[30px] rounded-5 text-xs font-medium text-title" placeholder="Type to Search..." type="search")       
+      input(class="bg-gray-light border dark:bg-sidebar-dark2  dark:border-border-dark border-border-light  w-full py-[8px] pl-[15px] pr-[30px] rounded-5 text-xs font-medium text-title" placeholder="Type to Search..." type="search")       
       +SVG_ICON("Search","w-4 h-4 stroke-title top-1/2 -translate-y-1/2 right-[15px] absolute")     
     ul(class="mt-4 flex flex-col max-h-[232px] overflow-auto custom-scroll") 
       each chat in NOTIFICATION
         li.flex.items-center.gap-3(class="px-2 py-3 transition-all duration-300 border-b last:border-b-0 dark:hover:bg-sidebar-dark2 border-border-light hover:bg-gray-light rounded-5")
           a.flex.items-center(href="./chat.html" class="gap-[12px]")
-            div.indicator
+            div.indicator 
               span.chat-status(class=`status-${chat.status}`)
               div.avatar
                 div.w-10.rounded-full.h-10(class="xl:w-9 xl:h-9")

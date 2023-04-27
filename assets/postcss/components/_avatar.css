@@ -1,10 +1,10 @@
 /*=====================
-    Avatar CSS
+  3.2  Avatar Css
   ==========================*/
 @layer components {
   .avatar-group {
     @apply flex;
-  }
+}
   .avatar {
     @apply aspect-square block overflow-hidden rounded-full;
     img {

@@ -1,0 +1,213 @@
+//- sidebar
+-var sidebar = true;
+
+//- feather
+-var feather= true;
+
+//- fontAwesome 
+-var fontAwesome = true;
+
+//- customSelect
+-var customSelect= true;
+
+//- customizer
+-var customizer=true;
+
+//- Breadcrumbs
+-var pageTitle="Govo";
+-var breadcrumb=['App List'];
+
+//- mixin
+include components/mixin/mixin 
+
+doctype html
+html(lang='en')  
+    include components/header-files 
+    body(dir="ltr" class="unique-skin") 
+        main.page-wrapper
+            div.page-body-wrapper(class="xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+                header.fixed.top-0(class="z-[6] xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto")
+                    div.page-header(class="w-full transition-all bg-white shadow-header dark:bg-sidebar-dark")
+                        include components/header  
+                        div(class="py-[14px] border-t border-border-light px-body-space dark:border-border-dark") 
+                            div.relative.flex.items-center.justify-end(class="lg:justify-start")
+                                div.flex.items-center(class="gap-[14px]")
+                                    // Breadcrumbs Start 
+                                    +breadcrumb(['App List'])
+                                    // Breadcrumbs End 
+                                    div.custom-select.select-style-1(class="lg:hidden dark:text-title")
+                                        select(class="dark:text-title")
+                                            option(selected value="") Last 7 Days 
+                                            option(value="") Last 2 Weeks 
+                                            option(value="") Last 1 Month 
+                                            option(value="") Last 3 Month     
+
+                // Sidebar Start 
+                div.page-sidebar.sidebar-dark.unique-sidebar
+                    include components/unique
+                // Sidebar End
+                // Page Body Start
+                div.page-body
+                    div.grid.grid-cols-12.gap-card-gap 
+                        div.card.col-span-12     
+                            div.card-header.pb-2.header-bottom-border
+                                h3.text-lg.font-bold App list
+                                p Follow the below steps to use the apps
+                            div.card-body 
+                                div.flex.flex-col.gap-5 
+                                    div
+                                        h6(class="flex justify-between font-semibold")
+                                            | 1. Chat App
+                                            span(class="flex leading-none text-end")
+                                                a(class="flex items-center gap-1 btn btn-outline btn-xs btn-primary dark:bg-sidebar-dark" target="_blank" href="https://admin.pixelstrap.com/govo/html/template/chat-app.html") Preview Link
+                                                    i(data-feather="arrow-up-right" class="w-4 h-4")
+                                        p(class="mt-3 ml-2 text-sm")
+                                            | Follow the below steps to use the chat app
+                                        div(class="mt-3 ml-5 text-xs font-normal text-title")
+                                            | 1. Just put the following css in the file
+                                            div(class="p-4 mt-4 bg-gray-light dark:bg-sidebar-dark2 sm:ml-0 sm:p-2")   
+                                                div(class="overflow-auto text-sm text-dark sm:p-2")
+                                                    pre(class="text-xs")
+                                                        |&lt;link  rel=&quot;stylesheet&quot; href=&quot;../../assets/css/vendors/emoji-uikit.min.css&quot;/&gt;  
+                                                        |&lt;link  rel=&quot;stylesheet&quot; href=&quot;../../assets/css/vendors/photoswipe.css&quot;/&gt;  
+                                        div(class="mt-3 ml-5 text-xs font-normal text-title")
+                                            | 2. Just put the following script in the file                                        
+                                            div(class="p-4 mt-4 bg-gray-light dark:bg-sidebar-dark2 sm:ml-0 sm:p-2")
+                                                div(class="overflow-auto text-xs text-dark sm:p-2")
+                                                    pre(class="text-xs")
+                                                        |&lt;script  src=&quot;../../assets/js/emoji-picker/uikit.min.js&quot;&gt; &lt;/script&gt;
+                                                        |&lt;script  src=&quot;../../assets/js/emoji-picker/uikit-icons.min.js&quot;&gt; &lt;/script&gt;
+                                                        |&lt;script  src=&quot;../../assets/js/emoji-picker/vanillaEmojiPicker.js&quot;&gt; &lt;/script&gt;
+                                                        |&lt;script  src=&quot;../../assets/js/emoji-picker/emojiPicker-custom.js&quot;&gt; &lt;/script&gt;       
+                                                        |&lt;script  src=&quot;../../assets/js/photoswipe/photoswipe-lightbox.esm.js&quot;&gt; &lt;/script&gt;       
+                                                        |&lt;script  src=&quot;../../assets/js/photoswipe/photoswipe-custom.js&quot;&gt; &lt;/script&gt;       
+                                                        |&lt;script  src=&quot;../../assets/js/swiper-slider/swiper-bundle.min.js&quot;&gt; &lt;/script&gt;       
+                                                        |&lt;script  src=&quot;../../assets/js/swiper-slider/swiper-slider-page.js&quot;&gt; &lt;/script&gt;       
+                                                        |&lt;script  src=&quot;../../assets/js/chat-app/chat-app-page.js&quot;&gt; &lt;/script&gt;       
+                                    div
+                                        h6(class="flex justify-between font-semibold")
+                                            | 2. Calendar App
+                                            span(class="flex text-end")
+                                                a(class="flex items-center gap-1 btn btn-outline btn-xs btn-primary dark:bg-sidebar-dark" target="_blank" href="https://admin.pixelstrap.com/roxo/html/template/calender.html") Preview link
+                                                    i(data-feather="arrow-up-right" class="w-4 h-4")
+
+                                        p(class="mt-3 ml-2 text-sm")
+                                            | Follow the below steps to use the calendar
+                                        div(class="mt-3 ml-5 text-xs font-normal text-title")
+                                            | 1. Just put the following css in the file
+                                            div(class="p-4 mt-4 bg-gray-light dark:bg-sidebar-dark2 sm:ml-0 sm:p-2")
+                                                div(class="overflow-auto text-sm text-dark sm:p-2")
+                                                    pre(class="text-xs")
+                                                        |&lt;link  rel=&quot;stylesheet&quot; href=&quot; ../../assets/css/vendors/calendar.css&quot;/&gt;  
+                                        div(class="mt-3 ml-5 text-xs font-normal text-title")
+                                            | 2. Just put the following script in the file
+                                            div(class="p-4 mt-4 bg-gray-light dark:bg-sidebar-dark2 sm:ml-0 sm:p-2")
+                                                div(class="overflow-auto text-sm text-dark sm:p-2")
+                                                    pre(class="text-xs")
+                                                        |&lt;script  src=&quot;../../assets/js/calender/initialize.js&quot;&gt; &lt;/script&gt;    
+                                                        |&lt;script  src=&quot;../../assets/js/calender/main.min.js&quot;&gt; &lt;/script&gt;  
+                                    div
+                                        h6(class="flex justify-between font-semibold") 
+                                            | 3. Ecommerce App
+                                            span(class="flex text-end")
+                                                a(class="flex items-center gap-1 btn btn-outline btn-xs btn-primary dark:bg-sidebar-dark" target="_blank" href="https://admin.pixelstrap.com/roxo/html/template/shop.html") Preview link
+                                                    i(data-feather="arrow-up-right" class="w-4 h-4")
+                                        p(class="mt-3 ml-2 text-sm")
+                                            | Follow the below steps to use the ecommerce
+                                        div(class="mt-3 ml-5 text-xs font-normal text-title")
+                                            | 1. Just put the following css in the file
+                                            div(class="p-4 mt-4 bg-gray-light dark:bg-sidebar-dark2 sm:ml-0 sm:p-2")
+                                                div(class="overflow-auto text-sm text-dark sm:p-2")
+                                                    pre(class="text-xs")
+                                                        |&lt;link  rel=&quot;stylesheet&quot; href=&quot; ../../assets/css/vendors/swiper-bundle.min.css&quot;/&gt;  
+                                        div(class="mt-3 ml-5 text-xs font-normal text-title")
+                                            | 2. Just put the following script in the file
+                                            div(class="p-4 mt-4 bg-gray-light dark:bg-sidebar-dark2 sm:ml-0 sm:p-2")
+                                                div(class="overflow-auto text-sm text-dark sm:p-2")
+                                                    pre(class="text-xs")
+                                                        |&lt;script  src=&quot;../../assets/js/chart/apex-chart/apex-chart.js&quot;&gt; &lt;/script&gt;    
+                                                        |&lt;script  src=&quot;../../assets/js/chart/apex-chart/apex-tooltip.js&quot;&gt; &lt;/script&gt;  
+                                                        |&lt;script  src=&quot;../../assets/js/chart/apex-chart/ecommerce-dashboard.js&quot;&gt; &lt;/script&gt;
+                                                        |&lt;script  src=&quot;../../assets/js/swiper-slider/swiper-bundle.min.js&quot;&gt; &lt;/script&gt;
+                                                        |&lt;script  src=&quot;../../assets/js/swiper-slider/ecommerce-dashboard.js&quot;&gt; &lt;/script&gt;
+                                    div
+                                        h6(class="flex justify-between font-semibold") 
+                                            | 4. Email App
+                                            span(class="flex text-end")
+                                                a(class="flex items-center gap-1 btn btn-outline btn-xs btn-primary dark:bg-sidebar-dark" target="_blank" href="https://admin.pixelstrap.com/roxo/html/template/shop.html") Preview link
+                                                    i(data-feather="arrow-up-right" class="w-4 h-4")
+                                        p(class="mt-3 ml-2 text-sm")
+                                            | Follow the below steps to use the email
+                                        div(class="mt-3 ml-5 text-xs font-normal text-title")
+                                            | 1. Just put the following css in the file
+                                            div(class="p-4 mt-4 bg-gray-light dark:bg-sidebar-dark2 sm:ml-0 sm:p-2")
+                                                div(class="overflow-auto text-sm text-dark sm:p-2")
+                                                    pre(class="text-xs")
+                                                        |&lt;link  rel=&quot;stylesheet&quot; href=&quot;../../assets/css/vendors/filepond/filepond.css&quot;/&gt;  
+                                                        |&lt;link  rel=&quot;stylesheet&quot; href=&quot;../../assets/css/vendors/filepond/filepond-plugin-image-preview.css&quot;/&gt;  
+                                        div(class="mt-3 ml-5 text-xs font-normal text-title")
+                                            | 2. Just put the following script in the file
+                                            div(class="p-4 mt-4 bg-gray-light dark:bg-sidebar-dark2 sm:ml-0 sm:p-2")
+                                                div(class="overflow-auto text-sm text-dark sm:p-2")
+                                                    pre(class="text-xs")
+                                                        |&lt;script  src=&quot;../../assets/js/filepond/filepond-plugin-image-preview.js&quot;&gt; &lt;/script&gt;  
+                                                        |&lt;script  src=&quot;../../assets/js/filepond/filepond-plugin-file-rename.js&quot;&gt; &lt;/script&gt;
+                                                        |&lt;script  src=&quot;../../assets/js/filepond/filepond-plugin-image-transform.js&quot;&gt; &lt;/script&gt;
+                                                        |&lt;script  src=&quot;../../assets/js/filepond/filepond.js&quot;&gt; &lt;/script&gt;
+                                                        |&lt;script  src=&quot;../../assets/js/filepond/filepond-custom.js&quot;&gt; &lt;/script&gt;    
+                                                        |&lt;script  src=&quot;../../assets/js/email-app/email-app-page.js&quot;&gt; &lt;/script&gt;    
+                                    div
+                                        h6(class="flex justify-between font-semibold") 
+                                            | 5. Kanban Board App
+                                            span(class="flex text-end")
+                                                a(class="flex items-center gap-1 btn btn-outline btn-xs btn-primary dark:bg-sidebar-dark" target="_blank" href="https://admin.pixelstrap.com/roxo/html/template/kanban-board.html") Preview link
+                                                    i(data-feather="arrow-up-right" class="w-4 h-4")
+
+                                        p(class="mt-3 ml-2 text-sm")
+                                            | Follow the below steps to use the kanban board
+                                        div(class="mt-3 ml-5 text-xs font-normal text-title")
+                                            | 1. Just put the following css in the file
+                                            div(class="p-4 mt-4 bg-gray-light dark:bg-sidebar-dark2 sm:ml-0 sm:p-2")
+                                                div(class="overflow-auto text-sm text-dark sm:p-2")
+                                                    pre(class="text-xs")
+                                                        |&lt;link  rel=&quot;stylesheet&quot; href=&quot; ../../assets/css/vendors/jkanban.min.css &quot;/&gt;  
+                                        div(class="mt-3 ml-5 text-xs font-normal text-title")
+                                            | 2. Just put the following script in the file
+                                            div(class="p-4 mt-4 bg-gray-light dark:bg-sidebar-dark2 sm:ml-0 sm:p-2")
+                                                div(class="overflow-auto text-sm text-dark sm:p-2")
+                                                    pre(class="text-xs")
+                                                        |&lt;script  src=&quot;../../assets/js/jkanban.min.js&quot;&gt; &lt;/script&gt;
+                                                        |&lt;script  src=&quot;../../assets/js/jkanban-custom.js&quot;&gt; &lt;/script&gt;
+                                    div
+                                        h6(class="flex justify-between font-semibold") 
+                                            | 6. Todo App
+                                            span(class="flex text-end")
+                                                a(class="flex items-center gap-1 btn btn-outline btn-xs btn-primary dark:bg-sidebar-dark" target="_blank" href="https://admin.pixelstrap.com/roxo/html/template/todo-app.html") Preview link
+                                                    i(data-feather="arrow-up-right" class="w-4 h-4") 
+
+                                        p(class="mt-3 ml-2 text-sm")
+                                            | Follow the below steps to use the todo app
+                                        div(class="mt-3 ml-5 text-xs font-normal text-title")
+                                            | 1. Just put the following script in the file
+                                            div(class="p-4 mt-4 bg-gray-light dark:bg-sidebar-dark2 sm:ml-0 sm:p-2")
+                                                div(class="overflow-auto text-sm text-dark sm:p-2")
+                                                    pre(class="text-xs")
+                                                        |&lt;script  src=&quot;src="../../assets/js/todo-app.js&quot;&gt; &lt;/script&gt;    
+                                    div
+                                        h6(class="flex justify-between font-semibold")
+                                            | 7. User App
+                                            span(class="flex text-end")
+                                                a(class="flex items-center gap-1 btn btn-outline btn-xs btn-primary dark:bg-sidebar-dark" target="_blank" href="https://admin.pixelstrap.com/roxo/html/template/blog-grid.html") Preview link
+                                                    i(data-feather="arrow-up-right" class="w-4 h-4")
+                                        p(class="mt-3 ml-2 text-sm")
+                                            | You don't need any css or js to use user 
+
+                // Page Body End 
+                div(class=`page-footer 3sm:!px-[10px] fixed bottom-0 xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300 sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap`) 
+                    p(class="text-xs font-semibold text-center text-content") Copyright 2023 © Govo theme by pixelstrap
+                    div.flex.items-center.gap-2 
+                        p(class="text-xs font-semibold text-center text-content") Hand crafted & made with
+                        i.fa-solid.fa-heart(class="stroke-danger h-[18px] w-[18px] text-danger")
+            include components/customizer
+
+    include components/footer-files

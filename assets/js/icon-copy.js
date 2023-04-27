@@ -11,15 +11,15 @@ iconWrapper.addEventListener('click', function (event) {
   const iconlyBulk = event.target.closest('.icon-bulk-event');
   const iconEl = iconBox.querySelector("i[class*='iconly-']");
   const iconBulkEl = iconBox.querySelector("span[class*='iconlyBulk-']");
-  const iconBulkCode = iconBulkEl?.outerHTML;
+  const iconBulkCode = iconBulkEl?.outerHTML; 
   const preCodeBulk = iconBulkCode?.replaceAll('<', '&lt;').replaceAll('>', '&gt;');
   const iconClass = iconEl?.classList.contains('icli') ? 'icli' : iconEl?.classList.contains('icbo') ? 'icbo' : '';
 
-  const fontAwesomeHtml = `<div class=" flex items-center justify-center rounded-5"> <i class="${iconName}"></i></div>
-              <div class="relative bg-white2-light copyParent  rounded-5 ">
+  const fontAwesomeHtml = `<div class=" flex items-center justify-center rounded-5"> <i class="${iconName} dark:text-white"></i></div>
+              <div class="relative bg-white2-light copyParent rounded-5">
                  <button class="btn copyBtn border-border-light !top-4 !right-[10px] dark:text-white dark:bg-sidebar-dark dark:hover:bg-sidebar-dark dark:hover:text-white"> <i data-feather="clipboard"></i></button>
-                  <pre class="language-html !whitespace-pre-wrap custom-scroll overflow-auto dark:bg-sidebar-dark2"> <code>&lt;i class="${iconName}"&gt;&lt;/i&gt; </code></pre>
-               </div>
+                  <pre class="language-html !whitespace-pre-wrap custom-scroll overflow-auto dark:bg-sidebar-dark2"> <code class=" dark:text-white">&lt;i class="${iconName} dark:text-white"&gt;&lt;/i&gt; </code></pre>
+               </div>  
             </div> `;
 
   const featherHtml = `<div class=" flex items-center justify-center rounded-5"> <i class="w-7 h-7 stroke-title" data-feather=${iconName}></i></div>
@@ -28,13 +28,11 @@ iconWrapper.addEventListener('click', function (event) {
                   <pre class="language-html !whitespace-pre-wrap custom-scroll overflow-auto dark:bg-sidebar-dark2"> <code>&lt;i data-feather="${iconName}"&gt;&lt;/i&gt; </code></pre>
                </div>
             </div> `;
-
-  const iconlyHtml = `
+  const iconlyHtml = ` 
             <div class="flex items-center justify-center rounded-5 "> 
                <svg class="w-6 h-6 stroke-title"> 
                     <use href="../../assets/svg/sprite.svg#${iconName}"></use>
-               </svg>
-              
+               </svg> 
              </div>
               <div class="relative bg-white2-light copyParent w-full overflow-auto rounded-5">
                  <button class="btn copyBtn border-border-light !top-4 ! !right-[10px]  dark:text-white dark:bg-sidebar-dark dark:hover:bg-sidebar-dark dark:hover:text-white"> <i data-feather="clipboard"></i></button>
@@ -52,13 +50,12 @@ iconWrapper.addEventListener('click', function (event) {
                </div>
             </div> 
         `;
-
   const html = `<div class="copy-box-wrapper z-10 fixed inset-0 flex items-center justify-center">
          <a class="fixed overlay-close inset-0 z-10 bg-black opacity-25" href="javascript:void(0)"></a>
           <div class="icon-modal z-20 relative group max-w-[50%] lg:max-w-[80%] sm:max-w-[90%]">
             <div class="shadow-2xl bg-white dark:bg-mode-300 flex flex-col rounded-5 items-center gap-3  p-5 relative dark:bg-sidebar-dark">
-            <span class="close-btn border-border-light absolute -top-3 -right-3 rtl:left-[-10px] rtl:right-unset flex items-center justify-center p-1 border shadow-md  rounded-full bg-white dark:bg-mode-200 dark:bg-sidebar-dark">
-               <i data-feather="x" class="stroke-title w-4 h-4"></i>
+            <span class="close-btn border-border-light absolute -top-3 -right-3 rtl:left-[-10px] rtl:right-unset flex items-center justify-center p-1 border shadow-md  rounded-full bg-white  dark:bg-sidebar-dark2">
+               <i data-feather="x" class="stroke-title w-4 h-4 dark:stroke-white"></i>
             </span>
             ${featherPage ? featherHtml : ''}
             ${iconlyNotBulk ? iconlyHtml : ''} 

@@ -1,0 +1,68 @@
+
+// Page sidebar start
+
+aside(class="sidebar")  
+  div.logo-wrapper
+    a(href="index.html") 
+      img(class="w-full full-sidebar" src="../../assets/images/logo/logo.png" alt="logo")
+      img(class="w-full icon-sidebar" src="../../assets/images/logo/logo-sort-1.png" alt="logo")
+    button.sidebar-btn
+      i(data-feather="grid" class="w-6 h-6")
+  div.search-wrapper
+    div.search-box 
+      input(class="search" placeholder="Search" type="search")
+      i(data-feather="search" class="w-6 h-6")
+  nav.sidebar-main 
+    ul.sidebar-links.custom-scroll
+      li.sidebar-list.file-structure
+        a(href="index.html").sidebar-link.sidebar-title
+          span    
+            i.fa-solid.fa-home(class="w-6 h-6")
+            span.sidebar-name Getting started
+      li.sidebar-list
+        a(href="file-structure.html").sidebar-link.sidebar-title
+          span    
+            i.fa-solid.fa-folder(class="w-6 h-6") 
+            span.sidebar-name File structure
+      li.sidebar-list
+        a(href="gulp.html").sidebar-link.sidebar-title 
+          span    
+            i.fa-solid.fa-briefcase(class="w-6 h-6")
+            span.sidebar-name Working with gulp
+      li.sidebar-list
+        a(href="tailwind.html").sidebar-link.sidebar-title 
+          span    
+            i.fa-solid.fa-briefcase(class="w-6 h-6")
+            span.sidebar-name Working with tailwind
+      li.sidebar-list
+        a(href="app-list.html").sidebar-link.sidebar-title 
+          span    
+            i.fa-solid.fa-clipboard-list(class="w-6 h-6") 
+            span.sidebar-name App List 
+      li.sidebar-list
+        a(href="layouts.html").sidebar-link.sidebar-title  
+          span    
+            i.fa-solid.fa-layer-group(class="w-6 h-6")
+            span.sidebar-name Layouts
+      li.sidebar-list
+        a(href="starter-kit/index.html").sidebar-link.sidebar-title  
+          span    
+            i.fa-solid.fa-ticket(class="w-6 h-6")
+            span.sidebar-name Starter kit
+      li.sidebar-list
+        a(href="remove-custo.html").sidebar-link.sidebar-title  
+          span    
+            i.fa-solid.fa-filter-circle-xmark(class="w-6 h-6")
+            span.sidebar-name Remove Customizer
+      li.sidebar-list
+        a(href="thank-you.html").sidebar-link.sidebar-title  
+          span    
+            i.fa-solid.fa-star(class="w-6 h-6")
+            span.sidebar-name Thank you
+      //- li.sidebar-list
+      //-     a(href="change-log.html").sidebar-link.sidebar-title  
+      //-         span    
+      //-             i.fa-solid.fa-chart-line(class="w-6 h-6")
+      //-             span.sidebar-name Change log
+
+// Page sidebar end   

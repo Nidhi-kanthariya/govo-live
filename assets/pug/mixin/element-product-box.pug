@@ -212,6 +212,51 @@ mixin product(data,modal,productmodal)
           p(class="dark:text-white").text-title.text-2xs.mt-2=data.delivery
 
 
+mixin ecoProduct(data)
+  .card.p-3(class="scale-0 hover:transition-all hover:ease-in-out group hover:scale-105 transform-none") 
+    .card-body
+      .relative
+        if (data.label)
+          span.badge.bg-secondary.badge-xs.absolute.font-bold(class="top-3 right-3.5 rounded-[3px] text-2xs")= data.label
+        div(class="absolute top-[-1px] left-[-10px] flex flex-col invisible gap-1 p-3 transition-all duration-300 ease-linear opacity-0 cursor-pointer group-hover:visible group-hover:opacity-100 group-hover:left-[-1px]")
+
+          a(href="wishlist.html" class="btn heart !p-0")
+            svg(width='0' height='0') 
+              linearGradient#lgrad(x1="0%" y1="50%" x2="100%" y2="50%")
+                stop(offset='0%' style='stop-color:rgb(255, 97, 80);stop-opacity:1.00')
+                stop(offset='100%' style='stop-color:rgb(255, 97, 80);stop-opacity:1.00')
+            i.fa-solid.fa-heart(class="flex items-center justify-center p-2 bg-white rounded-full")
+          a(href="cart.html" class="btn shopping-cart !p-0")
+            svg(width='0' height='0') 
+              linearGradient#grid(cx="50%" cy="50%" r="50%")
+                stop(offset='0%' style='stop-color:rgb(181 42 246);stop-opacity:1.00')
+                stop(offset='100%' style='stop-color:rgb(181 42 246);stop-opacity:1.00')
+              ellipse(cx='50%' cy='50%' rx='600' ry='200')
+            i.fa-solid.fa-cart-shopping(class="flex items-center justify-center p-2 bg-white rounded-full")
+          if (modal === "modal")
+            label.button-label.p-0.modal-eye(for='productmodal')
+              svg(width='0' height='0') 
+                radialGradient#rgrad(cx="50%" cy="50%" r="50%" )
+                  stop(offset='0%' style='stop-color:rgb(51, 191, 191);stop-opacity:1.00')
+                  stop(offset='100%' style='stop-color:rgb(51, 191, 191);stop-opacity:1.00')
+              i.fa-solid.fa-eye(class="flex items-center justify-center p-2 bg-white rounded-full")
+        a(href="product.html")
+          img(src=`../../assets/images/${data.image}` class="rounded-[4px] w-full" alt="product image")
+      div.pt-2 
+        a(href="product.html" class="flex flex-col gap-[0.3rem]")     
+          h4(class="dark:text-white").font-bold.text-sm.text-title.line-clamp-1= data.productName
+          div.flex.items-center(class="pt-0.5 gap-1")
+            span.text-lg.font-bold.text-primary= data.price
+            del.text-content3.text-sm= data.deletePrice
+            small.text-danger.font-sm=data.discount  
+          div.flex.items-center.gap-1
+            div.flex.items-center.gap-1.bg-warning.py-1.px-2.rounded-5.max-w-max
+              i(data-feather="star" class="w-[0.8rem] h-[0.8rem] stroke-white fill-white")
+              span(class="font-semibold leading-none text-white text-2xs mt-[3px]")= data.rate
+            span.text-content3.text-xs=data.rating
+          p(class="dark:text-white").text-title.text-2xs.mt-2=data.delivery
+
+
 
 
 

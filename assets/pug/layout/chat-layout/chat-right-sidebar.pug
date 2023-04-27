@@ -1,7 +1,7 @@
 
 // chat right sidebar start
 
-div.border-l.border-gray-light.tabs.flex-col.gap-0.right-sidebar-aside(class="rtl:border-l-0 rtl:border-r dark:bg-sidebar-dark dark:border-l dark:border-border-dark")
+div.border-l.border-gray-light.tabs.flex-col.gap-0.right-sidebar-aside(class="rtl:border-l-0 rtl:border-r dark:bg-sidebar-dark dark:border-border-dark")
   div.overflow-auto(class="h-full chat-sidebar-scroll custom-scroll carousel-scroll-hide") 
     div.p-4
       div.flex.items-center.justify-between
@@ -16,24 +16,24 @@ div.border-l.border-gray-light.tabs.flex-col.gap-0.right-sidebar-aside(class="rt
       div.social-media
         +social-mediadata(SOCIAL_MEDIA_DATA)
       div.social-detail.flex.flex-wrap.justify-center.items-center
-        div.following-data.flex.flex-col.justify-center.items-center.gap-1.font-semibold.pr-padding.border-r-2.border-border-light(class="border-r-2 dark:border-r-2 dark:border-border-dark rtl:border-r-0 rtl:border-l-2")
+        div.following-data.flex.flex-col.justify-center.items-center.gap-1.font-semibold.pr-padding.border-r-2.border-border-light(class="border-r-2 dark:border-r-2 dark:border-border-dark rtl:!border-r-0 rtl:border-l-2")
           span(class="text-xs leading-5") Following
           span(class="text-[13px] leading-[18px] text-content") 235k
         div.follower-data.flex.flex-col.justify-center.items-center.gap-1.font-semibold.pl-padding 
           span(class="text-xs leading-5") Follower
-          span(class="text-[13px] leading-[18px] text-content") 562k
+          span(class="text-[13px] leading-[18px] text-content") 562k 
     div.p-4.pb-0.tab-links.flex.justify-between
       button.tab.tab-lifted.w-full.pb-3.border-b.border-dashed.border-gray-light.tab-active.font-semibold.text-sm(data-tabFilter="1" class="tab-link leading-[22px] dark:border-b dark:border-border-dark") 
         p Image
       button.tab.tab-lifted.w-full.pb-3.border-b.border-dashed.border-gray-light.font-semibold.text-sm(data-tabFilter="2" class="tab-link leading-[22px] dark:border-b dark:border-border-dark") 
         p Document
       button.tab.tab-lifted.w-full.pb-3.border-b.border-dashed.border-gray-light.font-semibold.text-sm(data-tabFilter="3" class="tab-link leading-[22px] dark:border-b dark:border-border-dark")
-        p Link
-    div.tabs-content
+        p Link  
+    div.tabs-content 
       div(data-tabContent="1" class="tab-pan !p-0 !border-0 active show first:rounded-tl-none rounded-5")                                     
         div.px-4.pb-4.mt-4.overflow-auto(class="max-h-[268px] md:max-h-screen custom-scroll")
-          div#my-gallery.grid.grid-cols-12.gap-4.pswp-gallery
-            div.col-span-12
+          div#my-gallery.grid.grid-cols-12.gap-4.pswp-gallery 
+            div.col-span-12 
               a(href='../../assets/images/chat-app/1.jpg' data-pswp-width='1000' data-pswp-height='500' target='_blank')
                 img(src='../../assets/images/chat-app/1.jpg' alt="image-1" class="w-full max-h-[120px] rounded-[10px]")
             div.col-span-6
@@ -76,18 +76,16 @@ div.border-l.border-gray-light.tabs.flex-col.gap-0.right-sidebar-aside(class="rt
             div.flex.justify-center.items-center.gap-2
               +SVG_ICON("Call-Silent","w-5 h-5 stroke-title")
               h4.text-xs.font-medium.truncate.text-title(class="leading-none lg:text-2xs lg:leading-none") Block
-
         li(class="pt-[16px] first:pt-0 first:mt-0 first:border-none")                                 
-          div.flex.items-center.justify-between
-            div.flex.justify-center.items-center.gap-2
+          div.flex.items-center.justify-between 
+            div.flex.justify-center.items-center.gap-2 
               +SVG_ICON("Delete","w-5 h-5 stroke-secondary")
               h4.text-xs.font-medium.truncate.text-secondary(class="leading-none lg:text-2xs lg:leading-none") Delete
-
-    div.p-4.relative
+    div.p-4.relative 
       img(src='../../assets/images/chat-app/6.jpg' alt="more information" class="w-full h-[127px]")
       div.absolute(class="top-[50%] left-0 p-4 pl-8 -translate-y-1/2")
         h4(class="font-bold text-sm leading-[22px] w-[170px]") Get more information with 
-          span.font-extrabold PRO!
+          span.font-extrabold PRO! 
         button(class="text-[10px] leading-[14px] font-bold text-white py-[6px] px-[14px] bg-primary mt-2") Upgrade to PRO
 
 // chat right sidebar end

@@ -32,7 +32,7 @@ include ../../data/all-data
 //- mixin
 include ../../mixin/mixin
 
-doctype html
+doctype html 
 html(lang='en')
   include ../../layout/header-files 
   body(dir="ltr" class="unique-skin") 
@@ -50,15 +50,15 @@ html(lang='en')
             div.col-span-3(class="2xl:col-span-4")
               include ../../layout/chat-layout/chat-left-sidebar
             div.col-span-6(class="chat-main 2xl:col-span-8 lg:col-span-12 dark:bg-sidebar-dark") 
-              div.relative.main-wrapper(class="lg:h-[920px] sm:h-[670px]") 
-                div.p-4.pb-0 
+              div.relative.main-wrapper(class="lg:h-[920px] sm:h-[670px]")
+                div.p-4.pb-0  
                   include ../../layout/chat-layout/chat-main-header
                 div.h-full.relative(class="dark:bg-sidebar-dark")
-                  include ../../layout/chat-layout/chat-main
+                  include ../../layout/chat-layout/chat-main 
                 div.p-4.pt-0.absolute.bottom-0.left-0.right-0.mx-4.right-sidebar(class="lg:mb-5") 
                   include ../../layout/chat-layout/chat-main-footer
             div.col-span-3(class="2xl:col-span-4 dark:bg-sidebar-dark")
-              include ../../layout/chat-layout/chat-right-sidebar
+              include ../../layout/chat-layout/chat-right-sidebar 
         // Page Body End 
         +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
     include ../../components/customizer

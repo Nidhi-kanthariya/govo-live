@@ -1,5 +1,5 @@
 /*=====================
-    Form CSS
+  3.13  Form Css
   ==========================*/
 
 @layer components {
@@ -207,8 +207,12 @@
     width: calc(100% * var(--stepNumber));
 
     .page {
+      @apply bg-white dark:bg-sidebar-dark;
       width: calc(100% / var(--stepNumber));
       transition: margin-left 0.3s ease-in-out;
+      [dir="rtl"]{
+        transition: margin-rigth 0.3s ease-in-out;
+      }
 
       input.invalid-input {
         @apply border border-danger;
@@ -245,7 +249,7 @@
       }
 
       &:after {
-        @apply absolute content-[""] dark:bg-border-dark dark:left-full rtl:left-unset rtl:right-full bottom-1/2  h-[.125rem] w-[calc(57px_+_(227_-_57)_*_((100vw_-_320px)_/_(1920_-_320)))] md:w-[calc(65px_+_(581_-_65)_*_((100vw_-_320px)_/_(1920_-_320)))] 2xl:w-[calc(54px_+_(250_-_54)_*_((100vw_-_320px)_/_(1920_-_320)))] rtl:w-[calc(57px_+_(227_-_57)_*_((100vw_-_320px)_/_(1920_-_320)))] rtl:md:w-[calc(65px_+_(581_-_65)_*_((100vw_-_320px)_/_(1920_-_320)))] rtl:2xl:w-[calc(54px_+_(250_-_54)_*_((100vw_-_320px)_/_(1920_-_320)))] bg-title;
+        @apply absolute content-[""] dark:bg-border-dark dark:left-full bottom-1/2  h-[.125rem] left-[1.25rem] rtl:right-[1.25rem]  rtl:left-unset w-[calc(57px_+_(227_-_57)_*_((100vw_-_320px)_/_(1920_-_320)))] md:w-[calc(65px_+_(581_-_65)_*_((100vw_-_320px)_/_(1920_-_320)))] xl:w-[calc(54px_+_(250_-_54)_*_((100vw_-_320px)_/_(1920_-_320)))] rtl:xl:w-[calc(54px_+_(250_-_54)_*_((100vw_-_320px)_/_(1920_-_320)))] 2xl:w-[calc(54px_+_(210_-_54)_*_((100vw_-_320px)_/_(1920_-_320)))] rtl:w-[calc(57px_+_(227_-_57)_*_((100vw_-_320px)_/_(1920_-_320)))] rtl:md:w-[calc(65px_+_(581_-_65)_*_((100vw_-_320px)_/_(1920_-_320)))] rtl:2xl:w-[calc(54px_+_(210_-_54)_*_((100vw_-_320px)_/_(1920_-_320)))] bg-title;
       }
     }
     &:last-child {
@@ -264,6 +268,8 @@
     }
   }
 }
+
+
 
 @keyframes animate {
   100% {

@@ -1,5 +1,5 @@
 /*=====================
-    Ecommerce CSS
+  5.5  Ecommerce Css
   ==========================*/
 @layer components {
   .product-modal {
@@ -34,7 +34,8 @@
     }
   }
 
-  .shop-sidebar {
+  .shop-sidebar,
+  .blog-sidebar {
     @apply sm:w-[17.875rem] xl:opacity-0 xl:invisible xl:absolute xl:left-[-19.375rem] xl:top-0 xl:transition-all xl:z-[4] xl:duration-1000 xl:translate-x-[-19.375rem] xl:ease-in-out;
     &.show {
       @apply opacity-100 visible absolute top-0 left-0 z-[7] transition-all duration-1000 translate-x-0 ease-in-out;
@@ -47,17 +48,21 @@
         .card {
           @apply hover:scale-100;
           .card-body {
-            @apply flex gap-3;
+            @apply flex gap-3 sm:block;
             .relative {
               img {
-                @apply w-[18.75rem];
+                @apply w-[18.75rem] md:w-[15rem] sm:w-full;
               }
             }
           }
         }
       }
+      ul{
+        @apply flex flex-col sm:grid;
+      }
     }
   }
+
   .checkout-detail,
   .add-product,
   .invoice-preview {
@@ -184,7 +189,7 @@
             @apply mb-1;
           }
         }
-        .invoice-table {
+        .invoice-table { 
           thead {
             tr {
               th {

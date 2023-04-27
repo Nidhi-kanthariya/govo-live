@@ -52,7 +52,7 @@ html(lang='en')
                     div.preview-code.tab-links
                       button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
                       button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
-                div.card-body                                   
+                div.card-body
                   div.tabs-content
                     div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
                       div.flex.flex-wrap.gap-2
@@ -256,7 +256,7 @@ html(lang='en')
                     div.preview-code.tab-links
                       button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
                       button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
-                div.card-body                                   
+                div.card-body                
                   div.tabs-content
                     div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
                       div.flex.flex-wrap.gap-2
@@ -540,7 +540,7 @@ html(lang='en')
                           |                               &lt;/div&gt;
                           |                           &lt;/div&gt;
                           |                           &lt;div class="flex flex-col gap-1"&gt;
-                          |                               &lt;h3 class="text-xs font-bold leading-none dark:text-white  lg:text-2xs"&gt;Robot Caslin&lt;/h3&gt;
+                          |                               &lt;h3 class="text-xs font-bold leading-none dark:text-white lg:text-2xs"&gt;Robot Caslin&lt;/h3&gt;
                           |                               &lt;span class="text-content text-3xs"&gt;stroman.rogers@gmail.com&lt;/span&gt;
                           |                           &lt;/div&gt;
                           |                       &lt;/div&gt;
@@ -579,7 +579,7 @@ html(lang='en')
                 div.card-header.pb-2.header-bottom-border
                   div.flex.flex-col
                     h3(class="dark:text-white").text-lg.font-bold Vertical Boxed Tabs
-                    p(class="dark:text-content3")   Add vertical Boxed tabs using 
+                    p(class="dark:text-content3") Add vertical Boxed tabs using 
                       strong  .tab-boxed 
                       |   class.
                     div.preview-code.tab-links
@@ -674,20 +674,20 @@ html(lang='en')
                                 table.table.equal-space
                                   thead
                                     tr
-                                      th(scope='col' class="dark:text-content3") #
-                                      th(scope='col' class="dark:text-content3") Name
-                                      th(scope='col' class="dark:text-content3") Country
-                                      th(scope='col' class="dark:text-content3") Contact No
+                                      th(class="dark:text-content3") #
+                                      th(class="dark:text-content3") Name
+                                      th(class="dark:text-content3") Country
+                                      th(class="dark:text-content3") Contact No
                                   tbody
                                     tr 
-                                      th(scope='row' class="dark:text-white") 1
+                                      th(class="dark:text-white rtl:text-right") 1
                                       td(class="dark:text-white") Mrunali
                                       td(class="dark:text-white") India 
                                       td(class="dark:text-white") 5698741236 
                                     tr
-                                      th(scope='row' class="dark:text-white") 2
+                                      th(class="dark:text-white rtl:text-right rtl:pt-4") 2
                                       td(class="dark:text-white") Bright
-                                      td(class="dark:text-white") Thailand
+                                      td(class="dark:text-white") Thailand  
                                       td(class="dark:text-white") 7800030320  
                             div(data-tabContent="2" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
                               h3.font-bold.text-sm.mb-3(class="dark:text-white") Description:
@@ -695,9 +695,9 @@ html(lang='en')
                                 table.table.equal-space 
                                   thead
                                     tr
-                                      th(scope='col' class="dark:text-content3") Technology 
-                                      th(scope='col' class="dark:text-content3") Interest 
-                                      th(scope='col' class="dark:text-content3") Salary Expected 
+                                      th(class="dark:text-content3") Technology 
+                                      th(class="dark:text-content3") Interest 
+                                      th(class="dark:text-content3") Salary Expected 
                                   tbody
                                     tr
                                       td(class="dark:text-white ") Web Designer
@@ -712,16 +712,16 @@ html(lang='en')
                               div.overflow-auto.custom-scroll
                                 table.table.equal-space  
                                   thead
-                                    tr
-                                      th(scope='col' class="dark:text-content3") #
-                                      th(scope='col' class="dark:text-content3") Name
-                                      th(scope='col' class="dark:text-content3") Country
-                                      th(scope='col' class="dark:text-content3") Rating 
+                                    tr 
+                                      th(class="dark:text-content3") #
+                                      th(class="dark:text-content3") Name
+                                      th(class="dark:text-content3") Country
+                                      th(class="dark:text-content3 rtl:!text-end") Rating 
                                   tbody
-                                    tr
-                                      th(scope='row' class="dark:text-white") 1
+                                    tr 
+                                      th(class="dark:text-white rtl:text-right") 1
                                       td(class="dark:text-white") Mrunali
-                                      td(class="dark:text-white") India  
+                                      td(class="dark:text-white") India
                                       td(class="dark:text-white")
                                         div.flex.items-center.justify-end(class="gap-[2px]")
                                           i.fa-solid.fa-star(class="text-warning") 
@@ -729,39 +729,108 @@ html(lang='en')
                                           i.fa-solid.fa-star(class="text-warning")
                                           i.fa-solid.fa-star(class="text-warning")
                                     tr
-                                      th(scope='row' class="dark:text-white") 3
-                                      td(class="dark:text-white") Bright
-                                      td(class="dark:text-white") Thailand
+                                      th(class="dark:text-white rtl:text-right rtl:pt-4") 3
+                                      td(class="dark:text-white") Bright 
+                                      td(class="dark:text-white") Thailand 
                                       td
                                         div.flex.items-center.justify-end(class="gap-[2px]")
                                           i.fa-solid.fa-star(class="text-warning")
-                                          i.fa-solid.fa-star(class="text-warning")  
+                                          i.fa-solid.fa-star(class="text-warning")
                                           i.fa-solid.fa-star(class="text-warning")
                     div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
                       button.btn.copyBtn(class="dark:text-white dark:bg-sidebar-dark dark:hover:bg-sidebar-dark dark:hover:text-white")   
                         i(data-feather="clipboard")
                       pre(class="overflow-auto language-html custom-scroll dark:bg-sidebar-dark2")
-                        code(class="dark:bg-sidebar-dark2")
-                          |&lt;div class="flex flex-wrap gap-2"&gt;
-                          |   &lt;div class="flex-col w-full tabs"&gt;
-                          |       &lt;div class="flex mb-1 tab-links"&gt;
-                          |           &lt;button class="tab tabs-bordered tabs-bordered-bg tab-active tab-link" data-tabFilter="1"&gt; Users &lt;/button&gt;
-                          |           &lt;button class="tab tabs-bordered tabs-bordered-bg tab-link" data-tabFilter="2"&gt; Reviews &lt;/button&gt;
-                          |       &lt;/div&gt;
-                          |       &lt;div class="tabs-content"&gt;
-                          |           &lt;div data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
-                          |               &lt;p class="text-xs text-content3"&gt; Tabs are used ...attractive.&lt;/p&gt;  
-                          |           &lt;/div&gt;
-                          |           &lt;div data-tabContent="2" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
-                          |               &lt;p class="text-xs text-content3"&gt; We use tabs to ...attractive.&lt;/p&gt;  
-                          |           &lt;/div&gt;
-                          |           &lt;div data-tabContent="3" class="tab-pan fade group relative first:rounded-tl-none rounded-5 border-none !px-0 !pb-0"&gt; 
-                          |               &lt;p class="text-xs text-content3"&gt; We use tabs to ...attractive.&lt;/p&gt;  
-                          |           &lt;/div&gt;
-                          |       &lt;/div&gt;
-                          |   &lt;/div&gt; 
-                          |&lt;/div&gt;
-
+                        code(class="dark:bg-sidebar-dark2") 
+                          |  &lt;h3 class="mb-3 text-sm font-bold dark:text-white"&gt;User Detail:&lt;/h3&gt;
+                          |  &lt;div class="overflow-auto custom-scroll"&gt;&lt;/div&gt;
+                          |   &nbsp;&lt;table class="table equal-space"&gt;
+                          |      &lt;thead&gt;
+                          |        &lt;tr&gt;
+                          |          &lt;th class="dark:text-content3"&gt;#&lt;/th&gt;
+                          |          &lt;th class="dark:text-content3"&gt;Name&lt;/th&gt;
+                          |          &lt;th class="dark:text-content3"&gt;Country&lt;/th&gt;
+                          |          &lt;th class="dark:text-content3"&gt;Contact No&lt;/th&gt;
+                          |        &lt;/tr&gt;
+                          |      &lt;/thead&gt; 
+                          |      &lt;tbody&gt;
+                          |        &lt;tr&gt; 
+                          |          &lt;th class="dark:text-white rtl:text-right"&gt;1&lt;/th&gt;
+                          |            &lt;td class="dark:text-white"&gt;Mrunali&lt;/td&gt;
+                          |            &lt;td class="dark:text-white"&gt;India &lt;/td&gt;
+                          |            &lt;td class="dark:text-white"&gt;5698741236 &lt;/td&gt;
+                          |        &lt;/tr&gt;
+                          |        &lt;tr&gt;
+                          |          &lt;th class="dark:text-white rtl:text-right rtl:pt-4"&gt;2&lt;/th&gt;
+                          |            &lt;td class="dark:text-white"&gt;Bright&lt;/td&gt;
+                          |            &lt;td class="dark:text-white"&gt;Thailand &lt;/td&gt;
+                          |            &lt;td class="dark:text-white"&gt;7800030320 &lt;/td&gt;
+                          |        &lt;/tr&gt;
+                          |      &lt;/tbody&gt;
+                          |   &lt;/table&gt;
+                          |   &lt;h3 class="mb-3 text-sm font-bold dark:text-white"&gt;Description:&lt;/h3&gt;
+                          |   &lt;div class="overflow-auto custom-scroll"&gt;
+                          |     &lt;table class="table equal-space"&gt;
+                          |       &lt;thead&gt;
+                          |         &lt;tr&gt;
+                          |             &lt;th class="dark:text-content3"&gt;Technology &lt;/th&gt;
+                          |             &lt;th class="dark:text-content3"&gt;Interest &lt;/th&gt;
+                          |             &lt;th class="dark:text-content3"&gt;Salary Expected &lt;/th&gt;
+                          |         &lt;/tr&gt;
+                          |       &lt;/thead&gt;
+                          |       &lt;tbody&gt;
+                          |         &lt;tr&gt;
+                          |               &lt;td class="dark:text-white "&gt;Web Designer&lt;/td&gt;
+                          |               &lt;td class="dark:text-white"&gt;HTML,CSS,JS,SCSS&lt;/td&gt;
+                          |               &lt;td class="dark:text-white"&gt;45000&lt;/td&gt;
+                          |         &lt;/tr&gt;
+                          |         &lt;tr&gt;
+                          |             &lt;td class="dark:text-white"&gt;UX Designer&lt;/td&gt;
+                          |             &lt;td class="dark:text-white"&gt;Figma,Photoshop,craft&lt;/td&gt;
+                          |             &lt;td class="dark:text-white"&gt;20000&lt;/td&gt;
+                          |         &lt;/tr&gt;
+                          |       &lt;/tbody&gt;
+                          |     &lt;/table&gt;
+                          |   &lt;/div&gt;
+                          |   &lt;h3 class="mb-3 text-sm font-bold dark:text-white"&gt;Reviews:&lt;/h3&gt;
+                          |   &lt;div class="overflow-auto custom-scroll"&gt;
+                          |   &lt;table class="table equal-space"&gt; 
+                          |     &lt;thead&gt;
+                          |         &lt;tr&gt; 
+                          |             &lt;th class="dark:text-content3"&gt;#&lt;/th&gt;
+                          |             &lt;th class="dark:text-content3"&gt;Name&lt;/th&gt;
+                          |             &lt;th class="dark:text-content3"&gt;Country&lt;/th&gt;
+                          |             &lt;th class="dark:text-content3 rtl:!text-end"&gt;Rating &lt;/th&gt;
+                          |         &lt;/tr&gt;
+                          |     &lt;/thead&gt;
+                          |     &lt;tbody&gt;
+                          |       &lt;tr&gt; 
+                          |         &lt;th class="dark:text-white rtl:text-right"&gt;1&lt;/th&gt;
+                          |             &lt;td class="dark:text-white"&gt;Mrunali&lt;/td&gt;
+                          |             &lt;td class="dark:text-white"&gt;India&lt;/td&gt;
+                          |             &lt;td class="dark:text-white"&gt;
+                          |             &lt;div class="flex items-center justify-end gap-[2px]"&gt;
+                          |               &lt;i class="fa-solid fa-star text-warning"&gt; &lt;/i&gt;
+                          |               &lt;i class="fa-solid fa-star text-warning"&gt;&lt;/i&gt;
+                          |               &lt;i class="fa-solid fa-star text-warning"&gt;&lt;/i&gt;
+                          |               &lt;i class="fa-solid fa-star text-warning"&gt;&lt;/i&gt;
+                          |             &lt;/div&gt;
+                          |            &lt;/td&gt;
+                          |         &lt;/tr&gt;
+                          |       &lt;tr&gt;
+                          |       &lt;th class="dark:text-white rtl:text-right rtl:pt-4"&gt;3&lt;/th&gt;
+                          |         &lt;td class="dark:text-white"&gt;Bright &lt;/td&gt;
+                          |         &lt;td class="dark:text-white"&gt;Thailand &lt;/td&gt;
+                          |           &lt;td&gt;
+                          |             &lt;div class="flex items-center justify-end gap-[2px]"&gt;
+                          |               &lt;i class="fa-solid fa-star text-warning"&gt;&lt;/i&gt;
+                          |               &lt;i class="fa-solid fa-star text-warning"&gt;&lt;/i&gt;
+                          |               &lt;i class="fa-solid fa-star text-warning"&gt;&lt;/i&gt;
+                          |             &lt;/div&gt;
+                          |           &lt;/td&gt;
+                          |         &lt;/tr&gt;
+                          |       &lt;/tbody&gt;
+                          |   &lt;/table&gt;
             div.col-span-6(class="md:col-span-12")
               div.card.tabs
                 div.card-header.pb-2.header-bottom-border
@@ -769,7 +838,7 @@ html(lang='en')
                     h3(class="dark:text-white").text-lg.font-bold Tabs with Icons
                     p(class="dark:text-content3")   Adding icons inside the tabs with the help of 
                       strong .tabs 
-                      | class. 
+                      | class.
                     div.preview-code.tab-links
                       button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
                       button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
@@ -781,13 +850,13 @@ html(lang='en')
                           div.mb-1.tab-links.flex(class="3sm:justify-center")
                             button.tab.tabs-bordered.tabs-bordered-bg.secondary-bg.group(data-tabFilter="1" class="tab-link") 
                               +SVG_ICON("Home","w-[1.125rem] h-[1.125rem] stroke-title dark:stroke-white group-hover:stroke-secondary")
-                              |   Home
+                              |   Home 
                             button.tab.tabs-bordered.tabs-bordered-bg.secondary-bg.group(data-tabFilter="2" class="tab-link") 
                               +SVG_ICON("2-User","w-[1.125rem] h-[1.125rem] stroke-title dark:stroke-white group-hover:stroke-secondary")
-                              |   Profile
+                              |   Profile 
                             button.tab.tabs-bordered.tabs-bordered-bg.secondary-bg.group.tab-active(data-tabFilter="3" class="tab-link") 
                               +SVG_ICON("Document","w-[1.125rem] h-[1.125rem] stroke-title dark:stroke-white group-hover:stroke-secondary")
-                              |   Contact  
+                              |   Contact 
                           div.tabs-content 
                             div(data-tabContent="1" class="tab-pan fade group first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
                               p.text-xs.text-content3 Not constrained by geographical borders or states. Providing cutting-edge design and website development services for more than 12 years all over India. We offer full-service digital solutions, starting with developing your website or application and ending with timely and efficient renewal of services for domain, web hosting, email hosting, and other internet marketing.
@@ -803,7 +872,7 @@ html(lang='en')
                                     small.text-content3.text-xs flob@gmail.com
                                   span(class="dark:text-white").text-title.font-bold.text-xs Contact: 
                                     small.text-content3.text-xs 239-664-7751 
-                            div(data-tabContent="3" class="tab-pan fade  active show relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
+                            div(data-tabContent="3" class="tab-pan fade active show relative first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
                               div.flex.flex-col.gap-3.form-group
                                 div.flex.flex-col.gap-1
                                   label(for="email1").font-medium.text-xs.text-primary Email

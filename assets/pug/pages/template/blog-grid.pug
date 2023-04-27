@@ -13,6 +13,9 @@
 //- customizer
 -var customizer=true;
 
+//- gridListView
+-var gridListView=true;
+
 //-  macy
 -var macy= true;
 
@@ -41,17 +44,33 @@ html(lang='en')
         // Page Body Start 
         div.page-body
           div.grid.grid-cols-12.gap-card-gap
-            div.col-span-3(class="2xl:col-span-4 lg:col-span-12")
-              div.card.sticky.top-0.left-sidebar-aside(class="z-[4] lg:!absolute")
+            div.col-span-12.flex.items-center.justify-between.gap-3.bg-white.p-3.rounded-5(class="dark:bg-sidebar-dark") 
+              div.flex.items-center.gap-3 
+                label(for="sortby" class="text-xs min-w-max text-content3") Sort By                                    
+                select.form-select.block.w-full.px-3.text-xs.font-normal.text-content3.bg-white.bg-clip-padding.bg-no-repeat.border.border-border-light.rounded-5.transition.ease-in-out.m-0(class='min-w-[150px] 2md:min-w-[130px] py-[9px] dark:border-border-dark dark:bg-sidebar-dark2' id="sortby" aria-label='Default select example')
+                  option(selected='') All 
+                  option(value='1') Popular 
+                  option(value='2') Price Low
+                  option(value='3') Price Hight 
+              div.flex.items-center.gap-3  
+                div.search-box.relative(class="2md:hidden")
+                  input(class="rounded-5 w-full py-[11px] dark:bg-sidebar-dark2 dark:text-white pl-[25px] pr-[55px] rtl:pr-[25px] rtl:pl-[55px] text-xs font-semibold text-title border border-border-light dark:border-border-dark" placeholder="Type to Search..." type="search")       
+                  +SVG_ICON("Search","w-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] stroke-title top-1/2 -translate-y-1/2 right-[25px] rtl:right-unset rtl:left-[25px] absolute dark:stroke-white")
+                button
+                  +SVG_ICON("Search","2md:flex hidden w-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] stroke-title dark:stroke-white")
+                div.product-filter(class="hidden cursor-pointer lg:flex") 
+                  +SVG_ICON("Filter", "w-6 h-6 stroke-content3 lg:block hidden blog-toggle")
+            div.col-span-3(class="2xl:col-span-4 blog-sidebar lg:w-[290px] sm:w-[280px]")
+              div.card.sticky.top-0
                 div.card-header.border-b-0
-                  button(class="justify-end hidden mb-3 lg:flex left-sidebar-toggle absolute right-[-50px] top-[-16px] bg-gray-light p-2 ")   
+                  button(class="justify-end hidden mb-3 lg:flex blog-close-sidebar absolute right-[-50px] top-[-16px] bg-gray-light p-2 ")   
                     i(data-feather="x" class="w-5 h-5 stroke-title")
                   div.search-box.relative
                     input(class="rounded-full bg-gray-light dark:bg-sidebar-dark2 dark:text-white w-full py-[.6875rem] pl-[1.5625rem] pr-[3.4375rem] text-xs font-semibold text-title" placeholder="Type to Search..." type="search")       
                     +SVG_ICON("Search","w-6 h-6 stroke-title dark:stroke-white top-1/2 -translate-y-1/2 right-[1.5625rem] absolute")
-                div.card-body.flex.flex-col.gap-card-space                               
+                div.card-body.flex.flex-col.gap-card-space                            
                   div(class="p-3 border first:rounded-tl-none border-light dark:border-border-dark rounded-5")
-                    h2(class="mb-4 font-bold dark:text-white") Categories
+                    h4(class="mb-4 font-bold dark:text-white") Categories
                     ul.flex.flex-col.gap-2 
                       li.flex.items-center.justify-between(class="p-2 text-xs text-content rounded-5 group hover:bg-primary") 
                         a(href="blog-grid.html" class="group-hover:text-white")  Web designer Jobs
@@ -76,7 +95,7 @@ html(lang='en')
                         span(class="group-hover:text-white text-content") 54 
 
                   div(class="p-3 border first:rounded-tl-none border-light dark:border-border-dark rounded-5")
-                    h2(class="mb-4 font-bold dark:text-white") Tags
+                    h4(class="mb-4 font-bold dark:text-white") Tags
                     div(class="flex flex-wrap gap-3")
                       button(class="dark:bg-sidebar-dark2").btn.btn-outline.btn-primary.btn-sm.text-primary #jobs 
                       button(class="dark:bg-sidebar-dark2").btn.btn-outline.btn-secondary.btn-sm.text-secondary #business
@@ -87,10 +106,10 @@ html(lang='en')
                       button(class="dark:bg-sidebar-dark2").btn.btn-outline.btn-success.btn-sm.text-success #jobSearch
 
                   div(class="p-3 border first:rounded-tl-none border-light dark:border-border-dark rounded-5")
-                    h2(class="mb-4 font-bold dark:text-white") Latest Blogs
-                    ul.flex.flex-col.gap-1 
+                    h4(class="mb-4 font-bold dark:text-white") Latest Blogs
+                    ul.flex.flex-col.gap-1
                       li(class=" pt-[.8125rem]  first:pt-0 first:mt-0 first:border-none")                                 
-                        a.flex.items-center.gap-3(href="blog-grid.html" class="w-[calc(100%_-_0rem)] xl:gap-2")  
+                        a.flex.items-center.gap-3(href="blog-detail.html" class="w-[calc(100%_-_0rem)] xl:gap-2")  
                           div.avatar  
                             div.w-10.rounded-full.h-10(class="xl:h-9 xl:w-9") 
                               img(src='../../assets/images/avatar/25.jpg' alt='avatar')
@@ -98,7 +117,7 @@ html(lang='en')
                             h3.text-xs.font-bold.text-primary(class="leading-none lg:text-2xs") Angela R. Lear
                             span.text-content.mt-1.line-clamp-1 War taught me that not everything is glamorous.
                       li(class=" pt-[.8125rem]  first:pt-0 first:mt-0 first:border-none")                                 
-                        a.flex.items-center.gap-3(href="blog-grid.html" class="w-[calc(100%_-_0rem)] xl:gap-2")  
+                        a.flex.items-center.gap-3(href="blog-detail.html" class="w-[calc(100%_-_0rem)] xl:gap-2")  
                           div.avatar
                             div.w-10.rounded-full.h-10(class="xl:h-9 xl:w-9")
                               img(src='../../assets/images/avatar/15.jpg' alt='avatar')
@@ -106,7 +125,7 @@ html(lang='en')
                             h3.text-xs.font-bold.text-primary(class="leading-none lg:text-2xs") Marjorie W. Martin
                             span.text-content.mt-1.line-clamp-1 My aim is to make the poor look rich and the rich look poor.
                       li(class=" pt-[.8125rem]  first:pt-0 first:mt-0 first:border-none")                                 
-                        a.flex.items-center.gap-3(href="blog-grid.html" class="w-[calc(100%_-_0rem)] xl:gap-2")  
+                        a.flex.items-center.gap-3(href="blog-detail.html" class="w-[calc(100%_-_0rem)] xl:gap-2")  
                           div.avatar
                             div.w-10.rounded-full.h-10(class="xl:h-9 xl:w-9")
                               img(src='../../assets/images/avatar/6.jpg' alt='avatar')
@@ -114,17 +133,17 @@ html(lang='en')
                             h3.text-xs.font-bold.text-primary(class="leading-none lg:text-2xs") Russell P. Renfrew
                             span.text-content.mt-1.line-clamp-1 I think it would rob her of something.  
                       li(class=" pt-[.8125rem]  first:pt-0 first:mt-0 first:border-none")                                 
-                        a.flex.items-center.gap-3(href="blog-grid.html" class="w-[calc(100%_-_0rem)] xl:gap-2")  
+                        a.flex.items-center.gap-3(href="blog-detail.html" class="w-[calc(100%_-_0rem)] xl:gap-2")  
                           div.avatar
                             div.w-10.rounded-full.h-10(class="xl:h-9 xl:w-9")
-                              img(src='../../assets/images/avatar/27.jpg' alt='avatar')
+                              img(src='../../assets/images/avatar/27.jpg' alt='avatar') 
                           div(class="w-[calc(100%_-_3.125rem)]")
                             h3.text-xs.font-bold.text-primary(class="leading-none lg:text-2xs") Kevin A. Ek
                             span.text-content.mt-1.line-clamp-1 My aim is to make the poor look rich and the rich look poor.  
 
                   div(class="p-3 border first:rounded-tl-none dark:border-border-dark border-light rounded-5")
                     div(class="mb-[1.125rem]")
-                      h2(class="mb-2 font-bold dark:text-white") Subscriber
+                      h4(class="mb-2 font-bold dark:text-white") Subscriber
                       p(class="text-xs text-content") " To get more detail for new types of blogs "
                     form(class="m-0 theme-form") 
                       input(type="email" id="Email" class="dark:bg-sidebar-dark2 dark:text-white" placeholder="Enter your email" Name="Email" required)
@@ -132,168 +151,162 @@ html(lang='en')
 
             div.col-span-9(class="2xl:col-span-8 lg:col-span-12")
               div.grid.grid-cols-12.gap-card-gap
-                div.col-span-12(class="hidden lg:block")
-                  div.card 
-                    div.card-body 
-                      span.left-sidebar-hide-logo-show(class="items-center justify-end hidden lg:flex")
-                        +SVG_ICON("Category","w-5 h-5 stroke-title cursor-pointer hover:stroke-primary ml-auto left-sidebar-toggle-btn lg:block hidden")
-
-                div.col-span-12
-                  div.grid.grid-cols-12.gap-card-gap.w-full.masonryComponent
-                    div.col-span-4(class="2lg:col-span-6 sm:col-span-12 masonryItem")
+                div.col-span-12.product-wrapper-grid
+                  ul.grid.grid-cols-12.gap-card-gap.w-full.masonryComponent
+                    li.col-span-4.product-box(class="2lg:col-span-6 sm:col-span-12 masonryItem")
                       div.card.p-0.group
                         div.blog-img.overflow-hidden.card-image(class="rounded-tr-[0.625rem] rounded-tl-[0.625rem]")
-                          img(src='../../assets/images/blog/blog-contains.webp' class="duration-700 ease-in scale-100 group-hover:scale-125" alt='blog-img')
+                          img(src='../../assets/images/blog/blog-contains.jpg' class="duration-700 ease-in scale-100 group-hover:scale-125" alt='blog-img')
                         div.card-body.px-3.flex.flex-col.gap-4.pb-3
                           div.flex.justify-between.items-center
                             div.flex.items-start.justify-between.gap-2.items-center(class="pt-[13px] first:pt-0 first:mt-0 first:border-none")  
                               div.avatar
                                 div.w-10.rounded-full.h-10(class="xl:h-9 xl:w-9")
-                                  img(src='../../assets/images/avatar/20.jpg' alt='avatar')
+                                  img(src='../../assets/images/avatar/10.jpg' alt='avatar')
                               div
                                 a(href="blog-grid.html")
-                                  p.text-title.font-bold(class="dark:text-white") Mitchel P. Lawyer
+                                  p.text-title.font-bold(class="dark:text-white") Erin M. Baker
                                 span.text-content Feb 6,2023
                             i(data-feather="more-vertical" class="h-5 stroke-content")
                           div
-                            h5(class="mb-2 font-bold dark:text-white") Cracking The Code 
-                            p(class="text-content") Lining hemline knee burgundy satin finish concealed 
-                              |small buttons rayon. Wardrobe stylish fitted long sleeves pleats the  
+                            h5(class="mb-2 font-bold dark:text-white") Mobile App Development
+                            p(class="text-content") Mobile Simple log in – logging in to your website is easy
+                              | They have added a dedicated login page inside the app. 
                               a(href="blog-detail.html" class="text-secondary hover:underline").decoration-1 Read more...
                           div
                             div.divider.w-full
                             div.flex.items-center.justify-between.mt-3.post-media
                               span(class="text-content") 8k views
                               i(data-feather="heart" class="h-5 stroke-secondary wish-like")
-                    div.col-span-4(class="2lg:col-span-6 sm:col-span-12 masonryItem")  
+                    li.col-span-4.product-box(class="2lg:col-span-6 sm:col-span-12 masonryItem")  
                       div.card.p-0.group
                         div.blog-img.overflow-hidden(class="rounded-tr-[0.625rem] rounded-tl-[0.625rem]")
-                          img(src='../../assets/images/blog/robot.webp' class="duration-700 ease-in scale-100 group-hover:scale-125" alt='blog-img')
+                          img(src='../../assets/images/blog/robot.jpg' class="duration-700 ease-in scale-100 group-hover:scale-125" alt='blog-img')
                         div.card-body.px-3.flex.flex-col.gap-4.pb-3
                           div.flex.justify-between.items-center
                             div.flex.items-start.justify-between.gap-2.items-center(class="pt-[13px] first:pt-0 first:mt-0 first:border-none")
                               div.avatar 
-                                div.w-10.rounded-full.h-10(class="xl:h-9 xl:w-9")
+                                div.w-10.rounded-full.h-10(class="xl:h-9 xl:w-9") 
                                   img(src='../../assets/images/avatar/21.jpg' alt='avatar')
                               div
-                                a(href="blog-grid.html")
+                                a(href="blog-grid.html") 
                                   p.text-title.font-bold(class="dark:text-white") Amy A. Servants
                                 span.text-content Feb 2,2023
                             i(data-feather="more-vertical" class="h-5 stroke-content")
                           div
-                            h5(class="mb-2 font-bold dark:text-white") Take The Stress Out Of Code
-                            p(class="text-content") This could be used to hide someone's true
-                              | invasion of the Soviet Union was given the code name of Barbarossa  
+                            h5(class="mb-2 font-bold dark:text-white") Laptop and coffee
+                            p(class="text-content") This image captures the quintessential work setup - a laptop and a coffee cup.
+                              | The laptop screen is visible with some text and icons on it. 
                               a(href="blog-detail.html" class="text-secondary hover:underline").decoration-1 Read more...
                           div
                             div.divider.w-full 
                             div.flex.items-center.justify-between.mt-3.post-media
                               span(class="text-content") 2k views
                               i(data-feather="heart" class="h-5 stroke-secondary wish-like")
-                    div.col-span-4(class="2lg:col-span-6 sm:col-span-12 masonryItem")  
+                    li.col-span-4.product-box(class="2lg:col-span-6 sm:col-span-12 masonryItem")  
                       div.card.p-0.group
                         div.blog-img.overflow-hidden(class="rounded-tr-[0.625rem] rounded-tl-[0.625rem]")
-                          img(src='../../assets/images/blog/blog-contains3.webp' class="duration-700 ease-in scale-100 group-hover:scale-125" alt='blog-contains3')
+                          img(src='../../assets/images/blog/blog-contains3.jpg' class="duration-700 ease-in scale-100 group-hover:scale-125" alt='blog-contains3')
                         div.card-body.px-3.flex.flex-col.gap-4.pb-3
                           div.flex.justify-between.items-center
                             div.flex.items-start.justify-between.gap-2.items-center(class="pt-[13px] first:pt-0 first:mt-0 first:border-none")
                               div.avatar 
                                 div.w-10.rounded-full.h-10(class="xl:h-9 xl:w-9")
-                                  img(src='../../assets/images/avatar/38.jpg' alt='avatar')
+                                  img(src='../../assets/images/avatar/24.jpg' alt='avatar')
                               div
                                 a(href="blog-grid.html")
-                                  p.text-title.font-bold(class="dark:text-white") Keith K. Levitt 
+                                  p.text-title.font-bold(class="dark:text-white") Jackie M. Martin
                                 span.text-content Jan 30,2023
                             i(data-feather="more-vertical" class="h-5 stroke-content")
-                          div 
-                            h5(class="mb-2 font-bold dark:text-white") Why I Hate
-                            p(class="text-content") We’ll show you how Duads BI lets you use all of
-                              | connections to inject data into R and then visualize and interact with the   
+                          div
+                            h5(class="mb-2 font-bold dark:text-white") Publish Policy 
+                            p(class="text-content") The new rules(DSA)
+                              | classify companies with more than 45 million users as very 
                               a(href="blog-detail.html" class="text-secondary hover:underline").decoration-1 Read more...
                           div
                             div.divider.w-full 
                             div.flex.items-center.justify-between.mt-3.post-media
-                              span(class="text-content") 12k views
+                              span(class="text-content") 12k views 
                               i(data-feather="heart" class="h-5 stroke-secondary wish-like")
-                    div.col-span-4(class="2lg:col-span-6 sm:col-span-12 masonryItem")  
+                    li.col-span-4.product-box(class="2lg:col-span-6 sm:col-span-12 masonryItem")  
                       div.card.p-0.group
                         div.blog-img.overflow-hidden(class="rounded-tr-[0.625rem] rounded-tl-[0.625rem]")
-                          img(src='../../assets/images/blog/blog-contains5.webp' class="duration-700 ease-in scale-100 group-hover:scale-125" alt='blog-contains5')
+                          img(src='../../assets/images/blog/blog-contains5.jpg' class="duration-700 ease-in scale-100 group-hover:scale-125" alt='blog-contains5')
                         div.card-body.px-3.flex.flex-col.gap-4.pb-3
                           div.flex.justify-between.items-center
                             div.flex.items-start.justify-between.gap-2.items-center(class="pt-[13px] first:pt-0 first:mt-0 first:border-none")
                               div.avatar 
                                 div.w-10.rounded-full.h-10(class="xl:h-9 xl:w-9")
-                                  img(src='../../assets/images/avatar/20.jpg' alt='avatar')
+                                  img(src='../../assets/images/avatar/12.jpg' alt='avatar')
                               div
                                 a(href="blog-grid.html")
-                                  p.text-title.font-bold(class="dark:text-white") Mitchel P. Lawyer  
+                                  p.text-title.font-bold(class="dark:text-white") Mary S. Jelks
                                 span.text-content Jan 25,2023  
                             i(data-feather="more-vertical" class="h-5 stroke-content")
                           div 
-                            h5(class="mb-2 font-bold dark:text-white") Take The Stress Out Of Code
-                            p(class="text-content")  We’ll show you how Duads BI lets you use all of
-                              | connections to inject data into R and then visualize and interact with the
+                            h5(class="mb-2 font-bold dark:text-white") Revolutionizing Startups
+                            p(class="text-content") The image showcases the critical successful startup, 
+                              | such as market analysis 
                               a(href="blog-detail.html" class="text-secondary hover:underline").decoration-1 Read more...
                           div
                             div.divider.w-full 
                             div.flex.items-center.justify-between.mt-3.post-media
                               span(class="text-content") 25k views
                               i(data-feather="heart" class="h-5 stroke-secondary wish-like")
-                    div.col-span-4(class="2lg:col-span-6 sm:col-span-12 masonryItem")  
+                    li.col-span-4.product-box(class="2lg:col-span-6 sm:col-span-12 masonryItem")  
                       div.card.p-0.group
                         div.blog-img.overflow-hidden(class="rounded-tr-[0.625rem] rounded-tl-[0.625rem]")
-                          img(src='../../assets/images/blog/blog-contains6.webp' class="duration-700 ease-in scale-100 group-hover:scale-125" alt='blog-contains6')
+                          img(src='../../assets/images/blog/blog-contains6.jpg' class="duration-700 ease-in scale-100 group-hover:scale-125" alt='blog-contains6')
                         div.card-body.px-3.flex.flex-col.gap-4.pb-3
                           div.flex.justify-between.items-center
                             div.flex.items-start.justify-between.gap-2.items-center(class="pt-[13px] first:pt-0 first:mt-0 first:border-none")
                               div.avatar 
                                 div.w-10.rounded-full.h-10(class="xl:h-9 xl:w-9")
-                                  img(src='../../assets/images/avatar/21.jpg' alt='avatar')
+                                  img(src='../../assets/images/avatar/25.jpg' alt='avatar')
                               div
                                 a(href="blog-grid.html")
                                   p.text-title.font-bold(class="dark:text-white") Katherine W. McWilliams  
                                 span.text-content Jan 5,2023
                             i(data-feather="more-vertical" class="h-5 stroke-content")
                           div 
-                            h5(class="mb-2 font-bold dark:text-white") The Death Of Avoid It Code 
-                            p(class="text-content")  Are you wondering how to get a text short code and get started with 
-                              | reaching your customers in new SMS into your short steps.  
+                            h5(class="mb-2 font-bold dark:text-white") Cozy Workspace
+                            p(class="text-content")  AThe image is designed to convey a sense of comfort and warmth, 
+                              | as seen from the soft lighting and the cozy wooden 
                               a(href="blog-detail.html" class="text-secondary hover:underline").decoration-1 Read more...
-                          div
-                            div.divider.w-full 
+                          div 
+                            div.divider.w-full
                             div.flex.items-center.justify-between.mt-3.post-media
                               span(class="text-content") 18k views
                               i(data-feather="heart" class="h-5 stroke-secondary wish-like")
-                    div.col-span-4(class="2lg:col-span-6 sm:col-span-12 masonryItem")  
+                    li.col-span-4.product-box(class="2lg:col-span-6 sm:col-span-12 masonryItem")  
                       div.card.p-0.group
                         div.blog-img.overflow-hidden(class="rounded-tr-[0.625rem] rounded-tl-[0.625rem]")
-                          img(src='../../assets/images/blog/blog-contains7.webp' class="duration-700 ease-in scale-100 group-hover:scale-125" alt='blog-contains7')
+                          img(src='../../assets/images/blog/blog-contains7.jpg' class="duration-700 ease-in scale-100 group-hover:scale-125" alt='blog-contains7')
                         div.card-body.px-3.flex.flex-col.gap-4.pb-3
                           div.flex.justify-between.items-center
                             div.flex.items-start.justify-between.gap-2.items-center(class="pt-[13px] first:pt-0 first:mt-0 first:border-none")
                               div.avatar 
                                 div.w-10.rounded-full.h-10(class="xl:h-9 xl:w-9")
-                                  img(src='../../assets/images/avatar/38.jpg' alt='avatar')
+                                  img(src='../../assets/images/avatar/6.jpg' alt='avatar')
                               div
                                 a(href="blog-grid.html")
-                                  p.text-title.font-bold(class="dark:text-white") Mitchel P. Lawyer  
+                                  p.text-title.font-bold(class="dark:text-white") Effie J. Frazier 
                                 span.text-content Jan 1,2023
                             i(data-feather="more-vertical" class="h-5 stroke-content")
                           div 
                             h5(class="mb-2 font-bold dark:text-white") The Biggest Lie In The Code 
                             p(class="text-content")  I think programming plays a huge role in our lives,
-                              | and every kid should definitely be taught programming at some point during their education 
+                              | and every kid should definitely be taught programming at some point during their education  
                               a(href="blog-detail.html" class="text-secondary hover:underline").decoration-1 Read more...
                           div
                             div.divider.w-full 
                             div.flex.items-center.justify-between.mt-3.post-media
                               span(class="text-content") 6k views
                               i(data-feather="heart" class="h-5 stroke-secondary wish-like")
-                    div.col-span-4(class="2lg:col-span-6 sm:col-span-12 masonryItem")  
+                    li.col-span-4.product-box(class="2lg:col-span-6 sm:col-span-12 masonryItem")  
                       div.card.p-0.group
                         div.blog-img.overflow-hidden(class="rounded-tr-[0.625rem] rounded-tl-[0.625rem]")
-                          img(src='../../assets/images/blog/blog-contains8.webp' class="duration-700 ease-in scale-100 group-hover:scale-125" alt='blog-contains8')
+                          img(src='../../assets/images/blog/blog-contains8.jpg' class="duration-700 ease-in scale-100 group-hover:scale-125" alt='blog-contains8')
                         div.card-body.px-3.flex.flex-col.gap-4.pb-3
                           div.flex.justify-between.items-center
                             div.flex.items-start.justify-between.gap-2.items-center(class="pt-[13px] first:pt-0 first:mt-0 first:border-none")
@@ -308,17 +321,17 @@ html(lang='en')
                           div 
                             h5(class="mb-2 font-bold dark:text-white") Old School Coded 
                             p(class="text-content")  In particular I learned about our mental and physical limits,
-                              | the nature of stress and anxiety, and most importantly, how to take care of myself so that I could stop this happening again.
+                              | the nature of stress and anxiety, and most importantly, how to take care of myself so that I could stop this happening again. 
                               a(href="blog-detail.html" class="text-secondary hover:underline").decoration-1 Read more...
                           div
                             div.divider.w-full 
                             div.flex.items-center.justify-between.mt-3.post-media
                               span(class="text-content") 25k views
                               i(data-feather="heart" class="h-5 stroke-secondary wish-like")
-                    div.col-span-4(class="2lg:col-span-6 sm:col-span-12 masonryItem")  
+                    li.col-span-4.product-box(class="2lg:col-span-6 sm:col-span-12 masonryItem")  
                       div.card.p-0.group
                         div.blog-img.overflow-hidden(class="rounded-tr-[0.625rem] rounded-tl-[0.625rem]")
-                          img(src='../../assets/images/blog/blog-contains9.webp' class="duration-700 ease-in scale-100 group-hover:scale-125" alt='blog-contains9')
+                          img(src='../../assets/images/blog/blog-contains9.jpg' class="duration-700 ease-in scale-100 group-hover:scale-125" alt='blog-contains9')
                         div.card-body.px-3.flex.flex-col.gap-4.pb-3
                           div.flex.justify-between.items-center
                             div.flex.items-start.justify-between.gap-2.items-center(class="pt-[13px] first:pt-0 first:mt-0 first:border-none")
@@ -331,19 +344,19 @@ html(lang='en')
                                 span.text-content Dec 27, 2022 
                             i(data-feather="more-vertical" class="h-5 stroke-content")
                           div 
-                            h5(class="mb-2 font-bold dark:text-white") Take The Stress Out Of Code 
-                            p(class="text-content")  Complexity can often come through making the quick fix, taking the shortcut and creating technical debt. 
-                              | Technical debt is another name for complexity because technical debt makes code  and more difficult to work with.  
+                            h5(class="mb-2 font-bold dark:text-white") Content Management System 
+                            p(class="text-content")  Your ecommerce website comes with a content management 
+                              | system (CMS) used to create web pages and blog posts.  
                               a(href="blog-detail.html" class="text-secondary hover:underline").decoration-1 Read more...
                           div
                             div.divider.w-full 
                             div.flex.items-center.justify-between.mt-3.post-media
                               span(class="text-content") 7k views
                               i(data-feather="heart" class="h-5 stroke-secondary wish-like")
-                    div.col-span-4(class="2lg:col-span-6 sm:col-span-12 masonryItem")  
+                    li.col-span-4.product-box(class="2lg:col-span-6 sm:col-span-12 masonryItem")  
                       div.card.p-0.group
                         div.blog-img.overflow-hidden(class="rounded-tr-[0.625rem] rounded-tl-[0.625rem]")
-                          img(src='../../assets/images/blog/blog-contains10.webp' class="duration-700 ease-in scale-100 group-hover:scale-125" alt='blog-contains10')
+                          img(src='../../assets/images/blog/blog-contains10.jpg' class="duration-700 ease-in scale-100 group-hover:scale-125" alt='blog-contains10')
                         div.card-body.px-3.flex.flex-col.gap-4.pb-3
                           div.flex.justify-between.items-center
                             div.flex.items-start.justify-between.gap-2.items-center(class="pt-[13px] first:pt-0 first:mt-0 first:border-none")

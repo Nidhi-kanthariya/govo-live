@@ -49,10 +49,10 @@ html(lang='en')
           div.grid.grid-cols-12.gap-card
             div.card.col-span-12
               div.card-body 
-                #wrap.calander-main
+                #wrap.calander-main 
                   #external-events.calander-sidebar
                     h4.mb-4.text-title.font-bold New Schedule
-                    #external-events-list
+                    #external-events-list 
                       .fc-event.fc-h-event.fc-daygrid-event.fc-daygrid-block-event.bg-primary-light.p-3.text-sm.mb-3.border-0
                         .fc-event-main(class="!text-primary") Meeting
                       .fc-event.fc-h-event.fc-daygrid-event.fc-daygrid-block-event.bg-secondary-extralight.p-3.text-sm.mb-3.border-0
@@ -61,7 +61,7 @@ html(lang='en')
                         .fc-event-main(class="!text-success") Birthday Party
                       .fc-event.fc-h-event.fc-daygrid-event.fc-daygrid-block-event.bg-warning-light.p-3.text-sm.mb-3.border-0
                         .fc-event-main(class="!text-warning") Holiday
-                    div.flex.items-center.gap-2
+                    div.flex.items-center.gap-2 
                       label.checkbox.checkbox-sm.cursor-pointer  
                         input#drop-remove(type='checkbox' class="peer") 
                         div.checkbox-indicator(class="peer-checked:!bg-primary !border-primary")  
@@ -85,9 +85,9 @@ html(lang='en')
                               div(class="w-[calc(100%_-_52px)] grid")
                                 p.text-title(class="text-xs font-semibold truncate") Tiana Baumbach
                                 a(href="javascript:void(0)").text-primary(class="font-semibold truncate text-2xs") View Client Profile
-                            a(href="javascript:void(0)")
+                            a(href="javascript:void(0)") 
                               +SVG_ICON("Arrow-Right-Circle", "w-6 h-6 stroke-primary group-hover:stroke-white")     
-                  #calendar-wrap.calander-body
+                  #calendar-wrap.calander-body 
                     #calendar
 
         // Page Body End  

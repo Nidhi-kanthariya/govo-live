@@ -1,0 +1,23 @@
+//- ====================
+//-  User Information
+//- ====================
+table.table.equal-space 
+    thead 
+        tr 
+            each userHead in SALE_DETAIL.header
+                th=  userHead
+
+    tbody
+        each bodyData,index in SALE_DETAIL.body
+            tr(class="group")
+                td(class="min-w-[140px]")                   
+                    div.flex.items-center(class="gap-[9px]")
+                        img(class="w-[35px] h-[35px] rounded-full object-cover" src=`../../assets/images/flag/${bodyData.image}`, alt=`${bodyData.country}`) 
+                        a(href="javascript:void(0)")
+                            h4(class="text-xs font-semibold text-title group-hover:text-primary")=bodyData.country
+                td(class="min-w-[80px]")
+                    h4(class=`text-xs  group-hover:text-primary font-semibold text-title`)= bodyData.sales
+                td(class="min-w-[80px]")
+                    h4(class=`text-xs  group-hover:text-primary font-semibold text-title`)= bodyData.revenue
+                td(class="min-w-[80px]")
+                    h4(class="text-xs font-semibold group-hover:text-primary text-title")= bodyData.average

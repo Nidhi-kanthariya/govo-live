@@ -1,0 +1,72 @@
+//- sidebar
+-var sidebar = true;
+
+//- feather
+-var feather= true;
+
+//- custom select
+-var customSelect= true;
+
+//- customizer 
+-var customizer=true;
+
+//- Breadcrumbs
+-var pageTitle="Sample Page";
+-var breadcrumb=['dashboard','Sample Page'];
+
+//- all JSON  
+include ../../data/all-data
+
+//- all mixin
+include ../../mixin/mixin
+
+doctype html
+html(lang='en')
+    include ../../layout/header-files
+    body(dir="rtl" class="unique-skin")
+        main.page-wrapper
+            div.page-body-wrapper(class="xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+                include ../../layout/header/header     
+                // Sidebar Start 
+                div.page-sidebar.sidebar-dark.unique-sidebar
+                    include ../../layout/starter-kit-sidebar
+                // Sidebar End 
+
+                // Page Body Start
+                div.page-body
+                    div.grid.grid-cols-12.gap-card-gap 
+                        div.card.col-span-12         
+                            div.card-header.pb-2.header-bottom-border
+                                h3(class="font-bold text-title") Kick Start Your Project Development !
+                                p Getting start with your project custom requirements using a ready template which is quite difficult and time taking process, Govo Admin provides useful features to kick start your project development with no efforts !
+                            div.card-body                       
+                                ul(class="list-decimal list-inside text-content3")
+                                    li Govo Admin provides you getting start pages with different layouts, use the layout as per your custom requirements and just change the branding, menu & content.
+                                    li Every components in Govo Admin are decoupled, it means use only components you actually need! Remove unnecessary and extra code easily just by excluding the path to specific SCSS, JS file.
+                                    li It use PUG as template engine to generate pages and whole template quickly using node js. Save your time for doing the common changes for each page (i.e menu, branding and footer) by generating template with pug.
+
+                        div.card.col-span-12         
+                            div.card-header.pb-2.header-bottom-border
+                                h3(class="font-bold text-title") What Is Starter Kit ?
+                                p Starter kit is a set of pages with different layouts, useful for your next project to start development process from scratch with no time.
+                            div.card-body                       
+                                ul(class="list-decimal list-inside text-content3")
+                                    li Added all layouts you can quick start with layout page.
+                                    li Select your choice of layout from starter kit, customize it with optional changes like colors and branding, add required dependency only.
+                                    li Using template engine to generate whole template quickly with your selected layout and other custom changes.                        
+
+                        div.card.col-span-12         
+                            div.card-header.pb-2.header-bottom-border
+                                h3(class="font-bold text-title") How To Use Starter Kit ?                        
+                            div.card-body                       
+                                h6(class="font-bold") HTML
+                                p(class="mt-1 text-content3") If you know just HTML, select your choice of layout from starter kit folder, customize it with optional changes like colors and branding, add required dependency only.
+
+                                h6(class="mt-4 font-bold") PUG
+                                p(class="mt-1 text-content3") To use PUG it required node.js and basic knowledge of using it. Using PUG as template engine to generate whole template quickly with your selected layout and other custom changes. To getting start with PUG usage & template generating process please refer template documentation.
+
+                // Page Body End 
+                +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+            include ../../components/customizer
+
+    include ../../layout/footer-files

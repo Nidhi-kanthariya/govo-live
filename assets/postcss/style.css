@@ -1,3 +1,75 @@
+
+/*! -----------------------------------------------------------------------------------
+
+    Template Name: Govo Admin
+    Template URI: http://admin.pixelstrap.com/govo/theme
+    Description: This is Admin theme
+    Author: Pixelstrap
+    Author URI: https://themeforest.net/user/pixelstrap
+
+-----------------------------------------------------------------------------------
+
+    1. Utils css  
+        1.1 Ratio css
+
+    2. Base css  
+        2.1 Reset css
+        2.2 Typography css
+
+    3. Componant css  
+        3.1 Apex Custom Tooltip css
+        3.2 Avatar css
+        3.3 Badges css
+        3.4 Breadcumb css
+        3.5 Button css
+        3.6 Card css
+        3.7 Chartist Custom css
+        3.8 Checkbox css
+        3.9 Collapse css
+        3.10 Dropdown css
+        3.11 Divider css
+        3.12 Email css
+        3.13 Form css
+        3.14 Indicatr css
+        3.15 Kanban css
+        3.16 Layout css
+        3.17 modal css
+        3.18 Monochrome Mode css
+        3.19 Map css
+        3.20 Progress Bar css
+        3.21 Prism Custom css
+        3.22 Radial Progress css
+        3.23 Select Custom css
+        3.24 Table css
+        3.25 Tab css
+        3.26 Tooltip css
+        3.27 Tree css
+        3.28 Weekly Schedule css
+
+    4. Layout css  
+        4.1 Header css
+        4.2 Main css
+        4.3 Sidebar css
+
+    5. Pages css  
+        5.1 Chat App css
+        5.2 Carousel css
+        5.3 Calendar css
+        5.4 Countdown css
+        5.5 Ecommerce css
+        5.6 Mask css
+        5.7 Rating css
+        5.8 Swiper Slider css
+        5.9 Stack css
+        5.10 Steps css
+        5.11 Switch css
+        5.12 Swap css
+        5.13 Todo App css
+        5.14 User Profile css
+        5.15 Wow Animation css
+
+ --------------------------------------------------------------------------------- */
+
 /* Variables */
 @import "utils/_variables.css";
 
@@ -15,8 +87,8 @@
 
 /* Componant */
 @import "components/_apex-custom-tooltip.css";
-@import "components/_badge.css";
 @import "components/_avatar.css";
+@import "components/_badge.css";
 @import "components/_breadcrumb.css";
 @import "components/_buttons.css";
 @import "components/_card.css";
@@ -28,25 +100,25 @@
 @import "components/_email.css";
 @import "components/_form.css";
 @import "components/_indicator.css";
+@import "components/_kanban.css";
 @import "components/_layout.css";
 @import "components/_modal.css";
 @import "components/_monochrome-mode.css";
+@import "components/_map.css";
 @import "components/_progress-bar.css";
+@import "components/_prism-custom.css";
 @import "components/_radial-progress.css";
 @import "components/_select-custom.css";
-@import "components/_sidebar.css";
-@import "components/_prism-custom.css";
 @import "components/_table.css";
 @import "components/_tab.css";
 @import "components/_tooltip.css";
+@import "components/_tree.css";
 @import "components/_weekly-shedual.css";
-@import "components/_kanban.css";
-@import "components/_map.css";
 
 /* Layout  */
 @import "layout/_header.css";
-@import "layout/_sidebar.css";
 @import "layout/_main.css";
+@import "layout/_sidebar.css";
 
 /* Pages */
 @import "pages/_chat-app.css";
@@ -61,7 +133,6 @@
 @import "pages/_steps.css";
 @import "pages/_switch.css";
 @import "pages/_swap.css";
-@import "pages/_toast.css";
 @import "pages/_todo-app.css";
 @import "pages/_user-profile.css";
 @import "pages/_wow-animation.css";

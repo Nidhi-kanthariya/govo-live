@@ -1,0 +1,72 @@
+//- =====================
+//-  Message Menu
+//- =====================
+-
+    var MESSAGE_LIST= 
+        [
+            {
+                name:"New Review Receive",
+                icon:"Chat",
+                subTitle:"15 min ago",
+                status:"success",
+
+            },
+            {
+                name:"Transaction $250 Success",
+                icon:"Scan",
+                subTitle:"2 hours ago",
+                status:"danger",
+
+            },
+            {
+                name:"Order Place Success",
+                icon:"Buy",
+                subTitle:"2 week ago",
+                status:"warning",
+
+            },
+
+            {
+                name:"Netflix Subscription Expires",
+                icon:"Lock",
+                subTitle:"4 days ago",
+                status:"info",
+
+            },
+            {
+                name:"Congratulations You Won $2500",
+                icon:"Discount",
+                subTitle:"12 days ago",
+                status:"danger",
+
+            },
+            {
+                name:"Latest Updates On You Phone",
+                icon:"Upload",
+                subTitle:"25 days ago",
+                status:"success",
+
+            },
+        ]
+
+
+// Message Start 
+div.dropdown 
+    div.indicator.flex
+        span.indicator-item.bg-danger.badge(class="p-0 right-[4px] top-0 border-[2px] border-white w-[8px] h-[8px] rounded-full")
+        i(data-feather="message-square" class="w-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] stroke-title dark:stroke-white")
+    div.dropdown-menu(class="!min-w-[280px]")
+        div.flex.items-center.justify-between(class="pb-[15px] border-b border-border-light dark:border-border-dark") 
+            h4(class="text-base font-bold text-title") Messages
+            div.badge(class="leading-none p-1 badge bg-primary rounded-full text-3xs flex items-center justify-center min-w-[22px] min-h-[22px]") 25
+        ul(class="mt-[15px] flex flex-col max-h-[232px] overflow-auto custom-scroll")  
+            each message in MESSAGE_LIST 
+                li.flex.items-center.gap-3(class="px-2 py-3 transition-all duration-300 border-b last:border-b-0 border-border-light dark:border-border-dark hover:bg-gray-light dark:hover:bg-sidebar-dark2 rounded-5")
+                    a.flex.items-center(href="./message.html" class="gap-[12px]")
+                        div.rounded-full(class=`relative shadow-lg bg-${message.status} flex items-center justify-center rounded-full p-2`)
+                            i(data-feather=`${message.icon}` class="w-5 h-5 stroke-white")                        
+                        div 
+                            h4(class="text-xs font-semibold line-clamp-1 text-title" )= message.name
+                            p(class="text-xs font-semibold line-clamp-1 text-content")= message.subTitle
+// Message End 
+

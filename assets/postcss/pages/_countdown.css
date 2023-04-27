@@ -1,5 +1,5 @@
 /*=====================
-  Countdown CSS
+  5.4 Countdown Css
 ==========================*/
 @layer components {
   .timer {
@@ -67,9 +67,6 @@
   .countdown-5 {
     li {
       @apply flex flex-col gap-2 items-center justify-center;
-      span {
-        /* @apply dark:last; */
-      }
     }
 
     span {
@@ -80,9 +77,7 @@
   .countdown-6 {
     li {
       @apply flex flex-col items-center justify-center leading-none shadow-lg;
-      span {
-        /* @apply dark:first; */
-      }
+
     }
 
     span {

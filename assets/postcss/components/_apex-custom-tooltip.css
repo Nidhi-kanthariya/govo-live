@@ -1,5 +1,5 @@
 /*=====================
-    Apex Custom Tooltip
+  3.1  Apex Custom Tooltip Css
   ==========================*/
 @layer components {
   .apex-custom-tooltip {
@@ -24,6 +24,29 @@
       }
       .apexcharts-xaxistooltip {
         @apply !hidden;
+      }
+    }
+  }
+  .radialBar-legend{
+    @apply flex items-center justify-center;
+    .radialBar-legend-series{
+      @apply flex items-center w-full gap-3;
+      span{
+        &.radialBar-legend-marker{
+          @apply relative inline-block;
+          &:after{
+            @apply h-3 w-3 left-0 top-0 border-none rounded-full content-[""] -translate-x-1/2 -translate-y-1/2 absolute;
+            &.primary{
+              @apply bg-primary;
+            }
+            &.secondary{
+              @apply bg-secondary;
+            }
+            &.title{
+              @apply bg-title;
+            }
+          }
+        }
       }
     }
   }

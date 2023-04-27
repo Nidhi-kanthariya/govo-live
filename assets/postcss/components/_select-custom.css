@@ -1,10 +1,10 @@
 /*=====================
-  Select Custom  CSS
+  3.23 Select Custom  Css
 ==========================*/
 @layer components {
   .select-style-1 {
     .select-selected {
-      @apply pl-[0.875rem] capitalize pr-[1.75rem] py-[0.625rem] bg-gray-light dark:bg-sidebar-dark2 text-3xs font-bold rtl:pr-[0.875rem] rtl:pl-[1.75rem];
+      @apply pl-[0.875rem] capitalize  pr-[1.75rem] py-[0.625rem] bg-gray-light dark:bg-sidebar-dark2 text-3xs font-bold rtl:pr-[0.875rem] rtl:pl-[1.75rem];
       &:after {
         @apply top-1/2 -translate-y-1/2 rtl:left-[.625rem] rtl:right-unset dark:border-border-light dark:border-t-4 dark:border-solid dark:border-4 dark:border-b-transparent dark:border-l-transparent dark:border-r-transparent;
       }
@@ -15,8 +15,8 @@
         @apply bg-white-light text-white dark:text-white;
       }
       .select-selected {
-        @apply after:border-t-white;
-        &.select-arrow-active {
+        @apply after:border-t-white; 
+        &.select-arrow-active {  
           @apply after:border-b-white  after:border-transparent;
         }
       }

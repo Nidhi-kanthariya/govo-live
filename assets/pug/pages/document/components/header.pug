@@ -1,0 +1,38 @@
+// Page Header start
+div(class="py-[11px] flex items-center xl:relative justify-between px-body-space")
+    div.left-header.flex.items-center.gap-2 
+        button.sidebar-toggle.hide 
+            i(data-feather="grid" class="w-6 h-6 4xl:w-5 4xl:h-5 stroke-title")
+        h1(class="flex items-center gap-1 text-xl font-extrabold leading-none sm:hidden dark:text-white 4xl:text-lg")= pageTitle
+    div.right-header.flex.items-center(class="flex-1 sm:gap-[calc(7px_+_(14_-_7)_*_((100vw_-_320px)_/_(1920_-_320)))] gap-[calc(16px_+_(20_-_16)_*_((100vw_-_320px)_/_(1920_-_320)))]  justify-end")
+        div(class="search-box-wrapper transition-all duration-300 max-w-[40%] 2xl:scale-0 2xl:opacity-0 2xl:invisible 2xl:px-body-space 2xl:max-w-full w-full 2xl:z-[5] flex-1 2xl:absolute 2xl:left-0")
+            // Search Start  
+            div.search-box.relative
+                input(class="bg-gray-light dark:bg-sidebar-dark2 rounded-5 w-full py-[11px] pl-[25px] pr-[55px] rtl:pr-[25px] rtl:pl-[55px] text-xs font-semibold text-title" placeholder="Type to Search..." type="search")       
+                i(data-feather="search" class="xl:hidden w-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] stroke-title top-1/2 -translate-y-1/2 right-[25px] rtl:right-unset rtl:left-[25px] absolute dark:stroke-white")
+                i(data-feather="x" class="search-close hidden cursor-pointer xl:block w-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] stroke-title top-1/2 -translate-y-1/2 right-[25px] absolute")
+            // Search End    
+        div.icon-menu  
+            ul.flex.items.center
+                li(class="cursor-pointer hidden 2xl:flex items-center justify-center px-[calc(7px_+_(14_-_7)_*_((100vw_-_320px)_/_(1920_-_320)))] first:pl-0 last:pr-0  last:border-r-none border-r border-border-light dark:border-border-dark rtl:border-l rtl:border-r-0")
+                    button.search-show
+                        i(data-feather="search" class="w-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] stroke-title dark:stroke-white")
+                li(class="cursor-pointer flex items-center justify-center px-[calc(7px_+_(14_-_7)_*_((100vw_-_320px)_/_(1920_-_320)))] first:pl-0 last:pr-0  last:border-r-none border-r border-border-light dark:border-border-dark rtl:border-l rtl:border-r-0")  
+                    include header/notification
+                li(class="cursor-pointer flex items-center justify-center px-[calc(7px_+_(14_-_7)_*_((100vw_-_320px)_/_(1920_-_320)))] first:pl-0 last:pr-0  last:border-r-none border-r border-border-light dark:border-border-dark rtl:border-l rtl:border-r-0")
+                    #dark-mode 
+                        i(data-feather="star" class="w-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] stroke-title dark:stroke-white")
+                li(class="cursor-pointer 2md:hidden flex items-center justify-center px-[calc(7px_+_(14_-_7)_*_((100vw_-_320px)_/_(1920_-_320)))] first:pl-0 last:pr-0  last:border-r-none border-r border-border-light dark:border-border-dark rtl:border-l rtl:border-r-0")
+                    include header/message
+                li(class="cursor-pointer 2md:hidden flex items-center justify-center px-[calc(7px_+_(14_-_7)_*_((100vw_-_320px)_/_(1920_-_320)))] first:pl-0 last:pr-0  last:border-r-none border-r border-border-light dark:border-border-dark rtl:border-l rtl:border-r-0")
+                    include header/add-to-cart
+                li(class="cursor-pointer flex customizer-btn items-center justify-center px-[calc(7px_+_(14_-_7)_*_((100vw_-_320px)_/_(1920_-_320)))] rtl:border-l sm:rtl:last:pl-[calc(7px_+_(14_-_7)_*_((100vw_-_320px)_/_(1920_-_320)))] rtl:border-r-0 first:pl-0 last:pr-0 last:border-none sm:last:pr-[calc(7px_+_(14_-_7)_*_((100vw_-_320px)_/_(1920_-_320)))] sm:last:border-r sm:last:border-solid border-r border-border-light dark:border-border-dark")
+                    i.fa-solid.fa-gear(class="w-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] cursor-pointer transition-all duration-300 group-hover:stroke-primary stroke-title dark:stroke-white")
+                    //- i(data-feather="settings" class="w-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] cursor-pointer transition-all duration-300 group-hover:stroke-primary stroke-title dark:stroke-white")
+        ul.profile-box.flex.items-center 
+            li(class="cursor-pointer pr-[11px] rtl:pr-unset rtl:!pl-[11px] rtl:last:pl-0 rtl:last:pr-unset last:pr-0 sm:pr-0 sm:border-none last:border-none rtl:border-l rtl:border-r-0 border-r border-border-2 dark:border-border-dark  dark:border-r flex items-center")  
+                include header/language-dropdown    
+            li(class="cursor-pointer flex- pl-[11px] rtl:pr-[11px] rtl:pl-unset rtl:first:pr-0 first:pl-0 flex items-center")
+                include header/profile-setting    
+
+// Page Header end

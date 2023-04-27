@@ -1,0 +1,63 @@
+// Page sidebar start
+
+aside(class="sidebar")  
+    div.logo-wrapper
+        a(href="index.html") 
+            img(class="w-full full-sidebar" src="../../assets/images/logo/logo.png" alt="logo")
+            img(class="w-full icon-sidebar" src="../../assets/images/logo/logo-sort-1.png" alt="logo")
+        button.sidebar-btn
+            +SVG_ICON("Category", "w-6 h-6") 
+    div.search-wrapper
+        div.search-box 
+            input(class="search" placeholder="Search" type="search")
+            +SVG_ICON("Search", "w-5 h-5")  
+    nav.sidebar-main 
+        ul.sidebar-links.custom-scroll
+            li.sidebar-list
+                a(href="javascript:void(0)").sidebar-link.sidebar-title
+                    span    
+                        +SVG_ICON("Home", "w-5 h-5")  
+                        span.sidebar-name Dashboards
+                        +SVG_ICON("Arrow-Right-2", "w-5 h-5")  
+                ul.sidebar-submenu
+                    li 
+                        a(href="../template/index.html") Default
+                    li
+                        a(href="../template/ecommerce.html") Ecommerce
+            li.sidebar-list
+                a(href="sample-page.html").sidebar-link.sidebar-title
+                    span    
+                        +SVG_ICON("Document", "w-5 h-5")  (class="w-6 h-6") 
+                        span.sidebar-name Sample Page
+            li.sidebar-list
+                a(href="light.html").sidebar-link.sidebar-title 
+                    span    
+                        +SVG_ICON("Activity", "w-5 h-5")  
+                        span.sidebar-name Light version
+            li.sidebar-list
+                a(href="dark.html").sidebar-link.sidebar-title 
+                    span    
+                        +SVG_ICON("Image", "w-5 h-5")  
+                        span.sidebar-name Dark version
+            li.sidebar-list
+                a(href="monochrome-mode.html").sidebar-link.sidebar-title 
+                    span    
+                        +SVG_ICON("Scan", "w-5 h-5")  
+                        span.sidebar-name Monochrome Mode
+            li.sidebar-list
+                a(href="rtl.html").sidebar-link.sidebar-title  
+                    span    
+                        +SVG_ICON("Filter", "w-5 h-5")  
+                        span.sidebar-name RTL version
+            li.sidebar-list
+                a(href="https://pixelstrap.freshdesk.com/support/home" target="_blank").sidebar-link.sidebar-title  
+                    span    
+                        +SVG_ICON("More-Circle", "w-5 h-5")  
+                        span.sidebar-name Get Support
+            li.sidebar-list
+                a(href="../document/index.html").sidebar-link.sidebar-title  
+                    span    
+                        +SVG_ICON("Page", "w-5 h-5")  
+                            span.sidebar-name Document
+
+// Page sidebar end

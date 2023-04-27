@@ -1,0 +1,6 @@
+//- ======================
+//-  Svg  Icon Sprite Call  
+//- ======================
+mixin SVG_ICON(iconName,svgClasses)
+  svg(class=`${svgClasses ? svgClasses : ""}`) 
+    use(href=`../../assets/svg/sprite.svg#${iconName}`)

@@ -10,16 +10,16 @@
   --info-light: #b52af64d;
   --warning: #feb858;
   --warning-light: #feb8584d;
-  --danger: #f1523d;
-  --danger-light: #f1523d4d;
-  --light: #d8ecff;
-  --dark: #44588f;
-  --body: #f4f4f4;
+  --danger: #f1523d; 
+  --danger-light: #f1523d4d;  
+  --light: #d8ecff; 
+  --dark: #44588f;  
+  --body: #f4f4f4;   
   --gray-light: #f5f6f9;
   --gray-extralight: #f5f6f9b0;
-  --dark-header: #10052d;
-  --dark-header2: #31322d;
-  --chart-dark: #072448;
+  --dark-header: #10052d; 
+  --dark-header2: #31322d; 
+  --chart-dark: #072448; 
   --chart-dark-track: #072448;
   /* Border Color */
   --border-dark: #2c4050;
@@ -41,7 +41,7 @@
   --title: #1f2f3e;
   --content: #9fa6ab;
   --content2: #8fa9c3;
-  --content3: #848789;
+  --content3: #848789; 
   --content-white: #f7f7f7;
   --linkedin: #2e7dbb;
   --twitter: #29a8df;
@@ -51,31 +51,54 @@
   --instagram3: #285aeb;
 }
 
-html[class='dark'] {
+html[class='draganddrop dark'] { 
   --White: #1f2f3e;
-  --black: #fff;
+  --black: #fff; 
   --light: #44588f;
-  --dark: #d8ecff;
-  --title: #fff;
-  --border-light: #2c4050;
-  --apex-tooltip: #17232e;
-  --body: #00232e;
+  --dark: #d8ecff; 
+  --title: #fff; 
+  --border-light: #2c4050; 
+  --apex-tooltip: #17232e; 
+  --body: #00232e; 
+  --content : #9fa6ab; 
 }
+html[class='dark fontawesome-i2svg-active fontawesome-i2svg-complete'] { 
+  --White: #1f2f3e;
+  --black: #fff; 
+  --light: #44588f;
+  --dark: #d8ecff; 
+  --title: #fff; 
+  --border-light: #2c4050; 
+  --apex-tooltip: #17232e; 
+  --body: #00232e; 
+  --content : #9fa6ab; 
+}
+html[class='dark'] { 
+  --White: #1f2f3e;
+  --black: #fff; 
+  --light: #44588f;
+  --dark: #d8ecff; 
+  --title: #fff; 
+  --border-light: #2c4050; 
+  --apex-tooltip: #17232e; 
+  --body: #00232e;
+  --content : #9fa6ab; 
+}  
 html[class='dark'] {
   .apexcharts-tooltip {
-    &.apexcharts-theme-light {
+    &.apexcharts-theme-light { 
       background: var(--apex-tooltip);
       border: var(--border-light);
-      box-shadow: none;
-      .apexcharts-tooltip-title {
+      box-shadow: none; 
+      .apexcharts-tooltip-title { 
         background: var(--apex-tooltip);
         color: var(--black);
         border-bottom-color: var(--border-light);
-      }
-    }
+      } 
+    } 
   }
 }
-/* Unique Skin */
+/* Unique Skin */ 
 .unique-skin {
   --primary: 51, 191, 191; /*#33BFBF*/
   --primary-light: rgba(var(--primary), 0.08);

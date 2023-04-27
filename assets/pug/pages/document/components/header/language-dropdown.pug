@@ -1,0 +1,25 @@
+// Language Start 
+div.language-select(class="dropdown group") 
+    button#language-select.flex.items-center(class="max-w-[87px] min-w-[87px] md:min-w-[47px] gap-[11px]")
+        img(class="w-[35px] sm:w-[30px] h-auto" src="../../assets/images/flag/en.svg" alt="flag") 
+        span.flex.items-center.gap-1(class="text-lg font-bold 4xl:text-base dark:text-white md:hidden")
+            | En
+        i(data-feather=`chevron-down` class="w-[6px] h-[4px] stroke-title group-hover:rotate-180 duration-300 transition-all dark:stroke-white")
+    ul.language-menu.dropdown-menu.flex.flex-col.gap-3(class="!min-w-[145px]")
+        li.language-option.flex.items-center.gap-2(data-value="En" class="cursor-pointer") 
+            img(class="w-[32px] h-auto" src="../../assets/images/flag/en.svg" alt="flag")
+            span.flex.items-center.gap-1(class="text-xs font-bold transition-all duration-300 hover:text-primary") 
+                | English
+        li.language-option.flex.items-center.gap-2(data-value="Fr" class="cursor-pointer")
+            img(class="w-[32px] h-auto" src="../../assets/images/flag/fr.svg" alt="flag")
+            span.flex.items-center.gap-1(class="text-xs font-bold transition-all duration-300 hover:text-primary") 
+                | French
+        li.language-option.flex.items-center.gap-2(data-value="Es" class="cursor-pointer") 
+            img(class="w-[32px] h-auto" src="../../assets/images/flag/es.svg" alt="flag")
+            span.flex.items-center.gap-1(class="text-xs font-bold transition-all duration-300 hover:text-primary") 
+                | Spanich
+        li.language-option.flex.items-center.gap-2(data-value="Ar" class="cursor-pointer") 
+            img(class="w-[32px] h-auto" src="../../assets/images/flag/sa.svg" alt="flag")
+            span.flex.items-center.gap-1(class="text-xs font-bold transition-all duration-300 hover:text-primary") 
+                | Arabic
+// Language End 

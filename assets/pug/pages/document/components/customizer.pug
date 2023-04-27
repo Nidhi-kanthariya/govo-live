@@ -1,0 +1,72 @@
+
+// Customizer
+div(class="bg-white customizer-sidebar dark:bg-sidebar-dark2 dark:border-border-dark")
+  div(class="flex rtl:flex items-center text-title bg-primary justify-between  p-[15px] shadow-md") 
+    span.text-base.font-semibold.text-white Customizer
+    button.customizer-close 
+      i(data-feather="x" class="w-4 h-4 stroke-white")
+  div(class="py-[4px] dark:bg-mode-200")
+    div(class="px-[15px] py-7  h-[calc(100vh_-_139px)] overflow-auto ")
+      ul.flex.flex-col.gap-7.mode-event
+        li 
+          div
+            h5.leading-none.text-dark(class="text-sm font-semibold dark:text-white") Template Mode
+            span.leading-none.text-content.text-xs(class="font-medium") Choose template mode dark & light
+          div.mt-2 
+            ul.flex.items-center.gap-3(class="flex-wrap") 
+              li.relative
+                input(class="absolute invisible opacity-0 peer" checked id="light-checked" type="radio" name="mode")
+                i(data-feather="check-circle" class="stroke-primary z-[10] transition-all scale-0 opacity-0 absolute peer-checked:opacity-100 peer-checked:scale-100 top-2 right-2 w-4 h-4")
+                label(for="light-checked" class="block overflow-hidden border shadow-md mode-theme-light border-light dark:border-border-dark rounded-5") 
+                  img(class="w-[90px] object-cover" src='../../assets/images/customizer/light.png' alt='light')
+              li.relative
+                input(class="absolute invisible opacity-0 peer" id="dark-checked" type="radio" name="mode")
+                i(data-feather="check-circle" class="stroke-white z-[10] transition-all scale-0 opacity-0 absolute peer-checked:opacity-100 peer-checked:scale-100 top-2 right-2 w-4 h-4")
+                label(for="dark-checked" class="block overflow-hidden border shadow-md mode-theme-dark border-light dark:border-border-dark rounded-5") 
+                  img(class="w-[90px] object-cover" src='../../assets/images/customizer/dark.png' alt='dark')
+        li
+          div
+            h5.leading-none.text-dark(class="text-sm font-semibold dark:text-white") Layout Type
+            span.leading-none.text-content.text-xs Choose layout Ltr & Rtl
+          div.mt-2
+            ul.flex.items-center.gap-3 
+              li.relative
+                input(class="absolute invisible opacity-0 peer" checked id="ltr-checked" type="radio" name="dir")
+                i(data-feather="check-circle" class="stroke-primary z-[10] transition-all scale-0 opacity-0 absolute peer-checked:opacity-100 peer-checked:scale-100 top-2 right-2 w-4 h-4")
+                label(for="ltr-checked" class="block overflow-hidden border shadow-md layout-ltr border-light dark:border-border-dark rounded-5") 
+                  img(class="w-[90px] object-cover" src='../../assets/images/customizer/ltr.png' alt='ltr')
+              li.relative 
+                input(class="absolute invisible opacity-0 peer" id="rtl-checked" type="radio" name="dir")
+                i(data-feather="check-circle" class="stroke-white z-[10] transition-all scale-0 opacity-0 absolute peer-checked:opacity-100 peer-checked:scale-100 top-2 right-2 w-4 h-4")
+                label(for="rtl-checked" class="block overflow-hidden border shadow-md layout-rtl border-light dark:border-border-dark rounded-5") 
+                  img(class="w-[90px] object-cover" src='../../assets/images/customizer/rtl.png' alt='rtl')  
+        li
+          div
+            h5.leading-none.text-dark(class="text-sm font-semibold dark:text-white") Sidebar Type
+            span.leading-none.text-content.text-xs Choose Sidebar  icon & full
+          div.mt-2
+            ul.flex.items-center.gap-3
+              li.relative
+                input(class="absolute invisible opacity-0 peer" checked id="full-sidebar" type="radio" name="sidebar-type")
+                i(data-feather="check-circle" class="stroke-primary z-[10] transition-all scale-0 opacity-0 absolute peer-checked:opacity-100 peer-checked:scale-100 top-2 right-2 w-4 h-4")
+                label(for="full-sidebar" class="dark:border-border-dark block overflow-hidden border shadow-md sidebar-full border-light rounded-5") 
+                  img(class="w-[90px] object-cover" src='../../assets/images/customizer/full-sidebar.png' alt='full sidebar') 
+              li.relative 
+                input(class="absolute invisible opacity-0 peer" id="icon-sidebar" type="radio" name="sidebar-type")
+                i(data-feather="check-circle" class="stroke-primary z-[10] transition-all scale-0 opacity-0 absolute peer-checked:opacity-100 peer-checked:scale-100 top-2 right-2 w-4 h-4")
+                label(for="icon-sidebar" class="dark:border-border-dark block overflow-hidden border shadow-md sidebar-icon border-light rounded-5") 
+                  img(class="w-[90px] object-cover" src='../../assets/images/customizer/icon-sidebar.png' alt='icon sidebar')  
+        li
+          div.flex.items-center.justify-between
+            span(class="dark:text-white").text-sm.font-semibold.text-title Monochrome Mode 
+            label.inline-flex.relative.items-center.cursor-pointer
+              input.sr-only.peer( name="monochrome" class="monochrome toggle toggle-primary" type='checkbox' id="monochrome")
+              span.w-7.h-4.bg-content.rounded-full.peer(class="peer-focus:outline-none peer-checked:after:translate-x-full peer-checked:after:content-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-light after:border after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-primary")
+
+            //- label.leading-none.text-dark(class="text-sm font-semibold" for="monochrome") Monochrome Mode
+            //- input(id="monochrome" name="monochrome" class="monochrome toggle toggle-primary" type='checkbox') 
+  div(class="flex items-center gap-2 p-[15px] border-t border-light dark:bg-primaryLight dark:border-t dark:border-border-dark ") 
+    button.btn.btn-ghost(class="flex-1 reset-customizer dark:!bg-sidebar-dark dark:text-white")
+      | Reset 
+    button.btn.btn-primary.text-white(class="flex-1")
+      | Buy Now

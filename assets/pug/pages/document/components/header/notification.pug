@@ -1,0 +1,99 @@
+//- =====================
+//-  Notification 
+//- =====================
+-
+    var NOTIFICATION= 
+        [
+            {
+                name:"Dmitriy Groshev",
+                avatar:"2.jpg",
+                subTitle:"Hi, i am josephin. How are you... ",
+                status:"online",
+                time:"17:12",
+                notif:"3", 
+            },
+            {
+                name:"Sufiya Elija",
+                avatar:"3.jpg",
+                subTitle:"I need job, Please help me.",
+                status:"offline",
+                time:"Fri",
+                notif:"32", 
+            },
+            {
+                name:"Janis Evans",
+                avatar:"5.jpg",
+                subTitle:"Good Morning!",
+                status:"online",
+                time:"8:22",
+                notif:"12", 
+            },
+
+            {
+                name:"Mukrani Pabelo",
+                avatar:"4.jpg",
+                subTitle:"Hi, i am josephin. How are you...",
+                status:"online",
+                time:"03:14",
+                notif:"10", 
+            },
+            {
+                name:"Josephin Water",
+                avatar:"2.jpg",
+                subTitle:"You’ve got some kind of a stom...",
+                status:"offline",
+                time:"Thu",
+                notif:"2", 
+            },
+            {
+                name:"Janis Evans",
+                avatar:"5.jpg",
+                subTitle:"Good Morning!",
+                status:"online",
+                time:"8:22",
+                notif:"12", 
+            },
+            {
+                name:"Sufiya Elija",
+                avatar:"3.jpg",
+                subTitle:"I need job, Please help me.",
+                status:"offline",
+                time:"Fri",
+                notif:"32", 
+            },
+        ]
+
+
+// Notification Start 
+div.dropdown
+    div.indicator.flex
+        span.indicator-item.badge.bg-success(class="p-0 right-[4px] top-0 border-[2px] border-white w-[8px] h-[8px] rounded-full")
+        i(data-feather="bell" class="w-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] stroke-title dark:stroke-white")
+    div.dropdown-menu(class="!min-w-[280px] sm:!-right-[163px] rtl:sm:!-left-[163px] rtl:sm:!right-unset") 
+        div.flex.items-center.justify-between(class="pb-[15px] border-b border-border-light") 
+            h4(class="text-base font-bold text-title") Notification
+            button(class="font-medium text-primary text-3xs") 
+                | Mark All As Read
+        div.search-box.relative.mt-4 
+            input(class="bg-gray-light border dark:bg-sidebar-dark2  dark:border-border-dark border-border-light  w-full py-[8px] pl-[15px] pr-[30px] rounded-5 text-xs font-medium text-title" placeholder="Type to Search..." type="search")       
+            i(data-feather="search" class="w-4 h-4 stroke-title top-1/2 -translate-y-1/2 right-[15px] absolute")
+        ul(class="mt-4 flex flex-col max-h-[232px] overflow-auto custom-scroll") 
+            each chat in NOTIFICATION
+                li.flex.items-center.gap-3(class="px-2 py-3 transition-all duration-300 border-b last:border-b-0 dark:hover:bg-sidebar-dark2 border-border-light hover:bg-gray-light rounded-5")
+                    a.flex.items-center(href="./chat.html" class="gap-[12px]")
+                        div.indicator 
+                            span.chat-status(class=`status-${chat.status}`)
+                            div.avatar
+                                div.w-10.rounded-full.h-10(class="xl:w-9 xl:h-9")
+                                    img(src=`../../assets/images/avatar/${chat.avatar}`, alt=`${chat.name}`)
+                        div
+                            h4(class="text-xs font-semibold line-clamp-1 text-title" )= chat.name
+                            p(class="text-xs font-semibold line-clamp-1 text-content")= chat.subTitle
+                    div(class="flex flex-col items-end gap-1 ml-auto")
+                        span(class="font-normal text-3xs text-content")= chat.time
+                        if (chat.status !== "danger")
+                            span(class="leading-none p-1 badge bg-primary rounded-full text-3xs flex items-center justify-center min-w-[22px] min-h-[22px]")= chat.notif
+// Notification End 
+
+
+

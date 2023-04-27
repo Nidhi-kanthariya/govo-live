@@ -410,7 +410,7 @@ const socialMediaStatisticsOption = {
     },
   ],
   chart: {
-    height: 280,
+    height: 280, 
     width: '100%',
     type: 'area',
     offsetY: 14,

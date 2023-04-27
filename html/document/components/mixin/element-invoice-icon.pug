@@ -1,0 +1,20 @@
+//- =====================
+//-  Invoice Icon List  
+//- =====================
+mixin (data)
+    div
+        ul(class="h-[275px] xl:h-[257px] custom-scroll overflow-auto") 
+            each dataItem in data
+                li.flex.items-center.justify-between.gap-2(class="py-[18px] xl:py-[17px] first:pt-0 last:pb-0 last:border-none border-b border-border-light ") 
+                    div.flex.items-center.gap-2
+                        span(class="p-[8px] block bg-gray-light rounded-full")
+                            +SVG_ICON(`${dataItem.icon}`,"w-6 h-6 xl:w-[21px] xl:h-[21px] stroke-title") 
+                        div
+                            h4(class="text-xs text-title font-semibold line-clamp-1")= dataItem.title
+                            h5(class="text-2xs text-content font-semibold line-clamp-1")=dataItem.subTitle
+                    div.flex.flex-col.items-end
+                        span(class="text-3xs text-title  font-semibold")= `$${dataItem.badge}` 
+                        span(class="text-2xs text-content font-semibold")= dataItem.badgeSub
+        label(class="btn cursor-pointer mt-[15px] w-full xl:py-[12px] py-[15px] bg-gray-light flex items-center justify-center gap-2 text-xs font-bold text-primary" for='add-project-modal')
+            +SVG_ICON("Plus-Circle","stroke-primary w-[18px] h-[18px]")
+            | Add Project

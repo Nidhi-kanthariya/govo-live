@@ -1,5 +1,5 @@
 /*=====================
-    Todo App CSS
+  5.13  Todo App Css
   ==========================*/
 @layer components {
     .todo-app {
@@ -42,32 +42,6 @@
                 .check-icon {
                     @apply stroke-warning;
                 }
-            }
-        }
-
-        .todo-sublist{
-            li{
-                /* .priority-low{
-                    @apply bg-danger-light capitalize leading-none text-3xs text-danger;
-                }
-                .priority-medium{
-                    @apply bg-warning-light capitalize leading-none text-3xs text-warning;
-                }
-                .priority-high{
-                    @apply bg-primary-light capitalize leading-none text-3xs text-primary;
-                }
-                .status-pending{
-                    @apply bg-secondary-light capitalize leading-none text-3xs text-secondary;
-                }
-                .status-inprogress{
-                    @apply bg-info-light capitalize leading-none text-3xs text-info;
-                }
-                .status-completed{
-                    @apply bg-success-light capitalize leading-none text-3xs text-success;
-                }
-                .status-new{
-                    @apply bg-primary-light capitalize leading-none text-3xs text-primary;
-                } */
             }
         }
     }

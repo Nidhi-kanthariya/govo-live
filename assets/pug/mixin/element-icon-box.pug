@@ -5,5 +5,5 @@ mixin icon-box(iconPackage,iconName,type,path,classes,iconStyle)
     if(iconPackage === "iconly")
       +SVG_ICON(iconName,"w-6 h-6 stroke-title")    
     if(iconPackage === "fontAwesome")
-      i(class=`${iconName} w-6 h-6 text-title`)
+      i(class=`${iconName} w-6 h-6 text-title dark:text-white`)
     span(class="text-xs font-normal text-center icon-name 3sm:text-3xs text-title dark:text-white")= iconName

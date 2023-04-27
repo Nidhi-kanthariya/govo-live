@@ -1,5 +1,5 @@
 /*=====================
-    tab CSS
+  3.25  Tab Css
   ==========================*/
 
 @layer components {
@@ -72,9 +72,8 @@
       }
 
       &.tabs-vertical {
-        @apply transition-all border-r border-border-light dark:border-border-dark dark:border-r p-2 sm:border-r-0 sm:border-b;
-
-        &.tab-active {
+        @apply transition-all border-r border-border-light dark:border-border-dark dark:border-r p-2 sm:!border-r-0 sm:border-b;
+        &.tab-active {  
           @apply border-r-2 border-primary text-primary sm:border-r-0 sm:border-b-2;
         }
       }

@@ -36,11 +36,11 @@ html(lang='en')
         include ../../layout/header/header     
         // Sidebar Start 
         div.page-sidebar.sidebar-dark.unique-sidebar
-          include ../../layout/unique
-        // Sidebar End
+          include ../../layout/unique 
+        // Sidebar End 
 
         // Page Body Start
-        div.page-body
+        div.page-body 
           div.grid.grid-cols-12.gap-card-gap
             div.col-span-8(class="xl:col-span-12") 
               div(class="grid grid-cols-2 gap-card-gap")
@@ -49,19 +49,18 @@ html(lang='en')
                     div.card.svg-shake
                       +widget3(data)
             div.col-span-4(class="xl:col-span-6 xl3:col-span-12")
-              div.card.gap-0
-                div.card-header
+              div.card.gap-0 
+                div.card-header 
                   +card-header("Recent Statistics","select",HiSTORY_DATE_DROPDOWN)
-                div.card-body
-                  div.relative 
-                    div#recentStatisticsChart1           
+                div.card-body 
+                  div.relative  
+                    div#recentStatisticsChart1     
                     div#recentStatisticsChart2(class="absolute inset-0")
-
             div.col-span-4(class="xl:col-span-6 lg:col-span-12 xl3:order-5")
-              div.grid.grid-cols-2.gap-card-gap  
+              div.grid.grid-cols-2.gap-card-gap
                 div.col-span-2(class="lg:col-span-1 2md:col-span-2")
-                  div.card
-                    div.card-header
+                  div.card 
+                    div.card-header 
                       +card-header("Earnings","setting", HISTORY_DROPDOWN)
                     div.card-body
                       +widget2(EARNINGS_WIDGET)
@@ -76,14 +75,14 @@ html(lang='en')
                     div.card-header
                       +card-header("Inventory Cost","setting", HISTORY_DROPDOWN)
                     div.card-body  
-                      +product-list(INVENTORY_CARD) 
+                      +product-list(INVENTORY_CARD)
                 div.col-span-2(class="lg:col-span-1 2md:col-span-2")
                   div.card.p-0(class="overflow-hidden")
                     div.relative
-                      img(class="w-full h-[178px] 2xl:h-[170px] lg:h-[193px] 2md:h-[170px]" src="../../assets/images/banner/2.jpg" alt="banner") 
-                      div(class="absolute top-1/2 -translate-y-1/2 left-0 max-w-[70%] px-card-space")
-                        h5(class="text-lg font-extrabold text-title dark:text-black") $5,859  
-                        p(class="text-lg font-normal 4xl:text-sm text-title dark:text-black") Make an announcement to your coworkers
+                      img(class="w-full h-[178px] 2xl:h-[170px] lg:h-[193px] 2md:h-[170px] dark:brightness-50" src="../../assets/images/banner/2.jpg" alt="banner") 
+                      div(class="absolute top-1/2 -translate-y-1/2 left-0 max-w-[70%] px-card-space") 
+                        h5(class="text-lg font-extrabold text-title") $5,859 
+                        p(class="text-lg font-normal 4xl:text-sm text-title ") Make an announcement to your coworkers
             div.col-span-4(class="xl:col-span-6 lg:col-span-12")
               div.grid.grid-cols-2.gap-card-gap 
                 div.col-span-2(class="lg:col-span-1 2md:col-span-2")
@@ -134,8 +133,6 @@ html(lang='en')
                       div.flex.items-center.justify-center.flex-col 
                         span(class="text-sm font-semibold text-title") 530    
                         span(class="font-semibold text-3xs text-content") Tablet Sale 
-
-
         // Page Body End 
         +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
       include ../../components/customizer

@@ -61,7 +61,7 @@ html(lang='en')
               div.tabs-content
                 div(data-tabContent="1" class="tab-pan fade active show first:rounded-tl-none rounded-5 border-none !px-1 !pb-0")
                   div
-                    h5.text-title.font-semibold.mb-2(class="dark:text-white")(class="dark:text-white") Billing Information 
+                    h5.text-title.font-semibold.mb-2(class="dark:text-white") Billing Information 
                     p.text-content3.mb-5  Fill up the following information 
                     form(action="index.html" class="flex flex-col gap-4 m-0 theme-form")
                       div.grid.grid-cols-12.gap-5
@@ -268,50 +268,44 @@ html(lang='en')
       div.modal-main
         input#modal-edit(class="peer" name="modal-edit" type='checkbox')
         label.modal-overlay(class="peer-checked:block" for='modal-edit')
-        div.modal.modal-center(class="w-10/12 max-w-md peer-checked:opacity-100 peer-checked:visible")
-          div.modal-header 
-            h3.text-title.font-semibold.text-sm Information 
+        div.modal.modal-center(class="w-10/12 dark:bg-sidebar-dark2 max-w-md peer-checked:opacity-100 peer-checked:visible")
+          div.modal-header
+            h3(class="dark:text-white").text-title.font-semibold.text-sm Information 
             label(for="modal-edit") 
               i(data-feather="x" class="w-4 h-4 stroke-content3")
           div.modal-body.checkout-detail
             form.theme-form.flex.flex-col.gap-3(class="!m-0")
-              div
+              div  
                 label(for="name") Name
-                input(type="text" id="name" placeholder="Enter your name" required)                                                
+                input(type="text" id="name" placeholder="Enter your name" required class="dark:border-border-dark dark:border")                                                
               div 
                 label(for="address") Address 
-                textarea(placeholder="Enter your address" row="3" id="address" class="p-[11px] focus:!border-border-light").w-full.border.border-border-light.rounded-5.text-xs.text-content
-              div 
+                textarea(placeholder="Enter your address" row="3" id="address" class="dark:border-border-dark dark:focus:!border-border-dark dark:bg-sidebar-dark2 p-[11px] focus:!border-border-light ").w-full.border.border-border-light.rounded-5.text-xs.text-content
+              div
                 label(for="country") Address Type
-                select.form-select.block.w-full.px-3.text-xs.font-normal.text-content3.bg-white.bg-clip-padding.bg-no-repeat.border.border-border-light.rounded-5.transition.ease-in-out.m-0(class='min-w-[150px] py-[9px]' id="sortby" aria-label='Default select example')
+                select.form-select.block.w-full.px-3.text-xs.font-normal.text-content3.bg-white.bg-clip-padding.bg-no-repeat.border.border-border-light.rounded-5.transition.ease-in-out.m-0(class='min-w-[150px] py-[9px] dark:bg-sidebar-dark2 dark:border-border-dark dark:focus:border-border'  id="sortby" aria-label='Default select example')
                   option(selected='') Home 
                   option(value='1') Office
               div 
                 label(for="number") Contact No
-                input(type="Number" id="number" placeholder="Enter your contact no" maxlength="10" pattern="\d{10}" class="rounded"  required)
+                input(type="Number" id="number" placeholder="Enter your contact no" class="dark:text-white" maxlength="10" pattern="\d{10}" class="rounded"  required)
           div.modal-footer(class="flex justify-end gap-3")
-            label(for="modal-edit").inline-block.btn.bg-gray-light.p-3.text-title Close
-            label(for="modal-edit").inline-block.btn.btn-primary.p-3.text-white Save   
-
+            label(for="modal-edit").inline-block.btn.bg-gray-light.p-3.text-title(class="dark:bg-sidebar-dark2 dark:text-white") Close
+            label(for="modal-edit").inline-block.btn.btn-primary.p-3.text-white Save 
       //- Delete Info
-      div.modal-main
+      div.modal-main 
         input#modal-delete(class="peer" name="modal-delete" type='checkbox')
         label.modal-overlay(class="peer-checked:block" for='modal-delete')
-        div.modal.modal-center(class="w-10/12 max-w-md peer-checked:opacity-100 peer-checked:visible")
+        div.modal.modal-center(class="w-10/12 dark:bg-sidebar-dark2 max-w-md peer-checked:opacity-100 peer-checked:visible")
           div.modal-body.text-center
             label(for="modal-delete" class="flex justify-end") 
               i(data-feather="x" class="w-4 h-4 stroke-content3") 
             div.modal-img
               img(class="" src="../../assets/images/ecommerce/delete.gif" alt="delete gif" class="w-28")
-            h3.text-lg.font-bold.mb-2 Are you sure?
-            p.mb-3 Delete this address only if you are certain you want to. 
-          div.modal-footer.flex.justify-end.gap-3
-            label(for="modal-delete").inline-block.btn.bg-gray-light.p-3.text-title Close
+            h3(class="dark:text-white").text-lg.font-bold.mb-2 Are you sure? 
+            p(class="dark:text-contact text-contact rtl:text-contact").mb-3 Delete this address only if you are certain you want to.
+          div.modal-footer.flex.justify-end.gap-3 
+            label(for="modal-delete" class="dark:bg-sidebar-dark2 dark:text-white").inline-block.btn.bg-gray-light.p-3.text-title Close
             label(for="modal-delete").inline-block.btn.btn-danger.p-3.text-white Yes, Sure!
 
   include ../../layout/footer-files
-
-
-
-
-

@@ -1,14 +1,14 @@
 /*=====================
-  Main Css CSS
+  4.2 Main Css
   ==========================*/
 @layer components {
   .page-wrapper{
     @apply overflow-hidden;
   }
   .page-body-wrapper {
-    @apply sm:mb-20 mb-14;
+    @apply sm:mb-20 mb-[3.65rem];
     .page-body {
-      @apply py-main-space px-body-space ml-auto h-full dark:bg-sidebar-dark2;
+      @apply py-card-gap px-card-gap ml-auto h-full dark:bg-sidebar-dark2;
     }
   }
 }

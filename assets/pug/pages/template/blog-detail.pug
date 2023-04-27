@@ -13,6 +13,9 @@
 //- customizer
 -var customizer=true;
 
+//- gridListView
+-var gridListView=true;
+
 //- Breadcrumbs
 -var pageTitle="Blog Detail";
 -var breadcrumb=['Blog','Blog Detail'];
@@ -38,17 +41,34 @@ html(lang='en')
         // Page Body Start 
         div.page-body
           div.grid.grid-cols-12.gap-card-gap
-            div.col-span-3(class="4xl:col-span-4 lg:col-span-12")
-              div.card.left-sidebar-aside(class="z-[4]")
+            div.col-span-12.flex.items-center.justify-between.gap-3.bg-white.p-3.rounded-5(class=" dark:bg-sidebar-dark") 
+              div.flex.items-center.gap-3 
+                label(for="sortby" class="text-xs min-w-max text-content3") Sort By                                    
+                select.form-select.block.w-full.px-3.text-xs.font-normal.text-content3.bg-white.bg-clip-padding.bg-no-repeat.border.border-border-light.rounded-5.transition.ease-in-out.m-0(class='min-w-[150px] 2md:min-w-[130px] py-[9px] dark:border-border-dark dark:bg-sidebar-dark2' id="sortby" aria-label='Default select example')
+                  option(selected='') All 
+                  option(value='1') Popular  
+                  option(value='2') Price Low
+                  option(value='3') Price Hight 
+              div.flex.items-center.gap-3 
+                div.search-box.relative(class="2md:hidden")
+                  input(class="rounded-5 w-full py-[11px] pl-[25px] pr-[55px] rtl:pr-[25px] rtl:pl-[55px] dark:bg-sidebar-dark2 dark:text-white text-xs font-semibold text-title border border-border-light dark:border-border-dark" placeholder="Type to Search..." type="search")       
+                  +SVG_ICON("Search","w-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] stroke-title top-1/2 -translate-y-1/2 right-[25px] rtl:right-unset rtl:left-[25px] absolute dark:stroke-white")
+                button
+                  +SVG_ICON("Search","2md:flex hidden w-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] stroke-title dark:stroke-white")
+                div.product-filter(class="hidden cursor-pointer lg:flex") 
+                  +SVG_ICON("Filter", "w-6 h-6 stroke-content3 blog-toggle lg:block hidden")
+
+            div.col-span-3(class="4xl:col-span-4 blog-sidebar lg:w-[290px] sm:w-[280px]")
+              div.card.sticky.top-0
                 div.card-header.border-b-0
-                  button(class="justify-end hidden mb-3 lg:flex left-sidebar-toggle absolute right-[-50px] top-[-16px] bg-gray-light p-2 ")   
+                  button(class="justify-end hidden mb-3 lg:flex absolute blog-close-sidebar right-[-50px] top-[-16px] bg-gray-light p-2 ")   
                     i(data-feather="x" class="w-5 h-5 stroke-title")
                   div.search-box.relative
                     input(class="rounded-full bg-gray-light dark:bg-sidebar-dark2 dark:text-white w-full py-[.6875rem] pl-[1.5625rem] pr-[3.4375rem] text-xs font-semibold text-title" placeholder="Type to Search..." type="search")       
                     +SVG_ICON("Search","w-6 h-6 stroke-title dark:stroke-white top-1/2 -translate-y-1/2 right-[1.5625rem] absolute")
                 div.card-body.flex.flex-col.gap-card-space                                  
                   div(class="p-3 border first:rounded-tl-none border-light dark:border-border-dark rounded-5")
-                    h2(class="mb-4 font-bold dark:text-white") Categories
+                    h4(class="mb-4 font-bold dark:text-white") Categories
                     ul.flex.flex-col.gap-2
                       li.flex.items-center.justify-between(class="p-2 text-xs text-content rounded-5 group hover:bg-primary") 
                         a(href="blog-grid.html" class="group-hover:text-white")  Web designer Jobs
@@ -73,7 +93,7 @@ html(lang='en')
                         span(class="group-hover:text-white text-content") 54 
 
                   div(class="p-3 border first:rounded-tl-none border-light dark:border-border-dark rounded-5")
-                    h2(class="mb-4 font-bold dark:text-white") Tags
+                    h4(class="mb-4 font-bold dark:text-white") Tags
                     div(class="flex flex-wrap gap-3")
                       button(class="dark:bg-sidebar-dark2").btn.btn-outline.btn-primary.btn-sm.text-primary #jobs 
                       button(class="dark:bg-sidebar-dark2").btn.btn-outline.btn-secondary.btn-sm.text-secondary #business
@@ -84,7 +104,7 @@ html(lang='en')
                       button(class="dark:bg-sidebar-dark2").btn.btn-outline.btn-success.btn-sm.text-success #jobSearch
 
                   div(class="p-3 border first:rounded-tl-none border-light dark:border-border-dark rounded-5")
-                    h2(class="mb-4 font-bold dark:text-white") Latest Blogs
+                    h4(class="mb-4 font-bold dark:text-white") Latest Blogs
                     ul.flex.flex-col.gap-1 
                       li(class=" pt-[.8125rem]  first:pt-0 first:mt-0 first:border-none")                                 
                         a.flex.items-center.gap-3(href="blog-grid.html" class="w-[calc(100%_-_0rem)] xl:gap-2")  
@@ -121,23 +141,20 @@ html(lang='en')
 
                   div(class="p-3 border first:rounded-tl-none border-light dark:border-border-dark rounded-5")
                     div(class="mb-[1.125rem]")
-                      h2(class="mb-2 font-bold dark:text-white") Subscriber
+                      h4(class="mb-2 font-bold dark:text-white") Subscriber
                       p(class="text-xs text-content") " To get more detail for new types of blogs "
-                    form(class="m-0 theme-form")
+                    form(class="m-0 theme-form") 
                       input(type="email" class="dark:bg-sidebar-dark2 dark:text-white" id="Email" placeholder="Enter your email" Name="Email" required)
                       button(class="w-full lg:!w-auto p-2 !mb-0 text-white rounded bg-primary hover:drop-shadow-lg") Get Started
 
             div.col-span-9(class="4xl:col-span-8 lg:col-span-12")
               div.grid.grid-cols-12.gap-card-gap
                 div.col-span-12(class="lg:col-span-12")
-                  div.card.p-6(class="sm:p-4")
-                    div.card-header 
-                      span.left-sidebar-hide-logo-show(class="items-center justify-end hidden lg:flex")
-                        +SVG_ICON("Category","w-5 h-5 stroke-title cursor-pointer hover:stroke-primary ml-auto left-sidebar-toggle-btn lg:block hidden")
+                  div.card.p-6(class="sm:p-4") 
                     div.card-body 
                       div.bg-white.rounded-lg
                         img.rounded-t-lg(src='../../assets/images/blog/blog-details.svg' alt='blog-details.svg')
-                      h2.font-bold.mb-3
+                      h4.font-bold.mb-3 
                         | Floyd L. Mitchell
                       p.text-content(class="md:line-clamp-2").mb-3 Machines to craft the Geminis DK. Not only his overall appearance was inspired, but his behavior and even the way he shrugs were also fed to the robot, and Scharfe also donated the strands of his own hair to be used in the Geminoid wig. This bot is very realistic as people tend to be mistaken for the person designed to look alike. The main purpose of this creation is to make the humanoid look completely like a human.
                       p.text-content(class="md:line-clamp-2").mb-3 Leather detail shoulder contrasting color contour stunning silhouette working peplum. Structured chic panels power party flattering ultimate trim back pencil silhouette perfect look. Wardrobe stylish fitted long sleeves pleats texture fabric mini neckline cobalt blue. Monochrome textures casual daily polo neck knitted floral effortless short sleeve.
@@ -161,7 +178,7 @@ html(lang='en')
                 div.col-span-12(class="xl3:col-span-12")
                   div.card.p-6(class="sm:p-4")
                     div.card-body
-                      h2.font-bold.mb-3.text-2xl Comments
+                      h4.font-bold.mb-3.text-2xl Comments
                       div.flex.flex-col.justify-center
                         div(class="pt-[1rem] first:pt-0 first:mt-0 first:border-none")                                 
                           div.flex.items-start.gap-3(class="w-[calc(100%_-_0rem)] xl:gap-2")  
@@ -173,10 +190,10 @@ html(lang='en')
                                 h3.text-xs.font-bold.text-primary(class="leading-none lg:text-2xs lg:leading-none") Annie A. McKinney
                                 span(class="text-[.75rem]").text-xs.text-content 1 hours ago
                               span.text-content.block.mt-1(class="md:line-clamp-2 sm:line-clamp-1") Best seller signature waist cut pockets cotton-mix navy blue tailoring elegant cashmere. Leather detail shoulder contrasting color contour stunning silhouette working peplum. Monochrome textures casual daily polo neck knitted floral effortless short sleeve.
-                              div.flex.justify-start.items-center.gap-1
+                              div.flex.justify-start.items-center.gap-1 
                                 i(data-feather="corner-up-right" class="w-[.75rem]").text-content
                                 span.text-content Reply
-                        div(class="mt-3 divider")
+                        div(class="mt-3 divider w-full")
                         div(class="pt-[1rem] ml-[3.125rem] sm:ml-unset first:pt-0 first:mt-0 first:border-none")                                 
                           div.flex.items-start.gap-3(class="w-[calc(100%_-_0rem)] xl:gap-2")  
                             a(href="blog-grid.html").avatar
@@ -190,11 +207,11 @@ html(lang='en')
                               div.flex.justify-start.items-center.gap-1
                                 i(data-feather="corner-up-right" class="w-[.75rem]").text-content
                                 span.text-content Reply
-                        div(class="mt-3 divider")
+                        div(class="mt-3 divider w-full")
                         div(class="pt-[1rem] first:pt-0 first:mt-0 first:border-none")                   
                           div.flex.items-start.gap-3(class="w-[calc(100%_-_0rem)] xl:gap-2")  
                             a(href="blog-grid.html").avatar
-                              div.w-10.rounded-full.h-10(class="xl:h-9 xl:w-9")
+                              div.w-10.rounded-full.h-10(class="xl:h-9 xl:w-9 ")
                                 img(src='../../assets/images/avatar/28.jpg' alt='avatar')
                             div(class="w-[calc(100%_-_3.125rem)]")
                               div(class="flex items-center justify-between gap-2 sm:flex-col sm:gap-0 sm:items-start")
@@ -204,11 +221,10 @@ html(lang='en')
                               div.flex.justify-start.items-center.gap-1
                                 i(data-feather="corner-up-right" class="w-[.75rem]").text-content
                                 span.text-content Reply
-
             div.col-span-12
               div.card.p-4
                 div.card-body
-                  h2(class="mb-[1.25rem]").font-bold Leave Comment
+                  h4(class="mb-[1.25rem]").font-bold Leave Comment
                   form(action="index.html" class="m-0 theme-form")
                     div(class="flex gap-3 md:flex-col mb-[.75rem]")
                       div(class="w-full")

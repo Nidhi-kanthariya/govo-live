@@ -197,44 +197,6 @@ html(lang='en')
                           |      &lt;option&gt;Last 3 Month &lt;/option&gt; 
                           |    &lt;/select&gt;
                           |&lt;/div&gt;
-
-            //- div.col-span-4(class="lg:col-span-6 md:col-span-12")
-            //-   div.card.tabs
-            //-     div.card-header.pb-2.header-bottom-border
-            //-       div.flex.flex-col
-            //-         h3.text-lg.font-bold Secondary Select
-            //-         p To set the custom select use 
-            //-           strong .custom-select   
-            //-           | & 
-            //-           strong .select-style-1  
-            //-           | class.
-            //-         div.preview-code.tab-links
-            //-           button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
-            //-           button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
-            //-     div.card-body                                   
-            //-       div.tabs-content
-            //-         div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
-            //-           div.flex.items-center.flex-col.flex-wrap.gap-2
-            //-             div.custom-select.select-style-1.border.border-secondary.w-full.max-w-xs.select-bg-white(class="dark:bg-dark-dense")
-            //-               select
-            //-                 option(selected value="") Last 7 Days 
-            //-                 option(value="") Last 2 Weeks 
-            //-                 option(value="") Last 1 Month 
-            //-                 option(value="") Last 3 Month
-            //-         div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
-            //-           button.btn.copyBtn(class="dark:text-white dark:bg-sidebar-dark dark:hover:bg-sidebar-dark dark:hover:text-white") 
-            //-             i(data-feather="clipboard")
-            //-           pre(class="overflow-auto language-html custom-scroll dark:bg-sidebar-dark2")
-            //-             code(class="dark:bg-sidebar-dark2")
-            //-               |&lt;div class="w-full max-w-xs border custom-select select-style-1 border-secondary select-bg-white dark:bg-dark-dense"&gt;
-            //-               |   &lt;select&gt;
-            //-               |      &lt;option disabled selected&gt;Last 7 Days &lt;/option&gt;
-            //-               |      &lt;option&gt;Last 2 Weeks &lt;/option&gt;
-            //-               |      &lt;option&gt;Last 1 Month&lt;/option&gt; 
-            //-               |      &lt;option&gt;Last 3 Month &lt;/option&gt; 
-            //-               |    &lt;/select&gt;
-            //-               |&lt;/div&gt;
-
             div.col-span-4(class="lg:col-span-12")
               div.card.tabs
                 div.card-header.pb-2.header-bottom-border6
@@ -248,22 +210,22 @@ html(lang='en')
                     div.preview-code.tab-links
                       button.p-0.tab.tab-lifted.tab-active(data-tabFilter="1" class="tab-link") Preview  
                       button.p-0.tab.tab-lifted(data-tabFilter="2" class="tab-link tab-2") Html
-                div.card-body                                   
+                div.card-body                          
                   div.tabs-content
                     div(data-tabContent="1" class="tab-pan active show first:rounded-tl-none rounded-5")
                       div.flex.items-center.flex-col.flex-wrap.gap-2
-                        div.custom-select.select-style-2.w-full.max-w-xs.select-bg-white(class="dark:bg-dark-dense")
-                          select
+                        div.custom-select.select-style-2.w-full.max-w-xs.select-bg-white(class="dark:select-bg-sidebar-dark2")
+                          select 
                             option(selected value="") Last 7 Days 
-                            option(value="") Last 2 Weeks 
+                            option(value="") Last 2 Weeks
                             option(value="") Last 1 Month 
                             option(value="") Last 3 Month
                     div(data-tabContent="2" class="relative tab-pan copyParent group first:rounded-tl-none rounded-5")
                       button.btn.copyBtn(class="dark:text-white dark:bg-sidebar-dark dark:hover:bg-sidebar-dark dark:hover:text-white") 
-                        i(data-feather="clipboard")
+                        i(data-feather="clipboard") 
                       pre(class="overflow-auto language-html custom-scroll dark:bg-sidebar-dark2")
                         code(class="dark:bg-sidebar-dark2")
-                          |&lt;div class="w-full max-w-xs border custom-select select-style-2 border-info select-bg-white dark:bg-dark-dense"&gt;
+                          |&lt;div class="w-full max-w-xs border custom-select select-style-2 border-info select-bg-white dark:select-bg-sidebar-dark2"&gt;
                           |   &lt;select&gt;
                           |      &lt;option disabled selected&gt;Last 7 Days &lt;/option&gt;
                           |      &lt;option&gt;Last 2 Weeks &lt;/option&gt;

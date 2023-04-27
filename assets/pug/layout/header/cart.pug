@@ -11,7 +11,7 @@ div.dropdown.shopping-bag
         +SVG_ICON("Delete","w-[18px] h-[18px] transition-all duration-300 group-hover:stroke-white stroke-title")
     ul(class="flex flex-col max-h-[232px] overflow-auto custom-scroll px-1")
       each cartItems in ADD_TO_CART_ITEMS
-        li.cart-item.flex.items-center.gap-3(class="py-3 transition-all duration-300 border-b last:border-b-0 border-border-light dark:border-border-dark rounded-5")
+        li.cart-item.flex.items-center.gap-3(class="py-3 rtl:first:!pl-0  rtl:last:!pr-0 transition-all duration-300 border-b last:border-b-0 border-border-light dark:border-border-dark rounded-5")
           a.flex.items-center(href="./product.html" class="gap-[12px]")
             div.rounded-full(class="relative ")
               img(class="rounded-full min-w-[2.25rem] min-h-[2.25rem] w-full h-auto object-cover" src=`../../assets/images/product/${cartItems.image}` alt=`${cartItems.name}`) 

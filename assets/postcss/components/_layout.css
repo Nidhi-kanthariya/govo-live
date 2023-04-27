@@ -1,11 +1,11 @@
 /*=====================
-    Layout CSS
+  3.16  Layout Css
   ==========================*/
 
 @layer components {
   main{
     .page-body{
-      @apply lg:mt-[calc(125px_+_(90_-_125)_*_((100vw_-_320px)_/_(1920_-_320)))] mt-[7.5rem] md:mt-[6.875rem];
+      @apply mt-[calc(7.97rem+_(7.65_-_7.97)_*_((100vw_-_320px)_/_(1920_-_320)))] 2xl:mt-[calc(7.7rem+_(7.30_-_7.7)_*_((100vw_-_320px)_/_(1920_-_320)))] xl:mt-[calc(7.65rem+_(7.5_-_7.65)_*_((100vw_-_320px)_/_(1920_-_320)))] lg:mt-[116px] md:mt-[7.10rem];
         .apexcharts{
           &-canvas {
           [dir='rtl'] & {

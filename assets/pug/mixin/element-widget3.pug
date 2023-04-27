@@ -8,7 +8,7 @@ mixin widget3(data)
         div(class="p-[13px] 6xl:p-[10px] 5xl:p-[8px] rounded-full relative")
           div(class=`bg-${data.status} opacity-25 absolute z-[1] inset-0 rounded-full`) 
           svg(class=`strong-hover-shake fill-${data.status} 2xl:w-[20px] 2xl:h-[20px] 3xl:w-[18px] 3xl:h-[18px] lg:w-[18px] lg:h-[18px] 2sm:w-4 2sm:h-4 6xl:w-4 6xl:h-4 w-5 h-5 relative z-[2]`)  
-            use(href=`../../../assets/svg/_bold_sprite.svg#${data.icon}`)
+            use(href=`../../../assets/svg/bold_sprite.svg#${data.icon}`)
         h5(class="text-lg font-bold text-title 3sm:text-base 4xl:text-base")= data.title
 
       h2(class="mt-[25px] 2lg:mt-[18px] text-title font-extrabold text-[30px] 3sm:text-[22px] 6xl:text-[25px]")= data.profit

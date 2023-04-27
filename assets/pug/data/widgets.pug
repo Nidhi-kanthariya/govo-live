@@ -3,62 +3,105 @@
 //- =====================
 //- ====== Revenue Widgets ====== -//
 -
-   var REVENUE_WIDGET=
-      {
-         title:"Revenue",
-         price:"$4,875",
-         gros:'36.28',
-         status:"success",
-         avatarGroup:["1","2"],
-         placeholder:26,
-         chart:"revenueChart",
-      }
+    var REVENUE_WIDGET=
+        {
+            title:"Revenue",
+            price:"$4,875",
+            gros:'36.28',
+            status:"success",
+            avatarGroup:["1","2"],
+            placeholder:26, 
+            chart:"revenueChart",
+        } 
 
 //- ====== Earning Widgets ====== -//
 -
-   var EARNINGS_WIDGET= 
-      {
-         //- title:"Earnings",
-         price:"$4,875",
-         subTitle:'Total Expense',
-         pera:"Profit is grow 45% more than last Month continue increasing",
-         chart:"earningChart",
-      }
+    var EARNINGS_WIDGET= 
+        {
+            //- title:"Earnings",
+            price:"$4,875",
+            subTitle:'Total Expense',
+            pera:"Profit is grow 45% more than last Month continue increasing",
+            chart:"earningChart",
+        }
 
 //- ====== Widget3 ====== -//
 -
-   var WIDGET3_DATA=
-      [
-         {
-            title:"Total Followers",
-            icon:"User",
-            status:"success",
-            profit:20.790,
-            gros:36.28,
-            chart:"totalFollowersBarChart",
-         },
-         {
-            title:"Total Likes",
-            icon:"Like",
-            status:"title",
-            profit:65.340,
-            gros:25.28,
-            chart:"totalLikesAreaChart",
-         },
-         {
-            title:"Total Comment",
-            icon:"Bold-Chat",
-            status:"secondary",
-            profit:20.450,
-            gros:67.24,
-            chart:"totalCommentRadialChart",
-         },
-         {
-            title:"Total Saved",
-            icon:"Save",
-            status:"warning",
-            profit:50.890,
-            gros:16.30,
-            chart:"totalSaveBarChart",
-         }
-      ] 
+    var WIDGET3_DATA=
+        [
+            {
+                title:"Total Followers",
+                icon:"User",
+                status:"success",
+                profit:20.790,
+                gros:36.28,
+                chart:"totalFollowersBarChart",
+            },
+            {
+                title:"Total Likes",
+                icon:"Like",
+                status:"title",
+                profit:65.340,
+                gros:25.28,
+                chart:"totalLikesAreaChart",
+            },
+            {
+                title:"Total Comment",
+                icon:"Bold-Chat",
+                status:"secondary",
+                profit:20.450,
+                gros:67.24,
+                chart:"totalCommentRadialChart",
+            },
+            {
+                title:"Total Saved",
+                icon:"Save",
+                status:"warning",
+                profit:50.890,
+                gros:16.30,
+                chart:"totalSaveBarChart",
+            }
+        ] 
+
+-
+    var WIDGET4_DATA=
+        [
+            {
+                title:"Total Sells",
+                icon:"Money-Hand",
+                status:"success",
+                profit:20.790,
+                gros:36.28,
+                data:" Total Sells Compared to last year",
+                chart:"totalSellBarChart",                
+            },
+            {
+                title:"Total Customer",
+                icon:"Users",
+                status:"secondary",
+                profit:10.341,
+                gros:26.14,
+                data:" Customer Compared to last year",
+                chart:"totalCustomerLineChart",
+            },
+            {
+                title:"Total Expenses",
+                icon:"Medical",
+                status:"title",
+                profit:23.28,
+                gros:67.24,
+                data:" Expenses Compared to last year",
+                chart:"totalExpensesLineChart",
+            },
+            {
+                title:"Total Order",
+                icon:"Order",
+                status:"warning",
+                profit:21.745,
+                gros:12.13,
+                data:" Order Compared to last year",
+                //- chart:"totalSaveBarChart",
+                progress:"55",
+
+            }
+        ] 

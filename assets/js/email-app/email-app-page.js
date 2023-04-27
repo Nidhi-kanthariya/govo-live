@@ -23,7 +23,6 @@ for (var i = 0; i < leftSidebarHeaderToggle.length; i++) {
   });
 }
 
-
 /*=====================
   Email hide/show js
 ==========================*/
@@ -44,5 +43,3 @@ btnEmail?.addEventListener('click', function (e) {
   emailRead.classList.remove("show");
   emailList.classList.remove("hide");
 });
-
-

@@ -1,14 +1,20 @@
 /*=====================
-    Prism custom CSS
+  3.21  Prism Custom Css
   ==========================*/
 
 @layer components {
   pre[class*="language-"] {
     @apply p-4;
+    code{
+      &.language-html{
+        @apply dark:text-white;
+      }
+    } 
   }
 
   code[class*="language-"],
   pre[class*="language-"] { 
     @apply bg-gray-light leading-tight rtl:text-start;
   }
+
 }

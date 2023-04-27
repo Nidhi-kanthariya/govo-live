@@ -19,6 +19,9 @@
 //- customizer 
 -var customizer = true;
 
+//- gridListView
+-var gridListView=true;
+
 //- Breadcrumbs
 -var pageTitle="Shop";
 -var breadcrumb=['Ecommerce','Shop'];
@@ -251,9 +254,9 @@ html(lang='en')
                       +new-product-card(NEW_PRODUCT)
 
             div.col-span-9(class="2xl:col-span-8 xl:col-span-12 product-wrapper-grid")
-              .grid.grid-cols-12.gap-6(class="sm:mt-5") 
+              ul.grid.grid-cols-12.gap-6(class="sm:mt-5") 
                 each data in PRODUCT_BOX 
-                  div.col-span-3(class='4xl:col-span-4 2xl:col-span-6 xl:col-span-4 md:col-span-6 sm:col-span-12 product-box')
+                  li.col-span-3(class='4xl:col-span-4 2xl:col-span-6 xl:col-span-4 md:col-span-6 sm:col-span-12 product-box')
                     +product(data,"modal", "productmodal")
 
         // Page Body End  
@@ -264,14 +267,14 @@ html(lang='en')
       div.modal-main
         input#productmodal(class="peer" name="productmodal" type='checkbox')
         label.modal-overlay(class="peer-checked:block" for='productmodal')
-        div.modal.modal-center(class="peer-checked:opacity-100 peer-checked:visible !duration-75 w-11/12 max-w-5xl")
+        div.modal.modal-center(class="peer-checked:opacity-100 peer-checked:visible !duration-75 w-11/12 max-w-5xl dark:bg-sidebar-dark2")
           div.modal-body.product-modal(class="md:modal-content-scroll md:custom-scroll md:!h-[90vh] !px-4")
-            div.grid.grid-cols-12.gap-card-gap
+            div.grid.grid-cols-12.gap-card-gap 
               div.col-span-6(class="md:col-span-12")             
                 div.product-slider
                   div.swiper.productImgNav
-                    div.swiper-wrapper
-                      div.swiper-slide
+                    div.swiper-wrapper 
+                      div.swiper-slide 
                         img(src="../../assets/images/ecommerce/18.jpg" alt="product")
                       div.swiper-slide
                         img(src="../../assets/images/ecommerce/17.jpg" alt="product")
@@ -302,12 +305,12 @@ html(lang='en')
                     i.fa-solid.fa-share(class="w-4 h-4 text-content")
                   div.flex.gap-2.items-center 
                     label(for='productmodal') 
-                      i(data-feather="x" class="w-4 h-4 cursor-pointer stroke-dark")
+                      i(data-feather="x" class="w-4 h-4 cursor-pointer stroke-dark dark:stroke-white")
                 span.text-content3.text-xs.leading-none #15704                  
                 p.text-content3.text-xs.leading-none Currently in stock    
-                h4(class="my-2 font-semibold text-title lg:text-lg") $500 
-                  del(class="text-danger") $350 
-                div.flex.items-center.gap-2
+                h4(class="my-2 font-semibold text-title lg:text-lg dark:text-white") $500 
+                  del(class="text-danger") $350
+                div.flex.items-center.gap-2 
                   div.flex.items-center.gap-0
                     i(data-feather="star" class="w-4 h-4 fill-warning stroke-transparent")
                     i(data-feather="star" class="w-4 h-4 fill-warning stroke-transparent")
@@ -316,11 +319,11 @@ html(lang='en')
                     i(data-feather="star" class="w-4 h-4 fill-content stroke-transparent")
                   label(for="4above").text-content3.text-xs.font-semibold 1059 ratings
                 p.text-content3.text-sm.mt-1.line-clamp-2 This Men's Oversize T-Shirt is ideal for daily wear or for college because it is incredibly cool and cosy.
-                div.divider.w-full.my-4(class="before:!bg-border-light after:!bg-border-light 2lg:my-3")
+                div.divider.w-full.my-4(class="dark:border-border-dark 2lg:my-3")
                 div.grid.grid-cols-12.gap-card-gap.items-center 
                   div.col-span-6(class="2lg:col-span-7 2sm:col-span-12")
-                    div.flex.items-center.gap-3
-                      label.text-title.text-sm.font-medium(for="color") Color
+                    div.flex.items-center.gap-3 
+                      label.text-title.text-sm.font-medium(for="color" class="dark:text-white") Color
                       ul(class="flex flex-wrap items-center gap-1" id="color")
                         li(class="w-5 h-5 rounded-full cursor-pointer bg-light")
                         li(class="w-5 h-5 bg-black rounded-full cursor-pointer")
@@ -329,23 +332,23 @@ html(lang='en')
                         li(class="w-5 h-5 rounded-full cursor-pointer bg-info")
                   div.col-span-6(class="2lg:col-span-5 2sm:col-span-12")
                     div.flex.items-center.gap-3
-                      label.text-title.text-sm.font-medium(for="qty") Qty   
-                      select.form-select.block.w-full.px-3.text-xs.font-normal.text-content3.bg-white.bg-clip-padding.bg-no-repeat.border.border-border-light.rounded-5.transition.ease-in-out.m-0(class='py-1 min-w-[50px] 2sm:w-[100px]' id="qty" aria-label='Default select example')
-                        option(selected='') 1
+                      label.text-title.text-sm.font-medium(for="qty" class="dark:text-white") Qty   
+                      select.form-select.block.w-full.px-3.text-xs.font-normal.text-content3.bg-white.bg-clip-padding.bg-no-repeat.border.border-border-light.rounded-5.transition.ease-in-out.m-0(class='py-1 min-w-[50px] 2sm:w-[100px] dark:bg-sidebar-dark dark:border-border-dark' id="qty" aria-label='Default select example')
+                        option(selected='') 1 
                         option(value='1') 2
-                        option(value='2') 3
+                        option(value='2') 3 
                         option(value='3') 4
-                        option(value='3') 5
-                div.divider.w-full.my-4(class="before:!bg-border-light after:!bg-border-light 2lg:my-3")
+                        option(value='3') 5  
+                div.divider.w-full.my-4(class="2lg:my-3 dark:border-border-dark")
                 div.flex.items-center.gap-3
-                  label.text-title.text-sm.font-medium(for="size") Sizes   
+                  label.text-title.text-sm.font-medium(for="size" class="dark:text-white") Sizes
                   ul.flex.items-center.gap-2
-                    li.border.border-border-light.rounded-full.text-title.leading-none.w-8.h-8.flex.items-center.justify-center(class="hover:bg-gray-extralight dark:hover:bg-sidebar-dark2 dark:border-border-dark") S 
-                    li.btn-active.text-title.leading-none.w-8.h-8.flex.items-center.justify-center.border.border-border-light.bg-gray-extralight.rounded-full(class="hover:bg-gray-extralight dark:hover:bg-sidebar-dark2 dark:border-border-dark") M
-                    li.border.border-border-light.rounded-full.text-title.leading-none.w-8.h-8.flex.items-center.justify-center(class="hover:bg-gray-extralight dark:hover:bg-sidebar-dark2 dark:border-border-dark") L 
-                    li.border.border-border-light.rounded-full.text-title.leading-none.w-8.h-8.flex.items-center.justify-center(class="hover:bg-gray-extralight dark:hover:bg-sidebar-dark2 dark:border-border-dark") XL 
-                div.divider.w-full.my-4(class="before:!bg-border-light after:!bg-border-light 2lg:my-3")
-                div.flex.flex-wrap.gap-2.items-center.capitalize(class="2lg:gap-1") 
+                    li.border.border-border-light.rounded-full.text-title.leading-none.w-8.h-8.flex.items-center.justify-center(class="hover:bg-gray-extralight dark:hover:bg-sidebar-dark2 dark:border-border-dark dark:hover:text-white") S 
+                    li.btn-active.text-title.leading-none.w-8.h-8.flex.items-center.justify-center.border.border-border-light.bg-gray-extralight.rounded-full(class="hover:bg-gray-extralight dark:hover:bg-sidebar-dark2 dark:border-border-dark dark:bg-sidebar-dark2 dark:text-white") M
+                    li.border.border-border-light.rounded-full.text-title.leading-none.w-8.h-8.flex.items-center.justify-center(class="hover:bg-gray-extralight dark:hover:bg-sidebar-dark2 dark:border-border-dark dark:hover:text-white") L 
+                    li.border.border-border-light.rounded-full.text-title.leading-none.w-8.h-8.flex.items-center.justify-center(class="hover:bg-gray-extralight dark:hover:bg-sidebar-dark2 dark:border-border-dark dark:hover:text-white") XL 
+                div.divider.w-full.my-4(class=" dark:border-border-dark 2lg:my-3")
+                div.flex.flex-wrap.gap-2.items-center.capitalize(class="2lg:gap-1")
                   a(href="cart.html").btn.btn-primary.text-white.text-sm(class="lg:px-2 lg:text-xs") Add to cart         
                   a(href="wishlist.html").btn.btn-secondary.text-white.text-sm(class="lg:px-2 lg:text-xs") Add to wishlist         
                   a(href="checkout.html").btn.btn-warning.text-white.text-sm(class="lg:px-2 lg:text-xs") Buy it now         

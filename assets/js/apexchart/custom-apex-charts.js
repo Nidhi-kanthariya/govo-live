@@ -876,7 +876,7 @@ const linechart = {
     colors: ['rgba(var(--secondary),1', 'rgba(var(--primary),1'],
     markers: {
         size: 5,
-        strokeColors: '#fff',
+        strokeColors: '#fff', 
         strokeWidth: 2,
         discrete: [],
         shape: 'circle',
@@ -1153,6 +1153,7 @@ const bubblechart = {
                 ...fontCommon,
             },
             useSeriesColors: false,
+            colors: ['var(--content)']
         },
     },
     responsive: [{
@@ -1575,6 +1576,11 @@ const groupbarchart = {
         max: 400,
         logBase: 100,
         tickAmount: 4,
+        labels:{
+            style:{
+                colors:['var(--title)']
+            } 
+        }
     },
     xaxis: {
         show: true,
@@ -1588,6 +1594,11 @@ const groupbarchart = {
             show: true,
         },
         categories: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+        labels:{
+            style: {
+                colors: ['var(--content)', 'var(--content)','var(--content)','var(--content)','var(--content)','var(--content)','var(--content)','var(--content)','var(--content)','var(--content)','var(--content)','var(--content)']
+            }, 
+        },
     },
     legend: {
         show: false,
@@ -1643,16 +1654,19 @@ const radialchart = {
     plotOptions: {
         radialBar: {
             dataLabels: {
+                show: true,
                 name: {
                     ...fontCommon,
+                    color: undefined, 
                 },
-                value: {
-                    ...fontCommon,
-                },
+                value: { 
+                    ...fontCommon,   
+                    color: 'var(--content)',
+                }, 
                 total: {
                     show: true,
                     label: 'Total',
-                    color: 'var(--content)',
+                    color: 'var(--title)',
                     formatter: function (w) {
                         return 249;
                     },
@@ -1919,18 +1933,29 @@ const polarareachart = {
         height: 300,
     },
     stroke: {
-        colors: ['var(--border-light)']
+       colors: ['var(--border-light)']
+    },
+    polarArea:{
+        rings:{
+            strokeWidth: 1,
+            strokeColor: ['var(--border-light)']
+        }
     },
     colors: ['#33BFBF', '#FF6150', '#b52af6', '#63d5be', '#feb858', '#f1523d', '#d8ecff'],
     fill: {
         opacity: 0.8
+    },
+    legend: {
+        labels:{
+            colors: ['var(--content)']
+        },
     },
     responsive: [{
             breakpoint: 1880,
             options: {
                 chart: {
                     height: 300,
-                },
+                }, 
             }
         },
         {
@@ -1947,8 +1972,9 @@ const polarareachart = {
                 chart: {
                     height: 260,
                 },
-                legend: {
-                    position: 'bottom'
+                legend: { 
+                    position: 'bottom',
+                    colors: 'var(--body)',
                 }
             }
         },
@@ -2120,9 +2146,9 @@ window.onload = function () {
     }
 };
 
-/*=======/ Radal Chart /=======*/
+/*=======/ Radar Chart /=======*/
 
-const radalchart = {
+const radarchart = {
     chart: {
         height: 300,
         type: 'radar',
@@ -2139,9 +2165,9 @@ const radalchart = {
         radar: {
             size: 140,
             polygons: {
-                strokeColor: '#e9e9e9',
-                fill: {
-                    colors: ['#f8f8f8', '#fff'],
+                strokeColor: 'var(--title)',     
+                fill: { 
+                    colors: ['var(--body)', 'var(--body)'],
                 },
             },
         },
@@ -2162,7 +2188,7 @@ const radalchart = {
         },
     },
     grid: {
-        borderColor: 'var(--light)',
+        borderColor: 'var(--border-light)',
     },
     yaxis: {
         tickAmount: 7,
@@ -2231,8 +2257,8 @@ const radalchart = {
     ],
 };
 
-const radalchartEl = new ApexCharts(document.querySelector('#radalchart'), radalchart);
-radalchartEl.render();
+const radarchartEl = new ApexCharts(document.querySelector('#radarchart'), radarchart);
+radarchartEl.render(); 
 
 /*=======/ Line Data Label Chart /=======*/
 
@@ -2264,6 +2290,7 @@ const linedatalabelchart = {
     colors: ['#33BFBF', '#FF6150'],
     dataLabels: {
         enabled: true,
+        
     },
     stroke: {
         curve: 'smooth'
@@ -2281,14 +2308,29 @@ const linedatalabelchart = {
     },
     xaxis: {
         categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+        labels:{
+            style: {
+                colors: ['var(--content)', 'var(--content)','var(--content)','var(--content)','var(--content)','var(--content)','var(--content)']
+            },
+        },
         title: {
-            text: 'Month'
+            text: 'Month', 
+            style: {
+                color: ['var(--title)'],
+            }, 
         }
     },
-    yaxis: {
-        title: {
+    yaxis: { 
+        labels:{
+            style: {
+                colors: ['var(--content)']
+            },
+        },
+        title: { 
             text: 'Temperature',
-            fill: ['var(--title)']
+            style: {
+                color: ['var(--title)'],
+            }, 
         },
         min: 5,
         max: 40
@@ -2338,7 +2380,6 @@ const rangeareachart = {
     series: [{
             type: 'rangeArea',
             name: 'Series B Range',
-
             data: [{
                     x: 'Jan',
                     y: [1100, 1900]
@@ -2507,9 +2548,9 @@ const rangeareachart = {
         height: 300,
         type: 'rangeArea',
         animations: {
-            speed: 500
+            speed: 500 
         },
-        toolbar: {
+        toolbar: { 
             show: false,
         }
     },
@@ -2523,16 +2564,41 @@ const rangeareachart = {
     forecastDataPoints: {
         count: 2
     },
-    stroke: {
-        curve: 'straight',
+    grid:{
+        borderColor: 'var(--border-light)',
+    },
+    stroke: { 
+        curve: 'straight', 
         width: [0, 0, 2, 2],
     },
-    legend: {
+    xaxis:{ 
+        labels:{
+            style: {
+                colors: ['var(--content)', 'var(--content)','var(--content)','var(--content)','var(--content)','var(--content)','var(--content)','var(--content)','var(--content)','var(--content)']
+            }, 
+        },
+        title:{ 
+            style:{
+                color: ['var(--title)']
+            }
+        }
+    },
+    yaxis:{
+        labels:{ 
+            style:{
+                colors:['var(--title)']
+            }
+        }
+    },
+    legend: { 
         show: true,
         customLegendItems: ['Series B', 'Series A'],
-        inverseOrder: true
+        inverseOrder: true, 
+        labels:{
+            colors: ['var(--content)', 'var(--content)']
+        },
     },
-    markers: {
+    markers: { 
         hover: {
             sizeOffset: 5
         }
@@ -2550,7 +2616,7 @@ const rangeareachart = {
             options: {
                 chart: {
                     height: 260,
-                },
+                }, 
             },
         },
         {

@@ -1,0 +1,93 @@
+//- sidebar
+-var sidebar = true;
+
+//- feather
+-var feather= true;
+
+//- fontAwesome 
+-var fontAwesome = true;
+
+//- customSelect
+-var customSelect= true;
+
+//- customizer
+-var customizer=true;
+
+//- Breadcrumbs
+-var pageTitle="Govo";
+-var breadcrumb=['Getting Started'];
+
+//- mixin
+include components/mixin/mixin 
+
+doctype html
+html(lang='en')  
+  include components/header-files 
+  body(dir="ltr" class="unique-skin") 
+    main.page-wrapper
+      div.page-body-wrapper(class="xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+        header.fixed.top-0(class="z-[6] xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto")
+          div.page-header(class="w-full transition-all bg-white shadow-header dark:bg-sidebar-dark")
+            include components/header  
+            div(class="py-[14px] border-t border-border-light px-body-space dark:border-border-dark") 
+              div.relative.flex.items-center.justify-end(class="lg:justify-start")
+                div.flex.items-center(class="gap-[14px]")
+                  // Breadcrumbs Start 
+                  +breadcrumb(['Getting Started'])
+                  // Breadcrumbs End 
+                  div.custom-select.select-style-1(class="lg:hidden dark:text-title")
+                    select(class="dark:text-title")
+                      option(selected value="") Last 7 Days 
+                      option(value="") Last 2 Weeks 
+                      option(value="") Last 1 Month  
+                      option(value="") Last 3 Month     
+
+        // Sidebar Start 
+        div.page-sidebar.sidebar-dark.unique-sidebar
+          include components/unique
+          // Sidebar End
+          // Page Body Start
+        div.page-body
+          div.grid.grid-cols-12.gap-card-gap 
+            div.card.col-span-12        
+              div.card-header.pb-2.header-bottom-border 
+                h3.text-lg.font-bold Let's begin
+                p Thank you for choosing the Govo tailwind admin template
+              div.card-body
+                p(class="text-sm") "We are pleased that you have chosen Govo admin theme for your site and we will not disappoint you with your choice. Govo is an excellent theme develop with a concise approach. The code written is a clean and well structured."
+                p(class="mt-3 text-sm text-primary")  Govo Admin is a responsive HTML template that is based on the CSS, Pure Javascript, 
+                  mark  &nbsp;framework tailwind 
+                  | &nbsp;and it is built with postcss, Gulp and Pug. postcss compiler makes it easier to code and customize. If you are unfamiliar with tailwind or Gulp, visit their website and read through the documentation. All of components have been modified to fit the style of Govo Admin and provide a consistent look throughout the template.
+                p(class="mt-3 text-sm")  Before you start working with the template, we suggest you go through the pages that are bundled with the theme. Most of the template example pages contain quick tips on how to create or use a component which can be really helpful when you need to create something on the fly.
+
+            div.card.col-span-12        
+              div.card-header.pb-2.header-bottom-border 
+                h3.text-lg.font-bold GOVO Dependencies
+              div.card-body
+                ul
+                  li(class="text-sm leading-7") "gulp-autoprefixer": 
+                    span(class="text-sm font-bold text-primary") "^8.0.0" 
+                  li(class="text-sm leading-7") "gulp-livereload": 
+                    span(class="text-sm font-bold text-primary") "^4.0.2" 
+                  li(class="text-sm leading-7") "gulp-plumber": 
+                    span(class="text-sm font-bold text-primary") "^1.2.1" 
+                  li(class="text-sm leading-7") "gulp-pug": 
+                    span(class="text-sm font-bold text-primary") "^5.0.0" 
+                  li(class="text-sm leading-7") "gulp-purgecss": 
+                    span(class="text-sm font-bold text-primary") "^4.1.3" 
+                  li(class="text-sm leading-7") "gulp-watch": 
+                    span(class="text-sm font-bold text-primary") "^5.0.1" 
+                  li(class="text-sm leading-7") "save": 
+                    span(class="text-sm font-bold text-primary") "^2.5.0" 
+                  li(class="text-sm leading-7") "tailwindcss-animatecss": 
+                    span(class="text-sm font-bold text-primary") "^1.0.7" 
+
+        // Page Body End 
+        div(class=`page-footer 3sm:!px-[10px] fixed bottom-0 xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300 sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap`) 
+          p(class="text-xs font-semibold text-center text-content") Copyright 2023 © Govo theme by pixelstrap
+          div.flex.items-center.gap-2 
+            p(class="text-xs font-semibold text-center text-content") Hand crafted & made with
+            i.fa-solid.fa-heart(class="stroke-danger h-[18px] w-[18px] text-danger")
+      include components/customizer
+
+  include components/footer-files

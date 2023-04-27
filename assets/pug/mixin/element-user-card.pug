@@ -16,9 +16,9 @@ mixin user-card(data)
         button.btn.bg-primary-light.text-title.border.border-primary-light(class="hover:bg-primary hover:text-white") Message
     div.card-footer
       div.social-detail.flex.flex-wrap.justify-center.items-center.bg-gray-light.p-4(class="2md:p-2 sm:p-4 dark:bg-sidebar-dark dark:border-t dark:border-border-dark")
-        div.following-data.flex.flex-col.justify-center.items-center.gap-0.font-semibold.pr-padding.border-r-2.border-border-light(class="dark:border-r-2 dark:border-border-dark rtl:border-l-2 rtl:border-r-0 rtl:pr-0 rtl:pl-padding")
-          span(class="text-xs leading-5") Following
-          span(class="text-[13px] leading-[18px] text-content")=data.following
+        div.following-data.flex.flex-col.justify-center.items-center.gap-0.font-semibold.pr-padding.border-r-2.border-border-light(class=" dark:border-border-dark rtl:!border-r-0")
+          span(class="text-xs leading-5") Following 
+          span(class="text-[13px] leading-[18px] text-content")=data.following 
         div.follower-data.flex.flex-col.justify-center.items-center.gap-0.font-semibold.px-padding.border-r-2.border-border-light(class="dark:border-r-2 dark:border-border-dark rtl:border-l-2 rtl:border-r-0")
           span(class="text-xs leading-5") Follower
           span(class="text-[13px] leading-[18px] text-content")=data.follower

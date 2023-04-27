@@ -1,0 +1,25 @@
+//- ====================
+//-  User Information
+//- ====================
+table.table.equal-space 
+    thead 
+        tr 
+            each userHead in PRODUCT_SELlE_DETAIL.header
+                th=  userHead
+
+    tbody
+        each bodyData,index in PRODUCT_SELlE_DETAIL.body
+            tr(class="group")
+                td(class="min-w-[140px]")                    
+                    div.flex.items-center(class="gap-[9px]")
+                        img(class="w-[35px] h-[35px] rounded-full" src=`../../assets/images/product/${bodyData.image}`, alt=`${bodyData.product}`) 
+                        a(href="javascript:void(0)")
+                            h4(class="text-xs font-semibold text-title group-hover:text-primary")=bodyData.product
+                td(class="min-w-[80px]")
+                    h4(class=`text-xs group-hover:text-primary font-semibold text-title`)= bodyData.seller
+                td(class="min-w-[80px]") 
+                    h4(class=`text-xs group-hover:text-primary font-semibold text-title`)= bodyData.price
+                td(class="min-w-[80px]") 
+                    h4(class="text-xs font-semibold group-hover:text-primary text-title")= bodyData.sold
+                td(class="min-w-[80px]") 
+                    h4(class="text-xs font-semibold group-hover:text-primary text-primary")= bodyData.profit

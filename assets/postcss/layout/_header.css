@@ -1,12 +1,16 @@
+/*=====================
+  4.1 Header Css
+  ==========================*/
+
 @layer components {
   .page-header {
     .hide {
-      @apply hidden 2xl:flex;
+      @apply hidden xl:flex;
     }
     .right-header{
       .icon-menu{
         ul{
-          li{
+          li{ 
             &:last-child{
               @apply rtl:pr-[calc(7px_+_(14_-_7)_*_((100vw_-_320px)_/_(1920_-_320)))];
             }

@@ -1,3 +1,7 @@
+/*=====================
+  3.15  Kanban Css
+ ==========================*/
+
 @layer components {
   .kanab-common {
     @apply overflow-auto custom-scroll;
@@ -6,13 +10,13 @@
       .kanban-board {
         @apply mb-[0.9375rem] transition-all tracking-[0.5px]  rounded-5 !w-[calc(100%_/_3_-_30px)] overflow-hidden;
         .kanban-board-header {
-          @apply h-auto w-auto leading-none bg-primary-light border-b border-light text-content mb-0;
-          .kanban-title-board {
-            @apply 2xl:text-[15px]  text-sm;
+          @apply h-auto w-auto leading-none bg-primary-light dark:bg-sidebar-dark2 border-b border-light dark:border-border-dark dark:border-b  text-content mb-0;
+          .kanban-title-board { 
+            @apply 2xl:text-[15px] text-sm;
           }
-        }
+        } 
         .kanban-drag {
-          @apply bg-gray-light 2xl:p-[15px];
+          @apply bg-gray-light 2xl:p-[15px] dark:bg-sidebar-dark2;
           .kanban-item {
             @apply bg-transparent mb-5 p-0;
             &:last-of-type {
@@ -28,18 +32,17 @@
         }
       }
     }
-
     &.kanab-1 .kanban-container .kanban-board,
     &.moving-kanab-1 {
       @apply tracking-[0.5px] rounded-[8px] overflow-hidden;
       .kanban-board-header {
-        @apply bg-primary-light border-b border-light;
+        @apply bg-primary-light dark:bg-sidebar-dark2 border-b border-light dark:border-border-dark dark:border-b;
         .kanban-title-board {
           @apply text-sm text-dark;
         }
       }
       .kanban-drag {
-        @apply bg-gray-light;
+        @apply bg-gray-light  dark:bg-sidebar-dark2;
         .kanban-item {
           @apply bg-transparent mb-5 p-0;
           .kanban-box {
@@ -55,7 +58,7 @@
     &.kanab-2 {
       .kanban-container {
         .kanban-board {
-          @apply border border-light;
+          @apply border border-light dark:border-border-dark;
 
           &:nth-child(3n + 1) {
             .kanban-board-header {
@@ -73,7 +76,7 @@
             }
           }
           .kanban-drag {
-            @apply !bg-white;
+            @apply bg-white dark:bg-sidebar-dark2;
           }
         }
       }
@@ -83,13 +86,13 @@
     &.moving-kanab-2 {
       @apply tracking-[0.5px] rounded-[8px] overflow-hidden;
       .kanban-board-header {
-        @apply bg-white border-b-[4px];
+        @apply bg-white border-b-[4px] dark:bg-sidebar-dark2 ;
         .kanban-title-board {
           @apply text-sm text-dark;
         }
-      }
+      } 
       .kanban-drag {
-        @apply bg-gray-light;
+        @apply bg-gray-light  dark:bg-sidebar-dark2;
         .kanban-item {
           @apply bg-transparent mb-5 p-0;
           .kanban-box {
@@ -105,7 +108,7 @@
     &.kanab-3 {
       .kanban-container {
         .kanban-board {
-          @apply border border-light;
+          @apply border border-light dark:border-border-dark ;
           .kanban-board-header {
             @apply before:block before:w-4 before:h-4  before:rounded-full flex items-center gap-2;
           }
@@ -124,8 +127,8 @@
               @apply before:bg-success;
             }
           }
-          .kanban-drag {
-            @apply !bg-white;
+          .kanban-drag { 
+            @apply bg-white dark:bg-sidebar-dark2;
           }
         }
       }
@@ -135,13 +138,13 @@
     &.moving-kanab-3 {
       @apply tracking-[0.5px] rounded-[8px] overflow-hidden;
       .kanban-board-header {
-        @apply bg-white;
+        @apply bg-white dark:bg-sidebar-dark2;
         .kanban-title-board {
-          @apply text-sm text-dark;
+          @apply text-sm text-dark ;
         }
-      }
+      } 
       .kanban-drag {
-        @apply bg-gray-light;
+        @apply bg-gray-light dark:bg-sidebar-dark2;
         .kanban-item {
           @apply bg-transparent mb-5 p-0;
           .kanban-box {

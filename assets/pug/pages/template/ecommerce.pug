@@ -1,0 +1,152 @@
+//- sidebar
+-var sidebar = true;
+
+//- feather
+-var feather= true;
+
+//- custom select
+-var customSelect= true;
+
+//- customizer 
+-var customizer=true;
+
+//- apex-chart
+-var apexChart=true;  
+-var uniqueApex=true;
+
+//- swiper-slider
+-var swiper=true;
+
+//- Breadcrumbs 
+-var pageTitle="Ecommerce Dashboard";
+-var breadcrumb=['dashboard','Ecommerce']; 
+
+//- all JSON  
+include ../../data/all-data
+
+//- all mixin
+include ../../mixin/mixin
+
+doctype html
+html(lang='en')
+    include ../../layout/header-files
+    body(dir="ltr" class="unique-skin")
+        main.page-wrapper
+            div.page-body-wrapper(class="xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto transition-all duration-300")
+                include ../../layout/header/header     
+                // Sidebar Start 
+                div.page-sidebar.sidebar-dark.unique-sidebar
+                    include ../../layout/unique
+                // Sidebar End 
+
+                // Page Body Start
+                div.page-body
+                    div.grid.grid-cols-12.gap-card-gap
+                        div.col-span-6(class="xl:col-span-12") 
+                            div(class="grid grid-cols-2 gap-card-gap")
+                                each data in WIDGET4_DATA
+                                    div.col-span-1(class="md:col-span-2")
+                                        div.card.svg-shake(class="gap-0 p-0")
+                                            +widget4(data)
+                        div.col-span-6(class="xl:col-span-6 xl3:col-span-12")
+                            div.card.gap-0 
+                                div.card-header
+                                    +card-header("Sales Summary ( Jun 2023)","select",HiSTORY_DATE_DROPDOWN)
+                                div.card-body
+                                    div.relative
+                                        //- div#customerRadialchart 
+                        div.col-span-7(class="4xl:col-span-8 lg:col-span-12 lg:-order-1")
+                            div.card
+                                div.card-header
+                                    div.flex.justify-between.w-full(class=`flex-wrap gap-2 items-center`)
+                                        h3(class="text-lg font-bold leading-none text-title") Order Detail
+                                        div.flex.items-center.gap-4    
+                                            div.search-box.relative
+                                                input(class="border border-border-light dark:border-border-dark rounded-5 w-full py-[8px] pr-[25px] pl-[48px] rtl:pl-[25px] rtl:pr-[48px] text-xs font-semibold text-title" placeholder="Search..." type="search")       
+                                                +SVG_ICON("Search","xl:hidden w-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] stroke-title top-1/2 -translate-y-1/2 left-[17px] rtl:left-unset rtl:right-[17px] absolute dark:stroke-white")
+                                                i(data-feather="x" class="search-close hidden cursor-pointer xl:block w-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] stroke-title top-1/2 -translate-y-1/2 right-[25px] absolute")
+                                            div.dropdown.on-hover-show
+                                                button(class="flex rounded-full items-center justify-center p-[5px] bg-gray-light dark:bg-sidebar-dark2") 
+                                                    +SVG_ICON("Setting","w-[18px] h-[18px] stroke-title")   
+                                                div.dropdown-menu
+                                                    ul
+                                                        li
+                                                            a(href="javascript:void(0)") Yearly
+                                                        li
+                                                            a(href="javascript:void(0)") Monthly
+                                                        li
+                                                            a(href="javascript:void(0)") Weekly
+                                div.card-body
+                                    div.overflow-auto.custom-scroll  
+                                        include ../../components/table/order-detail
+                        div.col-span-5(class="4xl:col-span-8 lg:col-span-12 lg:-order-1")
+                            div.card
+                                div.card-header
+                                    +card-header("Orders Status (May 10)","setting", HISTORY_DROPDOWN)
+                                div.card-body 
+                                    div.relative 
+                                        //- div#customerRadialchart
+                        div.col-span-4(class="4xl:col-span-8 lg:col-span-12 lg:-order-1")
+                            div.card
+                                div.card-header
+                                    +card-header("Customers","setting", HISTORY_DROPDOWN)
+                                div.card-body
+                                    div.relative 
+                                        div#customerRadialchart
+                                div.card-footer.border-t.border-border-light.pt-4.px-0 
+                                    div.radialBar-legend
+                                        div(class="w-full px-3 border-r border-border-light dark:border-border-dark last:border-none rtl:border-r-0 rtl:border-l") 
+                                            div.radialBar-legend-series
+                                                span.radialBar-legend-marker.primary
+                                                p.radialBar-legend-text.text-3xs.text-title Current Customers
+                                            small.text-xs.text-content3(class="pl-3 rtl:pl-0 rtl:pr-3") 45%
+                                        div(class="w-full px-3 border-r border-border-light dark:border-border-dark last:border-none rtl:border-r-0 rtl:border-l")
+                                            div.radialBar-legend-series
+                                                span.radialBar-legend-marker.secondary
+                                                p.radialBar-legend-text.text-3xs.text-title New Customers
+                                            small.text-xs.text-content3(class="pl-3 rtl:pl-0 rtl:pr-3") 62% 
+                                        div(class="w-full px-3 border-r border-border-light dark:border-border-dark last:border-none rtl:border-r-0 rtl:border-l")
+                                            div.radialBar-legend-series
+                                                span.radialBar-legend-marker.title
+                                                p.radialBar-legend-text.text-3xs.text-title Retarget Customers 
+                                            small.text-xs.text-content3(class="pl-3 rtl:pl-0 rtl:pr-3") 34%
+                        div.col-span-4(class="4xl:col-span-8 lg:col-span-12 lg:-order-1")
+                            div.card
+                                div.card-header
+                                    +card-header("Recent Activity","setting", HISTORY_DROPDOWN)
+                                div.card-body
+                        div.col-span-4(class="4xl:col-span-8 lg:col-span-12 lg:-order-1")
+                            div.card
+                                div.card-header
+                                    +card-header("Global Sales by top Locations","setting", HISTORY_DROPDOWN)
+                                div.card-body
+                                    div.overflow-auto.custom-scroll  
+                                        include ../../components/table/sale-detail
+                        div.col-span-5(class="4xl:col-span-8 lg:col-span-12 lg:-order-1")
+                            div.card
+                                div.card-header
+                                    +card-header("Best Product Seller","setting", HISTORY_DROPDOWN)
+                                div.card-body
+                                    div.overflow-auto.custom-scroll  
+                                        include ../../components/table/product-seller-detail
+                        div.col-span-7(class="4xl:col-span-8 lg:col-span-12 lg:-order-1")
+                            div.card
+                                div.card-header
+                                    +card-header("Today’s Deals","setting", HISTORY_DROPDOWN)
+                                //- div.card-body
+                                //-     div.grid.gap-card-gap(class="sm:mt-5").overflow-hidden 
+                                //-         div.swiper.product-slides.swiper-product
+                                //-             div.swiper-wrapper
+                                //-                 each data in PRODUCT_BOX 
+                                //-                     div.swiper-slide 
+                                //-                         +product(data) 
+
+
+
+
+
+    // Page Body End 
+    +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
+        include ../../components/customizer
+
+    include ../../layout/footer-files

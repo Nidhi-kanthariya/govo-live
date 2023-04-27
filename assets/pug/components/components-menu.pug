@@ -1,19 +1,18 @@
 
 
 // Componant menu
-ul(class="flex flex-col gap-4") 
+ul(class="flex flex-col gap-4 ") 
    each menuItem in COMPONENT_MENU
       li(class=`w-full ${menuItem.menu ? "dropdown on-hover-show group" : ""}`)
          a(href=`${menuItem.url}` class="flex items-center justify-between gap-2")
             span.flex.items-center.gap-2
                +SVG_ICON(`${menuItem.icon}`,"w-5 h-5 stroke-title")
                small(class="text-xs leading-7")= menuItem.title
-
             if(menuItem.menu)
-               +SVG_ICON("Arrow-Right-2","w-4 h-4 stroke-title ml-auto")
+               +SVG_ICON("Arrow-Right-2","w-4 h-4 stroke-title ml-auto") 
          if(menuItem.menu)
-            div.dropdown-menu(class="dropdown-sub-menu")
+            div.dropdown-menu(class="dropdown-sub-menu rtl:!left-unset rtl:!right-[24.938rem]")
                ul(class="flex flex-col gap-2") 
-                  each subMenuItem in menuItem.menu
+                  each subMenuItem in menuItem.menu 
                      li
                         a(href=`${subMenuItem.url}`)= subMenuItem.title

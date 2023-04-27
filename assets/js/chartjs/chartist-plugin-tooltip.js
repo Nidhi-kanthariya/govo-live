@@ -159,8 +159,6 @@
   }
 
   function hide(element) {
-    // var regex = new RegExp('tooltip-show' + '\\s*', 'gi');
-    // element.className = element.className.replace(regex, '').trim();
     element.classList.remove('tooltip-show');
   }
 

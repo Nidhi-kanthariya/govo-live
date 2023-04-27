@@ -1,0 +1,174 @@
+/*=====================
+  3.27  Tree Css
+  ==========================*/
+
+.tree-content:before {
+    content: "";
+    border-left: 1px dashed grey;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    bottom: 0;
+}
+
+
+.hed-folder a:before {
+    content: "";
+    width: 24px;
+    border-top: 1px dashed grey;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 4px;
+}
+
+.hed-folder a {
+    position: relative;
+    padding: 10px 16px 4px 31px;
+}
+
+.sec-line a {
+    padding: 10px 16px 4px 61px;
+    position: relative;
+}
+
+.sec-line a:before {
+    content: "";
+    width: 24px;
+    border-top: 1px dashed grey;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 35px;
+}
+
+.tree-content li::before {
+    content: "";
+    height: 100%;
+    border-left: 1px dashed grey;
+    position: absolute;
+    top: 0;
+    left: 32px;
+    margin: 0 auto;
+}
+
+.four-content li::before {
+    content: "";
+    height: 100%;
+    border-left: 1px dashed grey;
+    position: absolute;
+    top: 0;
+    left: 63px;
+    margin: 0 auto;
+}
+
+.five-content li::before {
+    content: "";
+    height: 100%;
+    border-left: 1px dashed grey;
+    position: absolute;
+    top: 0;
+    left: 94px;
+    margin: 0 auto;
+}
+
+.hed-2-folder a:before {
+    content: "";
+    width: 24px;
+    border-top: 1px dashed grey;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 66px;
+}
+
+.hed-2-folder a:after {
+    content: "";
+    height: 100%;
+    border-left: 1px dashed grey;
+    position: absolute;
+    top: 0;
+    left: 63px;
+    margin: 0 auto;
+}
+
+.hed-2-folder a {
+    position: relative;
+    padding: 10px 16px 4px 92px;
+}
+
+.hed-3-folder a:before {
+    content: "";
+    width: 24px;
+    border-top: 1px dashed grey;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 96px;
+}
+
+.hed-3-folder a:after {
+    content: "";
+    height: 100%;
+    border-left: 1px dashed grey;
+    position: absolute;
+    top: 0;
+    left: 94px;
+    margin: 0 auto;
+}
+
+.hed-3-folder a {
+    position: relative;
+    padding: 10px 16px 4px 121px;
+}
+
+.hed-4-folder a:before {
+    content: "";
+    width: 24px;
+    border-top: 1px dashed grey;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 96px;
+}
+
+.hed-4-folder a:after {
+    content: "";
+    height: 100%;
+    border-left: 1px dashed grey;
+    position: absolute;
+    top: 0;
+    left: 94px;
+    margin: 0 auto;
+}
+
+.hed-4-folder a {
+    position: relative;
+    padding: 10px 16px 4px 121px;
+}
+
+.hed-5-folder a:before {
+    content: "";
+    width: 24px;
+    border-top: 1px dashed grey;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 129px;
+}
+
+.hed-5-folder a:after {
+    content: "";
+    height: 100%;
+    border-left: 1px dashed grey;
+    position: absolute;
+    top: 0;
+    left: 126px;
+    margin: 0 auto;
+}
+
+.hed-5-folder a {
+    position: relative;
+    padding: 10px 16px 4px 154px;
+}

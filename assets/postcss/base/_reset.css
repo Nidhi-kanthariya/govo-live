@@ -1,5 +1,5 @@
 /*=====================
-    Basic Reset CSS
+  2.1  Basic Reset Css
   ==========================*/
 @layer base {
   * {
@@ -212,19 +212,10 @@
     }
   }
   
-  html[class='dark'] {
-    &.fontawesome-i2svg-complete{
-      &.fontawesome-i2svg-active{
-        .fontawesome-event{
-          .icon-box{
-            @apply !text-white;
-            svg,
-            span{
-              @apply !text-white;
-            }
-          }
-        }
-      }
-    }
-  }
+
 }
+.announcement-image{
+  img{
+    filter: brightness(0.5);
+  }
+} 

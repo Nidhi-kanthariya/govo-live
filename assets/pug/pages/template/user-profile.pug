@@ -133,14 +133,14 @@ html(lang='en')
                         div.flex.items-center.gap-4(class="2md:flex-col 2md:items-start") 
                           div.flex.user-detail.items-center.gap-4
                             div.bg-gray-light(class="grid w-8 h-8 rounded-full place-content-center ")
-                              i.fa-solid.fa-user-tie
+                              i(class="dark:stroke-title").fa-solid.fa-user-tie
                             div.text-start
                               p.text-title(class="text-xs font-semibold dark:text-white") Designation
                               span.text-content3(class="font-semibold text-2xs") Fullstack Developer        
                           div.flex.user-detail.items-center.gap-4
                             div.bg-gray-light(class="grid w-8 h-8 rounded-full place-content-center")
-                              i.fa-solid.fa-globe
-                            div.text-start
+                              i(class="dark:stroke-title").fa-solid.fa-globe
+                            div.text-start 
                               p.text-title(class="text-xs font-semibold dark:text-white") Website
                               span.text-content3(class="font-semibold text-2xs") www.govo.com                                                         
                         div.flex.flex-col.gap-2
@@ -495,7 +495,7 @@ html(lang='en')
           div.modal-body
             form.flex.flex-col.gap-4(class="!m-0")
               div.modal-img
-                img(class="" src="../../assets/images/user-app/send-1.gif" alt="send" class="w-16")               
+                img(class="" src="../../assets/images/user-app/send-1.gif" alt="send" class="w-16 dark:invert-[1]")               
               h5.text-center.font-semibold(class="dark:text-white") Add team member or new ones
               div.search-box.relative
                 input(class="border border-border-light dark:border dark:border-border-dark dark:text-white dark:bg-sidebar-dark2 rounded-5 w-full py-[11px] pl-[25px] pr-[55px]  text-xs font-semibold text-title" placeholder="Type to Search..." type="search")       
@@ -550,13 +550,13 @@ html(lang='en')
           div.modal-body
             form.flex.flex-col.gap-4(class="!m-0")
               div.modal-img
-                img(class="" src="../../assets/images/user-app/send-1.gif" alt="send" class="w-16") 
+                img(class="" src="../../assets/images/user-app/send-1.gif" alt="send" class="w-16 dark:invert-[1]") 
               h5.text-center.font-semibold(class="dark:text-white") Add team member or new ones
               div.search-box.relative
                 input(class="border border-border-light dark:border dark:border-border-dark dark:text-white dark:bg-sidebar-dark2 rounded-5 w-full py-[11px] pl-[25px] pr-[55px]  text-xs font-semibold text-title" placeholder="Type to Search..." type="search")       
                 +SVG_ICON("Search","xl:hidden w-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] stroke-title dark:stroke-white top-1/2 -translate-y-1/2 right-[25px] absolute")
                 i(data-feather="x" class="search-close hidden cursor-pointer xl:block w-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] stroke-title top-1/2 -translate-y-1/2 right-[25px] absolute")
-              ul.flex.flex-col.gap-3
+              ul.flex.flex-col.gap-3 
                 li.flex.justify-between.items-center.add-friend
                   div.flex.items-center.gap-2.w-full
                     div.avatar.rounded-full(class="w-10 h-10")
@@ -566,10 +566,10 @@ html(lang='en')
                       span.text-content3(class="font-semibold text-2xs") Web Designer
                   a(href="javascript:void(0)" class="dark:bg-sidebar-dark2 dark:text-white").add-btn.btn.bg-gray-light.p-2  Add
                 li.flex.justify-between.items-center.add-friend
-                  div.flex.items-center.gap-2.w-full
+                  div.flex.items-center.gap-2.w-full 
                     div.avatar.rounded-full(class="w-10 h-10")
                       img(src=`../../assets/images/user-app/19.png` alt=`user`)                                                      
-                    div(class="w-[calc(100%_-_52px)]") 
+                    div(class="w-[calc(100%_-_52px)]")
                       p.text-title(class="text-xs font-semibold dark:text-white") Ally Kshlerin
                       span.text-content3(class="font-semibold text-2xs") Fullstack Developer
                   a(href="javascript:void(0)" class="dark:bg-sidebar-dark2 dark:text-white").add-btn.btn.bg-gray-light.p-2  Add
@@ -602,9 +602,9 @@ html(lang='en')
           div.modal-body
             form.flex.flex-col.gap-4(class="!m-0")
               div.modal-img
-                img(class="" src="../../assets/images/user-app/send-1.gif" alt="send" class="w-16")
+                img(class="" src="../../assets/images/user-app/send-1.gif" alt="send" class="w-16 dark:invert-[1]")
               h5.text-center.font-semibold(class="dark:text-white") Follow team member or new ones
-              div.search-box.relative 
+              div.search-box.relative  
                 input(class="border border-border-light dark:border dark:border-border-dark dark:text-white  dark:bg-sidebar-dark rounded-5 w-full py-[11px] pl-[25px] pr-[55px]  text-xs font-semibold text-title" placeholder="Type to Search..." type="search")       
                 +SVG_ICON("Search","xl:hidden w-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] stroke-title dark:stroke-white top-1/2 -translate-y-1/2 right-[25px] absolute")
                 i(data-feather="x" class="search-close hidden cursor-pointer xl:block w-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(18px_+_(24_-_18)_*_((100vw_-_320px)_/_(1920_-_320)))] stroke-title top-1/2 -translate-y-1/2 right-[25px] absolute")

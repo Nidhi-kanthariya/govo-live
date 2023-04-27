@@ -51,12 +51,12 @@ html(lang='en')
               div.col-span-3(class='4xl:col-span-4 lg:col-span-6 sm:col-span-12 user-card-box')
                 +user-card(data)
 
-        // Page Body End
+        // Page Body End 
         +footer("sm:flex-col flex sm:gap-1 gap-2 items-center justify-between py-[1.1875rem] shadow-footer bg-white px-body-space mt-card-gap")
       include ../../components/customizer
 
       //-  Invite new user
-      div.modal-main
+      div.modal-main 
         input#modal-invite-user(class="peer" name="modal-invite-user" type='checkbox')
         label.modal-overlay(class="peer-checked:block" for='modal-invite-user')
         div.modal.modal-center(class="peer-checked:opacity-100 peer-checked:visible min-w-[290px] dark:bg-sidebar-dark2")

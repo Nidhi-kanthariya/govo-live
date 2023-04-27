@@ -1,5 +1,5 @@
 /*=====================
-    Swiper Slider CSS
+  5.8  Swiper Slider Css
  ==========================*/
 @layer components {
     .swiper {
@@ -86,5 +86,9 @@
         [dir='rtl'] & {
             direction: ltr;
         }
+    }
+    .swiper-product{
+        margin: calc(-15px + (-30 - -15) * ((100vw - 320px) / (1920 - 320)));
+        padding: calc(15px + (30 - 15) * ((100vw - 320px) / (1920 - 320)));
     }
 }
